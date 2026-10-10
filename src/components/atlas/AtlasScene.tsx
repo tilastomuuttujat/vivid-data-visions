@@ -36,7 +36,11 @@ function Nodes({ data, selected, visible, onSelect, showLinks, palette }: Props 
 }
 export function AtlasScene(props: Props) {
   const [palette,setPalette]=useState<string[]|null>(null);
-  useEffect(()=>{const s=getComputedStyle(document.documentElement);setPalette(['--family-0','--family-1','--family-2','--family-3','--muted-foreground','--map-background'].map(p=>new THREE.Color(s.getPropertyValue(p).trim()).getStyle()));},[]);
+  useEffect(()=>{
+    const s=getComputedStyle(document.documentElement), canvas=document.createElement('canvas');canvas.width=1;canvas.height=1;
+    const ctx=canvas.getContext('2d');if(!ctx)return;
+    setPalette(['--family-0','--family-1','--family-2','--family-3','--muted-foreground','--map-background'].map(p=>{ctx.fillStyle=s.getPropertyValue(p).trim();ctx.fillRect(0,0,1,1);const [r,g,b]=ctx.getImageData(0,0,1,1).data;return `rgb(${r},${g},${b})`;}));
+  },[]);
   if(!palette)return <div className="scene-loading">Atlas avautuu…</div>;
   return <Canvas dpr={[1,1.5]} camera={{position:[0,13,17],fov:48}} gl={{antialias:true}}>
     <color attach="background" args={[palette[5]]}/><ambientLight intensity={.8}/><directionalLight position={[3,14,8]} intensity={2}/>
