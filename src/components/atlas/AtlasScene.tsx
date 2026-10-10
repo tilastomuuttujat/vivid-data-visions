@@ -7,7 +7,7 @@ import { connections, layoutNodes, type AtlasData } from '@/lib/atlas-data';
 interface Props { data: AtlasData; selected: number; visible: Set<number>; onSelect: (id: number) => void; zoom: number; showLinks: boolean; reset: number }
 function CameraReset({ reset, zoom }: { reset: number; zoom: number }) {
   const { camera } = useThree();
-  useEffect(()=>{ camera.position.set(0,13/zoom,17/zoom); camera.lookAt(0,0,0); camera.updateProjectionMatrix(); },[camera,reset,zoom]);
+  useEffect(()=>{ camera.position.set(0,17/zoom,24/zoom); camera.lookAt(0,1,0); camera.updateProjectionMatrix(); },[camera,reset,zoom]);
   return null;
 }
 function Nodes({ data, selected, visible, onSelect, showLinks, palette }: Props & { palette: string[] }) {
@@ -28,10 +28,10 @@ function Nodes({ data, selected, visible, onSelect, showLinks, palette }: Props 
       const active=a===selected||b===selected;
       const mid=from.p.clone().lerp(to.p,.5);mid.y+=active?2.5:1.2;
       const points=new THREE.QuadraticBezierCurve3(from.p,mid,to.p).getPoints(25);
-      return <Line key={`${a}-${b}`} points={points} color={palette[active?from.group:4]} lineWidth={active?2:1} transparent opacity={active?.85:.22}/>;
+      return <Line key={`${a}-${b}`} points={points} color={palette[active?from.group:4] ?? 'gray'} lineWidth={active?2:1} transparent opacity={active?.85:.22}/>;
     })}
-    {nodes.map(n=><Html key={n.theme.id} position={[n.p.x,n.p.y+.4,n.p.z]} center zIndexRange={[3,0]}><button className={`scene-label theme-color-${n.group} ${selected===n.theme.id?'selected':''}`} onClick={()=>onSelect(n.theme.id)}>{n.theme.name.split(',')[0].slice(0,29)}</button></Html>)}
-    {[[270,235],[680,215],[425,490],[795,470]].map(([x,z],i)=><group key={i} position={[(x-530)/38,i*.65-.05,(z-350)/38]}><mesh rotation-x={-Math.PI/2}><ringGeometry args={[2.8,2.82,80]}/><meshBasicMaterial color={palette[i]} transparent opacity={.24} side={THREE.DoubleSide}/></mesh><Html center position={[0,.05,0]} zIndexRange={[1,0]}><span className={`scene-cluster theme-color-${i}`}>0{i+1}</span></Html></group>)}
+    {nodes.map(n=><Html key={n.theme.id} position={[n.p.x,n.p.y+.4,n.p.z]} center zIndexRange={[3,0]}><button className={`scene-label theme-color-${n.group} ${selected===n.theme.id?'selected':''}`} onClick={()=>onSelect(n.theme.id)}>{(n.theme.name.split(',')[0] ?? n.theme.name).slice(0,29)}</button></Html>)}
+    {([[270,235],[680,215],[425,490],[795,470]] as [number,number][]).map(([x,z],i)=><group key={i} position={[(x-530)/38,i*.65-.05,(z-350)/38]}><mesh rotation-x={-Math.PI/2}><ringGeometry args={[2.8,2.82,80]}/><meshBasicMaterial color={palette[i] ?? 'gray'} transparent opacity={.24} side={THREE.DoubleSide}/></mesh><Html center position={[0,.05,0]} zIndexRange={[1,0]}><span className={`scene-cluster theme-color-${i}`}>0{i+1}</span></Html></group>)}
   </>;
 }
 export function AtlasScene(props: Props) {
@@ -43,7 +43,7 @@ export function AtlasScene(props: Props) {
   },[]);
   if(!palette)return <div className="scene-loading">Atlas avautuu…</div>;
   return <Canvas dpr={[1,1.5]} camera={{position:[0,13,17],fov:48}} gl={{antialias:true}}>
-    <color attach="background" args={[palette[5]]}/><ambientLight intensity={.8}/><directionalLight position={[3,14,8]} intensity={2}/>
+    <color attach="background" args={[palette[5] ?? 'white']}/><ambientLight intensity={.8}/><directionalLight position={[3,14,8]} intensity={2}/>
     <Environment resolution={64}><Lightformer intensity={2} position={[0,8,0]} rotation-x={Math.PI/2} scale={[20,20,1]}/></Environment>
     <gridHelper args={[32,32,palette[4],palette[4]]} position-y={-.3} material-transparent material-opacity={.1}/>
     <Nodes {...props} palette={palette}/><CameraReset reset={props.reset} zoom={props.zoom}/>

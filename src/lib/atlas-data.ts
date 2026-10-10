@@ -27,11 +27,12 @@ export function connections(data: AtlasData) {
   });
 }
 export function layoutNodes(data: AtlasData) {
-  const centers = [[270,235],[680,215],[425,490],[795,470]];
+  const centers: [number,number][] = [[270,235],[680,215],[425,490],[795,470]];
   return data.themes.map(theme => {
     const g = groupIndex(theme.group), members = data.themes.filter(t=>t.group===theme.group), index = members.findIndex(t=>t.id===theme.id);
     const a = index / members.length * Math.PI * 2 - Math.PI/2;
     const radius = members.length > 8 ? 148 : 115;
-    return { theme, x: centers[g][0] + Math.cos(a)*radius, y: centers[g][1] + Math.sin(a)*radius*.68, group: g };
+    const center = centers[g] ?? [270,235];
+    return { theme, x: (center[0] ?? 270) + Math.cos(a)*radius, y: (center[1] ?? 235) + Math.sin(a)*radius*.68, group: g };
   });
 }

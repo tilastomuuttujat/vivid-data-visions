@@ -6,17 +6,18 @@ import { initialData, groups, stages, groupIndex, connections, validateData, typ
 const Scene = lazy(()=>import('./AtlasScene').then(m=>({default:m.AtlasScene})));
 
 export function Atlas({ initialMode = '2d', standalone = false }: { initialMode?: '2d'|'3d'; standalone?: boolean }) {
-  const [mode,setMode]=useState(initialMode),[data,setData]=useState<AtlasData>(initialData),[selected,setSelected]=useState(initialData.themes[0].id),[step,setStep]=useState(0),[search,setSearch]=useState(''),[filter,setFilter]=useState('Kaikki'),[zoom,setZoom]=useState(1),[showLinks,setShowLinks]=useState(true),[reset,setReset]=useState(0),[error,setError]=useState(''),[filename,setFilename]=useState('suomen_rakennemuutosten_atlas.json'),[mobileList,setMobileList]=useState(false),[exportOpen,setExportOpen]=useState(false);
+  const [mode,setMode]=useState(initialMode),[data,setData]=useState<AtlasData>(initialData),[selected,setSelected]=useState(initialData.themes[0]?.id ?? 1),[step,setStep]=useState(0),[search,setSearch]=useState(''),[filter,setFilter]=useState('Kaikki'),[zoom,setZoom]=useState(1),[showLinks,setShowLinks]=useState(true),[reset,setReset]=useState(0),[error,setError]=useState(''),[filename,setFilename]=useState('suomen_rakennemuutosten_atlas.json'),[mobileList,setMobileList]=useState(false),[exportOpen,setExportOpen]=useState(false);
   const input=useRef<HTMLInputElement>(null), workspace=useRef<HTMLDivElement>(null);
   const themes=useMemo(()=>data.themes.filter(t=>(filter==='Kaikki'||t.group===filter)&&`${t.name} ${t.thesis}`.toLocaleLowerCase('fi').includes(search.toLocaleLowerCase('fi'))),[data,filter,search]);
   const visible=useMemo(()=>new Set(themes.map(t=>t.id)),[themes]);
   const active=data.themes.find(t=>t.id===selected)??data.themes[0];
-  const current=active.steps[Math.min(step,active.steps.length-1)];
+  const current=active?.steps[Math.min(step,active.steps.length-1)];
   const edges=useMemo(()=>connections(data),[data]);
   const related=edges.filter(e=>e.includes(selected)).map(e=>e[0]===selected?e[1]:e[0]).map(id=>data.themes.find(t=>t.id===id)).filter(t=>t!==undefined);
   function select(id:number){setSelected(id);setStep(0);setMobileList(false);}
-  async function importFile(file?: File){if(!file)return;try{const next=validateData(JSON.parse(await file.text()));setData(next);setSelected(next.themes[0].id);setStep(0);setFilter('Kaikki');setSearch('');setFilename(file.name);setError('');}catch(e){setError(e instanceof Error?e.message:'Tiedostoa ei voitu avata.');}if(input.current)input.current.value='';}
+  async function importFile(file?: File){if(!file)return;try{const next=validateData(JSON.parse(await file.text()));const first=next.themes[0];if(!first)return;setData(next);setSelected(first.id);setStep(0);setFilter('Kaikki');setSearch('');setFilename(file.name);setError('');}catch(e){setError(e instanceof Error?e.message:'Tiedostoa ei voitu avata.');}if(input.current)input.current.value='';}
   function downloadData(){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='suomen_rakennemuutosten_atlas.json';a.click();URL.revokeObjectURL(url);setExportOpen(false);}
+  if(!active||!current)return <div className="scene-loading">Aineistossa ei ole teemoja.</div>;
   return <div className="atlas-app">
     <header className="atlas-header">
       <div className="brand"><div className="brand-symbol"><Network size={25}/></div><div><div className="brand-eyebrow">YHTEISKUNTA AJASSA</div><h1>Suomen rakennemuutosten atlas<span className="edition"> / 01</span></h1></div></div>
