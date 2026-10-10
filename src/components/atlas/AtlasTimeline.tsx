@@ -59,7 +59,7 @@ export function AtlasTimeline({ data, selected, visible, onSelect, focus }: Prop
       return <g key={t.id} className={`tl-row theme-color-${gi} ${active ? 'selected' : ''}`}>
         {newGroup && <text x={8} y={y - 9} className="tl-group">{groups[gi]?.toUpperCase()}</text>}
         {active && <rect x={0} y={y - 8} width={1020} height={ROW} className="tl-row-bg" />}
-        <text x={X0 - 10} y={y + 3} textAnchor="end" className="tl-label" onClick={() => onSelect(t.id)}>{t.name.length > 34 ? t.name.slice(0, 32) + '…' : t.name}</text>
+        <text x={X0 - 10} y={y + 3} textAnchor="end" className="tl-label" onClick={() => onSelect(t.id)}>{t.name.length > 30 ? t.name.slice(0, 28) + '…' : t.name}</text>
         {first && last && <line x1={first.cx} x2={last.cx} y1={y} y2={y} className="tl-arc" />}
         {pts.map(p => {
           const hit = focus === null || focus === p.stage;
