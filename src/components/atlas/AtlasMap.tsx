@@ -6,7 +6,7 @@ export function AtlasMap({ data, selected, visible, onSelect, zoom, showLinks }:
   const nodes = useMemo(()=>layoutNodes(data),[data]);
   const edges = useMemo(()=>connections(data),[data]);
   const selectedNode = nodes.find(n=>n.theme.id===selected);
-  return <svg className="atlas-map" viewBox="0 0 1060 700" role="img" aria-label="Rakennemuutosten kaksiulotteinen teemakartta">
+  return <svg className="atlas-map" viewBox="65 65 930 590" role="img" aria-label="Rakennemuutosten kaksiulotteinen teemakartta">
     <defs><pattern id="map-dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" className="map-grid-dot"/></pattern></defs>
     <rect width="1060" height="700" fill="url(#map-dots)"/>
     <g transform={`translate(${530*(1-zoom)} ${350*(1-zoom)}) scale(${zoom})`}>

@@ -16,7 +16,7 @@ export function validateData(value: unknown): AtlasData {
     for (const s of theme.steps) if (!s || !Number.isInteger(s.stage) || s.stage < 1 || s.stage > 6 || !Number.isFinite(s.year) || typeof s.text !== 'string' || typeof s.label !== 'string') throw new Error('Vaiheen vuosi, numero tai kuvaus puuttuu.');
   }
   const raw = value as Partial<AtlasData>;
-  return { schema_version: raw.schema_version ?? 3, themes: value.themes.map(t => ({ ...t, window: t.window ?? '', connections: t.connections ?? '', test: t.test ?? '' })), links: Array.isArray(raw.links) ? raw.links.filter(l => l && typeof l.source === 'string' && typeof l.target === 'string' && typeof l.kind === 'string') : [] };
+  return { schema_version: raw.schema_version ?? 3, themes: value.themes.map(t => ({ id: t.id, name: t.name, thesis: t.thesis, group: t.group, steps: t.steps.map((s: Step)=>({stage:s.stage,year:s.year,label:s.label,text:s.text})), window: typeof t.window === 'string' ? t.window : '', connections: typeof t.connections === 'string' ? t.connections : '', test: typeof t.test === 'string' ? t.test : '' })), links: Array.isArray(raw.links) ? raw.links.filter(l => l && typeof l.source === 'string' && typeof l.target === 'string' && typeof l.kind === 'string') : [] };
 }
 export function connections(data: AtlasData) {
   const seen = new Set<string>();
