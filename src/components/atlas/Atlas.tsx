@@ -5,8 +5,8 @@ import { AtlasMap } from './AtlasMap';
 import { initialData, groups, stages, groupIndex, connections, validateData, type AtlasData } from '@/lib/atlas-data';
 const Scene = lazy(()=>import('./AtlasScene').then(m=>({default:m.AtlasScene})));
 
-export function Atlas({ initialMode = '2d', standalone = false }: { initialMode?: '2d'|'3d'; standalone?: boolean }) {
-  const [mode,setMode]=useState(initialMode),[data,setData]=useState<AtlasData>(initialData),[selected,setSelected]=useState(initialData.themes[0]?.id ?? 1),[step,setStep]=useState(0),[search,setSearch]=useState(''),[filter,setFilter]=useState('Kaikki'),[zoom,setZoom]=useState(1),[showLinks,setShowLinks]=useState(true),[reset,setReset]=useState(0),[error,setError]=useState(''),[filename,setFilename]=useState('suomen_rakennemuutosten_atlas.json'),[mobileList,setMobileList]=useState(false),[exportOpen,setExportOpen]=useState(false);
+export function Atlas({ initialMode = '2d', standalone = false, initialDataset = initialData }: { initialMode?: '2d'|'3d'; standalone?: boolean; initialDataset?: AtlasData }) {
+  const [mode,setMode]=useState(initialMode),[data,setData]=useState<AtlasData>(initialDataset),[selected,setSelected]=useState(initialDataset.themes[0]?.id ?? 1),[step,setStep]=useState(0),[search,setSearch]=useState(''),[filter,setFilter]=useState('Kaikki'),[zoom,setZoom]=useState(1),[showLinks,setShowLinks]=useState(true),[reset,setReset]=useState(0),[error,setError]=useState(''),[filename,setFilename]=useState('suomen_rakennemuutosten_atlas.json'),[mobileList,setMobileList]=useState(false),[exportOpen,setExportOpen]=useState(false);
   const input=useRef<HTMLInputElement>(null), workspace=useRef<HTMLDivElement>(null);
   const themes=useMemo(()=>data.themes.filter(t=>(filter==='Kaikki'||t.group===filter)&&`${t.name} ${t.thesis}`.toLocaleLowerCase('fi').includes(search.toLocaleLowerCase('fi'))),[data,filter,search]);
   const visible=useMemo(()=>new Set(themes.map(t=>t.id)),[themes]);
