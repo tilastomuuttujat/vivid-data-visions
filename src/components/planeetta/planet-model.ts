@@ -44,7 +44,7 @@ export const TENSIONS: Tension[] = [
 
 /** Step positions of a path: a time-ordered arc around its cluster centre. */
 export function pathPoints(c: Cluster, ai: number) {
-  const a = c.anchors[ai]; const n = c.anchors.length;
+  const a = c.anchors[ai]!; const n = c.anchors.length;
   const base = (ai / n) * Math.PI * 2;
   return a.steps.map((_, si) => {
     const t = si / Math.max(1, a.steps.length - 1);
