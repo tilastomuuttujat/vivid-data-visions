@@ -6,13 +6,14 @@ const lvl = (k: number) => (k < 1.7 ? 0 : k < 4 ? 1 : k < 9 ? 2 : 3);
 const fade = (k: number, from: number, to: number) => Math.max(0, Math.min(1, (k - from) / (to - from)));
 
 function blob(cx: number, cy: number, r: number, seed: number) {
-  const pts = Array.from({ length: 14 }, (_, i) => {
+  const pts: number[][] = Array.from({ length: 14 }, (_, i) => {
     const a = (i / 14) * Math.PI * 2;
     const rr = r * (0.82 + 0.18 * Math.sin(a * 3 + seed) * Math.cos(a * 2 - seed));
     return [cx + Math.cos(a) * rr, cy + Math.sin(a) * rr * 0.8];
   });
-  let d = `M${(pts[0][0] + pts[13][0]) / 2},${(pts[0][1] + pts[13][1]) / 2}`;
-  pts.forEach((p, i) => { const n = pts[(i + 1) % 14]; d += ` Q${p[0]},${p[1]} ${(p[0] + n[0]) / 2},${(p[1] + n[1]) / 2}`; });
+  const P = pts as [number, number][];
+  let d = `M${(P[0]![0] + P[13]![0]) / 2},${(P[0]![1] + P[13]![1]) / 2}`;
+  P.forEach((p, i) => { const n = P[(i + 1) % 14]!; d += ` Q${p[0]},${p[1]} ${(p[0] + n[0]) / 2},${(p[1] + n[1]) / 2}`; });
   return d + 'Z';
 }
 

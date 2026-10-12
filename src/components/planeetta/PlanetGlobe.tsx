@@ -18,7 +18,7 @@ function PlateDust() {
     let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
     PLATES.forEach(p => {
       const hue: Record<string, string> = { aine: '#f0a060', vaesto: '#6fe0dc', sopimus: '#86d6a0', paaoma: '#b48cf0' };
-      c.set(hue[p.id]);
+      c.set(hue[p.id]!);
       for (let i = 0; i < 1400; i++) {
         const a = rnd() * Math.PI * 2, rr = Math.pow(rnd(), 0.6) * p.r * 1.05;
         const v = vec(p.x + Math.cos(a) * rr * 1.0, p.y + Math.sin(a) * rr * 0.85, R + 0.005);
@@ -67,7 +67,7 @@ function Scene({ sel, onSel, level, onLevel }: { sel: Sel; onSel: (s: Sel) => vo
       {PLATES.map(p => (
         <group key={p.id}>
           <mesh position={vec(p.x, p.y, R + 0.01)} onClick={e => { e.stopPropagation(); onSel({ kind: 'plate', plate: p }); fly(p.x, p.y, 4.2); }}>
-            <sphereGeometry args={[0.07, 16, 16]} /><meshBasicMaterial color={HUE[p.id]} />
+            <sphereGeometry args={[0.07, 16, 16]} /><meshBasicMaterial color={HUE[p.id]!} />
           </mesh>
           {level <= 1 && <Html position={vec(p.x, p.y - p.r * 0.75, R + 0.05)} center className="pl-gl-label plate" occlude={false}>{p.name}</Html>}
           {level >= 1 && p.clusters.map(c => (
@@ -80,14 +80,14 @@ function Scene({ sel, onSel, level, onLevel }: { sel: Sel; onSel: (s: Sel) => vo
                 const pts = pathPoints(c, ai).map(q => vec(q.x, q.y, R + 0.012));
                 return (
                   <group key={a.id}>
-                    <Line points={pts} color={HUE[p.id]} lineWidth={selA === a.id ? 3.5 : 1.6} transparent opacity={selA && selA !== a.id ? 0.35 : 1}
+                    <Line points={pts} color={HUE[p.id]!} lineWidth={selA === a.id ? 3.5 : 1.6} transparent opacity={selA && selA !== a.id ? 0.35 : 1}
                       onClick={e => { e.stopPropagation(); onSel({ kind: 'path', c, a }); }} />
                     {pts.map((v, si) => (
-                      <mesh key={si} position={v} onClick={e => { e.stopPropagation(); onSel({ kind: 'step', c, a, s: a.steps[si] }); target.current = v.clone().normalize().multiplyScalar(2.35); }}>
+                      <mesh key={si} position={v} onClick={e => { e.stopPropagation(); onSel({ kind: 'step', c, a, s: a.steps[si]! }); target.current = v.clone().normalize().multiplyScalar(2.35); }}>
                         <sphereGeometry args={[0.012, 8, 8]} /><meshBasicMaterial color={si === pts.length - 1 ? '#ff9a50' : '#ffffff'} />
                       </mesh>
                     ))}
-                    {level >= 3 && pts.map((v, si) => <Html key={'l' + si} position={v} className="pl-gl-step">{a.steps[si].years?.[0]} · {a.steps[si].short_title}</Html>)}
+                    {level >= 3 && pts.map((v, si) => <Html key={'l' + si} position={v} className="pl-gl-step">{a.steps[si]!.years?.[0]} · {a.steps[si]!.short_title}</Html>)}
                   </group>
                 );
               })}
@@ -101,7 +101,7 @@ function Scene({ sel, onSel, level, onLevel }: { sel: Sel; onSel: (s: Sel) => vo
         return (
           <group key={t.id}>
             <Line points={pts} color="#ff9a50" lineWidth={1.4} dashed dashSize={0.05} gapSize={0.05} onClick={e => { e.stopPropagation(); onSel({ kind: 'tension', t }); }} />
-            <Html position={pts[t.id === 't2' ? 7 : t.id === 't3' ? 16 : 12]} center className="pl-gl-label tension">{t.name}</Html>
+            <Html position={pts[t.id === 't2' ? 7 : t.id === 't3' ? 16 : 12]!} center className="pl-gl-label tension">{t.name}</Html>
           </group>
         );
       })}
