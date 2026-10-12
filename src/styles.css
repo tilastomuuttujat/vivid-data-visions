@@ -295,7 +295,7 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
 .v-player { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
 .v-play { width: 40px; height: 40px; border-radius: 99px; display: grid; place-items: center; flex: none; background: linear-gradient(100deg, var(--v-glow), var(--v-ember)); color: var(--v-ink); box-shadow: 0 8px 30px -10px var(--v-glow); }
 .v-steps { flex: 1; display: flex; gap: 6px; }
-.v-steps button { flex: 1 1 0; min-width: 0; height: 4px; margin: 8px 0; padding: 0; border-radius: 99px; background: var(--v-line); position: relative; overflow: hidden; }
+.v-steps button { flex: 1 1 0; min-width: 0; height: 4px; margin: 8px 0; padding: 0; border-radius: 99px; background: color-mix(in oklab, var(--v-mute) 35%, transparent); position: relative; overflow: hidden; }
 .v-steps button.done { background-color: var(--v-glow); }
 .v-steps i { position: absolute; left: 0; top: 0; height: 4px; border-radius: 99px; background: linear-gradient(90deg, var(--v-glow), var(--v-ember)); }
 .v-steps i.full { width: 100%; }
