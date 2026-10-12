@@ -294,6 +294,7 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
 .v-split .v-mech li { padding: 3px 0 5px 26px; }
 .v-split .v-mech b { font-size: 11px; }
 .v-split .v-mech p { font-size: 13px; line-height: 1.42; margin: 2px 0 0; }
+.v-split .m-base p { font-size: 14px !important; line-height: 1.4; }
 .v-split .v-alt { font-size: 12.5px; margin: 0; }
 .v-split .v-nav button { padding: 7px 12px; font-size: 13px; }
 .v-player { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
