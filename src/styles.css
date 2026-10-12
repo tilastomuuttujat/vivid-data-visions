@@ -462,3 +462,4 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
 .pl-gl-label.plate { font-family: 'Fraunces', serif; font-size: 16px; }
 .pl-gl-label.tension { color: var(--v-ember); font-size: 11px; }
 .pl-gl-step { color: var(--v-text); font-size: 10.5px; white-space: nowrap; pointer-events: none; text-shadow: 0 1px 4px #000; padding-left: 6px; }
+.planeetta > .v-aurora { position: absolute; }
