@@ -2,10 +2,11 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import source from '@/data/anchors.json';
+import { Evidence, type Source, type Stat } from './Evidence';
 
-interface Step { short_title: string; title: string; period: string; years: number[]; theme_ids: number[]; explanation: string; mechanism: string; benefit: string; tradeoff: string; affected: string; lag: string; alternative?: string | null }
-interface Anchor { id: string; title: string; period: string; question: string; steps: Step[] }
-const anchors = ([...(source as { anchors: Anchor[] }).anchors]).sort((a, b) => (a.steps[0]?.years[0] ?? 0) - (b.steps[0]?.years[0] ?? 0));
+interface Step { short_title: string; title: string; period: string; years: number[]; theme_ids: number[]; explanation: string; mechanism: string; benefit: string; tradeoff: string; affected: string; lag: string; alternative?: string | null; evidence_note?: string | null; source_ids?: string[] | null; statistic_id?: string | null }
+interface Anchor { id: string; title: string; period: string; question: string; steps: Step[]; sources: Source[]; statistics: Stat[] }
+const anchors = ([...(source as unknown as { anchors: Anchor[] }).anchors]).sort((a, b) => (a.steps[0]?.years[0] ?? 0) - (b.steps[0]?.years[0] ?? 0));
 
 const Y0 = 1850, Y1 = 2050;
 // Non-linear time: recent decades get more room, roots stay visible.
@@ -150,6 +151,7 @@ export function Varaan() {
               <li className="m-lag"><b>Viive</b><p>{s.lag}</p></li>
               <li className="m-where"><b>Missä vaikutus näkyy</b><p>{s.affected}</p></li>
             </ol>
+            <Evidence stat={a.statistics.find(t => t.id === s.statistic_id)} note={s.evidence_note} sources={a.sources.filter(x => s.source_ids?.includes(x.id))} years={s.years} />
             {s.alternative && <p className="v-alt"><b>Toinen selitys</b> {s.alternative}</p>}
             <div className="v-nav">
               <button disabled={idx === 0} onClick={() => setIdx(idx - 1)}><ArrowLeft size={16} />Edellinen</button>
