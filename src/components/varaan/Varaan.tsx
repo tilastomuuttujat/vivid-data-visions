@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from '@tanstack/react-router';
-import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import source from '@/data/anchors.json';
 
 interface Step { short_title: string; title: string; period: string; years: number[]; theme_ids: number[]; explanation: string; mechanism: string; benefit: string; tradeoff: string; affected: string; lag: string; alternative?: string | null }
@@ -68,17 +68,35 @@ function Chain({ a, idx, setIdx }: { a: Anchor; idx: number; setIdx: (n: number)
   );
 }
 
+const STEP_MS = 9000;
+
 export function Varaan() {
   const [id, setId] = useState(anchors.find(a => a.id === 'maaltamuutto')?.id ?? anchors[0]!.id);
-  const [idx, setIdx] = useState(0);
+  const [idx, setIdxRaw] = useState(0);
+  const [playing, setPlaying] = useState(false);
   const a = useMemo(() => anchors.find(x => x.id === id) ?? anchors[0]!, [id]);
   const s = a.steps[Math.min(idx, a.steps.length - 1)]!;
-  const pick = (next: string) => { setId(next); setIdx(0); };
+  // Manual step choice pauses the guided animation.
+  const setIdx = (n: number) => { setPlaying(false); setIdxRaw(n); };
+  // Choosing a chain starts the guided animation from its first point.
+  const pick = (next: string) => { setId(next); setIdxRaw(0); setPlaying(true); };
   useEffect(() => {
-    const k = (e: KeyboardEvent) => { if (e.key === 'ArrowRight') setIdx(i => Math.min(a.steps.length - 1, i + 1)); if (e.key === 'ArrowLeft') setIdx(i => Math.max(0, i - 1)); };
+    if (!playing) return;
+    const t = window.setTimeout(() => {
+      if (idx < a.steps.length - 1) setIdxRaw(idx + 1); else setPlaying(false);
+    }, STEP_MS);
+    return () => window.clearTimeout(t);
+  }, [playing, idx, a]);
+  useEffect(() => {
+    const k = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') { setPlaying(false); setIdxRaw(i => Math.min(a.steps.length - 1, i + 1)); }
+      if (e.key === 'ArrowLeft') { setPlaying(false); setIdxRaw(i => Math.max(0, i - 1)); }
+      if (e.key === ' ') { e.preventDefault(); setPlaying(p => !p); }
+    };
     window.addEventListener('keydown', k); return () => window.removeEventListener('keydown', k);
   }, [a]);
   const ai = anchors.indexOf(a);
+  const togglePlay = () => { if (!playing && idx === a.steps.length - 1) setIdxRaw(0); setPlaying(p => !p); };
 
   return (
     <div className="varaan">
@@ -91,7 +109,7 @@ export function Varaan() {
       <section className="v-hero">
         <p className="v-kicker">Havaintomalli · 16 murrospolkua · 1866–2045</p>
         <h1>Minkä varaan <em>Suomi rakentuu?</em></h1>
-        <p className="v-lede">Ei syyllisiä, vaan perustuksia. Jokainen polku näyttää, minkä oletuksen varaan ratkaisu rakennettiin, mitä se tuotti — ja mikä hinta jäi kytemään pinnan alle, kunnes olosuhteet muuttuivat.</p>
+        <p className="v-lede">Ei syyllisiä, vaan perustuksia. Valitse polku virrasta — animaatio kuljettaa sinut sen vaiheiden läpi selityksineen.</p>
       </section>
 
       <section className="v-stage">
@@ -105,28 +123,41 @@ export function Varaan() {
           </div>
           <button className="v-arrow" aria-label="Seuraava polku" onClick={() => pick(anchors[(ai + 1) % anchors.length]!.id)}><ChevronRight /></button>
         </div>
-        <Chain a={a} idx={idx} setIdx={setIdx} />
-      </section>
+        <div className="v-split">
+          <div className="v-chainwrap">
+            <Chain a={a} idx={idx} setIdx={setIdx} />
+            <div className="v-player">
+              <button className="v-play" onClick={togglePlay} aria-label={playing ? 'Pysäytä' : 'Toista'}>{playing ? <Pause size={16} /> : <Play size={16} />}</button>
+              <div className="v-steps">
+                {a.steps.map((_, i) => <button key={i} onClick={() => setIdx(i)} aria-label={`Vaihe ${i + 1}`} className={i < idx ? 'done' : i === idx ? 'now' : ''}>
+                  {i === idx && <i key={`${a.id}-${idx}-${playing}`} className={playing ? 'run' : 'full'} style={{ animationDuration: `${STEP_MS}ms` }} />}
+                </button>)}
+              </div>
+              <span className="v-playlabel">{playing ? 'Etenee automaattisesti' : 'Pysäytetty · välilyönti jatkaa'}</span>
+            </div>
+          </div>
 
-      <section className="v-reading" key={`${a.id}-${idx}`}>
-        <div className="v-step-title">
-          <span>Vaihe {idx + 1} / {a.steps.length} · {s.period}</span>
-          <h3>{s.title}</h3>
-          <p>{s.explanation}</p>
-        </div>
-        <ol className="v-mech">
-          <li className="m-base"><b>Minkä varaan</b><p>{s.mechanism}</p></li>
-          <li className="m-gain"><b>Mitä se tuotti</b><p>{s.benefit}</p></li>
-          <li className="m-cost"><b>Piilohinta</b><p>{s.tradeoff}</p></li>
-          <li className="m-lag"><b>Viive</b><p>{s.lag}</p></li>
-          <li className="m-where"><b>Missä vaikutus näkyy</b><p>{s.affected}</p></li>
-        </ol>
-        {s.alternative && <p className="v-alt"><b>Toinen selitys</b> {s.alternative}</p>}
-        <div className="v-nav">
-          <button disabled={idx === 0} onClick={() => setIdx(idx - 1)}><ArrowLeft size={16} />Edellinen vaihe</button>
-          {idx < a.steps.length - 1
-            ? <button className="primary" onClick={() => setIdx(idx + 1)}>Seuraava vaihe<ArrowRight size={16} /></button>
-            : <button className="primary" onClick={() => pick(anchors[(ai + 1) % anchors.length]!.id)}>Seuraava polku<ArrowRight size={16} /></button>}
+          <aside className="v-reading" key={`${a.id}-${idx}`}>
+            <div className="v-step-title">
+              <span>Vaihe {idx + 1} / {a.steps.length} · {s.period}</span>
+              <h3>{s.title}</h3>
+              <p>{s.explanation}</p>
+            </div>
+            <ol className="v-mech">
+              <li className="m-base"><b>Minkä varaan</b><p>{s.mechanism}</p></li>
+              <li className="m-gain"><b>Mitä se tuotti</b><p>{s.benefit}</p></li>
+              <li className="m-cost"><b>Piilohinta</b><p>{s.tradeoff}</p></li>
+              <li className="m-lag"><b>Viive</b><p>{s.lag}</p></li>
+              <li className="m-where"><b>Missä vaikutus näkyy</b><p>{s.affected}</p></li>
+            </ol>
+            {s.alternative && <p className="v-alt"><b>Toinen selitys</b> {s.alternative}</p>}
+            <div className="v-nav">
+              <button disabled={idx === 0} onClick={() => setIdx(idx - 1)}><ArrowLeft size={16} />Edellinen</button>
+              {idx < a.steps.length - 1
+                ? <button className="primary" onClick={() => setIdx(idx + 1)}>Seuraava<ArrowRight size={16} /></button>
+                : <button className="primary" onClick={() => pick(anchors[(ai + 1) % anchors.length]!.id)}>Seuraava polku<ArrowRight size={16} /></button>}
+            </div>
+          </aside>
         </div>
       </section>
 
