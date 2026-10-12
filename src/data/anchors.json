@@ -3977,6 +3977,218 @@
      "statistic_id": null
     }
    ]
+  },
+  {
+   "id": "jaavuori-valtionyhtiot-raahe",
+   "title": "Jäävuori: valtionyhtiöt pörssiin – Rautaruukki, SSAB ja Raahe",
+   "period": "1960–2014 · lasku 2035",
+   "question": "Minkä varaan teollisuuspaikkakunta jäi, kun valtio vaihtoi omistajan roolinsa sijoittajan rooliin?",
+   "sources": [],
+   "statistics": [],
+   "steps": [
+    {
+     "short_title": "Ankkurointi",
+     "title": "Valtio perustaa Rautaruukin Raaheen",
+     "period": "1960–1975",
+     "years": [
+      1960,
+      1975
+     ],
+     "theme_ids": [
+      16,
+      15,
+      20
+     ],
+     "explanation": "Julkinen perustelu: teräksen omavaraisuus ja Pohjois-Suomen teollistaminen. Käytännössä valittiin, että valtionyhtiö kantaa alueellista vastuuta työpaikoista ja kunnan veropohjasta.",
+     "mechanism": "Valtio omistajana sitoo tuotannon paikkaan; yhtiön tulos ja alueen elinvoima kytkeytyvät yhteen.",
+     "benefit": "Tuhansia teollisia työpaikkoja, ammattikoulutus ja kasvava kaupunki.",
+     "tradeoff": "Paikkakunta rakentuu yhden työnantajan varaan.",
+     "affected": "Raahe ja sen seutu, valtion talous.",
+     "lag": "Riippuvuus näkyy vasta, kun omistajan tavoite muuttuu.",
+     "alternative": "Alueellinen teollistaminen oli laajasti hyväksytty linja, ei sisäpiirin valinta.",
+     "evidence_note": "Jäävuorimalli: vaihe asettaa vastakkain julkisen perustelun ja sen, mitä valinta käytännössä siirsi. Päätöksentekijöiden aikeita tai epäasiallista toimintaa ei tässä väitetä todennetuksi; tulkinta on toimituksellinen ja vaatii lähdetarkistuksen.",
+     "source_ids": [],
+     "statistic_id": null
+    },
+    {
+     "short_title": "Kabinettivalinta",
+     "title": "Omistajaohjaus muuttuu sijoittajan logiikaksi",
+     "period": "1989–1997",
+     "years": [
+      1989,
+      1997
+     ],
+     "theme_ids": [
+      16,
+      17,
+      13
+     ],
+     "explanation": "Julkinen perustelu: kilpailukyky ja pääoman saatavuus. Käytännössä valittiin, että alueelliset velvoitteet eivät enää kuulu yhtiön tehtävään. Ratkaisut valmisteltiin pienessä piirissä laman paineessa.",
+     "mechanism": "Pörssilistautuminen siirtää yhtiön tavoitteen osakkeenomistajan tuottoon; alueellinen vastuu jää ilman omistajaa.",
+     "benefit": "Pääomaa, tehostumista ja myyntituloja valtiolle laman keskellä.",
+     "tradeoff": "Kukaan ei enää vastaa siitä, mitä tehostus tekee paikkakunnalle.",
+     "affected": "Osakkeenomistajat ja johto välittömästi; työntekijät ja kunta myöhemmin.",
+     "lag": "Vaikutus kunnan veropohjaan näkyy 10–20 vuoden viiveellä.",
+     "alternative": "Laman pakko: valtiolla ei ollut varaa pääomittaa yhtiöitä vanhaan malliin.",
+     "evidence_note": "Jäävuorimalli: vaihe asettaa vastakkain julkisen perustelun ja sen, mitä valinta käytännössä siirsi. Päätöksentekijöiden aikeita tai epäasiallista toimintaa ei tässä väitetä todennetuksi; tulkinta on toimituksellinen ja vaatii lähdetarkistuksen.",
+     "source_ids": [],
+     "statistic_id": null
+    },
+    {
+     "short_title": "Omistus pois",
+     "title": "Rautaruukki myydään SSAB:lle",
+     "period": "2014",
+     "years": [
+      2014,
+      2014
+     ],
+     "theme_ids": [
+      16,
+      13,
+      18
+     ],
+     "explanation": "Julkinen perustelu: kansainvälinen mittakaava. Käytännössä päätösvalta tuotannon tulevaisuudesta siirtyi Suomen ulkopuolelle.",
+     "mechanism": "Kun päätöspaikka siirtyy, paikkakunnan neuvotteluasema heikkenee.",
+     "benefit": "Kauppahinta ja vahvempi kilpailuasema yhtiölle.",
+     "tradeoff": "Tehdas on yksi konsernin tuotantopaikka muiden joukossa.",
+     "affected": "Raahe, alihankkijat, Pohjois-Pohjanmaa.",
+     "lag": "Investointi- ja sulkemispäätökset tulevat ajankohtaisiksi seuraavissa sykleissä.",
+     "alternative": "Fuusio voi myös turvata tuotannon, jota pieni yhtiö ei olisi kyennyt uudistamaan.",
+     "evidence_note": "Jäävuorimalli: vaihe asettaa vastakkain julkisen perustelun ja sen, mitä valinta käytännössä siirsi. Päätöksentekijöiden aikeita tai epäasiallista toimintaa ei tässä väitetä todennetuksi; tulkinta on toimituksellinen ja vaatii lähdetarkistuksen.",
+     "source_ids": [],
+     "statistic_id": null
+    },
+    {
+     "short_title": "Lasku",
+     "title": "Käyttämätön työpotentiaali julkisen talouden kannettavaksi",
+     "period": "2015–2035",
+     "years": [
+      2015,
+      2035
+     ],
+     "theme_ids": [
+      15,
+      17,
+      20
+     ],
+     "explanation": "Tehostuksen hyöty näkyy yhtiön tuloksessa, sen kustannus kunnan ja valtion menoissa: työttömyys, varhaiset eläkkeet, muuttotappio ja aluetuet.",
+     "mechanism": "Osaoptimointi: yrityksen tuottavuus kasvaa, mutta vapautunut työ ei löydä uutta käyttöä.",
+     "benefit": "Yhtiö pysyy kilpailukykyisenä.",
+     "tradeoff": "Kustannus voi ylittää tehostuksen hyödyn kansantalouden tasolla.",
+     "affected": "Keski-ikäiset teollisuuden työntekijät, kunta, sote-rahoitus.",
+     "lag": "20–30 vuotta alkuperäisestä valinnasta.",
+     "alternative": "Rakennemuutos olisi tapahtunut omistajasta riippumatta; kysymys on siitä, kuka sen hinnan kantaa.",
+     "evidence_note": "Jäävuorimalli: vaihe asettaa vastakkain julkisen perustelun ja sen, mitä valinta käytännössä siirsi. Päätöksentekijöiden aikeita tai epäasiallista toimintaa ei tässä väitetä todennetuksi; tulkinta on toimituksellinen ja vaatii lähdetarkistuksen.",
+     "source_ids": [],
+     "statistic_id": null
+    }
+   ]
+  },
+  {
+   "id": "jaavuori-pankkisaantely-arsenal",
+   "title": "Jäävuori: pankkisääntelyn purku ja Arsenalin varjo",
+   "period": "1983–1995 · lasku 2020-luvulle",
+   "question": "Minkä varaan riskit jaettiin, kun luottokuplan tappiot siirrettiin yhteisesti maksettaviksi?",
+   "sources": [],
+   "statistics": [],
+   "steps": [
+    {
+     "short_title": "Vapautus",
+     "title": "Luotto- ja valuuttasääntely puretaan",
+     "period": "1983–1988",
+     "years": [
+      1983,
+      1988
+     ],
+     "theme_ids": [
+      17,
+      3,
+      18
+     ],
+     "explanation": "Julkinen perustelu: modernisointi ja länsimainen rahoitusmarkkina. Käytännössä riskinotto siirtyi pankeille ilman, että valvonta kasvoi samassa tahdissa.",
+     "mechanism": "Halpa, ulkomaanvaluuttainen luotto ruokkii vakuusarvoja ja lisää velkaa.",
+     "benefit": "Investointeja, kasvua ja omaisuusarvojen nousua.",
+     "tradeoff": "Talous herkistyy korko- ja valuuttashokeille.",
+     "affected": "Pankit, sijoittajat, velkaantuneet yritykset ja kotitaloudet.",
+     "lag": "Haavoittuvuus kasautuu 3–6 vuodessa.",
+     "alternative": "Vapautus oli kansainvälinen trendi; ajoitus ja valvonnan heikkous olivat suomalaisia valintoja.",
+     "evidence_note": "Jäävuorimalli: vaihe asettaa vastakkain julkisen perustelun ja sen, mitä valinta käytännössä siirsi. Päätöksentekijöiden aikeita tai epäasiallista toimintaa ei tässä väitetä todennetuksi; tulkinta on toimituksellinen ja vaatii lähdetarkistuksen.",
+     "source_ids": [],
+     "statistic_id": null
+    },
+    {
+     "short_title": "Kabinettivalinta",
+     "title": "Vahvan markan linja ja kriisin hoito",
+     "period": "1989–1992",
+     "years": [
+      1989,
+      1992
+     ],
+     "theme_ids": [
+      17,
+      13,
+      18
+     ],
+     "explanation": "Julkinen perustelu: uskottavuus ja vakaus. Käytännössä kiinteä kurssi pidettiin pitkään, ja kustannus siirtyi velallisille ja työllisyyteen.",
+     "mechanism": "Kun valuutta ei jousta, sopeutus tapahtuu konkurssien ja työttömyyden kautta.",
+     "benefit": "Uskottavuus rahoitusmarkkinoilla ja inflaation hillintä.",
+     "tradeoff": "Yritysten ja kotitalouksien velka kasvaa kurssin murtuessa.",
+     "affected": "Valuuttalainaa ottaneet yritykset ja kotitaloudet.",
+     "lag": "Vaikutus näkyy 1–3 vuodessa.",
+     "alternative": "Vaihtoehtoinen devalvaatio olisi siirtänyt kustannuksen palkansaajien ostovoimaan.",
+     "evidence_note": "Jäävuorimalli: vaihe asettaa vastakkain julkisen perustelun ja sen, mitä valinta käytännössä siirsi. Päätöksentekijöiden aikeita tai epäasiallista toimintaa ei tässä väitetä todennetuksi; tulkinta on toimituksellinen ja vaatii lähdetarkistuksen.",
+     "source_ids": [],
+     "statistic_id": null
+    },
+    {
+     "short_title": "Sosialisointi",
+     "title": "Pankkituki ja roskapankki Arsenal",
+     "period": "1991–1995",
+     "years": [
+      1991,
+      1995
+     ],
+     "theme_ids": [
+      17,
+      7,
+      18
+     ],
+     "explanation": "Julkinen perustelu: pankkijärjestelmän pelastaminen. Käytännössä huonot saatavat siirrettiin veronmaksajien kannettaviksi, ja tuhansien velallisten vakuudet realisoitiin.",
+     "mechanism": "Tappiot yhteisvastuullistetaan, mutta velallisen vastuu säilyy yksilöllisenä.",
+     "benefit": "Maksuliikenne ja talletukset säilyivät.",
+     "tradeoff": "Riski ja tuotto jakautuvat epäsymmetrisesti.",
+     "affected": "Veronmaksajat, velalliset yrittäjät, takaajat.",
+     "lag": "Velkavankeus ja ulosotot jatkuvat vuosikymmeniä.",
+     "alternative": "Pankkikriisin hoito oli välttämätön; arvioitava on taakanjaon oikeudenmukaisuus.",
+     "evidence_note": "Jäävuorimalli: vaihe asettaa vastakkain julkisen perustelun ja sen, mitä valinta käytännössä siirsi. Päätöksentekijöiden aikeita tai epäasiallista toimintaa ei tässä väitetä todennetuksi; tulkinta on toimituksellinen ja vaatii lähdetarkistuksen.",
+     "source_ids": [],
+     "statistic_id": null
+    },
+    {
+     "short_title": "Lasku",
+     "title": "Rakennetyöttömyys ja luottamuksen kuluminen",
+     "period": "1995–2025",
+     "years": [
+      1995,
+      2025
+     ],
+     "theme_ids": [
+      15,
+      17,
+      7
+     ],
+     "explanation": "Laman leikkuri tehosti yrityksiä, mutta jätti pysyvän työttömien ja velallisten joukon. Kustannus kulkee sosiaaliturvassa, terveydessä ja luottamuksessa instituutioihin.",
+     "mechanism": "Kriisissä tehty tehostus jää pysyväksi; käyttämätön työpotentiaali kumuloituu.",
+     "benefit": "Tuottavuusloikka ja nopea vientivetoinen elpyminen.",
+     "tradeoff": "Pitkäaikaistyöttömyys, ylisukupolvinen velkaantuminen.",
+     "affected": "Lamassa pudonneet ja heidän lapsensa, julkinen talous.",
+     "lag": "20–30 vuotta.",
+     "alternative": "Osa työttömyydestä johtui globaalista rakennemuutoksesta, ei kotimaisista valinnoista.",
+     "evidence_note": "Jäävuorimalli: vaihe asettaa vastakkain julkisen perustelun ja sen, mitä valinta käytännössä siirsi. Päätöksentekijöiden aikeita tai epäasiallista toimintaa ei tässä väitetä todennetuksi; tulkinta on toimituksellinen ja vaatii lähdetarkistuksen.",
+     "source_ids": [],
+     "statistic_id": null
+    }
+   ]
   }
  ]
 }

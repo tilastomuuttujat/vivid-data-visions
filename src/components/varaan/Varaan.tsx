@@ -18,7 +18,7 @@ function River({ active, onPick }: { active: Anchor; onPick: (id: string) => voi
   const W = 1000, H = 150;
   const ticks = [1850, 1900, 1950, 1975, 2000, 2025, 2050];
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="v-river" role="img" aria-label="Kaikki 16 polkua ajan virrassa">
+    <svg viewBox={`0 0 ${W} ${H}`} className="v-river" role="img" aria-label={`Kaikki ${anchors.length} polkua ajan virrassa`}>
       <defs>
         <linearGradient id="riv" x1="0" x2="1"><stop offset="0" stopColor="var(--v-root)" /><stop offset=".55" stopColor="var(--v-glow)" /><stop offset="1" stopColor="var(--v-ember)" /></linearGradient>
       </defs>
@@ -109,7 +109,7 @@ export function Varaan() {
       </header>
 
       <section className="v-hero">
-        <p className="v-kicker">Havaintomalli · 16 murrospolkua · 1866–2045</p>
+        <p className="v-kicker">Havaintomalli · {anchors.length} murrospolkua · 1866–2045</p>
         <h1>Minkä varaan <em>Suomi rakentuu?</em></h1>
         <p className="v-lede">Ei syyllisiä, vaan perustuksia. Valitse polku virrasta — animaatio kuljettaa sinut sen vaiheiden läpi selityksineen.</p>
       </section>
