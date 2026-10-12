@@ -15,7 +15,7 @@ const groups = [...new Set(themes.map(t => t.group))];
 const ordered = groups.flatMap(g => themes.filter(t => t.group === g));
 const rowOf = new Map(ordered.map((t, i) => [t.id, i]));
 
-const Y0 = 1850, Y1 = 2050, W = 1200, H = 620, TOP = 70, BOT = 40, LEFT = 20;
+const Y0 = 1850, Y1 = 2050, W = 1200, H = 640, TOP = 80, BOT = 40, LEFT = 20;
 const tx = (y: number) => LEFT + Math.pow((Math.min(Y1, Math.max(Y0, y)) - Y0) / (Y1 - Y0), 0.62) * (W - LEFT * 2);
 const ty = (row: number) => TOP + (row + 0.5) * ((H - TOP - BOT) / ordered.length);
 
@@ -96,11 +96,11 @@ export function Observatorio() {
             return <g key={x.id} className={`obs-wave ${on ? 'on' : ''}`} onClick={() => setWave(x.id)}>
               <rect x={tx(x.from)} y={TOP - 6} width={tx(x.to) - tx(x.from)} height={H - TOP - BOT + 12} rx={40} filter="url(#obs-soft)" className={`obs-neb n${i}`} />
               <rect x={tx(x.from)} y={TOP - 6} width={tx(x.to) - tx(x.from)} height={H - TOP - BOT + 12} fill="transparent" />
-              <text x={tx(x.from) + 8} y={TOP - 14 - (i % 2) * 16} className="obs-wavelabel">{x.name}</text>
+              <text x={tx(x.from) + 8} y={TOP - 34 + (i % 3) * 13} className="obs-wavelabel">{x.name}</text>
             </g>;
           })}
           {/* group separators */}
-          {groups.map(g => { const r = ordered.findIndex(t => t.group === g); return <text key={g} x={W - LEFT} y={ty(r) - 6} textAnchor="end" className="obs-group">{g}</text>; })}
+          {groups.map(g => { const r = ordered.findIndex(t => t.group === g); return <text key={g} x={LEFT + 4} y={ty(r) - 6} className="obs-group">{g}</text>; })}
           {[1850, 1900, 1950, 1975, 2000, 2025, 2050].map(t => <g key={t}><line x1={tx(t)} x2={tx(t)} y1={TOP} y2={H - BOT} className="v-tick" /><text x={tx(t)} y={H - 16} className="v-ticklabel">{t}</text></g>)}
           {/* constellations: anchor paths across themes */}
           {anchors.map(a => {
@@ -113,11 +113,11 @@ export function Observatorio() {
           })}
           {/* theme stars */}
           {ordered.map((t, r) => t.steps.map((s, k) => {
-            const role = ROLE[s.stage]?.key ?? 'base', past = s.year <= year;
+            const role = ROLE[s.stage]?.key ?? "base", past = s.year <= year, jx = ((r * 37 + k * 11) % 9) - 4;
             const size = role === 'node' ? 4 : role === 'lock' ? 4.2 : role === 'fix' ? 2.6 : 2.2;
             return <g key={`${t.id}-${k}`} className={`obs-s ${role} ${past ? '' : 'future'}`} onMouseEnter={() => setHover({ t, s })} onMouseLeave={() => setHover(null)}>
-              {(role === 'node' || role === 'lock') && past && <circle cx={tx(s.year)} cy={ty(r)} r={size * 3.4} fill={role === 'lock' ? 'url(#obs-ember)' : 'url(#obs-halo)'} opacity={.35} />}
-              <circle cx={tx(s.year)} cy={ty(r)} r={size} />
+              {(role === 'node' || role === 'lock') && past && <circle cx={tx(s.year) + jx} cy={ty(r)} r={size * 3.4} fill={role === 'lock' ? 'url(#obs-ember)' : 'url(#obs-halo)'} opacity={.35} />}
+              <circle cx={tx(s.year) + jx} cy={ty(r)} r={size} />
             </g>;
           }))}
           {/* sextant */}
