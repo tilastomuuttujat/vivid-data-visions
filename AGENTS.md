@@ -13,3 +13,5 @@
 - Keep atlas data in a separate JSON file and validate user imports before replacing in-memory data, so both views share the same qualitative source without persistence.
 - Share the atlas interface between the TanStack preview and standalone HTML exports, so the downloadable versions retain the same interactions.
 - Use SVG for the 2D graph and React Three Fiber for the client-only 3D graph; positions encode theme grouping rather than indicator values.
+
+- Observatorio view derives star roles from atlas stage numbers and wave definitions in-component; brightness encodes systemic role, never measured values (indicators are excluded).
