@@ -114,17 +114,17 @@ export function Varaan() {
 
       <section className="v-stage">
         <River active={a} onPick={pick} />
-        <div className="v-pathhead">
-          <button className="v-arrow" aria-label="Edellinen polku" onClick={() => pick(anchors[(ai - 1 + anchors.length) % anchors.length]!.id)}><ChevronLeft /></button>
-          <div>
-            <span className="v-period">{a.period}</span>
-            <h2>{a.title}</h2>
-            <p className="v-question">{a.question}</p>
-          </div>
-          <button className="v-arrow" aria-label="Seuraava polku" onClick={() => pick(anchors[(ai + 1) % anchors.length]!.id)}><ChevronRight /></button>
-        </div>
         <div className="v-split">
           <div className="v-chainwrap">
+            <div className="v-pathhead">
+              <button className="v-arrow" aria-label="Edellinen polku" onClick={() => pick(anchors[(ai - 1 + anchors.length) % anchors.length]!.id)}><ChevronLeft /></button>
+              <div>
+                <span className="v-period">{a.period}</span>
+                <h2>{a.title}</h2>
+                <p className="v-question">{a.question}</p>
+              </div>
+              <button className="v-arrow" aria-label="Seuraava polku" onClick={() => pick(anchors[(ai + 1) % anchors.length]!.id)}><ChevronRight /></button>
+            </div>
             <Chain a={a} idx={idx} setIdx={setIdx} />
             <div className="v-player">
               <button className="v-play" onClick={togglePlay} aria-label={playing ? 'Pysäytä' : 'Toista'}>{playing ? <Pause size={16} /> : <Play size={16} />}</button>

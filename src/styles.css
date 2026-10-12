@@ -284,14 +284,18 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
 /* Side-by-side: curve + summary in one view, no vertical scrolling */
 .v-hero { padding: 3vh 0 1vh; }
 .v-hero h1 { font-size: clamp(34px, 4.6vw, 64px); margin: 10px 0 12px; }
-.v-pathhead { margin-top: 14px; }
-.v-split { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(340px, 1fr); gap: clamp(16px, 2.4vw, 36px); align-items: start; margin-top: 8px; }
-.v-chainwrap { position: sticky; top: 16px; }
-.v-split .v-reading { grid-template-columns: 1fr; gap: 16px; margin-top: 0; padding: 22px 24px; max-height: calc(100vh - 32px); overflow-y: auto; position: sticky; top: 16px; animation: v-fade .5s both; }
-.v-split .v-step-title h3 { font-size: clamp(22px, 2vw, 28px); margin: 8px 0 10px; }
-.v-split .v-step-title p { font-size: 14.5px; line-height: 1.55; }
-.v-split .v-mech li { padding: 6px 0 8px 30px; }
-.v-split .v-mech p { font-size: 14.5px; line-height: 1.5; }
+.v-split .v-pathhead { margin-top: 0; gap: 12px; }
+.v-split .v-pathhead h2 { font-size: clamp(20px, 2.2vw, 30px); }
+.v-split { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.8fr); gap: clamp(14px, 2vw, 28px); align-items: start; margin-top: 14px; }
+.v-chainwrap { position: sticky; top: 16px; min-width: 0; }
+.v-split .v-reading { grid-template-columns: 1fr; gap: 10px; margin-top: 0; padding: 16px 18px; border-radius: 20px; max-height: calc(100vh - 32px); overflow-y: auto; position: sticky; top: 16px; animation: v-fade .5s both; }
+.v-split .v-step-title h3 { font-size: clamp(17px, 1.5vw, 21px); margin: 4px 0 6px; }
+.v-split .v-step-title p { font-size: 13px; line-height: 1.45; }
+.v-split .v-mech li { padding: 3px 0 5px 26px; }
+.v-split .v-mech b { font-size: 11px; }
+.v-split .v-mech p { font-size: 13px; line-height: 1.42; margin: 2px 0 0; }
+.v-split .v-alt { font-size: 12.5px; margin: 0; }
+.v-split .v-nav button { padding: 7px 12px; font-size: 13px; }
 .v-player { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
 .v-play { width: 40px; height: 40px; border-radius: 99px; display: grid; place-items: center; flex: none; background: linear-gradient(100deg, var(--v-glow), var(--v-ember)); color: var(--v-ink); box-shadow: 0 8px 30px -10px var(--v-glow); }
 .v-steps { flex: 1; display: flex; gap: 6px; }
