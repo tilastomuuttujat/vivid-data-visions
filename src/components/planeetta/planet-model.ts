@@ -63,4 +63,4 @@ export const LEVELS = [
 export type Sel = { kind: 'plate'; plate: Plate } | { kind: 'tension'; t: Tension } | { kind: 'cluster'; c: Cluster } | { kind: 'path'; c: Cluster; a: PAnchor } | { kind: 'step'; c: Cluster; a: PAnchor; s: PStep } | null;
 
 /** 2D world → lat/lon (degrees) so the 3D globe uses the same layout. */
-export const toLatLon = (x: number, y: number) => ({ lon: (x / W - 0.5) * 170, lat: (0.5 - y / H) * 130 });
+export const toLatLon = (x: number, y: number) => ({ lon: (x / W - 0.5) * 170, lat: (0.5 - y / H) * 105 });

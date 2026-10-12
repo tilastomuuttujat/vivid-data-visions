@@ -57,7 +57,7 @@ function Scene({ sel, onSel, level, onLevel }: { sel: Sel; onSel: (s: Sel) => vo
       <pointLight position={[-6, -2, -4]} intensity={8} color="#5a7cff" />
       <mesh>
         <sphereGeometry args={[R, 96, 96]} />
-        <meshStandardMaterial color="#1f3050" roughness={0.8} metalness={0.1} />
+        <meshStandardMaterial color="#1f3050" roughness={0.8} metalness={0.1} emissive="#13223f" />
       </mesh>
       <mesh scale={1.06}>
         <sphereGeometry args={[R, 64, 64]} />
