@@ -15,3 +15,4 @@
 - Use SVG for the 2D graph and React Three Fiber for the client-only 3D graph; positions encode theme grouping rather than indicator values.
 
 - Observatorio view derives star roles from atlas stage numbers and wave definitions in-component; brightness encodes systemic role, never measured values (indicators are excluded).
+- Planeetta view shares one layout model (planet-model.ts) between the SVG semantic-zoom map and the R3F globe; zoom distance selects the information level, plates/clusters are interpretive groupings.
