@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as MinkaVaraanRouteImport } from './routes/minka-varaan'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MinkaVaraanRoute = MinkaVaraanRouteImport.update({
+  id: '/minka-varaan',
+  path: '/minka-varaan',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/minka-varaan': typeof MinkaVaraanRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/minka-varaan': typeof MinkaVaraanRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/minka-varaan': typeof MinkaVaraanRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/minka-varaan'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/minka-varaan'
+  id: '__root__' | '/' | '/minka-varaan'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  MinkaVaraanRoute: typeof MinkaVaraanRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/minka-varaan': {
+      id: '/minka-varaan'
+      path: '/minka-varaan'
+      fullPath: '/minka-varaan'
+      preLoaderRoute: typeof MinkaVaraanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  MinkaVaraanRoute: MinkaVaraanRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
