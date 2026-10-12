@@ -4213,6 +4213,132 @@
           "statistic_id": null
         }
       ]
+    },
+    {
+      "id": "torpparista-osaajaksi",
+      "title": "Torpparista osaajaksi: työpotentiaali ilman ankkuria",
+      "period": "1918–2026 · lasku 2040-luvulle",
+      "question": "Minkä varaan ihmisen työ ja osaaminen muuttuvat vakaaksi toimeentuloksi – pelkän olemassaolon vai pääsyn toiminnan edellytyksiin?",
+      "sources": [
+        {
+          "id": "oecd2025",
+          "title": "OECD Economic Surveys: Finland 2025 – Enriching human capital with more foreign talent",
+          "url": "https://www.oecd.org/en/publications/oecd-economic-surveys-finland-2025_985d0555-en/full-report/enriching-human-capital-with-more-foreign-talent_5745d827.html"
+        },
+        {
+          "id": "thl-monisuomi",
+          "title": "THL MoniSuomi: syrjintä ja yksinäisyys maahanmuuttajien hyvinvoinnissa",
+          "url": "https://kotoutuminen.fi/-/syrjinta-ja-yksinaisyys-vaikuttavat-maahanmuuttajien-hyvinvointiin-suomessa"
+        }
+      ],
+      "statistics": [],
+      "steps": [
+        {
+          "short_title": "Torpparilaki",
+          "title": "Torpparivapautus: maan hallinta työn ankkuriksi",
+          "period": "1918–1922",
+          "years": [
+            1918,
+            1922
+          ],
+          "theme_ids": [
+            2,
+            15,
+            10,
+            11
+          ],
+          "explanation": "Torppareilla oli työkykyä ja viljelytaitoa, mutta toimeentulo riippui vuokrasuhteen ehdoista. Ratkaisu ei ollut lisää väkeä vaan hallinnan oikeuksien muuttaminen.",
+          "mechanism": "Kun työn hyödyt ja elämän jatkuvuus turvataan, työpotentiaali muuttuu omaehtoiseksi tuotannoksi ja sitoutumiseksi yhteiskuntaan.",
+          "benefit": "Itsenäiset pientilat, sitoutuminen nuoreen valtioon, vakaus.",
+          "tradeoff": "Hajautettu pientilarakenne, joka myöhemmin vapautti valtavan työvoiman.",
+          "affected": "Tilaton väestö, kartanot.",
+          "lag": "Vaikutus näkyy 1940–1960-luvun asutuksessa ja yhteiskuntarauhassa.",
+          "alternative": "Toinen selitys: vapautus oli ennen kaikkea sisällissodan jälkeinen rauhoittamistoimi, ei työpotentiaalin politiikkaa.",
+          "evidence_note": "Torpparilaki 1918 ja Lex Kallio 1922 ovat tosiasioita; rinnastus nykyhetkeen on mekanismitason tulkinta.",
+          "source_ids": [],
+          "statistic_id": null
+        },
+        {
+          "short_title": "Ruotsiin",
+          "title": "Ruotsin-muutto: kun ankkuria ei tarjottu omille",
+          "period": "1965–1975",
+          "years": [
+            1965,
+            1975
+          ],
+          "theme_ids": [
+            1,
+            15,
+            20
+          ],
+          "explanation": "Maatalouden koneellistuminen vapautti työvoimaa nopeammin kuin kotimainen teollisuus ehti sitä ottaa. Noin kolmannes miljoonaa lähti Ruotsiin.",
+          "mechanism": "Työpotentiaali, jolle ei löydy ankkuria, ei katoa: se siirtyy sinne, missä ehdot ovat paremmat.",
+          "benefit": "Työttömyyspaine helpottui, Ruotsin teollisuus sai työvoimaa.",
+          "tradeoff": "Menetetty työpanos, autioituvat kylät, perheiden hajoaminen.",
+          "affected": "Pohjois- ja Itä-Suomen nuoret aikuiset.",
+          "lag": "Väestökato näkyy maaseudun palveluverkossa 20–40 vuoden viiveellä.",
+          "alternative": "Toinen selitys: muutto oli rationaalinen sopeutuminen pohjoismaisilla työmarkkinoilla, ja moni palasi osaamisen kanssa.",
+          "evidence_note": "Muuttoluvut ovat tilastotietoa; tuottavuusparadoksin kytkentä on tulkinta.",
+          "source_ids": [],
+          "statistic_id": null
+        },
+        {
+          "short_title": "Katkos",
+          "title": "Osaajapula ja käyttämätön osaaminen",
+          "period": "2015–2025",
+          "years": [
+            2015,
+            2025
+          ],
+          "theme_ids": [
+            1,
+            15,
+            4,
+            19,
+            27
+          ],
+          "explanation": "Julkinen perustelu: työperäinen maahanmuutto paikkaa huoltosuhdetta. Käytännössä osaaminen on olemassa, mutta kieli, tutkintojen tunnustaminen, verkostot ja harjoittelupaikat katkaisevat yhteyden työhön.",
+          "mechanism": "Osaamista on → sopivaa työtä tarvitaan → yhdistävä järjestely ei toimi. Pelkkä väestön lisääminen ei ratkaise kapasiteetin käyttöä.",
+          "benefit": "Työvoimaa hoiva-, palvelu- ja teknologia-aloille.",
+          "tradeoff": "Alityöllistyminen ja käyttämättömän potentiaalin kustannus; 42 % MoniSuomi-vastaajista kokenut syrjintää.",
+          "affected": "Maahan muuttaneet, heidän perheensä ja työnantajat.",
+          "lag": "Kiinnittyminen tai pitkittyvä katkos ratkeaa 5–15 vuodessa, toinen sukupolvi 20–30 vuodessa.",
+          "alternative": "Toinen selitys: lähtötilanteet (työ, opiskelu, perhe, suojelu) eroavat niin paljon, ettei yhteistä mekanismia voi olettaa – se on osoitettava tapauskohtaisesti.",
+          "evidence_note": "OECD 2025 tunnistaa kielivaatimukset, verkostojen puutteen ja tutkintojen tunnustamisen esteiksi. THL:n luku koskee tutkimuksen ulkomailla syntynyttä aikuisväestöä.",
+          "source_ids": [
+            "oecd2025",
+            "thl-monisuomi"
+          ],
+          "statistic_id": null
+        },
+        {
+          "short_title": "Uusi sopimus",
+          "title": "Rakennetaanko paikka työvoimana vai edellytykset elämälle?",
+          "period": "2026–2045",
+          "years": [
+            2026,
+            2045
+          ],
+          "theme_ids": [
+            19,
+            27,
+            28,
+            30
+          ],
+          "explanation": "Valintapiste: rekrytoidaanko pelkkää työpanosta vai rakennetaanko ennakoitavat ehdot, joiden varassa ihminen voi käyttää osaamistaan ja kehittää asemaansa.",
+          "mechanism": "Torpparilaki opettaa: ratkaisu löytyy toiminnan ehdoista (pääsy, ennakoitavuus, kehittymismahdollisuus), ei määristä.",
+          "benefit": "Kestävämpi huoltosuhde ja osaamisen täysi käyttö.",
+          "tradeoff": "Jos vain rekrytointia lisätään, lasku tulee alityöllisyytenä ja osattomuutena.",
+          "affected": "Kaikki epävarmassa asemassa olevat, ei vain maahan muuttaneet.",
+          "lag": "Vuoden 2026 ratkaisut näkyvät täysimääräisinä 2045–2055.",
+          "alternative": "Toinen selitys: nykyiset työmarkkinat, oikeudet ja sosiaaliturva ovat aivan eri järjestelmä kuin maanvuokraus, joten analogia ohjaa kysymyksiä mutta ei ennusta.",
+          "evidence_note": "Tutkimushypoteesi, ei todennettu tulos. Analogia koskee mekanismeja, ei ihmisryhmien rinnastamista.",
+          "source_ids": [
+            "oecd2025"
+          ],
+          "statistic_id": null
+        }
+      ]
     }
   ]
 }

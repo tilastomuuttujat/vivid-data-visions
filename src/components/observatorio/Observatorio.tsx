@@ -54,7 +54,12 @@ const WAVES: Wave[] = [
 const STARS = [
   { name: 'Demografia', text: 'Syntyvyys, ikärakenne ja huoltosuhde: 30 vuoden päähän lähes ennustettavia.' },
   { name: 'Aineellinen perusta', text: 'Metsä, vesi, energia, mineraalit ja logistinen saari Itämeren laidalla.' },
-  { name: 'Perussopimus', text: 'Luottamus, oikeusvaltio, veronkantokyky ja sopimusjärjestelmä.' },
+  { name: 'Perussopimus', text: 'Luottamus, oikeusvaltio, veronkantokyky ja sopimusjärjestelmä. Vuonna 1918 se ankkuroi tilattoman työn maahan; 2020-luvulla testataan, saako tulijan osaaminen yhtä vakaan ankkurin.' },
+];
+
+const MIRROR = [
+  { year: 1918, label: 'Torpparilaki', text: 'Työkykyä ja viljelytaitoa oli, mutta toimeentulo riippui vuokrasuhteen ehdoista. Ratkaisu: hallinnan oikeudet, ei lisää väkeä.' },
+  { year: 2026, label: 'Osaajakysymys', text: 'Osaamista on, mutta kieli, tutkintojen tunnustaminen ja verkostot katkaisevat yhteyden työhön (OECD 2025). Ratkaisu löytyy toiminnan ehdoista, ei määristä.' },
 ];
 
 export function Observatorio() {
@@ -170,6 +175,12 @@ export function Observatorio() {
           <p>{spring.text}</p>
           <div className="obs-chain">{SPRING.map((p, i) => <span key={p.year}><button className={p.year === spring.year ? 'on' : ''} onClick={() => setYear(p.year)} style={{ background: 'none', border: 0, color: 'inherit', cursor: 'pointer', fontWeight: p.year === spring.year ? 700 : 400 }}>{p.year} {p.short}</button>{i < SPRING.length - 1 && <ArrowRight size={12} />}</span>)}</div>
           <p className="obs-lesson">Tulkinta: 20 vuoden poikkeustila ei päättynyt Kekkosen eroon, vaan jännitti jousen, joka laukesi hallitsemattomasti. <Link to="/minka-varaan">Avaa Arsenalin jäävuoripolku →</Link></p>
+        </article>}
+        {((year >= 1915 && year <= 1925) || (year >= 2015 && year <= 2035)) && <article className="obs-card obs-springcard" style={{ gridColumn: '1 / -1', borderColor: 'var(--v-glow)' }}>
+          <p className="v-kicker">Perussopimuksen peili · 1918 ↔ 2026</p>
+          <h2>Rakennetaanko paikka työvoimana – vai edellytykset elämälle?</h2>
+          <div className="obs-gaincost">{MIRROR.map(m => <div key={m.year}><span><button onClick={() => setYear(m.year)} style={{ background: 'none', border: 0, color: 'inherit', cursor: 'pointer', fontWeight: m.year === year ? 700 : 400, padding: 0 }}>{m.year} · {m.label}</button></span><p>{m.text}</p></div>)}</div>
+          <p className="obs-lesson">Rinnastus koskee mekanismia, ei ihmisryhmiä: käyttämätön työpotentiaali on tuottavuusparadoksin kääntöpuoli. <Link to="/minka-varaan">Avaa polku Torpparista osaajaksi →</Link></p>
         </article>}
         <article className="obs-card">
           <p className="v-kicker">Asemanmääritys vuonna {year}</p>
