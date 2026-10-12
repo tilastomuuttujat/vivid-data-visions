@@ -320,3 +320,20 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
 .v-spark-win { fill: color-mix(in oklch, var(--v-ember) 22%, transparent); rx: 3; }
 .v-spark-peak { fill: var(--v-ember); }
 .v-spark-lbl { fill: var(--v-mute); font-size: 9px; }
+
+/* Regional map in reading panel */
+.v-region { display: grid; gap: 8px; padding-top: 10px; border-top: 1px solid color-mix(in oklch, var(--v-glow) 18%, transparent); font-size: 12px; }
+.v-region a { color: var(--v-glow); font-size: 11.5px; }
+.v-region-body { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: center; }
+.v-region-map { width: 100%; height: auto; }
+.v-region-map path { fill: color-mix(in oklch, var(--v-glow) 10%, transparent); stroke: color-mix(in oklch, var(--v-glow) 35%, transparent); stroke-width: .6; transition: fill-opacity .2s; }
+.v-region-map path.on { stroke: var(--v-glow); stroke-width: 1; filter: drop-shadow(0 0 4px currentColor); }
+.v-region-side { display: grid; gap: 6px; min-width: 0; }
+.v-region-side .v-spark { cursor: pointer; }
+.v-region-base { stroke: color-mix(in oklch, var(--v-glow) 30%, transparent); stroke-dasharray: 2 3; }
+.v-region-year { fill: var(--v-glow); font-size: 13px; font-variant-numeric: tabular-nums; }
+.v-region-leg { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }
+.v-region-leg li { display: flex; align-items: baseline; gap: 6px; }
+.v-region-leg i { width: 8px; height: 8px; border-radius: 50%; }
+.v-region-leg b { font-variant-numeric: tabular-nums; }
+.v-region-leg span { opacity: .6; margin-left: auto; font-variant-numeric: tabular-nums; }
