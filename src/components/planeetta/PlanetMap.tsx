@@ -46,7 +46,7 @@ export function PlanetMap({ sel, onSel, onLevel }: { sel: Sel; onSel: (s: Sel) =
       e.preventDefault(); cancelAnimationFrame(anim.current);
       const { r, s } = toScreen();
       const dy = e.deltaY * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? 100 : 1);
-      const c = vr.current; const nk = Math.min(MAX, Math.max(MIN, c.k * Math.exp(-dy * 0.0018)));
+      const c = vr.current; const nk = Math.min(MAX, Math.max(MIN, c.k * Math.exp(-dy * 0.0012)));
       const px = (e.clientX - r.left) / s, py = (e.clientY - r.top) / s, f = nk / c.k;
       setV({ k: nk, x: px - (px - c.x) * f, y: py - (py - c.y) * f });
     };

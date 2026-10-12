@@ -436,7 +436,7 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
 .pl-cluster { fill: var(--v-text); text-anchor: middle; font-weight: 500; pointer-events: none; }
 .pl-count, .pl-path { fill: var(--v-mute); text-anchor: middle; pointer-events: none; }
 .pl-step { fill: var(--v-text); pointer-events: none; paint-order: stroke; stroke: var(--v-ink); stroke-width: .15px; }
-.pl-tension { fill: var(--v-ember); text-anchor: middle; font-size: 12px; letter-spacing: .04em; pointer-events: none; }
+.pl-tension { fill: var(--v-ember); text-anchor: middle; letter-spacing: .04em; pointer-events: none; }
 .pl-fault { stroke: var(--v-ember); stroke-opacity: .7; }
 .pl-quake { fill: var(--v-ember); opacity: .55; animation: plq 2.8s ease-in-out infinite; }
 .pl-quake-core { fill: var(--v-ember); }

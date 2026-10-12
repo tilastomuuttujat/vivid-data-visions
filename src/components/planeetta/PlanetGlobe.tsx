@@ -101,7 +101,7 @@ function Scene({ sel, onSel, level, onLevel }: { sel: Sel; onSel: (s: Sel) => vo
         return (
           <group key={t.id}>
             <Line points={pts} color="#ff9a50" lineWidth={1.4} dashed dashSize={0.05} gapSize={0.05} onClick={e => { e.stopPropagation(); onSel({ kind: 'tension', t }); }} />
-            <Html position={pts[12]} center className="pl-gl-label tension">{t.name}</Html>
+            <Html position={pts[t.id === 't2' ? 7 : t.id === 't3' ? 16 : 12]} center className="pl-gl-label tension">{t.name}</Html>
           </group>
         );
       })}
