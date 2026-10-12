@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as MinkaVaraanRouteImport } from './routes/minka-varaan'
+import { Route as ObservatorioRouteImport } from './routes/observatorio'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const MinkaVaraanRoute = MinkaVaraanRouteImport.update({
   path: '/minka-varaan',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ObservatorioRoute = ObservatorioRouteImport.update({
+  id: '/observatorio',
+  path: '/observatorio',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/minka-varaan': typeof MinkaVaraanRoute
+  '/observatorio': typeof ObservatorioRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/minka-varaan': typeof MinkaVaraanRoute
+  '/observatorio': typeof ObservatorioRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/minka-varaan': typeof MinkaVaraanRoute
+  '/observatorio': typeof ObservatorioRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/minka-varaan'
+  fullPaths: '/' | '/minka-varaan' | '/observatorio'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/minka-varaan'
-  id: '__root__' | '/' | '/minka-varaan'
+  to: '/' | '/minka-varaan' | '/observatorio'
+  id: '__root__' | '/' | '/minka-varaan' | '/observatorio'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   MinkaVaraanRoute: typeof MinkaVaraanRoute
+  ObservatorioRoute: typeof ObservatorioRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MinkaVaraanRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/observatorio': {
+      id: '/observatorio'
+      path: '/observatorio'
+      fullPath: '/observatorio'
+      preLoaderRoute: typeof ObservatorioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   MinkaVaraanRoute: MinkaVaraanRoute,
+  ObservatorioRoute: ObservatorioRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
