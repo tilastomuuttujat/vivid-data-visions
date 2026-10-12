@@ -88,10 +88,10 @@ export function PlanetMap({ sel, onSel, onLevel }: { sel: Sel; onSel: (s: Sel) =
 
           {TENSIONS.map(t => {
             const a = PLATES.find(p => p.id === t.a)!, b = PLATES.find(p => p.id === t.b)!;
-            const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2; const on = sel?.kind === 'tension' && sel.t.id === t.id;
+            const dx = b.x - a.x, dy = b.y - a.y, L = Math.hypot(dx, dy), cx = (a.x + b.x) / 2 - dy / L * 90, cy = (a.y + b.y) / 2 + dx / L * 90; const mx = (a.x + b.x) / 4 + cx / 2, my = (a.y + b.y) / 4 + cy / 2; const on = sel?.kind === 'tension' && sel.t.id === t.id;
             return (
               <g key={t.id} className="pl-hit" opacity={1 - clusterO * 0.75} onClick={() => { if (drag.current?.moved) return; onSel({ kind: 'tension', t }); }}>
-                <path d={`M${a.x},${a.y} Q${mx + (my - 350) * 0.15},${my + (mx - 500) * 0.15} ${b.x},${b.y}`} className="pl-fault" strokeWidth={(on ? 3 : 1.6) / k} strokeDasharray={`${2 / k} ${7 / k}`} fill="none" />
+                <path d={`M${a.x},${a.y} Q${cx},${cy} ${b.x},${b.y}`} className="pl-fault" strokeWidth={(on ? 3 : 1.6) / k} strokeDasharray={`${2 / k} ${7 / k}`} fill="none" />
                 <circle cx={mx} cy={my} r={(on ? 14 : 9) / k} className="pl-quake" filter="url(#pl-glow)" />
                 <circle cx={mx} cy={my} r={3.5 / k} className="pl-quake-core" />
                 <text x={mx} y={my + 22 / k} className="pl-tension" fontSize={fs(12)}>{t.name}</text>

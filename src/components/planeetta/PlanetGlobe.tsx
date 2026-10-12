@@ -21,7 +21,7 @@ function PlateDust() {
       c.set(hue[p.id]);
       for (let i = 0; i < 1400; i++) {
         const a = rnd() * Math.PI * 2, rr = Math.pow(rnd(), 0.6) * p.r * 1.05;
-        const v = vec(p.x + Math.cos(a) * rr * 1.2, p.y + Math.sin(a) * rr * 0.85, R + 0.005);
+        const v = vec(p.x + Math.cos(a) * rr * 1.0, p.y + Math.sin(a) * rr * 0.85, R + 0.005);
         pos.push(v.x, v.y, v.z); const f = 0.35 + rnd() * 0.65; col.push(c.r * f, c.g * f, c.b * f);
       }
     });
@@ -52,12 +52,12 @@ function Scene({ sel, onSel, level, onLevel }: { sel: Sel; onSel: (s: Sel) => vo
   return (
     <>
       <color attach="background" args={['#0b1020']} />
-      <ambientLight intensity={0.35} />
+      <ambientLight intensity={0.6} />
       <directionalLight position={[5, 3, 5]} intensity={1.4} color="#ffe8cc" />
       <pointLight position={[-6, -2, -4]} intensity={8} color="#5a7cff" />
       <mesh>
         <sphereGeometry args={[R, 96, 96]} />
-        <meshStandardMaterial color="#16223a" roughness={0.85} metalness={0.1} />
+        <meshStandardMaterial color="#1f3050" roughness={0.8} metalness={0.1} />
       </mesh>
       <mesh scale={1.06}>
         <sphereGeometry args={[R, 64, 64]} />
