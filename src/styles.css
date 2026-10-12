@@ -308,3 +308,15 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
 @keyframes v-progress { from { width: 0 } to { width: 100% } }
 .v-playlabel { font-size: 12px; color: var(--v-mute); white-space: nowrap; }
 @media (max-width: 980px) { .v-split { grid-template-columns: 1fr; } .v-chainwrap, .v-split .v-reading { position: static; max-height: none; } .v-playlabel { display: none; } }
+
+.v-evidence { display: grid; gap: 6px; padding: 12px 14px; border-radius: 14px; background: color-mix(in oklch, var(--v-glow) 6%, transparent); border: 1px solid var(--v-line); font-size: 12px; color: var(--v-mute); }
+.v-ev-head { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--v-glow); font-weight: 600; }
+.v-ev-title { margin: 0; color: var(--v-text); font-size: 12.5px; }
+.v-ev-title span, .v-ev-limit, .v-ev-note, .v-ev-none { color: var(--v-mute); margin: 0; line-height: 1.45; }
+.v-evidence a { color: var(--v-glow); text-decoration: none; font-size: 11.5px; }
+.v-ev-src { margin: 0; padding-left: 16px; display: grid; gap: 3px; }
+.v-spark { width: 100%; height: auto; display: block; }
+.v-spark-line { fill: none; stroke: var(--v-glow); stroke-width: 1.6; }
+.v-spark-win { fill: color-mix(in oklch, var(--v-ember) 22%, transparent); rx: 3; }
+.v-spark-peak { fill: var(--v-ember); }
+.v-spark-lbl { fill: var(--v-mute); font-size: 9px; }
