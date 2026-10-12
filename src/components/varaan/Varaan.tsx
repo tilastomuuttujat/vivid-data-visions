@@ -105,7 +105,7 @@ export function Varaan() {
       <div className="v-aurora" aria-hidden />
       <header className="v-top">
         <Link to="/" className="v-back"><ArrowLeft size={15} />Atlas</Link>
-        <div className="v-brand">Suomen rakennemuutosten atlas</div>
+        <Link to="/observatorio" className="v-back">Observatorio · iso kuva<ArrowRight size={15} /></Link>
       </header>
 
       <section className="v-hero">
