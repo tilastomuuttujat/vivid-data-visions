@@ -32,7 +32,7 @@ function Spark({ stat, years }: { stat: Stat; years: number[] }) {
   );
 }
 
-export function Evidence({ stat, note, sources, years }: { stat?: Stat | undefined; note?: string | null; sources: Source[]; years: number[] }) {
+export function Evidence({ stat, note, sources, years }: { stat?: Stat | undefined; note?: string | null | undefined; sources: Source[]; years: number[] }) {
   if (!stat && !note && !sources.length) return null;
   return (
     <div className="v-evidence">
