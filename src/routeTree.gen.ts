@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as MinkaVaraanRouteImport } from './routes/minka-varaan'
 import { Route as ObservatorioRouteImport } from './routes/observatorio'
+import { Route as PlaneettaRouteImport } from './routes/planeetta'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +29,44 @@ const ObservatorioRoute = ObservatorioRouteImport.update({
   path: '/observatorio',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlaneettaRoute = PlaneettaRouteImport.update({
+  id: '/planeetta',
+  path: '/planeetta',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/minka-varaan': typeof MinkaVaraanRoute
   '/observatorio': typeof ObservatorioRoute
+  '/planeetta': typeof PlaneettaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/minka-varaan': typeof MinkaVaraanRoute
   '/observatorio': typeof ObservatorioRoute
+  '/planeetta': typeof PlaneettaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/minka-varaan': typeof MinkaVaraanRoute
   '/observatorio': typeof ObservatorioRoute
+  '/planeetta': typeof PlaneettaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/minka-varaan' | '/observatorio'
+  fullPaths: '/' | '/minka-varaan' | '/observatorio' | '/planeetta'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/minka-varaan' | '/observatorio'
-  id: '__root__' | '/' | '/minka-varaan' | '/observatorio'
+  to: '/' | '/minka-varaan' | '/observatorio' | '/planeetta'
+  id: '__root__' | '/' | '/minka-varaan' | '/observatorio' | '/planeetta'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   MinkaVaraanRoute: typeof MinkaVaraanRoute
   ObservatorioRoute: typeof ObservatorioRoute
+  PlaneettaRoute: typeof PlaneettaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +92,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ObservatorioRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/planeetta': {
+      id: '/planeetta'
+      path: '/planeetta'
+      fullPath: '/planeetta'
+      preLoaderRoute: typeof PlaneettaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   MinkaVaraanRoute: MinkaVaraanRoute,
   ObservatorioRoute: ObservatorioRoute,
+  PlaneettaRoute: PlaneettaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

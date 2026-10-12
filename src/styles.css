@@ -415,3 +415,51 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
 .obs-pill:hover { border-color: var(--v-glow); }
 .obs-note { margin-top: 14px; font-size: 11.5px; color: var(--v-mute); text-align: center; }
 @media (max-width: 860px) { .obs-stars, .obs-grid, .obs-coin { grid-template-columns: 1fr; } }
+
+/* Planeetta */
+.planeetta { overflow: visible; }
+.pl-wrap { position: relative; max-width: 1400px; margin: 0 auto; padding: 0 24px 32px; }
+.pl-nav { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.pl-switch { display: inline-flex; border: 1px solid var(--v-line); border-radius: 99px; padding: 3px; }
+.pl-switch button { padding: 5px 12px; border-radius: 99px; color: var(--v-mute); font-size: 12.5px; }
+.pl-switch button.on { background: color-mix(in oklab, var(--v-glow) 22%, transparent); color: var(--v-text); }
+.pl-title { font-family: 'Fraunces', serif; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.1; margin: 4px 0 18px; }
+.pl-title em { font-style: italic; background: linear-gradient(100deg, var(--v-glow), var(--v-ember)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.pl-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 18px; }
+@media (max-width: 900px) { .pl-layout { grid-template-columns: 1fr; } }
+.pl-stage { position: relative; }
+.pl-map { position: relative; height: min(72vh, 680px); border: 1px solid var(--v-line); border-radius: 22px; overflow: hidden; background: radial-gradient(80% 80% at 50% 45%, var(--v-ink-2), var(--v-ink)); cursor: grab; }
+.pl-map svg { width: 100%; height: 100%; display: block; }
+.pl-grid { stroke: var(--v-line); }
+.pl-hit { cursor: pointer; }
+.pl-plate { fill: var(--v-text); text-anchor: middle; font-family: 'Fraunces', serif; letter-spacing: .02em; pointer-events: none; }
+.pl-cluster { fill: var(--v-text); text-anchor: middle; font-weight: 500; pointer-events: none; }
+.pl-count, .pl-path { fill: var(--v-mute); text-anchor: middle; pointer-events: none; }
+.pl-step { fill: var(--v-text); pointer-events: none; paint-order: stroke; stroke: var(--v-ink); stroke-width: .15px; }
+.pl-tension { fill: var(--v-ember); text-anchor: middle; letter-spacing: .04em; pointer-events: none; }
+.pl-fault { stroke: var(--v-ember); stroke-opacity: .7; }
+.pl-quake { fill: var(--v-ember); opacity: .55; animation: plq 2.8s ease-in-out infinite; }
+.pl-quake-core { fill: var(--v-ember); }
+@keyframes plq { 50% { opacity: .15; } }
+.pl-zoom { position: absolute; right: 14px; bottom: 14px; display: flex; flex-direction: column; gap: 6px; }
+.pl-zoom button { width: 34px; height: 34px; border-radius: 99px; border: 1px solid var(--v-line); background: color-mix(in oklab, var(--v-ink) 80%, transparent); color: var(--v-text); backdrop-filter: blur(8px); }
+.pl-alt { position: absolute; z-index: 2; left: 14px; top: 14px; display: flex; flex-direction: column; gap: 4px; pointer-events: none; }
+.pl-alt li { display: flex; gap: 8px; align-items: baseline; font-size: 11px; color: var(--v-mute); opacity: .45; transition: opacity .4s; }
+.pl-alt li b { font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: 10.5px; }
+.pl-alt li.on { opacity: 1; color: var(--v-text); } .pl-alt li.on b { color: var(--v-glow); }
+.pl-hint { font-size: 12px; color: var(--v-mute); margin-top: 8px; }
+.pl-side { position: relative; }
+.pl-card { border: 1px solid var(--v-line); border-radius: 20px; padding: 16px 18px; background: color-mix(in oklab, var(--v-ink-2) 70%, transparent); backdrop-filter: blur(10px); font-size: 13px; line-height: 1.5; max-height: min(72vh, 680px); overflow: auto; }
+.pl-card h3 { font-family: 'Fraunces', serif; font-size: 20px; line-height: 1.2; margin: 6px 0 8px; }
+.pl-card p { color: var(--v-mute); margin-bottom: 8px; }
+.pl-card ul, .pl-card ol { display: grid; gap: 4px; margin: 8px 0 12px; }
+.pl-card li span { color: var(--v-mute); font-size: 11.5px; margin-left: 4px; }
+.pl-card li b { color: var(--v-ember); margin-right: 6px; }
+.pl-card dt { font-size: 10.5px; text-transform: uppercase; letter-spacing: .14em; color: var(--v-glow); margin-top: 8px; }
+.pl-card dd { color: var(--v-text); }
+.pl-note, .pl-sub { font-size: 11.5px; }
+.pl-gl-label { color: var(--v-text); font-size: 12px; white-space: nowrap; pointer-events: none; text-shadow: 0 1px 6px #000; }
+.pl-gl-label.plate { font-family: 'Fraunces', serif; font-size: 16px; }
+.pl-gl-label.tension { color: var(--v-ember); font-size: 11px; }
+.pl-gl-step { color: var(--v-text); font-size: 10.5px; white-space: nowrap; pointer-events: none; text-shadow: 0 1px 4px #000; padding-left: 6px; }
+.planeetta > .v-aurora { position: absolute; }
