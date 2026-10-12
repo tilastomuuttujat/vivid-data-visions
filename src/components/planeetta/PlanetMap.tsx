@@ -111,9 +111,9 @@ export function PlanetMap({ sel, onSel, onLevel }: { sel: Sel; onSel: (s: Sel) =
                 const d = pts.map((q, i) => (i ? 'L' : 'M') + q.x + ',' + q.y).join(' ');
                 return (
                   <g key={a.id} opacity={pathO * (sel && (sel.kind === 'path' || sel.kind === 'step') && !on ? 0.35 : 1)}>
-                    <path d={d} fill="none" stroke={p.color} strokeWidth={(on ? 3 : 1.6) / k} strokeLinecap="round" className="pl-hit" onClick={() => { if (drag.current?.moved) return; onSel({ kind: 'path', c, a }); flyTo(pts[Math.floor(pts.length / 2)].x, pts[Math.floor(pts.length / 2)].y, 11); }} />
+                    <path d={d} fill="none" stroke={p.color} strokeWidth={(on ? 3 : 1.6) / k} strokeLinecap="round" className="pl-hit" onClick={() => { if (drag.current?.moved) return; onSel({ kind: 'path', c, a }); flyTo(pts[Math.floor(pts.length / 2)]!.x, pts[Math.floor(pts.length / 2)]!.y, 11); }} />
                     {pts.map((q, si) => {
-                      const s = a.steps[si]; const sOn = sel?.kind === 'step' && sel.s === s;
+                      const s = a.steps[si]!; const sOn = sel?.kind === 'step' && sel.s === s;
                       return (
                         <g key={si} className="pl-hit" onClick={() => { if (drag.current?.moved) return; onSel({ kind: 'step', c, a, s }); flyTo(q.x, q.y, 18); }}>
                           <circle cx={q.x} cy={q.y} r={(sOn ? 6 : 3.4) / k} fill={si === pts.length - 1 ? 'var(--v-ember)' : p.color} stroke="var(--v-ink)" strokeWidth={1 / k} />
@@ -121,7 +121,7 @@ export function PlanetMap({ sel, onSel, onLevel }: { sel: Sel; onSel: (s: Sel) =
                         </g>
                       );
                     })}
-                    {k >= 4.5 && stepLblO < 1 && <text x={pts[pts.length - 1].x} y={pts[pts.length - 1].y + 11 / k} className="pl-path" fontSize={fs(10.5)} opacity={1 - stepLblO}>{a.title.split(' – ')[0].split(':').slice(-1)[0].trim()}</text>}
+                    {k >= 4.5 && stepLblO < 1 && <text x={pts[pts.length - 1]!.x} y={pts[pts.length - 1]!.y + 11 / k} className="pl-path" fontSize={fs(10.5)} opacity={1 - stepLblO}>{(a.title.split(' – ')[0] ?? '').split(':').slice(-1)[0]?.trim()}</text>}
                   </g>
                 );
               })}
