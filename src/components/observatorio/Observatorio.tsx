@@ -4,6 +4,12 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import atlas from '@/data/atlas.json';
 import anchorSrc from '@/data/anchors.json';
 
+const SPRING = [
+  { year: 1966, short: 'Eristys', title: 'Jousi jännittyy: Kokoomus hallituksen ulkopuolelle', text: 'Kekkosen kaudella Kokoomus pidettiin 21 vuotta hallitusvallan ulkopuolella. Teollisuuden ja KOP-leirin modernisaatiopaine padottiin pankkisaleihin ja järjestöihin, ja suuret ratkaisut opittiin tekemään kabineteissa parlamentin ohi.' },
+  { year: 1987, short: 'Laukeaminen', title: 'Jousi laukeaa: sinipuna ja sääntelyn purku', text: 'Holkerin sinipunahallitus murtaa vanhan suljetun järjestelmän yhdellä rysäyksellä. Pääoma vapautuu nopeammin kuin valvonta uudistuu: kilpailevat pankkileirit, valuuttaluotot ja kasinotalous.' },
+  { year: 1992, short: 'Kabinettiopit', title: 'Kriisi hoidetaan vanhoilla opeilla', text: 'Lama hoidetaan suljetuissa neuvotteluissa ja hätätilalogiikalla: pankkituki, Arsenal ja devalvaatio. Lasku siirtyy velallisille, työttömille ja veronmaksajille – ja valtionyhtiöiden myynti vie strategisen omistajuuden.' },
+];
+
 interface TStep { year: number; stage: number; label: string; text: string }
 interface Theme { id: number; name: string; group: string; thesis: string; steps: TStep[] }
 interface AStep { short_title: string; years: number[]; theme_ids: number[]; mechanism: string; tradeoff: string; lag: string }
@@ -54,6 +60,7 @@ const STARS = [
 export function Observatorio() {
   const [year, setYear] = useState(2026);
   const [wave, setWave] = useState<string>('nousu');
+  const spring = [...SPRING].reverse().find(p => year >= p.year && year <= p.year + (p.year === 1966 ? 20 : p.year === 1987 ? 4 : 13)) ?? null;
   const [hover, setHover] = useState<{ t: Theme; s: TStep } | null>(null);
   const w = WAVES.find(x => x.id === wave)!;
 
@@ -126,6 +133,11 @@ export function Observatorio() {
           <line x1={tx(year - 60)} x2={tx(year - 60)} y1={TOP} y2={H - BOT} className="obs-lag" />
           <rect x={tx(year - 60)} y={TOP} width={Math.max(0, tx(year - 20) - tx(year - 60))} height={H - TOP - BOT} className="obs-lagband" />
           <text x={tx(year) + 6} y={TOP + 12} className="obs-year">{year}</text>
+          {/* Paineastia arc 1966 → 1987 → 1992 */}
+          {year >= 1966 && <g className="obs-spring" opacity={year >= 1985 && year <= 2005 ? 1 : .45}>
+            <path d={`M${tx(1966)},${H - BOT - 8} Q${tx(1977)},${TOP + 30} ${tx(1987)},${H - BOT - 8} Q${tx(1990)},${TOP + 80} ${tx(1992)},${H - BOT - 8}`} fill="none" stroke="var(--v-ember)" strokeWidth={1.4} strokeDasharray="4 4" />
+            {SPRING.map(p => <g key={p.year}><circle cx={tx(p.year)} cy={H - BOT - 8} r={4} fill="var(--v-ember)" /><text x={tx(p.year)} y={H - BOT - 16} textAnchor="middle" className="obs-group" fill="var(--v-ember)">{p.year}</text></g>)}
+          </g>}
         </svg>
         {hover && <div className="obs-tip"><span>{ROLE[hover.s.stage]?.name} · {hover.s.year}</span><b>{hover.t.name}</b><p>{hover.s.text}</p></div>}
         <div className="obs-legend">
@@ -136,7 +148,7 @@ export function Observatorio() {
       <div className="obs-sextantctl">
         <label htmlFor="obs-year">Sekstantti</label>
         <input id="obs-year" type="range" min={1860} max={2050} value={year} onChange={e => setYear(+e.target.value)} />
-        <div className="obs-quick">{[1918, 1950, 1993, 2026, 2045].map(y => <button key={y} className={y === year ? 'on' : ''} onClick={() => setYear(y)}>{y}</button>)}</div>
+        <div className="obs-quick">{[1918, 1950, 1966, 1987, 1992, 2026, 2045].map(y => <button key={y} className={y === year ? 'on' : ''} onClick={() => setYear(y)}>{y}</button>)}</div>
       </div>
 
       <section className="obs-grid">
@@ -152,6 +164,13 @@ export function Observatorio() {
           <div className="obs-wavetabs">{WAVES.map(x => <button key={x.id} className={x.id === wave ? 'on' : ''} onClick={() => setWave(x.id)}>{x.name}</button>)}</div>
         </article>
 
+        {spring && <article className="obs-card obs-springcard" style={{ gridColumn: '1 / -1', borderColor: 'var(--v-ember)' }}>
+          <p className="v-kicker">Paineastia 1966–1987 · taitekohta {spring.year}</p>
+          <h2>{spring.title}</h2>
+          <p>{spring.text}</p>
+          <div className="obs-chain">{SPRING.map((p, i) => <span key={p.year}><button className={p.year === spring.year ? 'on' : ''} onClick={() => setYear(p.year)} style={{ background: 'none', border: 0, color: 'inherit', cursor: 'pointer', fontWeight: p.year === spring.year ? 700 : 400 }}>{p.year} {p.short}</button>{i < SPRING.length - 1 && <ArrowRight size={12} />}</span>)}</div>
+          <p className="obs-lesson">Tulkinta: 20 vuoden poikkeustila ei päättynyt Kekkosen eroon, vaan jännitti jousen, joka laukesi hallitsemattomasti. <Link to="/minka-varaan">Avaa Arsenalin jäävuoripolku →</Link></p>
+        </article>}
         <article className="obs-card">
           <p className="v-kicker">Asemanmääritys vuonna {year}</p>
           <div className="obs-stats">
