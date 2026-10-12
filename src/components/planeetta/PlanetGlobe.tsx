@@ -17,7 +17,6 @@ function PlateDust() {
     const pos: number[] = [], col: number[] = []; const c = new THREE.Color();
     let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
     PLATES.forEach(p => {
-      c.set(new THREE.Color().setStyle(p.color.replace(/oklch\(([^)]+)\)/, '#888')));
       const hue: Record<string, string> = { aine: '#f0a060', vaesto: '#6fe0dc', sopimus: '#86d6a0', paaoma: '#b48cf0' };
       c.set(hue[p.id]);
       for (let i = 0; i < 1400; i++) {
