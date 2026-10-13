@@ -5,6 +5,7 @@ import { LEVELS, type Sel } from './planet-model';
 import { PlanetMap } from './PlanetMap';
 import { MechanismExplorer } from './MechanismExplorer';
 import { HistoricalTurning } from './HistoricalTurning';
+import { LongPath } from './LongPath';
 
 const PlanetGlobe = lazy(() => import('./PlanetGlobe'));
 
@@ -42,6 +43,7 @@ export function Planeetta() {
           </div>
           <aside className="pl-side"><Detail sel={sel} /></aside>
         </div>
+        <LongPath />
         <HistoricalTurning />
         <MechanismExplorer />
       </div>
