@@ -1,3 +1,4 @@
+import { useLinkedYear, TimelineCoverage } from './timeline-context';
 import { useId, useState } from 'react';
 import data from './productivity-data.json';
 import './productivity-path.css';
@@ -5,7 +6,7 @@ const fmt = (v: number) => v.toLocaleString('fi-FI', { maximumFractionDigits: 1 
 export function ProductivityPath() {
   const uid = useId();
   const [start, setStart] = useState(1980);
-  const [year, setYear] = useState(2024);
+  const [year, setYear] = useLinkedYear(2024,{min:start,max:2024});
   const rows = data.series.filter(r => r.year >= start);
   const base = rows[0]!;
   const selected = rows.find(r => r.year === year)!;
@@ -15,9 +16,10 @@ export function ProductivityPath() {
   const y = (v: number) => 285 - v / ceiling * 240;
   return <section className="pp" aria-labelledby={`${uid}-title`}>
     <p className="v-kicker">Tuottavuus ja toimeentulo · 1980–2024</p>
+    <TimelineCoverage year={year} />
     <h2 id={`${uid}-title`}>Kulkeeko työntekijän vaurastuminen tuotannon mukana?</h2>
     <p>Vertaa arvonlisäystä työtuntia kohti ja palkansaajien ansioiden ostovoimaa. Molemmat alkavat valitusta vuodesta arvolla 100. Viivojen erkaneminen avaa kysymyksen hyötyjen jakautumisesta; se ei yksin osoita työn halpuuttamista tai omistajapolitiikan vaikutusta.</p>
-    <label htmlFor={`${uid}-start`}>Vertailun alku </label><select id={`${uid}-start`} value={start} onChange={e => {const v=Number(e.target.value);setStart(v);setYear(y => Math.max(y,v));}}>{[1980,1990,2000,2010].map(v => <option key={v}>{v}</option>)}</select>
+    <label htmlFor={`${uid}-start`}>Vertailun alku </label><select id={`${uid}-start`} value={start} onChange={e => {const v=Number(e.target.value);setStart(v);}}>{[1980,1990,2000,2010].map(v => <option key={v}>{v}</option>)}</select>
     <p className="pp-legend"><span>Turkoosi: työn tuottavuus</span><span>Oranssi: reaaliansiot</span></p>
     <svg viewBox="0 0 790 335" role="img" aria-label={`Tuottavuus ja reaaliansiot, ${start}=100. Tarkat luvut taulukossa.`}>
       {Array.from({length:ceiling/50+1},(_,i)=>i*50).map(v => <g key={v}><line x1="65" x2="715" y1={y(v)} y2={y(v)} className="pp-grid"/><text x="55" y={y(v)+4} textAnchor="end">{v}</text></g>)}

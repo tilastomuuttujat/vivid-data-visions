@@ -1,3 +1,5 @@
+import { SharedTimeline } from './SharedTimeline';
+import { TimelineProvider } from './timeline-context';
 import { PublicDebt } from './PublicDebt';
 import { HousingWealth } from './HousingWealth';
 import { RedistributionPath } from './RedistributionPath';
@@ -34,7 +36,7 @@ export function Planeetta() {
   const [level, setLevel] = useState(0);
   const onLevel = useCallback((l: number) => setLevel(l), []);
   return (
-    <div className="varaan planeetta">
+    <TimelineProvider><div className="varaan planeetta">
       <div className="v-aurora" aria-hidden />
       <div className="pl-wrap">
         <header className="v-top"><span className="v-kicker">Planeetta · tarkastelu etäisyyden mukaan</span>
@@ -51,18 +53,19 @@ export function Planeetta() {
           </div>
           <aside className="pl-side"><Detail sel={sel} /></aside>
         </div>
+        <SharedTimeline />
         <LongPath />
         <TransitionPath />
         <OwnershipPath />
         <StoraComparison />
-        <RegionalPath />
-        <RedistributionPath />
-        <HousingWealth />
-        <PublicDebt />
-        <HistoricalTurning />
-        <ProductivityPath />
+        <div id="timeline-regional"><RegionalPath /></div>
+        <div id="timeline-redistribution"><RedistributionPath /></div>
+        <div id="timeline-housing"><HousingWealth /></div>
+        <div id="timeline-debt"><PublicDebt /></div>
+        <div id="timeline-historical"><HistoricalTurning /></div>
+        <div id="timeline-productivity"><ProductivityPath /></div>
         <MechanismExplorer />
       </div>
-    </div>
+    </div></TimelineProvider>
   );
 }

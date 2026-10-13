@@ -1,3 +1,4 @@
+import { useLinkedYear, TimelineCoverage } from './timeline-context';
 import { useId, useState } from 'react';
 import data from './redistribution-data.json';
 import './redistribution-path.css';
@@ -22,11 +23,12 @@ function Trend({region,year}:{region:Region;year:number}){
   <p><b>Tasaava vaikutus yhteensä: {fmt(point.yht_vai)} %.</b> Saatujen tulonsiirtojen vaikutus {fmt(point.sts_vai)} %; maksettujen {fmt(point.mts_vai)} %. Prosenttien vertailupohjat eroavat, joten niitä ei lasketa yhteen.</p></div>;
 }
 export function RedistributionPath(){
-  const uid=useId();const [region,setRegion]=useState('MK08');const [year,setYear]=useState(2024);
+  const uid=useId();const [region,setRegion]=useState('MK08');const [year,setYear]=useLinkedYear(2024,{min:1995,max:2024});
   const country=data.regions.find(r=>r.id==='SSS')!;const selected=data.regions.find(r=>r.id===region)!;
   const shown=region==='SSS'?[country]:[country,selected];
   return <section className="rd" aria-labelledby={`${uid}-title`}>
     <p className="v-kicker">Uudelleenjako · 1995–2024</p>
+    <TimelineCoverage year={year} />
     <h2 id={`${uid}-title`}>Kuinka paljon yhteinen järjestelmä kaventaa tuloeroja?</h2>
     <p>Tuotannontekijätulot kuvaavat työn ja omaisuuden tuottamia tuloja. Saadut tulonsiirrot, kuten eläkkeet ja etuudet, muodostavat niiden kanssa bruttotulot. Maksettujen tulonsiirtojen, kuten välittömien verojen ja sosiaaliturvamaksujen, jälkeen jäävät käytettävissä olevat rahatulot.</p>
     <p>Kolme viivaa näyttää tuloerot näissä vaiheissa. Mitä suurempi viivojen väli, sitä enemmän järjestelmä kaventaa havaittuja tuloeroja. Gini on asteikolla 0–100: pienempi luku tarkoittaa tasaisempaa tulonjakoa.</p>
