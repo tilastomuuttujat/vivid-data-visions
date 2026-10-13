@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Minkä varaan Suomi rakentuu? — atlas, polut, observatorio ja planeetta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..700&family=Fraunces:opsz,wght@9..144,300..700&display=swap" />
+<style>
+  #boot{position:fixed;inset:0;display:grid;place-items:center;background:#0b1020;color:#dfe6f5;font:15px/1.5 "DM Sans",system-ui,sans-serif;text-align:center;padding:24px}
+  #boot h1{font-family:Fraunces,serif;font-weight:400;font-size:28px;margin:0 0 8px}
+  #boot label{display:inline-block;margin-top:14px;padding:10px 18px;border:1px solid #4b5c86;border-radius:999px;cursor:pointer}
+  #boot input{display:none}#boot small{display:block;margin-top:14px;opacity:.65;max-width:520px}
+</style>
+</head>
+<body class="dark">
+<div id="boot"><div><h1>Minkä varaan Suomi rakentuu?</h1><p id="boot-msg">Ladataan aineistoa…</p></div></div>
+<div id="root"></div>
+<script type="module" src="./main.tsx"></script>
+</body>
+</html>
