@@ -1,14 +1,16 @@
-# Welcome to your Lovable project
+# Vivid Data Visions
+
+Voisitko luoda kaksi HTML- versiota. Toinen 2d, toinen 3d. Kummatkin käyttävät dataa json tiedostoista. Indikaattoreita ei vielä käyttöön. Kummassakin versiossa tulee olla merkittävä laatuhyppy ylöspäin. Visuaalisuus edellä
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/4933e9a2-6acd-4b9c-ac1f-a0109b9fbf20).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +22,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
