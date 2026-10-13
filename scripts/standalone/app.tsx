@@ -18,14 +18,4 @@ const routes = [
 ];
 const router = createRouter({ routeTree: rootRoute.addChildren(routes), history: createHashHistory() });
 
-// Plain <a href="/..."> links inside views become in-app navigation.
-document.addEventListener('click', (e) => {
-  const a = (e.target as HTMLElement).closest?.('a');
-  const href = a?.getAttribute('href');
-  if (!a || !href || !href.startsWith('/') || href.startsWith('//')) return;
-  e.preventDefault();
-  if (href.startsWith('/downloads/')) return;
-  router.navigate({ to: href });
-});
-
 createRoot(document.getElementById('root')!).render(<RouterProvider router={router} />);
