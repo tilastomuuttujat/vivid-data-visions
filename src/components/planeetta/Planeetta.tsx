@@ -1,3 +1,4 @@
+import { HousingWealth } from './HousingWealth';
 import { RedistributionPath } from './RedistributionPath';
 import { RegionalPath } from './RegionalPath';
 import { ProductivityPath } from './ProductivityPath';
@@ -55,6 +56,7 @@ export function Planeetta() {
         <StoraComparison />
         <RegionalPath />
         <RedistributionPath />
+        <HousingWealth />
         <HistoricalTurning />
         <ProductivityPath />
         <MechanismExplorer />
