@@ -16,3 +16,5 @@
 
 - Observatorio view derives star roles from atlas stage numbers and wave definitions in-component; brightness encodes systemic role, never measured values (indicators are excluded).
 - Planeetta view shares one layout model (planet-model.ts) between the SVG semantic-zoom map and the R3F globe; zoom distance selects the information level, plates/clusters are interpretive groupings.
+
+- Standalone download (scripts/standalone) bundles the real app components into one HTML with hash routing, while atlas/anchors/maakunnat JSON stay external and load at runtime — so the download matches the preview and data stays editable.
