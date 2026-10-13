@@ -18,3 +18,4 @@
 - Planeetta view shares one layout model (planet-model.ts) between the SVG semantic-zoom map and the R3F globe; zoom distance selects the information level, plates/clusters are interpretive groupings.
 
 - Standalone download (scripts/standalone) bundles the real app components into one HTML with hash routing, while atlas/anchors/maakunnat JSON stay external and load at runtime — so the download matches the preview and data stays editable.
+- GitHub Pages deploy (.github/workflows/deploy.yml) builds scripts/standalone and serves index.html + data/*.json, because Pages cannot run the SSR app.
