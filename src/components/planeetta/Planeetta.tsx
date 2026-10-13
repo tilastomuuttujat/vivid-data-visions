@@ -1,3 +1,4 @@
+import { RegionalPath } from './RegionalPath';
 import { ProductivityPath } from './ProductivityPath';
 import { lazy, Suspense, useCallback, useState } from 'react';
 import { ClientOnly, Link } from '@tanstack/react-router';
@@ -51,6 +52,7 @@ export function Planeetta() {
         <TransitionPath />
         <OwnershipPath />
         <StoraComparison />
+        <RegionalPath />
         <HistoricalTurning />
         <ProductivityPath />
         <MechanismExplorer />
