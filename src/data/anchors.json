@@ -4339,6 +4339,144 @@
           "statistic_id": null
         }
       ]
+    },
+    {
+      "id": "toimeentulosta-optimointiin",
+      "title": "Toimeentulon turvaamisesta tuottavuuden optimointiin – riskien siirtymisen pitkä kaari",
+      "period": "1918–2026 · lasku 2040-luvulle",
+      "question": "Minkä varaan sopeutuminen rakennetaan, kun tavoite vaihtuu koko väestön toimeentulosta tuotannon, palvelujen ja työvoiman tehokkuuteen – ja minne riskit siirtyvät?",
+      "sources": [
+        {
+          "id": "tilasto-gini",
+          "title": "Tilastokeskus: historiallinen tulonjakotilasto (Gini-kerroin)",
+          "url": "https://stat.fi/til/tjt/"
+        },
+        {
+          "id": "arkistojen-portti",
+          "title": "Arkistojen Portti: maanhankintalaki 1945 ja asutustoiminta",
+          "url": "https://www.arkistojenportti.fi/"
+        },
+        {
+          "id": "bof-saantely",
+          "title": "Suomen Pankki: rahoitusmarkkinoiden sääntelyn purkaminen 1980-luvulla",
+          "url": "https://publications.bof.fi/"
+        },
+        {
+          "id": "kkv-taksi",
+          "title": "KKV: taksiuudistuksen vaikutukset hintoihin ja saatavuuteen (2026)",
+          "url": "https://www.kkv.fi/"
+        },
+        {
+          "id": "oecd-migration",
+          "title": "OECD International Migration Outlook: Finland",
+          "url": "https://www.oecd.org/en/topics/international-migration.html"
+        }
+      ],
+      "statistics": [],
+      "steps": [
+        {
+          "short_title": "Toimeentulo",
+          "title": "Toimeentulon hajauttaminen yhteiskuntarauhan ankkurina",
+          "period": "1918–1975",
+          "years": [
+            1918,
+            1975
+          ],
+          "theme_ids": [
+            2,
+            15,
+            10
+          ],
+          "explanation": "Torpparilaki 1918 ja maanhankintalaki 1945 (yli 100 000 tilaa ja tonttia) jakoivat maata ja toimeentuloa koko maahan. Kysymys oli: miten ihmiset saavat kodin ja itsenäisen toimeentulon?",
+          "mechanism": "Vakaus rakennettiin jakamalla mahdollisuuksia toimeentuloon siellä, missä ihmiset asuivat – vaikka tuotannollisesti tehokkaampiakin malleja olisi ollut.",
+          "benefit": "Pientilat, siirtoväen asuttaminen, alueellinen vakaus ja yhteiskuntarauha.",
+          "tradeoff": "Hajautettu rakenne, jota myöhempi keskittyvä talous ei enää tarvinnut.",
+          "affected": "Maaseudun väestö 1960–70-luvuilla: muutto Ruotsiin ja kasvukeskuksiin.",
+          "lag": "20–30 vuotta: pientilojen elinkelpoisuus mureni 1960-luvulta alkaen.",
+          "alternative": "Toinen selitys: maareformit olivat ensisijaisesti sisällissodan ja sodan jälkiä hoitavia rauhoittamistoimia, eivät tietoista toimeentulopolitiikkaa.",
+          "evidence_note": "Torpparilaki ja maanhankintalaki ovat tosiasioita; niiden yhdistäminen yhdeksi toimeentulon linjaksi on tulkinta.",
+          "source_ids": [
+            "arkistojen-portti"
+          ],
+          "statistic_id": null
+        },
+        {
+          "short_title": "Tehdas",
+          "title": "Teollisuuden ja pääoman optimointi",
+          "period": "1981–1995",
+          "years": [
+            1981,
+            1995
+          ],
+          "theme_ids": [
+            3,
+            4
+          ],
+          "explanation": "Rahoitusmarkkinoiden vapauttaminen (keskikorkosääntelystä luovuttiin 1986, valuutansäännöstelyn purku 1986–1987) siirsi pääoman kohdentamisen markkinoille. Kysymys vaihtui: miten tuotetaan enemmän pienemmällä työpanoksella?",
+          "mechanism": "Kun tehokkuudesta tulee ohjaava periaate, tuotanto voi kasvaa ilman työpaikkojen kasvua ja työ keskittyy alueellisesti.",
+          "benefit": "Pankit ja yritykset, joilla aiemmin oli rajoitettu pääsy luottoihin; vientiteollisuuden kilpailukyky.",
+          "tradeoff": "Luottokupla ja 1990-luvun lama; tuloerot kasvoivat 1990-luvulla erityisesti pääomatulojen kautta.",
+          "affected": "Lamassa työttömiksi jääneet, taantuvat teollisuuspaikkakunnat, julkinen talous.",
+          "lag": "5–10 vuotta lamaan, 20–30 vuotta pitkäaikaistyöttömyyteen ja alueelliseen eriytymiseen.",
+          "alternative": "Toinen selitys: muutos oli osa kansainvälistä aaltoa, ei yhden puolueen tai kabinetin valinta; eriarvoisuus oli sivuvaikutus, ei tavoite.",
+          "evidence_note": "Gini 1976: 21,5 → 1987: 19,7 → 1990: 20,2; kasvu ajoittui 1990-luvulle. Yhteys uudistusten ja eriarvoisuuden välillä on tulkinta.",
+          "source_ids": [
+            "bof-saantely",
+            "tilasto-gini"
+          ],
+          "statistic_id": null
+        },
+        {
+          "short_title": "Alusta",
+          "title": "Palvelujen ja työsuhteiden optimointi alustoilla",
+          "period": "2010–2020",
+          "years": [
+            2010,
+            2020
+          ],
+          "theme_ids": [
+            3,
+            9
+          ],
+          "explanation": "Taksiuudistus 2018 poisti markkinoille tulon rajoitukset ja hintasääntelyn; ruokalähettialustat yleistyivät. Kysymys: kuinka nopeasti ja halvalla palvelua voi tarjota?",
+          "mechanism": "Asiakkaan helppous optimoidaan, ja kysynnän vaihtelun tuloriski siirtyy tekijälle.",
+          "benefit": "Alustayhtiöt, kaupunkien asiakkaat; osalle tekijöistä joustavuus (Wolt-kyselyssä 56 % suosi yrittäjäasemaa).",
+          "tradeoff": "Taksien keskihinnat nousivat ja hajonta kasvoi; pienillä alueilla hinnat nousivat ilman tarjonnan kasvua.",
+          "affected": "Alustatyön tekijät, pienten paikkakuntien asiakkaat.",
+          "lag": "Lasku näkyy eläke- ja sosiaaliturvan aukkoina 2040-luvulla.",
+          "alternative": "Toinen selitys: alustat loivat uutta työtä ja palvelua, jota ei aiemmin ollut; ongelma on sääntelyn viive, ei optimointi sinänsä.",
+          "evidence_note": "KKV:n 2026 tutkimus ja ruokalähettitutkimukset (2024) ovat rajattuja; yleistys kaikkiin palveluihin on tulkinta.",
+          "source_ids": [
+            "kkv-taksi"
+          ],
+          "statistic_id": null
+        },
+        {
+          "short_title": "Osaaja",
+          "title": "Työvoiman tarjonnan optimointi ja käyttämätön potentiaali",
+          "period": "2020–2040",
+          "years": [
+            2020,
+            2040
+          ],
+          "theme_ids": [
+            11,
+            12
+          ],
+          "explanation": "Työvoimapulaa ratkaistaan lisäämällä työvoiman tarjontaa, mm. työperäisellä maahanmuutolla. Kysymys: kuinka joustavasti työvoimaa saadaan vastaamaan kysyntää?",
+          "mechanism": "Jos tarjontaa lisätään muuttamatta palkkausta, työn tuottavuutta tai osaamisen tunnustamista, ongelmat siirtyvät eteenpäin ja potentiaali jää käyttämättä.",
+          "benefit": "Työvoimasta riippuvaiset toimialat ja palveluketjut.",
+          "tradeoff": "Kaksoistyömarkkinat, alityöllistyminen; käyttämättömän potentiaalin kustannus voi ylittää optimoinnin hyödyn.",
+          "affected": "Tulijat kapeissa tehtävissä, julkinen talous, koko kansantalous.",
+          "lag": "Lasku 2040-luvulle: segregaatio ja menetetty arvonlisä.",
+          "alternative": "Toinen selitys: maahanmuutto kattaa hyvin erilaisia ammatteja; monissa työ, palkka ja osaaminen vastaavat toisiaan.",
+          "evidence_note": "OECD:n mukaan Suomeen muutti 2024 noin 35 000 ihmistä pysyvämmin kaikilla perusteilla – ei pelkästään työperäisesti.",
+          "source_ids": [
+            "oecd-migration"
+          ],
+          "statistic_id": null
+        }
+      ]
     }
   ]
 }
