@@ -1,0 +1,5 @@
+export const ownershipSnapshots=[
+ {year:1997,entity:'Enso',channel:'Suomen valtion suora omistus',shares:44.1,votes:46.8,otherPublic:'Kelan tai muiden julkisten omistajien osuuksia ei yhdistetä tähän lukuun.',source:'https://web.lib.aalto.fi/fi/old/yrityspalvelin/pdf/1997/eenso.pdf',location:'PDF-sivu 10, painettu s. 11'},
+ {year:1998,entity:'Stora Enso',channel:'Suomen valtion suora omistus',shares:18.1,votes:21.6,otherPublic:'Kela erikseen: 3,6 % osakkeista ja 8,2 % äänistä. Raportti listaa myös muita omistajia; suora omistus ei ole koko julkisen omistuksen summa.',source:'https://web.lib.aalto.fi/fi/old/yrityspalvelin/pdf/1998/estrorae.pdf',location:'PDF-sivu 89, painettu s. 87'},
+ {year:2018,entity:'Stora Enso',channel:'Solidium, kokonaan valtion omistama yhtiö',shares:10.7,votes:27.3,otherPublic:'Kela erikseen: 3,1 % osakkeista ja 10,1 % äänistä. Omistajien ääniä ei oleteta yhdessä käytetyksi määräysvallaksi.',source:'https://www.storaenso.com/-/media/documents/download-center/documents/annual-reports/2018/storaenso_annual_report_2018.pdf',location:'PDF-sivu 139: suurimmat omistajat 31.12.2018'},
+];

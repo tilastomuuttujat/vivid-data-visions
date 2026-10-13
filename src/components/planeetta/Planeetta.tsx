@@ -1,3 +1,4 @@
+import { StoraOwnership } from './StoraOwnership';
 import { SharedTimeline } from './SharedTimeline';
 import { TimelineProvider } from './timeline-context';
 import { PublicDebt } from './PublicDebt';
@@ -57,6 +58,7 @@ export function Planeetta() {
         <LongPath />
         <TransitionPath />
         <OwnershipPath />
+        <StoraOwnership />
         <StoraComparison />
         <div id="timeline-regional"><RegionalPath /></div>
         <div id="timeline-redistribution"><RedistributionPath /></div>
