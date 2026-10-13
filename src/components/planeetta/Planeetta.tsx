@@ -1,3 +1,4 @@
+import { PublicDebt } from './PublicDebt';
 import { HousingWealth } from './HousingWealth';
 import { RedistributionPath } from './RedistributionPath';
 import { RegionalPath } from './RegionalPath';
@@ -57,6 +58,7 @@ export function Planeetta() {
         <RegionalPath />
         <RedistributionPath />
         <HousingWealth />
+        <PublicDebt />
         <HistoricalTurning />
         <ProductivityPath />
         <MechanismExplorer />
