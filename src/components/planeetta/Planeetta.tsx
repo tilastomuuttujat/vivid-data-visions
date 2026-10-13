@@ -1,3 +1,4 @@
+import { SsabComparison } from './SsabComparison';
 import { StoraOwnership } from './StoraOwnership';
 import { SharedTimeline } from './SharedTimeline';
 import { TimelineProvider } from './timeline-context';
@@ -59,6 +60,7 @@ export function Planeetta() {
         <TransitionPath />
         <OwnershipPath />
         <StoraOwnership />
+        <SsabComparison />
         <StoraComparison />
         <div id="timeline-regional"><RegionalPath /></div>
         <div id="timeline-redistribution"><RedistributionPath /></div>
