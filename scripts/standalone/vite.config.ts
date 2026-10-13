@@ -16,11 +16,11 @@ export default defineConfig({
       enforce: 'pre',
       resolveId(id) {
         const m = id.match(/data\/(atlas|anchors|maakunnat)\.json$/);
-        return m ? `\0ext-json:${m[1]}.json` : null;
+        return m ? `\0ext-json:${m[1]}` : null;
       },
       load(id) {
         if (!id.startsWith('\0ext-json:')) return null;
-        return `export default window.__ATLAS_DATA__[${JSON.stringify(id.slice(10))}];`;
+        return `export default window.__ATLAS_DATA__[${JSON.stringify(id.slice(10) + ".json")}];`;
       },
     },
     react(),
