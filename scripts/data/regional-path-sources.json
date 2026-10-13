@@ -1,0 +1,363 @@
+{
+  "11ra": {
+    "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/vaerak/11ra.px",
+    "query": [
+      {
+        "code": "alue_23_20260101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "MK01",
+            "MK02",
+            "MK04",
+            "MK05",
+            "MK10",
+            "MK06",
+            "MK07",
+            "MK08",
+            "MK09",
+            "MK11",
+            "MK12",
+            "MK13",
+            "MK14",
+            "MK15",
+            "MK16",
+            "MK17",
+            "MK18",
+            "MK19",
+            "MK21",
+            "SSS"
+          ]
+        }
+      },
+      {
+        "code": "timeperiod_y",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ]
+        }
+      },
+      {
+        "code": "contentscode",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "vaerak-vaesto",
+            "vaesto_yli64_p"
+          ]
+        }
+      }
+    ],
+    "columns": [
+      {
+        "code": "alue_23_20260101",
+        "text": "Alue",
+        "comment": "Tilastossa käytetään 1.1.2026 aluejakoa koko aikasarjassa. Alueliitoskuntien tiedot yhdistetty. Osakuntaliitoksia ei ole huomioitu liitosta edeltävinä vuosina.\r\n",
+        "type": "d"
+      },
+      {
+        "code": "timeperiod_y",
+        "text": "Vuosi",
+        "type": "t"
+      },
+      {
+        "code": "vaerak-vaesto",
+        "text": "Väestö 31.12.",
+        "comment": "Väkiluku tilastoajanjakson lopussa.\r\n",
+        "type": "c"
+      },
+      {
+        "code": "vaesto_yli64_p",
+        "text": "65 vuotta täyttäneiden osuus, %",
+        "type": "c"
+      }
+    ],
+    "rowCount": 700
+  },
+  "14ww": {
+    "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tjt/14ww.px",
+    "query": [
+      {
+        "code": "alue_23_20250101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "MK01",
+            "MK02",
+            "MK04",
+            "MK05",
+            "MK10",
+            "MK06",
+            "MK07",
+            "MK08",
+            "MK09",
+            "MK11",
+            "MK12",
+            "MK13",
+            "MK14",
+            "MK15",
+            "MK16",
+            "MK17",
+            "MK18",
+            "MK19",
+            "MK21",
+            "SSS"
+          ]
+        }
+      },
+      {
+        "code": "timeperiod_y",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ]
+        }
+      },
+      {
+        "code": "contentscode",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "tjt-ekvikturaha_med",
+            "rpt_aste"
+          ]
+        }
+      }
+    ],
+    "columns": [
+      {
+        "code": "alue_23_20250101",
+        "text": "Alue",
+        "type": "d"
+      },
+      {
+        "code": "timeperiod_y",
+        "text": "Vuosi",
+        "type": "t"
+      },
+      {
+        "code": "tjt-ekvikturaha_med",
+        "text": "Käytettävissä oleva rahatulo kulutusyksikköä kohden, mediaani",
+        "comment": "Ekvivalentti tulo eli asuntokunnan (tai kotitalouden) käytettävissä olevat rahatulot jaettuna kulutusyksiköillä (Eurostat-asteikko)  Jokainen asuntokunnan jäsen saa tämän saman tulon (ns. ekvivalentin tulon). Kun tilastoyksikkö on henkilö, ekvivalentti tulo kuvaa henkilön taloudellisen toimeentulon tasoa laajemmin kuin henkilökohtaiset tulot.\r\n",
+        "type": "c"
+      },
+      {
+        "code": "rpt_aste",
+        "text": "Asuntoväestön pienituloisuusaste (raja 60 % mediaanista)",
+        "comment": "Pienituloisia ovat henkilöt, joiden kotitalouden käytettävissä olevat rahatulot kulutusyksikköä kohti (ns. ekvivalentti rahatulo) ovat pienemmät kuin 60 prosenttia kaikkien kotitalouksien ekvivalenttien käytettävissä olevien rahatulojen mediaanitulosta. Tämän tulorajan alapuolelle jäävien osuutta väestöstä kutsutaan pienituloisuusasteeksi. Pienituloisuuden euromääräinen raja vaihtelee vuosittain. Määritelmä perustuu Euroopan unionin tilastolaitoksen Eurostatin suosituksiin.\r\n",
+        "type": "c"
+      }
+    ],
+    "rowCount": 600
+  },
+  "12bg": {
+    "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/altp/12bg.px",
+    "query": [
+      {
+        "code": "alue_23_20250101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "MK01",
+            "MK02",
+            "MK04",
+            "MK05",
+            "MK10",
+            "MK06",
+            "MK07",
+            "MK08",
+            "MK09",
+            "MK11",
+            "MK12",
+            "MK13",
+            "MK14",
+            "MK15",
+            "MK16",
+            "MK17",
+            "MK18",
+            "MK19",
+            "MK21",
+            "SSS"
+          ]
+        }
+      },
+      {
+        "code": "taloustoimi_1_20180101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "E1"
+          ]
+        }
+      },
+      {
+        "code": "toimiala_79_20180101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS",
+            "J",
+            "C10TC12",
+            "C13TC15",
+            "C16TC18",
+            "C19TC22",
+            "C23",
+            "C24TC30",
+            "C31TC33"
+          ]
+        }
+      },
+      {
+        "code": "sektoriluokitus_7_20230101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "S1"
+          ]
+        }
+      },
+      {
+        "code": "timeperiod_y",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ]
+        }
+      },
+      {
+        "code": "contentscode",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "altp-cp_alkup"
+          ]
+        }
+      }
+    ],
+    "columns": [
+      {
+        "code": "alue_23_20250101",
+        "text": "Alue",
+        "type": "d"
+      },
+      {
+        "code": "taloustoimi_1_20180101",
+        "text": "Taloustoimi",
+        "type": "d"
+      },
+      {
+        "code": "toimiala_79_20180101",
+        "text": "Toimiala",
+        "type": "d"
+      },
+      {
+        "code": "sektoriluokitus_7_20230101",
+        "text": "Sektori",
+        "type": "d"
+      },
+      {
+        "code": "timeperiod_y",
+        "text": "Vuosi",
+        "comment": "* ennakkotieto\r\n",
+        "type": "t"
+      },
+      {
+        "code": "altp-cp_alkup",
+        "text": "Alkuperäinen sarja",
+        "type": "c"
+      }
+    ],
+    "rowCount": 4500
+  }
+}

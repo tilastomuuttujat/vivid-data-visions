@@ -1,0 +1,7125 @@
+{
+  "retrieved": "2026-10-13",
+  "regions": [
+    {
+      "id": "MK01",
+      "name": "Uusimaa",
+      "points": [
+        {
+          "year": 1990,
+          "population": 1232236.0,
+          "olderShare": 11.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 1248072.0,
+          "olderShare": 11.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 1261807.0,
+          "olderShare": 11.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 1277609.0,
+          "olderShare": 11.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 1293573.0,
+          "olderShare": 11.4,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 1310680.0,
+          "olderShare": 11.5,
+          "income": 22661.0,
+          "poverty": 6.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 1327243.0,
+          "olderShare": 11.5,
+          "income": 23213.0,
+          "poverty": 7.0,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 1344989.0,
+          "olderShare": 11.5,
+          "income": 24172.0,
+          "poverty": 7.5,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 1362634.0,
+          "olderShare": 11.5,
+          "income": 24873.0,
+          "poverty": 7.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 1379712.0,
+          "olderShare": 11.5,
+          "income": 25837.0,
+          "poverty": 7.5,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 1394199.0,
+          "olderShare": 11.6,
+          "income": 26335.0,
+          "poverty": 8.0,
+          "jobs": 750202.0,
+          "industry": 99962.0,
+          "information": 48767.0
+        },
+        {
+          "year": 2001,
+          "population": 1408525.0,
+          "olderShare": 11.7,
+          "income": 26998.0,
+          "poverty": 8.2,
+          "jobs": 765072.0,
+          "industry": 100195.0,
+          "information": 53208.0
+        },
+        {
+          "year": 2002,
+          "population": 1419938.0,
+          "olderShare": 11.8,
+          "income": 27542.0,
+          "poverty": 8.5,
+          "jobs": 777488.0,
+          "industry": 97518.0,
+          "information": 53692.0
+        },
+        {
+          "year": 2003,
+          "population": 1429869.0,
+          "olderShare": 12.0,
+          "income": 28063.0,
+          "poverty": 9.3,
+          "jobs": 768410.0,
+          "industry": 91857.0,
+          "information": 53134.0
+        },
+        {
+          "year": 2004,
+          "population": 1439400.0,
+          "olderShare": 12.2,
+          "income": 29162.0,
+          "poverty": 10.1,
+          "jobs": 769201.0,
+          "industry": 90187.0,
+          "information": 53341.0
+        },
+        {
+          "year": 2005,
+          "population": 1452083.0,
+          "olderShare": 12.4,
+          "income": 29729.0,
+          "poverty": 10.6,
+          "jobs": 786586.0,
+          "industry": 89036.0,
+          "information": 52047.0
+        },
+        {
+          "year": 2006,
+          "population": 1467453.0,
+          "olderShare": 12.8,
+          "income": 30452.0,
+          "poverty": 10.9,
+          "jobs": 806281.0,
+          "industry": 89515.0,
+          "information": 54232.0
+        },
+        {
+          "year": 2007,
+          "population": 1483719.0,
+          "olderShare": 12.9,
+          "income": 31471.0,
+          "poverty": 11.3,
+          "jobs": 828026.0,
+          "industry": 90944.0,
+          "information": 53346.0
+        },
+        {
+          "year": 2008,
+          "population": 1501511.0,
+          "olderShare": 13.1,
+          "income": 31868.0,
+          "poverty": 11.3,
+          "jobs": 852296.0,
+          "industry": 92548.99999999999,
+          "information": 55783.0
+        },
+        {
+          "year": 2009,
+          "population": 1517542.0,
+          "olderShare": 13.4,
+          "income": 32638.0,
+          "poverty": 11.4,
+          "jobs": 822654.0,
+          "industry": 85624.00000000001,
+          "information": 54382.0
+        },
+        {
+          "year": 2010,
+          "population": 1532309.0,
+          "olderShare": 14.0,
+          "income": 33009.0,
+          "poverty": 10.8,
+          "jobs": 819668.0,
+          "industry": 83055.0,
+          "information": 54435.0
+        },
+        {
+          "year": 2011,
+          "population": 1549058.0,
+          "olderShare": 14.6,
+          "income": 32886.0,
+          "poverty": 10.9,
+          "jobs": 825737.0,
+          "industry": 81774.0,
+          "information": 55277.0
+        },
+        {
+          "year": 2012,
+          "population": 1566835.0,
+          "olderShare": 15.1,
+          "income": 33000.0,
+          "poverty": 10.4,
+          "jobs": 844425.0,
+          "industry": 81276.00000000001,
+          "information": 56811.0
+        },
+        {
+          "year": 2013,
+          "population": 1585473.0,
+          "olderShare": 15.7,
+          "income": 32690.0,
+          "poverty": 10.0,
+          "jobs": 851594.0,
+          "industry": 79248.0,
+          "information": 58883.0
+        },
+        {
+          "year": 2014,
+          "population": 1603388.0,
+          "olderShare": 16.1,
+          "income": 32570.0,
+          "poverty": 9.9,
+          "jobs": 850631.0,
+          "industry": 78387.99999999999,
+          "information": 58934.0
+        },
+        {
+          "year": 2015,
+          "population": 1620261.0,
+          "olderShare": 16.5,
+          "income": 32863.0,
+          "poverty": 9.6,
+          "jobs": 863063.0,
+          "industry": 77504.0,
+          "information": 59858.0
+        },
+        {
+          "year": 2016,
+          "population": 1638293.0,
+          "olderShare": 16.8,
+          "income": 33124.0,
+          "poverty": 9.7,
+          "jobs": 875872.0,
+          "industry": 75623.0,
+          "information": 60517.0
+        },
+        {
+          "year": 2017,
+          "population": 1655624.0,
+          "olderShare": 17.1,
+          "income": 33483.0,
+          "poverty": 9.7,
+          "jobs": 886391.0,
+          "industry": 74846.0,
+          "information": 62156.0
+        },
+        {
+          "year": 2018,
+          "population": 1671024.0,
+          "olderShare": 17.4,
+          "income": 33933.0,
+          "poverty": 10.1,
+          "jobs": 915384.0,
+          "industry": 75571.0,
+          "information": 66299.0
+        },
+        {
+          "year": 2019,
+          "population": 1689725.0,
+          "olderShare": 17.6,
+          "income": 34482.0,
+          "poverty": 10.4,
+          "jobs": 941917.0,
+          "industry": 76345.0,
+          "information": 68306.0
+        },
+        {
+          "year": 2020,
+          "population": 1702678.0,
+          "olderShare": 17.9,
+          "income": 34330.0,
+          "poverty": 9.8,
+          "jobs": 919122.0,
+          "industry": 76652.0,
+          "information": 68629.0
+        },
+        {
+          "year": 2021,
+          "population": 1714741.0,
+          "olderShare": 18.1,
+          "income": 34664.0,
+          "poverty": 10.7,
+          "jobs": 941965.0,
+          "industry": 77169.0,
+          "information": 71913.0
+        },
+        {
+          "year": 2022,
+          "population": 1733033.0,
+          "olderShare": 18.2,
+          "income": 33564.0,
+          "poverty": 11.0,
+          "jobs": 991421.0,
+          "industry": 79984.0,
+          "information": 75932.0
+        },
+        {
+          "year": 2023,
+          "population": 1759537.0,
+          "olderShare": 18.3,
+          "income": 32841.0,
+          "poverty": 11.3,
+          "jobs": 1006508.0,
+          "industry": 81355.0,
+          "information": 77627.0
+        },
+        {
+          "year": 2024,
+          "population": 1782300.0,
+          "olderShare": 18.4,
+          "income": 33487.0,
+          "poverty": 12.4,
+          "jobs": 997841.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK02",
+      "name": "Varsinais-Suomi",
+      "points": [
+        {
+          "year": 1990,
+          "population": 425282.0,
+          "olderShare": 15.2,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 427158.0,
+          "olderShare": 15.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 428864.0,
+          "olderShare": 15.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 430409.0,
+          "olderShare": 15.6,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 432603.0,
+          "olderShare": 15.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 435119.0,
+          "olderShare": 15.9,
+          "income": 20799.0,
+          "poverty": 8.3,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 437491.0,
+          "olderShare": 16.0,
+          "income": 21265.0,
+          "poverty": 9.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 439973.0,
+          "olderShare": 16.1,
+          "income": 21992.0,
+          "poverty": 10.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 443050.0,
+          "olderShare": 16.1,
+          "income": 22430.0,
+          "poverty": 10.9,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 445542.0,
+          "olderShare": 16.1,
+          "income": 22931.0,
+          "poverty": 11.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 447103.0,
+          "olderShare": 16.2,
+          "income": 23151.0,
+          "poverty": 12.6,
+          "jobs": 199584.0,
+          "industry": 47491.0,
+          "information": 4406.0
+        },
+        {
+          "year": 2001,
+          "population": 449293.0,
+          "olderShare": 16.3,
+          "income": 23802.0,
+          "poverty": 12.4,
+          "jobs": 205005.0,
+          "industry": 48107.0,
+          "information": 5006.0
+        },
+        {
+          "year": 2002,
+          "population": 450968.0,
+          "olderShare": 16.4,
+          "income": 24334.0,
+          "poverty": 12.7,
+          "jobs": 206673.0,
+          "industry": 46344.0,
+          "information": 5254.0
+        },
+        {
+          "year": 2003,
+          "population": 452444.0,
+          "olderShare": 16.7,
+          "income": 24973.0,
+          "poverty": 13.2,
+          "jobs": 206943.0,
+          "industry": 44385.00000000001,
+          "information": 5226.0
+        },
+        {
+          "year": 2004,
+          "population": 453745.0,
+          "olderShare": 16.9,
+          "income": 25937.0,
+          "poverty": 14.2,
+          "jobs": 203973.0,
+          "industry": 41257.0,
+          "information": 5218.0
+        },
+        {
+          "year": 2005,
+          "population": 455584.0,
+          "olderShare": 17.0,
+          "income": 26570.0,
+          "poverty": 14.3,
+          "jobs": 208820.0,
+          "industry": 41899.0,
+          "information": 5410.0
+        },
+        {
+          "year": 2006,
+          "population": 457789.0,
+          "olderShare": 17.4,
+          "income": 27281.0,
+          "poverty": 14.5,
+          "jobs": 212307.0,
+          "industry": 42781.0,
+          "information": 5440.0
+        },
+        {
+          "year": 2007,
+          "population": 459235.0,
+          "olderShare": 17.4,
+          "income": 28074.0,
+          "poverty": 15.3,
+          "jobs": 216552.0,
+          "industry": 43289.0,
+          "information": 5743.0
+        },
+        {
+          "year": 2008,
+          "population": 461177.0,
+          "olderShare": 17.7,
+          "income": 28458.0,
+          "poverty": 15.0,
+          "jobs": 220737.0,
+          "industry": 43240.0,
+          "information": 5223.0
+        },
+        {
+          "year": 2009,
+          "population": 462914.0,
+          "olderShare": 18.0,
+          "income": 29075.0,
+          "poverty": 14.9,
+          "jobs": 214485.0,
+          "industry": 39815.0,
+          "information": 4932.0
+        },
+        {
+          "year": 2010,
+          "population": 465183.0,
+          "olderShare": 18.5,
+          "income": 29255.0,
+          "poverty": 14.6,
+          "jobs": 207368.0,
+          "industry": 36560.0,
+          "information": 4754.0
+        },
+        {
+          "year": 2011,
+          "population": 467217.0,
+          "olderShare": 19.2,
+          "income": 29181.0,
+          "poverty": 14.9,
+          "jobs": 210305.0,
+          "industry": 37090.0,
+          "information": 4843.0
+        },
+        {
+          "year": 2012,
+          "population": 468936.0,
+          "olderShare": 19.9,
+          "income": 29338.0,
+          "poverty": 14.3,
+          "jobs": 213924.0,
+          "industry": 36292.0,
+          "information": 4588.0
+        },
+        {
+          "year": 2013,
+          "population": 470880.0,
+          "olderShare": 20.6,
+          "income": 28895.0,
+          "poverty": 14.4,
+          "jobs": 210550.0,
+          "industry": 33154.0,
+          "information": 5099.0
+        },
+        {
+          "year": 2014,
+          "population": 472725.0,
+          "olderShare": 21.1,
+          "income": 28774.0,
+          "poverty": 14.1,
+          "jobs": 209659.0,
+          "industry": 33144.0,
+          "information": 5251.0
+        },
+        {
+          "year": 2015,
+          "population": 474323.0,
+          "olderShare": 21.7,
+          "income": 29051.0,
+          "poverty": 13.8,
+          "jobs": 210415.0,
+          "industry": 32454.0,
+          "information": 5250.0
+        },
+        {
+          "year": 2016,
+          "population": 475543.0,
+          "olderShare": 22.1,
+          "income": 29382.0,
+          "poverty": 13.6,
+          "jobs": 212408.0,
+          "industry": 32542.0,
+          "information": 5219.0
+        },
+        {
+          "year": 2017,
+          "population": 477677.0,
+          "olderShare": 22.5,
+          "income": 29795.0,
+          "poverty": 13.4,
+          "jobs": 217114.0,
+          "industry": 34016.0,
+          "information": 5519.0
+        },
+        {
+          "year": 2018,
+          "population": 478582.0,
+          "olderShare": 22.9,
+          "income": 30112.0,
+          "poverty": 13.7,
+          "jobs": 221901.0,
+          "industry": 35540.0,
+          "information": 5516.0
+        },
+        {
+          "year": 2019,
+          "population": 479341.0,
+          "olderShare": 23.3,
+          "income": 30625.0,
+          "poverty": 13.9,
+          "jobs": 225285.0,
+          "industry": 35858.0,
+          "information": 5741.0
+        },
+        {
+          "year": 2020,
+          "population": 481403.0,
+          "olderShare": 23.7,
+          "income": 30687.0,
+          "poverty": 13.2,
+          "jobs": 220543.0,
+          "industry": 35439.0,
+          "information": 5727.0
+        },
+        {
+          "year": 2021,
+          "population": 483477.0,
+          "olderShare": 24.0,
+          "income": 31009.0,
+          "poverty": 13.8,
+          "jobs": 223251.0,
+          "industry": 35257.0,
+          "information": 6099.0
+        },
+        {
+          "year": 2022,
+          "population": 485567.0,
+          "olderShare": 24.1,
+          "income": 30115.0,
+          "poverty": 14.0,
+          "jobs": 229805.0,
+          "industry": 36258.0,
+          "information": 6514.0
+        },
+        {
+          "year": 2023,
+          "population": 490786.0,
+          "olderShare": 24.1,
+          "income": 29578.0,
+          "poverty": 14.0,
+          "jobs": 231184.0,
+          "industry": 36080.0,
+          "information": 6366.0
+        },
+        {
+          "year": 2024,
+          "population": 494819.0,
+          "olderShare": 24.3,
+          "income": 30198.0,
+          "poverty": 14.7,
+          "jobs": 230315.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK04",
+      "name": "Satakunta",
+      "points": [
+        {
+          "year": 1990,
+          "population": 240777.0,
+          "olderShare": 14.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 240767.0,
+          "olderShare": 14.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 240744.0,
+          "olderShare": 15.1,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 240519.0,
+          "olderShare": 15.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 240028.0,
+          "olderShare": 15.6,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 239255.0,
+          "olderShare": 15.9,
+          "income": 20069.0,
+          "poverty": 8.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 238057.0,
+          "olderShare": 16.2,
+          "income": 20366.0,
+          "poverty": 9.7,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 236818.0,
+          "olderShare": 16.4,
+          "income": 21051.0,
+          "poverty": 10.8,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 235662.0,
+          "olderShare": 16.6,
+          "income": 21527.0,
+          "poverty": 12.0,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 234233.0,
+          "olderShare": 16.9,
+          "income": 21814.0,
+          "poverty": 13.2,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 232569.0,
+          "olderShare": 17.2,
+          "income": 21903.0,
+          "poverty": 14.3,
+          "jobs": 96424.0,
+          "industry": 23892.0,
+          "information": 2033.9999999999998
+        },
+        {
+          "year": 2001,
+          "population": 231307.0,
+          "olderShare": 17.6,
+          "income": 22723.0,
+          "poverty": 14.4,
+          "jobs": 98016.0,
+          "industry": 24244.0,
+          "information": 2276.0
+        },
+        {
+          "year": 2002,
+          "population": 230480.0,
+          "olderShare": 17.9,
+          "income": 23274.0,
+          "poverty": 14.4,
+          "jobs": 98545.0,
+          "industry": 24198.999999999996,
+          "information": 2216.0
+        },
+        {
+          "year": 2003,
+          "population": 229910.0,
+          "olderShare": 18.3,
+          "income": 23945.0,
+          "poverty": 14.8,
+          "jobs": 99146.0,
+          "industry": 23508.0,
+          "information": 2420.0
+        },
+        {
+          "year": 2004,
+          "population": 229389.0,
+          "olderShare": 18.8,
+          "income": 24865.0,
+          "poverty": 15.4,
+          "jobs": 97251.0,
+          "industry": 22480.0,
+          "information": 2380.0
+        },
+        {
+          "year": 2005,
+          "population": 228675.0,
+          "olderShare": 19.1,
+          "income": 25402.0,
+          "poverty": 15.7,
+          "jobs": 99144.0,
+          "industry": 22427.0,
+          "information": 2593.0
+        },
+        {
+          "year": 2006,
+          "population": 228051.0,
+          "olderShare": 19.7,
+          "income": 25976.0,
+          "poverty": 16.1,
+          "jobs": 100022.0,
+          "industry": 22457.0,
+          "information": 2377.0
+        },
+        {
+          "year": 2007,
+          "population": 227131.0,
+          "olderShare": 19.8,
+          "income": 26914.0,
+          "poverty": 16.6,
+          "jobs": 102090.0,
+          "industry": 22429.0,
+          "information": 2348.0
+        },
+        {
+          "year": 2008,
+          "population": 226358.0,
+          "olderShare": 20.2,
+          "income": 27391.0,
+          "poverty": 16.0,
+          "jobs": 106667.0,
+          "industry": 24185.0,
+          "information": 1957.0
+        },
+        {
+          "year": 2009,
+          "population": 226116.0,
+          "olderShare": 20.5,
+          "income": 28021.0,
+          "poverty": 15.8,
+          "jobs": 105015.0,
+          "industry": 22007.0,
+          "information": 1614.0
+        },
+        {
+          "year": 2010,
+          "population": 225762.0,
+          "olderShare": 21.1,
+          "income": 28392.0,
+          "poverty": 15.2,
+          "jobs": 102484.0,
+          "industry": 20935.000000000004,
+          "information": 1478.0
+        },
+        {
+          "year": 2011,
+          "population": 225302.0,
+          "olderShare": 21.8,
+          "income": 28442.0,
+          "poverty": 15.3,
+          "jobs": 103348.0,
+          "industry": 21303.0,
+          "information": 1423.0
+        },
+        {
+          "year": 2012,
+          "population": 224934.0,
+          "olderShare": 22.6,
+          "income": 28650.0,
+          "poverty": 14.4,
+          "jobs": 104146.0,
+          "industry": 21509.0,
+          "information": 1440.0
+        },
+        {
+          "year": 2013,
+          "population": 224556.0,
+          "olderShare": 23.4,
+          "income": 28407.0,
+          "poverty": 14.1,
+          "jobs": 104235.0,
+          "industry": 21355.0,
+          "information": 1372.0
+        },
+        {
+          "year": 2014,
+          "population": 223983.0,
+          "olderShare": 24.1,
+          "income": 28381.0,
+          "poverty": 13.8,
+          "jobs": 102386.0,
+          "industry": 20530.0,
+          "information": 1373.0
+        },
+        {
+          "year": 2015,
+          "population": 222957.0,
+          "olderShare": 24.8,
+          "income": 28488.0,
+          "poverty": 13.6,
+          "jobs": 101265.0,
+          "industry": 19736.0,
+          "information": 1513.0
+        },
+        {
+          "year": 2016,
+          "population": 221740.0,
+          "olderShare": 25.3,
+          "income": 28601.0,
+          "poverty": 13.6,
+          "jobs": 100357.0,
+          "industry": 19493.0,
+          "information": 1426.0
+        },
+        {
+          "year": 2017,
+          "population": 220398.0,
+          "olderShare": 26.0,
+          "income": 29208.0,
+          "poverty": 13.4,
+          "jobs": 100169.0,
+          "industry": 19320.0,
+          "information": 1427.0
+        },
+        {
+          "year": 2018,
+          "population": 218624.0,
+          "olderShare": 26.6,
+          "income": 29558.0,
+          "poverty": 13.6,
+          "jobs": 100255.0,
+          "industry": 19250.999999999996,
+          "information": 1401.0
+        },
+        {
+          "year": 2019,
+          "population": 216752.0,
+          "olderShare": 27.2,
+          "income": 29809.0,
+          "poverty": 14.2,
+          "jobs": 99833.0,
+          "industry": 19034.0,
+          "information": 1302.0
+        },
+        {
+          "year": 2020,
+          "population": 215416.0,
+          "olderShare": 27.7,
+          "income": 29859.0,
+          "poverty": 13.3,
+          "jobs": 97590.0,
+          "industry": 18796.0,
+          "information": 1336.0
+        },
+        {
+          "year": 2021,
+          "population": 214281.0,
+          "olderShare": 28.1,
+          "income": 30134.0,
+          "poverty": 14.0,
+          "jobs": 99331.0,
+          "industry": 18583.0,
+          "information": 1284.0
+        },
+        {
+          "year": 2022,
+          "population": 212556.0,
+          "olderShare": 28.5,
+          "income": 29217.0,
+          "poverty": 14.2,
+          "jobs": 100250.0,
+          "industry": 18523.0,
+          "information": 1447.0
+        },
+        {
+          "year": 2023,
+          "population": 211740.0,
+          "olderShare": 28.6,
+          "income": 28788.0,
+          "poverty": 14.1,
+          "jobs": 99122.0,
+          "industry": 18643.0,
+          "information": 1242.0
+        },
+        {
+          "year": 2024,
+          "population": 211261.0,
+          "olderShare": 28.9,
+          "income": 29443.0,
+          "poverty": 14.6,
+          "jobs": 97609.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK05",
+      "name": "Kanta-Häme",
+      "points": [
+        {
+          "year": 1990,
+          "population": 162248.0,
+          "olderShare": 15.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 163442.0,
+          "olderShare": 15.6,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 164363.0,
+          "olderShare": 15.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 164767.0,
+          "olderShare": 16.0,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 164957.0,
+          "olderShare": 16.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 164937.0,
+          "olderShare": 16.6,
+          "income": 20485.0,
+          "poverty": 7.7,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 164892.0,
+          "olderShare": 16.8,
+          "income": 20844.0,
+          "poverty": 8.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 165026.0,
+          "olderShare": 16.9,
+          "income": 21550.0,
+          "poverty": 9.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 164914.0,
+          "olderShare": 16.9,
+          "income": 22009.0,
+          "poverty": 10.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 165190.0,
+          "olderShare": 17.0,
+          "income": 22559.0,
+          "poverty": 11.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 165307.0,
+          "olderShare": 17.2,
+          "income": 22752.0,
+          "poverty": 11.9,
+          "jobs": 69324.0,
+          "industry": 16021.999999999998,
+          "information": 1470.0
+        },
+        {
+          "year": 2001,
+          "population": 165509.0,
+          "olderShare": 17.3,
+          "income": 23534.0,
+          "poverty": 11.8,
+          "jobs": 70698.0,
+          "industry": 16328.0,
+          "information": 1529.0
+        },
+        {
+          "year": 2002,
+          "population": 165886.0,
+          "olderShare": 17.5,
+          "income": 24288.0,
+          "poverty": 11.5,
+          "jobs": 70753.0,
+          "industry": 15352.0,
+          "information": 1565.0
+        },
+        {
+          "year": 2003,
+          "population": 166648.0,
+          "olderShare": 17.6,
+          "income": 24910.0,
+          "poverty": 11.9,
+          "jobs": 72287.0,
+          "industry": 15372.0,
+          "information": 1440.0
+        },
+        {
+          "year": 2004,
+          "population": 167630.0,
+          "olderShare": 17.9,
+          "income": 25950.0,
+          "poverty": 12.8,
+          "jobs": 72793.0,
+          "industry": 14602.0,
+          "information": 1330.0
+        },
+        {
+          "year": 2005,
+          "population": 168381.0,
+          "olderShare": 17.8,
+          "income": 26559.0,
+          "poverty": 12.9,
+          "jobs": 72414.0,
+          "industry": 14736.0,
+          "information": 1543.0
+        },
+        {
+          "year": 2006,
+          "population": 169952.0,
+          "olderShare": 18.2,
+          "income": 27272.0,
+          "poverty": 13.3,
+          "jobs": 73621.0,
+          "industry": 14513.0,
+          "information": 1807.0
+        },
+        {
+          "year": 2007,
+          "population": 171449.0,
+          "olderShare": 18.1,
+          "income": 28172.0,
+          "poverty": 13.6,
+          "jobs": 75169.0,
+          "industry": 14024.0,
+          "information": 1629.0
+        },
+        {
+          "year": 2008,
+          "population": 173041.0,
+          "olderShare": 18.3,
+          "income": 28514.0,
+          "poverty": 13.5,
+          "jobs": 77232.0,
+          "industry": 14433.0,
+          "information": 1673.0
+        },
+        {
+          "year": 2009,
+          "population": 173828.0,
+          "olderShare": 18.5,
+          "income": 29098.0,
+          "poverty": 13.4,
+          "jobs": 76048.0,
+          "industry": 13110.999999999998,
+          "information": 1657.0
+        },
+        {
+          "year": 2010,
+          "population": 174555.0,
+          "olderShare": 19.0,
+          "income": 29410.0,
+          "poverty": 12.8,
+          "jobs": 80016.0,
+          "industry": 12577.0,
+          "information": 1710.0
+        },
+        {
+          "year": 2011,
+          "population": 175230.0,
+          "olderShare": 19.7,
+          "income": 29423.0,
+          "poverty": 12.9,
+          "jobs": 77208.0,
+          "industry": 11834.0,
+          "information": 1550.0
+        },
+        {
+          "year": 2012,
+          "population": 175472.0,
+          "olderShare": 20.5,
+          "income": 29582.0,
+          "poverty": 12.2,
+          "jobs": 75171.0,
+          "industry": 12610.0,
+          "information": 1515.0
+        },
+        {
+          "year": 2013,
+          "population": 175481.0,
+          "olderShare": 21.1,
+          "income": 29387.0,
+          "poverty": 11.8,
+          "jobs": 75252.0,
+          "industry": 13209.0,
+          "information": 1595.0
+        },
+        {
+          "year": 2014,
+          "population": 175350.0,
+          "olderShare": 21.8,
+          "income": 29270.0,
+          "poverty": 11.7,
+          "jobs": 74112.0,
+          "industry": 12301.0,
+          "information": 1511.0
+        },
+        {
+          "year": 2015,
+          "population": 174710.0,
+          "olderShare": 22.5,
+          "income": 29400.0,
+          "poverty": 11.5,
+          "jobs": 74167.0,
+          "industry": 12444.0,
+          "information": 1454.0
+        },
+        {
+          "year": 2016,
+          "population": 173781.0,
+          "olderShare": 23.2,
+          "income": 29726.0,
+          "poverty": 11.5,
+          "jobs": 74111.0,
+          "industry": 12373.0,
+          "information": 1314.0
+        },
+        {
+          "year": 2017,
+          "population": 172720.0,
+          "olderShare": 23.9,
+          "income": 29947.0,
+          "poverty": 11.8,
+          "jobs": 72686.0,
+          "industry": 12254.0,
+          "information": 1228.0
+        },
+        {
+          "year": 2018,
+          "population": 171364.0,
+          "olderShare": 24.6,
+          "income": 30269.0,
+          "poverty": 12.2,
+          "jobs": 73631.0,
+          "industry": 12203.0,
+          "information": 1261.0
+        },
+        {
+          "year": 2019,
+          "population": 170925.0,
+          "olderShare": 25.3,
+          "income": 30621.0,
+          "poverty": 12.6,
+          "jobs": 74256.0,
+          "industry": 12082.0,
+          "information": 1119.0
+        },
+        {
+          "year": 2020,
+          "population": 170577.0,
+          "olderShare": 25.8,
+          "income": 30701.0,
+          "poverty": 11.8,
+          "jobs": 74000.0,
+          "industry": 12019.0,
+          "information": 1106.0
+        },
+        {
+          "year": 2021,
+          "population": 170213.0,
+          "olderShare": 26.4,
+          "income": 31042.0,
+          "poverty": 12.5,
+          "jobs": 76024.0,
+          "industry": 11945.0,
+          "information": 1098.0
+        },
+        {
+          "year": 2022,
+          "population": 169537.0,
+          "olderShare": 26.9,
+          "income": 30184.0,
+          "poverty": 12.7,
+          "jobs": 77767.0,
+          "industry": 12058.0,
+          "information": 1054.0
+        },
+        {
+          "year": 2023,
+          "population": 169547.0,
+          "olderShare": 27.1,
+          "income": 29736.0,
+          "poverty": 12.5,
+          "jobs": 78779.0,
+          "industry": 11522.0,
+          "information": 977.0
+        },
+        {
+          "year": 2024,
+          "population": 169455.0,
+          "olderShare": 27.5,
+          "income": 30299.0,
+          "poverty": 13.2,
+          "jobs": 77530.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK10",
+      "name": "Etelä-Savo",
+      "points": [
+        {
+          "year": 1990,
+          "population": 163462.0,
+          "olderShare": 15.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 163426.0,
+          "olderShare": 15.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 163503.0,
+          "olderShare": 16.0,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 163130.0,
+          "olderShare": 16.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 162691.0,
+          "olderShare": 16.7,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 162033.0,
+          "olderShare": 17.1,
+          "income": 19533.0,
+          "poverty": 9.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 161128.0,
+          "olderShare": 17.4,
+          "income": 19691.0,
+          "poverty": 11.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 160077.0,
+          "olderShare": 17.8,
+          "income": 20297.0,
+          "poverty": 12.2,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 158725.0,
+          "olderShare": 18.2,
+          "income": 20555.0,
+          "poverty": 13.7,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 157334.0,
+          "olderShare": 18.5,
+          "income": 20888.0,
+          "poverty": 14.5,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 156117.0,
+          "olderShare": 19.0,
+          "income": 21065.0,
+          "poverty": 16.0,
+          "jobs": 58160.0,
+          "industry": 9210.0,
+          "information": 967.0
+        },
+        {
+          "year": 2001,
+          "population": 154978.0,
+          "olderShare": 19.3,
+          "income": 21657.0,
+          "poverty": 16.3,
+          "jobs": 58944.0,
+          "industry": 9533.0,
+          "information": 1053.0
+        },
+        {
+          "year": 2002,
+          "population": 153864.0,
+          "olderShare": 19.8,
+          "income": 22302.0,
+          "poverty": 16.1,
+          "jobs": 59528.0,
+          "industry": 9624.0,
+          "information": 951.0
+        },
+        {
+          "year": 2003,
+          "population": 152965.0,
+          "olderShare": 20.3,
+          "income": 22830.0,
+          "poverty": 16.6,
+          "jobs": 59710.0,
+          "industry": 9388.0,
+          "information": 1006.9999999999999
+        },
+        {
+          "year": 2004,
+          "population": 152171.0,
+          "olderShare": 20.8,
+          "income": 23724.0,
+          "poverty": 17.6,
+          "jobs": 60764.0,
+          "industry": 9415.0,
+          "information": 987.0
+        },
+        {
+          "year": 2005,
+          "population": 151395.0,
+          "olderShare": 21.0,
+          "income": 24182.0,
+          "poverty": 17.9,
+          "jobs": 60280.0,
+          "industry": 9509.0,
+          "information": 1108.0
+        },
+        {
+          "year": 2006,
+          "population": 150471.0,
+          "olderShare": 21.6,
+          "income": 24681.0,
+          "poverty": 18.8,
+          "jobs": 60795.0,
+          "industry": 9625.0,
+          "information": 1088.0
+        },
+        {
+          "year": 2007,
+          "population": 149032.0,
+          "olderShare": 21.9,
+          "income": 25537.0,
+          "poverty": 19.1,
+          "jobs": 61995.0,
+          "industry": 9738.0,
+          "information": 1036.0
+        },
+        {
+          "year": 2008,
+          "population": 147892.0,
+          "olderShare": 22.3,
+          "income": 25833.0,
+          "poverty": 19.0,
+          "jobs": 61750.0,
+          "industry": 9888.0,
+          "information": 1060.0
+        },
+        {
+          "year": 2009,
+          "population": 146979.0,
+          "olderShare": 22.7,
+          "income": 26525.0,
+          "poverty": 18.1,
+          "jobs": 61364.0,
+          "industry": 8658.0,
+          "information": 1029.0
+        },
+        {
+          "year": 2010,
+          "population": 146166.0,
+          "olderShare": 23.3,
+          "income": 27077.0,
+          "poverty": 17.4,
+          "jobs": 60941.0,
+          "industry": 8442.0,
+          "information": 1010.9999999999999
+        },
+        {
+          "year": 2011,
+          "population": 145353.0,
+          "olderShare": 24.1,
+          "income": 27088.0,
+          "poverty": 17.6,
+          "jobs": 61453.0,
+          "industry": 8939.0,
+          "information": 955.0
+        },
+        {
+          "year": 2012,
+          "population": 144393.0,
+          "olderShare": 25.0,
+          "income": 27198.0,
+          "poverty": 16.8,
+          "jobs": 60538.0,
+          "industry": 8746.0,
+          "information": 928.0
+        },
+        {
+          "year": 2013,
+          "population": 143638.0,
+          "olderShare": 25.9,
+          "income": 27151.0,
+          "poverty": 16.1,
+          "jobs": 59305.0,
+          "industry": 8480.0,
+          "information": 947.0
+        },
+        {
+          "year": 2014,
+          "population": 142746.0,
+          "olderShare": 26.6,
+          "income": 27178.0,
+          "poverty": 15.5,
+          "jobs": 58961.0,
+          "industry": 8379.0,
+          "information": 990.0
+        },
+        {
+          "year": 2015,
+          "population": 141621.0,
+          "olderShare": 27.4,
+          "income": 27316.0,
+          "poverty": 15.5,
+          "jobs": 57574.0,
+          "industry": 8076.000000000001,
+          "information": 938.0
+        },
+        {
+          "year": 2016,
+          "population": 140422.0,
+          "olderShare": 28.1,
+          "income": 27646.0,
+          "poverty": 15.2,
+          "jobs": 57545.0,
+          "industry": 8298.0,
+          "information": 919.0
+        },
+        {
+          "year": 2017,
+          "population": 138822.0,
+          "olderShare": 29.0,
+          "income": 27846.0,
+          "poverty": 15.8,
+          "jobs": 56969.0,
+          "industry": 8233.0,
+          "information": 894.0
+        },
+        {
+          "year": 2018,
+          "population": 136474.0,
+          "olderShare": 29.9,
+          "income": 28239.0,
+          "poverty": 15.8,
+          "jobs": 57072.0,
+          "industry": 8116.0,
+          "information": 835.0
+        },
+        {
+          "year": 2019,
+          "population": 134314.0,
+          "olderShare": 30.9,
+          "income": 28516.0,
+          "poverty": 16.4,
+          "jobs": 57098.0,
+          "industry": 8135.0,
+          "information": 712.0
+        },
+        {
+          "year": 2020,
+          "population": 132702.0,
+          "olderShare": 31.7,
+          "income": 28476.0,
+          "poverty": 15.2,
+          "jobs": 54841.0,
+          "industry": 7653.000000000001,
+          "information": 831.0
+        },
+        {
+          "year": 2021,
+          "population": 131688.0,
+          "olderShare": 32.5,
+          "income": 28894.0,
+          "poverty": 16.1,
+          "jobs": 55025.0,
+          "industry": 7609.999999999999,
+          "information": 729.0
+        },
+        {
+          "year": 2022,
+          "population": 130451.0,
+          "olderShare": 33.0,
+          "income": 28232.0,
+          "poverty": 16.2,
+          "jobs": 55647.0,
+          "industry": 7813.0,
+          "information": 725.0
+        },
+        {
+          "year": 2023,
+          "population": 129914.0,
+          "olderShare": 33.4,
+          "income": 27990.0,
+          "poverty": 15.3,
+          "jobs": 56196.0,
+          "industry": 7936.0,
+          "information": 683.0
+        },
+        {
+          "year": 2024,
+          "population": 129376.0,
+          "olderShare": 33.9,
+          "income": 28534.0,
+          "poverty": 16.0,
+          "jobs": 55107.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK06",
+      "name": "Pirkanmaa",
+      "points": [
+        {
+          "year": 1990,
+          "population": 430651.0,
+          "olderShare": 14.7,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 432391.0,
+          "olderShare": 14.9,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 434066.0,
+          "olderShare": 15.0,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 435789.0,
+          "olderShare": 15.2,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 438114.0,
+          "olderShare": 15.4,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 440734.0,
+          "olderShare": 15.5,
+          "income": 20382.0,
+          "poverty": 8.2,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 443065.0,
+          "olderShare": 15.7,
+          "income": 20822.0,
+          "poverty": 9.0,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 445536.0,
+          "olderShare": 15.7,
+          "income": 21503.0,
+          "poverty": 9.9,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 448045.0,
+          "olderShare": 15.8,
+          "income": 22105.0,
+          "poverty": 10.4,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 450548.0,
+          "olderShare": 15.8,
+          "income": 22430.0,
+          "poverty": 11.4,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 453319.0,
+          "olderShare": 15.9,
+          "income": 22767.0,
+          "poverty": 12.2,
+          "jobs": 192044.0,
+          "industry": 52341.0,
+          "information": 6533.0
+        },
+        {
+          "year": 2001,
+          "population": 456934.0,
+          "olderShare": 15.9,
+          "income": 23526.0,
+          "poverty": 12.3,
+          "jobs": 194839.0,
+          "industry": 51720.0,
+          "information": 7332.0
+        },
+        {
+          "year": 2002,
+          "population": 460103.0,
+          "olderShare": 16.0,
+          "income": 24103.0,
+          "poverty": 12.5,
+          "jobs": 196567.0,
+          "industry": 50716.0,
+          "information": 7401.0
+        },
+        {
+          "year": 2003,
+          "population": 463330.0,
+          "olderShare": 16.2,
+          "income": 24743.0,
+          "poverty": 13.0,
+          "jobs": 202047.0,
+          "industry": 51495.0,
+          "information": 7500.0
+        },
+        {
+          "year": 2004,
+          "population": 467424.0,
+          "olderShare": 16.4,
+          "income": 25706.0,
+          "poverty": 13.8,
+          "jobs": 207548.0,
+          "industry": 49404.0,
+          "information": 7272.0
+        },
+        {
+          "year": 2005,
+          "population": 471409.0,
+          "olderShare": 16.4,
+          "income": 26324.0,
+          "poverty": 14.1,
+          "jobs": 212872.0,
+          "industry": 49718.0,
+          "information": 7857.0
+        },
+        {
+          "year": 2006,
+          "population": 476221.0,
+          "olderShare": 16.8,
+          "income": 26940.0,
+          "poverty": 14.5,
+          "jobs": 216726.0,
+          "industry": 50187.0,
+          "information": 8197.0
+        },
+        {
+          "year": 2007,
+          "population": 480634.0,
+          "olderShare": 16.8,
+          "income": 27866.0,
+          "poverty": 15.0,
+          "jobs": 223157.0,
+          "industry": 51682.0,
+          "information": 7864.0
+        },
+        {
+          "year": 2008,
+          "population": 484638.0,
+          "olderShare": 16.9,
+          "income": 28175.0,
+          "poverty": 15.1,
+          "jobs": 226260.0,
+          "industry": 51524.0,
+          "information": 8586.0
+        },
+        {
+          "year": 2009,
+          "population": 488295.0,
+          "olderShare": 17.2,
+          "income": 28563.0,
+          "poverty": 15.3,
+          "jobs": 222874.0,
+          "industry": 46302.0,
+          "information": 8955.0
+        },
+        {
+          "year": 2010,
+          "population": 491746.0,
+          "olderShare": 17.6,
+          "income": 28798.0,
+          "poverty": 15.1,
+          "jobs": 218010.0,
+          "industry": 43618.0,
+          "information": 8869.0
+        },
+        {
+          "year": 2011,
+          "population": 495242.0,
+          "olderShare": 18.2,
+          "income": 28952.0,
+          "poverty": 15.2,
+          "jobs": 228655.0,
+          "industry": 44370.0,
+          "information": 9578.0
+        },
+        {
+          "year": 2012,
+          "population": 499006.0,
+          "olderShare": 18.8,
+          "income": 29149.0,
+          "poverty": 14.3,
+          "jobs": 226041.0,
+          "industry": 45386.0,
+          "information": 9772.0
+        },
+        {
+          "year": 2013,
+          "population": 502575.0,
+          "olderShare": 19.4,
+          "income": 28851.0,
+          "poverty": 14.0,
+          "jobs": 221869.0,
+          "industry": 41092.0,
+          "information": 9933.0
+        },
+        {
+          "year": 2014,
+          "population": 505756.0,
+          "olderShare": 19.9,
+          "income": 28703.0,
+          "poverty": 13.7,
+          "jobs": 219499.0,
+          "industry": 38799.0,
+          "information": 9340.0
+        },
+        {
+          "year": 2015,
+          "population": 508448.0,
+          "olderShare": 20.3,
+          "income": 28898.0,
+          "poverty": 13.5,
+          "jobs": 221893.0,
+          "industry": 38459.0,
+          "information": 9937.0
+        },
+        {
+          "year": 2016,
+          "population": 511642.0,
+          "olderShare": 20.7,
+          "income": 29185.0,
+          "poverty": 13.5,
+          "jobs": 221052.0,
+          "industry": 36986.0,
+          "information": 10061.0
+        },
+        {
+          "year": 2017,
+          "population": 514333.0,
+          "olderShare": 21.1,
+          "income": 29540.0,
+          "poverty": 13.6,
+          "jobs": 224891.0,
+          "industry": 36628.0,
+          "information": 11074.0
+        },
+        {
+          "year": 2018,
+          "population": 517333.0,
+          "olderShare": 21.4,
+          "income": 29947.0,
+          "poverty": 13.8,
+          "jobs": 232969.0,
+          "industry": 37186.0,
+          "information": 11507.0
+        },
+        {
+          "year": 2019,
+          "population": 519872.0,
+          "olderShare": 21.8,
+          "income": 30406.0,
+          "poverty": 14.0,
+          "jobs": 235902.0,
+          "industry": 37641.0,
+          "information": 11553.0
+        },
+        {
+          "year": 2020,
+          "population": 522852.0,
+          "olderShare": 22.1,
+          "income": 30468.0,
+          "poverty": 13.1,
+          "jobs": 229663.0,
+          "industry": 36149.0,
+          "information": 11719.0
+        },
+        {
+          "year": 2021,
+          "population": 527478.0,
+          "olderShare": 22.3,
+          "income": 30908.0,
+          "poverty": 13.7,
+          "jobs": 238816.0,
+          "industry": 36764.0,
+          "information": 12536.0
+        },
+        {
+          "year": 2022,
+          "population": 532671.0,
+          "olderShare": 22.4,
+          "income": 30086.0,
+          "poverty": 13.9,
+          "jobs": 248088.0,
+          "industry": 37912.0,
+          "information": 13259.0
+        },
+        {
+          "year": 2023,
+          "population": 539309.0,
+          "olderShare": 22.3,
+          "income": 29561.0,
+          "poverty": 13.7,
+          "jobs": 253190.0,
+          "industry": 38312.0,
+          "information": 13958.0
+        },
+        {
+          "year": 2024,
+          "population": 545406.0,
+          "olderShare": 22.4,
+          "income": 30117.0,
+          "poverty": 14.6,
+          "jobs": 251781.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK07",
+      "name": "Päijät-Häme",
+      "points": [
+        {
+          "year": 1990,
+          "population": 204901.0,
+          "olderShare": 13.9,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 205613.0,
+          "olderShare": 14.0,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 206107.0,
+          "olderShare": 14.2,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 206233.0,
+          "olderShare": 14.4,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 206171.0,
+          "olderShare": 14.7,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 205973.0,
+          "olderShare": 15.0,
+          "income": 19768.0,
+          "poverty": 9.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 205394.0,
+          "olderShare": 15.2,
+          "income": 19992.0,
+          "poverty": 10.4,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 205338.0,
+          "olderShare": 15.3,
+          "income": 20736.0,
+          "poverty": 11.7,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 205030.0,
+          "olderShare": 15.5,
+          "income": 21127.0,
+          "poverty": 12.9,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 204858.0,
+          "olderShare": 15.7,
+          "income": 21609.0,
+          "poverty": 13.5,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 204912.0,
+          "olderShare": 16.0,
+          "income": 21916.0,
+          "poverty": 14.5,
+          "jobs": 84358.0,
+          "industry": 24137.999999999996,
+          "information": 1907.0
+        },
+        {
+          "year": 2001,
+          "population": 205071.0,
+          "olderShare": 16.2,
+          "income": 22448.0,
+          "poverty": 14.8,
+          "jobs": 85862.0,
+          "industry": 24413.0,
+          "information": 1911.0
+        },
+        {
+          "year": 2002,
+          "population": 205464.0,
+          "olderShare": 16.6,
+          "income": 23072.0,
+          "poverty": 14.6,
+          "jobs": 86960.0,
+          "industry": 24278.000000000004,
+          "information": 1777.0
+        },
+        {
+          "year": 2003,
+          "population": 205755.0,
+          "olderShare": 16.9,
+          "income": 23724.0,
+          "poverty": 14.9,
+          "jobs": 86380.0,
+          "industry": 23346.0,
+          "information": 1892.0
+        },
+        {
+          "year": 2004,
+          "population": 206021.0,
+          "olderShare": 17.3,
+          "income": 24649.0,
+          "poverty": 15.8,
+          "jobs": 86676.0,
+          "industry": 22736.0,
+          "information": 1838.0
+        },
+        {
+          "year": 2005,
+          "population": 206240.0,
+          "olderShare": 17.6,
+          "income": 25076.0,
+          "poverty": 16.1,
+          "jobs": 88133.0,
+          "industry": 22635.0,
+          "information": 1827.0
+        },
+        {
+          "year": 2006,
+          "population": 206481.0,
+          "olderShare": 18.3,
+          "income": 25627.0,
+          "poverty": 16.7,
+          "jobs": 88817.0,
+          "industry": 22285.0,
+          "information": 1807.0
+        },
+        {
+          "year": 2007,
+          "population": 207269.0,
+          "olderShare": 18.4,
+          "income": 26584.0,
+          "poverty": 16.8,
+          "jobs": 89981.0,
+          "industry": 22387.0,
+          "information": 2050.0
+        },
+        {
+          "year": 2008,
+          "population": 207940.0,
+          "olderShare": 18.8,
+          "income": 26880.0,
+          "poverty": 16.9,
+          "jobs": 92237.0,
+          "industry": 22437.0,
+          "information": 1744.0
+        },
+        {
+          "year": 2009,
+          "population": 208331.0,
+          "olderShare": 19.1,
+          "income": 27267.0,
+          "poverty": 16.9,
+          "jobs": 90156.0,
+          "industry": 19176.0,
+          "information": 1565.0
+        },
+        {
+          "year": 2010,
+          "population": 208777.0,
+          "olderShare": 19.8,
+          "income": 27730.0,
+          "poverty": 16.2,
+          "jobs": 89000.0,
+          "industry": 18076.0,
+          "information": 1661.0
+        },
+        {
+          "year": 2011,
+          "population": 209238.0,
+          "olderShare": 20.6,
+          "income": 27846.0,
+          "poverty": 16.4,
+          "jobs": 90287.0,
+          "industry": 18246.0,
+          "information": 1627.0
+        },
+        {
+          "year": 2012,
+          "population": 209503.0,
+          "olderShare": 21.5,
+          "income": 27958.0,
+          "poverty": 15.6,
+          "jobs": 90703.0,
+          "industry": 18250.999999999996,
+          "information": 1660.0
+        },
+        {
+          "year": 2013,
+          "population": 209405.0,
+          "olderShare": 22.4,
+          "income": 27770.0,
+          "poverty": 14.8,
+          "jobs": 88702.0,
+          "industry": 17798.0,
+          "information": 1546.0
+        },
+        {
+          "year": 2014,
+          "population": 208959.0,
+          "olderShare": 23.2,
+          "income": 27653.0,
+          "poverty": 14.7,
+          "jobs": 85396.0,
+          "industry": 16400.0,
+          "information": 1606.0
+        },
+        {
+          "year": 2015,
+          "population": 208525.0,
+          "olderShare": 24.1,
+          "income": 27867.0,
+          "poverty": 14.2,
+          "jobs": 84374.0,
+          "industry": 16166.0,
+          "information": 1635.0
+        },
+        {
+          "year": 2016,
+          "population": 208574.0,
+          "olderShare": 24.7,
+          "income": 28259.0,
+          "poverty": 14.0,
+          "jobs": 84672.0,
+          "industry": 16177.0,
+          "information": 1580.0
+        },
+        {
+          "year": 2017,
+          "population": 208048.0,
+          "olderShare": 25.4,
+          "income": 28436.0,
+          "poverty": 14.4,
+          "jobs": 84404.0,
+          "industry": 16202.000000000002,
+          "information": 1814.0
+        },
+        {
+          "year": 2018,
+          "population": 207394.0,
+          "olderShare": 26.0,
+          "income": 28692.0,
+          "poverty": 14.8,
+          "jobs": 85789.0,
+          "industry": 16172.0,
+          "information": 1645.0
+        },
+        {
+          "year": 2019,
+          "population": 206315.0,
+          "olderShare": 26.7,
+          "income": 29403.0,
+          "poverty": 14.7,
+          "jobs": 85551.0,
+          "industry": 15911.0,
+          "information": 1779.0
+        },
+        {
+          "year": 2020,
+          "population": 205771.0,
+          "olderShare": 27.3,
+          "income": 29384.0,
+          "poverty": 13.6,
+          "jobs": 82491.0,
+          "industry": 15452.0,
+          "information": 1740.0
+        },
+        {
+          "year": 2021,
+          "population": 205124.0,
+          "olderShare": 27.7,
+          "income": 29703.0,
+          "poverty": 14.8,
+          "jobs": 84141.0,
+          "industry": 15290.000000000002,
+          "information": 1724.0
+        },
+        {
+          "year": 2022,
+          "population": 204528.0,
+          "olderShare": 28.1,
+          "income": 28819.0,
+          "poverty": 15.2,
+          "jobs": 86189.0,
+          "industry": 15532.0,
+          "information": 1761.0
+        },
+        {
+          "year": 2023,
+          "population": 204479.0,
+          "olderShare": 28.3,
+          "income": 28239.0,
+          "poverty": 15.2,
+          "jobs": 86422.0,
+          "industry": 15318.0,
+          "information": 1794.0
+        },
+        {
+          "year": 2024,
+          "population": 204635.0,
+          "olderShare": 28.6,
+          "income": 28892.0,
+          "poverty": 16.1,
+          "jobs": 84462.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK08",
+      "name": "Kymenlaakso",
+      "points": [
+        {
+          "year": 1990,
+          "population": 186030.0,
+          "olderShare": 15.1,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 186322.0,
+          "olderShare": 15.4,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 186382.0,
+          "olderShare": 15.6,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 186054.0,
+          "olderShare": 15.9,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 185462.0,
+          "olderShare": 16.2,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 184595.0,
+          "olderShare": 16.5,
+          "income": 21060.0,
+          "poverty": 7.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 183819.0,
+          "olderShare": 16.8,
+          "income": 21418.0,
+          "poverty": 7.8,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 182942.0,
+          "olderShare": 17.1,
+          "income": 22080.0,
+          "poverty": 8.8,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 182215.0,
+          "olderShare": 17.2,
+          "income": 22369.0,
+          "poverty": 10.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 181122.0,
+          "olderShare": 17.4,
+          "income": 22791.0,
+          "poverty": 11.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 179940.0,
+          "olderShare": 17.7,
+          "income": 22838.0,
+          "poverty": 12.3,
+          "jobs": 71434.0,
+          "industry": 15459.0,
+          "information": 760.0
+        },
+        {
+          "year": 2001,
+          "population": 179292.0,
+          "olderShare": 17.9,
+          "income": 23618.0,
+          "poverty": 12.4,
+          "jobs": 72680.0,
+          "industry": 15738.999999999998,
+          "information": 857.0
+        },
+        {
+          "year": 2002,
+          "population": 178735.0,
+          "olderShare": 18.1,
+          "income": 24225.0,
+          "poverty": 12.4,
+          "jobs": 75759.0,
+          "industry": 15581.000000000002,
+          "information": 945.0
+        },
+        {
+          "year": 2003,
+          "population": 178341.0,
+          "olderShare": 18.4,
+          "income": 24941.0,
+          "poverty": 13.0,
+          "jobs": 76607.0,
+          "industry": 15401.0,
+          "information": 1185.0
+        },
+        {
+          "year": 2004,
+          "population": 178205.0,
+          "olderShare": 18.8,
+          "income": 25924.0,
+          "poverty": 13.7,
+          "jobs": 77413.0,
+          "industry": 14443.999999999998,
+          "information": 1183.0
+        },
+        {
+          "year": 2005,
+          "population": 177931.0,
+          "olderShare": 19.0,
+          "income": 26197.0,
+          "poverty": 14.1,
+          "jobs": 77677.0,
+          "industry": 14282.0,
+          "information": 1168.0
+        },
+        {
+          "year": 2006,
+          "population": 176995.0,
+          "olderShare": 19.6,
+          "income": 26773.0,
+          "poverty": 14.8,
+          "jobs": 77528.0,
+          "industry": 14227.0,
+          "information": 1112.0
+        },
+        {
+          "year": 2007,
+          "population": 176356.0,
+          "olderShare": 19.7,
+          "income": 27530.0,
+          "poverty": 15.6,
+          "jobs": 78294.0,
+          "industry": 13302.0,
+          "information": 1163.0
+        },
+        {
+          "year": 2008,
+          "population": 175661.0,
+          "olderShare": 20.1,
+          "income": 27734.0,
+          "poverty": 15.6,
+          "jobs": 78165.0,
+          "industry": 13121.0,
+          "information": 928.0
+        },
+        {
+          "year": 2009,
+          "population": 175556.0,
+          "olderShare": 20.4,
+          "income": 28332.0,
+          "poverty": 15.6,
+          "jobs": 77200.0,
+          "industry": 11131.0,
+          "information": 1064.0
+        },
+        {
+          "year": 2010,
+          "population": 175377.0,
+          "olderShare": 21.1,
+          "income": 28692.0,
+          "poverty": 15.1,
+          "jobs": 76372.0,
+          "industry": 10462.0,
+          "information": 1057.0
+        },
+        {
+          "year": 2011,
+          "population": 174827.0,
+          "olderShare": 21.9,
+          "income": 28609.0,
+          "poverty": 15.6,
+          "jobs": 77243.0,
+          "industry": 11043.000000000002,
+          "information": 1083.0
+        },
+        {
+          "year": 2012,
+          "population": 174466.0,
+          "olderShare": 22.7,
+          "income": 28513.0,
+          "poverty": 14.7,
+          "jobs": 75009.0,
+          "industry": 10091.0,
+          "information": 978.0
+        },
+        {
+          "year": 2013,
+          "population": 173864.0,
+          "olderShare": 23.5,
+          "income": 28356.0,
+          "poverty": 14.2,
+          "jobs": 73743.0,
+          "industry": 9361.0,
+          "information": 970.0
+        },
+        {
+          "year": 2014,
+          "population": 172908.0,
+          "olderShare": 24.4,
+          "income": 28375.0,
+          "poverty": 14.1,
+          "jobs": 72793.0,
+          "industry": 9330.0,
+          "information": 828.0
+        },
+        {
+          "year": 2015,
+          "population": 171778.0,
+          "olderShare": 25.1,
+          "income": 28523.0,
+          "poverty": 14.1,
+          "jobs": 71717.0,
+          "industry": 9402.000000000002,
+          "information": 865.0
+        },
+        {
+          "year": 2016,
+          "population": 170770.0,
+          "olderShare": 25.7,
+          "income": 28632.0,
+          "poverty": 14.3,
+          "jobs": 71265.0,
+          "industry": 9440.999999999998,
+          "information": 877.0
+        },
+        {
+          "year": 2017,
+          "population": 168691.0,
+          "olderShare": 26.6,
+          "income": 28807.0,
+          "poverty": 14.6,
+          "jobs": 71011.0,
+          "industry": 9609.0,
+          "information": 885.0
+        },
+        {
+          "year": 2018,
+          "population": 166623.0,
+          "olderShare": 27.3,
+          "income": 29212.0,
+          "poverty": 14.6,
+          "jobs": 72852.0,
+          "industry": 10164.0,
+          "information": 913.0
+        },
+        {
+          "year": 2019,
+          "population": 164456.0,
+          "olderShare": 28.0,
+          "income": 29639.0,
+          "poverty": 15.2,
+          "jobs": 72031.0,
+          "industry": 9906.0,
+          "information": 758.0
+        },
+        {
+          "year": 2020,
+          "population": 162812.0,
+          "olderShare": 28.6,
+          "income": 29753.0,
+          "poverty": 14.1,
+          "jobs": 69897.0,
+          "industry": 9050.0,
+          "information": 804.0
+        },
+        {
+          "year": 2021,
+          "population": 161391.0,
+          "olderShare": 29.2,
+          "income": 30041.0,
+          "poverty": 15.0,
+          "jobs": 70965.0,
+          "industry": 9292.0,
+          "information": 711.0
+        },
+        {
+          "year": 2022,
+          "population": 159488.0,
+          "olderShare": 29.7,
+          "income": 29071.0,
+          "poverty": 15.4,
+          "jobs": 71315.0,
+          "industry": 9190.0,
+          "information": 692.0
+        },
+        {
+          "year": 2023,
+          "population": 158658.0,
+          "olderShare": 30.0,
+          "income": 28737.0,
+          "poverty": 15.2,
+          "jobs": 70681.0,
+          "industry": 9161.0,
+          "information": 645.0
+        },
+        {
+          "year": 2024,
+          "population": 157442.0,
+          "olderShare": 30.6,
+          "income": 29360.0,
+          "poverty": 15.5,
+          "jobs": 69440.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK09",
+      "name": "Etelä-Karjala",
+      "points": [
+        {
+          "year": 1990,
+          "population": 140244.0,
+          "olderShare": 15.1,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 140150.0,
+          "olderShare": 15.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 139907.0,
+          "olderShare": 15.6,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 139569.0,
+          "olderShare": 15.9,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 139297.0,
+          "olderShare": 16.2,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 138678.0,
+          "olderShare": 16.6,
+          "income": 20660.0,
+          "poverty": 7.8,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 138163.0,
+          "olderShare": 16.8,
+          "income": 20911.0,
+          "poverty": 8.4,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 137944.0,
+          "olderShare": 17.1,
+          "income": 21511.0,
+          "poverty": 9.9,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 137238.0,
+          "olderShare": 17.3,
+          "income": 21874.0,
+          "poverty": 11.0,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 136525.0,
+          "olderShare": 17.5,
+          "income": 22092.0,
+          "poverty": 11.9,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 136299.0,
+          "olderShare": 17.8,
+          "income": 22369.0,
+          "poverty": 12.8,
+          "jobs": 52405.0,
+          "industry": 11786.000000000002,
+          "information": 1148.0
+        },
+        {
+          "year": 2001,
+          "population": 136161.0,
+          "olderShare": 18.1,
+          "income": 23106.0,
+          "poverty": 13.0,
+          "jobs": 52599.0,
+          "industry": 12053.0,
+          "information": 1294.0
+        },
+        {
+          "year": 2002,
+          "population": 135840.0,
+          "olderShare": 18.4,
+          "income": 23595.0,
+          "poverty": 13.2,
+          "jobs": 52838.0,
+          "industry": 11866.0,
+          "information": 1364.0
+        },
+        {
+          "year": 2003,
+          "population": 135458.0,
+          "olderShare": 18.7,
+          "income": 24306.0,
+          "poverty": 13.8,
+          "jobs": 52415.0,
+          "industry": 11901.0,
+          "information": 1216.0
+        },
+        {
+          "year": 2004,
+          "population": 134962.0,
+          "olderShare": 19.2,
+          "income": 25187.0,
+          "poverty": 14.8,
+          "jobs": 53920.0,
+          "industry": 11574.0,
+          "information": 1277.0
+        },
+        {
+          "year": 2005,
+          "population": 134786.0,
+          "olderShare": 19.4,
+          "income": 25485.0,
+          "poverty": 15.4,
+          "jobs": 54342.0,
+          "industry": 11539.0,
+          "information": 1337.0
+        },
+        {
+          "year": 2006,
+          "population": 134441.0,
+          "olderShare": 20.1,
+          "income": 26135.0,
+          "poverty": 15.8,
+          "jobs": 54396.0,
+          "industry": 11206.0,
+          "information": 1223.0
+        },
+        {
+          "year": 2007,
+          "population": 133899.0,
+          "olderShare": 20.2,
+          "income": 27065.0,
+          "poverty": 16.2,
+          "jobs": 54774.0,
+          "industry": 10895.0,
+          "information": 1120.0
+        },
+        {
+          "year": 2008,
+          "population": 133647.0,
+          "olderShare": 20.5,
+          "income": 27303.0,
+          "poverty": 16.2,
+          "jobs": 57170.0,
+          "industry": 10652.0,
+          "information": 1252.0
+        },
+        {
+          "year": 2009,
+          "population": 133210.0,
+          "olderShare": 20.9,
+          "income": 27852.0,
+          "poverty": 16.3,
+          "jobs": 56195.0,
+          "industry": 9991.0,
+          "information": 1099.0
+        },
+        {
+          "year": 2010,
+          "population": 132899.0,
+          "olderShare": 21.4,
+          "income": 28203.0,
+          "poverty": 16.0,
+          "jobs": 54582.0,
+          "industry": 9253.0,
+          "information": 1043.0
+        },
+        {
+          "year": 2011,
+          "population": 132527.0,
+          "olderShare": 22.1,
+          "income": 28329.0,
+          "poverty": 16.2,
+          "jobs": 56890.0,
+          "industry": 9601.0,
+          "information": 1062.0
+        },
+        {
+          "year": 2012,
+          "population": 132355.0,
+          "olderShare": 22.9,
+          "income": 28531.0,
+          "poverty": 15.2,
+          "jobs": 54750.0,
+          "industry": 9236.0,
+          "information": 979.0
+        },
+        {
+          "year": 2013,
+          "population": 132252.0,
+          "olderShare": 23.6,
+          "income": 28496.0,
+          "poverty": 14.7,
+          "jobs": 54054.0,
+          "industry": 9315.0,
+          "information": 1115.0
+        },
+        {
+          "year": 2014,
+          "population": 131764.0,
+          "olderShare": 24.3,
+          "income": 28347.0,
+          "poverty": 14.5,
+          "jobs": 53601.0,
+          "industry": 8793.0,
+          "information": 1022.9999999999999
+        },
+        {
+          "year": 2015,
+          "population": 131155.0,
+          "olderShare": 25.0,
+          "income": 28443.0,
+          "poverty": 14.7,
+          "jobs": 52399.0,
+          "industry": 8248.000000000002,
+          "information": 1081.0
+        },
+        {
+          "year": 2016,
+          "population": 130506.0,
+          "olderShare": 25.5,
+          "income": 28512.0,
+          "poverty": 14.9,
+          "jobs": 52228.0,
+          "industry": 8465.0,
+          "information": 1050.0
+        },
+        {
+          "year": 2017,
+          "population": 129865.0,
+          "olderShare": 26.1,
+          "income": 28606.0,
+          "poverty": 15.4,
+          "jobs": 51676.0,
+          "industry": 8266.0,
+          "information": 1073.0
+        },
+        {
+          "year": 2018,
+          "population": 128756.0,
+          "olderShare": 26.8,
+          "income": 28970.0,
+          "poverty": 15.7,
+          "jobs": 52604.0,
+          "industry": 8553.0,
+          "information": 1053.0
+        },
+        {
+          "year": 2019,
+          "population": 127757.0,
+          "olderShare": 27.4,
+          "income": 29227.0,
+          "poverty": 16.1,
+          "jobs": 52082.0,
+          "industry": 8443.0,
+          "information": 986.0
+        },
+        {
+          "year": 2020,
+          "population": 126921.0,
+          "olderShare": 28.0,
+          "income": 29501.0,
+          "poverty": 15.4,
+          "jobs": 50581.0,
+          "industry": 8262.0,
+          "information": 1085.0
+        },
+        {
+          "year": 2021,
+          "population": 126107.0,
+          "olderShare": 28.5,
+          "income": 29659.0,
+          "poverty": 16.2,
+          "jobs": 51600.0,
+          "industry": 8276.0,
+          "information": 1161.0
+        },
+        {
+          "year": 2022,
+          "population": 125353.0,
+          "olderShare": 28.9,
+          "income": 28726.0,
+          "poverty": 16.7,
+          "jobs": 52728.0,
+          "industry": 8532.0,
+          "information": 1160.0
+        },
+        {
+          "year": 2023,
+          "population": 125162.0,
+          "olderShare": 29.1,
+          "income": 28312.0,
+          "poverty": 16.6,
+          "jobs": 52725.0,
+          "industry": 8664.0,
+          "information": 1289.0
+        },
+        {
+          "year": 2024,
+          "population": 125083.0,
+          "olderShare": 29.4,
+          "income": 28853.0,
+          "poverty": 17.6,
+          "jobs": 52190.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK11",
+      "name": "Pohjois-Savo",
+      "points": [
+        {
+          "year": 1990,
+          "population": 265040.0,
+          "olderShare": 14.1,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 266039.0,
+          "olderShare": 14.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 266853.0,
+          "olderShare": 14.6,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 266956.0,
+          "olderShare": 14.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 266870.0,
+          "olderShare": 15.1,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 266308.0,
+          "olderShare": 15.5,
+          "income": 19516.0,
+          "poverty": 9.5,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 265644.0,
+          "olderShare": 15.7,
+          "income": 19715.0,
+          "poverty": 10.7,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 264578.0,
+          "olderShare": 16.0,
+          "income": 20331.0,
+          "poverty": 12.0,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 262946.0,
+          "olderShare": 16.2,
+          "income": 20647.0,
+          "poverty": 13.4,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 261393.0,
+          "olderShare": 16.5,
+          "income": 21036.0,
+          "poverty": 14.4,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 259639.0,
+          "olderShare": 16.8,
+          "income": 21189.0,
+          "poverty": 15.6,
+          "jobs": 98036.0,
+          "industry": 16735.0,
+          "information": 2388.0
+        },
+        {
+          "year": 2001,
+          "population": 258664.0,
+          "olderShare": 17.0,
+          "income": 21766.0,
+          "poverty": 16.0,
+          "jobs": 99945.0,
+          "industry": 17280.0,
+          "information": 2479.0
+        },
+        {
+          "year": 2002,
+          "population": 257728.0,
+          "olderShare": 17.2,
+          "income": 22519.0,
+          "poverty": 15.8,
+          "jobs": 100103.0,
+          "industry": 16908.0,
+          "information": 2468.0
+        },
+        {
+          "year": 2003,
+          "population": 257079.0,
+          "olderShare": 17.6,
+          "income": 23166.0,
+          "poverty": 16.0,
+          "jobs": 101597.0,
+          "industry": 16555.0,
+          "information": 2203.0
+        },
+        {
+          "year": 2004,
+          "population": 256740.0,
+          "olderShare": 17.9,
+          "income": 24140.0,
+          "poverty": 16.9,
+          "jobs": 101741.0,
+          "industry": 16546.0,
+          "information": 2096.0
+        },
+        {
+          "year": 2005,
+          "population": 255683.0,
+          "olderShare": 18.1,
+          "income": 24581.0,
+          "poverty": 17.2,
+          "jobs": 104120.0,
+          "industry": 16724.0,
+          "information": 1898.0
+        },
+        {
+          "year": 2006,
+          "population": 255094.0,
+          "olderShare": 18.6,
+          "income": 25086.0,
+          "poverty": 17.8,
+          "jobs": 104720.0,
+          "industry": 16917.0,
+          "information": 1906.0
+        },
+        {
+          "year": 2007,
+          "population": 254367.0,
+          "olderShare": 18.7,
+          "income": 25930.0,
+          "poverty": 18.4,
+          "jobs": 106961.0,
+          "industry": 17127.0,
+          "information": 1999.0
+        },
+        {
+          "year": 2008,
+          "population": 253899.0,
+          "olderShare": 18.9,
+          "income": 26380.0,
+          "poverty": 18.1,
+          "jobs": 108833.0,
+          "industry": 17750.0,
+          "information": 1993.0
+        },
+        {
+          "year": 2009,
+          "population": 253605.0,
+          "olderShare": 19.2,
+          "income": 26959.0,
+          "poverty": 17.7,
+          "jobs": 106937.0,
+          "industry": 15033.0,
+          "information": 1952.0
+        },
+        {
+          "year": 2010,
+          "population": 253337.0,
+          "olderShare": 19.6,
+          "income": 27488.0,
+          "poverty": 17.0,
+          "jobs": 105104.0,
+          "industry": 14207.0,
+          "information": 2070.0
+        },
+        {
+          "year": 2011,
+          "population": 253472.0,
+          "olderShare": 20.3,
+          "income": 27574.0,
+          "poverty": 17.3,
+          "jobs": 107598.0,
+          "industry": 15234.0,
+          "information": 2079.0
+        },
+        {
+          "year": 2012,
+          "population": 253524.0,
+          "olderShare": 20.9,
+          "income": 27780.0,
+          "poverty": 16.2,
+          "jobs": 107523.0,
+          "industry": 15517.0,
+          "information": 1685.0
+        },
+        {
+          "year": 2013,
+          "population": 253643.0,
+          "olderShare": 21.5,
+          "income": 27777.0,
+          "poverty": 15.3,
+          "jobs": 105367.0,
+          "industry": 14200.0,
+          "information": 2040.0
+        },
+        {
+          "year": 2014,
+          "population": 253585.0,
+          "olderShare": 22.2,
+          "income": 27600.0,
+          "poverty": 15.1,
+          "jobs": 104405.0,
+          "industry": 13485.000000000002,
+          "information": 1899.0
+        },
+        {
+          "year": 2015,
+          "population": 253239.0,
+          "olderShare": 22.7,
+          "income": 27741.0,
+          "poverty": 14.9,
+          "jobs": 103612.0,
+          "industry": 13280.0,
+          "information": 1864.0
+        },
+        {
+          "year": 2016,
+          "population": 252815.0,
+          "olderShare": 23.3,
+          "income": 28083.0,
+          "poverty": 14.6,
+          "jobs": 103560.0,
+          "industry": 13407.0,
+          "information": 1880.0
+        },
+        {
+          "year": 2017,
+          "population": 251570.0,
+          "olderShare": 24.0,
+          "income": 28432.0,
+          "poverty": 14.9,
+          "jobs": 103240.0,
+          "industry": 13537.0,
+          "information": 2017.0
+        },
+        {
+          "year": 2018,
+          "population": 250414.0,
+          "olderShare": 24.6,
+          "income": 28842.0,
+          "poverty": 15.0,
+          "jobs": 106630.0,
+          "industry": 13796.999999999998,
+          "information": 1874.0
+        },
+        {
+          "year": 2019,
+          "population": 249003.0,
+          "olderShare": 25.3,
+          "income": 29208.0,
+          "poverty": 15.4,
+          "jobs": 108883.0,
+          "industry": 14019.0,
+          "information": 1912.0
+        },
+        {
+          "year": 2020,
+          "population": 248265.0,
+          "olderShare": 25.9,
+          "income": 29398.0,
+          "poverty": 14.4,
+          "jobs": 106241.0,
+          "industry": 13847.999999999998,
+          "information": 1906.0
+        },
+        {
+          "year": 2021,
+          "population": 248363.0,
+          "olderShare": 26.4,
+          "income": 29770.0,
+          "poverty": 14.9,
+          "jobs": 108896.0,
+          "industry": 13575.0,
+          "information": 2103.0
+        },
+        {
+          "year": 2022,
+          "population": 247689.0,
+          "olderShare": 26.8,
+          "income": 28885.0,
+          "poverty": 14.9,
+          "jobs": 112765.0,
+          "industry": 14270.999999999998,
+          "information": 2272.0
+        },
+        {
+          "year": 2023,
+          "population": 248190.0,
+          "olderShare": 27.1,
+          "income": 28468.0,
+          "poverty": 14.8,
+          "jobs": 112509.0,
+          "industry": 14077.0,
+          "information": 2421.0
+        },
+        {
+          "year": 2024,
+          "population": 248815.0,
+          "olderShare": 27.4,
+          "income": 29110.0,
+          "poverty": 15.4,
+          "jobs": 110793.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK12",
+      "name": "Pohjois-Karjala",
+      "points": [
+        {
+          "year": 1990,
+          "population": 182200.0,
+          "olderShare": 14.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 182707.0,
+          "olderShare": 14.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 183151.0,
+          "olderShare": 14.9,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 183293.0,
+          "olderShare": 15.1,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 183038.0,
+          "olderShare": 15.4,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 182336.0,
+          "olderShare": 15.8,
+          "income": 18882.0,
+          "poverty": 10.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 181160.0,
+          "olderShare": 16.1,
+          "income": 18905.0,
+          "poverty": 11.8,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 179977.0,
+          "olderShare": 16.3,
+          "income": 19363.0,
+          "poverty": 13.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 178441.0,
+          "olderShare": 16.5,
+          "income": 19605.0,
+          "poverty": 15.4,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 177238.0,
+          "olderShare": 16.8,
+          "income": 19898.0,
+          "poverty": 16.7,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 176187.0,
+          "olderShare": 17.0,
+          "income": 20145.0,
+          "poverty": 18.1,
+          "jobs": 65533.0,
+          "industry": 12242.0,
+          "information": 1264.0
+        },
+        {
+          "year": 2001,
+          "population": 175322.0,
+          "olderShare": 17.3,
+          "income": 20693.0,
+          "poverty": 18.6,
+          "jobs": 65521.0,
+          "industry": 12419.0,
+          "information": 1324.0
+        },
+        {
+          "year": 2002,
+          "population": 174236.0,
+          "olderShare": 17.5,
+          "income": 21274.0,
+          "poverty": 18.7,
+          "jobs": 66282.0,
+          "industry": 12623.999999999998,
+          "information": 1325.0
+        },
+        {
+          "year": 2003,
+          "population": 173580.0,
+          "olderShare": 17.9,
+          "income": 21911.0,
+          "poverty": 19.2,
+          "jobs": 66281.0,
+          "industry": 12358.0,
+          "information": 1279.0
+        },
+        {
+          "year": 2004,
+          "population": 173018.0,
+          "olderShare": 18.2,
+          "income": 22823.0,
+          "poverty": 19.8,
+          "jobs": 67952.0,
+          "industry": 12891.0,
+          "information": 1163.0
+        },
+        {
+          "year": 2005,
+          "population": 172633.0,
+          "olderShare": 18.3,
+          "income": 23403.0,
+          "poverty": 20.0,
+          "jobs": 66686.0,
+          "industry": 12710.0,
+          "information": 1275.0
+        },
+        {
+          "year": 2006,
+          "population": 171758.0,
+          "olderShare": 18.9,
+          "income": 23699.0,
+          "poverty": 21.2,
+          "jobs": 68304.0,
+          "industry": 12650.0,
+          "information": 1328.0
+        },
+        {
+          "year": 2007,
+          "population": 170896.0,
+          "olderShare": 19.0,
+          "income": 24458.0,
+          "poverty": 22.2,
+          "jobs": 68614.0,
+          "industry": 11857.000000000002,
+          "information": 1050.0
+        },
+        {
+          "year": 2008,
+          "population": 170194.0,
+          "olderShare": 19.3,
+          "income": 24727.0,
+          "poverty": 21.9,
+          "jobs": 68779.0,
+          "industry": 11955.0,
+          "information": 1161.0
+        },
+        {
+          "year": 2009,
+          "population": 169937.0,
+          "olderShare": 19.6,
+          "income": 25322.0,
+          "poverty": 21.4,
+          "jobs": 68299.0,
+          "industry": 10436.0,
+          "information": 1178.0
+        },
+        {
+          "year": 2010,
+          "population": 169778.0,
+          "olderShare": 20.2,
+          "income": 26014.0,
+          "poverty": 20.5,
+          "jobs": 68635.0,
+          "industry": 10402.0,
+          "information": 1287.0
+        },
+        {
+          "year": 2011,
+          "population": 169733.0,
+          "olderShare": 20.8,
+          "income": 25996.0,
+          "poverty": 20.8,
+          "jobs": 70616.0,
+          "industry": 11277.999999999998,
+          "information": 1251.0
+        },
+        {
+          "year": 2012,
+          "population": 169496.0,
+          "olderShare": 21.5,
+          "income": 26120.0,
+          "poverty": 19.7,
+          "jobs": 69628.0,
+          "industry": 10940.0,
+          "information": 1378.0
+        },
+        {
+          "year": 2013,
+          "population": 169112.0,
+          "olderShare": 22.3,
+          "income": 26200.0,
+          "poverty": 18.7,
+          "jobs": 66637.0,
+          "industry": 10315.0,
+          "information": 1300.0
+        },
+        {
+          "year": 2014,
+          "population": 168896.0,
+          "olderShare": 23.0,
+          "income": 26144.0,
+          "poverty": 18.4,
+          "jobs": 66667.0,
+          "industry": 10298.0,
+          "information": 1294.0
+        },
+        {
+          "year": 2015,
+          "population": 168329.0,
+          "olderShare": 23.7,
+          "income": 26371.0,
+          "poverty": 17.8,
+          "jobs": 66779.0,
+          "industry": 10263.0,
+          "information": 1293.0
+        },
+        {
+          "year": 2016,
+          "population": 167599.0,
+          "olderShare": 24.3,
+          "income": 26636.0,
+          "poverty": 17.8,
+          "jobs": 65673.0,
+          "industry": 10270.999999999998,
+          "information": 1270.0
+        },
+        {
+          "year": 2017,
+          "population": 166441.0,
+          "olderShare": 25.1,
+          "income": 26909.0,
+          "poverty": 18.1,
+          "jobs": 66271.0,
+          "industry": 10366.0,
+          "information": 1261.0
+        },
+        {
+          "year": 2018,
+          "population": 165569.0,
+          "olderShare": 25.8,
+          "income": 27310.0,
+          "poverty": 18.5,
+          "jobs": 67103.0,
+          "industry": 10641.0,
+          "information": 1284.0
+        },
+        {
+          "year": 2019,
+          "population": 164465.0,
+          "olderShare": 26.5,
+          "income": 27564.0,
+          "poverty": 18.8,
+          "jobs": 67281.0,
+          "industry": 10902.000000000002,
+          "information": 1171.0
+        },
+        {
+          "year": 2020,
+          "population": 163537.0,
+          "olderShare": 27.3,
+          "income": 27728.0,
+          "poverty": 17.8,
+          "jobs": 64611.00000000001,
+          "industry": 10469.0,
+          "information": 1365.0
+        },
+        {
+          "year": 2021,
+          "population": 163281.0,
+          "olderShare": 27.9,
+          "income": 28046.0,
+          "poverty": 18.4,
+          "jobs": 65832.0,
+          "industry": 10586.0,
+          "information": 1416.0
+        },
+        {
+          "year": 2022,
+          "population": 162540.0,
+          "olderShare": 28.4,
+          "income": 27159.0,
+          "poverty": 18.6,
+          "jobs": 66933.0,
+          "industry": 10780.0,
+          "information": 1523.0
+        },
+        {
+          "year": 2023,
+          "population": 162321.0,
+          "olderShare": 28.8,
+          "income": 26852.0,
+          "poverty": 18.3,
+          "jobs": 67698.0,
+          "industry": 10530.000000000002,
+          "information": 1565.0
+        },
+        {
+          "year": 2024,
+          "population": 162091.0,
+          "olderShare": 29.2,
+          "income": 27558.0,
+          "poverty": 19.0,
+          "jobs": 66294.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK13",
+      "name": "Keski-Suomi",
+      "points": [
+        {
+          "year": 1990,
+          "population": 254539.0,
+          "olderShare": 13.6,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 256480.0,
+          "olderShare": 13.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 257719.0,
+          "olderShare": 14.0,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 258485.0,
+          "olderShare": 14.2,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 259392.0,
+          "olderShare": 14.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 259778.0,
+          "olderShare": 14.7,
+          "income": 19686.0,
+          "poverty": 9.2,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 260835.0,
+          "olderShare": 14.9,
+          "income": 19952.0,
+          "poverty": 10.3,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 261559.0,
+          "olderShare": 15.1,
+          "income": 20655.0,
+          "poverty": 11.4,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 261754.0,
+          "olderShare": 15.2,
+          "income": 21022.0,
+          "poverty": 12.7,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 262106.0,
+          "olderShare": 15.4,
+          "income": 21412.0,
+          "poverty": 13.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 262710.0,
+          "olderShare": 15.6,
+          "income": 21661.0,
+          "poverty": 14.4,
+          "jobs": 103150.0,
+          "industry": 22530.0,
+          "information": 3377.0
+        },
+        {
+          "year": 2001,
+          "population": 263574.0,
+          "olderShare": 15.7,
+          "income": 22256.0,
+          "poverty": 14.8,
+          "jobs": 104187.0,
+          "industry": 23093.0,
+          "information": 3491.0
+        },
+        {
+          "year": 2002,
+          "population": 263889.0,
+          "olderShare": 15.9,
+          "income": 22823.0,
+          "poverty": 14.8,
+          "jobs": 105509.0,
+          "industry": 22600.0,
+          "information": 3578.0
+        },
+        {
+          "year": 2003,
+          "population": 264936.0,
+          "olderShare": 16.1,
+          "income": 23437.0,
+          "poverty": 15.3,
+          "jobs": 106098.0,
+          "industry": 21797.0,
+          "information": 3267.0
+        },
+        {
+          "year": 2004,
+          "population": 266047.0,
+          "olderShare": 16.4,
+          "income": 24445.0,
+          "poverty": 16.4,
+          "jobs": 107835.0,
+          "industry": 21201.0,
+          "information": 3464.0
+        },
+        {
+          "year": 2005,
+          "population": 266770.0,
+          "olderShare": 16.6,
+          "income": 24887.0,
+          "poverty": 16.6,
+          "jobs": 108355.0,
+          "industry": 21554.000000000004,
+          "information": 3476.0
+        },
+        {
+          "year": 2006,
+          "population": 266905.0,
+          "olderShare": 17.1,
+          "income": 25362.0,
+          "poverty": 17.2,
+          "jobs": 111936.0,
+          "industry": 22238.0,
+          "information": 3421.0
+        },
+        {
+          "year": 2007,
+          "population": 267998.0,
+          "olderShare": 17.2,
+          "income": 26256.0,
+          "poverty": 17.7,
+          "jobs": 114310.0,
+          "industry": 22314.999999999996,
+          "information": 3323.0
+        },
+        {
+          "year": 2008,
+          "population": 269108.0,
+          "olderShare": 17.4,
+          "income": 26597.0,
+          "poverty": 17.6,
+          "jobs": 115127.0,
+          "industry": 22585.0,
+          "information": 3578.0
+        },
+        {
+          "year": 2009,
+          "population": 270195.0,
+          "olderShare": 17.6,
+          "income": 27185.0,
+          "poverty": 17.6,
+          "jobs": 114147.0,
+          "industry": 20000.0,
+          "information": 3716.0
+        },
+        {
+          "year": 2010,
+          "population": 271083.0,
+          "olderShare": 18.0,
+          "income": 27625.0,
+          "poverty": 16.9,
+          "jobs": 111237.0,
+          "industry": 18870.0,
+          "information": 3779.0
+        },
+        {
+          "year": 2011,
+          "population": 271874.0,
+          "olderShare": 18.6,
+          "income": 27594.0,
+          "poverty": 17.0,
+          "jobs": 115554.0,
+          "industry": 19857.0,
+          "information": 3664.0
+        },
+        {
+          "year": 2012,
+          "population": 272723.0,
+          "olderShare": 19.3,
+          "income": 27589.0,
+          "poverty": 16.3,
+          "jobs": 116443.0,
+          "industry": 19331.0,
+          "information": 3688.0
+        },
+        {
+          "year": 2013,
+          "population": 272911.0,
+          "olderShare": 20.0,
+          "income": 27401.0,
+          "poverty": 16.0,
+          "jobs": 112224.0,
+          "industry": 18196.0,
+          "information": 3572.0
+        },
+        {
+          "year": 2014,
+          "population": 272986.0,
+          "olderShare": 20.6,
+          "income": 27376.0,
+          "poverty": 15.8,
+          "jobs": 111175.0,
+          "industry": 17490.000000000004,
+          "information": 3657.0
+        },
+        {
+          "year": 2015,
+          "population": 273446.0,
+          "olderShare": 21.2,
+          "income": 27617.0,
+          "poverty": 15.6,
+          "jobs": 110618.0,
+          "industry": 16829.0,
+          "information": 3766.0
+        },
+        {
+          "year": 2016,
+          "population": 273910.0,
+          "olderShare": 21.6,
+          "income": 28097.0,
+          "poverty": 15.4,
+          "jobs": 111650.0,
+          "industry": 17206.0,
+          "information": 3828.0
+        },
+        {
+          "year": 2017,
+          "population": 273779.0,
+          "olderShare": 22.2,
+          "income": 28398.0,
+          "poverty": 15.7,
+          "jobs": 111753.0,
+          "industry": 17218.999999999996,
+          "information": 4067.0
+        },
+        {
+          "year": 2018,
+          "population": 273283.0,
+          "olderShare": 22.6,
+          "income": 28688.0,
+          "poverty": 16.1,
+          "jobs": 114375.0,
+          "industry": 17317.0,
+          "information": 4130.0
+        },
+        {
+          "year": 2019,
+          "population": 272898.0,
+          "olderShare": 23.2,
+          "income": 28973.0,
+          "poverty": 16.5,
+          "jobs": 115542.0,
+          "industry": 17375.0,
+          "information": 4215.0
+        },
+        {
+          "year": 2020,
+          "population": 272617.0,
+          "olderShare": 23.7,
+          "income": 29144.0,
+          "poverty": 15.8,
+          "jobs": 112491.0,
+          "industry": 16711.0,
+          "information": 4256.0
+        },
+        {
+          "year": 2021,
+          "population": 272683.0,
+          "olderShare": 24.1,
+          "income": 29461.0,
+          "poverty": 16.3,
+          "jobs": 114882.0,
+          "industry": 16660.0,
+          "information": 4525.0
+        },
+        {
+          "year": 2022,
+          "population": 272437.0,
+          "olderShare": 24.4,
+          "income": 28559.0,
+          "poverty": 16.5,
+          "jobs": 118261.0,
+          "industry": 16426.000000000004,
+          "information": 4805.0
+        },
+        {
+          "year": 2023,
+          "population": 273271.0,
+          "olderShare": 24.6,
+          "income": 28113.0,
+          "poverty": 16.7,
+          "jobs": 119063.0,
+          "industry": 16641.0,
+          "information": 4666.0
+        },
+        {
+          "year": 2024,
+          "population": 274112.0,
+          "olderShare": 25.0,
+          "income": 28643.0,
+          "poverty": 17.3,
+          "jobs": 116346.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK14",
+      "name": "Etelä-Pohjanmaa",
+      "points": [
+        {
+          "year": 1990,
+          "population": 207010.0,
+          "olderShare": 15.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 207348.0,
+          "olderShare": 15.7,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 207742.0,
+          "olderShare": 15.9,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 207862.0,
+          "olderShare": 16.1,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 207514.0,
+          "olderShare": 16.4,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 206136.0,
+          "olderShare": 16.6,
+          "income": 19177.0,
+          "poverty": 9.0,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 205108.0,
+          "olderShare": 16.9,
+          "income": 19343.0,
+          "poverty": 10.2,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 203907.0,
+          "olderShare": 17.2,
+          "income": 20121.0,
+          "poverty": 11.2,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 202935.0,
+          "olderShare": 17.3,
+          "income": 20533.0,
+          "poverty": 12.3,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 202002.0,
+          "olderShare": 17.5,
+          "income": 21002.0,
+          "poverty": 13.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 200766.0,
+          "olderShare": 17.7,
+          "income": 21337.0,
+          "poverty": 13.9,
+          "jobs": 82378.0,
+          "industry": 17098.0,
+          "information": 859.0
+        },
+        {
+          "year": 2001,
+          "population": 199639.0,
+          "olderShare": 18.0,
+          "income": 21991.0,
+          "poverty": 14.1,
+          "jobs": 81595.0,
+          "industry": 16822.0,
+          "information": 926.0
+        },
+        {
+          "year": 2002,
+          "population": 199190.0,
+          "olderShare": 18.1,
+          "income": 22666.0,
+          "poverty": 13.7,
+          "jobs": 81782.0,
+          "industry": 16504.0,
+          "information": 890.0
+        },
+        {
+          "year": 2003,
+          "population": 199019.0,
+          "olderShare": 18.3,
+          "income": 23327.0,
+          "poverty": 14.3,
+          "jobs": 84043.0,
+          "industry": 16931.0,
+          "information": 936.0
+        },
+        {
+          "year": 2004,
+          "population": 199150.0,
+          "olderShare": 18.6,
+          "income": 24358.0,
+          "poverty": 14.8,
+          "jobs": 84871.0,
+          "industry": 16613.0,
+          "information": 929.0
+        },
+        {
+          "year": 2005,
+          "population": 198856.0,
+          "olderShare": 18.7,
+          "income": 24881.0,
+          "poverty": 15.0,
+          "jobs": 85596.0,
+          "industry": 16769.0,
+          "information": 986.0
+        },
+        {
+          "year": 2006,
+          "population": 198626.0,
+          "olderShare": 19.1,
+          "income": 25503.0,
+          "poverty": 15.5,
+          "jobs": 87004.0,
+          "industry": 17452.0,
+          "information": 1089.0
+        },
+        {
+          "year": 2007,
+          "population": 198831.0,
+          "olderShare": 19.0,
+          "income": 26382.0,
+          "poverty": 16.1,
+          "jobs": 88693.0,
+          "industry": 18256.999999999996,
+          "information": 1066.0
+        },
+        {
+          "year": 2008,
+          "population": 198502.0,
+          "olderShare": 19.2,
+          "income": 26805.0,
+          "poverty": 15.8,
+          "jobs": 90350.0,
+          "industry": 19045.0,
+          "information": 1049.0
+        },
+        {
+          "year": 2009,
+          "population": 198477.0,
+          "olderShare": 19.4,
+          "income": 27178.0,
+          "poverty": 15.4,
+          "jobs": 89424.0,
+          "industry": 17621.000000000004,
+          "information": 1142.0
+        },
+        {
+          "year": 2010,
+          "population": 198469.0,
+          "olderShare": 19.8,
+          "income": 27729.0,
+          "poverty": 14.7,
+          "jobs": 89080.0,
+          "industry": 17014.0,
+          "information": 1204.0
+        },
+        {
+          "year": 2011,
+          "population": 198671.0,
+          "olderShare": 20.3,
+          "income": 27841.0,
+          "poverty": 14.9,
+          "jobs": 90823.0,
+          "industry": 17273.0,
+          "information": 1230.0
+        },
+        {
+          "year": 2012,
+          "population": 198944.0,
+          "olderShare": 20.9,
+          "income": 27876.0,
+          "poverty": 14.0,
+          "jobs": 91307.0,
+          "industry": 17430.0,
+          "information": 1052.0
+        },
+        {
+          "year": 2013,
+          "population": 198831.0,
+          "olderShare": 21.6,
+          "income": 27773.0,
+          "poverty": 13.6,
+          "jobs": 88440.0,
+          "industry": 16512.999999999996,
+          "information": 1097.0
+        },
+        {
+          "year": 2014,
+          "population": 198242.0,
+          "olderShare": 22.3,
+          "income": 27608.0,
+          "poverty": 13.1,
+          "jobs": 88269.0,
+          "industry": 16393.0,
+          "information": 1109.0
+        },
+        {
+          "year": 2015,
+          "population": 197371.0,
+          "olderShare": 22.9,
+          "income": 27744.0,
+          "poverty": 13.0,
+          "jobs": 87474.0,
+          "industry": 15904.0,
+          "information": 1035.0
+        },
+        {
+          "year": 2016,
+          "population": 196572.0,
+          "olderShare": 23.5,
+          "income": 28047.0,
+          "poverty": 13.0,
+          "jobs": 87558.0,
+          "industry": 15710.0,
+          "information": 963.0
+        },
+        {
+          "year": 2017,
+          "population": 195583.0,
+          "olderShare": 24.1,
+          "income": 28390.0,
+          "poverty": 13.5,
+          "jobs": 87719.0,
+          "industry": 15902.000000000002,
+          "information": 1016.0
+        },
+        {
+          "year": 2018,
+          "population": 194316.0,
+          "olderShare": 24.7,
+          "income": 28714.0,
+          "poverty": 13.8,
+          "jobs": 88785.0,
+          "industry": 16161.999999999998,
+          "information": 890.0
+        },
+        {
+          "year": 2019,
+          "population": 193207.0,
+          "olderShare": 25.4,
+          "income": 29166.0,
+          "poverty": 14.1,
+          "jobs": 89008.0,
+          "industry": 15889.0,
+          "information": 835.0
+        },
+        {
+          "year": 2020,
+          "population": 192150.0,
+          "olderShare": 26.0,
+          "income": 29429.0,
+          "poverty": 12.9,
+          "jobs": 87126.0,
+          "industry": 15735.000000000002,
+          "information": 851.0
+        },
+        {
+          "year": 2021,
+          "population": 191762.0,
+          "olderShare": 26.6,
+          "income": 29760.0,
+          "poverty": 13.3,
+          "jobs": 88645.0,
+          "industry": 15874.0,
+          "information": 893.0
+        },
+        {
+          "year": 2022,
+          "population": 190774.0,
+          "olderShare": 26.8,
+          "income": 28985.0,
+          "poverty": 13.4,
+          "jobs": 89564.0,
+          "industry": 16218.0,
+          "information": 916.0
+        },
+        {
+          "year": 2023,
+          "population": 190539.0,
+          "olderShare": 27.0,
+          "income": 28424.0,
+          "poverty": 13.4,
+          "jobs": 89491.0,
+          "industry": 16120.000000000002,
+          "information": 909.0
+        },
+        {
+          "year": 2024,
+          "population": 189929.0,
+          "olderShare": 27.4,
+          "income": 29061.0,
+          "poverty": 13.7,
+          "jobs": 87701.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK15",
+      "name": "Pohjanmaa",
+      "points": [
+        {
+          "year": 1990,
+          "population": 167108.0,
+          "olderShare": 16.0,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 167807.0,
+          "olderShare": 16.2,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 168379.0,
+          "olderShare": 16.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 168698.0,
+          "olderShare": 16.4,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 168833.0,
+          "olderShare": 16.6,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 168888.0,
+          "olderShare": 16.7,
+          "income": 20638.0,
+          "poverty": 7.3,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 169019.0,
+          "olderShare": 16.7,
+          "income": 21053.0,
+          "poverty": 8.0,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 168964.0,
+          "olderShare": 16.9,
+          "income": 21737.0,
+          "poverty": 8.8,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 168867.0,
+          "olderShare": 17.0,
+          "income": 22245.0,
+          "poverty": 9.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 168326.0,
+          "olderShare": 17.1,
+          "income": 22530.0,
+          "poverty": 10.3,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 168077.0,
+          "olderShare": 17.2,
+          "income": 22953.0,
+          "poverty": 10.7,
+          "jobs": 75407.0,
+          "industry": 18868.0,
+          "information": 2294.0
+        },
+        {
+          "year": 2001,
+          "population": 167986.0,
+          "olderShare": 17.3,
+          "income": 23759.0,
+          "poverty": 10.6,
+          "jobs": 76102.0,
+          "industry": 19282.0,
+          "information": 2443.0
+        },
+        {
+          "year": 2002,
+          "population": 167921.0,
+          "olderShare": 17.5,
+          "income": 24367.0,
+          "poverty": 10.6,
+          "jobs": 76958.0,
+          "industry": 18990.0,
+          "information": 2610.0
+        },
+        {
+          "year": 2003,
+          "population": 168046.0,
+          "olderShare": 17.7,
+          "income": 24918.0,
+          "poverty": 11.2,
+          "jobs": 77526.0,
+          "industry": 18291.0,
+          "information": 1954.0
+        },
+        {
+          "year": 2004,
+          "population": 168361.0,
+          "olderShare": 17.9,
+          "income": 26005.0,
+          "poverty": 11.9,
+          "jobs": 76020.0,
+          "industry": 18714.000000000004,
+          "information": 2036.0
+        },
+        {
+          "year": 2005,
+          "population": 168583.0,
+          "olderShare": 17.9,
+          "income": 26462.0,
+          "poverty": 12.4,
+          "jobs": 79634.0,
+          "industry": 18941.0,
+          "information": 2023.0000000000002
+        },
+        {
+          "year": 2006,
+          "population": 169170.0,
+          "olderShare": 18.3,
+          "income": 27175.0,
+          "poverty": 12.8,
+          "jobs": 80067.0,
+          "industry": 19667.0,
+          "information": 2071.0
+        },
+        {
+          "year": 2007,
+          "population": 169971.0,
+          "olderShare": 18.3,
+          "income": 28084.0,
+          "poverty": 12.8,
+          "jobs": 82973.0,
+          "industry": 21332.0,
+          "information": 2229.0
+        },
+        {
+          "year": 2008,
+          "population": 170994.0,
+          "olderShare": 18.4,
+          "income": 28669.0,
+          "poverty": 12.5,
+          "jobs": 85901.0,
+          "industry": 22201.0,
+          "information": 2287.0
+        },
+        {
+          "year": 2009,
+          "population": 172085.0,
+          "olderShare": 18.6,
+          "income": 29022.0,
+          "poverty": 12.4,
+          "jobs": 82575.0,
+          "industry": 20174.0,
+          "information": 2277.0
+        },
+        {
+          "year": 2010,
+          "population": 172981.0,
+          "olderShare": 19.1,
+          "income": 29499.0,
+          "poverty": 12.3,
+          "jobs": 83973.0,
+          "industry": 19546.0,
+          "information": 2043.0000000000002
+        },
+        {
+          "year": 2011,
+          "population": 174170.0,
+          "olderShare": 19.6,
+          "income": 29612.0,
+          "poverty": 12.5,
+          "jobs": 85402.0,
+          "industry": 20276.0,
+          "information": 2001.9999999999998
+        },
+        {
+          "year": 2012,
+          "population": 174777.0,
+          "olderShare": 20.1,
+          "income": 29711.0,
+          "poverty": 11.7,
+          "jobs": 85827.0,
+          "industry": 20515.0,
+          "information": 2009.9999999999998
+        },
+        {
+          "year": 2013,
+          "population": 175530.0,
+          "olderShare": 20.5,
+          "income": 29749.0,
+          "poverty": 11.3,
+          "jobs": 85234.0,
+          "industry": 20584.0,
+          "information": 2020.0
+        },
+        {
+          "year": 2014,
+          "population": 176314.0,
+          "olderShare": 21.0,
+          "income": 29561.0,
+          "poverty": 11.5,
+          "jobs": 85109.0,
+          "industry": 20061.0,
+          "information": 2127.0
+        },
+        {
+          "year": 2015,
+          "population": 176894.0,
+          "olderShare": 21.4,
+          "income": 29606.0,
+          "poverty": 11.4,
+          "jobs": 84969.0,
+          "industry": 19815.0,
+          "information": 2194.0
+        },
+        {
+          "year": 2016,
+          "population": 176729.0,
+          "olderShare": 21.8,
+          "income": 29721.0,
+          "poverty": 11.6,
+          "jobs": 84151.0,
+          "industry": 19085.0,
+          "information": 2057.0
+        },
+        {
+          "year": 2017,
+          "population": 176272.0,
+          "olderShare": 22.2,
+          "income": 29992.0,
+          "poverty": 11.9,
+          "jobs": 83656.0,
+          "industry": 19081.0,
+          "information": 2109.0
+        },
+        {
+          "year": 2018,
+          "population": 176193.0,
+          "olderShare": 22.6,
+          "income": 30256.0,
+          "poverty": 12.1,
+          "jobs": 85259.0,
+          "industry": 19970.0,
+          "information": 1957.0
+        },
+        {
+          "year": 2019,
+          "population": 175923.0,
+          "olderShare": 23.0,
+          "income": 30656.0,
+          "poverty": 12.4,
+          "jobs": 85266.0,
+          "industry": 20119.0,
+          "information": 1864.0
+        },
+        {
+          "year": 2020,
+          "population": 175816.0,
+          "olderShare": 23.4,
+          "income": 30653.0,
+          "poverty": 11.6,
+          "jobs": 83534.0,
+          "industry": 19517.0,
+          "information": 1888.0
+        },
+        {
+          "year": 2021,
+          "population": 176041.0,
+          "olderShare": 23.6,
+          "income": 30958.0,
+          "poverty": 12.2,
+          "jobs": 84999.0,
+          "industry": 19816.000000000004,
+          "information": 1977.0
+        },
+        {
+          "year": 2022,
+          "population": 176323.0,
+          "olderShare": 23.7,
+          "income": 30053.0,
+          "poverty": 12.4,
+          "jobs": 86876.0,
+          "industry": 20576.0,
+          "information": 2074.0
+        },
+        {
+          "year": 2023,
+          "population": 177602.0,
+          "olderShare": 23.6,
+          "income": 29484.0,
+          "poverty": 12.5,
+          "jobs": 87781.0,
+          "industry": 20890.0,
+          "information": 2171.0
+        },
+        {
+          "year": 2024,
+          "population": 178749.0,
+          "olderShare": 23.7,
+          "income": 30141.0,
+          "poverty": 13.1,
+          "jobs": 87520.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK16",
+      "name": "Keski-Pohjanmaa",
+      "points": [
+        {
+          "year": 1990,
+          "population": 68214.0,
+          "olderShare": 12.4,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 68503.0,
+          "olderShare": 12.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 68887.0,
+          "olderShare": 12.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 69315.0,
+          "olderShare": 13.1,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 69627.0,
+          "olderShare": 13.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 69539.0,
+          "olderShare": 13.6,
+          "income": 19429.0,
+          "poverty": 7.7,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 69213.0,
+          "olderShare": 13.9,
+          "income": 19696.0,
+          "poverty": 9.2,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 69021.0,
+          "olderShare": 14.2,
+          "income": 20261.0,
+          "poverty": 10.5,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 68773.0,
+          "olderShare": 14.4,
+          "income": 20512.0,
+          "poverty": 11.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 68345.0,
+          "olderShare": 14.7,
+          "income": 21013.0,
+          "poverty": 12.5,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 68052.0,
+          "olderShare": 15.0,
+          "income": 21271.0,
+          "poverty": 12.9,
+          "jobs": 27719.0,
+          "industry": 4664.0,
+          "information": 515.0
+        },
+        {
+          "year": 2001,
+          "population": 67671.0,
+          "olderShare": 15.3,
+          "income": 21990.0,
+          "poverty": 13.0,
+          "jobs": 27891.0,
+          "industry": 4752.0,
+          "information": 590.0
+        },
+        {
+          "year": 2002,
+          "population": 67497.0,
+          "olderShare": 15.5,
+          "income": 22689.0,
+          "poverty": 12.9,
+          "jobs": 28173.0,
+          "industry": 4869.0,
+          "information": 640.0
+        },
+        {
+          "year": 2003,
+          "population": 67441.0,
+          "olderShare": 15.7,
+          "income": 23522.0,
+          "poverty": 13.0,
+          "jobs": 28478.0,
+          "industry": 5124.000000000001,
+          "information": 661.0
+        },
+        {
+          "year": 2004,
+          "population": 67369.0,
+          "olderShare": 16.1,
+          "income": 24590.0,
+          "poverty": 13.6,
+          "jobs": 28853.0,
+          "industry": 5234.0,
+          "information": 607.0
+        },
+        {
+          "year": 2005,
+          "population": 67612.0,
+          "olderShare": 16.3,
+          "income": 25109.0,
+          "poverty": 13.8,
+          "jobs": 28038.0,
+          "industry": 4839.0,
+          "information": 594.0
+        },
+        {
+          "year": 2006,
+          "population": 67632.0,
+          "olderShare": 16.9,
+          "income": 25991.0,
+          "poverty": 13.9,
+          "jobs": 29212.0,
+          "industry": 4987.0,
+          "information": 627.0
+        },
+        {
+          "year": 2007,
+          "population": 67898.0,
+          "olderShare": 16.9,
+          "income": 26750.0,
+          "poverty": 14.3,
+          "jobs": 29863.0,
+          "industry": 4882.000000000001,
+          "information": 568.0
+        },
+        {
+          "year": 2008,
+          "population": 67991.0,
+          "olderShare": 17.1,
+          "income": 27091.0,
+          "poverty": 14.3,
+          "jobs": 30903.0,
+          "industry": 5443.000000000001,
+          "information": 665.0
+        },
+        {
+          "year": 2009,
+          "population": 68131.0,
+          "olderShare": 17.4,
+          "income": 27512.0,
+          "poverty": 14.6,
+          "jobs": 30279.0,
+          "industry": 5002.0,
+          "information": 580.0
+        },
+        {
+          "year": 2010,
+          "population": 68321.0,
+          "olderShare": 17.9,
+          "income": 28239.0,
+          "poverty": 13.3,
+          "jobs": 30773.0,
+          "industry": 4822.0,
+          "information": 685.0
+        },
+        {
+          "year": 2011,
+          "population": 68484.0,
+          "olderShare": 18.5,
+          "income": 28347.0,
+          "poverty": 13.4,
+          "jobs": 31535.0,
+          "industry": 5289.000000000001,
+          "information": 656.0
+        },
+        {
+          "year": 2012,
+          "population": 68610.0,
+          "olderShare": 19.2,
+          "income": 28449.0,
+          "poverty": 12.7,
+          "jobs": 31246.0,
+          "industry": 5171.0,
+          "information": 691.0
+        },
+        {
+          "year": 2013,
+          "population": 68677.0,
+          "olderShare": 19.9,
+          "income": 28196.0,
+          "poverty": 12.2,
+          "jobs": 30745.0,
+          "industry": 5083.0,
+          "information": 615.0
+        },
+        {
+          "year": 2014,
+          "population": 68832.0,
+          "olderShare": 20.6,
+          "income": 28330.0,
+          "poverty": 11.5,
+          "jobs": 30924.0,
+          "industry": 4841.0,
+          "information": 650.0
+        },
+        {
+          "year": 2015,
+          "population": 69032.0,
+          "olderShare": 21.1,
+          "income": 28221.0,
+          "poverty": 12.1,
+          "jobs": 31167.0,
+          "industry": 4916.0,
+          "information": 688.0
+        },
+        {
+          "year": 2016,
+          "population": 69027.0,
+          "olderShare": 21.6,
+          "income": 28356.0,
+          "poverty": 12.0,
+          "jobs": 30659.0,
+          "industry": 4901.0,
+          "information": 588.0
+        },
+        {
+          "year": 2017,
+          "population": 68780.0,
+          "olderShare": 22.2,
+          "income": 28555.0,
+          "poverty": 12.3,
+          "jobs": 30096.0,
+          "industry": 4912.0,
+          "information": 599.0
+        },
+        {
+          "year": 2018,
+          "population": 68437.0,
+          "olderShare": 22.8,
+          "income": 28921.0,
+          "poverty": 12.6,
+          "jobs": 30534.0,
+          "industry": 4906.000000000001,
+          "information": 635.0
+        },
+        {
+          "year": 2019,
+          "population": 68158.0,
+          "olderShare": 23.4,
+          "income": 29302.0,
+          "poverty": 12.7,
+          "jobs": 31331.0,
+          "industry": 4983.000000000001,
+          "information": 648.0
+        },
+        {
+          "year": 2020,
+          "population": 67988.0,
+          "olderShare": 23.8,
+          "income": 29522.0,
+          "poverty": 11.8,
+          "jobs": 30507.0,
+          "industry": 4892.0,
+          "information": 627.0
+        },
+        {
+          "year": 2021,
+          "population": 67915.0,
+          "olderShare": 24.3,
+          "income": 29888.0,
+          "poverty": 12.2,
+          "jobs": 30424.0,
+          "industry": 4887.0,
+          "information": 730.0
+        },
+        {
+          "year": 2022,
+          "population": 67805.0,
+          "olderShare": 24.7,
+          "income": 28932.0,
+          "poverty": 12.1,
+          "jobs": 30776.0,
+          "industry": 5104.0,
+          "information": 687.0
+        },
+        {
+          "year": 2023,
+          "population": 67736.0,
+          "olderShare": 24.7,
+          "income": 28449.0,
+          "poverty": 12.2,
+          "jobs": 30943.0,
+          "industry": 5142.0,
+          "information": 658.0
+        },
+        {
+          "year": 2024,
+          "population": 67723.0,
+          "olderShare": 25.0,
+          "income": 29202.0,
+          "poverty": 12.2,
+          "jobs": 31153.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK17",
+      "name": "Pohjois-Pohjanmaa",
+      "points": [
+        {
+          "year": 1990,
+          "population": 350799.0,
+          "olderShare": 11.1,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 354088.0,
+          "olderShare": 11.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 357072.0,
+          "olderShare": 11.4,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 359433.0,
+          "olderShare": 11.6,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 361751.0,
+          "olderShare": 11.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 364443.0,
+          "olderShare": 12.0,
+          "income": 19660.0,
+          "poverty": 7.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 366218.0,
+          "olderShare": 12.2,
+          "income": 19890.0,
+          "poverty": 8.7,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 367361.0,
+          "olderShare": 12.4,
+          "income": 20541.0,
+          "poverty": 9.8,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 368302.0,
+          "olderShare": 12.5,
+          "income": 20850.0,
+          "poverty": 11.2,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 369827.0,
+          "olderShare": 12.6,
+          "income": 21299.0,
+          "poverty": 11.9,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 372639.0,
+          "olderShare": 12.8,
+          "income": 21667.0,
+          "poverty": 12.6,
+          "jobs": 150582.0,
+          "industry": 32000.999999999996,
+          "information": 3778.0
+        },
+        {
+          "year": 2001,
+          "population": 375182.0,
+          "olderShare": 12.9,
+          "income": 22382.0,
+          "poverty": 12.9,
+          "jobs": 153136.0,
+          "industry": 31959.0,
+          "information": 4411.0
+        },
+        {
+          "year": 2002,
+          "population": 377045.0,
+          "olderShare": 13.0,
+          "income": 22937.0,
+          "poverty": 13.1,
+          "jobs": 156164.0,
+          "industry": 31044.999999999996,
+          "information": 4411.0
+        },
+        {
+          "year": 2003,
+          "population": 378903.0,
+          "olderShare": 13.3,
+          "income": 23649.0,
+          "poverty": 13.8,
+          "jobs": 156433.0,
+          "industry": 29849.0,
+          "information": 4456.0
+        },
+        {
+          "year": 2004,
+          "population": 381792.0,
+          "olderShare": 13.5,
+          "income": 24579.0,
+          "poverty": 14.7,
+          "jobs": 158392.0,
+          "industry": 29741.999999999996,
+          "information": 4549.0
+        },
+        {
+          "year": 2005,
+          "population": 384808.0,
+          "olderShare": 13.6,
+          "income": 24988.0,
+          "poverty": 15.1,
+          "jobs": 159144.0,
+          "industry": 30444.000000000004,
+          "information": 4697.0
+        },
+        {
+          "year": 2006,
+          "population": 387320.0,
+          "olderShare": 14.0,
+          "income": 25545.0,
+          "poverty": 15.9,
+          "jobs": 162049.0,
+          "industry": 30176.000000000004,
+          "information": 4577.0
+        },
+        {
+          "year": 2007,
+          "population": 390038.0,
+          "olderShare": 14.1,
+          "income": 26238.0,
+          "poverty": 16.7,
+          "jobs": 165148.0,
+          "industry": 30825.999999999996,
+          "information": 4512.0
+        },
+        {
+          "year": 2008,
+          "population": 392652.0,
+          "olderShare": 14.3,
+          "income": 26671.0,
+          "poverty": 16.5,
+          "jobs": 168899.0,
+          "industry": 30437.0,
+          "information": 4676.0
+        },
+        {
+          "year": 2009,
+          "population": 395510.0,
+          "olderShare": 14.4,
+          "income": 27174.0,
+          "poverty": 16.9,
+          "jobs": 162451.0,
+          "industry": 26118.000000000004,
+          "information": 4414.0
+        },
+        {
+          "year": 2010,
+          "population": 398335.0,
+          "olderShare": 14.8,
+          "income": 27551.0,
+          "poverty": 16.4,
+          "jobs": 162600.0,
+          "industry": 24815.0,
+          "information": 4313.0
+        },
+        {
+          "year": 2011,
+          "population": 401201.0,
+          "olderShare": 15.3,
+          "income": 27572.0,
+          "poverty": 16.3,
+          "jobs": 163494.0,
+          "industry": 23026.0,
+          "information": 4335.0
+        },
+        {
+          "year": 2012,
+          "population": 403920.0,
+          "olderShare": 15.8,
+          "income": 27709.0,
+          "poverty": 15.5,
+          "jobs": 167431.0,
+          "industry": 23421.0,
+          "information": 4664.0
+        },
+        {
+          "year": 2013,
+          "population": 406480.0,
+          "olderShare": 16.3,
+          "income": 27452.0,
+          "poverty": 15.3,
+          "jobs": 167525.0,
+          "industry": 24756.0,
+          "information": 4742.0
+        },
+        {
+          "year": 2014,
+          "population": 408536.0,
+          "olderShare": 16.9,
+          "income": 27576.0,
+          "poverty": 14.7,
+          "jobs": 167543.0,
+          "industry": 24294.0,
+          "information": 4529.0
+        },
+        {
+          "year": 2015,
+          "population": 410054.0,
+          "olderShare": 17.4,
+          "income": 27735.0,
+          "poverty": 14.6,
+          "jobs": 168084.0,
+          "industry": 24550.0,
+          "information": 4701.0
+        },
+        {
+          "year": 2016,
+          "population": 411150.0,
+          "olderShare": 18.0,
+          "income": 28005.0,
+          "poverty": 14.3,
+          "jobs": 168824.0,
+          "industry": 24467.000000000004,
+          "information": 4944.0
+        },
+        {
+          "year": 2017,
+          "population": 411856.0,
+          "olderShare": 18.6,
+          "income": 28461.0,
+          "poverty": 14.4,
+          "jobs": 168705.0,
+          "industry": 24586.0,
+          "information": 5392.0
+        },
+        {
+          "year": 2018,
+          "population": 412161.0,
+          "olderShare": 19.1,
+          "income": 28816.0,
+          "poverty": 14.5,
+          "jobs": 175285.0,
+          "industry": 25206.0,
+          "information": 5611.0
+        },
+        {
+          "year": 2019,
+          "population": 412830.0,
+          "olderShare": 19.6,
+          "income": 29218.0,
+          "poverty": 14.8,
+          "jobs": 177378.0,
+          "industry": 24878.0,
+          "information": 5726.0
+        },
+        {
+          "year": 2020,
+          "population": 413830.0,
+          "olderShare": 20.2,
+          "income": 29474.0,
+          "poverty": 13.8,
+          "jobs": 176332.0,
+          "industry": 24862.000000000004,
+          "information": 5777.0
+        },
+        {
+          "year": 2021,
+          "population": 415603.0,
+          "olderShare": 20.5,
+          "income": 29769.0,
+          "poverty": 14.2,
+          "jobs": 183297.0,
+          "industry": 24989.0,
+          "information": 6184.0
+        },
+        {
+          "year": 2022,
+          "population": 416543.0,
+          "olderShare": 20.9,
+          "income": 28942.0,
+          "poverty": 14.3,
+          "jobs": 189594.0,
+          "industry": 25707.0,
+          "information": 6917.0
+        },
+        {
+          "year": 2023,
+          "population": 418205.0,
+          "olderShare": 21.2,
+          "income": 28462.0,
+          "poverty": 14.4,
+          "jobs": 189665.0,
+          "industry": 25814.999999999996,
+          "information": 7016.0
+        },
+        {
+          "year": 2024,
+          "population": 418331.0,
+          "olderShare": 21.5,
+          "income": 29141.0,
+          "poverty": 14.8,
+          "jobs": 185937.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK18",
+      "name": "Kainuu",
+      "points": [
+        {
+          "year": 1990,
+          "population": 92459.0,
+          "olderShare": 12.0,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 92190.0,
+          "olderShare": 12.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 92010.0,
+          "olderShare": 12.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 91794.0,
+          "olderShare": 13.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 91350.0,
+          "olderShare": 13.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 90781.0,
+          "olderShare": 14.4,
+          "income": 19333.0,
+          "poverty": 7.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 90035.0,
+          "olderShare": 14.8,
+          "income": 19309.0,
+          "poverty": 9.0,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 88896.0,
+          "olderShare": 15.3,
+          "income": 19816.0,
+          "poverty": 10.8,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 87843.0,
+          "olderShare": 15.7,
+          "income": 20076.0,
+          "poverty": 12.3,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 86943.0,
+          "olderShare": 16.1,
+          "income": 20324.0,
+          "poverty": 13.9,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 85736.0,
+          "olderShare": 16.7,
+          "income": 20484.0,
+          "poverty": 15.2,
+          "jobs": 32768.0,
+          "industry": 4785.0,
+          "information": 486.0
+        },
+        {
+          "year": 2001,
+          "population": 84497.0,
+          "olderShare": 17.2,
+          "income": 21111.0,
+          "poverty": 15.9,
+          "jobs": 32756.999999999996,
+          "industry": 4801.0,
+          "information": 506.0
+        },
+        {
+          "year": 2002,
+          "population": 83477.0,
+          "olderShare": 17.6,
+          "income": 21486.0,
+          "poverty": 16.3,
+          "jobs": 32451.0,
+          "industry": 4457.0,
+          "information": 472.0
+        },
+        {
+          "year": 2003,
+          "population": 82744.0,
+          "olderShare": 18.1,
+          "income": 22295.0,
+          "poverty": 16.5,
+          "jobs": 33002.0,
+          "industry": 4248.0,
+          "information": 500.0
+        },
+        {
+          "year": 2004,
+          "population": 82214.0,
+          "olderShare": 18.6,
+          "income": 23272.0,
+          "poverty": 17.2,
+          "jobs": 33659.0,
+          "industry": 4080.0,
+          "information": 495.0
+        },
+        {
+          "year": 2005,
+          "population": 81585.0,
+          "olderShare": 19.0,
+          "income": 23704.0,
+          "poverty": 17.8,
+          "jobs": 33014.0,
+          "industry": 4125.0,
+          "information": 546.0
+        },
+        {
+          "year": 2006,
+          "population": 80738.0,
+          "olderShare": 19.7,
+          "income": 24120.0,
+          "poverty": 18.4,
+          "jobs": 33691.0,
+          "industry": 4268.0,
+          "information": 463.0
+        },
+        {
+          "year": 2007,
+          "population": 80218.0,
+          "olderShare": 19.9,
+          "income": 25032.0,
+          "poverty": 19.0,
+          "jobs": 34234.0,
+          "industry": 4082.0,
+          "information": 441.0
+        },
+        {
+          "year": 2008,
+          "population": 79690.0,
+          "olderShare": 20.2,
+          "income": 25598.0,
+          "poverty": 18.6,
+          "jobs": 35124.0,
+          "industry": 4098.0,
+          "information": 444.0
+        },
+        {
+          "year": 2009,
+          "population": 79234.0,
+          "olderShare": 20.4,
+          "income": 26281.0,
+          "poverty": 18.0,
+          "jobs": 33349.0,
+          "industry": 2967.0,
+          "information": 337.0
+        },
+        {
+          "year": 2010,
+          "population": 78703.0,
+          "olderShare": 21.0,
+          "income": 26688.0,
+          "poverty": 17.0,
+          "jobs": 33902.0,
+          "industry": 2848.9999999999995,
+          "information": 306.0
+        },
+        {
+          "year": 2011,
+          "population": 77984.0,
+          "olderShare": 21.7,
+          "income": 26828.0,
+          "poverty": 16.8,
+          "jobs": 34068.0,
+          "industry": 2708.0,
+          "information": 307.0
+        },
+        {
+          "year": 2012,
+          "population": 77435.0,
+          "olderShare": 22.4,
+          "income": 27067.0,
+          "poverty": 15.9,
+          "jobs": 33981.0,
+          "industry": 2598.0,
+          "information": 408.0
+        },
+        {
+          "year": 2013,
+          "population": 76782.0,
+          "olderShare": 23.4,
+          "income": 26842.0,
+          "poverty": 15.3,
+          "jobs": 33525.0,
+          "industry": 2520.0,
+          "information": 398.0
+        },
+        {
+          "year": 2014,
+          "population": 76119.0,
+          "olderShare": 24.1,
+          "income": 26907.0,
+          "poverty": 15.0,
+          "jobs": 32728.0,
+          "industry": 2466.0,
+          "information": 395.0
+        },
+        {
+          "year": 2015,
+          "population": 75324.0,
+          "olderShare": 24.9,
+          "income": 27270.0,
+          "poverty": 14.7,
+          "jobs": 32387.0,
+          "industry": 2375.0,
+          "information": 427.0
+        },
+        {
+          "year": 2016,
+          "population": 74803.0,
+          "olderShare": 25.7,
+          "income": 27714.0,
+          "poverty": 14.5,
+          "jobs": 32960.0,
+          "industry": 2429.0000000000005,
+          "information": 401.0
+        },
+        {
+          "year": 2017,
+          "population": 73959.0,
+          "olderShare": 26.6,
+          "income": 27970.0,
+          "poverty": 14.8,
+          "jobs": 33169.0,
+          "industry": 2386.0,
+          "information": 445.0
+        },
+        {
+          "year": 2018,
+          "population": 73061.0,
+          "olderShare": 27.5,
+          "income": 28442.0,
+          "poverty": 14.8,
+          "jobs": 33762.0,
+          "industry": 2377.0,
+          "information": 524.0
+        },
+        {
+          "year": 2019,
+          "population": 72306.0,
+          "olderShare": 28.5,
+          "income": 28748.0,
+          "poverty": 15.0,
+          "jobs": 33556.0,
+          "industry": 2407.0,
+          "information": 454.0
+        },
+        {
+          "year": 2020,
+          "population": 71664.0,
+          "olderShare": 29.2,
+          "income": 29113.0,
+          "poverty": 14.0,
+          "jobs": 32631.0,
+          "industry": 2410.0,
+          "information": 526.0
+        },
+        {
+          "year": 2021,
+          "population": 71255.0,
+          "olderShare": 29.8,
+          "income": 29437.0,
+          "poverty": 15.2,
+          "jobs": 33531.0,
+          "industry": 2516.0,
+          "information": 664.0
+        },
+        {
+          "year": 2022,
+          "population": 70521.0,
+          "olderShare": 30.4,
+          "income": 28399.0,
+          "poverty": 15.2,
+          "jobs": 33810.0,
+          "industry": 2537.0,
+          "information": 621.0
+        },
+        {
+          "year": 2023,
+          "population": 70164.0,
+          "olderShare": 30.7,
+          "income": 28050.0,
+          "poverty": 15.3,
+          "jobs": 33836.0,
+          "industry": 2555.0,
+          "information": 719.0
+        },
+        {
+          "year": 2024,
+          "population": 69639.0,
+          "olderShare": 31.3,
+          "income": 28747.0,
+          "poverty": 15.4,
+          "jobs": 33405.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK19",
+      "name": "Lappi",
+      "points": [
+        {
+          "year": 1990,
+          "population": 200674.0,
+          "olderShare": 11.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 201652.0,
+          "olderShare": 11.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 202433.0,
+          "olderShare": 11.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 202895.0,
+          "olderShare": 12.1,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 202325.0,
+          "olderShare": 12.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 201411.0,
+          "olderShare": 12.9,
+          "income": 19875.0,
+          "poverty": 7.2,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 200579.0,
+          "olderShare": 13.3,
+          "income": 20066.0,
+          "poverty": 8.3,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 199051.0,
+          "olderShare": 13.6,
+          "income": 20469.0,
+          "poverty": 10.0,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 196647.0,
+          "olderShare": 14.0,
+          "income": 20568.0,
+          "poverty": 11.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 194352.0,
+          "olderShare": 14.4,
+          "income": 20889.0,
+          "poverty": 13.1,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 191768.0,
+          "olderShare": 15.0,
+          "income": 20988.0,
+          "poverty": 14.4,
+          "jobs": 72099.0,
+          "industry": 9841.0,
+          "information": 1167.0
+        },
+        {
+          "year": 2001,
+          "population": 189288.0,
+          "olderShare": 15.5,
+          "income": 21665.0,
+          "poverty": 14.5,
+          "jobs": 72130.0,
+          "industry": 10097.0,
+          "information": 1350.0
+        },
+        {
+          "year": 2002,
+          "population": 187777.0,
+          "olderShare": 16.0,
+          "income": 22309.0,
+          "poverty": 14.4,
+          "jobs": 73584.0,
+          "industry": 10061.0,
+          "information": 1208.0
+        },
+        {
+          "year": 2003,
+          "population": 186917.0,
+          "olderShare": 16.5,
+          "income": 22998.0,
+          "poverty": 14.9,
+          "jobs": 73644.0,
+          "industry": 9696.0,
+          "information": 1022.9999999999999
+        },
+        {
+          "year": 2004,
+          "population": 186443.0,
+          "olderShare": 17.0,
+          "income": 23956.0,
+          "poverty": 15.9,
+          "jobs": 74877.0,
+          "industry": 9616.0,
+          "information": 1042.0
+        },
+        {
+          "year": 2005,
+          "population": 185800.0,
+          "olderShare": 17.2,
+          "income": 24309.0,
+          "poverty": 16.6,
+          "jobs": 74823.0,
+          "industry": 9644.0,
+          "information": 1054.0
+        },
+        {
+          "year": 2006,
+          "population": 184935.0,
+          "olderShare": 17.9,
+          "income": 24837.0,
+          "poverty": 17.3,
+          "jobs": 76378.0,
+          "industry": 9512.0,
+          "information": 1056.0
+        },
+        {
+          "year": 2007,
+          "population": 184390.0,
+          "olderShare": 18.0,
+          "income": 25558.0,
+          "poverty": 18.3,
+          "jobs": 78134.0,
+          "industry": 10106.0,
+          "information": 1156.0
+        },
+        {
+          "year": 2008,
+          "population": 183963.0,
+          "olderShare": 18.3,
+          "income": 26002.0,
+          "poverty": 18.1,
+          "jobs": 79102.0,
+          "industry": 9719.0,
+          "information": 1171.0
+        },
+        {
+          "year": 2009,
+          "population": 183748.0,
+          "olderShare": 18.5,
+          "income": 26589.0,
+          "poverty": 17.9,
+          "jobs": 77111.0,
+          "industry": 9402.0,
+          "information": 1228.0
+        },
+        {
+          "year": 2010,
+          "population": 183488.0,
+          "olderShare": 18.9,
+          "income": 27304.0,
+          "poverty": 16.9,
+          "jobs": 78162.0,
+          "industry": 9333.0,
+          "information": 1220.0
+        },
+        {
+          "year": 2011,
+          "population": 183330.0,
+          "olderShare": 19.6,
+          "income": 27450.0,
+          "poverty": 16.9,
+          "jobs": 79530.0,
+          "industry": 9769.0,
+          "information": 1080.0
+        },
+        {
+          "year": 2012,
+          "population": 182844.0,
+          "olderShare": 20.3,
+          "income": 27751.0,
+          "poverty": 15.7,
+          "jobs": 77322.0,
+          "industry": 9177.0,
+          "information": 944.0
+        },
+        {
+          "year": 2013,
+          "population": 182514.0,
+          "olderShare": 21.1,
+          "income": 27698.0,
+          "poverty": 15.0,
+          "jobs": 75848.0,
+          "industry": 8619.0,
+          "information": 754.0
+        },
+        {
+          "year": 2014,
+          "population": 181748.0,
+          "olderShare": 21.9,
+          "income": 27714.0,
+          "poverty": 14.6,
+          "jobs": 76902.0,
+          "industry": 8597.0,
+          "information": 863.0
+        },
+        {
+          "year": 2015,
+          "population": 180858.0,
+          "olderShare": 22.6,
+          "income": 28035.0,
+          "poverty": 14.0,
+          "jobs": 77014.0,
+          "industry": 8438.0,
+          "information": 814.0
+        },
+        {
+          "year": 2016,
+          "population": 180207.0,
+          "olderShare": 23.2,
+          "income": 28427.0,
+          "poverty": 13.8,
+          "jobs": 78209.0,
+          "industry": 8329.0,
+          "information": 811.0
+        },
+        {
+          "year": 2017,
+          "population": 179223.0,
+          "olderShare": 23.9,
+          "income": 28800.0,
+          "poverty": 14.1,
+          "jobs": 78246.0,
+          "industry": 8160.0,
+          "information": 857.0
+        },
+        {
+          "year": 2018,
+          "population": 178522.0,
+          "olderShare": 24.6,
+          "income": 29153.0,
+          "poverty": 14.2,
+          "jobs": 80323.0,
+          "industry": 8077.0,
+          "information": 760.0
+        },
+        {
+          "year": 2019,
+          "population": 177161.0,
+          "olderShare": 25.3,
+          "income": 29721.0,
+          "poverty": 14.3,
+          "jobs": 80528.0,
+          "industry": 8415.0,
+          "information": 704.0
+        },
+        {
+          "year": 2020,
+          "population": 176665.0,
+          "olderShare": 26.0,
+          "income": 29882.0,
+          "poverty": 13.4,
+          "jobs": 78764.0,
+          "industry": 8243.0,
+          "information": 697.0
+        },
+        {
+          "year": 2021,
+          "population": 176494.0,
+          "olderShare": 26.6,
+          "income": 30031.0,
+          "poverty": 14.0,
+          "jobs": 79579.0,
+          "industry": 7833.0,
+          "information": 764.0
+        },
+        {
+          "year": 2022,
+          "population": 175795.0,
+          "olderShare": 27.1,
+          "income": 29410.0,
+          "poverty": 13.8,
+          "jobs": 81628.0,
+          "industry": 7727.0,
+          "information": 755.0
+        },
+        {
+          "year": 2023,
+          "population": 176150.0,
+          "olderShare": 27.3,
+          "income": 29015.0,
+          "poverty": 13.4,
+          "jobs": 83224.0,
+          "industry": 7394.0,
+          "information": 796.0
+        },
+        {
+          "year": 2024,
+          "population": 176151.0,
+          "olderShare": 27.7,
+          "income": 29934.0,
+          "poverty": 13.6,
+          "jobs": 83858.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "MK21",
+      "name": "Ahvenanmaa",
+      "points": [
+        {
+          "year": 1990,
+          "population": 24604.0,
+          "olderShare": 16.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 24847.0,
+          "olderShare": 16.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 24993.0,
+          "olderShare": 16.4,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 25102.0,
+          "olderShare": 16.3,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 25158.0,
+          "olderShare": 16.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 25202.0,
+          "olderShare": 16.3,
+          "income": 22828.0,
+          "poverty": 7.5,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 25257.0,
+          "olderShare": 16.3,
+          "income": 23863.0,
+          "poverty": 7.2,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 25392.0,
+          "olderShare": 16.4,
+          "income": 25045.0,
+          "poverty": 7.2,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 25625.0,
+          "olderShare": 16.3,
+          "income": 25985.0,
+          "poverty": 7.0,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 25706.0,
+          "olderShare": 16.2,
+          "income": 27264.0,
+          "poverty": 6.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 25776.0,
+          "olderShare": 16.4,
+          "income": 27934.0,
+          "poverty": 6.6,
+          "jobs": 15879.0,
+          "industry": 1136.0000000000002,
+          "information": 383.0
+        },
+        {
+          "year": 2001,
+          "population": 26008.0,
+          "olderShare": 16.5,
+          "income": 28855.0,
+          "poverty": 6.4,
+          "jobs": 16796.0,
+          "industry": 1168.0,
+          "information": 414.0
+        },
+        {
+          "year": 2002,
+          "population": 26257.0,
+          "olderShare": 16.5,
+          "income": 29349.0,
+          "poverty": 6.3,
+          "jobs": 16605.0,
+          "industry": 1167.0,
+          "information": 436.0
+        },
+        {
+          "year": 2003,
+          "population": 26347.0,
+          "olderShare": 16.6,
+          "income": 30168.0,
+          "poverty": 6.7,
+          "jobs": 17110.0,
+          "industry": 1188.0,
+          "information": 401.0
+        },
+        {
+          "year": 2004,
+          "population": 26530.0,
+          "olderShare": 16.6,
+          "income": 30894.0,
+          "poverty": 7.2,
+          "jobs": 16822.0,
+          "industry": 1063.0,
+          "information": 392.0
+        },
+        {
+          "year": 2005,
+          "population": 26766.0,
+          "olderShare": 16.8,
+          "income": 31384.0,
+          "poverty": 7.7,
+          "jobs": 17673.0,
+          "industry": 1072.0,
+          "information": 461.0
+        },
+        {
+          "year": 2006,
+          "population": 26923.0,
+          "olderShare": 16.9,
+          "income": 31693.0,
+          "poverty": 8.7,
+          "jobs": 18751.0,
+          "industry": 1038.0,
+          "information": 480.0
+        },
+        {
+          "year": 2007,
+          "population": 27153.0,
+          "olderShare": 17.2,
+          "income": 32839.0,
+          "poverty": 8.8,
+          "jobs": 18171.0,
+          "industry": 1025.0,
+          "information": 558.0
+        },
+        {
+          "year": 2008,
+          "population": 27456.0,
+          "olderShare": 17.4,
+          "income": 33175.0,
+          "poverty": 8.5,
+          "jobs": 18107.0,
+          "industry": 1036.0,
+          "information": 570.0
+        },
+        {
+          "year": 2009,
+          "population": 27734.0,
+          "olderShare": 17.8,
+          "income": 33968.0,
+          "poverty": 8.6,
+          "jobs": 17685.0,
+          "industry": 1032.0,
+          "information": 580.0
+        },
+        {
+          "year": 2010,
+          "population": 28007.0,
+          "olderShare": 18.4,
+          "income": 34299.0,
+          "poverty": 8.5,
+          "jobs": 17424.0,
+          "industry": 1063.0,
+          "information": 574.0
+        },
+        {
+          "year": 2011,
+          "population": 28354.0,
+          "olderShare": 18.9,
+          "income": 34108.0,
+          "poverty": 8.8,
+          "jobs": 17659.0,
+          "industry": 1089.0,
+          "information": 596.0
+        },
+        {
+          "year": 2012,
+          "population": 28501.0,
+          "olderShare": 19.4,
+          "income": 34298.0,
+          "poverty": 8.7,
+          "jobs": 17438.0,
+          "industry": 1101.0,
+          "information": 609.0
+        },
+        {
+          "year": 2013,
+          "population": 28666.0,
+          "olderShare": 19.9,
+          "income": 34206.0,
+          "poverty": 8.5,
+          "jobs": 17920.0,
+          "industry": 1101.9999999999998,
+          "information": 604.0
+        },
+        {
+          "year": 2014,
+          "population": 28916.0,
+          "olderShare": 20.4,
+          "income": 33913.0,
+          "poverty": 8.4,
+          "jobs": 18071.0,
+          "industry": 1115.9999999999998,
+          "information": 622.0
+        },
+        {
+          "year": 2015,
+          "population": 28983.0,
+          "olderShare": 20.8,
+          "income": 34303.0,
+          "poverty": 8.2,
+          "jobs": 17946.0,
+          "industry": 1046.0,
+          "information": 588.0
+        },
+        {
+          "year": 2016,
+          "population": 29214.0,
+          "olderShare": 21.1,
+          "income": 34532.0,
+          "poverty": 8.3,
+          "jobs": 18125.0,
+          "industry": 1101.0,
+          "information": 595.0
+        },
+        {
+          "year": 2017,
+          "population": 29489.0,
+          "olderShare": 21.7,
+          "income": 34880.0,
+          "poverty": 8.3,
+          "jobs": 17999.0,
+          "industry": 1080.0,
+          "information": 568.0
+        },
+        {
+          "year": 2018,
+          "population": 29789.0,
+          "olderShare": 22.2,
+          "income": 34809.0,
+          "poverty": 9.2,
+          "jobs": 17779.0,
+          "industry": 1086.0,
+          "information": 606.0
+        },
+        {
+          "year": 2019,
+          "population": 29884.0,
+          "olderShare": 22.7,
+          "income": 35587.0,
+          "poverty": 8.8,
+          "jobs": 17958.0,
+          "industry": 1055.0,
+          "information": 615.0
+        },
+        {
+          "year": 2020,
+          "population": 30129.0,
+          "olderShare": 23.0,
+          "income": 35260.0,
+          "poverty": 9.1,
+          "jobs": 17596.0,
+          "industry": 1040.0,
+          "information": 631.0
+        },
+        {
+          "year": 2021,
+          "population": 30344.0,
+          "olderShare": 23.4,
+          "income": 35094.0,
+          "poverty": 9.6,
+          "jobs": 17018.0,
+          "industry": 1078.0,
+          "information": 690.0
+        },
+        {
+          "year": 2022,
+          "population": 30359.0,
+          "olderShare": 23.8,
+          "income": 33800.0,
+          "poverty": 10.1,
+          "jobs": 17799.0,
+          "industry": 1151.0,
+          "information": 684.0
+        },
+        {
+          "year": 2023,
+          "population": 30541.0,
+          "olderShare": 24.2,
+          "income": 33192.0,
+          "poverty": 9.6,
+          "jobs": 18021.0,
+          "industry": 1141.0,
+          "information": 698.0
+        },
+        {
+          "year": 2024,
+          "population": 30654.0,
+          "olderShare": 24.5,
+          "income": 34362.0,
+          "poverty": 9.2,
+          "jobs": 18169.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    },
+    {
+      "id": "SSS",
+      "name": "Koko maa",
+      "points": [
+        {
+          "year": 1990,
+          "population": 4998478.0,
+          "olderShare": 13.5,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1991,
+          "population": 5029002.0,
+          "olderShare": 13.6,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1992,
+          "population": 5054982.0,
+          "olderShare": 13.8,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1993,
+          "population": 5077912.0,
+          "olderShare": 13.9,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1994,
+          "population": 5098754.0,
+          "olderShare": 14.1,
+          "income": null,
+          "poverty": null,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1995,
+          "population": 5116826.0,
+          "olderShare": 14.3,
+          "income": 20598.0,
+          "poverty": 7.9,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1996,
+          "population": 5132320.0,
+          "olderShare": 14.5,
+          "income": 20944.0,
+          "poverty": 8.8,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1997,
+          "population": 5147349.0,
+          "olderShare": 14.6,
+          "income": 21682.0,
+          "poverty": 9.8,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1998,
+          "population": 5159646.0,
+          "olderShare": 14.7,
+          "income": 22144.0,
+          "poverty": 10.6,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 1999,
+          "population": 5171302.0,
+          "olderShare": 14.8,
+          "income": 22681.0,
+          "poverty": 11.3,
+          "jobs": null,
+          "industry": null,
+          "information": null
+        },
+        {
+          "year": 2000,
+          "population": 5181115.0,
+          "olderShare": 15.0,
+          "income": 22990.0,
+          "poverty": 12.1,
+          "jobs": 2299800.0,
+          "industry": 440200.0,
+          "information": 84500.0
+        },
+        {
+          "year": 2001,
+          "population": 5194901.0,
+          "olderShare": 15.2,
+          "income": 23703.0,
+          "poverty": 12.2,
+          "jobs": 2335500.0,
+          "industry": 444000.0,
+          "information": 92400.0
+        },
+        {
+          "year": 2002,
+          "population": 5206295.0,
+          "olderShare": 15.3,
+          "income": 24291.0,
+          "poverty": 12.3,
+          "jobs": 2364400.0,
+          "industry": 434700.0,
+          "information": 93200.0
+        },
+        {
+          "year": 2003,
+          "population": 5219732.0,
+          "olderShare": 15.6,
+          "income": 24932.0,
+          "poverty": 12.9,
+          "jobs": 2370000.0,
+          "industry": 422700.0,
+          "information": 91700.0
+        },
+        {
+          "year": 2004,
+          "population": 5236611.0,
+          "olderShare": 15.9,
+          "income": 25921.0,
+          "poverty": 13.7,
+          "jobs": 2382500.0,
+          "industry": 411800.0,
+          "information": 91600.0
+        },
+        {
+          "year": 2005,
+          "population": 5255580.0,
+          "olderShare": 16.0,
+          "income": 26447.0,
+          "poverty": 14.0,
+          "jobs": 2418900.0,
+          "industry": 412600.0,
+          "information": 91900.0
+        },
+        {
+          "year": 2006,
+          "population": 5276955.0,
+          "olderShare": 16.5,
+          "income": 27069.0,
+          "poverty": 14.5,
+          "jobs": 2464400.0,
+          "industry": 415700.0,
+          "information": 94300.0
+        },
+        {
+          "year": 2007,
+          "population": 5300484.0,
+          "olderShare": 16.5,
+          "income": 27970.0,
+          "poverty": 15.0,
+          "jobs": 2518900.0,
+          "industry": 420500.0,
+          "information": 93200.0
+        },
+        {
+          "year": 2008,
+          "population": 5326314.0,
+          "olderShare": 16.7,
+          "income": 28363.0,
+          "poverty": 14.9,
+          "jobs": 2575100.0,
+          "industry": 426300.0,
+          "information": 95800.0
+        },
+        {
+          "year": 2009,
+          "population": 5351427.0,
+          "olderShare": 17.0,
+          "income": 28940.0,
+          "poverty": 14.8,
+          "jobs": 2509800.0,
+          "industry": 383600.0,
+          "information": 93700.0
+        },
+        {
+          "year": 2010,
+          "population": 5375276.0,
+          "olderShare": 17.5,
+          "income": 29350.0,
+          "poverty": 14.3,
+          "jobs": 2491000.0,
+          "industry": 365900.0,
+          "information": 93500.0
+        },
+        {
+          "year": 2011,
+          "population": 5401267.0,
+          "olderShare": 18.1,
+          "income": 29382.0,
+          "poverty": 14.4,
+          "jobs": 2528700.0,
+          "industry": 370000.0,
+          "information": 94600.0
+        },
+        {
+          "year": 2012,
+          "population": 5426674.0,
+          "olderShare": 18.8,
+          "income": 29501.0,
+          "poverty": 13.6,
+          "jobs": 2544200.0,
+          "industry": 368600.0,
+          "information": 95800.0
+        },
+        {
+          "year": 2013,
+          "population": 5451270.0,
+          "olderShare": 19.4,
+          "income": 29302.0,
+          "poverty": 13.2,
+          "jobs": 2523800.0,
+          "industry": 354900.0,
+          "information": 98600.0
+        },
+        {
+          "year": 2014,
+          "population": 5471753.0,
+          "olderShare": 19.9,
+          "income": 29219.0,
+          "poverty": 13.0,
+          "jobs": 2510000.0,
+          "industry": 345100.0,
+          "information": 98000.0
+        },
+        {
+          "year": 2015,
+          "population": 5487308.0,
+          "olderShare": 20.5,
+          "income": 29445.0,
+          "poverty": 12.7,
+          "jobs": 2518000.0,
+          "industry": 339900.0,
+          "information": 99900.0
+        },
+        {
+          "year": 2016,
+          "population": 5503297.0,
+          "olderShare": 20.9,
+          "income": 29732.0,
+          "poverty": 12.7,
+          "jobs": 2532000.0,
+          "industry": 336300.0,
+          "information": 100300.0
+        },
+        {
+          "year": 2017,
+          "population": 5513130.0,
+          "olderShare": 21.4,
+          "income": 30079.0,
+          "poverty": 12.8,
+          "jobs": 2547300.0,
+          "industry": 336599.99999999994,
+          "information": 104400.0
+        },
+        {
+          "year": 2018,
+          "population": 5517919.0,
+          "olderShare": 21.8,
+          "income": 30475.0,
+          "poverty": 13.1,
+          "jobs": 2613600.0,
+          "industry": 342300.0,
+          "information": 108700.0
+        },
+        {
+          "year": 2019,
+          "population": 5525292.0,
+          "olderShare": 22.3,
+          "income": 30929.0,
+          "poverty": 13.4,
+          "jobs": 2652100.0,
+          "industry": 343400.0,
+          "information": 110400.0
+        },
+        {
+          "year": 2020,
+          "population": 5533793.0,
+          "olderShare": 22.7,
+          "income": 30984.0,
+          "poverty": 12.5,
+          "jobs": 2590000.0,
+          "industry": 337200.0,
+          "information": 111500.0
+        },
+        {
+          "year": 2021,
+          "population": 5548241.0,
+          "olderShare": 23.1,
+          "income": 31320.0,
+          "poverty": 13.2,
+          "jobs": 2649700.0,
+          "industry": 338000.0,
+          "information": 117200.0
+        },
+        {
+          "year": 2022,
+          "population": 5563970.0,
+          "olderShare": 23.3,
+          "income": 30412.0,
+          "poverty": 13.4,
+          "jobs": 2742800.0,
+          "industry": 346300.0,
+          "information": 123800.0
+        },
+        {
+          "year": 2023,
+          "population": 5603851.0,
+          "olderShare": 23.4,
+          "income": 29888.0,
+          "poverty": 13.4,
+          "jobs": 2768600.0,
+          "industry": 347300.0,
+          "information": 126200.0
+        },
+        {
+          "year": 2024,
+          "population": 5635971.0,
+          "olderShare": 23.6,
+          "income": 30523.0,
+          "poverty": 14.2,
+          "jobs": 2739000.0,
+          "industry": null,
+          "information": null
+        }
+      ]
+    }
+  ]
+}
