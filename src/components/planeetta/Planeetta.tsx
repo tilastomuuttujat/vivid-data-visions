@@ -7,6 +7,7 @@ import { MechanismExplorer } from './MechanismExplorer';
 import { HistoricalTurning } from './HistoricalTurning';
 import { LongPath } from './LongPath';
 import { TransitionPath } from './TransitionPath';
+import { OwnershipPath } from './OwnershipPath';
 
 const PlanetGlobe = lazy(() => import('./PlanetGlobe'));
 
@@ -46,6 +47,7 @@ export function Planeetta() {
         </div>
         <LongPath />
         <TransitionPath />
+        <OwnershipPath />
         <HistoricalTurning />
         <MechanismExplorer />
       </div>
