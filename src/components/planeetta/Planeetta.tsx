@@ -1,3 +1,4 @@
+import { ProductivityPath } from './ProductivityPath';
 import { lazy, Suspense, useCallback, useState } from 'react';
 import { ClientOnly, Link } from '@tanstack/react-router';
 import { ArrowRight } from 'lucide-react';
@@ -51,6 +52,7 @@ export function Planeetta() {
         <OwnershipPath />
         <StoraComparison />
         <HistoricalTurning />
+        <ProductivityPath />
         <MechanismExplorer />
       </div>
     </div>
