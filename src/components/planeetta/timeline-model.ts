@@ -1,3 +1,4 @@
+import { policyRecords } from './policy-history';
 import { electionYears, partySeries, historicalSources } from './historical-election-data';
 import productivity from './productivity-data.json';
 import regions from './regional-path-data.json';
@@ -30,9 +31,11 @@ export function timelineLanes(regionId:string):TimelineLane[]{
  ];
 }
 export const exactValue=(series:TimelineSeries,year:number)=>series.points.find(p=>p.year===year)?.value??null;
-export const timelineEvents=[
+export type TimelineEvent={id:string;year:number;title:string;text:string;url:string;kind:string;policyId?:string;theme?:string};
+export const timelineEvents:TimelineEvent[]=[
+ ...policyRecords.map(p=>({id:`policy-${p.id}`,year:p.year,title:`${p.date}: ${p.title}`,text:`${p.phase}. Päätöksen sisältö, vastuut ja arviot eritellään alla.`,url:p.sources[0]!.url,kind:p.phase,theme:p.theme,policyId:p.id})),
  ...electionYears.map((year,i)=>({id:`election-${year}`,year,title:`Eduskuntavaalit ${year}`,text:`Kokoomuksen ääniosuus ${partySeries[0]!.values[i]} %. Vaalitulos ei yksin kerro äänestäjän motiivia.`,url:historicalSources.results,kind:'Vaalihavainto'})),
- ...ownershipEvents.map((e,i)=>({id:`ownership-${i}`,year:Math.floor(e.year),title:`${e.date}: ${e.title}`,text:`${e.text} ${e.limit}`,url:e.url,kind:'Omistus ja työ'})),
+ ...ownershipEvents.map((e,i)=>({id:`ownership-${i}`,year:Math.floor(e.year),title:`${e.date}: ${e.title}`,text:`${e.text} ${e.limit}`,url:e.url,kind:'Omistus ja työ',theme:e.lane===2?'Työn ehdot':'Omistus'})),
  ...storaSnapshots.map(e=>({id:`stora-${e.year}`,year:e.year,title:`Stora Enso: henkilöstöhavainto ${e.year}`,text:`Suomessa ${e.finland}, konsernissa ${e.total}. ${e.basis}. Vuosien 1998 ja 2018 mittaustavat eroavat; väliin ei muodosteta henkilöstösarjaa.`,url:e.source,kind:'Yrityshavainto'})),
  {id:'research',year:1991,title:'Vaalit, puolueet ja yhteiskunnan muutos',text:'Tutkimuksen julkaisuvuosi. Kuntatutkimuksen tarkastelu 1962–1983 liittyy Kokoomuksen kasvun ja elinkeinorakenteen yhteyteen, ei vuoden 1991 äänestäjien veromotiiveihin.',url:historicalSources.research,kind:'Tutkimus'},
  {id:'statoil',year:2001,title:'Statoilin osittainen yksityistäminen',text:'Norja listasi Statoilin mutta säilytti valtion määräysvallan. Öljyvarannon ja siirrettävän teollisuustuotannon ero rajoittaa maiden vertailua.',url:'https://www.regjeringen.no/no/dokumenter/Stmeld-nr-38-2003-2004-/id404848/?ch=4',kind:'Vertailutapaus'},
