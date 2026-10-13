@@ -7,8 +7,9 @@ import { Atlas } from '@/components/atlas/Atlas';
 import { Varaan } from '@/components/varaan/Varaan';
 import { Observatorio } from '@/components/observatorio/Observatorio';
 import { Planeetta } from '@/components/planeetta/Planeetta';
+import { AdminBar } from '@/components/editor/AdminBar';
 
-const rootRoute = createRootRoute({ component: () => <Outlet /> });
+const rootRoute = createRootRoute({ component: () => <><Outlet /><AdminBar /></> });
 const routes = [
   createRoute({ getParentRoute: () => rootRoute, path: '/', component: () => <Atlas /> }),
   createRoute({ getParentRoute: () => rootRoute, path: '/minka-varaan', component: Varaan }),
