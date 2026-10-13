@@ -4,6 +4,8 @@ import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from 'l
 import source from '@/data/anchors.json';
 import { Evidence, type Source, type Stat } from './Evidence';
 import { RegionMap, type RegionalStat } from './RegionMap';
+import { Editable } from '@/components/editor/Editable';
+const F = 'anchors.json';
 
 interface Step { short_title: string; title: string; period: string; years: number[]; theme_ids: number[]; explanation: string; mechanism: string; benefit: string; tradeoff: string; affected: string; lag: string; alternative?: string | null; evidence_note?: string | null; source_ids?: string[] | null; statistic_id?: string | null; regional_id?: string | null }
 interface Anchor { id: string; title: string; period: string; question: string; steps: Step[]; sources: Source[]; statistics: Stat[] }
@@ -121,9 +123,9 @@ export function Varaan() {
             <div className="v-pathhead">
               <button className="v-arrow" aria-label="Edellinen polku" onClick={() => pick(anchors[(ai - 1 + anchors.length) % anchors.length]!.id)}><ChevronLeft /></button>
               <div>
-                <span className="v-period">{a.period}</span>
-                <h2>{a.title}</h2>
-                <p className="v-question">{a.question}</p>
+                <span className="v-period"><Editable file={F} obj={a} field="period" multiline={false} /></span>
+                <h2><Editable file={F} obj={a} field="title" multiline={false} /></h2>
+                <p className="v-question"><Editable file={F} obj={a} field="question" /></p>
               </div>
               <button className="v-arrow" aria-label="Seuraava polku" onClick={() => pick(anchors[(ai + 1) % anchors.length]!.id)}><ChevronRight /></button>
             </div>
@@ -142,19 +144,19 @@ export function Varaan() {
           <aside className="v-reading" key={`${a.id}-${idx}`}>
             <div className="v-step-title">
               <span>Vaihe {idx + 1} / {a.steps.length} · {s.period}</span>
-              <h3>{s.title}</h3>
-              <p>{s.explanation}</p>
+              <h3><Editable file={F} obj={s} field="title" multiline={false} /></h3>
+              <p><Editable file={F} obj={s} field="explanation" /></p>
             </div>
             <ol className="v-mech">
-              <li className="m-base"><b>Minkä varaan</b><p>{s.mechanism}</p></li>
-              <li className="m-gain"><b>Mitä se tuotti</b><p>{s.benefit}</p></li>
-              <li className="m-cost"><b>Piilohinta</b><p>{s.tradeoff}</p></li>
-              <li className="m-lag"><b>Viive</b><p>{s.lag}</p></li>
-              <li className="m-where"><b>Missä vaikutus näkyy</b><p>{s.affected}</p></li>
+              <li className="m-base"><b>Minkä varaan</b><p><Editable file={F} obj={s} field="mechanism" /></p></li>
+              <li className="m-gain"><b>Mitä se tuotti</b><p><Editable file={F} obj={s} field="benefit" /></p></li>
+              <li className="m-cost"><b>Piilohinta</b><p><Editable file={F} obj={s} field="tradeoff" /></p></li>
+              <li className="m-lag"><b>Viive</b><p><Editable file={F} obj={s} field="lag" /></p></li>
+              <li className="m-where"><b>Missä vaikutus näkyy</b><p><Editable file={F} obj={s} field="affected" /></p></li>
             </ol>
             <Evidence stat={a.statistics.find(t => t.id === s.statistic_id)} note={s.evidence_note} sources={a.sources.filter(x => s.source_ids?.includes(x.id))} years={s.years} />
             {(() => { const r = a.statistics.find(t => t.id === s.regional_id) as unknown as RegionalStat | undefined; return r?.regions ? <RegionMap stat={r} /> : null; })()}
-            {s.alternative && <p className="v-alt"><b>Toinen selitys</b> {s.alternative}</p>}
+            {s.alternative && <p className="v-alt"><b>Toinen selitys</b> <Editable file={F} obj={s} field="alternative" /></p>}
             <div className="v-nav">
               <button disabled={idx === 0} onClick={() => setIdx(idx - 1)}><ArrowLeft size={16} />Edellinen</button>
               {idx < a.steps.length - 1
