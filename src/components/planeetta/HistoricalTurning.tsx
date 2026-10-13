@@ -1,6 +1,7 @@
 import { useId, useState } from 'react';
 import { electionYears, partySeries, historicalSources } from './historical-election-data';
 import './historical-turning.css';
+import { PoliticalFeedback } from './PoliticalFeedback';
 
 const fmt = (v: number) => v.toLocaleString('fi-FI', { maximumFractionDigits: 1 });
 const X = (year: number) => 65 + (year - 1962) / (1991 - 1962) * 650;
@@ -37,5 +38,6 @@ export function HistoricalTurning() {
     <p>Katkonuoli tarkoittaa koeteltavaa selitystä. Keskiluokkaistuminen on mahdollinen osamekanismi. Vaalitulokset eivät osoita koko ketjua eivätkä sitä, että koulutus olisi aiheuttanut veronalennusten, yksityistämisen tai sääntelyn purkamisen kannatuksen.</p>
     <p><b>Seuraava aineistokysymys:</b> kasvoiko kannatus ryhmien sisällä vai kasvoivatko Kokoomusta suosivat ryhmät? Vuosien 1973–1990 haastatteluissa on koulutus-, sosiaaliryhmä-, tulotietoja ja poliittisia asenteita. Muuttujien vertailukelpoisuus ja verokysymysten saatavuus eri vuosille on tarkistettava ennen laskentaa.</p>
     <a href={historicalSources.survey} target="_blank" rel="noreferrer">FSD2276: historiallisen haastatteluaineiston kuvaus</a>
+    <PoliticalFeedback />
   </section>;
 }
