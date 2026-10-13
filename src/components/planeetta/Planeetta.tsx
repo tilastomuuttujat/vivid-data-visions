@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { LEVELS, type Sel } from './planet-model';
 import { PlanetMap } from './PlanetMap';
 import { MechanismExplorer } from './MechanismExplorer';
+import { HistoricalTurning } from './HistoricalTurning';
 
 const PlanetGlobe = lazy(() => import('./PlanetGlobe'));
 
@@ -41,6 +42,7 @@ export function Planeetta() {
           </div>
           <aside className="pl-side"><Detail sel={sel} /></aside>
         </div>
+        <HistoricalTurning />
         <MechanismExplorer />
       </div>
     </div>
