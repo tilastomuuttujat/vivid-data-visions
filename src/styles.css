@@ -205,6 +205,7 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
   animation: v-drift 24s ease-in-out infinite alternate; }
 @keyframes v-drift { to { transform: translate3d(-4%, 3%, 0) scale(1.08); } }
 .varaan > * { position: relative; }
+.varaan > .v-aurora { position: absolute; }
 .v-top { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; font-size: 13px; color: var(--v-mute); }
 .v-back { display: inline-flex; gap: 6px; align-items: center; color: var(--v-text); border: 1px solid var(--v-line); padding: 7px 14px; border-radius: 99px; backdrop-filter: blur(8px); transition: border-color .3s; }
 .v-back:hover { border-color: var(--v-glow); }
