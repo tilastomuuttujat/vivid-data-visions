@@ -1,3 +1,4 @@
+import { useLinkedYear, TimelineCoverage } from './timeline-context';
 import { useId, useState } from 'react';
 import data from './public-debt-data.json';
 import './public-debt.css';
@@ -11,7 +12,7 @@ function Chart({series,label,cursor}: {series:Series[];label:string;cursor:numbe
  return <svg viewBox="0 0 800 310" role="img" aria-label={label}>{crises.map(c=><rect key={c.name} x={X(c.start)} width={X(c.end+1)-X(c.start)} y="35" height="225" className="pd-crisis"><title>{c.name}</title></rect>)}{[lo,(lo+hi)/2,hi].map(v=><g key={v}><line x1="65" x2="715" y1={Y(v)} y2={Y(v)} className="pd-grid"/><text x="55" y={Y(v)+4} textAnchor="end">{fmt(v)}</text></g>)}<line x1={X(cursor)} x2={X(cursor)} y1="35" y2="260" className="pd-cursor"/>{series.map(s=><path key={s.name} fill="none" stroke={s.color} strokeWidth="3" d={s.points.reduce((p,r,i,arr)=>r.value===null?p:p+`${i===0||arr[i-1]!.value===null?'M':'L'}${X(r.year)},${Y(r.value)} `,'')}/>)}{[1980,1990,2000,2010,2020,2024].map(y=><text key={y} x={X(y)} y="292" textAnchor="middle">{y}</text>)}</svg>;
 }
 export function PublicDebt(){
- const uid=useId();const [year,setYear]=useState(2024);const [unit,setUnit]=useState<'ratio'|'euros'>('ratio');const [sector,setSector]=useState('S1311');
+ const uid=useId();const [year,setYear]=useLinkedYear(2024,{min:1980,max:2024});const [unit,setUnit]=useState<'ratio'|'euros'>('ratio');const [sector,setSector]=useState('S1311');
  const selected=data.sectors.find(s=>s.id===sector)!;const publicSector=data.sectors.find(s=>s.id==='S13')!;const state=data.sectors.find(s=>s.id==='S1311')!;
  const p=selected.points.find(p=>p.year===year)!;const interest=state.points.find(p=>p.year===year)!;const debt=data.treasury.points.find(p=>p.year===year)!;const general=publicSector.points.find(p=>p.year===year)!;
  const revenueCode=sector==='S1311'?'OTRU':'OTRS';const expenseCode=sector==='S1311'?'OTEU':'OTES';
@@ -21,6 +22,7 @@ export function PublicDebt(){
  const debtSeries:Series[]=[{name:'Valtionvelka (Valtiokonttori)',color:'#65d9ec',points:data.treasury.points.map(r=>({year:r.year,value:unit==='ratio'?r.gdpRatio:r.millionEuros/1000}))},{name:'Julkisyhteisöjen EDP-velka',color:'#ffad83',points:publicSector.points.map(r=>({year:r.year,value:unit==='ratio'?r.Ratio_D:r['jali-D']===null?null:r['jali-D']/1000}))}];
  const flows:Series[]=[{name:'Tulot',color:'#acd680',points:selected.points.map(r=>({year:r.year,value:value(r,revenueCode)}))},{name:'Menot',color:'#d5a4f1',points:selected.points.map(r=>({year:r.year,value:value(r,expenseCode)}))}];
  return <section className="pd" aria-labelledby={`${uid}-title`}>
+    <TimelineCoverage year={year} />
   <p className="v-kicker">Velka ja julkinen rahoitus · 1980–2024</p><h2 id={`${uid}-title`}>Miten yhteinen järjestelmä rahoitettiin?</h2>
   <p>Velka voi rahoittaa investointeja ja pehmentää kriisejä. Se voi myös siirtää tämänhetkisen menojen ja tulojen erotuksen rahoittamista tulevaisuuteen. Tarkastele velkakantaa, vuosittaista rahoitusasemaa ja korkomenoja erikseen.</p>
   <div className="pd-controls"><label htmlFor={`${uid}-unit`}>Asteikko <select id={`${uid}-unit`} value={unit} onChange={e=>setUnit(e.target.value as typeof unit)}><option value="ratio">Suhteessa BKT:hen</option><option value="euros">Miljardia euroa</option></select></label><label htmlFor={`${uid}-sector`}>Tulojen ja menojen sektori <select id={`${uid}-sector`} value={sector} onChange={e=>setSector(e.target.value)}>{data.sectors.map(s=><option value={s.id} key={s.id}>{s.name}</option>)}</select></label></div>

@@ -1,3 +1,4 @@
+import { useLinkedYear, useLinkedRegion, TimelineCoverage } from './timeline-context';
 import { useId, useState } from 'react';
 import geo from '@/data/maakunnat.json';
 import data from './regional-path-data.json';
@@ -14,9 +15,9 @@ const fmt=(n:number|null)=>n===null?'Ei saatavilla':n.toLocaleString('fi-FI',{ma
 const fills=['#ad6449','#dca17f','#8a9d9c','#74bcc3','#4bcbdc'];
 export function RegionalPath(){
   const uid=useId();
-  const [region,setRegion]=useState('MK08');
+  const [region,setRegion]=useLinkedRegion('MK08');
   const [metric,setMetric]=useState<Metric>('population');
-  const [year,setYear]=useState(2024);
+  const [year,setYear]=useLinkedYear(2024,{min:metrics[metric].start,max:metrics[metric].end});
   const config=metrics[metric];
   const selected=data.regions.find(r=>r.id===region)!;
   const country=data.regions.find(r=>r.id==='SSS')!;
@@ -36,9 +37,10 @@ export function RegionalPath(){
   const path=(r:typeof selected)=>years.map(yr=>({yr,v:index(r,yr)})).reduce((s,p,i,arr)=>p.v===null?s:s+`${i===0||arr[i-1]!.v===null?'M':'L'}${x(p.yr)},${y(p.v)} `,'');
   return <section className="rp" aria-labelledby={`${uid}-title`}>
     <p className="v-kicker">Alueellinen pääpolku · 1990–2024</p>
+    <TimelineCoverage year={year} />
     <h2 id={`${uid}-title`}>Missä toimeentulon perusta vahvistui, missä se heikkeni?</h2>
     <p>Valitse maakunta ja mittari. Kartta näyttää muutoksen mittarin alkuvuodesta valittuun vuoteen; kuvaaja vertaa maakuntaa koko maahan. Väestö alkaa vuodesta 1990, tulot vuodesta 1995 ja työllisyys vuodesta 2000. Toimialakohtaiset sarjat päättyvät vuoteen 2023; kokonaistyöllisyys ulottuu vuoteen 2024.</p>
-    <div className="rp-controls"><label htmlFor={`${uid}-metric`}>Mittari <select id={`${uid}-metric`} value={metric} onChange={e=>{const m=e.target.value as Metric;setMetric(m);setYear(v=>Math.min(metrics[m].end,Math.max(v,metrics[m].start)));}}>{Object.entries(metrics).map(([key,m])=><option key={key} value={key}>{m.label}</option>)}</select></label><label htmlFor={`${uid}-region`}>Maakunta <select id={`${uid}-region`} value={region} onChange={e=>setRegion(e.target.value)}>{data.regions.filter(r=>r.id!=='SSS').map(r=><option key={r.id} value={r.id}>{r.name}</option>)}</select></label></div>
+    <div className="rp-controls"><label htmlFor={`${uid}-metric`}>Mittari <select id={`${uid}-metric`} value={metric} onChange={e=>{const m=e.target.value as Metric;setMetric(m);}}>{Object.entries(metrics).map(([key,m])=><option key={key} value={key}>{m.label}</option>)}</select></label><label htmlFor={`${uid}-region`}>Maakunta <select id={`${uid}-region`} value={region} onChange={e=>setRegion(e.target.value)}>{data.regions.filter(r=>r.id!=='SSS').map(r=><option key={r.id} value={r.id}>{r.name}</option>)}</select></label></div>
     <label htmlFor={`${uid}-year`}>Vuosi: <b>{year}</b></label><input id={`${uid}-year`} type="range" min={config.start} max={config.end} value={year} aria-valuetext={String(year)} onChange={e=>setYear(Number(e.target.value))}/>
     <div className="rp-body">
       <div><svg viewBox={`-4 -4 ${geo.width+8} ${geo.height+8}`} className="rp-map" role="group" aria-label="Valitse maakunta Suomen kartasta">{geo.regions.map(r=>{const v=index(data.regions.find(d=>d.id===r.id)!,year);return <path key={r.id} d={r.path} fill={color(v)} stroke={region===r.id?'#fff':'#18252e'} strokeWidth={region===r.id?1.6:.4} role="button" tabIndex={0} aria-label={`${r.name}: ${v===null?'tieto puuttuu':fmt(v-100)+' %'}, valitse maakunta`} aria-pressed={region===r.id} onClick={()=>setRegion(r.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setRegion(r.id);}}}><title>{r.name}: {v===null?'tieto puuttuu':fmt(v-100)+' %'}</title></path>;})}</svg><p className="rp-legend">Muutos {config.start}–{year}, %</p><div className="rp-bins">{['alle −20','−20 – alle −5','−5 – +5','yli +5 – +20','yli +20'].map((label,i)=><span key={label}><i style={{background:fills[i]}}/>{label}</span>)}</div><p className="rp-note">Harmaa: puuttuva tieto. Väri kertoo muutoksen, ei alueen paremmuutta. Maakunnan keskiarvo peittää kuntien erot.</p></div>

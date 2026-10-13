@@ -1,3 +1,4 @@
+import { useLinkedYear, TimelineCoverage } from './timeline-context';
 import { useId, useState } from 'react';
 import data from './housing-wealth-data.json';
 import './housing-wealth.css';
@@ -11,13 +12,15 @@ function Bars({rows,domain,label}:{rows:Row[];domain:[number,number];label:strin
 }
 const domain=(values:(number|null)[]):[number,number]=>[Math.min(0,...values.filter((v):v is number=>v!==null)),Math.max(1,...values.filter((v):v is number=>v!==null))*1.05];
 export function HousingWealth(){
-  const uid=useId();const [wealthYear,setWealthYear]=useState(2023);const [year,setYear]=useState(2024);const [metric,setMetric]=useState<'income'|'costShare'|'expenditureShare'>('costShare');const [ageMetric,setAgeMetric]=useState<'median'|'owners'>('median');
+  const uid=useId();const [wealthYear,setWealthYear]=useLinkedYear(2023,{min:1987,max:2023,observed:data.wealthYears});const [year,setYear]=useLinkedYear(2024,{min:2002,max:2024});const [metric,setMetric]=useState<'income'|'costShare'|'expenditureShare'>('costShare');const [ageMetric,setAgeMetric]=useState<'median'|'owners'>('median');
   const wr=wealthGroups.map(g=>({name:g.name,value:data.wealth.find(p=>p.group===g.id&&p.year===wealthYear)!.median}));
   const ar=ageNames.map((name,i)=>({name,value:data.ages.find(p=>p.group===String(i+1)&&p.year===wealthYear)![ageMetric]}));
   const currency=metric==='income';const cap=currency?Math.ceil(Math.max(...data.housing.map(p=>p.income??0))/10000)*10000:100;
   const X=(v:number)=>55+(v-2002)/22*620;const Y=(v:number)=>250-v/cap*210;
   const owners=data.housing.find(p=>p.group==='1'&&p.year===year)!;const renters=data.housing.find(p=>p.group==='2'&&p.year===year)!;
   return <section className="hw" aria-labelledby={`${uid}-title`}>
+    <TimelineCoverage year={year} />
+    <TimelineCoverage year={wealthYear} label="Varallisuuden tutkimus" />
     <p className="v-kicker">Omistus, asuminen ja toimeentulo</p><h2 id={`${uid}-title`}>Tuloista omaisuudeksi — vai asumisen kustannuksiin?</h2>
     <p>Omistaminen vaikuttaa sekä varallisuuteen että asumisen rasitukseen. Vertaa erikseen varallisuuden tutkimusvuosia ja vuosittaisia asumistietoja. Paneelit eivät seuraa samoja yksittäisiä kotitalouksia.</p>
     <label htmlFor={`${uid}-wealth`}>Varallisuuden tutkimusvuosi <select id={`${uid}-wealth`} value={wealthYear} onChange={e=>setWealthYear(Number(e.target.value))}>{data.wealthYears.map(v=><option key={v}>{v}</option>)}</select></label>
