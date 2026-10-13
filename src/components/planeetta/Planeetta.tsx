@@ -1,3 +1,4 @@
+import { RedistributionPath } from './RedistributionPath';
 import { RegionalPath } from './RegionalPath';
 import { ProductivityPath } from './ProductivityPath';
 import { lazy, Suspense, useCallback, useState } from 'react';
@@ -53,6 +54,7 @@ export function Planeetta() {
         <OwnershipPath />
         <StoraComparison />
         <RegionalPath />
+        <RedistributionPath />
         <HistoricalTurning />
         <ProductivityPath />
         <MechanismExplorer />
