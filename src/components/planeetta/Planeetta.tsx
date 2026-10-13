@@ -3,6 +3,7 @@ import { ClientOnly, Link } from '@tanstack/react-router';
 import { ArrowRight } from 'lucide-react';
 import { LEVELS, type Sel } from './planet-model';
 import { PlanetMap } from './PlanetMap';
+import { MechanismExplorer } from './MechanismExplorer';
 
 const PlanetGlobe = lazy(() => import('./PlanetGlobe'));
 
@@ -40,6 +41,7 @@ export function Planeetta() {
           </div>
           <aside className="pl-side"><Detail sel={sel} /></aside>
         </div>
+        <MechanismExplorer />
       </div>
     </div>
   );
