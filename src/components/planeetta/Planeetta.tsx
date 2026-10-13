@@ -6,6 +6,7 @@ import { PlanetMap } from './PlanetMap';
 import { MechanismExplorer } from './MechanismExplorer';
 import { HistoricalTurning } from './HistoricalTurning';
 import { LongPath } from './LongPath';
+import { TransitionPath } from './TransitionPath';
 
 const PlanetGlobe = lazy(() => import('./PlanetGlobe'));
 
@@ -44,6 +45,7 @@ export function Planeetta() {
           <aside className="pl-side"><Detail sel={sel} /></aside>
         </div>
         <LongPath />
+        <TransitionPath />
         <HistoricalTurning />
         <MechanismExplorer />
       </div>
