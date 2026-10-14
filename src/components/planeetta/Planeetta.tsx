@@ -1,3 +1,4 @@
+import { PoliticalGate } from './PoliticalGate';
 import { FinlandValue } from './FinlandValue';
 import { SsabComparison } from './SsabComparison';
 import { StoraOwnership } from './StoraOwnership';
@@ -68,7 +69,8 @@ export function Planeetta() {
         <div id="timeline-redistribution"><RedistributionPath /></div>
         <div id="timeline-housing"><HousingWealth /></div>
         <div id="timeline-debt"><PublicDebt /></div>
-        <div id="timeline-historical"><HistoricalTurning /></div>
+        <div id="timeline-historical"><HistoricalTurning />
+        <PoliticalGate /></div>
         <div id="timeline-productivity"><ProductivityPath /></div>
         <MechanismExplorer />
       </div>
