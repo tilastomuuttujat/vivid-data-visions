@@ -1,3 +1,4 @@
+import { structuralTimelineEvents } from './structural-choices';
 import { fertility, familyPolicyEvents } from './family-policy-data';
 import { lawEvents } from './law-history';
 import { policyRecords } from './policy-history';
@@ -34,8 +35,9 @@ export function timelineLanes(regionId:string):TimelineLane[]{
  ];
 }
 export const exactValue=(series:TimelineSeries,year:number)=>series.points.find(p=>p.year===year)?.value??null;
-export type TimelineEvent={id:string;year:number;title:string;text:string;url:string;kind:string;policyId?:string;lawId?:string;familyId?:string;theme?:string};
+export type TimelineEvent={id:string;year:number;title:string;text:string;url:string;kind:string;policyId?:string;lawId?:string;familyId?:string;structuralId?:string;theme?:string};
 export const timelineEvents:TimelineEvent[]=[
+ ...structuralTimelineEvents,
  ...familyPolicyEvents.map(e=>({id:`family-${e.id}`,familyId:e.id,year:e.year,title:`${e.date}: ${e.title}`,text:e.text,url:e.url,kind:e.kind,theme:'Perheet ja työvoima'})),
  ...lawEvents,
  ...policyRecords.map(p=>({id:`policy-${p.id}`,year:p.year,title:`${p.date}: ${p.title}`,text:`${p.phase}. Päätöksen sisältö, vastuut ja arviot eritellään alla.`,url:p.sources[0]!.url,kind:p.phase,theme:p.theme,policyId:p.id})),
