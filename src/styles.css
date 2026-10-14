@@ -522,3 +522,6 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
 .pl-theme-body th { color: var(--v-mute); font-weight: 500; text-transform: uppercase; letter-spacing: .08em; font-size: 11px; }
 .pl-theme-body th, .pl-theme-body td { border-bottom: 1px solid var(--v-line); }
 @media (max-width: 640px) { .pl-theme > summary { grid-template-columns: 1fr auto; } .pl-theme-no { display: none; } }
+.pl-theme-body select { background: var(--v-ink); color: var(--v-text); border: 1px solid var(--v-line); border-radius: 10px; padding: 6px 10px; }
+.pl-theme-body input[type=range], .pl-theme-body input[type=checkbox], .pl-theme-body input[type=radio] { accent-color: var(--v-glow); }
+.pl-theme-body fieldset { border: 1px solid var(--v-line); border-radius: 12px; }
