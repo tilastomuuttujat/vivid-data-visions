@@ -1,3 +1,4 @@
+import { FinlandValue } from './FinlandValue';
 import { SsabComparison } from './SsabComparison';
 import { StoraOwnership } from './StoraOwnership';
 import { SharedTimeline } from './SharedTimeline';
@@ -61,6 +62,7 @@ export function Planeetta() {
         <OwnershipPath />
         <StoraOwnership />
         <SsabComparison />
+        <FinlandValue />
         <StoraComparison />
         <div id="timeline-regional"><RegionalPath /></div>
         <div id="timeline-redistribution"><RedistributionPath /></div>
