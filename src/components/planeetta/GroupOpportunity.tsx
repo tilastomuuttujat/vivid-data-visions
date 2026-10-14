@@ -1,0 +1,38 @@
+import { useState } from 'react';
+import { ageGroups,educationGroups,incomeGroups,groupCounts,groupIncome,groupRate,groupRegions,type GroupMetric } from './group-opportunity';
+import { TimelineCoverage,useLinkedRegion,useLinkedYear } from './timeline-context';
+import './group-opportunity.css';
+const colors=['#edb06e','#77c9c5','#a7bcff','#d8a8df','#b3d88f'];
+const fmt=(v:number|null,unit='%')=>v==null?'Ei havaintoa':v.toLocaleString('fi-FI',{maximumFractionDigits:1})+' '+unit;
+function Plot({title,groups,min,max,year,value,ceiling=100}:{title:string;groups:[string,string][];min:number;max:number;year:number;value:(year:number,group:string)=>number|null;ceiling?:number}){
+ const x=(y:number)=>45+(y-min)/(max-min)*650;const yp=(v:number)=>210-v/ceiling*180;
+ return <div className="go-plot"><h4>{title}</h4><svg role="img" aria-label={title} viewBox="0 0 740 250">
+ {[0,ceiling/2,ceiling].map(v=><g key={v}><line x1="45" x2="695" y1={yp(v)} y2={yp(v)} stroke="#ffffff25"/><text x="3" y={yp(v)+4}>{v}</text></g>)}
+ <line x1={x(year)} x2={x(year)} y1="25" y2="210" stroke="white" strokeDasharray="3 5"/>
+ {groups.map(([id,label],i)=>{let d='';let gap=true;for(let y=min;y<=max;y++){const v=value(y,id);if(v==null){gap=true;continue;}d+=`${gap?'M':'L'}${x(y)},${yp(v)} `;gap=false;}return <path key={id} d={d} fill="none" stroke={colors[i]} strokeWidth="2.5"><title>{label}</title></path>;})}
+ <text x="45" y="239">{min}</text><text x="665" y="239">{max}</text>
+ {[2017,2019].filter(y=>min===1987&&y>=min&&y<=max).map(y=><line key={y} x1={x(y)} x2={x(y)} y1="25" y2="210" stroke="#ffffff25" strokeDasharray="1 5"/>)}
+ </svg><ul className="go-legend">{groups.map(([id,label],i)=><li key={id}><span style={{background:colors[i]}}/>{label}</li>)}</ul></div>;
+}
+export function GroupOpportunity(){
+ const [region,setRegion]=useLinkedRegion('MK08');const [year,setYear]=useLinkedYear(2024,{min:1987,max:2024});
+ const [kind,setKind]=useState<'education'|'age'>('education');const [metric,setMetric]=useState<GroupMetric>('employment');const [incomeMetric,setIncomeMetric]=useState<'poverty'|'median'>('poverty');
+ const groups=kind==='education'?educationGroups:ageGroups;const regionName=groupRegions.find(r=>r.id===region)?.name??region;
+ const metricName=metric==='employment'?'Työllisten osuus ryhmän väestöstä':metric==='unemployment'?'Työttömien osuus ryhmän työvoimasta':'Opiskelijoiden osuus ryhmän väestöstä';
+ return <section className="go-section"><p className="v-kicker">Työn polut · ryhmien erilaiset lähtökohdat</p><h2>Kenellä on mahdollisuus vaihtaa polkua?</h2>
+ <p>Alueen toipuminen voi peittää ryhmien eriytymisen. Vertaa koulutus- ja ikäryhmien kehitystä sekä valtakunnallista toimeentuloa. Käyrät kuvaavat vuosittaisia ryhmiä, eivät samojen ihmisten siirtymiä työstä toiseen.</p>
+ <div className="go-controls"><label>Alue<select aria-label="Ryhmien maakunta" value={region} onChange={e=>setRegion(e.target.value)}>{groupRegions.map(r=><option key={r.id} value={r.id}>{r.name}</option>)}</select></label>
+ <label>Vuosi {year}<input aria-label="Ryhmien vuosi" type="range" min="1987" max="2024" value={year} onChange={e=>setYear(+e.target.value)}/></label>
+ <label>Ryhmät<select aria-label="Ryhmien tarkastelutapa" value={kind} onChange={e=>setKind(e.target.value as typeof kind)}><option value="education">Koulutus · 18–64-vuotiaat</option><option value="age">Ikä · 18–64-vuotiaat</option></select></label>
+ <label>Mittari<select aria-label="Ryhmien työllisyysmittari" value={metric} onChange={e=>setMetric(e.target.value as GroupMetric)}><option value="employment">Työllisten osuus väestöstä</option><option value="unemployment">Työttömien osuus työvoimasta</option><option value="students">Opiskelijoiden osuus väestöstä</option></select></label><button onClick={()=>setYear(2024)}>Näytä 2024</button></div>
+ <TimelineCoverage year={year} label="Ryhmien työllisyys"/>
+ <Plot title={`${regionName}: ${metricName}, 1987–2024 (%)`} groups={groups} min={1987} max={2024} year={year} value={(y,g)=>groupRate(region,y,kind,g,metric)}/>
+ <div className="go-scroll"><table aria-label={`Ryhmien havainnot ${year}`}><thead><tr><th>Ryhmä</th><th>{year}</th><th>Muutos 1990 → {year}, %-yks.</th><th>Ryhmän väestö</th></tr></thead><tbody>{groups.map(([id,name])=>{const v=groupRate(region,year,kind,id,metric),base=groupRate(region,1990,kind,id,metric);return <tr key={id}><th>{name}</th><td>{fmt(v)}</td><td>{year<1990?'Ei vertailua':fmt(v!=null&&base!=null?v-base:null,'')}</td><td>{fmt(groupCounts(region,year,kind,id)?.[0]??null,'henkilöä')}</td></tr>;})}</tbody></table></div>
+ <p className="go-note">Työllisyys ja opiskelijoiden osuus: nimittäjänä ryhmän koko väestö. Työttömyys: nimittäjänä työlliset + työttömät. Opiskelijat kuuluvat tässä pääasiallisen toiminnan luokitukseen; työssä käyvä opiskelija voi olla työllinen. Ikä ja koulutus ovat erillisiä rajauksia, eivät ikävakioituja vertailuja. Työttömien rekisterikäsittely muuttui 2017 ja tulorekisteri tuli käyttöön 2019 (pystyviivat). Ryhmien ikärakenne, tutkintojen täydentyminen ja muuttoliike voivat muuttaa osuuksia.</p>
+ <h3>Toimeentulo · koko maa, 18–64-vuotiaat</h3><p>Tämä osa ei seuraa valittua maakuntaa. Tulonjakotilaston koulutusluokitus eroaa työllisyyskuvasta: erikoisammattitutkinnot ovat tässä ryhmässä 456. Luokkia ei yhdistetä keskenään.</p>
+ <label>Toimeentulon mittari<select aria-label="Ryhmien toimeentulomittari" value={incomeMetric} onChange={e=>setIncomeMetric(e.target.value as typeof incomeMetric)}><option value="poverty">Pienituloisten osuus (%)</option><option value="median">Kotitalouden ekvivalentin tulon mediaani (2024 €)</option></select></label>
+ {year<2010?<p role="status">Vuodelta {year} ei ole tämän aineiston toimeentulohavaintoa. Aineisto alkaa 2010; valitse myöhempi vuosi.</p>:<><Plot title={`Koko maa: ${incomeMetric==='poverty'?'pienituloisten osuus (%)':'ekvivalentin tulon mediaani (2024 €)'}, 2010–2024`} groups={incomeGroups} min={2010} max={2024} year={year} value={(y,g)=>groupIncome(y,g,incomeMetric)} ceiling={incomeMetric==='poverty'?100:50000}/><table aria-label={`Koko maan toimeentulo ${year}`}><tbody>{incomeGroups.map(([id,name])=><tr key={id}><th>{name}</th><td>{fmt(groupIncome(year,id,incomeMetric),incomeMetric==='poverty'?'%':'€ vuoden 2024 rahassa')}</td></tr>)}</tbody></table></>}
+ <p className="go-note">Pienituloisuus tarkoittaa asuntokunnan kulutusyksikköä kohti lasketun käytettävissä olevan rahatulon jäämistä alle 60 % koko väestön mediaanista. Tulot sisältävät verojen ja tulonsiirtojen vaikutuksen sekä muiden kotitalouden jäsenten tulot. Tämä ei mittaa työttömyysturvan korvausastetta, toimeentuloa työpaikan vaihdon aikana eikä yksilön palkkaa. Asuntoväestöstä puuttuvat esimerkiksi asunnottomat ja laitoksissa asuvat.</p>
+ <details><summary>Lähteet ja päätelmien rajat</summary><p>Työssäkäyntitilasto: väestö vuoden lopussa, pääasiallinen toiminta vuoden viimeisellä viikolla. Ei tutkintoa / tuntematon -ryhmä sisältää myös puutteellisesti rekisteröityjä ulkomaisia tutkintoja. Työllisyysosuuden ero ei yksin osoita koulutuksen vaikutusta tai yksilön mahdollisuutta työllistyä. Polun vaihtamisen tutkimiseen tarvitaan samoja henkilöitä seuraava aineisto, työpaikkasiirtymät ja työttömyysjaksojen kestot.</p><ul>{[['tyokay','115d'],['tyokay','115w'],['tjt','14k5']].map(([ds,t])=><li key={t}><a href={`https://statfin.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__${ds}/${t}.px/`} target="_blank" rel="noreferrer">Tilastokeskus {t}</a></li>)}<li><a href="https://stat.fi/fi/dokumentaatio/tilastojen-dokumentaatio/tyokay">Työssäkäyntitilaston dokumentaatio</a></li></ul></details>
+ </section>;
+}
