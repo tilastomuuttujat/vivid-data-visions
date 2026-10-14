@@ -1,0 +1,134 @@
+{
+  "retrieved": "2026-10-14",
+  "sources": {
+    "sale": "https://www.solidium.fi/tiedotteet/solidium-toteutti-onnistuneesti-stora-enso-oyj-n-rosakkeiden-myynnin/",
+    "dividends": "https://www.storaenso.com/-/media/documents/download-center/documents/investor-relations/2025/stora-enso-dividend-history_2026.pdf",
+    "solidium2018": "https://www.solidium.fi/tiedotteet/solidium-oy-n-tilinpaatos-ja-puolivuosikatsaus-113062018/",
+    "solidium2019": "https://www.solidium.fi/tiedotteet/solidium-oy-n-puolivuosikatsaus-113062019-ja-tilinpaatos/",
+    "ssabTransfer": "https://www.solidium.fi/tiedotteet/solidium-oy-n-osakkeenomistajan-paatos-paaoman-palautuksesta/",
+    "sampoClosing": "https://rss.globenewswire.com/fr/news-release/2007/02/01/111584/0/fi/SAMPO-PANKKI-OYJ-N-MYYNTI-VOIMAAN-T%C3%84N%C3%84%C3%84N.html",
+    "publicAssessment": "https://valtioneuvosto.fi/-/yhtioomistuksista-omaisuustuloja-valtiolle-1-45-miljardia-euroa-omistajaohjaus-valmistelee-hallituksen-investointiohjelman-rahoitusta"
+  },
+  "storaSale": {
+    "date": "2018-06-12",
+    "sharesMillion": 14,
+    "price": 17.6,
+    "recipient": "Solidium",
+    "netReleasedApproxMillion": 220,
+    "aSharesAcquiredMillion": 1.4,
+    "votesBefore": 27.3,
+    "votesAfter": 27.3
+  },
+  "dividends": [
+    {
+      "profitYear": 2018,
+      "date": "2019-03-25",
+      "perShare": 0.5
+    },
+    {
+      "profitYear": 2019,
+      "date": "2020-06-15",
+      "perShare": 0.15
+    },
+    {
+      "profitYear": 2019,
+      "date": "2020-12-17",
+      "perShare": 0.15
+    },
+    {
+      "profitYear": 2020,
+      "date": "2021-03-30",
+      "perShare": 0.3
+    },
+    {
+      "profitYear": 2021,
+      "date": "2022-03-24",
+      "perShare": 0.55
+    },
+    {
+      "profitYear": 2022,
+      "date": "2023-03-27",
+      "perShare": 0.6
+    },
+    {
+      "profitYear": 2023,
+      "date": "2024-04-04",
+      "perShare": 0.1
+    },
+    {
+      "profitYear": 2023,
+      "date": "2024-12-20",
+      "perShare": 0.1
+    },
+    {
+      "profitYear": 2024,
+      "date": "2025-04-02",
+      "perShare": 0.13
+    },
+    {
+      "profitYear": 2024,
+      "date": "2025-10-02",
+      "perShare": 0.12
+    }
+  ],
+  "transactions": [
+    {
+      "company": "stora",
+      "date": "2018-06-12",
+      "year": 2018,
+      "amount": 246.4,
+      "currency": "EUR",
+      "recipient": "Solidium",
+      "form": "Käteinen, bruttokauppahinta",
+      "title": "14 miljoonan R-osakkeen myynti",
+      "source": "sale",
+      "note": "246,4 on 14 × 17,60. A-osakkeiden rinnakkainen hankinta muutti vapautuvan nettopääoman noin 220 miljoonaan; äänivalta säilyi. Ei tuloutus valtion budjettiin."
+    },
+    {
+      "company": "ssab",
+      "date": null,
+      "year": 2018,
+      "amount": 151,
+      "currency": "EUR",
+      "recipient": "Solidium",
+      "form": "Käteinen, osakemyynti",
+      "title": "SSAB-osakkeiden myynnit tilikaudella 1.7.2017–30.6.2018",
+      "source": "solidium2018",
+      "note": "Tilikauden myyntejä, ei yhden päivän kauppa: omistus 17,1 % → 13,5 %. Vuosimerkintä 2018 tarkoittaa tilikauden päättymistä."
+    },
+    {
+      "company": "ssab",
+      "date": "2021-09-14",
+      "year": 2021,
+      "amount": 271,
+      "currency": "EUR",
+      "recipient": "Suomen valtio",
+      "form": "Osakkeet, päätöksessä ilmoitettu noin-arvo",
+      "title": "Solidiumin SSAB-osakkeiden siirtopäätös",
+      "source": "ssabTransfer",
+      "note": "Pääoman palautus osakkeina, ei 271 miljoonan euron käteismyynti eikä julkisesta omistuksesta poistuminen."
+    },
+    {
+      "company": "sampo",
+      "date": "2007-02-01",
+      "year": 2007,
+      "amount": 4050,
+      "currency": "EUR",
+      "recipient": "Sampo Oyj",
+      "form": "Käteinen, pankkitoiminnan kauppahinta",
+      "title": "Sampo Pankin myynti Danskelle toteutuu",
+      "source": "sampoClosing",
+      "note": "Sampo sai kauppahinnan. Se ei ole suoraan valtion tulo eikä myyntivoitto. Myynnin kohde oli vuoden 2007 pankkikonserni, ei muuttumaton vuoden 2000 Leonia."
+    }
+  ],
+  "solidiumBridge": {
+    "receivedPeriod": "1.7.2017–30.6.2018",
+    "gross": 362,
+    "afterTax": 351,
+    "paidPeriod": "1.7.2018–30.6.2019",
+    "cashToState": 351,
+    "stockToState": 155,
+    "scope": "Koko Solidiumin salkku, ei Stora Enso yksin"
+  },
+  "dividendSourceSha256": "697329dec6035fed51ad14915aea19a0e62f3b788e00b5a7e551fa4305a4c5dc"
+}

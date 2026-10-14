@@ -1,3 +1,4 @@
+import { OwnershipCashflow } from './OwnershipCashflow';
 import { useId, useState } from 'react';
 import { valueCompanies, valueSources, storaFinlandTaxes, taxTotals, observedShare, type ValueObservation } from './finland-value-data';
 import { ssabSources } from './ssab-comparison-data';
@@ -38,5 +39,6 @@ export function FinlandValue(){
  <p>Vuoden 2018 yhteisövero oli 1 milj. EUR, mutta koko raportoitu verojalanjälki 360 milj. EUR. Yhtiö selitti vähäistä yhteisöveroa aiempien vuosien tappioilla, joihin liittyi muun muassa sulkemis- ja rakennejärjestelykuluja. Muiden puolesta tilitetyt verot eivät ole yhtiön oma verorasitus. <a href={valueSources.storaFinancials}>Financials s. 86–87: määritelmät ja maataulukko</a>.</p>
  </>:<p><b>Suomen verojalanjälki: tieto puuttuu tästä aineistosta.</b> Konsernin tuloverokulua ei sijoiteta Suomeen eikä verovelkaa käsitellä maksettuna verona.</p>}
  <details><summary>Mitä tästä voi päätellä?</summary><p>Henkilöstön supistuminen voi pienentää palkkoihin kytkeytyvää tulovirtaa, mutta sen määrää ei mitata henkilömäärällä. Tuottavuus, palkkataso, alihankinta ja uudet investoinnit voivat muuttaa kokonaisuutta. Konsernin kasvu ja Suomen toiminnan supistuminen täytyy osoittaa samalla rajauksella; tässä olevat yksittäiset havainnot eivät vielä osoita tällaista pitkää trendiä.</p><p>Palkat, investoinnit, verot, osingot ja osakemyynnit eivät ole yhteenlaskettava Suomen hyötysumma. Palkkaverot sisältyvät palkkojen kautta kulkevaan ketjuun; investointi on tuotantopäätös, osakekauppa omistusvarallisuuden vaihto. Verot ja veronluonteiset maksut eivät ole kaikki valtion budjettituloa, ja verojalanjälki ei ole julkisten tukien jälkeinen nettovaikutus.</p><p>Stora Enson verojalanjäljen rajaus sisältää konserniyhtiöt ja vähintään 50-prosenttiset yhteistoiminnot suhteellisesti, kun työntekijöitä on vähintään 10 tai liikevaihto vähintään 5 milj. EUR. Rajaus eroaa henkilöstötaulukosta. Maakohtaiset palkat, toteutuneet investoinnit, julkiselle omistajalle saadut osingot ja yritysjärjestelyillä oikaistu aikasarja tarvitaan ennen omistuksen muutoksen vaikutuksen arviointia. Puuttuva tieto säilyy aukoksi merkittynä.</p></details>
+ <div id="timeline-ownership-cash"><OwnershipCashflow /></div>
  </section>;
 }
