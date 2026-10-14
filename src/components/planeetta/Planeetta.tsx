@@ -1,3 +1,4 @@
+import { WorkMobility } from './WorkMobility';
 import { GroupOpportunity } from './GroupOpportunity';
 import { RegionalOverlap } from './RegionalOverlap';
 import { LocalAdaptation } from './LocalAdaptation';
@@ -77,6 +78,7 @@ export function Planeetta() {
         <div id="timeline-local-adaptation"><LocalAdaptation /></div>
         <div id="timeline-work-opportunity"><WorkOpportunity /></div>
         <div id="timeline-group-opportunity"><GroupOpportunity /></div>
+        <div id="timeline-work-mobility"><WorkMobility /></div>
         <div id="timeline-households"><HouseholdImpact /></div>
         <LongPath />
         <TransitionPath />
