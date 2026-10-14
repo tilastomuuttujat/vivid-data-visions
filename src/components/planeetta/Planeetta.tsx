@@ -1,3 +1,4 @@
+import { LocalAdaptation } from './LocalAdaptation';
 import { WorkOpportunity } from './WorkOpportunity';
 import { CareCapacity } from './CareCapacity';
 import { HouseholdImpact } from './HouseholdImpact';
@@ -70,6 +71,7 @@ export function Planeetta() {
         <StructuralChoices />
         <div id="timeline-budget"><BudgetPower /></div>
         <div id="timeline-care"><CareCapacity /></div>
+        <div id="timeline-local-adaptation"><LocalAdaptation /></div>
         <div id="timeline-work-opportunity"><WorkOpportunity /></div>
         <div id="timeline-households"><HouseholdImpact /></div>
         <LongPath />
