@@ -1,3 +1,4 @@
+import { RecoveryMap } from './RecoveryMap';
 import { CrisisManagement } from './CrisisManagement';
 import { WorkMobility } from './WorkMobility';
 import { GroupOpportunity } from './GroupOpportunity';
@@ -75,6 +76,7 @@ export function Planeetta() {
         <StructuralChoices />
         <div id="timeline-budget"><BudgetPower /></div>
         <div id="timeline-crises"><CrisisManagement /></div>
+        <div id="timeline-recovery"><RecoveryMap /></div>
         <div id="timeline-care"><CareCapacity /></div>
         <div id="timeline-regional-overlap"><RegionalOverlap /></div>
         <div id="timeline-local-adaptation"><LocalAdaptation /></div>
