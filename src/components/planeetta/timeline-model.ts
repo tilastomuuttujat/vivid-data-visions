@@ -1,3 +1,4 @@
+import { cashflowEvents } from './ownership-cashflow';
 import { employmentShare, longTermShare, workEvents, workYears } from './work-opportunity';
 import { careEvents, careYears, careValue } from './care-capacity';
 import { householdImpactEvents } from './household-impact';
@@ -46,6 +47,7 @@ export type TimelineEvent={id:string;year:number;title:string;text:string;url:st
 export const timelineEvents:TimelineEvent[]=[
  ...careEvents,
  ...workEvents,
+ ...cashflowEvents,
  ...householdImpactEvents,
  ...budgetEvents,
  ...structuralTimelineEvents,
