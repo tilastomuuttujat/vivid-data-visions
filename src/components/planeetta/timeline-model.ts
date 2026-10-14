@@ -1,3 +1,4 @@
+import { employmentShare, longTermShare, workEvents, workYears } from './work-opportunity';
 import { careEvents, careYears, careValue } from './care-capacity';
 import { householdImpactEvents } from './household-impact';
 import { budgetEvents, budgetPoints, budgetValue } from './budget-history';
@@ -26,6 +27,7 @@ export function timelineLanes(regionId:string):TimelineLane[]{
  const kok=partySeries.find(p=>p.id==='kok')!;
  const indexed=(key:'population'|'jobs',baseYear:number)=>{const base=region.points.find(p=>p.year===baseYear)![key];return region.points.filter(p=>p.year>=baseYear).map(p=>({year:p.year,value:p[key]===null||base===null?null:p[key]!/base*100}));};
  return [
+  {id:'opportunity',name:'Työllisyys ja työttömyyden pitkittyminen',unit:'% · eri vertailuväestöt',source:'https://statfin.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__tyokay/115b.px/',note:'Valittu maakunta. Työllisten osuus 18–64-vuotiaista; pitkäaikaistyöttömien osuus työnhakijatyöttömistä (kk-määrien vuosikeskiarvot). Eri nimittäjät, ei työvoimatutkimuksen työllisyysaste.',series:[{name:'Työllisten osuus 18–64-vuotiaista',color:colors[0]!,breaks:[2017,2019],points:workYears.map(year=>({year,value:employmentShare(regionId,year)}))},{name:'Pitkäaikaistyöttömien osuus työnhakijatyöttömistä',color:colors[1]!,breaks:[2017],points:workYears.map(year=>({year,value:longTermShare(regionId,year)}))}]},
   {id:'care',name:'Kotihoidon peittävyys 75+',unit:'% ikäryhmästä',source:'https://sotkanet.fi/rest/1.1/indicators/5513',note:'Koko maa, asiakkaat vuoden aikana 2016–2025. Ikä ei yksin mittaa avuntarvetta; rekisteripuutteet vaikuttavat. Alueet tarkemmassa näkymässä.',series:[{name:'Säännöllisen kotihoidon asiakkaat',color:colors[0]!,points:careYears.map(year=>({year,value:careValue(658,year,'coverage')}))}]},
   {id:'budget',name:'Budjetin menojen painopisteet',unit:'% menoista ilman velan lyhennyksiä',source:'https://budjetti.vm.fi/',note:'Valtion talousarviotalouden toteumat 2000–2024, eri käsite kuin tilinpidon menot. Opetusalan rahoitussiirrot 2013 ja 2015 katkaisevat sarjan.',series:([['29','Opetus ja kulttuuri'],['30','Maa- ja metsätalous'],['36','Velan korot']] as const).map(([key,name],i)=>({name,color:colors[i]!,breaks:key==='29'?[2013,2015]:[],points:budgetPoints.filter(p=>p.stage==='actual').map(p=>({year:p.year,value:budgetValue(p,key,'expense','share')}))}))},
   {id:'fertility',name:'Syntyvyys',unit:'kokonaishedelmällisyysluku',source:fertility.source,note:'Vuosisarja 2010–2025; ei lopullinen lapsiluku eikä hallitusvaikutuksen mittari.',series:[{name:'Kokonaishedelmällisyysluku',color:'#65d9ec',points:fertility.points.map(p=>({year:p.year,value:p.tfr}))}]},
@@ -43,6 +45,7 @@ export const exactValue=(series:TimelineSeries,year:number)=>series.points.find(
 export type TimelineEvent={id:string;year:number;title:string;text:string;url:string;kind:string;policyId?:string;lawId?:string;familyId?:string;structuralId?:string;theme?:string};
 export const timelineEvents:TimelineEvent[]=[
  ...careEvents,
+ ...workEvents,
  ...householdImpactEvents,
  ...budgetEvents,
  ...structuralTimelineEvents,
