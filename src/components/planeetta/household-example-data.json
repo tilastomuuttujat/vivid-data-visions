@@ -1,0 +1,734 @@
+{
+  "retrieved": "2026-10-14",
+  "unit": "euroa kuukaudessa, nimellinen mallilaskelma",
+  "vintages": [
+    {
+      "id": "2024",
+      "published": "2024-10-10",
+      "calculated": "2024-10-02",
+      "forecastFrom": 2024,
+      "url": "https://labore.fi/wp-content/uploads/2024/10/Esimerkkiperheet101024.pdf",
+      "web": "https://labore.fi/julkaisu/ostovoima-kasvuun-synkan-kauden-jalkeen-sosiaalietuuksien-leikkaukset-jakavat-kotitalouksia/",
+      "earningsNote": "Vuoden 2024 raportin ansioturvaesimerkki on eri vuosina työttömäksi jäävien poikkileikkaus. Porrastus sisältyy vuoden 2025 laskelmaan; sama henkilö ei pysy ansiopäivärahalla koko vuosikymmentä.",
+      "sha256": "18392c6745bc56c92f2de35822f91b131ef418286f7b38ecbc3433cd0004cb89",
+      "profiles": [
+        {
+          "id": "high-income",
+          "name": "Hyvätuloinen pari",
+          "description": "Kaksi palkansaajaa, ei lapsia; velaton omistusasunto.",
+          "page": 21,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 12545.0,
+              "transfers": 0.0,
+              "taxes": 4834.0,
+              "net": 7711.0,
+              "taxShare": 38.5
+            },
+            {
+              "year": 2022,
+              "gross": 14029.0,
+              "transfers": 0.0,
+              "taxes": 5399.0,
+              "net": 8630.0,
+              "taxShare": 38.5
+            },
+            {
+              "year": 2023,
+              "gross": 14095.0,
+              "transfers": 0.0,
+              "taxes": 5435.0,
+              "net": 8660.0,
+              "taxShare": 38.6
+            },
+            {
+              "year": 2024,
+              "gross": 14659.0,
+              "transfers": 0.0,
+              "taxes": 5577.0,
+              "net": 9081.0,
+              "taxShare": 38.0
+            },
+            {
+              "year": 2025,
+              "gross": 15230.0,
+              "transfers": 0.0,
+              "taxes": 5842.0,
+              "net": 9388.0,
+              "taxShare": 38.4
+            }
+          ]
+        },
+        {
+          "id": "salaried-family",
+          "name": "Toimihenkilöiden lapsiperhe",
+          "description": "Kaksi palkansaajaa ja kaksi lasta; asuntovelallinen.",
+          "page": 21,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 6926.0,
+              "transfers": 202.0,
+              "taxes": 2023.0,
+              "net": 5105.0,
+              "taxShare": 29.2
+            },
+            {
+              "year": 2022,
+              "gross": 7986.0,
+              "transfers": 216.0,
+              "taxes": 2382.0,
+              "net": 5821.0,
+              "taxShare": 29.8
+            },
+            {
+              "year": 2023,
+              "gross": 8363.0,
+              "transfers": 200.0,
+              "taxes": 2522.0,
+              "net": 6040.0,
+              "taxShare": 30.2
+            },
+            {
+              "year": 2024,
+              "gross": 8697.0,
+              "transfers": 200.0,
+              "taxes": 2584.0,
+              "net": 6313.0,
+              "taxShare": 29.7
+            },
+            {
+              "year": 2025,
+              "gross": 9036.0,
+              "transfers": 200.0,
+              "taxes": 2690.0,
+              "net": 6546.0,
+              "taxShare": 29.8
+            }
+          ]
+        },
+        {
+          "id": "worker-family",
+          "name": "Työntekijöiden lapsiperhe",
+          "description": "Kaksi palkansaajaa ja kaksi lasta; vuokra-asunto.",
+          "page": 22,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 4720.0,
+              "transfers": 202.0,
+              "taxes": 1065.0,
+              "net": 3857.0,
+              "taxShare": 22.6
+            },
+            {
+              "year": 2022,
+              "gross": 5252.0,
+              "transfers": 216.0,
+              "taxes": 1133.0,
+              "net": 4335.0,
+              "taxShare": 21.6
+            },
+            {
+              "year": 2023,
+              "gross": 5561.0,
+              "transfers": 200.0,
+              "taxes": 1236.0,
+              "net": 4525.0,
+              "taxShare": 22.2
+            },
+            {
+              "year": 2024,
+              "gross": 5784.0,
+              "transfers": 200.0,
+              "taxes": 1246.0,
+              "net": 4738.0,
+              "taxShare": 21.5
+            },
+            {
+              "year": 2025,
+              "gross": 6009.0,
+              "transfers": 200.0,
+              "taxes": 1265.0,
+              "net": 4945.0,
+              "taxShare": 21.0
+            }
+          ]
+        },
+        {
+          "id": "single-parent",
+          "name": "Pienipalkkainen yksinhuoltaja",
+          "description": "Yksi työssäkäyvä vanhempi ja yksi lapsi; vuokra-asunto.",
+          "page": 22,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 2072.0,
+              "transfers": 553.0,
+              "taxes": 430.0,
+              "net": 2196.0,
+              "taxShare": 20.7
+            },
+            {
+              "year": 2022,
+              "gross": 2269.0,
+              "transfers": 624.0,
+              "taxes": 433.0,
+              "net": 2459.0,
+              "taxShare": 19.1
+            },
+            {
+              "year": 2023,
+              "gross": 2401.0,
+              "transfers": 663.0,
+              "taxes": 464.0,
+              "net": 2600.0,
+              "taxShare": 19.3
+            },
+            {
+              "year": 2024,
+              "gross": 2497.0,
+              "transfers": 473.0,
+              "taxes": 468.0,
+              "net": 2502.0,
+              "taxShare": 18.8
+            },
+            {
+              "year": 2025,
+              "gross": 2594.0,
+              "transfers": 396.0,
+              "taxes": 481.0,
+              "net": 2509.0,
+              "taxShare": 18.6
+            }
+          ]
+        },
+        {
+          "id": "graduate",
+          "name": "Korkeakoulutettu yksinasuva",
+          "description": "Yksi palkansaaja; asuntovelallinen.",
+          "page": 22,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 3569.0,
+              "transfers": 0.0,
+              "taxes": 1080.0,
+              "net": 2489.0,
+              "taxShare": 30.3
+            },
+            {
+              "year": 2022,
+              "gross": 3882.0,
+              "transfers": 0.0,
+              "taxes": 1137.0,
+              "net": 2745.0,
+              "taxShare": 29.3
+            },
+            {
+              "year": 2023,
+              "gross": 4063.0,
+              "transfers": 0.0,
+              "taxes": 1202.0,
+              "net": 2860.0,
+              "taxShare": 29.6
+            },
+            {
+              "year": 2024,
+              "gross": 4225.0,
+              "transfers": 0.0,
+              "taxes": 1229.0,
+              "net": 2996.0,
+              "taxShare": 29.1
+            },
+            {
+              "year": 2025,
+              "gross": 4390.0,
+              "transfers": 0.0,
+              "taxes": 1285.0,
+              "net": 3105.0,
+              "taxShare": 29.3
+            }
+          ]
+        },
+        {
+          "id": "basic-unemployed",
+          "name": "Työmarkkinatuen saaja",
+          "description": "Yksinasuva; lisäksi asumis- ja toimeentulotuki.",
+          "page": 22,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 705.0,
+              "transfers": 480.0,
+              "taxes": 115.0,
+              "net": 1070.0,
+              "taxShare": 16.3
+            },
+            {
+              "year": 2022,
+              "gross": 753.0,
+              "transfers": 614.0,
+              "taxes": 112.0,
+              "net": 1254.0,
+              "taxShare": 14.9
+            },
+            {
+              "year": 2023,
+              "gross": 800.0,
+              "transfers": 607.0,
+              "taxes": 122.0,
+              "net": 1285.0,
+              "taxShare": 15.2
+            },
+            {
+              "year": 2024,
+              "gross": 800.0,
+              "transfers": 657.0,
+              "taxes": 119.0,
+              "net": 1338.0,
+              "taxShare": 14.9
+            },
+            {
+              "year": 2025,
+              "gross": 800.0,
+              "transfers": 684.0,
+              "taxes": 116.0,
+              "net": 1368.0,
+              "taxShare": 14.5
+            }
+          ]
+        },
+        {
+          "id": "earnings-unemployed",
+          "name": "Ansiopäivärahan saaja",
+          "description": "Yksinasuva vuokralla. Päivärahan oletus vaihtelee julkaisusta toiseen.",
+          "page": 23,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 1666.0,
+              "transfers": 99.0,
+              "taxes": 386.0,
+              "net": 1379.0,
+              "taxShare": 23.2
+            },
+            {
+              "year": 2022,
+              "gross": 1860.0,
+              "transfers": 47.0,
+              "taxes": 423.0,
+              "net": 1485.0,
+              "taxShare": 22.7
+            },
+            {
+              "year": 2023,
+              "gross": 1923.0,
+              "transfers": 81.0,
+              "taxes": 436.0,
+              "net": 1568.0,
+              "taxShare": 22.7
+            },
+            {
+              "year": 2024,
+              "gross": 1993.0,
+              "transfers": 11.0,
+              "taxes": 453.0,
+              "net": 1551.0,
+              "taxShare": 22.7
+            },
+            {
+              "year": 2025,
+              "gross": 1670.0,
+              "transfers": 76.0,
+              "taxes": 350.0,
+              "net": 1396.0,
+              "taxShare": 20.9
+            }
+          ]
+        },
+        {
+          "id": "retired-couple",
+          "name": "Eläkeläispari",
+          "description": "Työeläke ja vähimmäiseläketurva; velaton omistusasunto.",
+          "page": 23,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 2790.0,
+              "transfers": 0.0,
+              "taxes": 442.0,
+              "net": 2348.0,
+              "taxShare": 15.8
+            },
+            {
+              "year": 2022,
+              "gross": 3051.0,
+              "transfers": 0.0,
+              "taxes": 474.0,
+              "net": 2577.0,
+              "taxShare": 15.5
+            },
+            {
+              "year": 2023,
+              "gross": 3254.0,
+              "transfers": 0.0,
+              "taxes": 480.0,
+              "net": 2774.0,
+              "taxShare": 14.8
+            },
+            {
+              "year": 2024,
+              "gross": 3440.0,
+              "transfers": 0.0,
+              "taxes": 499.0,
+              "net": 2941.0,
+              "taxShare": 14.5
+            },
+            {
+              "year": 2025,
+              "gross": 3516.0,
+              "transfers": 0.0,
+              "taxes": 514.0,
+              "net": 3002.0,
+              "taxShare": 14.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2025",
+      "published": "2025-10-29",
+      "calculated": "2025-10-16",
+      "forecastFrom": 2025,
+      "url": "https://labore.fi/wp-content/uploads/2025/10/Esimerkkiperheet291025.pdf",
+      "web": "https://labore.fi/julkaisu/hyvatuloisten-ostovoima-kasvaa-yksinhuoltajien-heikkenee-esimerkkiperheet-kuvaavat-kotitalouksien-kasvavaa-eriytymista/",
+      "earningsNote": "Vuoden 2025 raportin ansioturvaesimerkki koskee täyttä ansiopäivärahaa ensimmäisiltä 40 päivärahapäivältä. Porrastuksen vaikutusta ei tässä esimerkissä lasketa; sitä ei rinnasteta vuoden 2024 raportin vuositulkintaan.",
+      "sha256": "9a2d4b9024297be48c6e217690073402806ceb36ad756af6e0c0da81a480e768",
+      "profiles": [
+        {
+          "id": "high-income",
+          "name": "Hyvätuloinen pari",
+          "description": "Kaksi palkansaajaa, ei lapsia; velaton omistusasunto.",
+          "page": 24,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 12545.0,
+              "transfers": 0.0,
+              "taxes": 4834.0,
+              "net": 7711.0,
+              "taxShare": 38.5
+            },
+            {
+              "year": 2023,
+              "gross": 14095.0,
+              "transfers": 0.0,
+              "taxes": 5435.0,
+              "net": 8660.0,
+              "taxShare": 38.6
+            },
+            {
+              "year": 2024,
+              "gross": 14532.0,
+              "transfers": 0.0,
+              "taxes": 5515.0,
+              "net": 9017.0,
+              "taxShare": 38.0
+            },
+            {
+              "year": 2025,
+              "gross": 14910.0,
+              "transfers": 0.0,
+              "taxes": 5688.0,
+              "net": 9221.0,
+              "taxShare": 38.2
+            }
+          ]
+        },
+        {
+          "id": "salaried-family",
+          "name": "Toimihenkilöiden lapsiperhe",
+          "description": "Kaksi palkansaajaa ja kaksi lasta; asuntovelallinen.",
+          "page": 25,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 6926.0,
+              "transfers": 202.0,
+              "taxes": 2023.0,
+              "net": 5105.0,
+              "taxShare": 29.2
+            },
+            {
+              "year": 2023,
+              "gross": 8363.0,
+              "transfers": 200.0,
+              "taxes": 2522.0,
+              "net": 6040.0,
+              "taxShare": 30.2
+            },
+            {
+              "year": 2024,
+              "gross": 8622.0,
+              "transfers": 200.0,
+              "taxes": 2547.0,
+              "net": 6275.0,
+              "taxShare": 29.5
+            },
+            {
+              "year": 2025,
+              "gross": 8846.0,
+              "transfers": 200.0,
+              "taxes": 2606.0,
+              "net": 6439.0,
+              "taxShare": 29.5
+            }
+          ]
+        },
+        {
+          "id": "worker-family",
+          "name": "Työntekijöiden lapsiperhe",
+          "description": "Kaksi palkansaajaa ja kaksi lasta; vuokra-asunto.",
+          "page": 25,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 4720.0,
+              "transfers": 202.0,
+              "taxes": 1065.0,
+              "net": 3857.0,
+              "taxShare": 22.6
+            },
+            {
+              "year": 2023,
+              "gross": 5561.0,
+              "transfers": 200.0,
+              "taxes": 1236.0,
+              "net": 4525.0,
+              "taxShare": 22.2
+            },
+            {
+              "year": 2024,
+              "gross": 5734.0,
+              "transfers": 200.0,
+              "taxes": 1228.0,
+              "net": 4706.0,
+              "taxShare": 21.4
+            },
+            {
+              "year": 2025,
+              "gross": 5883.0,
+              "transfers": 200.0,
+              "taxes": 1220.0,
+              "net": 4863.0,
+              "taxShare": 20.7
+            }
+          ]
+        },
+        {
+          "id": "single-parent",
+          "name": "Pienipalkkainen yksinhuoltaja",
+          "description": "Yksi työssäkäyvä vanhempi ja yksi lapsi; vuokra-asunto.",
+          "page": 25,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 2072.0,
+              "transfers": 553.0,
+              "taxes": 430.0,
+              "net": 2196.0,
+              "taxShare": 20.7
+            },
+            {
+              "year": 2023,
+              "gross": 2401.0,
+              "transfers": 663.0,
+              "taxes": 464.0,
+              "net": 2600.0,
+              "taxShare": 19.3
+            },
+            {
+              "year": 2024,
+              "gross": 2475.0,
+              "transfers": 481.0,
+              "taxes": 459.0,
+              "net": 2497.0,
+              "taxShare": 18.6
+            },
+            {
+              "year": 2025,
+              "gross": 2540.0,
+              "transfers": 413.0,
+              "taxes": 463.0,
+              "net": 2490.0,
+              "taxShare": 18.2
+            }
+          ]
+        },
+        {
+          "id": "graduate",
+          "name": "Korkeakoulutettu yksinasuva",
+          "description": "Yksi palkansaaja; asuntovelallinen.",
+          "page": 25,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 3569.0,
+              "transfers": 0.0,
+              "taxes": 1080.0,
+              "net": 2489.0,
+              "taxShare": 30.3
+            },
+            {
+              "year": 2023,
+              "gross": 4063.0,
+              "transfers": 0.0,
+              "taxes": 1202.0,
+              "net": 2860.0,
+              "taxShare": 29.6
+            },
+            {
+              "year": 2024,
+              "gross": 4188.0,
+              "transfers": 0.0,
+              "taxes": 1212.0,
+              "net": 2977.0,
+              "taxShare": 28.9
+            },
+            {
+              "year": 2025,
+              "gross": 4297.0,
+              "transfers": 0.0,
+              "taxes": 1246.0,
+              "net": 3051.0,
+              "taxShare": 29.0
+            }
+          ]
+        },
+        {
+          "id": "basic-unemployed",
+          "name": "Työmarkkinatuen saaja",
+          "description": "Yksinasuva; lisäksi asumis- ja toimeentulotuki.",
+          "page": 26,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 705.0,
+              "transfers": 480.0,
+              "taxes": 115.0,
+              "net": 1070.0,
+              "taxShare": 16.3
+            },
+            {
+              "year": 2023,
+              "gross": 800.0,
+              "transfers": 607.0,
+              "taxes": 122.0,
+              "net": 1285.0,
+              "taxShare": 15.2
+            },
+            {
+              "year": 2024,
+              "gross": 800.0,
+              "transfers": 658.0,
+              "taxes": 119.0,
+              "net": 1339.0,
+              "taxShare": 14.9
+            },
+            {
+              "year": 2025,
+              "gross": 800.0,
+              "transfers": 675.0,
+              "taxes": 117.0,
+              "net": 1359.0,
+              "taxShare": 14.6
+            }
+          ]
+        },
+        {
+          "id": "earnings-unemployed",
+          "name": "Ansiopäivärahan saaja",
+          "description": "Yksinasuva vuokralla. Päivärahan oletus vaihtelee julkaisusta toiseen.",
+          "page": 26,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 1666.0,
+              "transfers": 99.0,
+              "taxes": 386.0,
+              "net": 1379.0,
+              "taxShare": 23.2
+            },
+            {
+              "year": 2023,
+              "gross": 1923.0,
+              "transfers": 81.0,
+              "taxes": 436.0,
+              "net": 1568.0,
+              "taxShare": 22.7
+            },
+            {
+              "year": 2024,
+              "gross": 1979.0,
+              "transfers": 12.0,
+              "taxes": 448.0,
+              "net": 1543.0,
+              "taxShare": 22.6
+            },
+            {
+              "year": 2025,
+              "gross": 2023.0,
+              "transfers": 0.0,
+              "taxes": 456.0,
+              "net": 1567.0,
+              "taxShare": 22.5
+            }
+          ]
+        },
+        {
+          "id": "retired-couple",
+          "name": "Eläkeläispari",
+          "description": "Työeläke ja vähimmäiseläketurva; velaton omistusasunto.",
+          "page": 26,
+          "points": [
+            {
+              "year": 2015,
+              "gross": 2790.0,
+              "transfers": 0.0,
+              "taxes": 442.0,
+              "net": 2348.0,
+              "taxShare": 15.8
+            },
+            {
+              "year": 2023,
+              "gross": 3254.0,
+              "transfers": 0.0,
+              "taxes": 480.0,
+              "net": 2774.0,
+              "taxShare": 14.8
+            },
+            {
+              "year": 2024,
+              "gross": 3440.0,
+              "transfers": 0.0,
+              "taxes": 499.0,
+              "net": 2941.0,
+              "taxShare": 14.5
+            },
+            {
+              "year": 2025,
+              "gross": 3482.0,
+              "transfers": 0.0,
+              "taxes": 510.0,
+              "net": 2973.0,
+              "taxShare": 14.6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
