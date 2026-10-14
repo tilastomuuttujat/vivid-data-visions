@@ -1,3 +1,4 @@
+import { HouseholdImpact } from './HouseholdImpact';
 import { BudgetPower } from './BudgetPower';
 import { StructuralChoices } from './StructuralChoices';
 import { FamilyPolicy } from './FamilyPolicy';
@@ -66,6 +67,7 @@ export function Planeetta() {
         <div id="family-policy"><FamilyPolicy /></div>
         <StructuralChoices />
         <div id="timeline-budget"><BudgetPower /></div>
+        <div id="timeline-households"><HouseholdImpact /></div>
         <LongPath />
         <TransitionPath />
         <OwnershipPath />

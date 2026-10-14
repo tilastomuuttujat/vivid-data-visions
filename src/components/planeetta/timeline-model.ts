@@ -1,3 +1,4 @@
+import { householdImpactEvents } from './household-impact';
 import { budgetEvents, budgetPoints, budgetValue } from './budget-history';
 import { structuralTimelineEvents } from './structural-choices';
 import { fertility, familyPolicyEvents } from './family-policy-data';
@@ -39,6 +40,7 @@ export function timelineLanes(regionId:string):TimelineLane[]{
 export const exactValue=(series:TimelineSeries,year:number)=>series.points.find(p=>p.year===year)?.value??null;
 export type TimelineEvent={id:string;year:number;title:string;text:string;url:string;kind:string;policyId?:string;lawId?:string;familyId?:string;structuralId?:string;theme?:string};
 export const timelineEvents:TimelineEvent[]=[
+ ...householdImpactEvents,
  ...budgetEvents,
  ...structuralTimelineEvents,
  ...familyPolicyEvents.map(e=>({id:`family-${e.id}`,familyId:e.id,year:e.year,title:`${e.date}: ${e.title}`,text:e.text,url:e.url,kind:e.kind,theme:'Perheet ja työvoima'})),
