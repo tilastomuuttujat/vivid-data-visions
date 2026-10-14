@@ -486,3 +486,42 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
 .ed-count { color: var(--primary); }
 .ed-field { outline: 1px dashed color-mix(in oklab, var(--primary) 60%, transparent); outline-offset: 3px; border-radius: 3px; cursor: text; }
 .ed-field:hover, .ed-field:focus { outline-style: solid; background: color-mix(in oklab, var(--primary) 10%, transparent); }
+
+/* Planeetta: teemahaitarit ja yhtenäinen ilme analyyseille */
+.pl-themes-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 64px 0 16px; padding-top: 28px; border-top: 1px solid var(--v-line); }
+.pl-themes-bar div { display: flex; gap: 8px; }
+.pl-themes-bar button { background: transparent; color: var(--v-mute); border: 1px solid var(--v-line); border-radius: 99px; padding: 6px 14px; font-size: 12px; transition: color .3s, border-color .3s; }
+.pl-themes-bar button:hover { color: var(--v-text); border-color: var(--v-glow); }
+.pl-theme { position: relative; margin-bottom: 14px; border: 1px solid var(--v-line); border-radius: 18px; background: linear-gradient(160deg, color-mix(in oklab, var(--v-ink-2) 85%, transparent), color-mix(in oklab, var(--v-ink) 70%, transparent)); backdrop-filter: blur(12px); overflow: hidden; transition: border-color .4s, box-shadow .4s; }
+.pl-theme::before { content: ""; position: absolute; inset: 0 0 auto; height: 1px; background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--v-glow) 60%, transparent), color-mix(in oklab, var(--v-ember) 50%, transparent), transparent); opacity: .5; }
+.pl-theme:hover, .pl-theme[open] { border-color: color-mix(in oklab, var(--v-glow) 30%, transparent); }
+.pl-theme[open] { box-shadow: 0 30px 80px -40px color-mix(in oklab, var(--v-glow) 35%, transparent); }
+.pl-theme > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; padding: 26px clamp(18px, 3vw, 36px); }
+.pl-theme > summary::-webkit-details-marker { display: none; }
+.pl-theme-no { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(36px, 4vw, 56px); line-height: 1; color: transparent; -webkit-text-stroke: 1px color-mix(in oklab, var(--v-glow) 60%, transparent); }
+.pl-theme[open] > summary .pl-theme-no { color: var(--v-glow); -webkit-text-stroke: 0; text-shadow: 0 0 30px color-mix(in oklab, var(--v-glow) 50%, transparent); }
+.pl-theme-head h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(22px, 2.4vw, 32px); line-height: 1.15; margin: 6px 0; color: var(--v-text); }
+.pl-theme-head p { margin: 0; color: var(--v-mute); font-size: 14px; line-height: 1.55; max-width: 680px; }
+.pl-theme-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.pl-theme-tags i { font-style: normal; font-size: 11px; letter-spacing: .04em; color: var(--v-ember); border: 1px solid color-mix(in oklab, var(--v-ember) 35%, transparent); border-radius: 99px; padding: 3px 10px; }
+.pl-theme-toggle { width: 44px; height: 44px; border-radius: 99px; border: 1px solid var(--v-line); position: relative; transition: transform .4s, border-color .3s; }
+.pl-theme-toggle::before, .pl-theme-toggle::after { content: ""; position: absolute; left: 50%; top: 50%; width: 14px; height: 1.5px; background: var(--v-text); transform: translate(-50%, -50%); transition: transform .4s; }
+.pl-theme-toggle::after { transform: translate(-50%, -50%) rotate(90deg); }
+.pl-theme[open] > summary .pl-theme-toggle { transform: rotate(180deg); border-color: var(--v-glow); }
+.pl-theme[open] > summary .pl-theme-toggle::after { transform: translate(-50%, -50%) rotate(0); }
+.pl-theme-body { padding: 0 clamp(14px, 2.5vw, 32px) 28px; border-top: 1px solid var(--v-line); animation: pl-theme-in .5s ease; }
+@keyframes pl-theme-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+/* Yhtenäistetään alaosioiden typografia ja värit */
+.pl-theme-body > * + * { border-top: 1px dashed var(--v-line); }
+.pl-theme-body section, .pl-theme-body > div > section { background: transparent; color: var(--v-text); font-family: 'DM Sans', sans-serif; }
+.pl-theme-body h2, .pl-theme-body h3 { font-family: 'Fraunces', serif; font-weight: 400; letter-spacing: -.01em; color: var(--v-text); }
+.pl-theme-body h4 { font-family: 'DM Sans', sans-serif; color: var(--v-text); }
+.pl-theme-body p, .pl-theme-body li, .pl-theme-body dd, .pl-theme-body td { color: color-mix(in oklab, var(--v-text) 82%, var(--v-mute)); }
+.pl-theme-body svg text { font-family: 'DM Sans', sans-serif; }
+.pl-theme-body table { border-collapse: collapse; }
+.pl-theme-body th { color: var(--v-mute); font-weight: 500; text-transform: uppercase; letter-spacing: .08em; font-size: 11px; }
+.pl-theme-body th, .pl-theme-body td { border-bottom: 1px solid var(--v-line); }
+@media (max-width: 640px) { .pl-theme > summary { grid-template-columns: 1fr auto; } .pl-theme-no { display: none; } }
+.pl-theme-body select { background: var(--v-ink); color: var(--v-text); border: 1px solid var(--v-line); border-radius: 10px; padding: 6px 10px; }
+.pl-theme-body input[type=range], .pl-theme-body input[type=checkbox], .pl-theme-body input[type=radio] { accent-color: var(--v-glow); }
+.pl-theme-body fieldset { border: 1px solid var(--v-line); border-radius: 12px; }

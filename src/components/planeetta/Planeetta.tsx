@@ -33,6 +33,7 @@ import { LongPath } from './LongPath';
 import { TransitionPath } from './TransitionPath';
 import { OwnershipPath } from './OwnershipPath';
 import { StoraComparison } from './StoraComparison';
+import { ThemeGroup } from './ThemeGroup';
 
 const PlanetGlobe = lazy(() => import('./PlanetGlobe'));
 
@@ -70,35 +71,52 @@ export function Planeetta() {
           </div>
           <aside className="pl-side"><Detail sel={sel} /></aside>
         </div>
-        <SharedTimeline />
-        <LawTimeline />
-        <div id="family-policy"><FamilyPolicy /></div>
-        <StructuralChoices />
-        <div id="timeline-budget"><BudgetPower /></div>
-        <div id="timeline-crises"><CrisisManagement /></div>
-        <div id="timeline-recovery"><RecoveryMap /></div>
-        <div id="timeline-care"><CareCapacity /></div>
-        <div id="timeline-regional-overlap"><RegionalOverlap /></div>
-        <div id="timeline-local-adaptation"><LocalAdaptation /></div>
-        <div id="timeline-work-opportunity"><WorkOpportunity /></div>
-        <div id="timeline-group-opportunity"><GroupOpportunity /></div>
-        <div id="timeline-work-mobility"><WorkMobility /></div>
-        <div id="timeline-households"><HouseholdImpact /></div>
-        <LongPath />
-        <TransitionPath />
-        <OwnershipPath />
-        <StoraOwnership />
-        <SsabComparison />
-        <FinlandValue />
-        <StoraComparison />
-        <div id="timeline-regional"><RegionalPath /></div>
-        <div id="timeline-redistribution"><RedistributionPath /></div>
-        <div id="timeline-housing"><HousingWealth /></div>
-        <div id="timeline-debt"><PublicDebt /></div>
-        <div id="timeline-historical"><HistoricalTurning />
-        <PoliticalGate /></div>
-        <div id="timeline-productivity"><ProductivityPath /></div>
-        <MechanismExplorer />
+        <div className="pl-themes-bar">
+          <p className="v-kicker">Syventävät analyysit · viisi teemaa</p>
+          <div>
+            <button onClick={() => document.querySelectorAll<HTMLDetailsElement>('.pl-theme').forEach(d => (d.open = true))}>Avaa kaikki</button>
+            <button onClick={() => document.querySelectorAll<HTMLDetailsElement>('.pl-theme').forEach(d => (d.open = false))}>Sulje kaikki</button>
+          </div>
+        </div>
+        <ThemeGroup id="teema-aikajana" index={1} span="1850–2050" title="Yhteinen aikajana ja lainsäädäntö" lead="Lait, poliittiset murroskohdat ja rakenteelliset valinnat, joiden varaan myöhemmät polut syntyivät." tags={['Aikajana', 'Lait', 'Murroskohdat', 'Valinnat']} open>
+          <SharedTimeline />
+          <LawTimeline />
+          <div id="timeline-historical"><HistoricalTurning />
+          <PoliticalGate /></div>
+          <StructuralChoices />
+        </ThemeGroup>
+        <ThemeGroup id="teema-teollisuus" index={2} span="Omistus · arvo · tuottavuus" title="Teollisuus, yritykset ja omistus" lead="Omistuksen polut, valtion rooli ja teollisuuden murrokset Stora Enson ja SSAB:n kautta." tags={['Omistus', 'Stora Enso', 'SSAB', 'Tuottavuus']}>
+          <LongPath />
+          <TransitionPath />
+          <OwnershipPath />
+          <StoraOwnership />
+          <SsabComparison />
+          <FinlandValue />
+          <StoraComparison />
+          <div id="timeline-productivity"><ProductivityPath /></div>
+        </ThemeGroup>
+        <ThemeGroup id="teema-tyo" index={3} span="Työ · perhe · koti" title="Työ, toimeentulo ja perheet" lead="Työmahdollisuudet, liikkuvuus, perhepolitiikka, hoiva ja kotitalouksien arki." tags={['Työ', 'Perheet', 'Hoiva', 'Asuminen']}>
+          <div id="timeline-work-opportunity"><WorkOpportunity /></div>
+          <div id="timeline-group-opportunity"><GroupOpportunity /></div>
+          <div id="timeline-work-mobility"><WorkMobility /></div>
+          <div id="family-policy"><FamilyPolicy /></div>
+          <div id="timeline-care"><CareCapacity /></div>
+          <div id="timeline-households"><HouseholdImpact /></div>
+          <div id="timeline-housing"><HousingWealth /></div>
+        </ThemeGroup>
+        <ThemeGroup id="teema-talous" index={4} span="Budjetti · kriisit · alueet" title="Julkinen talous, kriisit ja alueet" lead="Velka, budjettivalta, tulonjako, kriisien hoito ja alueiden sopeutuminen." tags={['Velka', 'Budjetti', 'Kriisit', 'Alueet']}>
+          <div id="timeline-debt"><PublicDebt /></div>
+          <div id="timeline-budget"><BudgetPower /></div>
+          <div id="timeline-redistribution"><RedistributionPath /></div>
+          <div id="timeline-crises"><CrisisManagement /></div>
+          <div id="timeline-recovery"><RecoveryMap /></div>
+          <div id="timeline-regional"><RegionalPath /></div>
+          <div id="timeline-regional-overlap"><RegionalOverlap /></div>
+          <div id="timeline-local-adaptation"><LocalAdaptation /></div>
+        </ThemeGroup>
+        <ThemeGroup id="teema-mekanismit" index={5} span="Synteesi" title="Mekanismit ja palautesilmukat" lead="Kokoa havainnot syy–seurausketjuiksi: mikä vahvistaa, mikä jarruttaa, mikä lukitsee." tags={['Mekanismit', 'Ketjut', 'Silmukat']}>
+          <MechanismExplorer />
+        </ThemeGroup>
       </div>
     </div></TimelineProvider>
   );
