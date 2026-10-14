@@ -1,3 +1,4 @@
+import { LawTimeline } from './LawTimeline';
 import { PoliticalGate } from './PoliticalGate';
 import { FinlandValue } from './FinlandValue';
 import { SsabComparison } from './SsabComparison';
@@ -58,6 +59,7 @@ export function Planeetta() {
           <aside className="pl-side"><Detail sel={sel} /></aside>
         </div>
         <SharedTimeline />
+        <LawTimeline />
         <LongPath />
         <TransitionPath />
         <OwnershipPath />

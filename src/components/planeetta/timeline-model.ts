@@ -1,3 +1,4 @@
+import { lawEvents } from './law-history';
 import { policyRecords } from './policy-history';
 import { electionYears, partySeries, historicalSources } from './historical-election-data';
 import productivity from './productivity-data.json';
@@ -31,8 +32,9 @@ export function timelineLanes(regionId:string):TimelineLane[]{
  ];
 }
 export const exactValue=(series:TimelineSeries,year:number)=>series.points.find(p=>p.year===year)?.value??null;
-export type TimelineEvent={id:string;year:number;title:string;text:string;url:string;kind:string;policyId?:string;theme?:string};
+export type TimelineEvent={id:string;year:number;title:string;text:string;url:string;kind:string;policyId?:string;lawId?:string;theme?:string};
 export const timelineEvents:TimelineEvent[]=[
+ ...lawEvents,
  ...policyRecords.map(p=>({id:`policy-${p.id}`,year:p.year,title:`${p.date}: ${p.title}`,text:`${p.phase}. Päätöksen sisältö, vastuut ja arviot eritellään alla.`,url:p.sources[0]!.url,kind:p.phase,theme:p.theme,policyId:p.id})),
  ...electionYears.map((year,i)=>({id:`election-${year}`,year,title:`Eduskuntavaalit ${year}`,text:`Kokoomuksen ääniosuus ${partySeries[0]!.values[i]} %. Vaalitulos ei yksin kerro äänestäjän motiivia.`,url:historicalSources.results,kind:'Vaalihavainto'})),
  ...ownershipEvents.map((e,i)=>({id:`ownership-${i}`,year:Math.floor(e.year),title:`${e.date}: ${e.title}`,text:`${e.text} ${e.limit}`,url:e.url,kind:'Omistus ja työ',theme:e.lane===2?'Työn ehdot':'Omistus'})),
