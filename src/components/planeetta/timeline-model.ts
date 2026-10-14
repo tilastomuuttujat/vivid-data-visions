@@ -1,3 +1,4 @@
+import { adaptationTimelineEvents } from './local-adaptation';
 import { cashflowEvents } from './ownership-cashflow';
 import { employmentShare, longTermShare, workEvents, workYears } from './work-opportunity';
 import { careEvents, careYears, careValue } from './care-capacity';
@@ -48,6 +49,7 @@ export const timelineEvents:TimelineEvent[]=[
  ...careEvents,
  ...workEvents,
  ...cashflowEvents,
+ ...adaptationTimelineEvents,
  ...householdImpactEvents,
  ...budgetEvents,
  ...structuralTimelineEvents,
