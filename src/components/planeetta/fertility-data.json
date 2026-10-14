@@ -1,0 +1,72 @@
+{
+  "source": "https://statfin.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__synt/12dt.px/",
+  "api": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/synt/12dt.px",
+  "retrieved": "2026-10-14",
+  "unit": "Kokonaishedelmällisyysluku",
+  "points": [
+    {
+      "year": 2010,
+      "tfr": 1.87
+    },
+    {
+      "year": 2011,
+      "tfr": 1.83
+    },
+    {
+      "year": 2012,
+      "tfr": 1.8
+    },
+    {
+      "year": 2013,
+      "tfr": 1.75
+    },
+    {
+      "year": 2014,
+      "tfr": 1.71
+    },
+    {
+      "year": 2015,
+      "tfr": 1.65
+    },
+    {
+      "year": 2016,
+      "tfr": 1.57
+    },
+    {
+      "year": 2017,
+      "tfr": 1.49
+    },
+    {
+      "year": 2018,
+      "tfr": 1.41
+    },
+    {
+      "year": 2019,
+      "tfr": 1.35
+    },
+    {
+      "year": 2020,
+      "tfr": 1.37
+    },
+    {
+      "year": 2021,
+      "tfr": 1.46
+    },
+    {
+      "year": 2022,
+      "tfr": 1.32
+    },
+    {
+      "year": 2023,
+      "tfr": 1.26
+    },
+    {
+      "year": 2024,
+      "tfr": 1.25
+    },
+    {
+      "year": 2025,
+      "tfr": 1.3
+    }
+  ]
+}

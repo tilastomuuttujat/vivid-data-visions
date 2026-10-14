@@ -1,3 +1,4 @@
+import { fertility, familyPolicyEvents } from './family-policy-data';
 import { lawEvents } from './law-history';
 import { policyRecords } from './policy-history';
 import { electionYears, partySeries, historicalSources } from './historical-election-data';
@@ -21,6 +22,7 @@ export function timelineLanes(regionId:string):TimelineLane[]{
  const kok=partySeries.find(p=>p.id==='kok')!;
  const indexed=(key:'population'|'jobs',baseYear:number)=>{const base=region.points.find(p=>p.year===baseYear)![key];return region.points.filter(p=>p.year>=baseYear).map(p=>({year:p.year,value:p[key]===null||base===null?null:p[key]!/base*100}));};
  return [
+  {id:'fertility',name:'Syntyvyys',unit:'kokonaishedelmällisyysluku',source:fertility.source,note:'Vuosisarja 2010–2025; ei lopullinen lapsiluku eikä hallitusvaikutuksen mittari.',series:[{name:'Kokonaishedelmällisyysluku',color:'#65d9ec',points:fertility.points.map(p=>({year:p.year,value:p.tfr}))}]},
   {id:'politics',name:'Kokoomuksen kannatus',unit:'ääniosuus, %',source:historicalSources.results,note:'Vain vaalivuosien havainnot; nykyinen sarja päättyy 1991.',series:[{name:'Kokoomus',color:colors[0]!,sparse:true,points:electionYears.map((year,i)=>({year,value:kok.values[i]!}))}]},
   {id:'work',name:'Tuottavuus ja reaaliansiot',unit:'1980=100',source:source('ttut','14w1'),note:'Tuottavuuden ja ansioiden kattavuus eroaa; lähteet ja laskenta tarkemmassa näkymässä.',series:([['productivity','Tuottavuus'],['realEarnings','Reaaliansiot']] as const).map(([key,name],i)=>({name,color:colors[i]!,points:productivity.series.map(p=>({year:p.year,value:p[key]}))}))},
   {id:'region',name:region.name,unit:'väestö 1990=100; työ 2000=100',source:source('vaerak','11ra'),note:'Sarjojen perusvuodet eroavat. Vertaa ajoitusta ja kehitystä, älä viivojen tasoeroa.',series:[{name:'Väestö (1990=100)',color:colors[0]!,points:indexed('population',1990)},{name:'Työllisyys (2000=100)',color:colors[1]!,points:indexed('jobs',2000)}]},
@@ -32,8 +34,9 @@ export function timelineLanes(regionId:string):TimelineLane[]{
  ];
 }
 export const exactValue=(series:TimelineSeries,year:number)=>series.points.find(p=>p.year===year)?.value??null;
-export type TimelineEvent={id:string;year:number;title:string;text:string;url:string;kind:string;policyId?:string;lawId?:string;theme?:string};
+export type TimelineEvent={id:string;year:number;title:string;text:string;url:string;kind:string;policyId?:string;lawId?:string;familyId?:string;theme?:string};
 export const timelineEvents:TimelineEvent[]=[
+ ...familyPolicyEvents.map(e=>({id:`family-${e.id}`,familyId:e.id,year:e.year,title:`${e.date}: ${e.title}`,text:e.text,url:e.url,kind:e.kind,theme:'Perheet ja työvoima'})),
  ...lawEvents,
  ...policyRecords.map(p=>({id:`policy-${p.id}`,year:p.year,title:`${p.date}: ${p.title}`,text:`${p.phase}. Päätöksen sisältö, vastuut ja arviot eritellään alla.`,url:p.sources[0]!.url,kind:p.phase,theme:p.theme,policyId:p.id})),
  ...electionYears.map((year,i)=>({id:`election-${year}`,year,title:`Eduskuntavaalit ${year}`,text:`Kokoomuksen ääniosuus ${partySeries[0]!.values[i]} %. Vaalitulos ei yksin kerro äänestäjän motiivia.`,url:historicalSources.results,kind:'Vaalihavainto'})),

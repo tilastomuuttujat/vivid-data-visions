@@ -1,3 +1,4 @@
+import { FamilyPolicy } from './FamilyPolicy';
 import { LawTimeline } from './LawTimeline';
 import { PoliticalGate } from './PoliticalGate';
 import { FinlandValue } from './FinlandValue';
@@ -60,6 +61,7 @@ export function Planeetta() {
         </div>
         <SharedTimeline />
         <LawTimeline />
+        <div id="family-policy"><FamilyPolicy /></div>
         <LongPath />
         <TransitionPath />
         <OwnershipPath />
