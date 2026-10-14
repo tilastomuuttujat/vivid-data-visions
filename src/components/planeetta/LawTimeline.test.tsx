@@ -32,5 +32,5 @@ it('extends the shared historical frame when an early law is selected and leaves
  fireEvent.click(screen.getByRole('button',{name:/Pääosin 1.8.2021.*Oppivelvollisuuden laajentaminen.*voimaantulo/}));
  expect(screen.getByRole('slider',{name:/Yhteinen vuosi/})).toHaveAttribute('aria-valuetext','2021');
  expect(screen.getAllByText(/Pääosin 1.8.2021/).length).toBeGreaterThan(0);
- const lanes=timelineLanes('MK08');for(const lane of lanes.filter(l=>l.id!=='fertility'))for(const series of lane.series)expect(exactValue(series,2025)).toBeNull();
+ const lanes=timelineLanes('MK08');for(const lane of lanes.filter(l=>l.id!=='fertility'&&l.id!=='care'))for(const series of lane.series)expect(exactValue(series,2025)).toBeNull();
 });

@@ -1,0 +1,4195 @@
+{
+  "retrieved": "2026-10-14",
+  "indicators": [
+    {
+      "id": 171,
+      "url": "https://sotkanet.fi/rest/1.1/json?indicator=171&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&genders=total",
+      "sha256": "953dd5697b8174ffa6557fe735fded897dfa4611db1982b4556f1f718b707da7",
+      "updated": "2026-04-01",
+      "title": "75 vuotta täyttäneet, % väestöstä",
+      "description": "Indikaattori ilmoittaa ko. ikäryhmän vakituisesti maassa asuvien osuuden vakituisesti maassa asuvasta väestöstä vuoden viimeisenä päivänä sukupuolen mukaan. Osuus lasketaan miehistä, naisista sekä näistä yhteensä.",
+      "limits": "",
+      "notices": ""
+    },
+    {
+      "id": 5513,
+      "url": "https://sotkanet.fi/rest/1.1/json?indicator=5513&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&genders=total",
+      "sha256": "f71489ed7abe94ea7f97f32d6217d30a840858f7e54430be7fc69d0bb0278156",
+      "updated": "2026-09-30",
+      "title": "Säännöllisen kotihoidon 75 vuotta täyttäneet asiakkaat, % vastaavan ikäisestä väestöstä",
+      "description": "<p>Indikaattori ilmaisee, kuinka monta prosenttia 75 vuotta täyttäneistä sai vuoden aikana säännöllisen kotihoidon (sis. kotisairaanhoito ja kotipalvelu) palveluita.<br /></p><p><br />Tietolähteenä on THL:n Avohilmo -rekisteriin pohjautuva kotihoitotilasto, johon kerätään tiedot kaikista kotihoidon (sis. kotisairaanhoito ja kotipalvelu) palvelutapahtumista. Tätä indikaattoria varten Avohilmo-rekisteristä on poimittu mukaan ne kotihoidon asiakkaat, joilla on tarkasteluvuonna toteutunut kotihoidon (sis. kotisairaanhoito ja kotipalvelu) kotikäynti vähintään 6 päivänä 60 vuorokauden sisällä. Säännöllisen kotihoidon asiakkaisiin ei sisälly niitä henkilöitä, jotka ovat saaneet kotihoidon palveluja satunnaisesti (harvemmin kuin kuvattu edellä).<br /></p><p><br />Väestötietona käytetään vuoden viimeisen päivän tietoa.<br /><p id=suhteutus>Väestösuhteutus on tehty THL:ssä käyttäen Tilastokeskuksen Väestötilaston tietoja.</p> ",
+      "limits": "Hoitoilmoitusrekisterin yksilötasoiset tiedot ovat salassa pidettäviä. Tietosuojan vuoksi alle viiden tapauksen kuntakohtaisia tietoja ei julkisteta. <br /></p><p><br />Potilastietojärjestelmän vaihdoksesta johtuen Vantaan tiedot ovat puutteelliset vuosilta 2019-2023 ja Helsingin sekä Keravan vuosilta 2021-2023.<br /></p><p><br />Pelkosenniemen, Savukosken ja Muonion kunnilla ei ole käytössään asiakas- ja potilastietojärjestelmää. Sen vuoksi näiden kuntien kotihoidon tapahtumatiedot ovat merkittävästi puutteelliset. Myöskään Enontekiöltä ei ole saatu kattavia tietoja kotihoidon käynti- ja asiakasmääristä. Puuttuvien tietojen vaikutus koko Lapin hyvinvointialueeseen on noin 5 prosenttia.<br /></p><p><br />Varsinais-Suomen hyvinvointialueeseen kuuluvan Pyhärannan sekä Itä-Uudenmaan hyvinvointialueeseen kuuluvan Lapinjärven tiedot puuttuvat kokonaan, koska näissä kunnissa kotihoito on ulkoistettu, eivätkä palveluntuottajat ole toimittaneet kotihoidon tietoja Avohilmo-rekisteriin.<br /><p><b>Vuoden 2025 tiedoissa huomioitavat asiat.</b></p><br /><ul><br /><li>Ahvenanmaan asiakas- ja käyntitiedot ovat osittain puutteellisia tietojärjestelmävaihdoksen vuoksi.</li><br /></p></ul>",
+      "notices": "Säännöllisen kotihoidon indikaattoreiden tietolähteenä oleva Avohilmo-tietoon perustuva kotihoitotilasto on ollut virallinen kotihoidon raportoinnin tietolähde vuodesta 2019 alkaen. Aikaisemmin säännöllisen kotihoidon tiedot ovat perustuneet Kotihoidon laskenta -tilastoon, joka kattoi vain marraskuun tiedot. "
+    },
+    {
+      "id": 5439,
+      "url": "https://sotkanet.fi/rest/1.1/json?indicator=5439&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&genders=total",
+      "sha256": "af29ae1c701476329f15d3e017e8148fa6c7fb37c701427cdc4a29dd4549f25d",
+      "updated": "2026-08-25",
+      "title": "Iäkkäiden sosiaalipalvelujen nettokäyttökustannukset yhteensä, euroa / 75 vuotta täyttäneet asukkaat",
+      "description": "<p>Indikaattori ilmaisee iäkkäiden sosiaalipalvelujen palvelukokonaisuuden nettokäyttökustannukset euroina 75 vuotta täyttäneitä asukkaita kohti. Iäkkäiden palvelukokonaisuuteen sosiaalipalvelut sisältyvät palveluluokat: <UL> <LI>2201 Iäkkäiden laitospalvelu, <LI>2211 Iäkkäiden tehostettu palveluasuminen,<LI>2230 Erittelemättömät ikääntyneiden palvelut, <LI>2231 Iäkkäiden keskitetty asiakas- ja palveluohjaus (jää pois vuoden 2021 jälkeen), <LI>2232 Iäkkäiden palveluasuminen ja perhehoito, <LI>2233 Sosiaalihuoltolain liikkumista tukeva palvelu, <LI>2238 Iäkkäiden sosiaalityö ja -ohjaus (vuodesta 2022 lähtien), <LI>2321 Muiden kuin lapsiperheiden kotihoito sekä iäkkäiden kotona asumisen tukeminen (jää pois vuoden 2021 jälkeen),<BR> sekä vuodesta 2022 lähtien <LI>2235 Iäkkäiden kotihoito ja <LI>2241 Iäkkäiden muu kotona asumisen tukeminen.</UL><p>Käyttökustannuksiin lasketaan sisäiset ja ulkoiset toimintamenot (x64), poistot ja arvonalentumiset (x448) ja vyörytysmenot (x108). Käyttötuottoihin lasketaan sisäiset ja ulkoiset toimintatuotot (x58), valmistevarastojen muutos (x4251), valmistus omaan käyttöön (x4255) ja vyörytystuotot (x110). Nettokäyttökustannukset saadaan vähentämällä käyttökustannuksista käyttötuotot.</p><p>Väestösuhteutus on tehty THL:ssä käyttäen Tilastokeskuksen Väestötilaston tietoja kunkin vuoden 31.12. tilanteesta.</p>",
+      "limits": "<p>Indikaattorin vuoden 2021 laskentaan on lisätty 20.6.2023 palveluluokan 2321 Muiden kuin lapsiperheiden kotihoito sekä iäkkäiden kotona asumisen tukeminen -palveluluokan käyttökustannus 1.459.676 eur.</p><p>Sotkanetin käyttökustannus-, käyttötuotto- ja nettokäyttökustannusindikaattorit sisältävät 31.12.2022 saakka vain kuntien tilinpäätöksiin sisältyvät tiedot. Kuntien maksut kuntayhtymille tulevat mukaan kuntien kautta, sen sijaan kuntayhtymien muut tulot tai menot eivät ole mukana luvuissa.</p><p>Tietoja päivitetty 20.2.2026. Kanta-Hämeen hyvinvointialue on korjannut tietojaan tilastovuodelle 2024.</p> <p>Hyvinvointialueet ovat korjanneet tilastovuoden 2023 tietojaan, jonka jälkeen päivitetyt tiedot on julkaistu 4.9.2024.</p><p>Tiedot päivitetty 30.10.2024. Ahvenanmaan tiedot myös mukana ja lisätty koko maan arvoon.</p>",
+      "notices": "<p>Sotkanetin tulostaulukko-sivun Osuus <-> Lukumäärä -painike muuttaa suhteutetun arvon tuhansiksi euroiksi.</p> "
+    },
+    {
+      "id": 5679,
+      "url": "https://sotkanet.fi/rest/1.1/json?indicator=5679&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&genders=total",
+      "sha256": "445d0b8d7fc026d821633ee790cbcc8d910edaba9c4bf49aa0b31ad7f52e3d1f",
+      "updated": "2025-04-14",
+      "title": "Henkilöstömitoituksen 0,7 täyttäneiden toimintayksiköiden osuus iäkkäiden ympärivuorokautisessa hoidossa, %",
+      "description": "<p>Indikaattori ilmaisee prosenttiosuutta iäkkäiden ympärivuorokautista hoitoa tarjoavista toimintayksiköistä, joilla henkilöstömitoitus (0,7) on täyttynyt. Indikaattori perustuu Vanhuspalvelujen tila -seurannassa ympärivuorokautisen hoidon toimintayksiköiltä kerättyihin tietoihin henkilöstön toteutuneista välittömän asiakastyön tunneista ja asiakasmääristä THL:n määrittelemältä kolmen viikon seurantajaksolta. Seurantatiedoista laskettiin jokaiselle toimintayksikölle henkilöstömitoitus ja lasketuista henkilöstömitoituksista laskettiin 0,7 henkilöstömitoituksen täyttäneiden prosentuaalinen osuus.<br /></p><p><br />Indikaattoria laskettaessa mukaan on otettu iäkkäiden palveluissa toimivat ympärivuorokautisen palveluasumisen sekä laitoshoidon (sis. vanhainkotihoidon ja terveyskeskuksien pitkäaikaishoidon) toimintayksiköt.</p>",
+      "limits": "<p>Vastausprosentti vuonna 2021 98,1 %, vuonna 2022 99,1 %, vuonna 2023 99,6 %, vuonna 2024 99,5 %.<br /></p><br /><p>Indikaattori ei sisällä toimintayksiköitä, joille ei ole voitu laskea henkilöstömitoitusta tai yksiköitä, joiden antamissa tiedoissa on epäilty ilmeistä virhettä, jonka seurauksena toteutunut henkilöstömitoitus on alle 0,25 tai yli 1,50 (2021: 2 yksikköä, 2022: ei yhtään yksikköä, 2023: 8 yksikköä, 2024: 13 yksikköä). </p><p>Koko maan luku ei sisällä Ahvenanmaata. </p> ",
+      "notices": "Iäkkäiden pitkäaikaisesta laitoshoidosta luovutaan vuoden 2027 loppuun mennessä."
+    },
+    {
+      "id": 6035,
+      "url": "https://sotkanet.fi/rest/1.1/json?indicator=6035&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&genders=total",
+      "sha256": "b2aa5009fcbfaa269c39a538d4c7ed6a0f89be2dc61b7ef650b17c07dba525c1",
+      "updated": "2026-05-14",
+      "title": "Voimassa olevan henkilöstömitoituksen täyttäneiden toimintayksiköiden osuus iäkkäiden ympärivuorokautisessa hoidossa, %",
+      "description": "<p>Indikaattori ilmaisee prosenttiosuuden iäkkäiden ympärivuorokautista hoitoa tarjoavista toimintayksiköistä, joilla lakisääteinen vähimmäishenkilöstömitoitus (0,55 vuonna 2021, 0,60 vuonna 2022, 0,65 vuosina 2023–2024 ja 0,6 vuodesta 2025 alkaen) on täyttynyt. Indikaattori perustuu Vanhuspalvelujen tila -seurannassa ympärivuorokautisen hoidon toimintayksiköistä kerättyihin tietoihin henkilöstön toteutuneista välittömän työn tunneista ja asiakasmääristä THL:n määrittelemältä kolmen viikon seurantajaksolta. Seurantatiedoista laskettiin jokaiselle toimintayksikölle henkilöstömitoitus ja lasketuista henkilöstömitoituksista laskettiin vähimmäishenkilöstömitoituksen täyttäneiden prosentuaalinen osuus.</p><p>Indikaattoria laskettaessa mukaan on otettu iäkkäiden palveluissa toimivat ympärivuorokautisen palveluasumisen sekä laitoshoidon (sis. vanhainkotihoidon ja terveyskeskuksien pitkäaikaishoidon) toimintayksiköt.</p>",
+      "limits": "<p><UL><LI>Vastausprosentti vuonna 2021 oli 98,1 %, vuonna 2022 99,1 %, vuonna 2023 99,6 %, vuonna 2024 99,5 % ja vuonna 2025 99,3 %.<br /><LI>Indikaattori ei sisällä toimintayksiköitä, joille ei ole voitu laskea henkilöstömitoitusta tai yksiköitä, joiden antamissa tiedoissa on epäilty ilmeistä virhettä, jonka seurauksena toteutunut henkilöstömitoitus on alle 0,25 tai yli 1,50 (2021: 2 yksikköä, 2022: ei yhtään yksikköä, 2023: 8 yksikköä, 2024: 13 yksikköä, 2025: 4 yksikköä).<br /><LI>Koko maan luku ei sisällä Ahvenanmaata.</UL></p>",
+      "notices": ""
+    },
+    {
+      "id": 6037,
+      "url": "https://sotkanet.fi/rest/1.1/json?indicator=6037&years=2016&years=2017&years=2018&years=2019&years=2020&years=2021&years=2022&years=2023&years=2024&years=2025&genders=total",
+      "sha256": "5068c0a33f28ac3402b44b5a16b565d0de22c4b9a3396afb1332da877b85c04e",
+      "updated": "2026-05-14",
+      "title": "Kotihoidon palvelutuntien määrä on toteutunut asiakassuunnitelmien mukaisesti, % kotihoidon toimintayksiköistä",
+      "description": "<p>Indikaattori ilmaisee prosenttiosuuden kotihoidon toimintayksiköistä, joissa asiakkaille toteutuneiden palvelutuntien määrä on vähintään 100 prosenttia asiakassuunnitelmiin suunniteltujen palvelutuntien määrästä. Indikaattori perustuu Vanhuspalvelujen tila -seurannassa kotihoidon toimintayksiköiltä kerättyihin tietoihin asiakassuunnitelmien mukaisista suunnitelluista kotihoidon palvelutunneista ja asiakkaille toteutuneista kotihoidon palvelutunneista THL:n määrittelemältä kalenterikuukaudelta. Asiakkaasta johtuvat keskeytykset on huomioitu suunniteltujen palvelutuntien määrässä.</p><p>Indikaattoria laskettaessa mukaan on otettu ne kotihoitoa tuottavat toimintayksiköt, joilla on hyvinvointialueen antaman kotihoidon palvelupäätöksen saaneita iäkkäitä asiakkaita, joille on suunniteltu tai toteutunut palvelutunteja. Indikaattori sisältää kyseisten toimintayksiköiden kaikki kotihoidon asiakkaat iästä riippumatta. Kotihoito on voitu tuottaa asiakkaan kotiin tai yhteisöllisen asumisen yksikköön.</p>",
+      "limits": "<p><UL><LI>Vastausprosentti vuonna 2023 oli 90,1 %, vuonna 2024 90,4 % ja vuonna 2025 85 %.<br /><LI>Vuodesta 2025 alkaen kotihoidon toimintayksiköt sisältävät vain ne yksityiset toimintayksiköt, jotka toimivat hyvinvointialueiden iäkkäiden palvelujen ostopalvelu- tai palvelusetelikumppaneina. Lisäksi mukana ovat kaikki yksikön asiakkaat iästä ja kotihoidon syystä riippumatta.<br /><LI>Koko maan luku ei sisällä Ahvenanmaata.</UL></p>",
+      "notices": ""
+    }
+  ],
+  "regions": [
+    {
+      "id": 658,
+      "name": "Koko maa",
+      "values": {
+        "2021": {
+          "171": {
+            "value": 10.4,
+            "count": 576055
+          },
+          "5513": {
+            "value": 15.5,
+            "count": 89224
+          },
+          "5439": {
+            "value": 6934.6,
+            "count": 3994733
+          },
+          "5679": {
+            "value": 22.0,
+            "count": null
+          },
+          "6035": {
+            "value": 95.5,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 9.9,
+            "count": 547835
+          },
+          "5513": {
+            "value": 16.1,
+            "count": 88441
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 11.6,
+            "count": 652831
+          },
+          "5513": {
+            "value": 13.2,
+            "count": 85995
+          },
+          "5439": {
+            "value": 8023.2,
+            "count": 5237779
+          },
+          "5679": {
+            "value": 32.6,
+            "count": null
+          },
+          "6035": {
+            "value": 93.9,
+            "count": null
+          },
+          "6037": {
+            "value": 51.6,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 9.3,
+            "count": 511969
+          },
+          "5513": {
+            "value": 16.9,
+            "count": 86455
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 9.5,
+            "count": 524583
+          },
+          "5513": {
+            "value": 16.4,
+            "count": 85917
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 11.2,
+            "count": 626643
+          },
+          "5513": {
+            "value": 13.7,
+            "count": 86150
+          },
+          "5439": {
+            "value": 8151.9,
+            "count": 5108361
+          },
+          "5679": {
+            "value": 42.8,
+            "count": null
+          },
+          "6035": {
+            "value": 94.2,
+            "count": null
+          },
+          "6037": {
+            "value": 53.5,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 9.1,
+            "count": 501800
+          },
+          "5513": {
+            "value": 17.3,
+            "count": 86730
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 10.8,
+            "count": 600850
+          },
+          "5513": {
+            "value": 14.6,
+            "count": 87777
+          },
+          "5439": {
+            "value": 7120.2,
+            "count": 4278180
+          },
+          "5679": {
+            "value": 31.6,
+            "count": null
+          },
+          "6035": {
+            "value": 95.3,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 9.1,
+            "count": 499841
+          },
+          "5513": {
+            "value": 17.3,
+            "count": 86311
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 11.9,
+            "count": 675448
+          },
+          "5513": {
+            "value": 13.1,
+            "count": 88357
+          },
+          "5439": {
+            "value": 7759.0,
+            "count": 5240792
+          },
+          "6035": {
+            "value": 97.7,
+            "count": null
+          },
+          "6037": {
+            "value": 52.0,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 956,
+      "name": "Ahvenanmaa",
+      "values": {
+        "2025": {
+          "171": {
+            "value": 12.5,
+            "count": 3856
+          },
+          "5513": {
+            "value": 9.4,
+            "count": 362
+          },
+          "5439": {
+            "value": 11209.1,
+            "count": 43222
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 8.9,
+            "count": 2586
+          },
+          "5513": {
+            "value": 17.4,
+            "count": 450
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 10.8,
+            "count": 3272
+          },
+          "5513": {
+            "value": 14.8,
+            "count": 485
+          },
+          "5439": {
+            "value": 10054.2,
+            "count": 32897
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 9.2,
+            "count": 2718
+          },
+          "5513": {
+            "value": 16.5,
+            "count": 448
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 11.3,
+            "count": 3437
+          },
+          "5513": {
+            "value": 13.2,
+            "count": 453
+          },
+          "5439": {
+            "value": 8587.1,
+            "count": 29514
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 11.8,
+            "count": 3607
+          },
+          "5513": {
+            "value": 11.3,
+            "count": 409
+          },
+          "5439": {
+            "value": 10534.5,
+            "count": 37998
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 9.8,
+            "count": 2942
+          },
+          "5513": {
+            "value": 14.3,
+            "count": 422
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 12.3,
+            "count": 3768
+          },
+          "5513": {
+            "value": 10.2,
+            "count": 384
+          },
+          "5439": {
+            "value": 10917.5,
+            "count": 41137
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 10.2,
+            "count": 3077
+          },
+          "5513": {
+            "value": 16.4,
+            "count": 506
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 9.4,
+            "count": 2805
+          },
+          "5513": {
+            "value": 16.2,
+            "count": 455
+          }
+        }
+      }
+    },
+    {
+      "id": 957,
+      "name": "Etelä-Karjalan hyvinvointialue",
+      "values": {
+        "2025": {
+          "171": {
+            "value": 15.2,
+            "count": 18937
+          },
+          "5513": {
+            "value": 14.2,
+            "count": 2690
+          },
+          "5439": {
+            "value": 7258.1,
+            "count": 137446
+          },
+          "6035": {
+            "value": 97.1,
+            "count": null
+          },
+          "6037": {
+            "value": 48.4,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 13.2,
+            "count": 16609
+          },
+          "5513": {
+            "value": 15.6,
+            "count": 2597
+          },
+          "5439": {
+            "value": 6580.7,
+            "count": 109298
+          },
+          "5679": {
+            "value": 5.4,
+            "count": null
+          },
+          "6035": {
+            "value": 89.2,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 11.8,
+            "count": 15404
+          },
+          "5513": {
+            "value": 15.7,
+            "count": 2413
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 13.7,
+            "count": 17167
+          },
+          "5513": {
+            "value": 15.3,
+            "count": 2635
+          },
+          "5439": {
+            "value": 6881.6,
+            "count": 118137
+          },
+          "5679": {
+            "value": 8.1,
+            "count": null
+          },
+          "6035": {
+            "value": 86.5,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 11.8,
+            "count": 15350
+          },
+          "5513": {
+            "value": 15.1,
+            "count": 2317
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 12.2,
+            "count": 15601
+          },
+          "5513": {
+            "value": 15.1,
+            "count": 2363
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 14.2,
+            "count": 17713
+          },
+          "5513": {
+            "value": 15.3,
+            "count": 2718
+          },
+          "5439": {
+            "value": 7432.3,
+            "count": 131648
+          },
+          "5679": {
+            "value": 40.5,
+            "count": null
+          },
+          "6035": {
+            "value": 97.3,
+            "count": null
+          },
+          "6037": {
+            "value": 61.1,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 12.0,
+            "count": 15508
+          },
+          "5513": {
+            "value": 15.0,
+            "count": 2322
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 12.6,
+            "count": 16030
+          },
+          "5513": {
+            "value": 16.2,
+            "count": 2603
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 14.7,
+            "count": 18389
+          },
+          "5513": {
+            "value": 15.1,
+            "count": 2781
+          },
+          "5439": {
+            "value": 7343.5,
+            "count": 135040
+          },
+          "5679": {
+            "value": 42.1,
+            "count": null
+          },
+          "6035": {
+            "value": 92.1,
+            "count": null
+          },
+          "6037": {
+            "value": 44.4,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 958,
+      "name": "Etelä-Pohjanmaan hyvinvointialue",
+      "values": {
+        "2020": {
+          "171": {
+            "value": 11.5,
+            "count": 22032
+          },
+          "5513": {
+            "value": 17.9,
+            "count": 3949
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 13.4,
+            "count": 25482
+          },
+          "5513": {
+            "value": 13.8,
+            "count": 3523
+          },
+          "5439": {
+            "value": 9240.5,
+            "count": 235468
+          },
+          "5679": {
+            "value": 43.9,
+            "count": null
+          },
+          "6035": {
+            "value": 97.6,
+            "count": null
+          },
+          "6037": {
+            "value": 50.9,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 10.9,
+            "count": 21182
+          },
+          "5513": {
+            "value": 20.3,
+            "count": 4301
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 11.1,
+            "count": 21387
+          },
+          "5513": {
+            "value": 19.4,
+            "count": 4144
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 12.9,
+            "count": 24597
+          },
+          "5513": {
+            "value": 15.2,
+            "count": 3738
+          },
+          "5439": {
+            "value": 9138.2,
+            "count": 224773
+          },
+          "5679": {
+            "value": 43.5,
+            "count": null
+          },
+          "6035": {
+            "value": 98.8,
+            "count": null
+          },
+          "6037": {
+            "value": 39.2,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 10.7,
+            "count": 21025
+          },
+          "5513": {
+            "value": 20.9,
+            "count": 4385
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 12.4,
+            "count": 23738
+          },
+          "5513": {
+            "value": 16.3,
+            "count": 3875
+          },
+          "5439": {
+            "value": 7767.8,
+            "count": 184393
+          },
+          "5679": {
+            "value": 38.8,
+            "count": null
+          },
+          "6035": {
+            "value": 96.5,
+            "count": null
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 13.9,
+            "count": 26360
+          },
+          "5513": {
+            "value": 13.1,
+            "count": 3463
+          },
+          "5439": {
+            "value": 8966.7,
+            "count": 236363
+          },
+          "6035": {
+            "value": 100.0,
+            "count": null
+          },
+          "6037": {
+            "value": 73.6,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 10.8,
+            "count": 21238
+          },
+          "5513": {
+            "value": 20.0,
+            "count": 4240
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 12.0,
+            "count": 23023
+          },
+          "5513": {
+            "value": 17.3,
+            "count": 3990
+          },
+          "5439": {
+            "value": 7203.1,
+            "count": 165838
+          },
+          "5679": {
+            "value": 23.5,
+            "count": null
+          },
+          "6035": {
+            "value": 98.8,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 959,
+      "name": "Etelä-Savon hyvinvointialue",
+      "values": {
+        "2023": {
+          "171": {
+            "value": 16.1,
+            "count": 20886
+          },
+          "5513": {
+            "value": 16.2,
+            "count": 3390
+          },
+          "5439": {
+            "value": 8914.8,
+            "count": 186195
+          },
+          "5679": {
+            "value": 44.4,
+            "count": null
+          },
+          "6035": {
+            "value": 92.6,
+            "count": null
+          },
+          "6037": {
+            "value": 71.2,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 13.3,
+            "count": 18094
+          },
+          "5513": {
+            "value": 20.2,
+            "count": 3655
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 14.2,
+            "count": 18867
+          },
+          "5513": {
+            "value": 18.2,
+            "count": 3435
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 12.9,
+            "count": 17953
+          },
+          "5513": {
+            "value": 20.8,
+            "count": 3731
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 13.6,
+            "count": 18310
+          },
+          "5513": {
+            "value": 19.2,
+            "count": 3518
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 17.3,
+            "count": 22190
+          },
+          "5513": {
+            "value": 15.7,
+            "count": 3473
+          },
+          "5439": {
+            "value": 8060.2,
+            "count": 178857
+          },
+          "6035": {
+            "value": 96.1,
+            "count": null
+          },
+          "6037": {
+            "value": 89.8,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 12.9,
+            "count": 18066
+          },
+          "5513": {
+            "value": 21.0,
+            "count": 3797
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 15.5,
+            "count": 20170
+          },
+          "5513": {
+            "value": 17.1,
+            "count": 3439
+          },
+          "5439": {
+            "value": 6408.5,
+            "count": 129259
+          },
+          "5679": {
+            "value": 32.1,
+            "count": null
+          },
+          "6035": {
+            "value": 98.2,
+            "count": null
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 16.7,
+            "count": 21594
+          },
+          "5513": {
+            "value": 15.7,
+            "count": 3398
+          },
+          "5439": {
+            "value": 7909.7,
+            "count": 170802
+          },
+          "5679": {
+            "value": 38.2,
+            "count": null
+          },
+          "6035": {
+            "value": 98.2,
+            "count": null
+          },
+          "6037": {
+            "value": 62.5,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 14.8,
+            "count": 19525
+          },
+          "5513": {
+            "value": 17.2,
+            "count": 3357
+          },
+          "5439": {
+            "value": 7311.0,
+            "count": 142748
+          },
+          "5679": {
+            "value": 19.6,
+            "count": null
+          },
+          "6035": {
+            "value": 96.4,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 960,
+      "name": "Helsingin kaupunki",
+      "values": {
+        "2025": {
+          "171": {
+            "value": 8.9,
+            "count": 61923
+          },
+          "5513": {
+            "value": 12.8,
+            "count": 7954
+          },
+          "5439": {
+            "value": 8403.6,
+            "count": 520374
+          },
+          "6035": {
+            "value": 98.1,
+            "count": null
+          },
+          "6037": {
+            "value": 14.1,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 8.1,
+            "count": 53294
+          },
+          "5513": {
+            "value": 14.9,
+            "count": 7942
+          },
+          "5439": {
+            "value": 8742.0,
+            "count": 465897
+          },
+          "5679": {
+            "value": 44.0,
+            "count": null
+          },
+          "6035": {
+            "value": 98.7,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 7.2,
+            "count": 46608
+          },
+          "5513": {
+            "value": 17.9,
+            "count": 8337
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 8.8,
+            "count": 60104
+          },
+          "5513": {
+            "value": 12.9,
+            "count": 7761
+          },
+          "5439": {
+            "value": 8449.6,
+            "count": 507853
+          },
+          "5679": {
+            "value": 23.5,
+            "count": null
+          },
+          "6035": {
+            "value": 86.4,
+            "count": null
+          },
+          "6037": {
+            "value": 11.2,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 7.7,
+            "count": 50646
+          },
+          "5513": {
+            "value": 15.9,
+            "count": 8040
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 7.0,
+            "count": 45236
+          },
+          "5513": {
+            "value": 19.4,
+            "count": 8764
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 8.6,
+            "count": 57877
+          },
+          "5513": {
+            "value": 13.0,
+            "count": 7515
+          },
+          "5439": {
+            "value": 8557.2,
+            "count": 495268
+          },
+          "5679": {
+            "value": 57.1,
+            "count": null
+          },
+          "6035": {
+            "value": 94.5,
+            "count": null
+          },
+          "6037": {
+            "value": 13.7,
+            "count": null
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 7.4,
+            "count": 48189
+          },
+          "5513": {
+            "value": 16.5,
+            "count": 7936
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 7.1,
+            "count": 44819
+          },
+          "5513": {
+            "value": 19.5,
+            "count": 8746
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 8.4,
+            "count": 55591
+          },
+          "5513": {
+            "value": 13.1,
+            "count": 7296
+          },
+          "5439": {
+            "value": 8762.5,
+            "count": 487114
+          },
+          "5679": {
+            "value": 48.8,
+            "count": null
+          },
+          "6035": {
+            "value": 96.3,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 961,
+      "name": "Itä-Uudenmaan hyvinvointialue",
+      "values": {
+        "2024": {
+          "171": {
+            "value": 11.7,
+            "count": 11597
+          },
+          "5513": {
+            "value": 13.1,
+            "count": 1521
+          },
+          "5439": {
+            "value": 7748.6,
+            "count": 89860
+          },
+          "5679": {
+            "value": 45.2,
+            "count": null
+          },
+          "6035": {
+            "value": 93.5,
+            "count": null
+          },
+          "6037": {
+            "value": 64.3,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 9.6,
+            "count": 9436
+          },
+          "5513": {
+            "value": 16.1,
+            "count": 1522
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 10.1,
+            "count": 10007
+          },
+          "5513": {
+            "value": 15.6,
+            "count": 1560
+          },
+          "5439": {
+            "value": 5817.0,
+            "count": 58210
+          },
+          "5679": {
+            "value": 24.1,
+            "count": null
+          },
+          "6035": {
+            "value": 89.7,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 8.8,
+            "count": 8544
+          },
+          "5513": {
+            "value": 18.3,
+            "count": 1567
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 8.6,
+            "count": 8338
+          },
+          "5513": {
+            "value": 18.8,
+            "count": 1568
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 10.7,
+            "count": 10565
+          },
+          "5513": {
+            "value": 15.2,
+            "count": 1608
+          },
+          "5439": {
+            "value": 5904.6,
+            "count": 62382
+          },
+          "5679": {
+            "value": 20.7,
+            "count": null
+          },
+          "6035": {
+            "value": 96.6,
+            "count": null
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 12.1,
+            "count": 12025
+          },
+          "5513": {
+            "value": 12.0,
+            "count": 1437
+          },
+          "5439": {
+            "value": 7156.8,
+            "count": 86061
+          },
+          "6035": {
+            "value": 93.1,
+            "count": null
+          },
+          "6037": {
+            "value": 66.7,
+            "count": null
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 11.2,
+            "count": 11086
+          },
+          "5513": {
+            "value": 14.7,
+            "count": 1635
+          },
+          "5439": {
+            "value": 7449.4,
+            "count": 82584
+          },
+          "5679": {
+            "value": 50.0,
+            "count": null
+          },
+          "6035": {
+            "value": 93.3,
+            "count": null
+          },
+          "6037": {
+            "value": 50.0,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 8.4,
+            "count": 8191
+          },
+          "5513": {
+            "value": 19.3,
+            "count": 1580
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 9.1,
+            "count": 8880
+          },
+          "5513": {
+            "value": 17.0,
+            "count": 1509
+          }
+        }
+      }
+    },
+    {
+      "id": 962,
+      "name": "Kainuun hyvinvointialue",
+      "values": {
+        "2023": {
+          "171": {
+            "value": 14.0,
+            "count": 9789
+          },
+          "5513": {
+            "value": 19.0,
+            "count": 1856
+          },
+          "5439": {
+            "value": 8613.9,
+            "count": 84322
+          },
+          "5679": {
+            "value": 40.0,
+            "count": null
+          },
+          "6035": {
+            "value": 90.0,
+            "count": null
+          },
+          "6037": {
+            "value": 60.0,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 12.6,
+            "count": 9040
+          },
+          "5513": {
+            "value": 21.7,
+            "count": 1963
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 11.9,
+            "count": 8730
+          },
+          "5513": {
+            "value": 22.9,
+            "count": 2000
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 14.5,
+            "count": 10082
+          },
+          "5513": {
+            "value": 17.1,
+            "count": 1725
+          },
+          "5439": {
+            "value": 8481.8,
+            "count": 85513
+          },
+          "5679": {
+            "value": 36.0,
+            "count": null
+          },
+          "6035": {
+            "value": 92.0,
+            "count": null
+          },
+          "6037": {
+            "value": 70.8,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 13.1,
+            "count": 9309
+          },
+          "5513": {
+            "value": 20.1,
+            "count": 1870
+          },
+          "5439": {
+            "value": 7268.9,
+            "count": 67666
+          },
+          "5679": {
+            "value": 25.8,
+            "count": null
+          },
+          "6035": {
+            "value": 93.5,
+            "count": null
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 14.9,
+            "count": 10338
+          },
+          "5513": {
+            "value": 17.4,
+            "count": 1802
+          },
+          "5439": {
+            "value": 8475.2,
+            "count": 87616
+          },
+          "6035": {
+            "value": 100.0,
+            "count": null
+          },
+          "6037": {
+            "value": 60.7,
+            "count": null
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 13.5,
+            "count": 9541
+          },
+          "5513": {
+            "value": 20.2,
+            "count": 1927
+          },
+          "5439": {
+            "value": 7366.1,
+            "count": 70280
+          },
+          "5679": {
+            "value": 24.1,
+            "count": null
+          },
+          "6035": {
+            "value": 96.6,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 11.8,
+            "count": 8816
+          },
+          "5513": {
+            "value": 23.6,
+            "count": 2084
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 12.3,
+            "count": 8863
+          },
+          "5513": {
+            "value": 23.6,
+            "count": 2093
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 11.8,
+            "count": 8753
+          },
+          "5513": {
+            "value": 23.6,
+            "count": 2069
+          }
+        }
+      }
+    },
+    {
+      "id": 963,
+      "name": "Kanta-Hämeen hyvinvointialue",
+      "values": {
+        "2019": {
+          "171": {
+            "value": 10.7,
+            "count": 18351
+          },
+          "5513": {
+            "value": 12.3,
+            "count": 2248
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 10.5,
+            "count": 17950
+          },
+          "5513": {
+            "value": 9.0,
+            "count": 1619
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 12.5,
+            "count": 21244
+          },
+          "5513": {
+            "value": 15.5,
+            "count": 3292
+          },
+          "5439": {
+            "value": 6747.5,
+            "count": 143343
+          },
+          "5679": {
+            "value": 28.2,
+            "count": null
+          },
+          "6035": {
+            "value": 95.8,
+            "count": null
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 14.2,
+            "count": 23925
+          },
+          "5513": {
+            "value": 14.1,
+            "count": 3379
+          },
+          "5439": {
+            "value": 7851.5,
+            "count": 187848
+          },
+          "6035": {
+            "value": 100.0,
+            "count": null
+          },
+          "6037": {
+            "value": 56.1,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 11.9,
+            "count": 20237
+          },
+          "5513": {
+            "value": 16.8,
+            "count": 3390
+          },
+          "5439": {
+            "value": 6580.5,
+            "count": 133170
+          },
+          "5679": {
+            "value": 11.1,
+            "count": null
+          },
+          "6035": {
+            "value": 94.4,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 10.2,
+            "count": 17684
+          },
+          "5513": {
+            "value": 10.0,
+            "count": 1762
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 13.6,
+            "count": 23015
+          },
+          "5513": {
+            "value": 14.1,
+            "count": 3253
+          },
+          "5439": {
+            "value": 7985.1,
+            "count": 183777
+          },
+          "5679": {
+            "value": 21.5,
+            "count": null
+          },
+          "6035": {
+            "value": 87.7,
+            "count": null
+          },
+          "6037": {
+            "value": 64.2,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 11.3,
+            "count": 19212
+          },
+          "5513": {
+            "value": 17.3,
+            "count": 3326
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 10.2,
+            "count": 17658
+          },
+          "5513": {
+            "value": 9.2,
+            "count": 1621
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 13.0,
+            "count": 22111
+          },
+          "5513": {
+            "value": 15.3,
+            "count": 3393
+          },
+          "5439": {
+            "value": 8004.7,
+            "count": 176992
+          },
+          "5679": {
+            "value": 43.7,
+            "count": null
+          },
+          "6035": {
+            "value": 97.2,
+            "count": null
+          },
+          "6037": {
+            "value": 71.7,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 964,
+      "name": "Keski-Pohjanmaan hyvinvointialue",
+      "values": {
+        "2022": {
+          "171": {
+            "value": 11.5,
+            "count": 7815
+          },
+          "5513": {
+            "value": 20.6,
+            "count": 1613
+          },
+          "5439": {
+            "value": 7426.9,
+            "count": 58041
+          },
+          "5679": {
+            "value": 37.0,
+            "count": null
+          },
+          "6035": {
+            "value": 96.3,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 9.4,
+            "count": 6474
+          },
+          "5513": {
+            "value": 23.3,
+            "count": 1508
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 13.1,
+            "count": 8854
+          },
+          "5513": {
+            "value": 17.5,
+            "count": 1552
+          },
+          "5439": {
+            "value": 8024.2,
+            "count": 71047
+          },
+          "6035": {
+            "value": 100.0,
+            "count": null
+          },
+          "6037": {
+            "value": 40.0,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 10.9,
+            "count": 7396
+          },
+          "5513": {
+            "value": 22.2,
+            "count": 1640
+          },
+          "5439": {
+            "value": 7624.7,
+            "count": 56392
+          },
+          "5679": {
+            "value": 29.6,
+            "count": null
+          },
+          "6035": {
+            "value": 96.3,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 9.4,
+            "count": 6502
+          },
+          "5513": {
+            "value": 21.6,
+            "count": 1406
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 12.6,
+            "count": 8519
+          },
+          "5513": {
+            "value": 18.7,
+            "count": 1593
+          },
+          "5439": {
+            "value": 8151.3,
+            "count": 69441
+          },
+          "5679": {
+            "value": 28.0,
+            "count": null
+          },
+          "6035": {
+            "value": 96.0,
+            "count": null
+          },
+          "6037": {
+            "value": 41.7,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 10.3,
+            "count": 7003
+          },
+          "5513": {
+            "value": 22.2,
+            "count": 1553
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 12.0,
+            "count": 8147
+          },
+          "5513": {
+            "value": 20.0,
+            "count": 1628
+          },
+          "5439": {
+            "value": 8316.4,
+            "count": 67753
+          },
+          "5679": {
+            "value": 36.0,
+            "count": null
+          },
+          "6035": {
+            "value": 88.0,
+            "count": null
+          },
+          "6037": {
+            "value": 57.1,
+            "count": null
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 9.9,
+            "count": 6750
+          },
+          "5513": {
+            "value": 22.6,
+            "count": 1526
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 9.6,
+            "count": 6598
+          },
+          "5513": {
+            "value": 23.6,
+            "count": 1557
+          }
+        }
+      }
+    },
+    {
+      "id": 965,
+      "name": "Keski-Suomen hyvinvointialue",
+      "values": {
+        "2025": {
+          "171": {
+            "value": 12.8,
+            "count": 34937
+          },
+          "5513": {
+            "value": 13.9,
+            "count": 4851
+          },
+          "5439": {
+            "value": 8014.3,
+            "count": 279994
+          },
+          "6035": {
+            "value": 97.8,
+            "count": null
+          },
+          "6037": {
+            "value": 75.5,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 9.5,
+            "count": 26104
+          },
+          "5513": {
+            "value": 17.0,
+            "count": 4449
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 10.8,
+            "count": 29387
+          },
+          "5513": {
+            "value": 16.7,
+            "count": 4902
+          },
+          "5439": {
+            "value": 7081.1,
+            "count": 208092
+          },
+          "5679": {
+            "value": 20.8,
+            "count": null
+          },
+          "6035": {
+            "value": 90.6,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 9.5,
+            "count": 26046
+          },
+          "5513": {
+            "value": 16.8,
+            "count": 4382
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 11.2,
+            "count": 30620
+          },
+          "5513": {
+            "value": 15.6,
+            "count": 4785
+          },
+          "5439": {
+            "value": 7137.4,
+            "count": 218547
+          },
+          "5679": {
+            "value": 33.0,
+            "count": null
+          },
+          "6035": {
+            "value": 94.8,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 9.7,
+            "count": 26471
+          },
+          "5513": {
+            "value": 16.6,
+            "count": 4406
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 11.7,
+            "count": 32053
+          },
+          "5513": {
+            "value": 15.2,
+            "count": 4880
+          },
+          "5439": {
+            "value": 9146.3,
+            "count": 293167
+          },
+          "5679": {
+            "value": 46.3,
+            "count": null
+          },
+          "6035": {
+            "value": 90.5,
+            "count": null
+          },
+          "6037": {
+            "value": 83.6,
+            "count": null
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 9.9,
+            "count": 26941
+          },
+          "5513": {
+            "value": 16.2,
+            "count": 4370
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 12.3,
+            "count": 33622
+          },
+          "5513": {
+            "value": 14.6,
+            "count": 4916
+          },
+          "5439": {
+            "value": 9130.8,
+            "count": 306995
+          },
+          "5679": {
+            "value": 29.9,
+            "count": null
+          },
+          "6035": {
+            "value": 88.7,
+            "count": null
+          },
+          "6037": {
+            "value": 71.2,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 10.3,
+            "count": 28017
+          },
+          "5513": {
+            "value": 16.3,
+            "count": 4570
+          }
+        }
+      }
+    },
+    {
+      "id": 966,
+      "name": "Keski-Uudenmaan hyvinvointialue",
+      "values": {
+        "2021": {
+          "171": {
+            "value": 8.3,
+            "count": 16808
+          },
+          "5513": {
+            "value": 12.0,
+            "count": 2025
+          },
+          "5439": {
+            "value": 6028.2,
+            "count": 101322
+          },
+          "5679": {
+            "value": 17.1,
+            "count": null
+          },
+          "6035": {
+            "value": 95.1,
+            "count": null
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 10.2,
+            "count": 21087
+          },
+          "5513": {
+            "value": 10.2,
+            "count": 2153
+          },
+          "5439": {
+            "value": 6112.2,
+            "count": 128889
+          },
+          "6035": {
+            "value": 100.0,
+            "count": null
+          },
+          "6037": {
+            "value": 41.2,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 6.7,
+            "count": 13015
+          },
+          "5513": {
+            "value": 15.6,
+            "count": 2028
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 8.8,
+            "count": 17823
+          },
+          "5513": {
+            "value": 11.1,
+            "count": 1976
+          },
+          "5439": {
+            "value": 6013.5,
+            "count": 107179
+          },
+          "5679": {
+            "value": 27.5,
+            "count": null
+          },
+          "6035": {
+            "value": 100.0,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 6.8,
+            "count": 13315
+          },
+          "5513": {
+            "value": 15.1,
+            "count": 2008
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 7.4,
+            "count": 14574
+          },
+          "5513": {
+            "value": 13.7,
+            "count": 2003
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 7.1,
+            "count": 13917
+          },
+          "5513": {
+            "value": 14.9,
+            "count": 2071
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 9.2,
+            "count": 19000
+          },
+          "5513": {
+            "value": 9.8,
+            "count": 1867
+          },
+          "5439": {
+            "value": 6575.9,
+            "count": 124943
+          },
+          "5679": {
+            "value": 34.1,
+            "count": null
+          },
+          "6035": {
+            "value": 92.7,
+            "count": null
+          },
+          "6037": {
+            "value": 59.3,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 7.8,
+            "count": 15602
+          },
+          "5513": {
+            "value": 13.0,
+            "count": 2030
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 9.7,
+            "count": 20136
+          },
+          "5513": {
+            "value": 8.7,
+            "count": 1745
+          },
+          "5439": {
+            "value": 6863.2,
+            "count": 138197
+          },
+          "5679": {
+            "value": 22.0,
+            "count": null
+          },
+          "6035": {
+            "value": 100.0,
+            "count": null
+          },
+          "6037": {
+            "value": 38.9,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 967,
+      "name": "Kymenlaakson hyvinvointialue",
+      "values": {
+        "2024": {
+          "171": {
+            "value": 15.4,
+            "count": 24184
+          },
+          "5513": {
+            "value": 13.1,
+            "count": 3174
+          },
+          "5439": {
+            "value": 7481.5,
+            "count": 180932
+          },
+          "5679": {
+            "value": 38.8,
+            "count": null
+          },
+          "6035": {
+            "value": 91.8,
+            "count": null
+          },
+          "6037": {
+            "value": 42.1,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 12.8,
+            "count": 20823
+          },
+          "5513": {
+            "value": 15.6,
+            "count": 3253
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 11.8,
+            "count": 19682
+          },
+          "5513": {
+            "value": 15.4,
+            "count": 3022
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 14.7,
+            "count": 23314
+          },
+          "5513": {
+            "value": 14.0,
+            "count": 3270
+          },
+          "5439": {
+            "value": 7212.3,
+            "count": 168148
+          },
+          "5679": {
+            "value": 33.3,
+            "count": null
+          },
+          "6035": {
+            "value": 89.6,
+            "count": null
+          },
+          "6037": {
+            "value": 40.0,
+            "count": null
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 12.2,
+            "count": 20044
+          },
+          "5513": {
+            "value": 15.0,
+            "count": 3007
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 11.5,
+            "count": 19481
+          },
+          "5513": {
+            "value": 15.0,
+            "count": 2924
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 14.1,
+            "count": 22447
+          },
+          "5513": {
+            "value": 15.2,
+            "count": 3411
+          },
+          "5439": {
+            "value": 7226.7,
+            "count": 162218
+          },
+          "5679": {
+            "value": 25.0,
+            "count": null
+          },
+          "6035": {
+            "value": 87.5,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 11.4,
+            "count": 19524
+          },
+          "5513": {
+            "value": 15.6,
+            "count": 3053
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 13.4,
+            "count": 21663
+          },
+          "5513": {
+            "value": 15.1,
+            "count": 3276
+          },
+          "5439": {
+            "value": 6589.5,
+            "count": 142749
+          },
+          "5679": {
+            "value": 15.4,
+            "count": null
+          },
+          "6035": {
+            "value": 86.5,
+            "count": null
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 16.0,
+            "count": 24946
+          },
+          "5513": {
+            "value": 13.0,
+            "count": 3254
+          },
+          "5439": {
+            "value": 7572.4,
+            "count": 188900
+          },
+          "6035": {
+            "value": 91.8,
+            "count": null
+          },
+          "6037": {
+            "value": 41.0,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 968,
+      "name": "Lapin hyvinvointialue",
+      "values": {
+        "2018": {
+          "171": {
+            "value": 10.6,
+            "count": 18835
+          },
+          "5513": {
+            "value": 17.7,
+            "count": 3343
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 10.9,
+            "count": 19244
+          },
+          "5513": {
+            "value": 18.0,
+            "count": 3455
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 12.7,
+            "count": 22414
+          },
+          "5513": {
+            "value": 15.5,
+            "count": 3470
+          },
+          "5439": {
+            "value": 10701.5,
+            "count": 239864
+          },
+          "5679": {
+            "value": 45.0,
+            "count": null
+          },
+          "6035": {
+            "value": 92.4,
+            "count": null
+          },
+          "6037": {
+            "value": 59.7,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 10.4,
+            "count": 18639
+          },
+          "5513": {
+            "value": 17.5,
+            "count": 3260
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 10.7,
+            "count": 18902
+          },
+          "5513": {
+            "value": 17.8,
+            "count": 3366
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 12.2,
+            "count": 21530
+          },
+          "5513": {
+            "value": 15.7,
+            "count": 3382
+          },
+          "5439": {
+            "value": 10767.4,
+            "count": 231822
+          },
+          "5679": {
+            "value": 42.3,
+            "count": null
+          },
+          "6035": {
+            "value": 90.9,
+            "count": null
+          },
+          "6037": {
+            "value": 59.0,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 10.4,
+            "count": 18818
+          },
+          "5513": {
+            "value": 16.9,
+            "count": 3171
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 11.8,
+            "count": 20734
+          },
+          "5513": {
+            "value": 16.4,
+            "count": 3398
+          },
+          "5439": {
+            "value": 8525.7,
+            "count": 176772
+          },
+          "5679": {
+            "value": 35.4,
+            "count": null
+          },
+          "6035": {
+            "value": 95.1,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 11.4,
+            "count": 20083
+          },
+          "5513": {
+            "value": 16.7,
+            "count": 3354
+          },
+          "5439": {
+            "value": 7963.8,
+            "count": 159936
+          },
+          "5679": {
+            "value": 26.5,
+            "count": null
+          },
+          "6035": {
+            "value": 97.6,
+            "count": null
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 13.1,
+            "count": 23161
+          },
+          "5513": {
+            "value": 15.0,
+            "count": 3480
+          },
+          "5439": {
+            "value": 9867.2,
+            "count": 228534
+          },
+          "6035": {
+            "value": 97.4,
+            "count": null
+          },
+          "6037": {
+            "value": 60.4,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 969,
+      "name": "Länsi-Uudenmaan hyvinvointialue",
+      "values": {
+        "2019": {
+          "171": {
+            "value": 7.2,
+            "count": 33747
+          },
+          "5513": {
+            "value": 14.4,
+            "count": 4844
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 8.8,
+            "count": 43606
+          },
+          "5513": {
+            "value": 12.3,
+            "count": 5374
+          },
+          "5439": {
+            "value": 6935.8,
+            "count": 302441
+          },
+          "5679": {
+            "value": 39.0,
+            "count": null
+          },
+          "6035": {
+            "value": 98.0,
+            "count": null
+          },
+          "6037": {
+            "value": 56.6,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 6.7,
+            "count": 30768
+          },
+          "5513": {
+            "value": 15.0,
+            "count": 4616
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 7.6,
+            "count": 36058
+          },
+          "5513": {
+            "value": 13.6,
+            "count": 4911
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 9.1,
+            "count": 45638
+          },
+          "5513": {
+            "value": 11.4,
+            "count": 5196
+          },
+          "5439": {
+            "value": 5987.8,
+            "count": 273271
+          },
+          "5679": {
+            "value": 24.5,
+            "count": null
+          },
+          "6035": {
+            "value": 94.6,
+            "count": null
+          },
+          "6037": {
+            "value": 50.9,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 6.9,
+            "count": 32082
+          },
+          "5513": {
+            "value": 14.9,
+            "count": 4781
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 8.1,
+            "count": 38883
+          },
+          "5513": {
+            "value": 13.6,
+            "count": 5292
+          },
+          "5439": {
+            "value": 5946.4,
+            "count": 231213
+          },
+          "5679": {
+            "value": 20.4,
+            "count": null
+          },
+          "6035": {
+            "value": 99.0,
+            "count": null
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 8.5,
+            "count": 41217
+          },
+          "5513": {
+            "value": 13.0,
+            "count": 5355
+          },
+          "5439": {
+            "value": 6084.2,
+            "count": 250772
+          },
+          "5679": {
+            "value": 27.7,
+            "count": null
+          },
+          "6035": {
+            "value": 98.0,
+            "count": null
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 9.4,
+            "count": 47498
+          },
+          "5513": {
+            "value": 10.7,
+            "count": 5076
+          },
+          "5439": {
+            "value": 5592.8,
+            "count": 265647
+          },
+          "6035": {
+            "value": 94.2,
+            "count": null
+          },
+          "6037": {
+            "value": 46.8,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 6.5,
+            "count": 29798
+          },
+          "5513": {
+            "value": 14.7,
+            "count": 4370
+          }
+        }
+      }
+    },
+    {
+      "id": 970,
+      "name": "Pirkanmaan hyvinvointialue",
+      "values": {
+        "2024": {
+          "171": {
+            "value": 11.2,
+            "count": 61237
+          },
+          "5513": {
+            "value": 12.1,
+            "count": 7415
+          },
+          "5439": {
+            "value": 7706.0,
+            "count": 471895
+          },
+          "5679": {
+            "value": 37.7,
+            "count": null
+          },
+          "6035": {
+            "value": 98.9,
+            "count": null
+          },
+          "6037": {
+            "value": 77.4,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 9.8,
+            "count": 51277
+          },
+          "5513": {
+            "value": 15.8,
+            "count": 8077
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 9.1,
+            "count": 46543
+          },
+          "5513": {
+            "value": 17.7,
+            "count": 8216
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 9.2,
+            "count": 47825
+          },
+          "5513": {
+            "value": 17.4,
+            "count": 8309
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 11.5,
+            "count": 63343
+          },
+          "5513": {
+            "value": 12.2,
+            "count": 7722
+          },
+          "5439": {
+            "value": 7572.4,
+            "count": 479659
+          },
+          "6035": {
+            "value": 97.8,
+            "count": null
+          },
+          "6037": {
+            "value": 75.6,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 10.2,
+            "count": 54034
+          },
+          "5513": {
+            "value": 14.7,
+            "count": 7927
+          },
+          "5439": {
+            "value": 6815.2,
+            "count": 368250
+          },
+          "5679": {
+            "value": 17.8,
+            "count": null
+          },
+          "6035": {
+            "value": 95.9,
+            "count": null
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 10.6,
+            "count": 56536
+          },
+          "5513": {
+            "value": 13.5,
+            "count": 7652
+          },
+          "5439": {
+            "value": 6804.9,
+            "count": 384723
+          },
+          "5679": {
+            "value": 36.5,
+            "count": null
+          },
+          "6035": {
+            "value": 94.7,
+            "count": null
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 10.9,
+            "count": 58885
+          },
+          "5513": {
+            "value": 12.6,
+            "count": 7398
+          },
+          "5439": {
+            "value": 8105.8,
+            "count": 477309
+          },
+          "5679": {
+            "value": 42.8,
+            "count": null
+          },
+          "6035": {
+            "value": 95.2,
+            "count": null
+          },
+          "6037": {
+            "value": 70.9,
+            "count": null
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 9.4,
+            "count": 49063
+          },
+          "5513": {
+            "value": 16.8,
+            "count": 8220
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 9.1,
+            "count": 46811
+          },
+          "5513": {
+            "value": 17.6,
+            "count": 8234
+          }
+        }
+      }
+    },
+    {
+      "id": 971,
+      "name": "Pohjanmaan hyvinvointialue",
+      "values": {
+        "2024": {
+          "171": {
+            "value": 12.3,
+            "count": 22007
+          },
+          "5513": {
+            "value": 12.0,
+            "count": 2651
+          },
+          "5439": {
+            "value": 8179.4,
+            "count": 180003
+          },
+          "5679": {
+            "value": 32.3,
+            "count": null
+          },
+          "6035": {
+            "value": 78.5,
+            "count": null
+          },
+          "6037": {
+            "value": 59.5,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 10.3,
+            "count": 18111
+          },
+          "5513": {
+            "value": 15.3,
+            "count": 2765
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 10.9,
+            "count": 19183
+          },
+          "5513": {
+            "value": 15.6,
+            "count": 2994
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 12.6,
+            "count": 22599
+          },
+          "5513": {
+            "value": 12.3,
+            "count": 2784
+          },
+          "5439": {
+            "value": 7813.1,
+            "count": 176568
+          },
+          "6035": {
+            "value": 96.7,
+            "count": null
+          },
+          "6037": {
+            "value": 36.8,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 11.4,
+            "count": 20100
+          },
+          "5513": {
+            "value": 15.7,
+            "count": 3157
+          },
+          "5439": {
+            "value": 7366.2,
+            "count": 148061
+          },
+          "5679": {
+            "value": 40.3,
+            "count": null
+          },
+          "6035": {
+            "value": 97.0,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 10.1,
+            "count": 17839
+          },
+          "5513": {
+            "value": 15.9,
+            "count": 2844
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 11.7,
+            "count": 20680
+          },
+          "5513": {
+            "value": 14.1,
+            "count": 2908
+          },
+          "5439": {
+            "value": 7863.5,
+            "count": 162617
+          },
+          "5679": {
+            "value": 36.8,
+            "count": null
+          },
+          "6035": {
+            "value": 91.2,
+            "count": null
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 10.5,
+            "count": 18467
+          },
+          "5513": {
+            "value": 15.1,
+            "count": 2780
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 10.1,
+            "count": 17858
+          },
+          "5513": {
+            "value": 16.0,
+            "count": 2862
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 12.0,
+            "count": 21241
+          },
+          "5513": {
+            "value": 12.5,
+            "count": 2648
+          },
+          "5439": {
+            "value": 8537.8,
+            "count": 181351
+          },
+          "5679": {
+            "value": 41.2,
+            "count": null
+          },
+          "6035": {
+            "value": 89.7,
+            "count": null
+          },
+          "6037": {
+            "value": 45.5,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 972,
+      "name": "Pohjois-Karjalan hyvinvointialue",
+      "values": {
+        "2023": {
+          "171": {
+            "value": 13.1,
+            "count": 21266
+          },
+          "5513": {
+            "value": 13.4,
+            "count": 2840
+          },
+          "5439": {
+            "value": 8408.9,
+            "count": 178824
+          },
+          "5679": {
+            "value": 19.2,
+            "count": null
+          },
+          "6035": {
+            "value": 94.5,
+            "count": null
+          },
+          "6037": {
+            "value": 77.8,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 11.0,
+            "count": 18141
+          },
+          "5513": {
+            "value": 18.2,
+            "count": 3306
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 11.1,
+            "count": 18326
+          },
+          "5513": {
+            "value": 17.7,
+            "count": 3246
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 12.6,
+            "count": 20546
+          },
+          "5513": {
+            "value": 14.0,
+            "count": 2867
+          },
+          "5439": {
+            "value": 7559.9,
+            "count": 155326
+          },
+          "5679": {
+            "value": 13.7,
+            "count": null
+          },
+          "6035": {
+            "value": 93.2,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 10.8,
+            "count": 18116
+          },
+          "5513": {
+            "value": 18.3,
+            "count": 3319
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 14.2,
+            "count": 22999
+          },
+          "5513": {
+            "value": 12.3,
+            "count": 2824
+          },
+          "5439": {
+            "value": 8307.8,
+            "count": 191071
+          },
+          "6035": {
+            "value": 98.6,
+            "count": null
+          },
+          "6037": {
+            "value": 81.3,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 12.1,
+            "count": 19814
+          },
+          "5513": {
+            "value": 15.6,
+            "count": 3085
+          },
+          "5439": {
+            "value": 7144.9,
+            "count": 141569
+          },
+          "5679": {
+            "value": 13.7,
+            "count": null
+          },
+          "6035": {
+            "value": 95.9,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 10.8,
+            "count": 17972
+          },
+          "5513": {
+            "value": 17.8,
+            "count": 3202
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 13.6,
+            "count": 22106
+          },
+          "5513": {
+            "value": 12.7,
+            "count": 2806
+          },
+          "5439": {
+            "value": 8733.2,
+            "count": 193057
+          },
+          "5679": {
+            "value": 20.0,
+            "count": null
+          },
+          "6035": {
+            "value": 97.1,
+            "count": null
+          },
+          "6037": {
+            "value": 85.7,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 11.7,
+            "count": 19076
+          },
+          "5513": {
+            "value": 16.5,
+            "count": 3156
+          }
+        }
+      }
+    },
+    {
+      "id": 973,
+      "name": "Pohjois-Pohjanmaan hyvinvointialue",
+      "values": {
+        "2017": {
+          "171": {
+            "value": 7.9,
+            "count": 32458
+          },
+          "5513": {
+            "value": 19.3,
+            "count": 6275
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 9.7,
+            "count": 40379
+          },
+          "5513": {
+            "value": 16.3,
+            "count": 6578
+          },
+          "5439": {
+            "value": 9015.5,
+            "count": 364037
+          },
+          "5679": {
+            "value": 41.7,
+            "count": null
+          },
+          "6035": {
+            "value": 96.4,
+            "count": null
+          },
+          "6037": {
+            "value": 49.4,
+            "count": null
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 8.2,
+            "count": 33856
+          },
+          "5513": {
+            "value": 18.6,
+            "count": 6304
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 7.8,
+            "count": 32256
+          },
+          "5513": {
+            "value": 19.0,
+            "count": 6119
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 10.5,
+            "count": 43930
+          },
+          "5513": {
+            "value": 15.9,
+            "count": 6974
+          },
+          "5439": {
+            "value": 8933.5,
+            "count": 392450
+          },
+          "6035": {
+            "value": 99.1,
+            "count": null
+          },
+          "6037": {
+            "value": 44.2,
+            "count": null
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 9.3,
+            "count": 38690
+          },
+          "5513": {
+            "value": 18.3,
+            "count": 7095
+          },
+          "5439": {
+            "value": 7350.0,
+            "count": 284372
+          },
+          "5679": {
+            "value": 27.5,
+            "count": null
+          },
+          "6035": {
+            "value": 94.6,
+            "count": null
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 10.1,
+            "count": 42249
+          },
+          "5513": {
+            "value": 15.6,
+            "count": 6603
+          },
+          "5439": {
+            "value": 9053.0,
+            "count": 382480
+          },
+          "5679": {
+            "value": 36.5,
+            "count": null
+          },
+          "6035": {
+            "value": 97.4,
+            "count": null
+          },
+          "6037": {
+            "value": 43.2,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 8.9,
+            "count": 37092
+          },
+          "5513": {
+            "value": 19.1,
+            "count": 7076
+          },
+          "5439": {
+            "value": 7421.6,
+            "count": 275284
+          },
+          "5679": {
+            "value": 24.2,
+            "count": null
+          },
+          "6035": {
+            "value": 92.8,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 8.1,
+            "count": 33237
+          },
+          "5513": {
+            "value": 19.0,
+            "count": 6307
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 8.6,
+            "count": 35412
+          },
+          "5513": {
+            "value": 19.3,
+            "count": 6850
+          }
+        }
+      }
+    },
+    {
+      "id": 974,
+      "name": "Pohjois-Savon hyvinvointialue",
+      "values": {
+        "2016": {
+          "171": {
+            "value": 10.5,
+            "count": 26492
+          },
+          "5513": {
+            "value": 18.7,
+            "count": 4949
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 13.5,
+            "count": 33462
+          },
+          "5513": {
+            "value": 13.8,
+            "count": 4627
+          },
+          "5439": {
+            "value": 8936.2,
+            "count": 299024
+          },
+          "6035": {
+            "value": 98.9,
+            "count": null
+          },
+          "6037": {
+            "value": 37.7,
+            "count": null
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 10.8,
+            "count": 26830
+          },
+          "5513": {
+            "value": 17.7,
+            "count": 4744
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 10.5,
+            "count": 26313
+          },
+          "5513": {
+            "value": 18.4,
+            "count": 4829
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 12.0,
+            "count": 29750
+          },
+          "5513": {
+            "value": 15.5,
+            "count": 4625
+          },
+          "5439": {
+            "value": 8251.9,
+            "count": 245493
+          },
+          "5679": {
+            "value": 29.6,
+            "count": null
+          },
+          "6035": {
+            "value": 95.9,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 11.2,
+            "count": 27691
+          },
+          "5513": {
+            "value": 17.3,
+            "count": 4781
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 10.6,
+            "count": 26529
+          },
+          "5513": {
+            "value": 18.0,
+            "count": 4786
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 12.5,
+            "count": 31044
+          },
+          "5513": {
+            "value": 13.5,
+            "count": 4196
+          },
+          "5439": {
+            "value": 9148.9,
+            "count": 284020
+          },
+          "5679": {
+            "value": 43.9,
+            "count": null
+          },
+          "6035": {
+            "value": 95.9,
+            "count": null
+          },
+          "6037": {
+            "value": 53.6,
+            "count": null
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 11.6,
+            "count": 28796
+          },
+          "5513": {
+            "value": 16.3,
+            "count": 4706
+          },
+          "5439": {
+            "value": 7427.0,
+            "count": 213869
+          },
+          "5679": {
+            "value": 19.0,
+            "count": null
+          },
+          "6035": {
+            "value": 96.0,
+            "count": null
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 13.0,
+            "count": 32433
+          },
+          "5513": {
+            "value": 13.3,
+            "count": 4320
+          },
+          "5439": {
+            "value": 9361.7,
+            "count": 303627
+          },
+          "5679": {
+            "value": 38.5,
+            "count": null
+          },
+          "6035": {
+            "value": 95.8,
+            "count": null
+          },
+          "6037": {
+            "value": 41.6,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 975,
+      "name": "Päijät-Hämeen hyvinvointialue",
+      "values": {
+        "2021": {
+          "171": {
+            "value": 12.5,
+            "count": 25692
+          },
+          "5513": {
+            "value": 11.0,
+            "count": 2838
+          },
+          "5439": {
+            "value": 5080.0,
+            "count": 130515
+          },
+          "5679": {
+            "value": 13.1,
+            "count": null
+          },
+          "6035": {
+            "value": 95.1,
+            "count": null
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 15.0,
+            "count": 30647
+          },
+          "5513": {
+            "value": 12.6,
+            "count": 3862
+          },
+          "5439": {
+            "value": 6233.9,
+            "count": 191049
+          },
+          "6035": {
+            "value": 95.2,
+            "count": null
+          },
+          "6037": {
+            "value": 47.2,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 10.4,
+            "count": 21795
+          },
+          "5513": {
+            "value": 12.8,
+            "count": 2799
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 13.1,
+            "count": 26893
+          },
+          "5513": {
+            "value": 11.7,
+            "count": 3141
+          },
+          "5439": {
+            "value": 5563.5,
+            "count": 149619
+          },
+          "5679": {
+            "value": 15.3,
+            "count": null
+          },
+          "6035": {
+            "value": 93.2,
+            "count": null
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 11.3,
+            "count": 23362
+          },
+          "5513": {
+            "value": 11.0,
+            "count": 2569
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 10.6,
+            "count": 22045
+          },
+          "5513": {
+            "value": 13.3,
+            "count": 2931
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 13.8,
+            "count": 28144
+          },
+          "5513": {
+            "value": 12.0,
+            "count": 3391
+          },
+          "5439": {
+            "value": 6494.4,
+            "count": 182779
+          },
+          "5679": {
+            "value": 31.1,
+            "count": null
+          },
+          "6035": {
+            "value": 95.1,
+            "count": null
+          },
+          "6037": {
+            "value": 42.6,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 10.9,
+            "count": 22625
+          },
+          "5513": {
+            "value": 11.6,
+            "count": 2628
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 11.9,
+            "count": 24464
+          },
+          "5513": {
+            "value": 10.8,
+            "count": 2641
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 14.4,
+            "count": 29409
+          },
+          "5513": {
+            "value": 11.9,
+            "count": 3504
+          },
+          "5439": {
+            "value": 6284.9,
+            "count": 184834
+          },
+          "5679": {
+            "value": 25.8,
+            "count": null
+          },
+          "6035": {
+            "value": 93.5,
+            "count": null
+          },
+          "6037": {
+            "value": 43.3,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 976,
+      "name": "Satakunnan hyvinvointialue",
+      "values": {
+        "2020": {
+          "171": {
+            "value": 12.4,
+            "count": 26747
+          },
+          "5513": {
+            "value": 17.2,
+            "count": 4598
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 14.7,
+            "count": 31116
+          },
+          "5513": {
+            "value": 12.4,
+            "count": 3863
+          },
+          "5439": {
+            "value": 7772.4,
+            "count": 241847
+          },
+          "5679": {
+            "value": 44.6,
+            "count": null
+          },
+          "6035": {
+            "value": 98.8,
+            "count": null
+          },
+          "6037": {
+            "value": 51.7,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 11.7,
+            "count": 25484
+          },
+          "5513": {
+            "value": 16.9,
+            "count": 4308
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 11.9,
+            "count": 25886
+          },
+          "5513": {
+            "value": 17.0,
+            "count": 4409
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 14.2,
+            "count": 29997
+          },
+          "5513": {
+            "value": 13.1,
+            "count": 3920
+          },
+          "5439": {
+            "value": 7721.5,
+            "count": 231622
+          },
+          "5679": {
+            "value": 39.5,
+            "count": null
+          },
+          "6035": {
+            "value": 90.7,
+            "count": null
+          },
+          "6037": {
+            "value": 55.9,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 11.4,
+            "count": 25213
+          },
+          "5513": {
+            "value": 17.1,
+            "count": 4316
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 13.6,
+            "count": 28965
+          },
+          "5513": {
+            "value": 14.5,
+            "count": 4194
+          },
+          "5439": {
+            "value": 6531.7,
+            "count": 189189
+          },
+          "5679": {
+            "value": 33.7,
+            "count": null
+          },
+          "6035": {
+            "value": 97.6,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 11.4,
+            "count": 25337
+          },
+          "5513": {
+            "value": 17.3,
+            "count": 4373
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 13.0,
+            "count": 27916
+          },
+          "5513": {
+            "value": 15.9,
+            "count": 4439
+          },
+          "5439": {
+            "value": 6823.3,
+            "count": 190479
+          },
+          "5679": {
+            "value": 16.1,
+            "count": null
+          },
+          "6035": {
+            "value": 97.7,
+            "count": null
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 15.3,
+            "count": 32111
+          },
+          "5513": {
+            "value": 12.7,
+            "count": 4064
+          },
+          "5439": {
+            "value": 7355.4,
+            "count": 236188
+          },
+          "6035": {
+            "value": 94.7,
+            "count": null
+          },
+          "6037": {
+            "value": 54.5,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 977,
+      "name": "Vantaan ja Keravan hyvinvointialue",
+      "values": {
+        "2020": {
+          "171": {
+            "value": 6.6,
+            "count": 18110
+          },
+          "5513": {
+            "value": 11.3,
+            "count": 2046
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 7.9,
+            "count": 22958
+          },
+          "5513": {
+            "value": 9.4,
+            "count": 2158
+          },
+          "5439": {
+            "value": 7023.8,
+            "count": 161252
+          },
+          "5679": {
+            "value": 19.1,
+            "count": null
+          },
+          "6035": {
+            "value": 93.6,
+            "count": null
+          },
+          "6037": {
+            "value": 33.3,
+            "count": null
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 6.3,
+            "count": 16943
+          },
+          "5513": {
+            "value": 12.7,
+            "count": 2156
+          }
+        },
+        "2023": {
+          "171": {
+            "value": 7.6,
+            "count": 21771
+          },
+          "5513": {
+            "value": 9.3,
+            "count": 2020
+          },
+          "5439": {
+            "value": 7404.0,
+            "count": 161192
+          },
+          "5679": {
+            "value": 52.3,
+            "count": null
+          },
+          "6035": {
+            "value": 97.7,
+            "count": null
+          },
+          "6037": {
+            "value": 19.4,
+            "count": null
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 6.0,
+            "count": 15942
+          },
+          "5513": {
+            "value": 14.1,
+            "count": 2244
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 7.4,
+            "count": 20685
+          },
+          "5513": {
+            "value": 9.6,
+            "count": 1985
+          },
+          "5439": {
+            "value": 6245.5,
+            "count": 129188
+          },
+          "5679": {
+            "value": 33.3,
+            "count": null
+          },
+          "6035": {
+            "value": 100.0,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 5.9,
+            "count": 15129
+          },
+          "5513": {
+            "value": 14.5,
+            "count": 2194
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 7.1,
+            "count": 19537
+          },
+          "5513": {
+            "value": 10.3,
+            "count": 2010
+          },
+          "5439": {
+            "value": 5508.5,
+            "count": 107620
+          },
+          "5679": {
+            "value": 13.2,
+            "count": null
+          },
+          "6035": {
+            "value": 100.0,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 5.8,
+            "count": 14728
+          },
+          "5513": {
+            "value": 14.6,
+            "count": 2151
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 8.1,
+            "count": 23745
+          },
+          "5513": {
+            "value": 10.7,
+            "count": 2539
+          },
+          "5439": {
+            "value": 6578.1,
+            "count": 156196
+          },
+          "6035": {
+            "value": 100.0,
+            "count": null
+          },
+          "6037": {
+            "value": 41.9,
+            "count": null
+          }
+        }
+      }
+    },
+    {
+      "id": 978,
+      "name": "Varsinais-Suomen hyvinvointialue",
+      "values": {
+        "2023": {
+          "171": {
+            "value": 11.9,
+            "count": 58600
+          },
+          "5513": {
+            "value": 13.8,
+            "count": 8073
+          },
+          "5439": {
+            "value": 7494.4,
+            "count": 439172
+          },
+          "5679": {
+            "value": 47.7,
+            "count": null
+          },
+          "6035": {
+            "value": 93.2,
+            "count": null
+          },
+          "6037": {
+            "value": 48.4,
+            "count": null
+          }
+        },
+        "2019": {
+          "171": {
+            "value": 10.1,
+            "count": 48369
+          },
+          "5513": {
+            "value": 16.8,
+            "count": 8113
+          }
+        },
+        "2024": {
+          "171": {
+            "value": 12.3,
+            "count": 60772
+          },
+          "5513": {
+            "value": 13.5,
+            "count": 8202
+          },
+          "5439": {
+            "value": 7579.7,
+            "count": 460633
+          },
+          "5679": {
+            "value": 29.0,
+            "count": null
+          },
+          "6035": {
+            "value": 97.0,
+            "count": null
+          },
+          "6037": {
+            "value": 41.7,
+            "count": null
+          }
+        },
+        "2020": {
+          "171": {
+            "value": 10.5,
+            "count": 50788
+          },
+          "5513": {
+            "value": 16.1,
+            "count": 8162
+          }
+        },
+        "2018": {
+          "171": {
+            "value": 9.8,
+            "count": 47069
+          },
+          "5513": {
+            "value": 17.7,
+            "count": 8344
+          }
+        },
+        "2025": {
+          "171": {
+            "value": 12.6,
+            "count": 62575
+          },
+          "5513": {
+            "value": 12.8,
+            "count": 8000
+          },
+          "5439": {
+            "value": 7635.4,
+            "count": 477788
+          },
+          "6035": {
+            "value": 99.4,
+            "count": null
+          },
+          "6037": {
+            "value": 23.3,
+            "count": null
+          }
+        },
+        "2016": {
+          "171": {
+            "value": 9.7,
+            "count": 46170
+          },
+          "5513": {
+            "value": 17.3,
+            "count": 7984
+          }
+        },
+        "2021": {
+          "171": {
+            "value": 11.1,
+            "count": 53578
+          },
+          "5513": {
+            "value": 15.5,
+            "count": 8278
+          },
+          "5439": {
+            "value": 6414.2,
+            "count": 343658
+          },
+          "5679": {
+            "value": 19.5,
+            "count": null
+          },
+          "6035": {
+            "value": 94.8,
+            "count": null
+          }
+        },
+        "2017": {
+          "171": {
+            "value": 9.7,
+            "count": 46247
+          },
+          "5513": {
+            "value": 17.9,
+            "count": 8264
+          }
+        },
+        "2022": {
+          "171": {
+            "value": 11.5,
+            "count": 55996
+          },
+          "5513": {
+            "value": 14.7,
+            "count": 8214
+          },
+          "5439": {
+            "value": 6780.9,
+            "count": 379702
+          },
+          "5679": {
+            "value": 32.4,
+            "count": null
+          },
+          "6035": {
+            "value": 95.3,
+            "count": null
+          }
+        }
+      }
+    }
+  ]
+}
