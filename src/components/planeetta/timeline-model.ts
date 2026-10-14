@@ -1,3 +1,4 @@
+import { crisisEvents } from './crisis-management';
 import { adaptationTimelineEvents } from './local-adaptation';
 import { cashflowEvents } from './ownership-cashflow';
 import { employmentShare, longTermShare, workEvents, workYears } from './work-opportunity';
@@ -46,6 +47,7 @@ export function timelineLanes(regionId:string):TimelineLane[]{
 export const exactValue=(series:TimelineSeries,year:number)=>series.points.find(p=>p.year===year)?.value??null;
 export type TimelineEvent={id:string;year:number;title:string;text:string;url:string;kind:string;policyId?:string;lawId?:string;familyId?:string;structuralId?:string;theme?:string};
 export const timelineEvents:TimelineEvent[]=[
+ ...crisisEvents,
  ...careEvents,
  ...workEvents,
  ...cashflowEvents,
