@@ -19,16 +19,16 @@ it('uses observed outcome series with real gaps and no current-value substitutio
 });
 it('switches crises with the shared year and exposes correct financial stages',()=>{
  render(<TimelineProvider initialYear={2020}><CrisisManagement/></TimelineProvider>);
- expect(screen.getAllByRole('img')).toHaveLength(5);
+ expect(screen.getAllByRole('img')).toHaveLength(9);
  const pandemic=screen.getByRole('table',{name:'Koronapandemia: rahoituksen vaiheet'});
  expect(within(pandemic).getByRole('row',{name:/Valtiokonttorin kustannustuet/})).toHaveTextContent('780');
  fireEvent.click(screen.getByRole('button',{name:'Pankkikriisi ja lama 1991–1994'}));
  expect(screen.getByRole('slider',{name:'Kriisinhallinnan vuosi'})).toHaveValue('1992');
  expect(screen.getByRole('table',{name:'Pankkikriisi ja lama: rahoituksen vaiheet'})).toHaveTextContent('markkaa');
  fireEvent.click(screen.getByRole('checkbox',{name:'Rajaa valitun kriisin ympärille'}));
- expect(screen.getByText(/Toimeentuloaineisto alkaa 2010/)).toBeInTheDocument();
+ expect(screen.getByText(/Toimeentulon vertailu alkaa 2010/)).toBeInTheDocument();
  fireEvent.change(screen.getByRole('slider',{name:'Kriisinhallinnan vuosi'}),{target:{value:'2024'}});
- expect(screen.getByRole('status')).toHaveTextContent('rajauksen ulkopuolella');
+ expect(screen.getAllByRole('status').some(e=>e.textContent?.includes('rajauksen ulkopuolella'))).toBe(true);
 });
 it('includes crisis decisions on the common timeline and marks latest coverage',()=>{
  for(const e of crisisEvents)expect(timelineEvents.some(t=>t.id===e.id)).toBe(true);

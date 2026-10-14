@@ -31,5 +31,7 @@ export function crisisValue(year:number,metric:CrisisMetric):number|null{
  if(metric==='employment')return employmentShare('SSS',year);
  if(metric==='unemployment'){const p=workPoint('SSS',year);return p?.employed!=null&&p.unemployed!=null?ratio(p.unemployed,p.employed+p.unemployed):null;}
  if(metric==='bankruptcies')return outcomes.points.find(p=>p.year===year)?.applications??null;
+ // Use the comparable post-2010 income concept; never mix older observations into this comparison.
+ if(year<2010)return null;
  return metric==='poverty'?workPoverty('SSS',year):workIncome('SSS',year);
 }

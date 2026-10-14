@@ -1,3 +1,4 @@
+import { aftermathEvents } from './crisis-aftermath';
 import { crisisEvents } from './crisis-management';
 import { adaptationTimelineEvents } from './local-adaptation';
 import { cashflowEvents } from './ownership-cashflow';
@@ -48,6 +49,7 @@ export const exactValue=(series:TimelineSeries,year:number)=>series.points.find(
 export type TimelineEvent={id:string;year:number;title:string;text:string;url:string;kind:string;policyId?:string;lawId?:string;familyId?:string;structuralId?:string;theme?:string};
 export const timelineEvents:TimelineEvent[]=[
  ...crisisEvents,
+ ...aftermathEvents,
  ...careEvents,
  ...workEvents,
  ...cashflowEvents,
