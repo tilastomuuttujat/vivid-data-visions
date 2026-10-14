@@ -525,3 +525,40 @@ button,input { font: inherit; } button { cursor: pointer; } h1,h2,h3,h4 { font-f
 .pl-theme-body select { background: var(--v-ink); color: var(--v-text); border: 1px solid var(--v-line); border-radius: 10px; padding: 6px 10px; }
 .pl-theme-body input[type=range], .pl-theme-body input[type=checkbox], .pl-theme-body input[type=radio] { accent-color: var(--v-glow); }
 .pl-theme-body fieldset { border: 1px solid var(--v-line); border-radius: 12px; }
+
+/* ---------- Laboratorio & Planeetta-silta ---------- */
+.pl-lab-bridge { display: grid; gap: 10px; margin: 72px 0 40px; padding: clamp(28px, 4vw, 48px); border: 1px solid var(--v-line); border-radius: 22px; text-decoration: none; color: var(--v-text); background: radial-gradient(120% 140% at 0% 0%, color-mix(in oklab, var(--v-glow) 14%, transparent), transparent 55%), radial-gradient(100% 120% at 100% 100%, color-mix(in oklab, var(--v-ember) 12%, transparent), transparent 60%), color-mix(in oklab, var(--v-ink-2) 80%, transparent); transition: border-color .4s, transform .4s, box-shadow .4s; }
+.pl-lab-bridge:hover { border-color: color-mix(in oklab, var(--v-glow) 45%, transparent); transform: translateY(-2px); box-shadow: 0 30px 80px -40px color-mix(in oklab, var(--v-glow) 45%, transparent); }
+.pl-lab-bridge strong { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(22px, 2.6vw, 32px); line-height: 1.15; }
+.pl-lab-bridge > span:not(.v-kicker) { color: var(--v-mute); max-width: 60ch; }
+.pl-lab-bridge em { font-style: normal; display: inline-flex; align-items: center; gap: 8px; color: var(--v-glow); font-size: 14px; margin-top: 6px; }
+.lab-hero { max-width: 760px; margin-bottom: 40px; }
+.lab-hero p { color: var(--v-mute); font-size: 17px; line-height: 1.65; }
+.lab-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 40px; align-items: start; }
+.lab-toc { position: sticky; top: 24px; }
+.lab-toc ol { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 2px; border-left: 1px solid var(--v-line); }
+.lab-toc button { display: flex; gap: 12px; width: 100%; text-align: left; background: none; border: 0; color: var(--v-mute); padding: 9px 14px; font-size: 14px; margin-left: -1px; border-left: 1px solid transparent; transition: color .3s, border-color .3s; }
+.lab-toc button span { font-family: 'Fraunces', serif; color: var(--v-glow); opacity: .7; }
+.lab-toc button:hover { color: var(--v-text); border-left-color: var(--v-glow); }
+.lab .lab-bar { margin-top: 0; padding-top: 0; border-top: 0; }
+@media (max-width: 900px) { .lab-layout { grid-template-columns: 1fr; } .lab-toc { position: static; } }
+
+/* Analyysien hienosäätö: pillerivalitsimet, väljät kuvaajat, hillityt taulukot */
+.pl-theme-body { font-size: 15px; line-height: 1.6; }
+.pl-theme-body fieldset { padding: 16px 18px; background: color-mix(in oklab, var(--v-ink) 60%, transparent); }
+.pl-theme-body legend { padding: 0 8px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--v-mute); }
+.pl-theme-body fieldset label:has(input[type=checkbox]) { display: inline-flex; align-items: center; gap: 8px; margin: 4px 6px 4px 0; padding: 6px 14px 6px 10px; border: 1px solid var(--v-line); border-radius: 99px; font-size: 13px; color: var(--v-mute); cursor: pointer; transition: all .25s; }
+.pl-theme-body fieldset label:has(input[type=checkbox]:checked) { color: var(--v-text); border-color: color-mix(in oklab, var(--v-glow) 50%, transparent); background: color-mix(in oklab, var(--v-glow) 12%, transparent); }
+.pl-theme-body fieldset label input[type=checkbox] { appearance: none; width: 8px; height: 8px; margin: 0; border-radius: 50%; background: var(--v-line); transition: background .25s, box-shadow .25s; }
+.pl-theme-body fieldset label input[type=checkbox]:checked { background: var(--v-glow); box-shadow: 0 0 8px var(--v-glow); }
+.pl-theme-body select { appearance: none; background: color-mix(in oklab, var(--v-ink) 70%, transparent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23889' fill='none'/%3E%3C/svg%3E") no-repeat right 12px center; color: var(--v-text); border: 1px solid var(--v-line); border-radius: 10px; padding: 8px 32px 8px 12px; font: inherit; font-size: 14px; }
+.pl-theme-body select:focus { outline: none; border-color: var(--v-glow); }
+.pl-theme-body input[type=range] { appearance: none; height: 2px; background: var(--v-line); border-radius: 2px; }
+.pl-theme-body input[type=range]::-webkit-slider-thumb { appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--v-ink); border: 2px solid var(--v-glow); box-shadow: 0 0 12px var(--v-glow); cursor: pointer; }
+.pl-theme-body input[type=range]::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--v-ink); border: 2px solid var(--v-glow); }
+.pl-theme-body svg text { font-family: 'DM Sans', sans-serif; }
+.pl-theme-body table { border-collapse: collapse; width: 100%; font-size: 14px; }
+.pl-theme-body th { font-weight: 500; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--v-mute); text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--v-line); }
+.pl-theme-body td { padding: 14px 12px; border-bottom: 1px solid color-mix(in oklab, var(--v-line) 60%, transparent); vertical-align: top; }
+.pl-theme-body tr:hover td { background: color-mix(in oklab, var(--v-glow) 4%, transparent); }
+.pl-theme-body button:not(.pl-theme-toggle) { border-radius: 99px; }

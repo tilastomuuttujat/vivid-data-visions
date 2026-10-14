@@ -3,7 +3,6 @@ import { ClientOnly, Link } from '@tanstack/react-router';
 import { ArrowRight } from 'lucide-react';
 import { LEVELS, type Sel } from './planet-model';
 import { PlanetMap } from './PlanetMap';
-import { ThemeGroup } from './ThemeGroup';
 
 const PlanetGlobe = lazy(() => import('./PlanetGlobe'));
 
