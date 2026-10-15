@@ -59,7 +59,7 @@ function pos(i: number) {
 /** Systeemin kytkentämoottori: viiden lohkon kehä, klikkaus sytyttää virrat ja viiveet. */
 export function SystemEngine() {
   const [sel, setSel] = useState(0);
-  const b = BLOCKS[sel];
+  const b = BLOCKS[sel]!;
 
   const goToEvidence = () => {
     const g = document.getElementById(b.theme) as HTMLDetailsElement | null;
