@@ -15,7 +15,7 @@ const ACTS: Act[] = [
     thesis: 'Valtio luo tyhjästä omistuksen, teollisuuden ja perusrakenteet.',
     body: 'Autonomian aikana Suomi rakentaa kansallisen talouden perustan: metsäteollisuus, koulutuslaitos ja valtion ohjaama industrialisaatio. Ratkaisut ovat onnistuneita — ja juuri siksi ne sementoituvat rakenteiksi, joita myöhemmät sukupolvet perivät muuttamattomina.',
     evidence: [
-      { label: 'Rakenteelliset valinnat', theme: 'teema-aikajana', anchor: undefined },
+      { label: 'Rakenteelliset valinnat', theme: 'teema-aikajana' },
       { label: 'Omistuksen pitkä polku', theme: 'teema-teollisuus' },
     ],
   },
