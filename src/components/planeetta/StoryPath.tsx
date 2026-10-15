@@ -61,7 +61,7 @@ const ACTS: Act[] = [
 /** Viisinäytöksinen lukupolku: Suomen suuri kaari 1860–2050. */
 export function StoryPath() {
   const [act, setAct] = useState(0);
-  const a = ACTS[act];
+  const a = ACTS[act]!;
 
   const go = (theme: string, anchor?: string) => {
     const g = document.getElementById(theme) as HTMLDetailsElement | null;
