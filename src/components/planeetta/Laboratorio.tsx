@@ -30,6 +30,8 @@ import { TransitionPath } from './TransitionPath';
 import { OwnershipPath } from './OwnershipPath';
 import { StoraComparison } from './StoraComparison';
 import { ThemeGroup } from './ThemeGroup';
+import { SystemEngine } from './SystemEngine';
+import { StoryPath } from './StoryPath';
 
 const TOC = [
   ['teema-aikajana', 'Aikajana ja lait'],
@@ -55,6 +57,8 @@ export function Laboratorio() {
           <h1 className="pl-title">Kartan alla on <em>mitattu maaperä</em></h1>
           <p>Planeetta näyttää tulkitut rakenteet. Täällä ovat aikasarjat, lait ja lähteet, joiden varaan tulkinnat nojaavat. Samanaikaisuus ei yksin osoita syy-yhteyttä — jokaisen kuvaajan alla kerrotaan tulkinnan raja.</p>
         </div>
+        <SystemEngine />
+        <StoryPath />
         <div className="lab-layout">
           <aside className="lab-toc"><p className="v-kicker">Teemat</p>
             <ol>{TOC.map(([id, n], i) => <li key={id}><button onClick={() => go(id)}><span>{String(i + 1).padStart(2, '0')}</span>{n}</button></li>)}</ol>
