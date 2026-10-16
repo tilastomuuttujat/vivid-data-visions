@@ -34,7 +34,7 @@ export function Murrokset() {
           <p className="m-lead">Yhteisen kantokyvyn murrokset 1850–2025 · viisi päävaihetta · kymmenen tarkastelujaksoa · 116 päätöstä</p>
           <div className="m-mode" role="tablist">
             <button role="tab" aria-selected={mode === 'kronologia'} className={mode === 'kronologia' ? 'on' : ''} onClick={() => setMode('kronologia')}>Kronologia 1850 → 2025</button>
-            <button role="tab" aria-selected={mode === 'juuret'} className={mode === 'juuret' ? 'on' : ''} onClick={() => setMode('juuret')}>Juurisyyt 2026 → 1850</button>
+            <button role="tab" aria-selected={mode === 'juuret'} className={mode === 'juuret' ? 'on' : ''} onClick={() => setMode('juuret')}>Juurisyyt · nykytilasta historiaan</button>
           </div>
         </div>
 

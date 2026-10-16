@@ -88,7 +88,9 @@
 .j-steps::before { content: ''; position: absolute; left: 0.45rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(var(--kc), transparent); }
 .j-step { position: relative; }
 .j-step::before { content: ''; position: absolute; left: -1.25rem; top: 2.6rem; width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--kc); box-shadow: 0 0 12px var(--kc); }
-.j-lag { height: 1.8rem; display: flex; align-items: center; font-size: 0.78rem; opacity: 0.7; }
+.j-lag { min-height: 1.8rem; padding: 0.3rem 0; display: flex; align-items: center; font-size: 0.78rem; opacity: 0.7; }
+.j-analysis { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 0.8rem; }
+.j-analysis a { color: var(--m-teal); text-decoration: underline; }
 .j-body { padding: 1rem 1.2rem; border-radius: 14px; border: 1px solid var(--m-line); background: oklch(1 0 0 / 0.03); }
 .j-body h4 { margin: 0.3rem 0; font-size: 1.1rem; } .j-body > p { margin: 0 0 0.6rem; opacity: 0.85; }
 .j-laws { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.35rem; }
