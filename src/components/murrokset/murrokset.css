@@ -133,3 +133,8 @@
 .ka-linked { opacity: 1; stroke: oklch(0.97 0 0); stroke-width: 1.5; cursor: pointer; }
 .ka-focus { fill: oklch(0.97 0 0); stroke: var(--m-gold); stroke-width: 3; }
 .ka-focus-t { font-size: 12px; font-weight: 700; fill: var(--m-gold); }
+
+.ka-linked:focus-visible, .pa-dot:focus-visible { stroke: var(--m-ink, #fff); stroke-width: 4; outline: 2px solid currentColor; outline-offset: 4px; }
+.j-card:disabled { opacity: .5; cursor: not-allowed; }
+.pa details { margin-top: 1rem; }
+.pa details button { text-align: left; }
