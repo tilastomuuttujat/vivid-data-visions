@@ -100,3 +100,5 @@
 .j-law-body { padding: 0.5rem 0.8rem; border-left: 2px solid var(--kc); font-size: 0.88rem; opacity: 0.9; }
 .j-law-body p { margin: 0.3rem 0; } .j-law-body a { color: var(--m-teal); text-decoration: underline; }
 .j-note { margin: 1.4rem 0 0; font-size: 0.82rem; opacity: 0.6; }
+
+.m-a-neutraali, .m-a-arvioimaton { --ac: #9eabb7; }

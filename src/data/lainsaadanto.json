@@ -1053,7 +1053,7 @@
    "vuosi": 1980,
    "paatos": "Rahoitus- ja valuuttamarkkinoiden säännöstelyä purettiin vaiheittain.",
    "arvio": "Heikosti toteutettu murros",
-   "arvioLuokka": "vahvistava",
+   "arvioLuokka": "arvioimaton",
    "metatarina": "Riskinoton vapaus laajeni riskien hallintaa nopeammin.",
    "toimeenpano": "Useita päätöksiä 1980-luvulla",
    "teema": "Tuotanto ja rahoitus",
@@ -1205,7 +1205,7 @@
    "vuosi": 1992,
    "paatos": "Valtion vakuusrahasto perustettiin pankkijärjestelmän vakauttamista varten.",
    "arvio": "Välttämättömyyttä ja jakokysymyksiä sisältävä",
-   "arvioLuokka": "vahvistava",
+   "arvioLuokka": "arvioimaton",
    "metatarina": "Järjestelmän toimintakykyä turvattiin julkisen riskinkannon avulla.",
    "toimeenpano": "Laki 379/1992",
    "teema": "Tuotanto ja rahoitus",
@@ -1566,7 +1566,7 @@
    "vuosi": 2005,
    "paatos": "Työeläkeuudistus muutti eläkeikää, karttumista ja varhaiseläkkeitä.",
    "arvio": "Kestävyyttä tavoitteleva, eriytyvä",
-   "arvioLuokka": "vahvistava",
+   "arvioLuokka": "arvioimaton",
    "metatarina": "Pidempi elinikä ja työurat pyrittiin sovittamaan eläkejärjestelmään.",
    "toimeenpano": "Uudistus voimaan 2005",
    "teema": "Toimeentulo ja eläkkeet",
@@ -1908,7 +1908,7 @@
    "vuosi": 2018,
    "paatos": "Työttömyysturvan aktiivimalli kytki etuuden tason aktiivisuusehtoihin.",
    "arvio": "Ristiriitainen, turvaa heikentävä ehto",
-   "arvioLuokka": "heikentava",
+   "arvioLuokka": "ristiriitainen",
    "metatarina": "Etuudensaajalle siirtyi riskiä myös alueen työ- ja palvelutarjonnasta.",
    "toimeenpano": "Voimaan 2018, kumottiin 2020 alusta",
    "teema": "Toimeentulo ja työ",
@@ -2174,7 +2174,7 @@
    "vuosi": 2025,
    "paatos": "Työvoimapalvelujen järjestämisvastuu siirtyi valtiolta kunnille ja työllisyysalueille.",
    "arvio": "Vaikutukset avoimia",
-   "arvioLuokka": "vahvistava",
+   "arvioLuokka": "arvioimaton",
    "metatarina": "Työn, koulutuksen ja paikallisen elinkeinopolitiikan yhteensovittamiselle luotiin uusi vastuutaso.",
    "toimeenpano": "1.1.2025",
    "teema": "Työ ja hallinto",
@@ -2695,70 +2695,6 @@
    "yhteys": "Tutkimus / rekisteriseuranta",
    "linkki": "https://www.kela.fi/ajankohtaista/perhevapaauudistus-on-tuonut-toivottuja-tuloksia-yha-useammat-isat-hoitavat-lasta-kotona-aiempaa-pidempaan",
    "tulkinta": "Kelan rekisteriseuranta: isät käyttävät aiempaa enemmän vanhempainrahapäiviä. Seuranta ei yksin osoita kaikkia työura- tai syntyvyysvaikutuksia."
-  },
-  {
-   "paatosId": null,
-   "he": null,
-   "otsikko": null,
-   "yhteys": null,
-   "linkki": null,
-   "tulkinta": null
-  },
-  {
-   "paatosId": null,
-   "he": "Lähdekohta",
-   "otsikko": "Lainausosuman luokitus",
-   "yhteys": "Todennettavuusluokitus",
-   "linkki": "Tulkinnan raja",
-   "tulkinta": "Alkuperäinen esitys"
-  },
-  {
-   "paatosId": null,
-   "he": "sec_4_2_1_2",
-   "otsikko": "EXACT",
-   "yhteys": "HARD",
-   "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
-   "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2024/8"
-  },
-  {
-   "paatosId": null,
-   "he": "sec_4_2_1_2",
-   "otsikko": "EXACT",
-   "yhteys": "HARD",
-   "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
-   "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2024/8"
-  },
-  {
-   "paatosId": null,
-   "he": "sec_4_2_1_2",
-   "otsikko": "EXACT",
-   "yhteys": "HARD",
-   "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
-   "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2024/8"
-  },
-  {
-   "paatosId": null,
-   "he": "sec_4_2_1_1",
-   "otsikko": "EXACT",
-   "yhteys": "MODEL_DEPENDENT",
-   "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
-   "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2020/241"
-  },
-  {
-   "paatosId": null,
-   "he": "sec_4_2_1_1",
-   "otsikko": "EXACT",
-   "yhteys": "HARD",
-   "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
-   "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2020/241"
-  },
-  {
-   "paatosId": null,
-   "he": "sec_4_2_1_1",
-   "otsikko": "EXACT",
-   "yhteys": "MODEL_DEPENDENT",
-   "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
-   "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2020/241"
   }
  ],
  "rahoitus": [
@@ -4323,6 +4259,96 @@
   {
    "otsikko": "Google Sheets",
    "teksti": "Tämä tiedosto on päivitetty Excel-versio. Alkuperäistä Google Sheets -verkkotaulukkoa ei ole muutettu."
+  }
+ ],
+ "kohdentamatonValmistelu": [
+  {
+   "syy": "Vanhan tuonnin kohdentamaton rivi. Ei päätösviite; tarkistettava alkuperäisestä Excelistä.",
+   "alkuperainenPoiminta": {
+    "paatosId": null,
+    "he": null,
+    "otsikko": null,
+    "yhteys": null,
+    "linkki": null,
+    "tulkinta": null
+   }
+  },
+  {
+   "syy": "Vanhan tuonnin kohdentamaton rivi. Ei päätösviite; tarkistettava alkuperäisestä Excelistä.",
+   "alkuperainenPoiminta": {
+    "paatosId": null,
+    "he": "Lähdekohta",
+    "otsikko": "Lainausosuman luokitus",
+    "yhteys": "Todennettavuusluokitus",
+    "linkki": "Tulkinnan raja",
+    "tulkinta": "Alkuperäinen esitys"
+   }
+  },
+  {
+   "syy": "Vanhan tuonnin kohdentamaton rivi. Ei päätösviite; tarkistettava alkuperäisestä Excelistä.",
+   "alkuperainenPoiminta": {
+    "paatosId": null,
+    "he": "sec_4_2_1_2",
+    "otsikko": "EXACT",
+    "yhteys": "HARD",
+    "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
+    "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2024/8"
+   }
+  },
+  {
+   "syy": "Vanhan tuonnin kohdentamaton rivi. Ei päätösviite; tarkistettava alkuperäisestä Excelistä.",
+   "alkuperainenPoiminta": {
+    "paatosId": null,
+    "he": "sec_4_2_1_2",
+    "otsikko": "EXACT",
+    "yhteys": "HARD",
+    "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
+    "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2024/8"
+   }
+  },
+  {
+   "syy": "Vanhan tuonnin kohdentamaton rivi. Ei päätösviite; tarkistettava alkuperäisestä Excelistä.",
+   "alkuperainenPoiminta": {
+    "paatosId": null,
+    "he": "sec_4_2_1_2",
+    "otsikko": "EXACT",
+    "yhteys": "HARD",
+    "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
+    "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2024/8"
+   }
+  },
+  {
+   "syy": "Vanhan tuonnin kohdentamaton rivi. Ei päätösviite; tarkistettava alkuperäisestä Excelistä.",
+   "alkuperainenPoiminta": {
+    "paatosId": null,
+    "he": "sec_4_2_1_1",
+    "otsikko": "EXACT",
+    "yhteys": "MODEL_DEPENDENT",
+    "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
+    "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2020/241"
+   }
+  },
+  {
+   "syy": "Vanhan tuonnin kohdentamaton rivi. Ei päätösviite; tarkistettava alkuperäisestä Excelistä.",
+   "alkuperainenPoiminta": {
+    "paatosId": null,
+    "he": "sec_4_2_1_1",
+    "otsikko": "EXACT",
+    "yhteys": "HARD",
+    "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
+    "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2020/241"
+   }
+  },
+  {
+   "syy": "Vanhan tuonnin kohdentamaton rivi. Ei päätösviite; tarkistettava alkuperäisestä Excelistä.",
+   "alkuperainenPoiminta": {
+    "paatosId": null,
+    "he": "sec_4_2_1_1",
+    "otsikko": "EXACT",
+    "yhteys": "MODEL_DEPENDENT",
+    "linkki": "Tietokantapoiminta, tarkistettava alkuperäisestä. Ennakoitu vaikutus ei ole havaittu seuraus.",
+    "tulkinta": "https://www.finlex.fi/fi/hallituksen-esitykset/2020/241"
+   }
   }
  ]
 }
