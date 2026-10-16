@@ -1,3 +1,4 @@
+import { MainLinks } from "@/components/MainLinks";
 import { lazy, Suspense, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
@@ -57,21 +58,7 @@ export function Murrokset() {
         <header className="v-top">
           <span className="v-kicker">Murrokset · metatarina 1850–2025</span>
           <nav className="pl-nav">
-            <Link to="/" className="v-back">
-              Atlas
-            </Link>
-            <Link to="/minka-varaan" className="v-back">
-              Minkä varaan?
-            </Link>
-            <Link to="/observatorio" className="v-back">
-              Observatorio ✦
-            </Link>
-            <Link to="/planeetta" className="v-back">
-              Planeetta
-            </Link>
-            <Link to="/laboratorio" className="v-back">
-              Laboratorio
-            </Link>
+            <MainLinks exclude="/murrokset" />
           </nav>
         </header>
         <div className="m-hero">

@@ -30,3 +30,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated site and Python bytecode
+site/
+__pycache__/
+# Newly generated offline archives (legacy tracked downloads are rebuilt at release)
+public/downloads/data/
+public/downloads/atlas-2d.zip
+public/downloads/atlas-3d.zip

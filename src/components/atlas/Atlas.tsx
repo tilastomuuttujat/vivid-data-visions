@@ -1,52 +1,622 @@
-import { Link } from '@tanstack/react-router';
-import { useMemo, useRef, useState, lazy, Suspense } from 'react';
-import { ArrowUpRight, Box, Check, Clock, ChevronDown, ChevronLeft, ChevronRight, Download, FileJson, Layers, Maximize2, Minus, Network, Plus, RotateCcw, Search, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { AtlasMap } from './AtlasMap';
-import { AtlasTimeline, readingPath } from './AtlasTimeline';
-import { initialData, groups, stages, groupIndex, connections, validateData, type AtlasData } from '@/lib/atlas-data';
-const Scene = lazy(()=>import('./AtlasScene').then(m=>({default:m.AtlasScene})));
+import { MainLinks } from "@/components/MainLinks";
+import { Link } from "@tanstack/react-router";
+import { useMemo, useRef, useState, lazy, Suspense } from "react";
+import {
+  ArrowUpRight,
+  Box,
+  Check,
+  Clock,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Download,
+  FileJson,
+  Layers,
+  Maximize2,
+  Minus,
+  Network,
+  Plus,
+  RotateCcw,
+  Search,
+  X,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { AtlasMap } from "./AtlasMap";
+import { AtlasTimeline, readingPath } from "./AtlasTimeline";
+import {
+  initialData,
+  groups,
+  stages,
+  groupIndex,
+  connections,
+  validateData,
+  type AtlasData,
+} from "@/lib/atlas-data";
+const downloadBase = `${import.meta.env.BASE_URL}downloads/`;
+const Scene = lazy(() => import("./AtlasScene").then((m) => ({ default: m.AtlasScene })));
 
-export function Atlas({ initialMode = 'aika', standalone = false, initialDataset = initialData }: { initialMode?: '2d'|'3d'|'aika'; standalone?: boolean; initialDataset?: AtlasData }) {
-  const [mode,setMode]=useState<'2d'|'3d'|'aika'>(initialMode),[guide,setGuide]=useState(0),[data,setData]=useState<AtlasData>(initialDataset),[selected,setSelected]=useState(initialDataset.themes[0]?.id ?? 1),[step,setStep]=useState(0),[search,setSearch]=useState(''),[filter,setFilter]=useState('Kaikki'),[zoom,setZoom]=useState(1),[showLinks,setShowLinks]=useState(true),[reset,setReset]=useState(0),[error,setError]=useState(''),[filename,setFilename]=useState('suomen_rakennemuutosten_atlas.json'),[mobileList,setMobileList]=useState(false),[exportOpen,setExportOpen]=useState(false);
-  const input=useRef<HTMLInputElement>(null), workspace=useRef<HTMLDivElement>(null);
-  const themes=useMemo(()=>data.themes.filter(t=>(filter==='Kaikki'||t.group===filter)&&`${t.name} ${t.thesis}`.toLocaleLowerCase('fi').includes(search.toLocaleLowerCase('fi'))),[data,filter,search]);
-  const visible=useMemo(()=>new Set(themes.map(t=>t.id)),[themes]);
-  const active=data.themes.find(t=>t.id===selected)??data.themes[0];
-  const current=active?.steps[Math.min(step,active.steps.length-1)];
-  const path=useMemo(()=>readingPath(data),[data]);const g=path[guide]??path[0];
-  const edges=useMemo(()=>connections(data),[data]);
-  const related=edges.filter(e=>e.includes(selected)).map(e=>e[0]===selected?e[1]:e[0]).map(id=>data.themes.find(t=>t.id===id)).filter(t=>t!==undefined);
-  function select(id:number,s=0){setSelected(id);setStep(s);setMobileList(false);}
-  async function importFile(file?: File){if(!file)return;try{const next=validateData(JSON.parse(await file.text()));const first=next.themes[0];if(!first)return;setData(next);setSelected(first.id);setStep(0);setFilter('Kaikki');setSearch('');setFilename(file.name);setError('');}catch(e){setError(e instanceof Error?e.message:'Tiedostoa ei voitu avata.');}if(input.current)input.current.value='';}
-  function downloadData(){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='suomen_rakennemuutosten_atlas.json';a.click();URL.revokeObjectURL(url);setExportOpen(false);}
-  if(!active||!current)return <div className="scene-loading">Aineistossa ei ole teemoja.</div>;
-  return <div className="atlas-app">
-    <header className="atlas-header">
-      <div className="brand"><div className="brand-symbol"><Network size={25}/></div><div><div className="brand-eyebrow">YHTEISKUNTA AJASSA</div><h1>Suomen rakennemuutosten atlas<span className="edition"> / 01</span></h1></div></div>
-      <div className="header-actions">{!standalone&&<><Link to="/minka-varaan" className="varaan-link">Minkä varaan? →</Link><Link to="/observatorio" className="varaan-link">Observatorio ✦</Link><Link to="/planeetta" className="varaan-link">Planeetta ◎</Link></>}<div className="view-switch" role="group" aria-label="Atlasversio"><Button variant="ghost" onClick={()=>setMode('aika')} className={mode==='aika'?'active':''} aria-pressed={mode==='aika'}><Clock/>Aikajana</Button><Button variant="ghost" onClick={()=>setMode('2d')} className={mode==='2d'?'active':''} aria-pressed={mode==='2d'}><Layers/>2D</Button><Button variant="ghost" onClick={()=>setMode('3d')} className={mode==='3d'?'active':''} aria-pressed={mode==='3d'}><Box/>3D</Button></div><Button variant="outline" className="import-button" onClick={()=>input.current?.click()}><FileJson/>Avaa JSON</Button><div className="export-wrap"><Button variant="default" onClick={()=>setExportOpen(v=>!v)} aria-expanded={exportOpen}><Download/><span>Lataa</span><ChevronDown size={12}/></Button>{exportOpen&&<div className="export-menu">{!standalone&&<><a href="/downloads/atlas-2d.html" download>2D-versio · HTML<ArrowUpRight size={14}/></a><a href="/downloads/atlas-3d.html" download>3D-versio · HTML<ArrowUpRight size={14}/></a></>}<Button variant="ghost" onClick={downloadData}>Aineisto · JSON<FileJson/></Button></div>}</div></div>
-      <input ref={input} type="file" accept=".json,application/json" className="hidden" onChange={e=>void importFile(e.target.files?.[0])}/>
-    </header>
-    {error&&<div className="import-error" role="alert">{error}<Button variant="ghost" size="icon" aria-label="Sulje virhe" onClick={()=>setError('')}><X/></Button></div>}
-    <div className="atlas-body">
-      <aside className={`theme-sidebar ${mobileList?'mobile-open':''}`}><div className="sidebar-title"><span>TEEMAT</span><span className="count">{data.themes.length}</span><Button className="mobile-close" size="icon" variant="ghost" aria-label="Sulje teemat" onClick={()=>setMobileList(false)}><X/></Button></div><div className="search-field"><Search size={15}/><input aria-label="Etsi teema" placeholder="Etsi teema…" value={search} onChange={e=>setSearch(e.target.value)}/>{search&&<Button size="icon" variant="ghost" onClick={()=>setSearch('')} aria-label="Tyhjennä haku"><X/></Button>}</div>
-        <div className="filter-list"><Button variant="ghost" className={filter==='Kaikki'?'active':''} onClick={()=>setFilter('Kaikki')}><span>Kaikki teemat</span><span>{data.themes.length}</span></Button>{groups.map((g,i)=><Button variant="ghost" key={g} className={`${filter===g?'active':''} theme-color-${i}`} onClick={()=>setFilter(g)}><i className="family-dot"/><span>{g}</span><small>{data.themes.filter(t=>t.group===g).length}</small></Button>)}</div>
-        <div className="sidebar-divider"/><div className="theme-list">{themes.map(t=><Button variant="ghost" key={t.id} className={`theme-item theme-color-${groupIndex(t.group)} ${t.id===selected?'selected':''}`} onClick={()=>select(t.id)}><span className="theme-id">{String(t.id).padStart(2,'0')}</span><span>{t.name}</span>{t.id===selected&&<ChevronRight size={14}/>}</Button>)}{!themes.length&&<p className="empty-search">Ei hakutuloksia.</p>}</div>
-        <div className="source-status"><FileJson size={16}/><div><span>JSON-AINEISTO</span><p title={filename}>{filename}</p></div><Check size={13}/></div>
-      </aside>
-      <main className="atlas-main">
-        <div className="map-heading"><div><div className="section-eyebrow">RAKENNEMUUTOSTEN {mode==='aika'?'AIKAJANA':mode==='2d'?'TEEMAKARTTA':'AVARUUS'}</div><h2>{mode==='aika'?<>Eilisen ratkaisut.<br/><span>Tämän päivän ristiriidat.</span></>:<>Yksi yhteiskunta.<br/><span>Monta muutoksen suuntaa.</span></>}</h2></div><div className="map-stat"><b>{String(data.themes.length).padStart(2,'0')}</b><span>teemaa</span><i/><b>06</b><span>vaihetta</span></div></div>
-        {mode==='aika'&&g&&<div className="reading-guide"><div className="guide-steps" role="tablist" aria-label="Lukupolku">{path.map((p,i)=><button key={p.title} role="tab" aria-selected={guide===i} className={guide===i?'active':''} onClick={()=>{setGuide(i);if(p.stage)setStep(p.stage-1)}}>{p.title}</button>)}</div><div className="guide-body"><p className="guide-lead">{g.lead}</p><p className="guide-insight">{g.insight}</p><div className="guide-nav"><Button variant="outline" size="icon" aria-label="Edellinen" disabled={guide===0} onClick={()=>{const n=guide-1;setGuide(n);const st=path[n]?.stage;if(st)setStep(st-1)}}><ChevronLeft/></Button><Button variant="default" size="sm" disabled={guide>=path.length-1} onClick={()=>{const n=guide+1;setGuide(n);const st=path[n]?.stage;if(st)setStep(st-1)}}>Seuraava<ChevronRight/></Button></div></div></div>}
-        <div ref={workspace} className="map-workspace"><div className="map-topbar"><span><i className="live-dot"/>{mode==='aika'?'Teemat aikajanalla 1850–2050':mode==='2d'?'Teemojen yhteydet':'Kolmiulotteinen teemakartta'}</span><span className="view-label">{mode.toUpperCase()} / {themes.length} TEEMAA</span></div>
-          <div className={`map-stage ${mode==='aika'?'timeline-stage':''}`}>{mode==='aika'?<AtlasTimeline data={data} selected={selected} visible={visible} onSelect={select} focus={g?.stage??null}/>:mode==='2d'?<AtlasMap data={data} selected={selected} visible={visible} onSelect={select} zoom={zoom} showLinks={showLinks}/>:<Suspense fallback={<div className="scene-loading">Atlas avautuu…</div>}><Scene data={data} selected={selected} visible={visible} onSelect={select} zoom={zoom} showLinks={showLinks} reset={reset}/></Suspense>}
-          {mode!=='aika'&&<div className="map-tools"><Button variant="outline" size="icon" title="Lähennä" aria-label="Lähennä" onClick={()=>setZoom(v=>Math.min(1.8,v+.15))}><Plus/></Button><Button variant="outline" size="icon" title="Loitonna" aria-label="Loitonna" onClick={()=>setZoom(v=>Math.max(.55,v-.15))}><Minus/></Button><span>{Math.round(zoom*100)}%</span><Button variant="outline" size="icon" title="Palauta näkymä" aria-label="Palauta näkymä" onClick={()=>{setZoom(1);setReset(v=>v+1)}}><RotateCcw/></Button><Button variant="outline" size="icon" title="Koko näyttö" aria-label="Koko näyttö" onClick={()=>{if(document.fullscreenElement)void document.exitFullscreen();else void workspace.current?.requestFullscreen()}}><Maximize2/></Button></div>}
-          <Button className="mobile-themes" variant="outline" onClick={()=>setMobileList(true)}><Layers/>Teemat</Button></div>
-          <div className="map-bottom">{mode==='aika'?<span className="stage-legend">{stages.map((s,i)=><span key={s}><i className={`tl-dot stage-${i+1}`}/>{s}</span>)}</span>:<><span className="map-key"><i className="key-line"/>Teemojen välinen yhteys</span><label className="link-toggle"><input type="checkbox" checked={showLinks} onChange={e=>setShowLinks(e.target.checked)}/>Yhteydet</label></>}<span className="map-note">Laadullinen tarkastelu</span></div>
+export function Atlas({
+  initialMode = "aika",
+  standalone = false,
+  initialDataset = initialData,
+}: {
+  initialMode?: "2d" | "3d" | "aika";
+  standalone?: boolean;
+  initialDataset?: AtlasData;
+}) {
+  const [mode, setMode] = useState<"2d" | "3d" | "aika">(initialMode),
+    [guide, setGuide] = useState(0),
+    [data, setData] = useState<AtlasData>(initialDataset),
+    [selected, setSelected] = useState(initialDataset.themes[0]?.id ?? 1),
+    [step, setStep] = useState(0),
+    [search, setSearch] = useState(""),
+    [filter, setFilter] = useState("Kaikki"),
+    [zoom, setZoom] = useState(1),
+    [showLinks, setShowLinks] = useState(true),
+    [reset, setReset] = useState(0),
+    [error, setError] = useState(""),
+    [filename, setFilename] = useState("suomen_rakennemuutosten_atlas.json"),
+    [mobileList, setMobileList] = useState(false),
+    [exportOpen, setExportOpen] = useState(false);
+  const input = useRef<HTMLInputElement>(null),
+    workspace = useRef<HTMLDivElement>(null);
+  const themes = useMemo(
+    () =>
+      data.themes.filter(
+        (t) =>
+          (filter === "Kaikki" || t.group === filter) &&
+          `${t.name} ${t.thesis}`.toLocaleLowerCase("fi").includes(search.toLocaleLowerCase("fi")),
+      ),
+    [data, filter, search],
+  );
+  const visible = useMemo(() => new Set(themes.map((t) => t.id)), [themes]);
+  const active = data.themes.find((t) => t.id === selected) ?? data.themes[0];
+  const current = active?.steps[Math.min(step, active.steps.length - 1)];
+  const path = useMemo(() => readingPath(data), [data]);
+  const g = path[guide] ?? path[0];
+  const edges = useMemo(() => connections(data), [data]);
+  const related = edges
+    .filter((e) => e.includes(selected))
+    .map((e) => (e[0] === selected ? e[1] : e[0]))
+    .map((id) => data.themes.find((t) => t.id === id))
+    .filter((t) => t !== undefined);
+  function select(id: number, s = 0) {
+    setSelected(id);
+    setStep(s);
+    setMobileList(false);
+  }
+  async function importFile(file?: File) {
+    if (!file) return;
+    try {
+      const next = validateData(JSON.parse(await file.text()));
+      const first = next.themes[0];
+      if (!first) return;
+      setData(next);
+      setSelected(first.id);
+      setStep(0);
+      setFilter("Kaikki");
+      setSearch("");
+      setFilename(file.name);
+      setError("");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Tiedostoa ei voitu avata.");
+    }
+    if (input.current) input.current.value = "";
+  }
+  function downloadData() {
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "suomen_rakennemuutosten_atlas.json";
+    a.click();
+    URL.revokeObjectURL(url);
+    setExportOpen(false);
+  }
+  if (!active || !current) return <div className="scene-loading">Aineistossa ei ole teemoja.</div>;
+  return (
+    <div className="atlas-app">
+      <header className="atlas-header">
+        <div className="brand">
+          <div className="brand-symbol">
+            <Network size={25} />
+          </div>
+          <div>
+            <div className="brand-eyebrow">YHTEISKUNTA AJASSA</div>
+            <h1>
+              Suomen rakennemuutosten atlas<span className="edition"> / 01</span>
+            </h1>
+          </div>
         </div>
-        <section className={`story-section theme-color-${groupIndex(active.group)}`}><div className="story-header"><div><span className="section-eyebrow">MUUTOKSEN KUUSI VAIHETTA</span><h3>{active.name}</h3></div><span className="story-period">1850 <span>—</span> 2050</span></div><div className="stage-tabs" role="tablist" aria-label="Muutoksen vaiheet">{stages.map((s,i)=><Button key={s} role="tab" aria-selected={step===i} disabled={!active.steps[i]} variant="ghost" className={step===i?'active':''} onClick={()=>setStep(i)}><span>{String(i+1).padStart(2,'0')}</span>{s}</Button>)}</div><div className="stage-content"><div className="stage-year">{current.year}<span>{stages[current.stage-1]}</span></div><div><h4>{current.label}</h4><p>{current.text}</p></div><div className="stage-nav"><Button variant="outline" size="icon" aria-label="Edellinen vaihe" disabled={step===0} onClick={()=>setStep(v=>v-1)}><ChevronLeft/></Button><Button variant="outline" size="icon" aria-label="Seuraava vaihe" disabled={step>=active.steps.length-1} onClick={()=>setStep(v=>v+1)}><ChevronRight/></Button></div></div></section>
-        <footer className="atlas-footer"><span>SUOMEN RAKENNEMUUTOSTEN ATLAS</span><span>1850 — 2050<span className="footer-separator">/</span>JSON · v{data.schema_version}</span></footer>
-      </main>
-      <aside className={`detail-sidebar theme-color-${groupIndex(active.group)}`}><div className="detail-overline"><span>VALITTU TEEMA</span><span>#{String(active.id).padStart(2,'0')}</span></div><div className="detail-category"><i className="family-dot"/>{active.group}</div><h2>{active.name}</h2><p className="detail-thesis">{active.thesis}</p><div className="detail-rule"/><div className="detail-label">RAKENNEMUUTOKSEN YDIN</div><p className="detail-summary">{active.steps[4]?.text??current.text}</p><div className="detail-label">AJALLINEN IKKUNA</div><p className="detail-window">{active.window}</p><div className="detail-rule"/><div className="detail-label">YHTEYDET MUIHIN TEEMOIHIN <span>{related.length}</span></div><div className="related-themes">{related.map(t=><Button key={t.id} variant="ghost" onClick={()=>select(t.id)}><span>{t.name}</span><ArrowUpRight/></Button>)}{!related.length&&<p className="detail-window">{active.connections||'Ei määriteltyjä yhteyksiä.'}</p>}</div><div className="research-question"><span className="detail-label">AVOIN KYSYMYS</span><p>{active.test}</p><span className="question-mark">↗</span></div></aside>
+        <div className="header-actions">
+          <nav className="atlas-nav" aria-label="Päänavigaatio">
+            <MainLinks exclude="/" className="varaan-link" />
+          </nav>
+          <div className="view-switch" role="group" aria-label="Atlasversio">
+            <Button
+              variant="ghost"
+              onClick={() => setMode("aika")}
+              className={mode === "aika" ? "active" : ""}
+              aria-pressed={mode === "aika"}
+            >
+              <Clock />
+              Aikajana
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={() => setMode("2d")}
+              className={mode === "2d" ? "active" : ""}
+              aria-pressed={mode === "2d"}
+            >
+              <Layers />
+              2D
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={() => setMode("3d")}
+              className={mode === "3d" ? "active" : ""}
+              aria-pressed={mode === "3d"}
+            >
+              <Box />
+              3D
+            </Button>
+          </div>
+          <Button
+            variant="outline"
+            className="import-button"
+            onClick={() => input.current?.click()}
+          >
+            <FileJson />
+            Avaa JSON
+          </Button>
+          <div className="export-wrap">
+            <Button
+              variant="default"
+              onClick={() => setExportOpen((v) => !v)}
+              aria-expanded={exportOpen}
+            >
+              <Download />
+              <span>Lataa</span>
+              <ChevronDown size={12} />
+            </Button>
+            {exportOpen && (
+              <div className="export-menu">
+                <>
+                  <a href={`${downloadBase}atlas-2d.zip`} download>
+                    2D-versio · ZIP
+                    <ArrowUpRight size={14} />
+                  </a>
+                  <a href={`${downloadBase}atlas-3d.zip`} download>
+                    3D-versio · ZIP
+                    <ArrowUpRight size={14} />
+                  </a>
+                  <a href={`${downloadBase}minka-varaan-suomi.zip`} download>
+                    Koko sovellus · ZIP
+                    <ArrowUpRight size={14} />
+                  </a>
+                </>
+                <Button variant="ghost" onClick={downloadData}>
+                  Aineisto · JSON
+                  <FileJson />
+                </Button>
+              </div>
+            )}
+          </div>
+        </div>
+        <input
+          ref={input}
+          type="file"
+          accept=".json,application/json"
+          className="hidden"
+          onChange={(e) => void importFile(e.target.files?.[0])}
+        />
+      </header>
+      {error && (
+        <div className="import-error" role="alert">
+          {error}
+          <Button variant="ghost" size="icon" aria-label="Sulje virhe" onClick={() => setError("")}>
+            <X />
+          </Button>
+        </div>
+      )}
+      <div className="atlas-body">
+        <aside className={`theme-sidebar ${mobileList ? "mobile-open" : ""}`}>
+          <div className="sidebar-title">
+            <span>TEEMAT</span>
+            <span className="count">{data.themes.length}</span>
+            <Button
+              className="mobile-close"
+              size="icon"
+              variant="ghost"
+              aria-label="Sulje teemat"
+              onClick={() => setMobileList(false)}
+            >
+              <X />
+            </Button>
+          </div>
+          <div className="search-field">
+            <Search size={15} />
+            <input
+              aria-label="Etsi teema"
+              placeholder="Etsi teema…"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            {search && (
+              <Button
+                size="icon"
+                variant="ghost"
+                onClick={() => setSearch("")}
+                aria-label="Tyhjennä haku"
+              >
+                <X />
+              </Button>
+            )}
+          </div>
+          <div className="filter-list">
+            <Button
+              variant="ghost"
+              className={filter === "Kaikki" ? "active" : ""}
+              onClick={() => setFilter("Kaikki")}
+            >
+              <span>Kaikki teemat</span>
+              <span>{data.themes.length}</span>
+            </Button>
+            {groups.map((g, i) => (
+              <Button
+                variant="ghost"
+                key={g}
+                className={`${filter === g ? "active" : ""} theme-color-${i}`}
+                onClick={() => setFilter(g)}
+              >
+                <i className="family-dot" />
+                <span>{g}</span>
+                <small>{data.themes.filter((t) => t.group === g).length}</small>
+              </Button>
+            ))}
+          </div>
+          <div className="sidebar-divider" />
+          <div className="theme-list">
+            {themes.map((t) => (
+              <Button
+                variant="ghost"
+                key={t.id}
+                className={`theme-item theme-color-${groupIndex(t.group)} ${t.id === selected ? "selected" : ""}`}
+                onClick={() => select(t.id)}
+              >
+                <span className="theme-id">{String(t.id).padStart(2, "0")}</span>
+                <span>{t.name}</span>
+                {t.id === selected && <ChevronRight size={14} />}
+              </Button>
+            ))}
+            {!themes.length && <p className="empty-search">Ei hakutuloksia.</p>}
+          </div>
+          <div className="source-status">
+            <FileJson size={16} />
+            <div>
+              <span>JSON-AINEISTO</span>
+              <p title={filename}>{filename}</p>
+            </div>
+            <Check size={13} />
+          </div>
+        </aside>
+        <main className="atlas-main">
+          <div className="map-heading">
+            <div>
+              <div className="section-eyebrow">
+                RAKENNEMUUTOSTEN{" "}
+                {mode === "aika" ? "AIKAJANA" : mode === "2d" ? "TEEMAKARTTA" : "AVARUUS"}
+              </div>
+              <h2>
+                {mode === "aika" ? (
+                  <>
+                    Eilisen ratkaisut.
+                    <br />
+                    <span>Tämän päivän ristiriidat.</span>
+                  </>
+                ) : (
+                  <>
+                    Yksi yhteiskunta.
+                    <br />
+                    <span>Monta muutoksen suuntaa.</span>
+                  </>
+                )}
+              </h2>
+            </div>
+            <div className="map-stat">
+              <b>{String(data.themes.length).padStart(2, "0")}</b>
+              <span>teemaa</span>
+              <i />
+              <b>06</b>
+              <span>vaihetta</span>
+            </div>
+          </div>
+          {mode === "aika" && g && (
+            <div className="reading-guide">
+              <div className="guide-steps" role="tablist" aria-label="Lukupolku">
+                {path.map((p, i) => (
+                  <button
+                    key={p.title}
+                    role="tab"
+                    aria-selected={guide === i}
+                    className={guide === i ? "active" : ""}
+                    onClick={() => {
+                      setGuide(i);
+                      if (p.stage) setStep(p.stage - 1);
+                    }}
+                  >
+                    {p.title}
+                  </button>
+                ))}
+              </div>
+              <div className="guide-body">
+                <p className="guide-lead">{g.lead}</p>
+                <p className="guide-insight">{g.insight}</p>
+                <div className="guide-nav">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    aria-label="Edellinen"
+                    disabled={guide === 0}
+                    onClick={() => {
+                      const n = guide - 1;
+                      setGuide(n);
+                      const st = path[n]?.stage;
+                      if (st) setStep(st - 1);
+                    }}
+                  >
+                    <ChevronLeft />
+                  </Button>
+                  <Button
+                    variant="default"
+                    size="sm"
+                    disabled={guide >= path.length - 1}
+                    onClick={() => {
+                      const n = guide + 1;
+                      setGuide(n);
+                      const st = path[n]?.stage;
+                      if (st) setStep(st - 1);
+                    }}
+                  >
+                    Seuraava
+                    <ChevronRight />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
+          <div ref={workspace} className="map-workspace">
+            <div className="map-topbar">
+              <span>
+                <i className="live-dot" />
+                {mode === "aika"
+                  ? "Teemat aikajanalla 1850–2050"
+                  : mode === "2d"
+                    ? "Teemojen yhteydet"
+                    : "Kolmiulotteinen teemakartta"}
+              </span>
+              <span className="view-label">
+                {mode.toUpperCase()} / {themes.length} TEEMAA
+              </span>
+            </div>
+            <div className={`map-stage ${mode === "aika" ? "timeline-stage" : ""}`}>
+              {mode === "aika" ? (
+                <AtlasTimeline
+                  data={data}
+                  selected={selected}
+                  visible={visible}
+                  onSelect={select}
+                  focus={g?.stage ?? null}
+                />
+              ) : mode === "2d" ? (
+                <AtlasMap
+                  data={data}
+                  selected={selected}
+                  visible={visible}
+                  onSelect={select}
+                  zoom={zoom}
+                  showLinks={showLinks}
+                />
+              ) : (
+                <Suspense fallback={<div className="scene-loading">Atlas avautuu…</div>}>
+                  <Scene
+                    data={data}
+                    selected={selected}
+                    visible={visible}
+                    onSelect={select}
+                    zoom={zoom}
+                    showLinks={showLinks}
+                    reset={reset}
+                  />
+                </Suspense>
+              )}
+              {mode !== "aika" && (
+                <div className="map-tools">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    title="Lähennä"
+                    aria-label="Lähennä"
+                    onClick={() => setZoom((v) => Math.min(1.8, v + 0.15))}
+                  >
+                    <Plus />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    title="Loitonna"
+                    aria-label="Loitonna"
+                    onClick={() => setZoom((v) => Math.max(0.55, v - 0.15))}
+                  >
+                    <Minus />
+                  </Button>
+                  <span>{Math.round(zoom * 100)}%</span>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    title="Palauta näkymä"
+                    aria-label="Palauta näkymä"
+                    onClick={() => {
+                      setZoom(1);
+                      setReset((v) => v + 1);
+                    }}
+                  >
+                    <RotateCcw />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    title="Koko näyttö"
+                    aria-label="Koko näyttö"
+                    onClick={() => {
+                      if (document.fullscreenElement) void document.exitFullscreen();
+                      else void workspace.current?.requestFullscreen();
+                    }}
+                  >
+                    <Maximize2 />
+                  </Button>
+                </div>
+              )}
+              <Button
+                className="mobile-themes"
+                variant="outline"
+                onClick={() => setMobileList(true)}
+              >
+                <Layers />
+                Teemat
+              </Button>
+            </div>
+            <div className="map-bottom">
+              {mode === "aika" ? (
+                <span className="stage-legend">
+                  {stages.map((s, i) => (
+                    <span key={s}>
+                      <i className={`tl-dot stage-${i + 1}`} />
+                      {s}
+                    </span>
+                  ))}
+                </span>
+              ) : (
+                <>
+                  <span className="map-key">
+                    <i className="key-line" />
+                    Teemojen välinen yhteys
+                  </span>
+                  <label className="link-toggle">
+                    <input
+                      type="checkbox"
+                      checked={showLinks}
+                      onChange={(e) => setShowLinks(e.target.checked)}
+                    />
+                    Yhteydet
+                  </label>
+                </>
+              )}
+              <span className="map-note">Laadullinen tarkastelu</span>
+            </div>
+          </div>
+          <section className={`story-section theme-color-${groupIndex(active.group)}`}>
+            <div className="story-header">
+              <div>
+                <span className="section-eyebrow">MUUTOKSEN KUUSI VAIHETTA</span>
+                <h3>{active.name}</h3>
+              </div>
+              <span className="story-period">
+                1850 <span>—</span> 2050
+              </span>
+            </div>
+            <div className="stage-tabs" role="tablist" aria-label="Muutoksen vaiheet">
+              {stages.map((s, i) => (
+                <Button
+                  key={s}
+                  role="tab"
+                  aria-selected={step === i}
+                  disabled={!active.steps[i]}
+                  variant="ghost"
+                  className={step === i ? "active" : ""}
+                  onClick={() => setStep(i)}
+                >
+                  <span>{String(i + 1).padStart(2, "0")}</span>
+                  {s}
+                </Button>
+              ))}
+            </div>
+            <div className="stage-content">
+              <div className="stage-year">
+                {current.year}
+                <span>{stages[current.stage - 1]}</span>
+              </div>
+              <div>
+                <h4>{current.label}</h4>
+                <p>{current.text}</p>
+              </div>
+              <div className="stage-nav">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  aria-label="Edellinen vaihe"
+                  disabled={step === 0}
+                  onClick={() => setStep((v) => v - 1)}
+                >
+                  <ChevronLeft />
+                </Button>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  aria-label="Seuraava vaihe"
+                  disabled={step >= active.steps.length - 1}
+                  onClick={() => setStep((v) => v + 1)}
+                >
+                  <ChevronRight />
+                </Button>
+              </div>
+            </div>
+          </section>
+          <footer className="atlas-footer">
+            <span>SUOMEN RAKENNEMUUTOSTEN ATLAS</span>
+            <span>
+              1850 — 2050<span className="footer-separator">/</span>JSON · v{data.schema_version}
+            </span>
+          </footer>
+        </main>
+        <aside className={`detail-sidebar theme-color-${groupIndex(active.group)}`}>
+          <div className="detail-overline">
+            <span>VALITTU TEEMA</span>
+            <span>#{String(active.id).padStart(2, "0")}</span>
+          </div>
+          <div className="detail-category">
+            <i className="family-dot" />
+            {active.group}
+          </div>
+          <h2>{active.name}</h2>
+          <p className="detail-thesis">{active.thesis}</p>
+          <div className="detail-rule" />
+          <div className="detail-label">RAKENNEMUUTOKSEN YDIN</div>
+          <p className="detail-summary">{active.steps[4]?.text ?? current.text}</p>
+          <div className="detail-label">AJALLINEN IKKUNA</div>
+          <p className="detail-window">{active.window}</p>
+          <div className="detail-rule" />
+          <div className="detail-label">
+            YHTEYDET MUIHIN TEEMOIHIN <span>{related.length}</span>
+          </div>
+          <div className="related-themes">
+            {related.map((t) => (
+              <Button key={t.id} variant="ghost" onClick={() => select(t.id)}>
+                <span>{t.name}</span>
+                <ArrowUpRight />
+              </Button>
+            ))}
+            {!related.length && (
+              <p className="detail-window">{active.connections || "Ei määriteltyjä yhteyksiä."}</p>
+            )}
+          </div>
+          <div className="research-question">
+            <span className="detail-label">AVOIN KYSYMYS</span>
+            <p>{active.test}</p>
+            <span className="question-mark">↗</span>
+          </div>
+        </aside>
+      </div>
     </div>
-  </div>;
+  );
 }
