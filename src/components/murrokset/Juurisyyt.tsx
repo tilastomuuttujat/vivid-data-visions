@@ -3,7 +3,7 @@ import { ROOT_PATHS, KIND_TXT, stepDecisions, type RootKind } from './juurisyyt-
 
 export function Juurisyyt() {
   const [filter, setFilter] = useState<RootKind | 'all'>('all');
-  const [sel, setSel] = useState(ROOT_PATHS[0].id);
+  const [sel, setSel] = useState(ROOT_PATHS[0]!.id);
   const [open, setOpen] = useState<string | null>(null);
   const path = ROOT_PATHS.find((p) => p.id === sel)!;
   const shown = ROOT_PATHS.filter((p) => filter === 'all' || p.kind === filter);

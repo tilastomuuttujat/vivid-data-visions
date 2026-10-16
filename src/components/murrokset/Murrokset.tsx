@@ -14,7 +14,7 @@ const Q = [
 ] as const;
 
 export function Murrokset() {
-  const [focus, setFocus] = useState<Focus>(PHASES[3].periods[0]);
+  const [focus, setFocus] = useState<Focus>(PHASES[3]!.periods[0]);
   const [kinds, setKinds] = useState<Record<TurnKind, boolean>>({ paatos: true, kriisi: true, rakenne: true });
   const [open, setOpen] = useState<string | null>(null);
   const [mode, setMode] = useState<'kronologia' | 'juuret'>('kronologia');
