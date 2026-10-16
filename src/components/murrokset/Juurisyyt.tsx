@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ROOT_PATHS, KIND_TXT, stepDecisions, type RootKind } from "./juurisyyt-model";
+import { PolkuAikajana } from "./PolkuAikajana";
 
 export function Juurisyyt({ onDecision }: { onDecision?: (id: string) => void } = {}) {
   const [filter, setFilter] = useState<RootKind | "all">("all");
   const [sel, setSel] = useState(ROOT_PATHS[0]!.id);
   const [open, setOpen] = useState<string | null>(null);
+  const [view, setView] = useState<"kortit" | "aikajana" | "risteys">("kortit");
+  const [multi, setMulti] = useState<string[]>(["syntyvyys", "asunto", "hoiva"].filter((id) => ROOT_PATHS.some((p) => p.id === id)));
   const path = ROOT_PATHS.find((p) => p.id === sel)!;
   const shown = ROOT_PATHS.filter((p) => filter === "all" || p.kind === filter);
   const selectFilter = (kind: RootKind | "all") => {
@@ -40,23 +43,51 @@ export function Juurisyyt({ onDecision }: { onDecision?: (id: string) => void } 
         </div>
       </div>
 
-      <div className="j-cards">
-        {shown.map((p) => (
-          <button
-            key={p.id}
-            aria-pressed={p.id === sel}
-            className={`j-card j-k-${p.kind}${p.id === sel ? " on" : ""}`}
-            onClick={() => {
-              setSel(p.id);
-              setOpen(null);
-            }}
-          >
-            <em>{KIND_TXT[p.kind]}</em>
-            <strong>{p.title}</strong>
+      <div className="m-mode j-view" role="tablist" aria-label="Näkymä">
+        {([
+          ["kortit", "Kortit"],
+          ["aikajana", "Aikajanapolku"],
+          ["risteys", "Risteävät polut"],
+        ] as const).map(([v, l]) => (
+          <button key={v} role="tab" aria-selected={view === v} className={view === v ? "on" : ""} onClick={() => setView(v)}>
+            {l}
           </button>
         ))}
       </div>
+      {view === "risteys" && <p className="j-hint">Valitse 2–4 ilmiötä. Yhteiset päätökset näkyvät risteyskohtina.</p>}
 
+      <div className="j-cards">
+        {shown.map((p) => {
+          const on = view === "risteys" ? multi.includes(p.id) : p.id === sel;
+          return (
+            <button
+              key={p.id}
+              aria-pressed={on}
+              className={`j-card j-k-${p.kind}${on ? " on" : ""}`}
+              onClick={() => {
+                if (view === "risteys") {
+                  setMulti(multi.includes(p.id) ? multi.filter((m) => m !== p.id) : [...multi, p.id].slice(-4));
+                } else {
+                  setSel(p.id);
+                  setOpen(null);
+                }
+              }}
+            >
+              <em>{KIND_TXT[p.kind]}</em>
+              <strong>{p.title}</strong>
+            </button>
+          );
+        })}
+      </div>
+
+      {view !== "kortit" && (
+        <PolkuAikajana
+          ids={view === "risteys" ? (multi.length ? multi : [sel]) : [sel]}
+          onPick={(id) => (onDecision ? onDecision(id) : undefined)}
+        />
+      )}
+
+      {view === "kortit" && (
       <div className={`j-path j-k-${path.kind}`}>
         <div className="j-now">
           <span className="j-era">Tarkastelun lähtökohta · ei yksittäinen tilastohavainto</span>
@@ -143,6 +174,7 @@ export function Juurisyyt({ onDecision }: { onDecision?: (id: string) => void } 
           todistettuja syy-yhteyksiä.
         </p>
       </div>
+      )}
     </section>
   );
 }

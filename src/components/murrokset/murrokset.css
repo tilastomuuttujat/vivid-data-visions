@@ -102,3 +102,34 @@
 .j-note { margin: 1.4rem 0 0; font-size: 0.82rem; opacity: 0.6; }
 
 .m-a-neutraali, .m-a-arvioimaton { --ac: #9eabb7; }
+/* Aikajanapolut (mallit 1–3) */
+.j-view { margin: 1.2rem 0 0.6rem; }
+.j-hint { opacity: 0.7; font-size: 0.9rem; margin: 0 0 0.6rem; }
+.pa, .ka { margin: 1.4rem 0; padding: 1.2rem; border-radius: 20px; background: var(--m-paper); border: 1px solid var(--m-line); }
+.pa-scroll { overflow-x: auto; }
+.pa-scroll svg { min-width: 760px; width: 100%; height: auto; display: block; font-family: inherit; }
+.pa figcaption, .ka figcaption { margin-top: 0.8rem; font-size: 0.85rem; opacity: 0.75; line-height: 1.5; }
+.pa-phase { font-size: 11px; font-weight: 600; }
+.pa-grid { stroke: var(--m-line); }
+.pa-year { font-size: 11px; fill: currentColor; opacity: 0.6; }
+.pa-now { stroke: var(--m-gold); stroke-dasharray: 3 4; }
+.pa-now-t { fill: var(--m-gold); opacity: 1; font-weight: 600; }
+.pa-line { fill: none; stroke: currentColor; stroke-width: 2.5; stroke-dasharray: 2 6; stroke-linecap: round; opacity: 0.85; }
+.pa-span { fill: currentColor; opacity: 0.22; }
+.pa-dot { fill: currentColor; stroke: oklch(0.18 0.02 260); stroke-width: 2; cursor: pointer; transition: r 0.15s; }
+.pa-dot:hover, .pa-dot:focus { r: 9; outline: none; }
+.pa-dot-shared { stroke: oklch(0.97 0 0); stroke-width: 2.5; }
+.pa-cross { stroke: oklch(0.97 0 0 / 0.55); stroke-width: 1.5; stroke-dasharray: 4 3; }
+.pa-gap { font-size: 11px; fill: currentColor; opacity: 0.85; font-weight: 600; }
+.pa-step { font-size: 11px; fill: currentColor; font-weight: 600; }
+.pa-step-t { fill: oklch(0.95 0 0); font-weight: 400; opacity: 0.85; }
+.pa-lane { font-size: 12px; font-weight: 600; }
+.ka-legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem; font-size: 0.8rem; margin-bottom: 0.6rem; }
+.ka-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 0.35rem; }
+.ka-side { font-size: 11px; fill: currentColor; opacity: 0.6; }
+.ka-arc path { fill: none; stroke: currentColor; stroke-width: 1.6; opacity: 0.7; }
+.ka-arc:hover path { opacity: 1; stroke-width: 2.6; }
+.ka-node { fill: currentColor; opacity: 0.6; }
+.ka-linked { opacity: 1; stroke: oklch(0.97 0 0); stroke-width: 1.5; cursor: pointer; }
+.ka-focus { fill: oklch(0.97 0 0); stroke: var(--m-gold); stroke-width: 3; }
+.ka-focus-t { font-size: 12px; font-weight: 700; fill: var(--m-gold); }

@@ -17,6 +17,9 @@ import {
 import { Juurisyyt } from "./Juurisyyt";
 import "./murrokset.css";
 
+const KaariAikajana = lazy(() =>
+  import("./KaariAikajana").then((m) => ({ default: m.KaariAikajana })),
+);
 const DecisionNetwork = lazy(() =>
   import("./DecisionNetwork").then((m) => ({ default: m.DecisionNetwork })),
 );
@@ -97,6 +100,7 @@ export function Murrokset() {
 
         {mode === "verkosto" ? (
           <Suspense fallback={<p role="status">Ladataan päätösverkostoa…</p>}>
+            <KaariAikajana decisionId={networkDecision} onDecision={setNetworkDecision} />
             <DecisionNetwork
               key={networkDecision}
               decisionId={networkDecision}
