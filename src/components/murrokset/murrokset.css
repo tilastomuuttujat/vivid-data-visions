@@ -13,7 +13,7 @@
   background: linear-gradient(100deg, color-mix(in oklch, var(--tone) 16%, transparent), var(--m-paper) 60%); border: 1px solid var(--m-line); }
 .m-phase-head { display: flex; gap: 0.9rem; align-items: flex-start; }
 .m-num { font-family: Fraunces, serif; font-size: 3.2rem; line-height: 0.9; color: var(--tone); }
-.m-phase h2 { font-family: Fraunces, serif; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.02em; }
+.m-phase h2 { font-family: Fraunces, serif; font-size: 1.15rem; overflow-wrap: anywhere; hyphens: auto; text-transform: uppercase; letter-spacing: 0.02em; }
 .m-years { color: var(--tone, var(--m-gold)); font-weight: 600; font-size: 0.9rem; }
 .m-periods { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; border-left: 2px solid var(--tone); padding-left: 1rem; }
 .m-period { position: relative; text-align: left; display: grid; gap: 0.15rem; padding: 0.8rem 0.9rem; border-radius: 12px; background: oklch(1 0 0 / 0.03);

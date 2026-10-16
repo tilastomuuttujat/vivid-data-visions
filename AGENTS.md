@@ -20,3 +20,4 @@
 - Standalone download (scripts/standalone) bundles the real app components into one HTML with hash routing, while atlas/anchors/maakunnat JSON stay external and load at runtime — so the download matches the preview and data stays editable.
 - GitHub Pages deploy (.github/workflows/deploy.yml) builds scripts/standalone and serves index.html + data/*.json, because Pages cannot run the SSR app.
 - Admin editing (src/lib/editor) mutates the imported JSON objects in place and publishes changed files to src/data via the GitHub contents API with a token kept in the admin's localStorage — no backend needed, and the push triggers the Pages workflow.
+- Murrokset view (src/components/murrokset) links decisions to the 10-period metanarrative by year; src/data/lainsaadanto.json is regenerated from the user's Excel with scripts/data/convert-lainsaadanto.py, so the spreadsheet stays the editable source.
