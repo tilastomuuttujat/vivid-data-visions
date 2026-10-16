@@ -7,7 +7,7 @@ syy-yhteyttä.
 
 ## Kehitys ja tarkistukset
 
-Node.js/npm tai Bun sekä Python 3 ja openpyxl 3.1.5:
+Node.js/npm tai Bun 1.4.3 sekä Python 3 ja openpyxl 3.1.5:
 
 ```sh
 bun install --frozen-lockfile
