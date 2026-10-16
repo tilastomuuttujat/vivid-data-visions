@@ -68,3 +68,32 @@
   .m-turn.l button, .m-turn.r button { grid-column: 1; margin: 0 0 0 1.8rem; text-align: left; }
   .m-law-body { padding-left: 1rem; } .m-guide dl div { grid-template-columns: 1fr; gap: 0.1rem; }
 }
+
+/* Käänteinen polkumalli */
+.m-mode { display: inline-flex; gap: 0.3rem; padding: 0.3rem; border-radius: 999px; border: 1px solid var(--m-line); background: var(--m-paper); margin: 1.2rem 0 0; }
+.m-mode button { padding: 0.5rem 1.1rem; border-radius: 999px; border: 0; background: none; color: inherit; cursor: pointer; opacity: 0.6; font-weight: 600; }
+.m-mode button.on { opacity: 1; background: oklch(1 0 0 / 0.1); }
+.j-root { margin-top: 2rem; }
+.j-head h2 { font-size: 1.8rem; margin: 0 0 0.3rem; } .j-head p { opacity: 0.75; margin: 0 0 0.9rem; }
+.j-k-all { --kc: var(--m-teal); } .j-k-vinouma { --kc: var(--m-red); } .j-k-heikkous { --kc: var(--m-gold); } .j-k-vahvuus { --kc: var(--m-green); }
+.j-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.7rem; margin: 1.2rem 0 1.6rem; }
+.j-card { text-align: left; padding: 0.9rem 1rem; border-radius: 16px; border: 1px solid var(--m-line); border-left: 4px solid var(--kc); background: var(--m-paper); color: inherit; cursor: pointer; display: grid; gap: 0.3rem; opacity: 0.7; transition: opacity .2s, transform .2s; }
+.j-card:hover { opacity: 1; } .j-card.on { opacity: 1; transform: translateY(-2px); background: color-mix(in oklch, var(--kc) 14%, var(--m-paper)); }
+.j-card em { font-style: normal; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--kc); }
+.j-path { padding: 1.8rem; border-radius: 22px; background: var(--m-paper); border: 1px solid var(--m-line); }
+.j-now { padding: 1.2rem 1.4rem; border-radius: 16px; background: linear-gradient(110deg, color-mix(in oklch, var(--kc) 22%, transparent), transparent 80%); border: 1px solid color-mix(in oklch, var(--kc) 40%, transparent); }
+.j-now h3 { font-size: 1.5rem; margin: 0.3rem 0; } .j-now p { margin: 0.3rem 0; } .j-q { font-style: italic; opacity: 0.8; }
+.j-era { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--kc); font-weight: 600; }
+.j-steps { list-style: none; padding: 0 0 0 1.4rem; margin: 0; position: relative; }
+.j-steps::before { content: ''; position: absolute; left: 0.45rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(var(--kc), transparent); }
+.j-step { position: relative; }
+.j-step::before { content: ''; position: absolute; left: -1.25rem; top: 2.6rem; width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--kc); box-shadow: 0 0 12px var(--kc); }
+.j-lag { height: 1.8rem; display: flex; align-items: center; font-size: 0.78rem; opacity: 0.7; }
+.j-body { padding: 1rem 1.2rem; border-radius: 14px; border: 1px solid var(--m-line); background: oklch(1 0 0 / 0.03); }
+.j-body h4 { margin: 0.3rem 0; font-size: 1.1rem; } .j-body > p { margin: 0 0 0.6rem; opacity: 0.85; }
+.j-laws { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.35rem; }
+.j-laws button { text-align: left; width: 100%; background: none; border: 0; color: inherit; cursor: pointer; padding: 0.35rem 0; font-size: 0.9rem; opacity: 0.85; }
+.j-laws button:hover { opacity: 1; } .j-laws b { color: var(--kc); margin-right: 0.4rem; }
+.j-law-body { padding: 0.5rem 0.8rem; border-left: 2px solid var(--kc); font-size: 0.88rem; opacity: 0.9; }
+.j-law-body p { margin: 0.3rem 0; } .j-law-body a { color: var(--m-teal); text-decoration: underline; }
+.j-note { margin: 1.4rem 0 0; font-size: 0.82rem; opacity: 0.6; }

@@ -4,6 +4,7 @@ import {
   PHASES, TURNS, KIND_LABEL, PREP, FUNDING, GUIDE, decisionsIn, fourQuestions,
   type Decision, type Period, type TurnKind,
 } from './murrokset-model';
+import { Juurisyyt } from './Juurisyyt';
 import './murrokset.css';
 
 type Focus = { from: number; to: number; title: string; sub: string };
@@ -16,6 +17,7 @@ export function Murrokset() {
   const [focus, setFocus] = useState<Focus>(PHASES[3].periods[0]);
   const [kinds, setKinds] = useState<Record<TurnKind, boolean>>({ paatos: true, kriisi: true, rakenne: true });
   const [open, setOpen] = useState<string | null>(null);
+  const [mode, setMode] = useState<'kronologia' | 'juuret'>('kronologia');
   const list = useMemo(() => decisionsIn(focus.from, focus.to), [focus]);
   const q = useMemo(() => fourQuestions(list), [list]);
   const pick = (f: Focus) => { setFocus(f); setOpen(null); document.getElementById('m-jakso')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
@@ -30,7 +32,13 @@ export function Murrokset() {
         <div className="m-hero">
           <h1>Minkä varaan Suomi rakentuu?</h1>
           <p className="m-lead">Yhteisen kantokyvyn murrokset 1850–2025 · viisi päävaihetta · kymmenen tarkastelujaksoa · 116 päätöstä</p>
+          <div className="m-mode" role="tablist">
+            <button role="tab" aria-selected={mode === 'kronologia'} className={mode === 'kronologia' ? 'on' : ''} onClick={() => setMode('kronologia')}>Kronologia 1850 → 2025</button>
+            <button role="tab" aria-selected={mode === 'juuret'} className={mode === 'juuret' ? 'on' : ''} onClick={() => setMode('juuret')}>Juurisyyt 2026 → 1850</button>
+          </div>
         </div>
+
+        {mode === 'juuret' ? <Juurisyyt /> : <>
 
         <section className="m-phases" aria-label="Viisi päävaihetta">
           {PHASES.map((p) => (
@@ -91,6 +99,7 @@ export function Murrokset() {
           </ol>
           <p className="m-turns-q">Kuka kantoi riskin – ja mitä jäi seuraaville?</p>
         </section>
+        </>}
 
         <details className="m-guide"><summary>Lukuohje: fakta ja tulkinta</summary>
           <dl>{GUIDE.map((g) => <div key={g.otsikko}><dt>{g.otsikko}</dt><dd>{g.teksti}</dd></div>)}</dl>
