@@ -87,9 +87,9 @@ export function PolkuAikajana({ ids, onPick }: { ids: string[]; onPick: (decisio
                   return (
                     <g key={s.i}>
                       <rect x={x(s.from) - 6} y={cy - 9} width={Math.max(12, x(s.to) - x(s.from) + 12)} height={18} rx={9} className="pa-span" />
-                      <text x={(x(prev) + x(mid)) / 2} y={cy + (above ? 26 : -18)} textAnchor="middle" className="pa-gap">{gap} v</text>
+                      <text x={(x(prev) + x(mid)) / 2} y={multi ? cy + (above ? 26 : -18) : cy + 28} textAnchor="middle" className="pa-gap">{gap} v</text>
                       {!multi && (
-                        <text x={x(mid)} y={cy + (above ? -30 : 44)} textAnchor="middle" className="pa-step">
+                        <text x={x(mid)} y={cy + (above ? -34 : 50)} textAnchor="middle" className="pa-step">
                           <tspan x={x(mid)}>{s.era}</tspan>
                           <tspan x={x(mid)} dy="1.15em" className="pa-step-t">{s.title.length > 34 ? s.title.slice(0, 32) + "…" : s.title}</tspan>
                         </text>
