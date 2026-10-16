@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LaboratorioRouteImport } from './routes/laboratorio'
 import { Route as MinkaVaraanRouteImport } from './routes/minka-varaan'
+import { Route as MurroksetRouteImport } from './routes/murrokset'
 import { Route as ObservatorioRouteImport } from './routes/observatorio'
 import { Route as PlaneettaRouteImport } from './routes/planeetta'
 
@@ -30,6 +31,11 @@ const MinkaVaraanRoute = MinkaVaraanRouteImport.update({
   path: '/minka-varaan',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MurroksetRoute = MurroksetRouteImport.update({
+  id: '/murrokset',
+  path: '/murrokset',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ObservatorioRoute = ObservatorioRouteImport.update({
   id: '/observatorio',
   path: '/observatorio',
@@ -45,6 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/laboratorio': typeof LaboratorioRoute
   '/minka-varaan': typeof MinkaVaraanRoute
+  '/murrokset': typeof MurroksetRoute
   '/observatorio': typeof ObservatorioRoute
   '/planeetta': typeof PlaneettaRoute
 }
@@ -52,6 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/laboratorio': typeof LaboratorioRoute
   '/minka-varaan': typeof MinkaVaraanRoute
+  '/murrokset': typeof MurroksetRoute
   '/observatorio': typeof ObservatorioRoute
   '/planeetta': typeof PlaneettaRoute
 }
@@ -60,20 +68,33 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/laboratorio': typeof LaboratorioRoute
   '/minka-varaan': typeof MinkaVaraanRoute
+  '/murrokset': typeof MurroksetRoute
   '/observatorio': typeof ObservatorioRoute
   '/planeetta': typeof PlaneettaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/laboratorio' | '/minka-varaan' | '/observatorio' | '/planeetta'
+    | '/'
+    | '/laboratorio'
+    | '/minka-varaan'
+    | '/murrokset'
+    | '/observatorio'
+    | '/planeetta'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/laboratorio' | '/minka-varaan' | '/observatorio' | '/planeetta'
+  to:
+    | '/'
+    | '/laboratorio'
+    | '/minka-varaan'
+    | '/murrokset'
+    | '/observatorio'
+    | '/planeetta'
   id:
     | '__root__'
     | '/'
     | '/laboratorio'
     | '/minka-varaan'
+    | '/murrokset'
     | '/observatorio'
     | '/planeetta'
   fileRoutesById: FileRoutesById
@@ -82,6 +103,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   LaboratorioRoute: typeof LaboratorioRoute
   MinkaVaraanRoute: typeof MinkaVaraanRoute
+  MurroksetRoute: typeof MurroksetRoute
   ObservatorioRoute: typeof ObservatorioRoute
   PlaneettaRoute: typeof PlaneettaRoute
 }
@@ -109,6 +131,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MinkaVaraanRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/murrokset': {
+      id: '/murrokset'
+      path: '/murrokset'
+      fullPath: '/murrokset'
+      preLoaderRoute: typeof MurroksetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/observatorio': {
       id: '/observatorio'
       path: '/observatorio'
@@ -130,6 +159,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LaboratorioRoute: LaboratorioRoute,
   MinkaVaraanRoute: MinkaVaraanRoute,
+  MurroksetRoute: MurroksetRoute,
   ObservatorioRoute: ObservatorioRoute,
   PlaneettaRoute: PlaneettaRoute,
 }

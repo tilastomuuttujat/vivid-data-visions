@@ -29,7 +29,7 @@ export function Murrokset() {
         </header>
         <div className="m-hero">
           <h1>Minkä varaan Suomi rakentuu?</h1>
-          <p className="m-lead">Yhteisen kantokyvyn murrokset 1850–2025 · viisi päävaihetta · kymmenen tarkastelujaksoa · {list.length ? '' : ''}116 päätöstä</p>
+          <p className="m-lead">Yhteisen kantokyvyn murrokset 1850–2025 · viisi päävaihetta · kymmenen tarkastelujaksoa · 116 päätöstä</p>
         </div>
 
         <section className="m-phases" aria-label="Viisi päävaihetta">
