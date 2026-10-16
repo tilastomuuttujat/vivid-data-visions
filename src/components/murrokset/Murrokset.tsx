@@ -17,11 +17,8 @@ import {
 import { Juurisyyt } from "./Juurisyyt";
 import "./murrokset.css";
 
-const KaariAikajana = lazy(() =>
-  import("./KaariAikajana").then((m) => ({ default: m.KaariAikajana })),
-);
-const DecisionNetwork = lazy(() =>
-  import("./DecisionNetwork").then((m) => ({ default: m.DecisionNetwork })),
+const DecisionExplorer = lazy(() =>
+  import("./DecisionExplorer").then((m) => ({ default: m.DecisionExplorer })),
 );
 
 type Focus = { from: number; to: number; title: string; sub: string };
@@ -100,8 +97,7 @@ export function Murrokset() {
 
         {mode === "verkosto" ? (
           <Suspense fallback={<p role="status">Ladataan päätösverkostoa…</p>}>
-            <KaariAikajana decisionId={networkDecision} onDecision={setNetworkDecision} />
-            <DecisionNetwork
+            <DecisionExplorer
               key={networkDecision}
               decisionId={networkDecision}
               onDecision={setNetworkDecision}
