@@ -21,3 +21,4 @@
 - GitHub Pages deploy (.github/workflows/deploy.yml) builds scripts/standalone and serves index.html + data/*.json, because Pages cannot run the SSR app.
 - Admin editing (src/lib/editor) mutates the imported JSON objects in place and publishes changed files to src/data via the GitHub contents API with a token kept in the admin's localStorage — no backend needed, and the push triggers the Pages workflow.
 - Murrokset view (src/components/murrokset) links decisions to the 10-period metanarrative by year; src/data/lainsaadanto.json is regenerated from the user's Excel with scripts/data/convert-lainsaadanto.py, so the spreadsheet stays the editable source.
+- DecisionNetwork uses a pinned TTT relation snapshot and explicit decision mappings; preserve source direction, distinguish exact counterparts from context, and never infer missing edges or treat source confidence as validated effect evidence. See src/components/murrokset/NETWORK.md for refresh and verification.

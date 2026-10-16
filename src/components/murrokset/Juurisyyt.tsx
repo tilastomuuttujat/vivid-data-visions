@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ROOT_PATHS, KIND_TXT, stepDecisions, type RootKind } from "./juurisyyt-model";
 
-export function Juurisyyt() {
+export function Juurisyyt({ onDecision }: { onDecision?: (id: string) => void } = {}) {
   const [filter, setFilter] = useState<RootKind | "all">("all");
   const [sel, setSel] = useState(ROOT_PATHS[0]!.id);
   const [open, setOpen] = useState<string | null>(null);
@@ -123,6 +123,11 @@ export function Juurisyyt() {
                                 Päätöksen lähde: {d.lahde || "avaa lähde"}
                               </a>
                             </p>
+                          )}
+                          {onDecision && (
+                            <button onClick={() => onDecision(d.id)}>
+                              Tutki taustoja ja seurauksia →
+                            </button>
                           )}
                         </div>
                       )}
