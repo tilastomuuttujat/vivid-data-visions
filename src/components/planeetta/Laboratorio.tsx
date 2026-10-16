@@ -51,7 +51,7 @@ export function Laboratorio() {
       <div className="v-aurora" aria-hidden />
       <div className="pl-wrap">
         <header className="v-top"><span className="v-kicker">Tutkimuslaboratorio · aikasarjat ja lähteet</span>
-          <nav className="pl-nav"><Link to="/" className="v-back">Atlas</Link><Link to="/minka-varaan" className="v-back">Minkä varaan?</Link><Link to="/observatorio" className="v-back">Observatorio ✦</Link><Link to="/planeetta" className="v-back">Planeetta</Link></nav>
+          <nav className="pl-nav"><Link to="/" className="v-back">Atlas</Link><Link to="/minka-varaan" className="v-back">Minkä varaan?</Link><Link to="/observatorio" className="v-back">Observatorio ✦</Link><Link to="/planeetta" className="v-back">Planeetta</Link><Link to="/murrokset" className="v-back">Murrokset</Link></nav>
         </header>
         <div className="lab-hero">
           <h1 className="pl-title">Kartan alla on <em>mitattu maaperä</em></h1>

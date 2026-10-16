@@ -8,6 +8,7 @@ import { Varaan } from '@/components/varaan/Varaan';
 import { Observatorio } from '@/components/observatorio/Observatorio';
 import { Planeetta } from '@/components/planeetta/Planeetta';
 import { Laboratorio } from '@/components/planeetta/Laboratorio';
+import { Murrokset } from '@/components/murrokset/Murrokset';
 import { AdminBar } from '@/components/editor/AdminBar';
 
 const rootRoute = createRootRoute({ component: () => <><Outlet /><AdminBar /></> });
@@ -17,6 +18,7 @@ const routes = [
   createRoute({ getParentRoute: () => rootRoute, path: '/observatorio', component: Observatorio }),
   createRoute({ getParentRoute: () => rootRoute, path: '/planeetta', component: Planeetta }),
   createRoute({ getParentRoute: () => rootRoute, path: '/laboratorio', component: Laboratorio }),
+  createRoute({ getParentRoute: () => rootRoute, path: '/murrokset', component: Murrokset }),
 ];
 const router = createRouter({ routeTree: rootRoute.addChildren(routes), history: createHashHistory() });
 

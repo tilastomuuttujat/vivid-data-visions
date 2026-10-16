@@ -27,7 +27,7 @@ export function Planeetta() {
       <div className="v-aurora" aria-hidden />
       <div className="pl-wrap">
         <header className="v-top"><span className="v-kicker">Planeetta · tarkastelu etäisyyden mukaan</span>
-          <nav className="pl-nav"><Link to="/" className="v-back">Atlas</Link><Link to="/minka-varaan" className="v-back">Minkä varaan?</Link><Link to="/observatorio" className="v-back">Observatorio ✦</Link><Link to="/laboratorio" className="v-back">Laboratorio</Link>
+          <nav className="pl-nav"><Link to="/" className="v-back">Atlas</Link><Link to="/minka-varaan" className="v-back">Minkä varaan?</Link><Link to="/observatorio" className="v-back">Observatorio ✦</Link><Link to="/laboratorio" className="v-back">Laboratorio</Link><Link to="/murrokset" className="v-back">Murrokset</Link>
             <div className="pl-switch" role="group" aria-label="Versio"><button className={mode === '2d' ? 'on' : ''} onClick={() => setMode('2d')}>2D-kartta</button><button className={mode === '3d' ? 'on' : ''} onClick={() => setMode('3d')}>3D-planeetta</button></div></nav>
         </header>
         <h1 className="pl-title">Mitä lähemmäs menet, <em>sitä syvemmälle näet</em></h1>
