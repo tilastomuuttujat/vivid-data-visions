@@ -18,6 +18,10 @@ import { Juurisyyt } from "./Juurisyyt";
 import { Ankkurit } from "./Ankkurit";
 import "./murrokset.css";
 
+const AnchorTimeline = lazy(() =>
+  import("./AnchorTimeline").then((m) => ({ default: m.AnchorTimeline })),
+);
+
 const DecisionExplorer = lazy(() =>
   import("./DecisionExplorer").then((m) => ({ default: m.DecisionExplorer })),
 );
@@ -38,9 +42,13 @@ export function Murrokset() {
     rakenne: true,
   });
   const [open, setOpen] = useState<string | null>(null);
-  const [mode, setMode] = useState<"kronologia" | "juuret" | "verkosto" | "ankkurit">("kronologia");
+  const [mode, setMode] = useState<"kronologia" | "juuret" | "verkosto" | "ankkurit" | "systeemi">(
+    "kronologia",
+  );
   const [networkDecision, setNetworkDecision] = useState("d050");
-  const exploreDecision = (id: string) => {
+  const [networkFocus, setNetworkFocus] = useState<string | undefined>();
+  const exploreDecision = (id: string, nodeId?: string) => {
+    setNetworkFocus(nodeId);
     setNetworkDecision(id);
     setMode("verkosto");
   };
@@ -101,17 +109,33 @@ export function Murrokset() {
             >
               7 systeemistä ankkuria
             </button>
+            <button
+              role="tab"
+              aria-selected={mode === "systeemi"}
+              className={mode === "systeemi" ? "on" : ""}
+              onClick={() => setMode("systeemi")}
+            >
+              Systeeminen aikajana
+            </button>
           </div>
         </div>
 
-        {mode === "ankkurit" ? (
+        {mode === "systeemi" ? (
+          <Suspense fallback={<p role="status">Ladataan systeemistä aikajanaa…</p>}>
+            <AnchorTimeline onExplore={exploreDecision} />
+          </Suspense>
+        ) : mode === "ankkurit" ? (
           <Ankkurit />
         ) : mode === "verkosto" ? (
           <Suspense fallback={<p role="status">Ladataan päätösverkostoa…</p>}>
             <DecisionExplorer
-              key={networkDecision}
+              key={`${networkDecision}:${networkFocus ?? ""}`}
               decisionId={networkDecision}
-              onDecision={setNetworkDecision}
+              initialFocus={networkFocus}
+              onDecision={(id) => {
+                setNetworkDecision(id);
+                setNetworkFocus(undefined);
+              }}
             />
           </Suspense>
         ) : mode === "juuret" ? (

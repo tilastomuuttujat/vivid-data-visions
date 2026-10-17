@@ -32,3 +32,29 @@ npx vite build -c scripts/standalone/vite.config.ts
 Review mappings, node sources and changed relations after refresh. The importer validates unique node IDs and edge endpoints before replacing the snapshot. Tests also verify the decision crosswalk and incoming/outgoing navigation.
 
 The browser is loaded lazily from `Murrokset`; its JSON is bundled for both the app and standalone exports. It needs no additional runtime data files or database credentials.
+
+## Systeeminen aikajana
+
+`AnchorTimeline` yhdistää seitsemän toimituksellista ankkuriryhmää ja saman kiinnitetyn
+TTT-relaatioaineiston. Kokonaiskuva näyttää vain eri ankkureihin kuuluvien lähdekorttien
+väliset suorat relaatiot. Ankkurin valinta näyttää sen korttien suorat taustat ja
+seuraukset; kahden askeleen tarkastelu kulkee lähdeverkkoa suunnatusti taakse- ja/tai
+eteenpäin. Ankkurijäsenyys ei muodosta uutta relaatiota eikä oikeuta oikaisemaan polkua
+ryhmän eri korttien välillä. Syklit eivät kasvata hakua loputtomasti.
+
+Vaaka-asema määräytyy kortin `yearStart`-kentästä, ei ankkurin toimituksellisen aikavälin
+keskipisteestä. Pystyrivit ovat ryhmittelyä; samanaikaisten korttien alarivit estävät
+päällekkäisyyksiä eivätkä esitä vaikutusjärjestystä. Vuosiluvuttomat kortit ja niiden
+relaatiot säilyvät tekstimuodossa. Skenaariokortit erotetaan katkoviivalla ja tekstillä.
+
+Nuolenkärki on aina lähderelaation `to`-päässä myös silloin, kun vuosiluvut kulkevat
+ajassa taaksepäin. Väri kokoaa relaatiotyyppejä olemassa oleviin kaariryhmiin; paksuus,
+pisteen koko ja rivijärjestys eivät mittaa vaikutusta. Luvut kuvaavat relaatioiden tai
+yksilöllisten tausta-/seurauskorttien määriä lähdeaineistossa, eivät todistettua voimaa.
+Kahden askeleen polku ei ole validoitu välillinen vaikutus. Yhteyksien tekstiluettelo
+sisältää alkuperäiset tunnisteet ja suorat päätepisteet tarkistusta varten.
+
+Tarkista muutoksissa lähdesuunnan säilyminen, syklit, yhden/kahden askeleen rajaus,
+vuosien leikkaamattomuus, puuttuvien vuosien käsittely, nuolten näppäimistökäyttö,
+vaaka- ja pystyvierityksessä näkyvät riviotsikot/vuosiviivain sekä siirtyminen juuri
+valittuun lähdekorttiin Taustat ja seuraukset -näkymässä.
