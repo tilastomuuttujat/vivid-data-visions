@@ -1,0 +1,285 @@
+.km {
+  --km-line: #304354;
+  color: #e5edf4;
+  margin: 2rem 0;
+  line-height: 1.6;
+}
+.km h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin: 0.4rem 0;
+}
+.km h3 {
+  margin: 1rem 0 0.6rem;
+}
+.km header p {
+  max-width: 85ch;
+}
+.km-notice {
+  padding: 1rem;
+  border-left: 3px solid #e3b44d;
+  background: #e3b44d0d;
+  font-size: 0.85rem;
+  margin: 1rem 0;
+}
+.km-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+}
+.km label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+}
+.km select,
+.km input:not([type="checkbox"]) {
+  width: 100%;
+  min-width: 0;
+  background: #122333;
+  color: #edf5fb;
+  border: 1px solid var(--km-line);
+  border-radius: 5px;
+  padding: 0.6rem;
+  font: inherit;
+}
+.km-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.5rem;
+  margin: 1rem 0;
+}
+.km-options label {
+  display: flex;
+  align-items: start;
+}
+.km-options input {
+  margin-top: 0.4rem;
+  accent-color: #4dc4b7;
+}
+.km-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.km-grid > div,
+.km-detail {
+  min-width: 0;
+}
+.km-matrix-scroll {
+  overflow: auto;
+  max-height: 720px;
+  border: 1px solid var(--km-line);
+  border-radius: 8px;
+}
+.km-matrix {
+  border-collapse: separate;
+  border-spacing: 2px;
+  font-size: 10px;
+  line-height: 1;
+}
+.km-matrix th {
+  color: #a9bdcd;
+  background: #122333;
+  padding: 6px;
+  min-width: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.km-matrix tbody th {
+  left: 0;
+  z-index: 1;
+}
+.km-matrix td {
+  padding: 0;
+  text-align: center;
+}
+.km-matrix button {
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  width: 30px;
+  height: 27px;
+  color: white;
+  font-size: 10px;
+  padding: 0;
+  cursor: pointer;
+}
+.km-matrix button.on {
+  outline: 2px solid #f3c75e;
+  outline-offset: -2px;
+}
+.km-diagonal {
+  opacity: 0.3;
+}
+.km-note {
+  font-size: 0.78rem;
+  color: #aabecd;
+}
+.km-detail {
+  background: #122333;
+  border: 1px solid var(--km-line);
+  border-radius: 10px;
+  padding: 1rem;
+  position: sticky;
+  top: 1rem;
+  max-height: 90vh;
+  overflow: auto;
+}
+.km-detail > label {
+  margin: 0.6rem 0;
+}
+.km-detail h3 {
+  margin-top: 0;
+}
+.km-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+}
+.km-metrics span {
+  font-size: 0.75rem;
+  color: #acc4d4;
+}
+.km-metrics b {
+  display: block;
+  font-size: 1.1rem;
+  color: white;
+}
+.km-scatter {
+  width: 100%;
+  background: #0b1926;
+  border-radius: 8px;
+}
+.km-scatter line {
+  stroke: #647f92;
+}
+.km-scatter text {
+  fill: #aac0d0;
+  font-size: 11px;
+}
+.km-scatter circle {
+  fill: #54c4b7;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.km-scatter circle.selected {
+  fill: #ffcc66;
+  opacity: 1;
+  stroke: white;
+  stroke-width: 2;
+}
+.km-candidates {
+  display: grid;
+  gap: 0.4rem;
+}
+.km-candidates button {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  text-align: left;
+  background: #142938;
+  border: 1px solid var(--km-line);
+  border-radius: 6px;
+  color: #dfeaf3;
+  padding: 0.7rem;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.km-candidates b {
+  white-space: nowrap;
+  color: #6bd3c5;
+}
+.km-observations {
+  max-height: 220px;
+  overflow: auto;
+}
+.km-observations table {
+  width: 100%;
+  font-size: 0.75rem;
+  border-collapse: collapse;
+}
+.km-observations th,
+.km-observations td {
+  padding: 0.3rem;
+  text-align: left;
+  border-bottom: 1px solid var(--km-line);
+}
+.km-observations td {
+  text-align: right;
+}
+.km-observations button {
+  background: transparent;
+  border: 0;
+  color: #75d5cf;
+  text-align: left;
+  cursor: pointer;
+}
+.km details {
+  margin: 1rem 0;
+  font-size: 0.8rem;
+}
+.km summary {
+  cursor: pointer;
+  color: #76d6cc;
+}
+.km-indicators {
+  padding-left: 1.5rem;
+}
+.km-indicators li {
+  margin: 0.5rem 0;
+}
+.km-indicators small {
+  display: block;
+  color: #aabecd;
+}
+.km a {
+  color: #76d6cc;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.km-downloads {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.km-downloads button {
+  background: #193641;
+  border: 1px solid #4d8f8c;
+  color: #e5f7f4;
+  padding: 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.km :focus-visible {
+  outline: 2px solid #ffcc66;
+  outline-offset: 2px;
+}
+@media (max-width: 1000px) {
+  .km-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .km-detail {
+    position: static;
+    max-height: none;
+  }
+  .km-matrix-scroll {
+    max-height: 480px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .km * {
+    scroll-behavior: auto;
+  }
+}
+.km-metrics b {
+  white-space: nowrap;
+}
+@media (max-width: 500px) {
+  .km-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

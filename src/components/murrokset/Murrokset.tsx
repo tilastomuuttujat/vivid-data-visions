@@ -27,6 +27,10 @@ const DecisionExplorer = lazy(() =>
   import("./DecisionExplorer").then((m) => ({ default: m.DecisionExplorer })),
 );
 
+const MunicipalExplorer = lazy(() =>
+  import("../kunnat/MunicipalExplorer").then((m) => ({ default: m.MunicipalExplorer })),
+);
+
 type Focus = { from: number; to: number; title: string; sub: string };
 const Q = [
   ["vahvistui", "Mikä vahvistui?"],
@@ -44,7 +48,7 @@ export function Murrokset() {
   });
   const [open, setOpen] = useState<string | null>(null);
   const [mode, setMode] = useState<
-    "maisema" | "kronologia" | "juuret" | "verkosto" | "ankkurit" | "systeemi"
+    "maisema" | "kronologia" | "juuret" | "verkosto" | "ankkurit" | "systeemi" | "kunnat"
   >("maisema");
   const [networkDecision, setNetworkDecision] = useState("d050");
   const [networkFocus, setNetworkFocus] = useState<string | undefined>();
@@ -126,10 +130,22 @@ export function Murrokset() {
             >
               Systeeminen aikajana
             </button>
+            <button
+              role="tab"
+              aria-selected={mode === "kunnat"}
+              className={mode === "kunnat" ? "on" : ""}
+              onClick={() => setMode("kunnat")}
+            >
+              Kuntien yhteydet
+            </button>
           </div>
         </div>
 
-        {mode === "maisema" ? (
+        {mode === "kunnat" ? (
+          <Suspense fallback={<p role="status">Ladataan kuntien yhteyksiä…</p>}>
+            <MunicipalExplorer />
+          </Suspense>
+        ) : mode === "maisema" ? (
           <Maisema onExplore={exploreDecision} />
         ) : mode === "systeemi" ? (
           <Suspense fallback={<p role="status">Ladataan systeemistä aikajanaa…</p>}>

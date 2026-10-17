@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: bun install --frozen-lockfile
-      - run: python -m pip install openpyxl==3.1.5
+      - run: python -m pip install openpyxl==3.1.5 -r scripts/data/municipal-requirements.txt
       - run: bun run typecheck
       - run: bun run test
       - run: bun run test:data
