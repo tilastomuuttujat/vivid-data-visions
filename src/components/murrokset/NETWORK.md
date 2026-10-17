@@ -124,3 +124,21 @@ lähdekortteihin; nuolen suunta ja relaatiotunniste säilyvät. Rivikorostus ei 
 muita rivejä. Ankkurirajaus voi poistaa rivejä, mutta ei muuta yhteistä vuosiasteikkoa.
 Rivien välille ei lisätä uusia vaikutussuhteita. Aiempi esitystapa on edelleen
 valittavissa nimellä Erilliset kuviot.
+
+## Yhteisen kuvaajan tutkiminen
+
+Vasemmalta avautuva ohjauspaneeli korostaa oletuksena valitut ankkurit, suunnat,
+relaatiotyypit ja aikavälin säilyttäen muun kokonaisuuden himmeänä. Rajaa-tila
+piilottaa muut yhteydet ja valitsemattomat rivit. Tyhjä ankkurivalinta tarkoittaa
+kaikkia; tyhjä relaatiotyyppivalinta ei näytä yhtään osumaa. Aikaväli valitsee
+yhteydet, joiden päätepisteiden vuosiväli leikkaa valintaa. Erillinen lähennys
+muuttaa kaikkien rivien yhteistä asteikkoa ja leikkaa piirron näkyvälle alueelle.
+
+Pieni lähdekorttipiste valitsee alkuperäisen kortin ja korostaa sen suunnatut
+suorat tai enintään kahden askeleen lähdereitit kaikilla riveillä. Ankkuriryhmän
+valinnasta avautuu luettelo sen varsinaisista lähdekorteista: ryhmän jäsenten
+välille ei päätellä reittejä. Sama relaatio eri riveillä lasketaan yhdeksi.
+Kortti- ja relaatiotiedot avautuvat oikealle ilman automaattista vieritystä.
+Ohjauspaneeli ja tietopaneeli eivät muuta kuvaajan leveyttä. Escape sulkee paneelin.
+Yhteinen vuosikohdistin on lukemisen apu, ei vaikutussuhde. Palauta kokonaiskuva
+poistaa paikalliset rajaukset, lähennyksen ja valinnat.
