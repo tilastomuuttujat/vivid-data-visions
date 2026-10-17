@@ -138,3 +138,23 @@
 .j-card:disabled { opacity: .5; cursor: not-allowed; }
 .pa details { margin-top: 1rem; }
 .pa details button { text-align: left; }
+.ank { margin: 1.4rem 0; padding: 1.2rem; border-radius: 20px; background: var(--m-paper); border: 1px solid var(--m-line); }
+.ank-lead, .ank-note { line-height: 1.55; max-width: 70ch; }
+.ank-note { font-size: 0.85rem; opacity: 0.75; }
+.ank-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.8rem 0; }
+.ank-chips button { border: 1px solid var(--m-line); background: transparent; color: inherit; border-radius: 999px; padding: 0.3rem 0.75rem; font: inherit; font-size: 0.85rem; cursor: pointer; }
+.ank-chips button.on { border-color: var(--tone); box-shadow: inset 0 0 0 1px var(--tone); }
+.ank-chips button b { color: var(--tone); }
+.ank-link, .ank-sat { fill: none; stroke: currentColor; transition: opacity 0.25s; }
+.ank-link { opacity: 0.8; stroke-linecap: round; }
+.ank-link.off { opacity: 0.1; }
+.ank-sat { stroke-width: 1.4; opacity: 0.55; stroke-dasharray: 4 3; }
+.ank-node { cursor: pointer; transition: opacity 0.25s; }
+.ank-node circle { fill: currentColor; stroke: var(--m-paper); stroke-width: 3; filter: drop-shadow(0 0 8px currentColor); }
+.ank-node text { font-size: 12px; font-weight: 700; fill: var(--m-paper); pointer-events: none; }
+.ank-node.off { opacity: 0.35; }
+.ank-cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.8rem; }
+.ank-cards li { display: flex; gap: 0.7rem; padding: 0.9rem; border-radius: 14px; border: 1px solid var(--m-line); border-left: 3px solid var(--tone); }
+.ank-cards h3 { margin: 0.15rem 0 0.4rem; font-size: 1rem; }
+.ank-cards p { margin: 0.3rem 0; font-size: 0.88rem; line-height: 1.45; }
+.ank-n { font-size: 1.6rem; font-weight: 700; color: var(--tone); line-height: 1; }
