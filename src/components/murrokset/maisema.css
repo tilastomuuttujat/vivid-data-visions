@@ -64,3 +64,12 @@
 .ms-role-legend span { display:flex;align-items:center;gap:.35rem; }
 .ms-role-legend i { height:.55rem;width:.55rem;border-radius:50%; }
 .ms-node circle { stroke:var(--node-tone,var(--m-teal)); }
+.ms-anchor-row { fill:white;opacity:.025;pointer-events:none; }
+.ms-anchor-years { fill:var(--lt);font-size:11px; }
+.ms-overview-canvas { min-width:1000px;width:100%;position:relative; }
+.ms-scroll .ms-overview-canvas svg { position:absolute;left:0;top:0;min-width:0; }
+.ms-fixed-labels { position:sticky;left:0;width:220px;height:100%;z-index:2;pointer-events:none; }
+.ms-fixed-labels>div { position:absolute;left:0;width:100%;background:#13202f;border-left:3px solid;padding:5px 8px;display:flex;flex-direction:column;justify-content:center;line-height:1.25; }
+.ms-fixed-labels b { font-size:11px; }
+.ms-fixed-labels small { font-size:10px;opacity:.8;margin-top:2px; }
+@media(max-width:800px) { .ms-fixed-labels { width:140px; } .ms-fixed-labels>div { padding:3px 5px; } .ms-fixed-labels b { font-size:10px; } .ms-fixed-labels small { font-size:9px; } }

@@ -14,6 +14,7 @@ import {
 } from "./decision-network-model";
 import { useTimelineScroll } from "./useTimelineScroll";
 import "./anchor-timeline.css";
+import { TimelineMilestones, MilestoneDetails } from "./TimelineMilestones";
 
 const ROLES: Record<TimelineRole, string> = {
   focus: "Valitun ankkurin kortti",
@@ -39,6 +40,7 @@ export function AnchorTimeline({
   onExplore: (decisionId: string, nodeId: string) => void;
 }) {
   const uid = useId().replace(/:/g, "");
+  const [milestone, setMilestone] = useState<number | null>(null);
   const [anchorId, setAnchorId] = useState<string | null>(null);
   const [direction, setDirection] = useState<Direction>("all");
   const [showLabels, setShowLabels] = useState(true);
@@ -300,6 +302,13 @@ export function AnchorTimeline({
                   </text>
                 </g>
               ))}
+              <TimelineMilestones
+                x={layout.x}
+                min={layout.minYear}
+                max={layout.maxYear}
+                bottom={layout.height - 28}
+                onSelect={setMilestone}
+              />
               {layout.edges.map((edge, i) => {
                 const from = layout.positions.get(edge.from)!;
                 const to = layout.positions.get(edge.to)!;
@@ -354,7 +363,9 @@ export function AnchorTimeline({
                     <circle cx={x} cy={y} r={role === "focus" ? 8 : 6} />
                     <text x={x + 11} y={y + 4}>
                       {showLabels
-                        ? node.title.length > 30 ? node.title.slice(0, 28) + "…" : node.title
+                        ? node.title.length > 30
+                          ? node.title.slice(0, 28) + "…"
+                          : node.title
                         : ""}
                     </text>
                     <title>
@@ -375,6 +386,7 @@ export function AnchorTimeline({
           myöhemmäksi: nuoli säilyttää lähteen suunnan.
         </figcaption>
       </figure>
+      <MilestoneDetails year={milestone} onClose={() => setMilestone(null)} />
       <section
         ref={detailRef}
         className="at-detail"

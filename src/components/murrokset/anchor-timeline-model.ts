@@ -108,7 +108,7 @@ export function layoutAnchorTimeline(model: ReturnType<typeof anchorTimeline>, s
     { id: "outgoing", title: "", label: "Muut seuraukset", tone: "var(--m-gold)" },
   ];
   const nodes: PositionedNode[] = [];
-  let top = 66;
+  let top = 110;
   const lanes = laneDefs.flatMap((lane) => {
     const members = dated
       .filter((n) => (anchorOf(n.node.id) ?? n.role) === lane.id)

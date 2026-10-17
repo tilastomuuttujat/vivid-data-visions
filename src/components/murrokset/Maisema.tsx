@@ -8,7 +8,6 @@ import {
   landscapeAnchors,
   landscapeLinks,
   landscapeX as x,
-  labelLines,
   matchesLens,
   focusLandscape,
   nodeLenses,
@@ -25,6 +24,7 @@ import {
 } from "./decision-network-model";
 import { useTimelineScroll } from "./useTimelineScroll";
 import "./maisema.css";
+import { TimelineMilestones, MilestoneDetails } from "./TimelineMilestones";
 
 const activate = (event: React.KeyboardEvent, action: () => void) => {
   if (event.key === "Enter" || event.key === " ") {
@@ -52,6 +52,7 @@ const edgeName = (e: NetworkEdge) => `${networkNode(e.from)!.title} → ${networ
 
 export function Maisema({ onExplore }: { onExplore: (id: string, nodeId?: string) => void }) {
   const uid = useId().replace(/:/g, "");
+  const [milestone, setMilestone] = useState<number | null>(null);
   const [anchorId, setAnchorId] = useState<string | null>(null);
   const [lenses, setLenses] = useState<Set<LensId>>(new Set());
   const [direction, setDirection] = useState<Direction>("all");
@@ -71,7 +72,7 @@ export function Maisema({ onExplore }: { onExplore: (id: string, nodeId?: string
   );
   const detail = useMemo(() => focusLandscape(model), [model]);
   const selected = anchors.find((a) => a.id === anchorId);
-  const scrollRef = useTimelineScroll((selected?.x ?? W / 2) / W, anchorId ?? "all");
+  const scrollRef = useTimelineScroll((selected?.x ?? W / 2) / W, anchorId ?? "all", 140);
   const detailRef = useTimelineScroll(
     selected ? detail.x((selected.from + selected.to) / 2) / W : 0.5,
     `${anchorId}:${direction}:${depth}`,
@@ -159,125 +160,144 @@ export function Maisema({ onExplore }: { onExplore: (id: string, nodeId?: string
           role="region"
           aria-label="Murrosmaiseman kokonaiskuva"
         >
-          <svg
-            viewBox={`0 0 ${W} ${H}`}
-            role="group"
-            aria-label="Seitsemän ankkuria ja niiden suunnatut yhteydet"
-          >
-            <defs>
-              <marker
-                id={`${uid}-overview`}
-                markerWidth="9"
-                markerHeight="9"
-                refX="9"
-                refY="4.5"
-                orient="auto"
-                markerUnits="userSpaceOnUse"
-              >
-                <path d="M0 0 L9 4.5 L0 9 Z" fill="currentColor" />
-              </marker>
-            </defs>
-            {[1850, 1875, 1900, 1925, 1950, 1975, 2000, 2025].map((year) => (
-              <g key={year} className="ms-grid">
-                <line x1={x(year)} x2={x(year)} y1={40} y2={H - 30} />
-                <text x={x(year)} y={25} textAnchor="middle">
-                  {year}
-                </text>
-                <text x={x(year)} y={H - 8} textAnchor="middle">
-                  {year}
-                </text>
-              </g>
-            ))}
-            {links.map((link) => {
-              const from = anchors.find((a) => a.id === link.from)!,
-                to = anchors.find((a) => a.id === link.to)!;
-              const dx = to.x - from.x,
-                dy = to.y - from.y,
-                length = Math.hypot(dx, dy) || 1;
-              const tx = to.x - (dx / length) * 23,
-                ty = to.y - (dy / length) * 23;
-              const bend = from.y === to.y ? -65 : 0;
-              const path = `M${from.x},${from.y} C${from.x + dx * 0.4},${from.y + bend} ${tx - dx * 0.4},${ty + bend} ${tx},${ty}`;
-              const dim =
-                !matchesLens(
-                  link.edges.flatMap((e) => [e.from, e.to]),
-                  lenses,
-                ) ||
-                (anchorId && link.from !== anchorId && link.to !== anchorId);
-              return (
-                <g
-                  key={link.id}
-                  className={`ms-link${dim ? " dim" : ""}${chosenLink?.id === link.id ? " on" : ""}`}
+          <div className="ms-overview-canvas" style={{ aspectRatio: `${W}/${H}` }}>
+            <div className="ms-fixed-labels">
+              {anchors.map((a) => (
+                <div
+                  key={a.id}
+                  style={{
+                    top: `${((a.y - 34) / H) * 100}%`,
+                    height: `${(72 / H) * 100}%`,
+                    borderLeftColor: a.tone,
+                  }}
                 >
-                  <path className="ms-link-line" d={path} markerEnd={`url(#${uid}-overview)`} />
-                  <path
-                    className="ms-link-hit"
-                    d={path}
-                    role="button"
-                    tabIndex={0}
-                    aria-label={`Ankkuri ${from.n} → ${to.n}: ${link.edges.length} lähderelaatiota`}
-                    onClick={() => setSelection({ kind: "link", id: link.id })}
-                    onKeyDown={(e) =>
-                      activate(e, () => setSelection({ kind: "link", id: link.id }))
-                    }
-                  >
-                    <title>
-                      {from.title} → {to.title} · {link.edges.length} lähderelaatiota. Avaa
-                      päätekortit.
-                    </title>
-                  </path>
+                  <b>
+                    {a.n}. {a.title}
+                  </b>
+                  <small>
+                    {a.from}–{a.to}
+                  </small>
+                </div>
+              ))}
+            </div>
+            <svg
+              viewBox={`0 0 ${W} ${H}`}
+              role="group"
+              aria-label="Seitsemän ankkuria ja niiden suunnatut yhteydet"
+            >
+              <defs>
+                <marker
+                  id={`${uid}-overview`}
+                  markerWidth="9"
+                  markerHeight="9"
+                  refX="9"
+                  refY="4.5"
+                  orient="auto"
+                  markerUnits="userSpaceOnUse"
+                >
+                  <path d="M0 0 L9 4.5 L0 9 Z" fill="currentColor" />
+                </marker>
+              </defs>
+              {[1850, 1875, 1900, 1925, 1950, 1975, 2000, 2025].map((year) => (
+                <g key={year} className="ms-grid">
+                  <line x1={x(year)} x2={x(year)} y1={40} y2={H - 30} />
+                  <text x={x(year)} y={25} textAnchor="middle">
+                    {year}
+                  </text>
+                  <text x={x(year)} y={H - 8} textAnchor="middle">
+                    {year}
+                  </text>
                 </g>
-              );
-            })}
-            {anchors.map((a) => (
-              <g
-                key={a.id}
-                className={`ms-anchor${matchesLens(a.nodes, lenses) ? "" : " dim"}${anchorId === a.id ? " on" : ""}`}
-                style={{ "--lt": a.tone } as React.CSSProperties}
-                role="button"
-                tabIndex={0}
-                aria-pressed={anchorId === a.id}
-                aria-label={`Ankkuri ${a.n}: ${a.title}, ${a.from}–${a.to}`}
-                onClick={() => pickAnchor(a.id)}
-                onKeyDown={(e) => activate(e, () => pickAnchor(a.id))}
-              >
-                <line
-                  x1={x(a.from)}
-                  x2={x(a.to)}
-                  y1={a.y + 24}
-                  y2={a.y + 24}
-                  className="ms-anchor-span"
-                />
-                <circle cx={a.x} cy={a.y} r={18} />
-                <text x={a.x} y={a.y + 5} textAnchor="middle" className="ms-anchor-number">
-                  {a.n}
-                </text>
-                <text
-                  x={Math.max(100, Math.min(W - 110, a.x))}
-                  y={a.y + 46}
-                  textAnchor="middle"
-                  className="ms-anchor-name"
+              ))}
+              <TimelineMilestones
+                x={x}
+                min={1850}
+                max={2025}
+                bottom={H - 30}
+                onSelect={setMilestone}
+              />
+              {links.map((link) => {
+                const from = anchors.find((a) => a.id === link.from)!,
+                  to = anchors.find((a) => a.id === link.to)!;
+                const dx = to.x - from.x,
+                  dy = to.y - from.y,
+                  length = Math.hypot(dx, dy) || 1;
+                const tx = to.x - (dx / length) * 23,
+                  ty = to.y - (dy / length) * 23;
+                const bend = from.y === to.y ? -65 : 0;
+                const path = `M${from.x},${from.y} C${from.x + dx * 0.4},${from.y + bend} ${tx - dx * 0.4},${ty + bend} ${tx},${ty}`;
+                const dim =
+                  !matchesLens(
+                    link.edges.flatMap((e) => [e.from, e.to]),
+                    lenses,
+                  ) ||
+                  (anchorId && link.from !== anchorId && link.to !== anchorId);
+                return (
+                  <g
+                    key={link.id}
+                    className={`ms-link${dim ? " dim" : ""}${chosenLink?.id === link.id ? " on" : ""}`}
+                  >
+                    <path className="ms-link-line" d={path} markerEnd={`url(#${uid}-overview)`} />
+                    <path
+                      className="ms-link-hit"
+                      d={path}
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`Ankkuri ${from.n} → ${to.n}: ${link.edges.length} lähderelaatiota`}
+                      onClick={() => setSelection({ kind: "link", id: link.id })}
+                      onKeyDown={(e) =>
+                        activate(e, () => setSelection({ kind: "link", id: link.id }))
+                      }
+                    >
+                      <title>
+                        {from.title} → {to.title} · {link.edges.length} lähderelaatiota. Avaa
+                        päätekortit.
+                      </title>
+                    </path>
+                  </g>
+                );
+              })}
+              {anchors.map((a) => (
+                <g
+                  key={a.id}
+                  className={`ms-anchor${matchesLens(a.nodes, lenses) ? "" : " dim"}${anchorId === a.id ? " on" : ""}`}
+                  style={{ "--lt": a.tone } as React.CSSProperties}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={anchorId === a.id}
+                  aria-label={`Ankkuri ${a.n}: ${a.title}, ${a.from}–${a.to}`}
+                  onClick={() => pickAnchor(a.id)}
+                  onKeyDown={(e) => activate(e, () => pickAnchor(a.id))}
                 >
-                  {labelLines(a.title).map((line, i) => (
-                    <tspan key={i} x={Math.max(100, Math.min(W - 110, a.x))} dy={i ? 14 : 0}>
-                      {line}
-                    </tspan>
-                  ))}
-                </text>
-                <title>
-                  {a.from}–{a.to} · {a.title} · {a.nodes.length} lähdekorttia
-                </title>
-              </g>
-            ))}
-          </svg>
+                  <rect className="ms-anchor-row" x={0} y={a.y - 34} width={W} height={72} rx={7} />
+                  <line
+                    x1={x(a.from)}
+                    x2={x(a.to)}
+                    y1={a.y + 24}
+                    y2={a.y + 24}
+                    className="ms-anchor-span"
+                  />
+                  <circle cx={a.x} cy={a.y} r={18} />
+                  <text x={a.x} y={a.y + 5} textAnchor="middle" className="ms-anchor-number">
+                    {a.n}
+                  </text>
+                  <title>
+                    {a.from}–{a.to} · {a.title} · {a.nodes.length} lähdekorttia
+                  </title>
+                </g>
+              ))}
+            </svg>
+          </div>
         </div>
         <figcaption>
           Kapealla näytöllä vieritä vaakasuunnassa. Vaaka = aika. Ankkurin sijainti ja värillinen
-          aikaväli kuvaavat toimituksellista ryhmää. Pystysijainti erottaa otsikot; se ei mittaa
+          aikaväli kuvaavat toimituksellista ryhmää. Ankkurit ovat allekkain samalla aikaskaalalla.
+          Katkoviivat merkitsevät murrosjaksojen alkua. Pystysijainti erottaa ankkurit; se ei mittaa
           hyvyyttä tai vaikutusvoimaa. Nuolet niputtavat samoihin ankkureihin kuuluvien korttien
           suorat relaatiot. Nipun alkuperäiset yhteydet avautuvat valitsemalla.
         </figcaption>
       </figure>
+      <MilestoneDetails year={milestone} onClose={() => setMilestone(null)} />
       <label className="ms-anchor-picker">
         Avaa ankkuri
         <select
@@ -411,6 +431,13 @@ export function Maisema({ onExplore }: { onExplore: (id: string, nodeId?: string
                   </text>
                 </g>
               ))}
+              <TimelineMilestones
+                x={detail.x}
+                min={detail.min}
+                max={detail.max}
+                bottom={detail.height - 8}
+                onSelect={setMilestone}
+              />
               {detail.edges.map((e) => {
                 const from = detail.positions.get(e.from)!,
                   to = detail.positions.get(e.to)!;
