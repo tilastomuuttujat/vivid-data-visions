@@ -90,7 +90,7 @@ export function Ankkurit() {
             const tx = ax(l.to);
             const h = Math.min(MID - 40, 30 + Math.abs(tx - fx) * 0.45);
             const on = active(l.from) || active(l.to);
-            const group = arcGroup(l.edges[0].type);
+            const group = arcGroup(l.edges[0]?.type ?? "");
             return (
               <path
                 key={`${l.from}>${l.to}`}
