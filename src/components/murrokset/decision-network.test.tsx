@@ -103,6 +103,7 @@ it("shows unmapped decisions without guessed relations and resets focus for a ne
 
 it("opens the selected chronological decision in the network", async () => {
   withRouter(<Murrokset />);
+  fireEvent.click(screen.getByRole("tab", { name: /Kronologia/ }));
   fireEvent.click(screen.getByRole("button", { name: /1992 Valtion vakuusrahasto perustettiin/ }));
   fireEvent.click(screen.getByRole("button", { name: /Tutki taustoja ja seurauksia/ }));
   expect(await screen.findByRole("combobox", { name: "Aikajanan päätös" })).toHaveValue("d064");

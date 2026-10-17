@@ -16,6 +16,7 @@ import {
 } from "./murrokset-model";
 import { Juurisyyt } from "./Juurisyyt";
 import { Ankkurit } from "./Ankkurit";
+import { Maisema } from "./Maisema";
 import "./murrokset.css";
 
 const AnchorTimeline = lazy(() =>
@@ -42,8 +43,8 @@ export function Murrokset() {
     rakenne: true,
   });
   const [open, setOpen] = useState<string | null>(null);
-  const [mode, setMode] = useState<"kronologia" | "juuret" | "verkosto" | "ankkurit" | "systeemi">(
-    "kronologia",
+  const [mode, setMode] = useState<"maisema" | "kronologia" | "juuret" | "verkosto" | "ankkurit" | "systeemi">(
+    "maisema",
   );
   const [networkDecision, setNetworkDecision] = useState("d050");
   const [networkFocus, setNetworkFocus] = useState<string | undefined>();
@@ -77,6 +78,14 @@ export function Murrokset() {
             · 116 päätöstä
           </p>
           <div className="m-mode" role="tablist">
+            <button
+              role="tab"
+              aria-selected={mode === "maisema"}
+              className={mode === "maisema" ? "on" : ""}
+              onClick={() => setMode("maisema")}
+            >
+              Murrosmaisema
+            </button>
             <button
               role="tab"
               aria-selected={mode === "kronologia"}
@@ -120,7 +129,9 @@ export function Murrokset() {
           </div>
         </div>
 
-        {mode === "systeemi" ? (
+        {mode === "maisema" ? (
+          <Maisema onExplore={(id) => exploreDecision(id)} />
+        ) : mode === "systeemi" ? (
           <Suspense fallback={<p role="status">Ladataan systeemistä aikajanaa…</p>}>
             <AnchorTimeline onExplore={exploreDecision} />
           </Suspense>
