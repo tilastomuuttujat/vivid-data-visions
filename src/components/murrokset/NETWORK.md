@@ -109,3 +109,18 @@ Näkyvien paneelien valinta ei muuta asteikkoa. Vaakavieritys synkronoidaan pane
 välillä ja murroskohtien katkoviivat osuvat samaan x-koordinaattiin jokaisessa kuviossa.
 Yhteinen relaatio voi näkyä kummankin osapuolen paneelissa; se on sama lähderelaatio,
 ei kaksi erillistä vaikutusta. Tyhjennä poistaa kaikki paneelit ilman oletusvalintaa.
+
+## Yhteinen kaarikuvaaja yhden kehyksen sisällä
+
+Ankkurit-näkymän oletus on `AnchorStack`: yksi SVG, yksi vieritettävä piirtoalue ja
+seitsemän kokonaista kaaristoa historiallisessa järjestyksessä allekkain. Riveillä ei
+ole omia kuvaajakehyksiä tai erillisiä aika-akseleita. Vuosiruudukko ja murroskohtien
+katkoviivat piirretään kerran koko kuvaajan korkeuden läpi. Vasemman reunan nimet
+pysyvät näkyvissä vaakavierityksessä. Tiivistä asettelua voi väljentää.
+
+Jokainen rivi käyttää samaa `anchorPanelData`-lähderelaatiojoukkoa kuin aiempi
+ankkurikohtainen kaarikuvio. Yläkaaret liittyvät muihin ankkureihin ja alakaaret muihin
+lähdekortteihin; nuolen suunta ja relaatiotunniste säilyvät. Rivikorostus ei poista
+muita rivejä. Ankkurirajaus voi poistaa rivejä, mutta ei muuta yhteistä vuosiasteikkoa.
+Rivien välille ei lisätä uusia vaikutussuhteita. Aiempi esitystapa on edelleen
+valittavissa nimellä Erilliset kuviot.
