@@ -13,7 +13,7 @@ function renderSeparate() {
 
 it("renders seven complete diagrams in order with only their own anchor emphasized", () => {
   renderSeparate();
-  const panels = screen.getAllByRole("article");
+  const panels = screen.getAllByRole("article", { name: /^Ankkurin \d kaarikuvio$/ });
   expect(panels).toHaveLength(7);
   panels.forEach((panel, i) => {
     expect(panel).toHaveAccessibleName(`Ankkurin ${i + 1} kaarikuvio`);
@@ -31,17 +31,17 @@ it("uses identical years and reference lines in all panels and preserves them wh
   );
   expect(grids.every((g) => JSON.stringify(g) === JSON.stringify(grids[0]))).toBe(true);
   const expected = String(axis.x(1991));
-  for (const panel of screen.getAllByRole("article"))
+  for (const panel of screen.getAllByRole("article", { name: /^Ankkurin \d kaarikuvio$/ }))
     expect(panel.querySelector('[data-year="1991"]')).toHaveAttribute("x1", expected);
   fireEvent.click(screen.getByRole("button", { name: "Tyhjennä" }));
   expect(screen.getByRole("status")).toBeInTheDocument();
-  expect(screen.queryAllByRole("article")).toHaveLength(0);
+  expect(screen.queryAllByRole("article", { name: /^Ankkurin \d kaarikuvio$/ })).toHaveLength(0);
   const chips = screen.getByRole("group", { name: "Valitse näkyvät ankkurikuviot" });
   fireEvent.click(within(chips).getByRole("button", { name: /^4 / }));
-  expect(screen.getAllByRole("article")).toHaveLength(1);
+  expect(screen.getAllByRole("article", { name: /^Ankkurin \d kaarikuvio$/ })).toHaveLength(1);
   expect(container.querySelector('[data-year="1991"]')).toHaveAttribute("x1", expected);
   fireEvent.click(screen.getByRole("button", { name: "Kaikki" }));
-  expect(screen.getAllByRole("article")).toHaveLength(7);
+  expect(screen.getAllByRole("article", { name: /^Ankkurin \d kaarikuvio$/ })).toHaveLength(7);
 });
 it("keeps only each panel's original inter-anchor and satellite source edges", () => {
   const { container } = renderSeparate();
@@ -70,7 +70,7 @@ it("synchronizes horizontal scrolling without changing the seven scales", () => 
 });
 it("opens relation evidence and period details with keyboard and can hide the guides", () => {
   renderSeparate();
-  const first = screen.getAllByRole("article")[0]!;
+  const first = screen.getAllByRole("article", { name: /^Ankkurin \d kaarikuvio$/ })[0]!;
   const edge = first.querySelector(".ap-hit")!;
   fireEvent.keyDown(edge, { key: " " });
   expect(
