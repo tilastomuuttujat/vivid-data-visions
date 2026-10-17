@@ -96,3 +96,16 @@ läpi samalla x-koordinaatilla. Otsikot porrastetaan erillisille riveille tilan 
 Viivat ovat toimituksellisia ajallisia kiinnekohtia; ne eivät lisää relaatioita tai
 osoita tapahtuman vaikuttaneen kaikkiin ankkureihin. Lähteeseen kirjatut vaikutusväitteet
 säilyvät erillisinä suunnattuina nuolina.
+
+## Seitsemän kokonaista kaarikuviota allekkain
+
+`Ankkurit` näyttää oletuksena seitsemän erillistä kaarikuvaajaa järjestyksessä 1–7.
+Jokaisessa on yksi korostettu ankkuri, kuusi himmeää vertailuankkuria, yläpuolella
+juuri tämän ankkurin yhteydet muihin ankkureihin ja alapuolella sen muut lähdekorttiyhteydet.
+Kyse on kokonaisten kaarikuvioiden pinoamisesta, ei vain ankkuripisteiden porrastamisesta.
+
+Kaikki kuvaajat käyttävät samaa kaikkien ankkurien aineistosta laskettua vuosiasteikkoa.
+Näkyvien paneelien valinta ei muuta asteikkoa. Vaakavieritys synkronoidaan paneelien
+välillä ja murroskohtien katkoviivat osuvat samaan x-koordinaattiin jokaisessa kuviossa.
+Yhteinen relaatio voi näkyä kummankin osapuolen paneelissa; se on sama lähderelaatio,
+ei kaksi erillistä vaikutusta. Tyhjennä poistaa kaikki paneelit ilman oletusvalintaa.
