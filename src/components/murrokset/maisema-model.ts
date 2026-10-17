@@ -1,8 +1,10 @@
-// Murrosmaisema: one view that places every decision and crisis on time × direction.
-// Vertical position encodes the source's own assessment class (arvioLuokka), never measured effect.
-import { DECISIONS, TURNS, type Decision } from "./murrokset-model";
+// Compact view of the same source-directed anchor network as the systemic timeline.
+import { ANCHORS, anchorLinks } from "./ankkurit-model";
+import { anchorTimeline } from "./anchor-timeline-model";
+import { linkedDecisions, type NetworkEdge } from "./decision-network-model";
 
-export type LensId = "oikeudet" | "talous" | "osaaminen" | "perhe" | "toimeentulo" | "terveys" | "alueet";
+export type LensId =
+  "oikeudet" | "talous" | "osaaminen" | "perhe" | "toimeentulo" | "terveys" | "alueet";
 export const LENSES: { id: LensId; label: string; icon: string; tone: string }[] = [
   { id: "oikeudet", label: "Oikeudet ja hallinto", icon: "⚖", tone: "oklch(0.72 0.12 300)" },
   { id: "talous", label: "Tuotanto ja talous", icon: "◈", tone: "oklch(0.8 0.13 85)" },
@@ -12,67 +14,91 @@ export const LENSES: { id: LensId; label: string; icon: string; tone: string }[]
   { id: "terveys", label: "Terveys ja hoiva", icon: "✚", tone: "oklch(0.68 0.15 30)" },
   { id: "alueet", label: "Alueet ja liikkuvuus", icon: "◎", tone: "oklch(0.7 0.11 245)" },
 ];
-
-export function lensOf(teema: string): LensId {
-  const t = teema.split(" ")[0];
-  if (t === "Koulutus") return "osaaminen";
-  if (t === "Perhe") return "perhe";
-  if (t === "Terveys") return "terveys";
-  if (t === "Alueet" || t === "Liikkuvuus") return "alueet";
-  if (t === "Tuotanto" || t === "Verotus" || t === "Julkinen") return "talous";
-  if (t === "Toimeentulo" || t === "Työelämä" || t === "Työ" || t === "Kriisit") return "toimeentulo";
-  return "oikeudet";
+const THEME_WORDS: Record<LensId, RegExp> = {
+  oikeudet: /oikeu|hallinto|sääntely|kuluttaj|turvallisuus/i,
+  talous: /tuotanto|talous|verotus|energia|rahoitus/i,
+  osaaminen: /koulutus|sivistys|osaaminen|tutkimus/i,
+  perhe: /perhe|laps/i,
+  toimeentulo: /toimeentulo|työ|eläk|velat|kriisit|riskinjako/i,
+  terveys: /terveys|hoiva/i,
+  alueet: /alueet|asuminen|liikkuvuus|integraatio/i,
+};
+/** Editorial grouping of the explicit theme field; composite themes can match several lenses. */
+export function themeLenses(theme: string): LensId[] {
+  return LENSES.filter((l) => THEME_WORDS[l.id].test(theme)).map((l) => l.id);
 }
-
-export const SCORE: Record<string, number> = {
-  vahvistava: 1,
-  korjaava: 0.5,
-  ristiriitainen: 0,
-  arvioimaton: 0,
-  heikentava: -1,
-};
-export const scoreOf = (d: Decision) => {
-  const s = SCORE[d.arvioLuokka];
-  if (s === undefined) throw new Error(`Tuntematon arvioluokka: ${d.arvioLuokka}`);
-  return s;
-};
-
-export type Point = { year: number; v: number; spread: number };
-/** Kernel-smoothed average direction; sparse years drift toward the neutral line. */
-export function smooth(items: { year: number; s: number }[], from = 1850, to = 2025, sigma = 11): Point[] {
-  const out: Point[] = [];
-  for (let y = from; y <= to; y += 5) {
-    let w = 0, ws = 0, ws2 = 0;
-    for (const it of items) {
-      const k = Math.exp(-((it.year - y) ** 2) / (2 * sigma * sigma));
-      w += k; ws += k * it.s; ws2 += k * it.s * it.s;
-    }
-    const v = ws / (w + 0.4);
-    const varc = w > 0 ? Math.max(0, ws2 / w - (ws / w) ** 2) : 0;
-    out.push({ year: y, v, spread: 0.08 + Math.sqrt(varc) * 0.35 * Math.min(1, w) });
+/** Themes come only through the explicit decision crosswalk, never guessed from node titles. */
+export function nodeLenses(id: string): Set<LensId> {
+  return new Set(linkedDecisions(id).flatMap((d) => themeLenses(d.teema)));
+}
+export function matchesLens(ids: string[], lenses: Set<LensId>) {
+  return (
+    lenses.size === 0 || ids.some((id) => [...nodeLenses(id)].some((lens) => lenses.has(lens)))
+  );
+}
+export const LANDSCAPE_WIDTH = 1240;
+export const LANDSCAPE_HEIGHT = 470;
+export const landscapeX = (year: number) => 60 + ((year - 1850) / 175) * 1110;
+export const landscapeAnchors = () =>
+  ANCHORS.map((anchor, i) => ({
+    ...anchor,
+    x: landscapeX((anchor.from + anchor.to) / 2),
+    y: 105 + (i % 3) * 115,
+  }));
+export function landscapeLinks() {
+  return anchorLinks().map((link) => ({ ...link, id: `${link.from}>${link.to}` }));
+}
+export const labelLines = (text: string, max = 24) => {
+  const lines: string[] = [];
+  for (const word of text.split(" ")) {
+    const last = lines.at(-1);
+    if (last && last.length + word.length + 1 <= max) lines[lines.length - 1] = `${last} ${word}`;
+    else lines.push(word);
   }
-  return out;
-}
+  return lines;
+};
 
-export const CRISES = TURNS.filter((t) => t.kind === "kriisi");
-
-export function lensSeries(lens: LensId | "all") {
-  const items = DECISIONS.filter((d) => lens === "all" || lensOf(d.teema) === lens).map((d) => ({
-    year: d.vuosi,
-    s: scoreOf(d),
-  }));
-  for (const c of CRISES) items.push({ year: (c.from + c.to) / 2, s: -1 });
-  return smooth(items);
-}
-
-export type Scenario = "heikkenee" | "nykyinen" | "vahvistuu";
-export const SCENARIO_TARGET: Record<Scenario, number | null> = { heikkenee: -0.55, nykyinen: null, vahvistuu: 0.55 };
-/** Interpretive projection 2025→2050: blends the 2025 level toward the scenario target. */
-export function project(last: number, scenario: Scenario): Point[] {
-  const target = SCENARIO_TARGET[scenario] ?? last;
-  return [2025, 2030, 2035, 2040, 2045, 2050].map((year, i) => ({
-    year,
-    v: last + (target - last) * (i / 5),
-    spread: 0.08 + i * 0.03,
-  }));
+/** Detail geometry compresses the same node-level relations without creating group shortcuts. */
+export function focusLandscape(model: ReturnType<typeof anchorTimeline>) {
+  const visible = new Set([...model.roots, ...model.edges.flatMap((e) => [e.from, e.to])]);
+  const nodes = model.nodes.filter((n) => visible.has(n.node.id));
+  const dated = nodes.filter((n) => n.node.yearStart != null);
+  const min = Math.floor(Math.min(1850, ...dated.map((n) => n.node.yearStart!)) / 25) * 25;
+  const max = Math.ceil(Math.max(2025, ...dated.map((n) => n.node.yearStart!)) / 25) * 25;
+  const x = (year: number) => 160 + ((year - min) / (max - min)) * 1000;
+  const positioned: ((typeof nodes)[number] & { x: number; y: number })[] = [];
+  let top = 60;
+  const lanes = ["incoming", "focus", "both", "outgoing"].flatMap((role) => {
+    const members = dated
+      .filter((n) => n.role === role)
+      .sort((a, b) => a.node.yearStart! - b.node.yearStart! || a.node.id.localeCompare(b.node.id));
+    if (!members.length) return [];
+    const tracks: number[] = [];
+    for (const member of members) {
+      const px = x(member.node.yearStart!);
+      let track = tracks.findIndex((end) => px - end >= 22);
+      if (track < 0) track = tracks.length;
+      tracks[track] = px;
+      positioned.push({ ...member, x: px, y: top + 28 + track * 22 });
+    }
+    const height = Math.max(70, 40 + tracks.length * 22);
+    const lane = { role, top, height };
+    top += height;
+    return [lane];
+  });
+  const positions = new Map(positioned.map((n) => [n.node.id, n]));
+  const edges: NetworkEdge[] = model.edges.filter(
+    (e) => positions.has(e.from) && positions.has(e.to),
+  );
+  return {
+    nodes: positioned,
+    positions,
+    edges,
+    lanes,
+    min,
+    max,
+    x,
+    height: top + 25,
+    undated: nodes.filter((n) => n.node.yearStart == null),
+  };
 }

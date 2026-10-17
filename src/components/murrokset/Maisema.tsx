@@ -1,219 +1,592 @@
-import { useMemo, useState } from "react";
-import { DECISIONS, type Decision } from "./murrokset-model";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { ANCHORS } from "./ankkurit-model";
+import { anchorTimeline } from "./anchor-timeline-model";
 import {
-  CRISES,
   LENSES,
-  lensOf,
-  lensSeries,
-  project,
-  scoreOf,
+  LANDSCAPE_WIDTH as W,
+  LANDSCAPE_HEIGHT as H,
+  landscapeAnchors,
+  landscapeLinks,
+  landscapeX as x,
+  labelLines,
+  matchesLens,
+  focusLandscape,
+  nodeLenses,
   type LensId,
-  type Point,
-  type Scenario,
 } from "./maisema-model";
+import {
+  isScenario,
+  linkedDecisions,
+  networkNode,
+  networkSource,
+  type Direction,
+  type NetworkEdge,
+  type NetworkNode,
+} from "./decision-network-model";
+import { useTimelineScroll } from "./useTimelineScroll";
 import "./maisema.css";
 
-const W = 1400, H = 720, L = 40, R = 1380, TOP = 70, BOT = 690, MID = (TOP + BOT) / 2;
-const x = (y: number) => L + ((y - 1850) / 200) * (R - L);
-const yv = (v: number) => MID - v * (MID - TOP - 40);
-
-function pathOf(pts: Point[], off = 0) {
-  const p = pts.map((q) => [x(q.year), yv(q.v + off)] as const);
-  let d = `M${p[0]![0]},${p[0]![1]}`;
-  for (let i = 1; i < p.length; i++) {
-    const [x0, y0] = p[i - 1]!, [x1, y1] = p[i]!;
-    const mx = (x0 + x1) / 2;
-    d += ` C${mx},${y0} ${mx},${y1} ${x1},${y1}`;
+const activate = (event: React.KeyboardEvent, action: () => void) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    action();
   }
-  return d;
-}
-function bandOf(pts: Point[]) {
-  const up = pts.map((q) => ({ ...q, v: q.v + q.spread }));
-  const dn = [...pts].reverse().map((q) => ({ ...q, v: q.v - q.spread }));
-  return `${pathOf(up)} L${pathOf(dn).slice(1)} Z`;
-}
+};
+const yearOf = (node: NetworkNode) =>
+  node.yearStart == null
+    ? "Ajankohta avoin"
+    : `${node.yearStart}${node.yearEnd !== node.yearStart && node.yearEnd != null ? `–${node.yearEnd}` : ""}`;
+const roles: Record<string, string> = {
+  incoming: "Taustat",
+  focus: "Ankkurin kortit",
+  both: "Molemmat suunnat",
+  outgoing: "Seuraukset",
+};
+const roleTones: Record<string, string> = {
+  incoming: "var(--m-teal)",
+  focus: "var(--m-gold)",
+  both: "#c4a0ff",
+  outgoing: "var(--m-blue)",
+};
+const edgeName = (e: NetworkEdge) => `${networkNode(e.from)!.title} → ${networkNode(e.to)!.title}`;
 
-export function Maisema({ onExplore }: { onExplore: (id: string) => void }) {
-  const [lenses, setLenses] = useState<Set<LensId>>(new Set(["toimeentulo", "osaaminen", "terveys"]));
-  const [scenario, setScenario] = useState<Scenario>("nykyinen");
-  const [core, setCore] = useState(false);
-  const [pick, setPick] = useState<Decision | null>(null);
-  const [hover, setHover] = useState<string | null>(null);
-
-  const toggle = (id: LensId) =>
-    setLenses((s) => {
-      const n = new Set(s);
-      if (n.has(id)) n.delete(id);
-      else n.add(id);
-      return n;
-    });
-
-  const series = useMemo(
-    () =>
-      LENSES.filter((l) => lenses.has(l.id)).map((l) => {
-        const pts = lensSeries(l.id);
-        return { ...l, pts, fut: project(pts[pts.length - 1]!.v, scenario) };
-      }),
-    [lenses, scenario],
+export function Maisema({ onExplore }: { onExplore: (id: string, nodeId?: string) => void }) {
+  const uid = useId().replace(/:/g, "");
+  const [anchorId, setAnchorId] = useState<string | null>(null);
+  const [lenses, setLenses] = useState<Set<LensId>>(new Set());
+  const [direction, setDirection] = useState<Direction>("all");
+  const [depth, setDepth] = useState<1 | 2>(1);
+  const [selection, setSelection] = useState<{ kind: "node" | "link" | "edge"; id: string } | null>(
+    null,
   );
-  const all = useMemo(() => {
-    const pts = lensSeries("all");
-    return { pts, fut: project(pts[pts.length - 1]!.v, scenario) };
-  }, [scenario]);
-
-  const nodes = useMemo(() => {
-    const list = DECISIONS.filter((d) => lenses.has(lensOf(d.teema))).filter(
-      (d) => !core || d.arvioLuokka !== "vahvistava",
-    );
-    // Stagger same-era nodes vertically so labels never sit on each other.
-    const lanes: number[][] = [];
-    return list
-      .sort((a, b) => a.vuosi - b.vuosi)
-      .map((d) => {
-        const base = yv(scoreOf(d) * 0.82);
-        const px = x(d.vuosi);
-        let k = 0;
-        for (;;) {
-          const yy = base + (k % 2 ? 1 : -1) * Math.ceil(k / 2) * 17;
-          const used = (lanes[Math.round(yy)] ??= []);
-          if (!used.some((ux) => Math.abs(ux - px) < 150) || k > 14) {
-            used.push(px);
-            return { d, px, py: yy, tone: LENSES.find((l) => l.id === lensOf(d.teema))!.tone };
-          }
-          k++;
-        }
-      });
-  }, [lenses, core]);
-  const showLabels = nodes.length <= 70;
+  const evidenceRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (selection) evidenceRef.current?.scrollIntoView?.({ behavior: "smooth", block: "nearest" });
+  }, [selection]);
+  const anchors = useMemo(landscapeAnchors, []);
+  const links = useMemo(landscapeLinks, []);
+  const model = useMemo(
+    () => anchorTimeline(anchorId, direction, depth),
+    [anchorId, direction, depth],
+  );
+  const detail = useMemo(() => focusLandscape(model), [model]);
+  const selected = anchors.find((a) => a.id === anchorId);
+  const scrollRef = useTimelineScroll((selected?.x ?? W / 2) / W, anchorId ?? "all");
+  const detailRef = useTimelineScroll(
+    selected ? detail.x((selected.from + selected.to) / 2) / W : 0.5,
+    `${anchorId}:${direction}:${depth}`,
+  );
+  const chosenNode = selection?.kind === "node" ? networkNode(selection.id) : undefined;
+  const chosenLink =
+    selection?.kind === "link" ? links.find((l) => l.id === selection.id) : undefined;
+  const chosenEdges =
+    chosenLink?.edges ??
+    (selection?.kind === "edge" ? model.edges.filter((e) => e.id === selection.id) : []);
+  const pickAnchor = (id: string) => {
+    setAnchorId(id);
+    setSelection(null);
+  };
+  const toggle = (id: LensId) =>
+    setLenses((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  const nodeButton = (id: string) => (
+    <button onClick={() => setSelection({ kind: "node", id })}>
+      {yearOf(networkNode(id)!)} · {networkNode(id)!.title}
+    </button>
+  );
+  const evidence = (edge: NetworkEdge) => (
+    <article key={edge.id} className="ms-evidence">
+      <h4>{edgeName(edge)}</h4>
+      <div className="ms-endpoints">
+        {nodeButton(edge.from)}
+        <span aria-hidden>→</span>
+        {nodeButton(edge.to)}
+      </div>
+      <p>{edge.rationale || "Perustelu puuttuu lähteestä."}</p>
+      <p>
+        Relaatiotyyppi: <b>{edge.type}</b> · luokka: {edge.relationClass} · lähteen varmuusarvio:{" "}
+        {edge.confidence}.
+      </p>
+      <a href={networkSource.url} target="_blank" rel="noreferrer">
+        TTT-lähde · {edge.id} ↗
+      </a>
+    </article>
+  );
 
   return (
     <section className="ms" aria-label="Murrosmaisema">
+      <header className="ms-intro">
+        <span className="v-kicker">Systeemisen aikajanan tiivistelmä</span>
+        <h2>Seitsemän ankkuria, yhteinen murrosmaisema</h2>
+        <p>
+          Valitse ankkuri avataksesi sen päätökset, taustat ja seuraukset tähän näkymään. Nuoli
+          näyttää lähteeseen kirjatun yhteyden suunnan.
+        </p>
+      </header>
       <div className="ms-panel">
         <div className="ms-row">
-          <span className="ms-kicker">Valitse murrosmaisemaa selittävät linssit</span>
-          <div className="ms-quick">
-            <button className={core ? "on" : ""} onClick={() => setCore((c) => !c)}>Ydinketjut</button>
-            <button onClick={() => setLenses(new Set(LENSES.map((l) => l.id)))}>Kaikki</button>
-            <button onClick={() => setLenses(new Set())}>Tyhjennä</button>
-          </div>
+          <b>Korosta teemaa</b>
+          <button onClick={() => setLenses(new Set())}>Poista teemakorostus</button>
         </div>
-        <div className="ms-lenses">
+        <div className="ms-lenses" role="group" aria-label="Murrosmaiseman teemakorostukset">
           {LENSES.map((l) => (
             <button
               key={l.id}
               aria-pressed={lenses.has(l.id)}
-              className={lenses.has(l.id) ? "on" : ""}
               style={{ "--lt": l.tone } as React.CSSProperties}
               onClick={() => toggle(l.id)}
-              title={l.label}
             >
-              <i aria-hidden>{l.icon}</i>
-              <span>{l.label}</span>
+              <span aria-hidden>{l.icon}</span>
+              {l.label}
             </button>
           ))}
         </div>
-        <div className="ms-row ms-scen">
-          <span className="ms-kicker">Kehityssuunta 2025–2050</span>
-          <div className="ms-seg" role="group" aria-label="Skenaario">
-            {(["heikkenee", "nykyinen", "vahvistuu"] as Scenario[]).map((s) => (
-              <button key={s} className={scenario === s ? "on" : ""} onClick={() => setScenario(s)}>
-                {s[0]!.toUpperCase() + s.slice(1)}
-              </button>
-            ))}
-          </div>
-        </div>
+        <p className="ms-note">
+          Linssit korostavat olemassa olevia kortteja ja yhteyksiä. Kytkentä perustuu päätösten
+          teemoihin ja eksplisiittisiin lähdekorttivastineisiin; muille korteille ei arvata teemaa.
+          Kaikki seitsemän ankkuria ja yhteydet säilyvät näkyvissä.
+        </p>
       </div>
-
-      <div className="ms-stage">
-        <header className="ms-stage-head">
-          <h2>Valittujen linssien murrosmaisema</h2>
-          <span>Vaaka = aika · pysty = lähteen arvio vaikutuksen suunnasta · nauha = murrosten painopiste</span>
-        </header>
-        <div className="ms-scroll">
-          <svg viewBox={`0 0 ${W} ${H}`} className="ms-svg" role="img" aria-label="Murrokset aikajanalla vaikutuksen suunnan mukaan">
-            <rect x={x(2025)} y={TOP - 30} width={R - x(2025)} height={BOT - TOP + 30} className="ms-future" />
-            {[1850, 1875, 1900, 1925, 1950, 1975, 2000, 2025, 2050].map((yr) => (
-              <g key={yr}>
-                <line x1={x(yr)} x2={x(yr)} y1={TOP - 20} y2={BOT} className="ms-grid" />
-                <text x={x(yr)} y={TOP - 34} className="ms-year" textAnchor="middle">{yr}</text>
+      <figure className="ms-stage">
+        <div
+          className="ms-scroll"
+          ref={scrollRef}
+          tabIndex={0}
+          role="region"
+          aria-label="Murrosmaiseman kokonaiskuva"
+        >
+          <svg
+            viewBox={`0 0 ${W} ${H}`}
+            role="group"
+            aria-label="Seitsemän ankkuria ja niiden suunnatut yhteydet"
+          >
+            <defs>
+              <marker
+                id={`${uid}-overview`}
+                markerWidth="9"
+                markerHeight="9"
+                refX="9"
+                refY="4.5"
+                orient="auto"
+                markerUnits="userSpaceOnUse"
+              >
+                <path d="M0 0 L9 4.5 L0 9 Z" fill="currentColor" />
+              </marker>
+            </defs>
+            {[1850, 1875, 1900, 1925, 1950, 1975, 2000, 2025].map((year) => (
+              <g key={year} className="ms-grid">
+                <line x1={x(year)} x2={x(year)} y1={40} y2={H - 30} />
+                <text x={x(year)} y={25} textAnchor="middle">
+                  {year}
+                </text>
+                <text x={x(year)} y={H - 8} textAnchor="middle">
+                  {year}
+                </text>
               </g>
             ))}
-            <line x1={x(2025)} x2={x(2025)} y1={TOP - 24} y2={BOT} className="ms-now" />
-            <text x={x(2025) + 8} y={TOP - 10} className="ms-axis-l ms-fut-l">Mahdolliset tulevaisuudet</text>
-            <line x1={L} x2={R} y1={MID} y2={MID} className="ms-mid" />
-            <text x={L + 8} y={TOP - 4} className="ms-axis-l">Enemmän parempaan</text>
-            <text x={L + 8} y={MID - 8} className="ms-axis-l">Neutraali keskiviiva</text>
-            <text x={L + 8} y={BOT - 8} className="ms-axis-l">Enemmän heikompaan</text>
-
-            {CRISES.map((c) => (
-              <g key={c.label} className="ms-crisis">
-                <rect x={x(c.from) - 3} y={TOP} width={Math.max(6, x(c.to) - x(c.from) + 6)} height={BOT - TOP} />
-                <text x={x((c.from + c.to) / 2)} y={BOT - 28} textAnchor="middle">{c.title.split(" ja ")[0]}</text>
-              </g>
-            ))}
-
-            {series.map((s) => (
-              <g key={s.id} style={{ "--lt": s.tone } as React.CSSProperties}>
-                <path d={bandOf(s.pts)} className="ms-band" />
-                <path d={pathOf(s.pts)} className="ms-line" />
-                <path d={bandOf(s.fut)} className="ms-band ms-band-f" />
-                <path d={pathOf(s.fut)} className="ms-line ms-dash" />
-              </g>
-            ))}
-            <path d={pathOf(all.pts)} className="ms-all" />
-            <path d={pathOf(all.fut)} className="ms-all ms-dash" />
-
-            {nodes.map(({ d, px, py, tone }) => {
-              const on = pick?.id === d.id || hover === d.id;
+            {links.map((link) => {
+              const from = anchors.find((a) => a.id === link.from)!,
+                to = anchors.find((a) => a.id === link.to)!;
+              const dx = to.x - from.x,
+                dy = to.y - from.y,
+                length = Math.hypot(dx, dy) || 1;
+              const tx = to.x - (dx / length) * 23,
+                ty = to.y - (dy / length) * 23;
+              const bend = from.y === to.y ? -65 : 0;
+              const path = `M${from.x},${from.y} C${from.x + dx * 0.4},${from.y + bend} ${tx - dx * 0.4},${ty + bend} ${tx},${ty}`;
+              const dim =
+                !matchesLens(
+                  link.edges.flatMap((e) => [e.from, e.to]),
+                  lenses,
+                ) ||
+                (anchorId && link.from !== anchorId && link.to !== anchorId);
               return (
                 <g
-                  key={d.id}
-                  className={`ms-node${on ? " on" : ""}`}
-                  style={{ "--lt": tone } as React.CSSProperties}
-                  transform={`translate(${px},${py})`}
-                  tabIndex={0}
-                  role="button"
-                  aria-label={`${d.vuosi}: ${d.tavoite}`}
-                  onClick={() => setPick(d)}
-                  onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setPick(d)}
-                  onMouseEnter={() => setHover(d.id)}
-                  onMouseLeave={() => setHover(null)}
+                  key={link.id}
+                  className={`ms-link${dim ? " dim" : ""}${chosenLink?.id === link.id ? " on" : ""}`}
                 >
-                  <circle r={on ? 8 : 5.5} />
-                  {(showLabels || on) && (
-                    <text x={9} y={4}>
-                      {d.tavoite.length > 30 && !on ? d.tavoite.slice(0, 29) + "…" : d.tavoite}
-                    </text>
-                  )}
+                  <path className="ms-link-line" d={path} markerEnd={`url(#${uid}-overview)`} />
+                  <path
+                    className="ms-link-hit"
+                    d={path}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`Ankkuri ${from.n} → ${to.n}: ${link.edges.length} lähderelaatiota`}
+                    onClick={() => setSelection({ kind: "link", id: link.id })}
+                    onKeyDown={(e) =>
+                      activate(e, () => setSelection({ kind: "link", id: link.id }))
+                    }
+                  >
+                    <title>
+                      {from.title} → {to.title} · {link.edges.length} lähderelaatiota. Avaa
+                      päätekortit.
+                    </title>
+                  </path>
                 </g>
               );
             })}
+            {anchors.map((a) => (
+              <g
+                key={a.id}
+                className={`ms-anchor${matchesLens(a.nodes, lenses) ? "" : " dim"}${anchorId === a.id ? " on" : ""}`}
+                style={{ "--lt": a.tone } as React.CSSProperties}
+                role="button"
+                tabIndex={0}
+                aria-pressed={anchorId === a.id}
+                aria-label={`Ankkuri ${a.n}: ${a.title}, ${a.from}–${a.to}`}
+                onClick={() => pickAnchor(a.id)}
+                onKeyDown={(e) => activate(e, () => pickAnchor(a.id))}
+              >
+                <line
+                  x1={x(a.from)}
+                  x2={x(a.to)}
+                  y1={a.y + 24}
+                  y2={a.y + 24}
+                  className="ms-anchor-span"
+                />
+                <circle cx={a.x} cy={a.y} r={18} />
+                <text x={a.x} y={a.y + 5} textAnchor="middle" className="ms-anchor-number">
+                  {a.n}
+                </text>
+                <text
+                  x={Math.max(100, Math.min(W - 110, a.x))}
+                  y={a.y + 46}
+                  textAnchor="middle"
+                  className="ms-anchor-name"
+                >
+                  {labelLines(a.title).map((line, i) => (
+                    <tspan key={i} x={Math.max(100, Math.min(W - 110, a.x))} dy={i ? 14 : 0}>
+                      {line}
+                    </tspan>
+                  ))}
+                </text>
+                <title>
+                  {a.from}–{a.to} · {a.title} · {a.nodes.length} lähdekorttia
+                </title>
+              </g>
+            ))}
           </svg>
         </div>
-        <ul className="ms-legend">
-          <li><i className="ms-lg-all" /> Kaikkien päätösten painopiste</li>
-          <li><i className="ms-lg-dash" /> Tulkinnallinen jatko 2025–2050</li>
-          <li><i className="ms-lg-crisis" /> Kriisi</li>
-          <li>{nodes.length} päätöstä näkyvissä</li>
-        </ul>
-      </div>
-
-      {pick && (
-        <aside className="ms-card" aria-live="polite">
-          <button className="ms-close" onClick={() => setPick(null)} aria-label="Sulje">×</button>
-          <span className="ms-kicker">{pick.aika} · {pick.teema} · {pick.arvio}</span>
-          <h3>{pick.tavoite}</h3>
-          <p>{pick.paatos}</p>
-          <p><b>Metatarina:</b> {pick.metatarina}</p>
-          <p><b>Kuka kantoi riskin:</b> {pick.riskinjako}</p>
-          <p className="ms-src">
-            {pick.lahdelinkki ? <a href={pick.lahdelinkki} target="_blank" rel="noreferrer">{pick.lahde}</a> : pick.lahde}
+        <figcaption>
+          Kapealla näytöllä vieritä vaakasuunnassa. Vaaka = aika. Ankkurin sijainti ja värillinen
+          aikaväli kuvaavat toimituksellista ryhmää. Pystysijainti erottaa otsikot; se ei mittaa
+          hyvyyttä tai vaikutusvoimaa. Nuolet niputtavat samoihin ankkureihin kuuluvien korttien
+          suorat relaatiot. Nipun alkuperäiset yhteydet avautuvat valitsemalla.
+        </figcaption>
+      </figure>
+      <label className="ms-anchor-picker">
+        Avaa ankkuri
+        <select
+          aria-label="Avaa maiseman ankkuri"
+          value={anchorId ?? ""}
+          onChange={(e) => {
+            setAnchorId(e.target.value || null);
+            setSelection(null);
+          }}
+        >
+          <option value="">Kokonaiskuva · kaikki seitsemän ankkuria</option>
+          {anchors.map((a) => (
+            <option key={a.id} value={a.id}>
+              {a.n}. {a.from}–{a.to} · {a.title}
+            </option>
+          ))}
+        </select>
+      </label>
+      {selected && (
+        <section className="ms-expanded" aria-label="Valitun ankkurin yhteydet">
+          <div className="ms-row">
+            <div>
+              <span className="v-kicker">
+                Avattu ankkuri {selected.n} · {selected.from}–{selected.to}
+              </span>
+              <h3>{selected.title}</h3>
+            </div>
+            <button
+              onClick={() => {
+                setAnchorId(null);
+                setSelection(null);
+              }}
+            >
+              Sulje ankkurin tarkastelu
+            </button>
+          </div>
+          <p>
+            <b>Toimituksellinen mekanismitulkinta.</b> {selected.mechanism}
           </p>
-          <button className="m-explore" onClick={() => onExplore(pick.id)}>Näytä taustat ja seuraukset →</button>
+          <div className="ms-controls">
+            <label>
+              Suunta
+              <select
+                aria-label="Maiseman yhteyksien suunta"
+                value={direction}
+                onChange={(e) => {
+                  setDirection(e.target.value as Direction);
+                  setSelection(null);
+                }}
+              >
+                <option value="all">Taustat ja seuraukset</option>
+                <option value="incoming">Taustat</option>
+                <option value="outgoing">Seuraukset</option>
+              </select>
+            </label>
+            <label>
+              Polku
+              <select
+                aria-label="Maiseman polun pituus"
+                value={depth}
+                onChange={(e) => {
+                  setDepth(Number(e.target.value) as 1 | 2);
+                  setSelection(null);
+                }}
+              >
+                <option value={1}>Suorat yhteydet</option>
+                <option value={2}>Myös kahden askeleen polut</option>
+              </select>
+            </label>
+            <p>
+              {model.edges.length} lähderelaatiota. Kahden askeleen polku seuraa yksittäisiä
+              kortteja; ankkurijäsenyys ei muodosta oikopolkua.
+            </p>
+          </div>
+          <div className="ms-role-legend">
+            {detail.lanes.map((lane) => (
+              <span key={lane.role}>
+                <i style={{ background: roleTones[lane.role] }} />
+                {roles[lane.role]}
+              </span>
+            ))}
+          </div>
+          <div
+            className="ms-scroll ms-focus-scroll"
+            ref={detailRef}
+            role="region"
+            tabIndex={0}
+            aria-label="Avatun ankkurin korttiaikajana"
+          >
+            <svg
+              viewBox={`0 0 ${W} ${detail.height}`}
+              role="group"
+              aria-label="Ankkurin lähdekortit ja relaatiot oikeilla vuosillaan"
+            >
+              <defs>
+                <marker
+                  id={`${uid}-detail`}
+                  markerWidth="8"
+                  markerHeight="8"
+                  refX="8"
+                  refY="4"
+                  orient="auto"
+                  markerUnits="userSpaceOnUse"
+                >
+                  <path d="M0 0 L8 4 L0 8 Z" fill="currentColor" />
+                </marker>
+              </defs>
+              {Array.from(
+                { length: (detail.max - detail.min) / 25 + 1 },
+                (_, i) => detail.min + i * 25,
+              ).map((year) => (
+                <g key={year} className="ms-grid">
+                  <line x1={detail.x(year)} x2={detail.x(year)} y1={42} y2={detail.height - 8} />
+                  <text x={detail.x(year)} y={25} textAnchor="middle">
+                    {year}
+                  </text>
+                </g>
+              ))}
+              {detail.lanes.map((lane) => (
+                <g key={lane.role}>
+                  <rect
+                    className="ms-lane"
+                    x={0}
+                    y={lane.top}
+                    width={W}
+                    height={lane.height - 3}
+                    rx={6}
+                  />
+                  <text className="ms-role" x={12} y={lane.top + 23}>
+                    {roles[lane.role]}
+                  </text>
+                </g>
+              ))}
+              {detail.edges.map((e) => {
+                const from = detail.positions.get(e.from)!,
+                  to = detail.positions.get(e.to)!;
+                const dx = to.x - from.x,
+                  dy = to.y - from.y,
+                  len = Math.hypot(dx, dy) || 1;
+                const tx = to.x - (dx / len) * 10,
+                  ty = to.y - (dy / len) * 10;
+                const bend = from.role === to.role ? -22 : 0;
+                const path = `M${from.x},${from.y} C${from.x + dx * 0.4},${from.y + bend} ${tx - dx * 0.4},${ty + bend} ${tx},${ty}`;
+                const on =
+                  selection?.id === e.id || chosenNode?.id === e.from || chosenNode?.id === e.to;
+                return (
+                  <g
+                    key={e.id}
+                    className={`ms-link${matchesLens([e.from, e.to], lenses) ? "" : " dim"}${on ? " on" : ""}`}
+                  >
+                    <path className="ms-link-line" d={path} markerEnd={`url(#${uid}-detail)`} />
+                    <path
+                      className="ms-link-hit"
+                      d={path}
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`Lähderelaatio: ${edgeName(e)}`}
+                      onClick={() => setSelection({ kind: "edge", id: e.id })}
+                      onKeyDown={(event) =>
+                        activate(event, () => setSelection({ kind: "edge", id: e.id }))
+                      }
+                    >
+                      <title>
+                        {edgeName(e)} · {e.type}
+                      </title>
+                    </path>
+                  </g>
+                );
+              })}
+              {detail.nodes.map(({ node, x: px, y: py, role }) => (
+                <g
+                  key={node.id}
+                  style={{ "--node-tone": roleTones[role] } as React.CSSProperties}
+                  className={`ms-node${matchesLens([node.id], lenses) ? "" : " dim"}${chosenNode?.id === node.id ? " on" : ""}${isScenario(node) ? " scenario" : ""}`}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`${yearOf(node)} ${node.title}${isScenario(node) ? " · skenaario" : ""}`}
+                  onClick={() => setSelection({ kind: "node", id: node.id })}
+                  onKeyDown={(e) => activate(e, () => setSelection({ kind: "node", id: node.id }))}
+                >
+                  <circle cx={px} cy={py} r={role === "focus" ? 7 : 5} />
+                  <title>
+                    {yearOf(node)} · {node.title} · {roles[role]}
+                    {isScenario(node) ? " · skenaario" : ""}
+                  </title>
+                </g>
+              ))}
+            </svg>
+          </div>
+          <p className="ms-note">
+            Kortit sijoittuvat lähteen alkamisvuoteen, myös ankkurin aikavälin ulkopuolelle.
+            Katkokehys = skenaario. Avaa piste tai relaation nuoli tarkistaaksesi tiedot.
+          </p>
+          <details>
+            <summary>Ankkurin kortit tekstinä ({selected.nodes.length})</summary>
+            <ul>
+              {selected.nodes.map((id) => (
+                <li key={id}>{nodeButton(id)}</li>
+              ))}
+            </ul>
+          </details>
+          <details>
+            <summary>Tarkastelun alkuperäiset relaatiot ({model.edges.length})</summary>
+            <ul>
+              {model.edges.map((e) => (
+                <li key={e.id}>
+                  <button onClick={() => setSelection({ kind: "edge", id: e.id })}>
+                    {edgeName(e)} · {e.id}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </details>
+          {detail.undated.length > 0 && (
+            <details>
+              <summary>Kortit ilman alkamisvuotta ({detail.undated.length})</summary>
+              <ul>
+                {detail.undated.map(({ node }) => (
+                  <li key={node.id}>{nodeButton(node.id)}</li>
+                ))}
+              </ul>
+              <p>Näiden korttien yhteydet ovat relaatioluettelossa; vuosilukua ei arvata.</p>
+            </details>
+          )}
+        </section>
+      )}
+      {selection && (
+        <aside
+          ref={evidenceRef}
+          className="ms-card"
+          aria-label="Maiseman valinnan tiedot"
+          aria-live="polite"
+        >
+          <div className="ms-row">
+            <span className="v-kicker">Valinnan lähdetiedot</span>
+            <button onClick={() => setSelection(null)}>Sulje tiedot</button>
+          </div>
+          {chosenNode ? (
+            <>
+              <h3>{chosenNode.title}</h3>
+              <p>
+                {yearOf(chosenNode)} ·{" "}
+                {roles[model.nodes.find((n) => n.node.id === chosenNode.id)?.role ?? ""] ??
+                  "Lähdekortti"}
+                {isScenario(chosenNode) ? " · Skenaario / tulevaisuustarkastelu" : ""}
+              </p>
+              <p>{chosenNode.problem}</p>
+              <p>
+                <b>Lähteen mekanismitulkinta.</b> {chosenNode.mechanism}
+              </p>
+              <p>
+                <b>Lähteen kuvaama seuraus.</b> {chosenNode.longEffect}
+              </p>
+              {!nodeLenses(chosenNode.id).size && <p>Teemalinssikytkentää ei ole määritelty.</p>}
+              {linkedDecisions(chosenNode.id).map((d) => (
+                <article key={d.id}>
+                  <h4>
+                    {d.aika} · {d.paatos}
+                  </h4>
+                  <p>Päätösaineiston arvio: {d.arvio}</p>
+                  <p>{d.metatarina}</p>
+                  {d.lahdelinkki && (
+                    <a href={d.lahdelinkki} target="_blank" rel="noreferrer">
+                      Päätöksen lähde: {d.lahde || "avaa lähde"}
+                    </a>
+                  )}
+                  <button onClick={() => onExplore(d.id, chosenNode.id)}>
+                    Näytä taustat ja seuraukset →
+                  </button>
+                </article>
+              ))}
+              <a href={networkSource.url} target="_blank" rel="noreferrer">
+                TTT-lähdekortti · {chosenNode.id} ↗
+              </a>
+            </>
+          ) : (
+            <>
+              <h3>
+                {chosenLink
+                  ? `Ankkuri ${chosenLink.from.slice(1)} → ${chosenLink.to.slice(1)}: alkuperäiset yhteydet`
+                  : "Alkuperäinen lähderelaatio"}
+              </h3>
+              {chosenEdges.map(evidence)}
+            </>
+          )}
+          <p className="ms-note">
+            Vaikutusnäyttöä ja lähteen varmuusarvioita ei ole erikseen varmennettu tässä
+            sovelluksessa.
+          </p>
         </aside>
       )}
+      <details className="ms-connections">
+        <summary>Ankkurien väliset yhteydet tekstinä ({links.length} nippua)</summary>
+        <ul>
+          {links.map((link) => (
+            <li key={link.id}>
+              <button onClick={() => setSelection({ kind: "link", id: link.id })}>
+                Ankkuri {link.from.slice(1)} → {link.to.slice(1)} · {link.edges.length}{" "}
+                lähderelaatiota
+              </button>
+            </li>
+          ))}
+        </ul>
+      </details>
       <p className="ms-note">
-        Pystysijainti perustuu lähdeaineiston omaan arvioluokkaan (vahvistava, korjaava, ristiriitainen, heikentävä), ei mitattuun vaikutukseen. Tulevaisuusjakso on havainnollistava skenaario.
+        Sama kiinnitetty TTT-verkosto ja seitsemän toimituksellista ankkuria kuin Systeemisessä
+        aikajanassa. Puuttuva nuoli tarkoittaa puuttuvaa suoraa lähdeyhteyttä tässä rajauksessa.
+        Ryhmittely ei muodosta uutta kausaaliväitettä. Yhteysmääriä ei tulkita vaikutuksen
+        voimakkuudeksi.
       </p>
     </section>
   );
