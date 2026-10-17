@@ -43,9 +43,9 @@ export function Murrokset() {
     rakenne: true,
   });
   const [open, setOpen] = useState<string | null>(null);
-  const [mode, setMode] = useState<"maisema" | "kronologia" | "juuret" | "verkosto" | "ankkurit" | "systeemi">(
-    "maisema",
-  );
+  const [mode, setMode] = useState<
+    "maisema" | "kronologia" | "juuret" | "verkosto" | "ankkurit" | "systeemi"
+  >("maisema");
   const [networkDecision, setNetworkDecision] = useState("d050");
   const [networkFocus, setNetworkFocus] = useState<string | undefined>();
   const exploreDecision = (id: string, nodeId?: string) => {
@@ -130,7 +130,7 @@ export function Murrokset() {
         </div>
 
         {mode === "maisema" ? (
-          <Maisema onExplore={(id) => exploreDecision(id)} />
+          <Maisema onExplore={exploreDecision} />
         ) : mode === "systeemi" ? (
           <Suspense fallback={<p role="status">Ladataan systeemistä aikajanaa…</p>}>
             <AnchorTimeline onExplore={exploreDecision} />

@@ -58,3 +58,26 @@ Tarkista muutoksissa lähdesuunnan säilyminen, syklit, yhden/kahden askeleen ra
 vuosien leikkaamattomuus, puuttuvien vuosien käsittely, nuolten näppäimistökäyttö,
 vaaka- ja pystyvierityksessä näkyvät riviotsikot/vuosiviivain sekä siirtyminen juuri
 valittuun lähdekorttiin Taustat ja seuraukset -näkymässä.
+
+## Murrosmaisema: saman aikajanan tiivistelmä
+
+Maisema käyttää samoja `ANCHORS`-ryhmiä, `anchorLinks()`-relaatioita ja
+`anchorTimeline()`-polkuhakua kuin systeeminen aikajana. Kokonaiskuva tiivistää
+seitsemän ankkuria aikaväliensä keskipisteisiin ja niputtaa saman lähtö- ja
+kohdeankkurin suorat lähderelaatiot. Jokainen nippu säilyttää kaikki alkuperäiset
+relaatiotunnisteet, päätekortit ja suunnat. Ryhmän eri korttien välille ei muodosteta
+uutta polkua. Yhteydettömälle ankkurille ei päätellä kaarta.
+
+Ankkurin avaaminen tuo samaan näkymään sen yksittäiset lähdekortit oikeille
+alkamisvuosilleen. Kortit ryhmitellään taustoihin, ankkurin omiin kortteihin,
+molemminsuuntaisiin yhteyksiin ja seurauksiin. Pystysijainti palvelee luettavuutta;
+se ei ole vaikutuksen suunnan tai voimakkuuden asteikko. Vuosiluvuttomat kortit ja
+relaatiot säilyvät tekstiluettelossa. Skenaariokortit merkitään, mutta aineistoon ei
+lisätä laskennallisia tulevaisuusjatkeita.
+
+Teemalinssit muuttavat vain olemassa olevan verkoston korostusta. Teemat saadaan
+päätösaineiston eksplisiittisistä teemoista ja `decisionMappings`-vastineista.
+Yhdistelmäteema voi kuulua useaan linssiin. Kytkemättömän lähdekortin teemaa ei
+päätellä otsikosta. Poista teemakorostus palauttaa saman kokonaiskuvan; se ei muuta
+lähderelaatioiden tai ankkurien määrää. Aiemmat arvioluokkien numeeriset pisteet,
+niistä tasoitetut käyrät, hajontanauhat ja skenaariotavoitteet on poistettu.
