@@ -1,0 +1,47 @@
+.ms { display: grid; gap: 1rem; margin-top: 1.6rem; position: relative; }
+.ms-panel, .ms-stage { background: var(--m-paper); border: 1px solid var(--m-line); border-radius: 22px; padding: 1.1rem 1.3rem; }
+.ms-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem; }
+.ms-kicker { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; opacity: .7; font-weight: 600; }
+.ms-quick, .ms-seg { display: flex; gap: .35rem; flex-wrap: wrap; }
+.ms-quick button, .ms-seg button { padding: .4rem .9rem; border-radius: 999px; border: 1px solid var(--m-line); background: none; color: inherit; cursor: pointer; font-size: .85rem; }
+.ms-quick button.on, .ms-seg button.on { background: var(--m-teal); color: oklch(0.2 0.02 260); border-color: transparent; font-weight: 600; }
+.ms-lenses { display: flex; flex-wrap: wrap; gap: .5rem; margin: .9rem 0; }
+.ms-lenses button { display: flex; align-items: center; gap: .5rem; padding: .5rem .8rem; border-radius: 14px; border: 1px solid var(--m-line); background: none; color: inherit; cursor: pointer; opacity: .45; transition: .2s; font-size: .85rem; }
+.ms-lenses button i { font-style: normal; font-size: 1.1rem; color: var(--lt); }
+.ms-lenses button.on { opacity: 1; border-color: var(--lt); background: color-mix(in oklch, var(--lt) 16%, transparent); }
+.ms-stage-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .5rem; border-bottom: 1px solid var(--m-line); padding-bottom: .6rem; }
+.ms-stage-head h2 { font-size: 1.3rem; margin: 0; }
+.ms-stage-head span { font-size: .8rem; opacity: .65; }
+.ms-scroll { overflow-x: auto; }
+.ms-svg { width: 100%; min-width: 900px; height: auto; display: block; }
+.ms-future { fill: oklch(1 0 0 / .035); }
+.ms-grid { stroke: oklch(1 0 0 / .07); }
+.ms-year { fill: currentColor; opacity: .75; font-size: 15px; }
+.ms-now { stroke: var(--m-red); stroke-dasharray: 5 5; stroke-width: 1.5; }
+.ms-mid { stroke: oklch(1 0 0 / .18); stroke-dasharray: 3 5; }
+.ms-axis-l { fill: currentColor; opacity: .5; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; }
+.ms-fut-l { fill: var(--m-teal); opacity: .9; }
+.ms-crisis rect { fill: var(--m-red); opacity: .08; }
+.ms-crisis text { fill: var(--m-red); font-size: 10px; opacity: .85; }
+.ms-band { fill: var(--lt); opacity: .16; }
+.ms-band-f { opacity: .08; }
+.ms-line { fill: none; stroke: var(--lt); stroke-width: 2; opacity: .9; }
+.ms-dash { stroke-dasharray: 7 6; }
+.ms-all { fill: none; stroke: oklch(0.95 0.01 260); stroke-width: 3.2; }
+.ms-node { cursor: pointer; outline: none; }
+.ms-node circle { fill: oklch(0.2 0.02 260); stroke: var(--lt); stroke-width: 2.2; transition: r .15s; }
+.ms-node text { fill: currentColor; font-size: 10.5px; paint-order: stroke; stroke: oklch(0.18 0.02 260); stroke-width: 3.5px; stroke-linejoin: round; opacity: .85; }
+.ms-node.on circle { fill: var(--lt); }
+.ms-node.on text { opacity: 1; font-weight: 600; font-size: 12px; }
+.ms-node:focus-visible circle { stroke-width: 4; }
+.ms-legend { display: flex; flex-wrap: wrap; gap: 1.2rem; list-style: none; padding: .6rem 0 0; margin: 0; font-size: .8rem; opacity: .75; }
+.ms-legend i { display: inline-block; width: 22px; height: 3px; vertical-align: middle; margin-right: .3rem; }
+.ms-lg-all { background: oklch(0.95 0.01 260); }
+.ms-lg-dash { background: repeating-linear-gradient(90deg, var(--m-teal) 0 6px, transparent 6px 10px); }
+.ms-lg-crisis { background: var(--m-red); opacity: .5; height: 10px !important; }
+.ms-card { position: sticky; bottom: 1rem; max-width: 560px; justify-self: end; background: oklch(0.2 0.02 260 / .97); border: 1px solid var(--m-line); border-radius: 18px; padding: 1.1rem 1.3rem; box-shadow: 0 20px 50px oklch(0 0 0 / .45); }
+.ms-card h3 { margin: .3rem 0 .5rem; font-size: 1.15rem; }
+.ms-card p { font-size: .88rem; margin: .35rem 0; line-height: 1.5; }
+.ms-close { position: absolute; top: .5rem; right: .7rem; background: none; border: 0; color: inherit; font-size: 1.4rem; cursor: pointer; }
+.ms-src a { color: var(--m-teal); text-decoration: underline; }
+.ms-note { font-size: .78rem; opacity: .6; }
