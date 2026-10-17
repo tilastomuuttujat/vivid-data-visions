@@ -41,7 +41,7 @@ export function AnchorTimeline({
   const uid = useId().replace(/:/g, "");
   const [anchorId, setAnchorId] = useState<string | null>(null);
   const [direction, setDirection] = useState<Direction>("all");
-  const [showLabels, setShowLabels] = useState(false);
+  const [showLabels, setShowLabels] = useState(true);
   const [depth, setDepth] = useState<1 | 2>(1);
   const [selection, setSelection] = useState<{ kind: "node" | "edge"; id: string } | null>(null);
   const model = useMemo(
@@ -353,7 +353,9 @@ export function AnchorTimeline({
                   >
                     <circle cx={x} cy={y} r={role === "focus" ? 8 : 6} />
                     <text x={x + 11} y={y + 4}>
-                      {node.title.length > 18 ? node.title.slice(0, 16) + "…" : node.title}
+                      {showLabels
+                        ? node.title.length > 30 ? node.title.slice(0, 28) + "…" : node.title
+                        : ""}
                     </text>
                     <title>
                       {yearLabel(node)} · {node.title} · {ROLES[role]}
