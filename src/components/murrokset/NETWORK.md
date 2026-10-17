@@ -142,3 +142,30 @@ Kortti- ja relaatiotiedot avautuvat oikealle ilman automaattista vieritystä.
 Ohjauspaneeli ja tietopaneeli eivät muuta kuvaajan leveyttä. Escape sulkee paneelin.
 Yhteinen vuosikohdistin on lukemisen apu, ei vaikutussuhde. Palauta kokonaiskuva
 poistaa paikalliset rajaukset, lähennyksen ja valinnat.
+
+## Kytkentöjen prosenttijakauma
+
+`AnchorShares` täydentää seitsemää kaaristoa kolmella rinnakkaisella jakaumalla:
+saapuvat historialliset taustakytkennät, lähtevät historialliset jatkokytkennät
+ja lähtevät tulevaisuus-/skenaariokytkennät. Historiallisen kortin alkamisvuosi
+on enintään 2025; skenaariot tunnistetaan samalla `isScenario`-säännöllä kuin
+muissa lähdeverkoston näkymissä. Vuosi 2025 on kiinteä aineistoraja. Saapuva
+suunta ei takaa kronologisesti aiempaa tapahtumaa; tätä ei nimetä todisteeksi.
+
+Nimittäjä on kunkin ankkurin ja sarakkeen yksilöllisten suorien ulkoisten
+lähderelaatioiden määrä. Jokaisen ryhmän tai lähdekortin osuus on sen relaatiot
+jaettuna nimittäjällä. Kaikki relaatiotyypit lasketaan yhdenvertaisesti;
+confidence-arvioita ei käytetä vaikutuspainoina. Sisäiset suhteet, ajoittamattomat
+ulkoiset suhteet ja skenaarioista saapuvat suhteet ilmoitetaan jakauman ulkopuolella.
+Tyhjä jakauma on puuttuva lähdenäyttö, ei nollan prosentin vaikutusarvio.
+
+Oletus näyttää kunkin sarakkeen kolme suurinta yksittäistä tekijää 0–100 prosentin
+palkkeina ja ilmoittaa muiden tekijöiden yhteisosuuden. Tasatilanteessa järjestys
+on aakkosellinen, ei tärkeysjärjestys. Ankkuriryhmät-valinta näyttää 100 prosentin
+värisegmentit, jotka ryhmittelevät vastapuolen kortit ankkureihin ja muihin lähdekortteihin.
+Avattava tekijätaulukko näyttää kaikki yksittäiset kortit, tarkat lukumäärät,
+nimittäjän ja alkuperäiset relaatiosuunnat, tunnisteet ja perustelut. Ryhmittely ei
+luo uusia suhteita. Ankkurien näyttövalinta ei muuta jäljelle jäävien jakaumien
+nimittäjiä. Eri sarakkeiden prosentteja ei lasketa yhteen. Suurempi osuus kuvaa
+lähdeverkoston painotusta, ei empiiristä vaikutusvoimaa, tulevaisuuden todennäköisyyttä
+tai tekijän yhteiskunnallista tärkeyttä. Tulevaisuuspalkki ei ole ennuste.

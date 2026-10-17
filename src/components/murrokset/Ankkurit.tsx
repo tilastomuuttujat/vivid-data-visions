@@ -7,6 +7,7 @@ import { isScenario, networkNode, networkSource, type NetworkEdge } from "./deci
 import { TimelineMilestones, MilestoneDetails } from "./TimelineMilestones";
 import "./anchor-panels.css";
 import { AnchorStack } from "./AnchorStack";
+import { AnchorShares } from "./AnchorShares";
 
 const W = 1000,
   MID = 210,
@@ -328,6 +329,7 @@ export function Ankkurit() {
           ))}
         </div>
       )}
+      <AnchorShares ids={selected} />
       <p className="ank-note">
         Ankkurien rajaus on toimituksellinen. Kaaret perustuvat vain kiinnitetyn TTT-aineiston
         relaatioihin; vaikutusnäyttöä ja lähteen varmuusarvioita ei ole erikseen varmennettu. Kaaren

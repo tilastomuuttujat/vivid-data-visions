@@ -63,7 +63,11 @@ it("keeps row emphasis inside the same seven-row figure and opens original sourc
   expect(
     screen.getByRole("complementary", { name: "Yhteisen kuvaajan relaatiotiedot" }),
   ).toHaveTextContent("Ankkurin 4 kaaristo");
-  expect(screen.getByRole("link", { name: /TTT-lähde/ })).toHaveAttribute("href");
+  expect(
+    within(
+      screen.getByRole("complementary", { name: "Yhteisen kuvaajan relaatiotiedot" }),
+    ).getByRole("link", { name: /TTT-lähde/ }),
+  ).toHaveAttribute("href");
   fireEvent.click(screen.getByRole("button", { name: "Poista rivikorostus" }));
   expect(container.querySelectorAll(".as-row.dim")).toHaveLength(0);
 });

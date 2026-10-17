@@ -1,0 +1,249 @@
+.asp {
+  margin: 2rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--m-line);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.asp h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
+}
+.asp header p {
+  max-width: 95ch;
+}
+.asp-head,
+.asp-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.1fr) repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.asp-head {
+  padding: 0.8rem 0;
+  font-weight: 600;
+}
+.asp-head small {
+  display: block;
+  font-weight: 400;
+  opacity: 0.7;
+  font-size: 0.7rem;
+}
+.asp-row {
+  padding: 1rem 0;
+  border-top: 1px solid var(--m-line);
+  align-items: start;
+}
+.asp-row h4 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+.asp-bar {
+  display: flex;
+  height: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #1c3040;
+}
+.asp-bar > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #081522;
+  font-weight: 700;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  min-width: 0;
+}
+.asp-dominant {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+.asp-cell button,
+.asp-details > header button {
+  background: #162a3a;
+  color: #dce9f2;
+  border: 1px solid var(--m-line);
+  border-radius: 5px;
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.asp-empty {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.75rem;
+  padding: 0.4rem;
+  background: #142330;
+  border-radius: 5px;
+}
+.asp-coverage {
+  grid-column: 1/-1;
+  font-size: 0.7rem;
+  opacity: 0.65;
+  margin: 0;
+}
+.asp-mobile-label {
+  display: none;
+}
+.asp-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  font-size: 0.68rem;
+  margin: 1rem 0;
+}
+.asp-legend span {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.asp-legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.asp-details {
+  padding: 1rem;
+  border: 1px solid var(--m-line);
+  border-radius: 8px;
+  background: #122333;
+  margin: 1rem 0;
+}
+.asp-details header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+.asp-details h4 {
+  margin: 0;
+}
+.asp-details p {
+  font-size: 0.78rem;
+}
+.asp-table-wrap {
+  overflow: auto;
+}
+.asp table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+.asp th,
+.asp td {
+  padding: 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--m-line);
+  vertical-align: top;
+}
+.asp td:nth-child(2),
+.asp td:nth-child(3) {
+  white-space: nowrap;
+}
+.asp th small {
+  display: block;
+  font-weight: 400;
+  opacity: 0.7;
+}
+.asp summary {
+  cursor: pointer;
+  color: var(--m-teal);
+}
+.asp-method {
+  margin: 1rem 0;
+  font-size: 0.75rem;
+}
+.asp a {
+  color: var(--m-teal);
+  text-decoration: underline;
+}
+.asp :focus-visible {
+  outline: 2px solid var(--m-gold);
+  outline-offset: 3px;
+}
+@media (max-width: 1000px) {
+  .asp-head {
+    display: none;
+  }
+  .asp-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .asp-row h4 {
+    grid-column: 1/-1;
+  }
+  .asp-mobile-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .asp-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .asp-cell {
+    margin: 0.3rem 0;
+  }
+  .asp-details header {
+    flex-wrap: wrap;
+  }
+  .asp-bar {
+    height: 34px;
+  }
+}
+.asp-modes {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.asp-modes button {
+  background: #142939;
+  color: #dce9f2;
+  border: 1px solid var(--m-line);
+  border-radius: 5px;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+}
+.asp-modes button[aria-pressed="true"] {
+  border-color: var(--m-teal);
+  color: var(--m-teal);
+}
+.asp-reading {
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+.asp-factors {
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+.asp-factor > div:first-child {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+.asp-factor b {
+  white-space: nowrap;
+}
+.asp-factor-track {
+  height: 6px;
+  background: #25394a;
+  border-radius: 3px;
+  margin-top: 0.25rem;
+  overflow: hidden;
+}
+.asp-factor-track i {
+  height: 100%;
+  display: block;
+}
+.asp-factors > p {
+  font-size: 0.68rem;
+  opacity: 0.7;
+  margin: 0;
+}
