@@ -6,6 +6,7 @@ import { ARC_GROUPS, arcGroup } from "./KaariAikajana";
 import { isScenario, networkNode, networkSource, type NetworkEdge } from "./decision-network-model";
 import { TimelineMilestones, MilestoneDetails } from "./TimelineMilestones";
 import "./anchor-panels.css";
+import { AnchorStack } from "./AnchorStack";
 
 const W = 1000,
   MID = 210,
@@ -239,6 +240,7 @@ function AnchorPanel({
 }
 
 export function Ankkurit() {
+  const [view, setView] = useState<"shared" | "separate">("shared");
   const [selected, setSelected] = useState<string[]>(ANCHORS.map((a) => a.id));
   const [markers, setMarkers] = useState(true);
   const scale = useMemo(anchorPanelScale, []);
@@ -252,12 +254,20 @@ export function Ankkurit() {
   };
   return (
     <section className="ank" aria-label="Seitsemän systeemistä ankkuria">
-      <h2>Seitsemän kaarikuviota samalla aikaskaalalla</h2>
+      <h2>Seitsemän ankkurin yhteinen kaarikuvaaja</h2>
       <p className="ank-lead">
-        Ankkurin 1 koko kuvio on ensimmäisenä, sen alla ankkuri 2 ja niin edelleen. Jokaisessa
-        korostuu yksi ankkuri omine yhteyksineen; muut kuusi ovat himmeitä vertailupisteitä.
-        Yläkaaret yhdistävät muihin ankkureihin, alakaaret muihin lähdekortteihin.
+        Ankkurin 1 kaaristo on ylimpänä, sen alla 2, sitten 3 ja niin edelleen. Yhteisessä
+        kuvaajassa kaikki seitsemän kaaristoa ovat yhden kehyksen sisällä samalla aikaskaalalla.
+        Yläkaaret näyttävät yhteydet muihin ankkureihin ja alakaaret muut taustat ja seuraukset.
       </p>
+      <div className="ap-view" role="group" aria-label="Ankkurikuvaajan esitystapa">
+        <button aria-pressed={view === "shared"} onClick={() => setView("shared")}>
+          Yhteinen kuvaaja
+        </button>
+        <button aria-pressed={view === "separate"} onClick={() => setView("separate")}>
+          Erilliset kuviot
+        </button>
+      </div>
       <div className="ank-chips" role="group" aria-label="Valitse näkyvät ankkurikuviot">
         {ANCHORS.map((a) => (
           <button
@@ -289,30 +299,34 @@ export function Ankkurit() {
       </div>
       <p className="ank-note">
         Aikaskaala on kaikissa kuvioissa {scale.min}–{scale.max} ja pysyy samana myös rajattaessa.
-        Vaakavieritys liikuttaa kaikkia kuvioita yhdessä. Ankkuripiste sijaitsee ryhmän aikavälin
-        keskellä, muut kortit lähteen alkamisvuodessa. Katkoviivat ovat ajallisia kiinnekohtia,
-        eivät vaikutussuhteita.
+        Yhteisessä kuvaajassa on yksi vieritys; erillisten kuvioiden vieritys liikkuu yhdessä.
+        Ankkuripiste sijaitsee ryhmän aikavälin keskellä, muut kortit lähteen alkamisvuodessa.
+        Katkoviivat ovat ajallisia kiinnekohtia, eivät vaikutussuhteita.
       </p>
       {!selected.length && (
         <p role="status">Valitse vähintään yksi ankkuri näyttääksesi kaarikuviot.</p>
       )}
-      <div className="ap-panels">
-        {ANCHORS.filter((a) => selected.includes(a.id)).map((a) => (
-          <AnchorPanel
-            key={a.id}
-            id={a.id}
-            scale={scale}
-            markers={markers}
-            register={(node) => {
-              if (node) {
-                scrolls.current.set(a.id, node);
-                node.scrollLeft = scrollLeft.current;
-              } else scrolls.current.delete(a.id);
-            }}
-            onScroll={synchronize}
-          />
-        ))}
-      </div>
+      {view === "shared" ? (
+        <AnchorStack ids={selected} markers={markers} />
+      ) : (
+        <div className="ap-panels">
+          {ANCHORS.filter((a) => selected.includes(a.id)).map((a) => (
+            <AnchorPanel
+              key={a.id}
+              id={a.id}
+              scale={scale}
+              markers={markers}
+              register={(node) => {
+                if (node) {
+                  scrolls.current.set(a.id, node);
+                  node.scrollLeft = scrollLeft.current;
+                } else scrolls.current.delete(a.id);
+              }}
+              onScroll={synchronize}
+            />
+          ))}
+        </div>
+      )}
       <p className="ank-note">
         Ankkurien rajaus on toimituksellinen. Kaaret perustuvat vain kiinnitetyn TTT-aineiston
         relaatioihin; vaikutusnäyttöä ja lähteen varmuusarvioita ei ole erikseen varmennettu. Kaaren

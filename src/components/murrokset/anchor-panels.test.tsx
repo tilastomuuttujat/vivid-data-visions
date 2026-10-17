@@ -5,8 +5,14 @@ import { ANCHORS, anchorLinks, anchorSatellites } from "./ankkurit-model";
 import { anchorPanelData, anchorPanelScale } from "./anchor-panels-model";
 
 afterEach(cleanup);
+function renderSeparate() {
+  const result = render(<Ankkurit />);
+  fireEvent.click(screen.getByRole("button", { name: "Erilliset kuviot" }));
+  return result;
+}
+
 it("renders seven complete diagrams in order with only their own anchor emphasized", () => {
-  render(<Ankkurit />);
+  renderSeparate();
   const panels = screen.getAllByRole("article");
   expect(panels).toHaveLength(7);
   panels.forEach((panel, i) => {
@@ -18,7 +24,7 @@ it("renders seven complete diagrams in order with only their own anchor emphasiz
   });
 });
 it("uses identical years and reference lines in all panels and preserves them when filtering", () => {
-  const { container } = render(<Ankkurit />);
+  const { container } = renderSeparate();
   const axis = anchorPanelScale();
   const grids = [...container.querySelectorAll(".ap-scroll")].map((el) =>
     [...el.querySelectorAll(".ap-grid line")].map((l) => l.getAttribute("x1")),
@@ -38,7 +44,7 @@ it("uses identical years and reference lines in all panels and preserves them wh
   expect(screen.getAllByRole("article")).toHaveLength(7);
 });
 it("keeps only each panel's original inter-anchor and satellite source edges", () => {
-  const { container } = render(<Ankkurit />);
+  const { container } = renderSeparate();
   for (const a of ANCHORS) {
     const data = anchorPanelData(a.id);
     const expected = anchorLinks()
@@ -53,7 +59,7 @@ it("keeps only each panel's original inter-anchor and satellite source edges", (
   }
 });
 it("synchronizes horizontal scrolling without changing the seven scales", () => {
-  const { container } = render(<Ankkurit />);
+  const { container } = renderSeparate();
   const scrollers = [...container.querySelectorAll(".ap-scroll")] as HTMLDivElement[];
   scrollers[0]!.scrollLeft = 180;
   fireEvent.scroll(scrollers[0]!);
@@ -63,7 +69,7 @@ it("synchronizes horizontal scrolling without changing the seven scales", () => 
   expect(scrollers.every((s) => s.scrollLeft === 80)).toBe(true);
 });
 it("opens relation evidence and period details with keyboard and can hide the guides", () => {
-  render(<Ankkurit />);
+  renderSeparate();
   const first = screen.getAllByRole("article")[0]!;
   const edge = first.querySelector(".ap-hit")!;
   fireEvent.keyDown(edge, { key: " " });
