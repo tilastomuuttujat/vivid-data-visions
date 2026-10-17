@@ -1,0 +1,33 @@
+.ap-panels { display:flex;flex-direction:column;gap:1.2rem;margin-top:1rem; }
+.ap-panel { border:1px solid var(--m-line);border-left:3px solid var(--ap-tone);border-radius:14px;padding:1rem;background:var(--m-paper);min-width:0; }
+.ap-panel header { display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem; }
+.ap-number { color:var(--ap-tone);font-size:2rem;line-height:1;font-weight:700; }
+.ap-panel h3 { font-size:1.05rem;margin:.2rem 0; }
+.ap-panel header small { font-size:.8rem;opacity:.8; }
+.ap-scroll { overflow-x:auto; }
+.ap-scroll svg { display:block;width:100%;min-width:900px;height:auto;font-family:inherit; }
+.ap-grid line { stroke:var(--m-line);stroke-dasharray:2 6; }
+.ap-grid text,.ap-side { fill:var(--v-text,#e8eef5);font-size:11px; }
+.ap-side { opacity:.7;font-size:10px; }
+.ap-arc { fill:none;stroke:currentColor;stroke-width:1.5;opacity:.65;pointer-events:none; }
+.ap-hit { stroke:transparent;stroke-width:10;fill:none;cursor:pointer; }
+.ap-relation.on .ap-arc,.ap-relation:has(.ap-hit:hover) .ap-arc,.ap-relation:has(.ap-hit:focus-visible) .ap-arc { opacity:1;stroke-width:3; }
+.ap-hit:focus-visible { outline:none;stroke:currentColor;stroke-opacity:.25;stroke-width:6; }
+.ap-satellite { fill:var(--v-text,#e8eef5);stroke:var(--m-paper);stroke-width:1; }
+.ap-satellite.scenario { stroke:var(--m-gold);stroke-dasharray:2 2;stroke-width:2; }
+.ap-anchor circle { fill:currentColor;stroke:#142332;stroke-width:2; }
+.ap-anchor text { fill:#10202e;font-size:12px;font-weight:700; }
+.ap-anchor.context { opacity:.22; }
+.ap-anchor.selected circle { stroke:var(--v-text,#e8eef5);stroke-width:2; }
+.ap-panel details { margin-top:.7rem;font-size:.85rem; }
+.ap-panel summary { cursor:pointer;padding:.4rem 0; }
+.ap-panel p { line-height:1.6; }
+.ap-panel li { margin:.5rem 0; }
+.ap-panel button { font:inherit;color:inherit;background:transparent;border:1px solid var(--m-line);border-radius:6px;padding:.4rem .6rem;cursor:pointer;text-align:left; }
+.ap-evidence { margin:.8rem 0;padding:1rem;border:1px solid var(--m-line);border-radius:10px;overflow-wrap:anywhere; }
+.ap-evidence h4 { margin:.5rem 0; }
+.ap-evidence a { color:var(--m-teal);text-decoration:underline; }
+.ap-toggle { display:flex;gap:.5rem;align-items:center;font-size:.85rem;margin:.8rem 0; }
+.ap-toggle input { accent-color:var(--m-gold); }
+.ap-scroll:focus-visible,.ap-panel button:focus-visible { outline:2px solid var(--m-gold);outline-offset:3px; }
+@media(max-width:700px) { .ap-panel { padding:.7rem; } }

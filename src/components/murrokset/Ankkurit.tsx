@@ -1,47 +1,273 @@
-// Seitsemän systeemisen ankkurin tila: ankkurit aikajanalla, väliset lähdekaaret yläpuolella,
-// valittujen ankkurien yhteydet muihin kortteihin alapuolella.
-import { useMemo, useState } from "react";
-import { ANCHORS, anchorLinks, anchorSatellites } from "./ankkurit-model";
+// Seven complete arc diagrams, one anchor per panel on a shared time scale.
+import { useId, useMemo, useRef, useState } from "react";
+import { ANCHORS } from "./ankkurit-model";
+import { anchorPanelData, anchorPanelScale } from "./anchor-panels-model";
 import { ARC_GROUPS, arcGroup } from "./KaariAikajana";
-import { isScenario } from "./decision-network-model";
+import { isScenario, networkNode, networkSource, type NetworkEdge } from "./decision-network-model";
+import { TimelineMilestones, MilestoneDetails } from "./TimelineMilestones";
+import "./anchor-panels.css";
 
-const W = 1000;
-const PAD = 40;
-const MID = 250;
-const Y0 = 1800;
-const Y1 = 2060;
-const x = (y: number) => PAD + ((y - Y0) / (Y1 - Y0)) * (W - PAD * 2);
-const ax = (id: string) => {
-  const a = ANCHORS.find((v) => v.id === id)!;
-  return x((a.from + a.to) / 2);
+const W = 1000,
+  MID = 210,
+  H = 420;
+const activate = (e: React.KeyboardEvent, action: () => void) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    action();
+  }
 };
 
-export function Ankkurit() {
-  const [selected, setSelected] = useState<string[]>(["a4"]);
-  const links = useMemo(() => anchorLinks(), []);
-  const sats = useMemo(
-    () => selected.flatMap((id) => anchorSatellites(id).map((s) => ({ ...s, anchor: id }))),
-    [selected],
+function AnchorPanel({
+  id,
+  scale,
+  markers,
+  register,
+  onScroll,
+}: {
+  id: string;
+  scale: ReturnType<typeof anchorPanelScale>;
+  markers: boolean;
+  register: (node: HTMLDivElement | null) => void;
+  onScroll: (element: HTMLDivElement) => void;
+}) {
+  const data = useMemo(() => anchorPanelData(id), [id]);
+  const { anchor, links, satellites } = data;
+  const uid = useId().replace(/:/g, "");
+  const [picked, setPicked] = useState<NetworkEdge | null>(null);
+  const [milestone, setMilestone] = useState<number | null>(null);
+  const ax = (aid: string) => {
+    const a = ANCHORS.find((a) => a.id === aid)!;
+    return scale.x((a.from + a.to) / 2);
+  };
+  const incoming = links.filter((l) => l.to === id).flatMap((l) => l.edges).length;
+  const outgoing = links.filter((l) => l.from === id).flatMap((l) => l.edges).length;
+  const arc = (edge: NetworkEdge, from: number, to: number, height: number, key: string) => {
+    const tone = ARC_GROUPS[arcGroup(edge.type)].tone;
+    const targetAnchor =
+      anchor.nodes.includes(edge.to) || ANCHORS.some((a) => a.nodes.includes(edge.to));
+    const end = to - Math.sign(to - from) * (targetAnchor ? 18 : 6);
+    const d = `M ${from} ${MID} C ${from} ${MID + height}, ${end} ${MID + height}, ${end} ${MID}`;
+    const label = `${networkNode(edge.from)!.title} → ${networkNode(edge.to)!.title}`;
+    return (
+      <g
+        key={key}
+        className={`ap-relation${picked?.id === edge.id ? " on" : ""}`}
+        style={{ color: tone }}
+        data-edge-id={edge.id}
+      >
+        <path d={d} className="ap-arc" markerEnd={`url(#${uid}-${arcGroup(edge.type)})`} />
+        <path
+          d={d}
+          className="ap-hit"
+          role="button"
+          tabIndex={0}
+          aria-label={label}
+          onClick={() => setPicked(edge)}
+          onKeyDown={(e) => activate(e, () => setPicked(edge))}
+        >
+          <title>
+            {label} · {edge.type} · {edge.id}
+          </title>
+        </path>
+      </g>
+    );
+  };
+  return (
+    <article
+      className="ap-panel"
+      aria-label={`Ankkurin ${anchor.n} kaarikuvio`}
+      style={{ "--ap-tone": anchor.tone } as React.CSSProperties}
+    >
+      <header>
+        <span className="ap-number">{anchor.n}</span>
+        <div>
+          <small>
+            {anchor.from}–{anchor.to}
+          </small>
+          <h3>{anchor.title}</h3>
+        </div>
+      </header>
+      <div
+        className="ap-scroll"
+        ref={register}
+        onScroll={(e) => onScroll(e.currentTarget)}
+        role="region"
+        tabIndex={0}
+        aria-label={`Ankkurin ${anchor.n} vieritettävä aikajana`}
+      >
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          role="group"
+          aria-label={`Ankkuri ${anchor.n}: taustat ja seuraukset samalla aikaskaalalla`}
+        >
+          <defs>
+            {Object.entries(ARC_GROUPS).map(([group, value]) => (
+              <marker
+                key={group}
+                id={`${uid}-${group}`}
+                markerWidth="8"
+                markerHeight="8"
+                refX="8"
+                refY="4"
+                orient="auto"
+                markerUnits="userSpaceOnUse"
+              >
+                <path d="M0 0 L8 4 L0 8 Z" fill={value.tone} />
+              </marker>
+            ))}
+          </defs>
+          <text x={40} y={17} className="ap-side">
+            Ylhäällä: tämän ankkurin yhteydet muihin ankkureihin
+          </text>
+          {Array.from(
+            { length: (scale.max - scale.min) / 50 + 1 },
+            (_, i) => scale.min + i * 50,
+          ).map((year) => (
+            <g key={year} className="ap-grid">
+              <line x1={scale.x(year)} x2={scale.x(year)} y1={94} y2={H - 28} />
+              <text x={scale.x(year)} y={35} textAnchor="middle">
+                {year}
+              </text>
+            </g>
+          ))}
+          {markers && (
+            <TimelineMilestones
+              x={scale.x}
+              min={scale.min}
+              max={scale.max}
+              bottom={H - 28}
+              onSelect={setMilestone}
+            />
+          )}
+          <line x1={40} x2={960} y1={MID} y2={MID} className="pa-grid" />
+          {links.flatMap((l) =>
+            l.edges.map((edge, index) =>
+              arc(
+                edge,
+                ax(l.from),
+                ax(l.to),
+                -Math.min(MID - 98, 30 + Math.abs(ax(l.to) - ax(l.from)) * 0.4 + index * 8),
+                edge.id,
+              ),
+            ),
+          )}
+          {satellites.map(({ e, other, incoming }) => {
+            const from = incoming ? scale.x(other.yearStart!) : ax(id),
+              to = incoming ? ax(id) : scale.x(other.yearStart!);
+            return arc(e, from, to, Math.min(H - MID - 34, 24 + Math.abs(to - from) * 0.4), e.id);
+          })}
+          {satellites.map(({ e, other }) => (
+            <circle
+              key={e.id}
+              cx={scale.x(other.yearStart!)}
+              cy={MID}
+              r={3.5}
+              className={`ap-satellite${isScenario(other) ? " scenario" : ""}`}
+            >
+              <title>
+                {other.yearStart} · {other.title}
+                {isScenario(other) ? " · Skenaario" : ""}
+              </title>
+            </circle>
+          ))}
+          {ANCHORS.map((a) => (
+            <g
+              key={a.id}
+              className={a.id === id ? "ap-anchor selected" : "ap-anchor context"}
+              style={{ color: a.tone }}
+            >
+              <circle cx={ax(a.id)} cy={MID} r={a.id === id ? 15 : 10} />
+              <text x={ax(a.id)} y={MID + 4} textAnchor="middle">
+                {a.n}
+              </text>
+              <title>
+                {a.from}–{a.to} · {a.title}
+                {a.id === id ? " · Tämän kuvion ankkuri" : " · Vertailupiste"}
+              </title>
+            </g>
+          ))}
+          <text x={40} y={H - 8} className="ap-side">
+            Alhaalla: tämän ankkurin muut taustat ja seuraukset · nuoli säilyttää lähteen suunnan
+          </text>
+        </svg>
+      </div>
+      <MilestoneDetails year={markers ? milestone : null} onClose={() => setMilestone(null)} />
+      {picked && (
+        <aside
+          className="ap-evidence"
+          aria-label={`Ankkurin ${anchor.n} valittu relaatio`}
+          aria-live="polite"
+        >
+          <button onClick={() => setPicked(null)}>Sulje relaation tiedot</button>
+          <h4>
+            {networkNode(picked.from)!.title} → {networkNode(picked.to)!.title}
+          </h4>
+          <p>{picked.rationale || "Perustelu puuttuu lähteestä."}</p>
+          <p>
+            {picked.type} · lähteen varmuusarvio: {picked.confidence}
+          </p>
+          <a href={networkSource.url} target="_blank" rel="noreferrer">
+            TTT-lähde · {picked.id} ↗
+          </a>
+        </aside>
+      )}
+      <details>
+        <summary>
+          Ankkurin {anchor.n} tulkinta ja lähdeyhteydet ({data.edges.length})
+        </summary>
+        <p>
+          <b>Toimituksellinen mekanismitulkinta.</b> {anchor.mechanism}
+        </p>
+        <p>
+          <b>Nykytilan tulkinta.</b> {anchor.now}
+        </p>
+        <p>
+          Yhteyksiä muihin ankkureihin: {incoming} saapuvaa ja {outgoing} lähtevää.
+        </p>
+        <ul>
+          {data.edges.map((e) => (
+            <li key={e.id}>
+              <button onClick={() => setPicked(e)}>
+                {networkNode(e.from)!.title} → {networkNode(e.to)!.title} · {e.id}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </article>
   );
-  const toggle = (id: string) =>
-    setSelected((s) => (s.includes(id) ? s.filter((v) => v !== id) : [...s, id]));
-  const active = (id: string) => selected.length === 0 || selected.includes(id);
+}
 
+export function Ankkurit() {
+  const [selected, setSelected] = useState<string[]>(ANCHORS.map((a) => a.id));
+  const [markers, setMarkers] = useState(true);
+  const scale = useMemo(anchorPanelScale, []);
+  const scrolls = useRef(new Map<string, HTMLDivElement>());
+  const scrollLeft = useRef(0);
+  const synchronize = (source: HTMLDivElement) => {
+    scrollLeft.current = source.scrollLeft;
+    for (const element of scrolls.current.values())
+      if (element !== source && Math.abs(element.scrollLeft - source.scrollLeft) > 1)
+        element.scrollLeft = source.scrollLeft;
+  };
   return (
     <section className="ank" aria-label="Seitsemän systeemistä ankkuria">
+      <h2>Seitsemän kaarikuviota samalla aikaskaalalla</h2>
       <p className="ank-lead">
-        Seitsemän keskuspistettä, joiden kautta valtaosa 1850–2025 murroksista kytkeytyy nykytilaan.
-        Valitse yksi tai useampi ankkuri: yläpuolella näkyvät ankkurien väliset lähdeyhteydet,
-        alapuolella valittujen ankkurien yhteydet muihin murroksiin.
+        Ankkurin 1 koko kuvio on ensimmäisenä, sen alla ankkuri 2 ja niin edelleen. Jokaisessa
+        korostuu yksi ankkuri omine yhteyksineen; muut kuusi ovat himmeitä vertailupisteitä.
+        Yläkaaret yhdistävät muihin ankkureihin, alakaaret muihin lähdekortteihin.
       </p>
-      <div className="ank-chips" role="group" aria-label="Valitse ankkurit">
+      <div className="ank-chips" role="group" aria-label="Valitse näkyvät ankkurikuviot">
         {ANCHORS.map((a) => (
           <button
             key={a.id}
             aria-pressed={selected.includes(a.id)}
             className={selected.includes(a.id) ? "on" : ""}
-            style={{ ["--tone" as string]: a.tone }}
-            onClick={() => toggle(a.id)}
+            style={{ "--tone": a.tone } as React.CSSProperties}
+            onClick={() =>
+              setSelected((s) => (s.includes(a.id) ? s.filter((id) => id !== a.id) : [...s, a.id]))
+            }
           >
             <b>{a.n}</b> {a.from}–{a.to}
           </button>
@@ -49,112 +275,49 @@ export function Ankkurit() {
         <button onClick={() => setSelected(ANCHORS.map((a) => a.id))}>Kaikki</button>
         <button onClick={() => setSelected([])}>Tyhjennä</button>
       </div>
+      <label className="ap-toggle">
+        <input type="checkbox" checked={markers} onChange={(e) => setMarkers(e.target.checked)} />{" "}
+        Näytä yhteiset murroskohtien katkoviivat
+      </label>
       <div className="ka-legend">
-        {(Object.keys(ARC_GROUPS) as (keyof typeof ARC_GROUPS)[]).map((g) => (
-          <span key={g}>
-            <i style={{ background: ARC_GROUPS[g].tone }} />
-            {ARC_GROUPS[g].label}
+        {Object.entries(ARC_GROUPS).map(([id, g]) => (
+          <span key={id}>
+            <i style={{ background: g.tone }} />
+            {g.label}
           </span>
         ))}
       </div>
-      <div className="pa-scroll">
-        <svg viewBox={`0 0 ${W} ${MID * 2}`} role="group" aria-label="Ankkurit aikajanalla">
-          <text x={PAD} y={20} className="ka-side">↑ Ankkurien väliset yhteydet</text>
-          <text x={PAD} y={MID * 2 - 8} className="ka-side">↓ Valittujen ankkurien muut taustat ja seuraukset</text>
-          <line x1={PAD} x2={W - PAD} y1={MID} y2={MID} className="pa-grid" />
-          {Array.from({ length: 6 }, (_, i) => Y0 + i * 50).map((y) => (
-            <text key={y} x={x(y)} y={MID + 34} textAnchor="middle" className="pa-year">{y}</text>
-          ))}
-          <line x1={x(2026)} x2={x(2026)} y1={MID - 30} y2={MID + 30} className="pa-now" />
-          {sats.map(({ e, other, anchor, incoming }) => {
-            const fx = ax(anchor);
-            const ox = x(other.yearStart!);
-            const h = Math.min(MID - 40, 24 + Math.abs(ox - fx) * 0.35);
-            return (
-              <path
-                key={`${anchor}-${e.id}`}
-                className="ank-sat"
-                style={{ color: ARC_GROUPS[arcGroup(e.type)].tone }}
-                d={`M ${fx} ${MID} C ${fx} ${MID + h}, ${ox} ${MID + h}, ${ox} ${MID}`}
-                markerEnd={undefined}
-              >
-                <title>
-                  {incoming ? `${other.yearStart} ${other.title} → ankkuri` : `ankkuri → ${other.yearStart} ${other.title}`}
-                  {isScenario(other) ? " · skenaario" : ""} — {e.type} · lähteen varmuus: {e.confidence}
-                </title>
-              </path>
-            );
-          })}
-          {links.map((l) => {
-            const fx = ax(l.from);
-            const tx = ax(l.to);
-            const h = Math.min(MID - 40, 30 + Math.abs(tx - fx) * 0.45);
-            const on = active(l.from) || active(l.to);
-            const group = arcGroup(l.edges[0]?.type ?? "");
-            return (
-              <path
-                key={`${l.from}>${l.to}`}
-                className={on ? "ank-link" : "ank-link off"}
-                style={{ color: ARC_GROUPS[group].tone, strokeWidth: 1.5 + l.edges.length * 1.2 }}
-                d={`M ${fx} ${MID} C ${fx} ${MID - h}, ${tx} ${MID - h}, ${tx} ${MID}`}
-              >
-                <title>
-                  Ankkuri {l.from.slice(1)} → {l.to.slice(1)} · {l.edges.length} lähdeyhteyttä:{" "}
-                  {l.edges.map((e) => `${e.from} ${e.type} ${e.to}`).join("; ")}
-                </title>
-              </path>
-            );
-          })}
-          {sats.map(({ e, other }) => (
-            <circle key={`n-${e.id}`} cx={x(other.yearStart!)} cy={MID} r={3.5} className="ka-node">
-              <title>{other.yearStart} · {other.title}</title>
-            </circle>
-          ))}
-          {ANCHORS.map((a) => (
-            <g
-              key={a.id}
-              className={active(a.id) ? "ank-node" : "ank-node off"}
-              style={{ color: a.tone }}
-              role="button"
-              tabIndex={0}
-              aria-pressed={selected.includes(a.id)}
-              aria-label={`Ankkuri ${a.n}: ${a.title}`}
-              onClick={() => toggle(a.id)}
-              onKeyDown={(ev) => {
-                if (ev.key === "Enter" || ev.key === " ") {
-                  ev.preventDefault();
-                  toggle(a.id);
-                }
-              }}
-            >
-              <circle cx={ax(a.id)} cy={MID} r={selected.includes(a.id) ? 15 : 12} />
-              <text x={ax(a.id)} y={MID + 4} textAnchor="middle">{a.n}</text>
-            </g>
-          ))}
-        </svg>
-      </div>
-      <ol className="ank-cards">
-        {ANCHORS.filter((a) => active(a.id)).map((a) => {
-          const into = links.filter((l) => l.to === a.id).reduce((s, l) => s + l.edges.length, 0);
-          const out = links.filter((l) => l.from === a.id).reduce((s, l) => s + l.edges.length, 0);
-          return (
-            <li key={a.id} style={{ ["--tone" as string]: a.tone }}>
-              <span className="ank-n">{a.n}</span>
-              <div>
-                <small>{a.from}–{a.to}</small>
-                <h3>{a.title}</h3>
-                <p><b>Mekanismi:</b> {a.mechanism}</p>
-                <p><b>Nykytilassa:</b> {a.now}</p>
-                <small>Lähdeyhteyksiä muihin ankkureihin: {into} saapuvaa · {out} lähtevää</small>
-              </div>
-            </li>
-          );
-        })}
-      </ol>
       <p className="ank-note">
-        Ankkurien rajaus ja nykytilan tulkinnat ovat toimituksellisia. Kaaret piirretään vain TTT-lähteeseen
-        kirjatuista relaatioista lähteen suunnassa; kaaren paksuus kertoo relaatioiden määrän, ei
-        vaikutuksen voimaa, eikä vaikutusnäyttöä ole erikseen varmennettu.
+        Aikaskaala on kaikissa kuvioissa {scale.min}–{scale.max} ja pysyy samana myös rajattaessa.
+        Vaakavieritys liikuttaa kaikkia kuvioita yhdessä. Ankkuripiste sijaitsee ryhmän aikavälin
+        keskellä, muut kortit lähteen alkamisvuodessa. Katkoviivat ovat ajallisia kiinnekohtia,
+        eivät vaikutussuhteita.
+      </p>
+      {!selected.length && (
+        <p role="status">Valitse vähintään yksi ankkuri näyttääksesi kaarikuviot.</p>
+      )}
+      <div className="ap-panels">
+        {ANCHORS.filter((a) => selected.includes(a.id)).map((a) => (
+          <AnchorPanel
+            key={a.id}
+            id={a.id}
+            scale={scale}
+            markers={markers}
+            register={(node) => {
+              if (node) {
+                scrolls.current.set(a.id, node);
+                node.scrollLeft = scrollLeft.current;
+              } else scrolls.current.delete(a.id);
+            }}
+            onScroll={synchronize}
+          />
+        ))}
+      </div>
+      <p className="ank-note">
+        Ankkurien rajaus on toimituksellinen. Kaaret perustuvat vain kiinnitetyn TTT-aineiston
+        relaatioihin; vaikutusnäyttöä ja lähteen varmuusarvioita ei ole erikseen varmennettu. Kaaren
+        korkeus auttaa erottamaan aikavälejä, ei kuvaa vaikutuksen voimaa. Skenaariokortin kehys on
+        katkoviivoitettu.
       </p>
     </section>
   );
