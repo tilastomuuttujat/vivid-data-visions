@@ -117,12 +117,12 @@ export function layoutAnchorTimeline(model: ReturnType<typeof anchorTimeline>, s
     const trackEnds: number[] = [];
     for (const member of members) {
       const px = x(member.node.yearStart!);
-      let track = trackEnds.findIndex((end) => px - end >= (showLabels ? 110 : 24));
+      let track = trackEnds.findIndex((end) => px - end >= (showLabels ? 200 : 22));
       if (track < 0) track = trackEnds.length;
       trackEnds[track] = px;
-      nodes.push({ ...member, x: px, y: top + 40 + track * (showLabels ? 42 : 28), lane: lane.id });
+      nodes.push({ ...member, x: px, y: top + 40 + track * (showLabels ? 30 : 22), lane: lane.id });
     }
-    const height = Math.max(98, trackEnds.length * (showLabels ? 42 : 28) + 56);
+    const height = Math.max(80, trackEnds.length * (showLabels ? 30 : 22) + 50);
     const result = { ...lane, top, height };
     top += height;
     return [result];

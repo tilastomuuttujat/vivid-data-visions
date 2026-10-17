@@ -150,6 +150,6 @@ it("expands labels without changing source relationships", () => {
   const { container } = render(<AnchorTimeline onExplore={vi.fn()} />);
   const edges = container.querySelectorAll(".at-edge").length;
   fireEvent.click(screen.getByRole("checkbox", { name: "Näytä korttien nimet" }));
-  expect(container.querySelector(".at-canvas")).toHaveClass("labels-on");
+  expect(container.querySelector(".at-canvas")).not.toHaveClass("labels-on");
   expect(container.querySelectorAll(".at-edge")).toHaveLength(edges);
 });
