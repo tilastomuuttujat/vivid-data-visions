@@ -1,0 +1,11 @@
+.tm-marker { cursor:pointer;color:var(--m-gold); }
+.tm-line { stroke:var(--m-gold);stroke-width:1.5;stroke-dasharray:7 6;opacity:.6;pointer-events:none; }
+.tm-hit { stroke:transparent;stroke-width:12;pointer-events:stroke; }
+.tm-marker text { fill:var(--m-gold);font-size:11px;font-family:inherit;pointer-events:auto;paint-order:stroke;stroke:#101e2c;stroke-width:3px; }
+.tm-marker:hover .tm-line,.tm-marker:focus-visible .tm-line { opacity:1;stroke-width:3; }
+.tm-marker:focus-visible { outline:none; }
+.tm-details { background:var(--m-paper);border:1px solid var(--m-gold);border-radius:12px;padding:1rem;margin:1rem 0; }
+.tm-details h3 { font-size:1.1rem;margin:.5rem 0; }
+.tm-details p { font-size:.85rem;line-height:1.6; }
+.tm-details button { color:inherit;background:transparent;border:1px solid var(--m-line);padding:.5rem .7rem;border-radius:8px;cursor:pointer;font:inherit; }
+.tm-details button:focus-visible { outline:2px solid var(--m-gold);outline-offset:3px; }

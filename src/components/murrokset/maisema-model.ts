@@ -37,13 +37,13 @@ export function matchesLens(ids: string[], lenses: Set<LensId>) {
   );
 }
 export const LANDSCAPE_WIDTH = 1240;
-export const LANDSCAPE_HEIGHT = 470;
-export const landscapeX = (year: number) => 60 + ((year - 1850) / 175) * 1110;
+export const LANDSCAPE_HEIGHT = 680;
+export const landscapeX = (year: number) => 250 + ((year - 1850) / 175) * 920;
 export const landscapeAnchors = () =>
   ANCHORS.map((anchor, i) => ({
     ...anchor,
     x: landscapeX((anchor.from + anchor.to) / 2),
-    y: 105 + (i % 3) * 115,
+    y: 140 + i * 76,
   }));
 export function landscapeLinks() {
   return anchorLinks().map((link) => ({ ...link, id: `${link.from}>${link.to}` }));
@@ -67,7 +67,7 @@ export function focusLandscape(model: ReturnType<typeof anchorTimeline>) {
   const max = Math.ceil(Math.max(2025, ...dated.map((n) => n.node.yearStart!)) / 25) * 25;
   const x = (year: number) => 160 + ((year - min) / (max - min)) * 1000;
   const positioned: ((typeof nodes)[number] & { x: number; y: number })[] = [];
-  let top = 60;
+  let top = 110;
   const lanes = ["incoming", "focus", "both", "outgoing"].flatMap((role) => {
     const members = dated
       .filter((n) => n.role === role)

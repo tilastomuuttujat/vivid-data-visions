@@ -81,3 +81,18 @@ Yhdistelmäteema voi kuulua useaan linssiin. Kytkemättömän lähdekortin teema
 päätellä otsikosta. Poista teemakorostus palauttaa saman kokonaiskuvan; se ei muuta
 lähderelaatioiden tai ankkurien määrää. Aiemmat arvioluokkien numeeriset pisteet,
 niistä tasoitetut käyrät, hajontanauhat ja skenaariotavoitteet on poistettu.
+
+## Yhteiset murroskohtien katkoviivat
+
+Murrosmaiseman seitsemän ankkuria sijoittuvat omille riveilleen samalle vuosiasteikolle.
+Vasemmalla pysyvät nimet tukevat vaakavieritystä. `TimelineMilestones` piirtää
+murrosmaisemaan, avattuun korttiaikajanaan ja täyteen systeemiseen aikajanaan samat
+viivat vuosille 1918, 1939, 1991, 2008 ja 2020. Vuodet viittaavat olemassa olevien
+`TURNS`-kriisijaksojen alkuun. Nimi, koko jakson aikaväli ja selitys avautuvat
+hiirellä, Enterillä tai välilyönnillä. Kuvaajan ulkopuoliset vuodet jätetään piirtämättä.
+
+Kultaiset katkoviivat erottuvat himmeästä vuosiruudukosta ja jatkuvat kaikkien rivien
+läpi samalla x-koordinaatilla. Otsikot porrastetaan erillisille riveille tilan mukaan.
+Viivat ovat toimituksellisia ajallisia kiinnekohtia; ne eivät lisää relaatioita tai
+osoita tapahtuman vaikuttaneen kaikkiin ankkureihin. Lähteeseen kirjatut vaikutusväitteet
+säilyvät erillisinä suunnattuina nuolina.
