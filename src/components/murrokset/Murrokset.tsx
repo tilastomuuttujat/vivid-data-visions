@@ -15,6 +15,7 @@ import {
   type TurnKind,
 } from "./murrokset-model";
 import { Juurisyyt } from "./Juurisyyt";
+import { Ankkurit } from "./Ankkurit";
 import "./murrokset.css";
 
 const DecisionExplorer = lazy(() =>
@@ -37,7 +38,7 @@ export function Murrokset() {
     rakenne: true,
   });
   const [open, setOpen] = useState<string | null>(null);
-  const [mode, setMode] = useState<"kronologia" | "juuret" | "verkosto">("kronologia");
+  const [mode, setMode] = useState<"kronologia" | "juuret" | "verkosto" | "ankkurit">("kronologia");
   const [networkDecision, setNetworkDecision] = useState("d050");
   const exploreDecision = (id: string) => {
     setNetworkDecision(id);
@@ -92,10 +93,20 @@ export function Murrokset() {
             >
               Taustat ja seuraukset
             </button>
+            <button
+              role="tab"
+              aria-selected={mode === "ankkurit"}
+              className={mode === "ankkurit" ? "on" : ""}
+              onClick={() => setMode("ankkurit")}
+            >
+              7 systeemistä ankkuria
+            </button>
           </div>
         </div>
 
-        {mode === "verkosto" ? (
+        {mode === "ankkurit" ? (
+          <Ankkurit />
+        ) : mode === "verkosto" ? (
           <Suspense fallback={<p role="status">Ladataan päätösverkostoa…</p>}>
             <DecisionExplorer
               key={networkDecision}
