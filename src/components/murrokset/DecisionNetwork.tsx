@@ -50,19 +50,21 @@ const views: { id: View; label: string }[] = [
 
 export function DecisionNetwork({
   decisionId,
+  initialFocus,
   onDecision,
   onFocusChange,
   onDirectionChange,
 }: {
   onFocusChange?: (id: string) => void;
   onDirectionChange?: (direction: Direction) => void;
+  initialFocus?: string | undefined;
   decisionId: string;
   onDecision: (id: string) => void;
 }) {
   const uid = useId();
   const decision = DECISIONS.find((d) => d.id === decisionId)!;
   const mapping = decisionMappings[decisionId];
-  const [focus, setLocalFocus] = useState(mapping?.nodes[0] ?? "");
+  const [focus, setLocalFocus] = useState(initialFocus ?? mapping?.nodes[0] ?? "");
   const [history, setHistory] = useState<string[]>([]);
   const [view, setView] = useState<View>("interpretation");
   const [direction, setLocalDirection] = useState<Direction>("all");
