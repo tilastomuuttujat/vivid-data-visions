@@ -298,10 +298,11 @@ export function Ankkurit() {
         ))}
       </div>
       <p className="ank-note">
-        Aikaskaala on kaikissa kuvioissa {scale.min}–{scale.max} ja pysyy samana myös rajattaessa.
-        Yhteisessä kuvaajassa on yksi vieritys; erillisten kuvioiden vieritys liikkuu yhdessä.
-        Ankkuripiste sijaitsee ryhmän aikavälin keskellä, muut kortit lähteen alkamisvuodessa.
-        Katkoviivat ovat ajallisia kiinnekohtia, eivät vaikutussuhteita.
+        Aikaskaala on oletuksena kaikissa kuvioissa {scale.min}–{scale.max}. Rajaus säilyttää
+        asteikon; yhteisen kuvaajan ohjauspaneelista voit erikseen lähentää aikaväliin. Yhteisessä
+        kuvaajassa on yksi vieritys; erillisten kuvioiden vieritys liikkuu yhdessä. Ankkuripiste
+        sijaitsee ryhmän aikavälin keskellä, muut kortit lähteen alkamisvuodessa. Katkoviivat ovat
+        ajallisia kiinnekohtia, eivät vaikutussuhteita.
       </p>
       {!selected.length && (
         <p role="status">Valitse vähintään yksi ankkuri näyttääksesi kaarikuviot.</p>
