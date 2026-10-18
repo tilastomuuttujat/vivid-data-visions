@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { MechanismTimeline } from "./MechanismTimeline";
+import { MechanismExplorer } from "./MechanismExplorer";
 import { EVENTS } from "./mechanism-model";
 import { MAIN_PATHS, QUESTIONS, bridgeEvidence, bridgePath, pathPosition } from "./path-model";
 import { decisionMappings, networkEdges } from "../murrokset/decision-network-model";
@@ -45,7 +45,7 @@ describe("question-led routes", () => {
       }
   });
   it("draws a route across seven rows, opens bridge reasoning and resets without leaving stale lines", () => {
-    const { container } = render(<MechanismTimeline onExplore={vi.fn()} />);
+    const { container } = render(<MechanismExplorer onExplore={vi.fn()} />);
     const picker = screen.getByRole("region", { name: "Valitse kysymys ja pääreitti" });
     fireEvent.click(within(picker).getByRole("button", { name: /Miten koulutuksesta syntyi/ }));
     expect(container.querySelectorAll(".mt-track")).toHaveLength(7);

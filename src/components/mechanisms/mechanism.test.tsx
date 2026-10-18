@@ -1,7 +1,7 @@
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { DECISIONS } from "../murrokset/murrokset-model";
-import { MechanismTimeline } from "./MechanismTimeline";
+import { MechanismExplorer } from "./MechanismExplorer";
 import {
   ERAS,
   EVENTS,
@@ -46,7 +46,7 @@ describe("mechanism timeline", () => {
   });
   it("offers an accessible chapter walkthrough, synchronized selection and exact source handoff", () => {
     const explore = vi.fn();
-    const { container } = render(<MechanismTimeline onExplore={explore} />);
+    const { container } = render(<MechanismExplorer onExplore={explore} />);
     expect(container.querySelectorAll("[data-mechanism]")).toHaveLength(7);
     expect(screen.getByRole("button", { name: "← Edellinen aikakausi" })).toBeDisabled();
     fireEvent.click(screen.getByRole("button", { name: "Seuraava aikakausi →" }));
