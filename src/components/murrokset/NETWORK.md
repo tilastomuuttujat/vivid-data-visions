@@ -169,3 +169,12 @@ luo uusia suhteita. Ankkurien näyttövalinta ei muuta jäljelle jäävien jakau
 nimittäjiä. Eri sarakkeiden prosentteja ei lasketa yhteen. Suurempi osuus kuvaa
 lähdeverkoston painotusta, ei empiiristä vaikutusvoimaa, tulevaisuuden todennäköisyyttä
 tai tekijän yhteiskunnallista tärkeyttä. Tulevaisuuspalkki ei ole ennuste.
+
+## Erillinen mekanismiaikajana
+
+Yhteiskunnan kehityspolut -välilehti käyttää seitsemää pysyvää analyyttistä
+mekanismia (`src/components/mechanisms`). Se ei korvaa historiallisia ankkureita.
+Aikakausien tilakuvaukset ja tapahtumien sijoittaminen mekanismeihin ovat
+sanallista toimituksellista tulkintaa. Sama tapahtuma usealla rivillä ei lisää
+lähdeverkostoon kausaalirelaatiota. Päätöskortit avautuvat alkuperäisillä
+lainsäädäntöaineiston tunnisteilla; ajoituserot selitetään. Ks. mekanismiosion README.

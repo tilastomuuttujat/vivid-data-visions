@@ -1,0 +1,454 @@
+.mt {
+  --mt-line: #304b5d;
+  color: #e0ebf2;
+  line-height: 1.65;
+  margin: 2rem 0;
+}
+.mt h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  margin: 0.5rem 0 1rem;
+}
+.mt h3 {
+  font-size: 1.3rem;
+  line-height: 1.35;
+  margin: 0.4rem 0;
+}
+.mt-hero > p {
+  max-width: 85ch;
+}
+.mt-reading-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.75rem;
+  color: #a6bece;
+}
+.mt-reading-key i {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #6ad2ca;
+  border-radius: 50%;
+  margin-right: 0.3rem;
+}
+.mt-chapters {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin: 1.5rem 0 0.6rem;
+}
+.mt button {
+  cursor: pointer;
+  font: inherit;
+}
+.mt-chapters button {
+  position: relative;
+  text-align: left;
+  background: #132736;
+  border: 1px solid #294656;
+  border-radius: 7px;
+  color: #dceaf3;
+  padding: 0.65rem;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+.mt-chapters small {
+  display: block;
+  color: #91acbf;
+  font-size: 0.65rem;
+}
+.mt-chapters b {
+  display: block;
+  margin-top: 0.3rem;
+}
+.mt-chapters button[aria-current="step"] {
+  background: #1c3b49;
+  border-color: #65cabe;
+}
+.mt-chapter-line {
+  height: 3px;
+  display: block;
+  background: #64d0c0;
+  margin-top: 0.6rem;
+  border-radius: 2px;
+}
+.mt-chapter {
+  padding: 1.2rem 1.4rem;
+  background: linear-gradient(110deg, #173645, #112434);
+  border: 1px solid var(--mt-line);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 0.8rem 1.4rem;
+}
+.mt-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #74d7ca;
+}
+.mt-chapter > div > p {
+  font-size: 0.85rem;
+}
+.mt-chapter-lenses {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  font-size: 0.75rem;
+}
+.mt-chapter-lenses p {
+  margin: 0;
+}
+.mt-chapter-lenses b {
+  display: block;
+  color: #b9d0e0;
+  font-size: 0.72rem;
+  margin-bottom: 0.4rem;
+}
+.mt-step {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+}
+.mt-step button,
+.mt-chart-heading button,
+.mt-selection-summary button,
+.mt-evidence button {
+  background: #193747;
+  color: #d9edf5;
+  border: 1px solid #3a6073;
+  border-radius: 6px;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.75rem;
+}
+.mt button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.mt-chart-heading {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0 0.5rem;
+}
+.mt-chart-heading p {
+  font-size: 0.75rem;
+  color: #adc2cf;
+  max-width: 85ch;
+  margin: 0.4rem 0;
+}
+.mt-chart-heading button {
+  flex-shrink: 0;
+}
+.mt-scroll {
+  overflow: auto;
+  border: 1px solid var(--mt-line);
+  border-radius: 10px;
+  background: #0d1d2b;
+}
+.mt-canvas {
+  position: relative;
+  min-width: 1160px;
+  aspect-ratio: 1460/900;
+}
+.mt-canvas > svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+.mt-labels {
+  position: sticky;
+  left: 0;
+  width: 15.4%;
+  height: 100%;
+  z-index: 2;
+}
+.mt-labels button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  background: #102331;
+  border: 0;
+  border-bottom: 1px solid #294050;
+  color: #e2edf5;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.74rem;
+  line-height: 1.3;
+}
+.mt-labels button > span {
+  color: var(--mt-tone);
+  font-size: 0.85rem;
+}
+.mt-labels b {
+  color: var(--mt-tone);
+  margin: 0.15rem 0;
+}
+.mt-labels small {
+  font-size: 0.6rem;
+  opacity: 0.7;
+}
+.mt-labels button[aria-pressed="true"] {
+  background: #233d4d;
+  box-shadow: inset 3px 0 var(--mt-tone);
+}
+.mt-era-band text,
+.mt-end-year {
+  fill: #9eb6c6;
+  font-size: 13px;
+}
+.mt-state {
+  font-size: 11px;
+  pointer-events: none;
+}
+.mt-event {
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.mt-event.context circle {
+  stroke-dasharray: 3 2;
+}
+.mt-event:hover circle,
+.mt-event:focus-visible circle {
+  stroke: #fff;
+  stroke-width: 3;
+}
+.mt-track.dim {
+  opacity: 0.19;
+}
+.mt-event.on {
+  opacity: 1;
+}
+.mt-selection-line {
+  stroke: #f5cf79;
+  stroke-width: 2;
+  stroke-dasharray: 4 6;
+  opacity: 0.7;
+  pointer-events: none;
+}
+.mt-selection-year {
+  fill: #f5cf79;
+  font-size: 15px;
+  font-weight: 700;
+}
+.mt-selection-summary {
+  position: sticky;
+  bottom: 0.7rem;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid #4d7d8b;
+  border-radius: 8px;
+  background: #143341f5;
+  box-shadow: 0 5px 25px #0004;
+  margin: 0.5rem 0;
+}
+.mt-selection-summary b {
+  font-size: 0.85rem;
+}
+.mt-selection-summary small {
+  display: block;
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+.mt-events {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.5rem;
+}
+.mt-events button {
+  background: #102432;
+  color: #b8ccda;
+  border: 1px solid #304b5d;
+  border-radius: 7px;
+  text-align: left;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.75rem;
+}
+.mt-events small {
+  display: block;
+  color: #77d4c7;
+  font-size: 0.65rem;
+}
+.mt-events button[aria-pressed="true"] {
+  border-color: #69d4c4;
+  background: #20404e;
+  color: white;
+}
+.mt-detail {
+  scroll-margin-top: 1rem;
+  background: #102331;
+  border: 1px solid var(--mt-line);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.4rem;
+}
+.mt-change {
+  font-size: 1.05rem;
+}
+.mt-date-note {
+  font-size: 0.75rem;
+  color: #bcd0dd;
+  border-left: 2px solid #e1b966;
+  padding-left: 0.8rem;
+}
+.mt-interpretation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.mt-interpretation p {
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+.mt-interpretation b {
+  display: block;
+  color: #8cdbcd;
+  font-size: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+.mt-editorial {
+  font-size: 0.7rem;
+  color: #9db3c3;
+}
+.mt-connections h4,
+.mt-evidence h4 {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+}
+.mt-connections > div {
+  border-left: 3px solid;
+  padding: 0.5rem 0.8rem;
+  background: #18303e;
+  margin: 0.5rem 0;
+  border-radius: 0 7px 7px 0;
+}
+.mt-connections b {
+  font-size: 0.8rem;
+}
+.mt-connections p {
+  font-size: 0.75rem;
+  margin: 0.25rem 0;
+}
+.mt-connections small {
+  font-size: 0.68rem;
+  color: #a5bccb;
+}
+.mt-evidence {
+  grid-column: 1/-1;
+  border-top: 1px solid var(--mt-line);
+  padding-top: 1rem;
+}
+.mt-evidence > div {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+.mt-evidence > div > span {
+  color: #e3be6b;
+  font-size: 0.8rem;
+}
+.mt-evidence p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+.mt-evidence > div > div {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.mt a {
+  font-size: 0.75rem;
+  color: #7cd9ce;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.mt-method {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+.mt summary {
+  cursor: pointer;
+  color: #7cd9ce;
+}
+.mt :focus-visible {
+  outline: 2px solid #f5cf79;
+  outline-offset: 3px;
+}
+@media (max-width: 900px) {
+  .mt-chapters {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .mt-chapter,
+  .mt-detail {
+    grid-template-columns: 1fr;
+  }
+  .mt-chart-heading {
+    align-items: start;
+  }
+  .mt-connections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .mt-connections h4,
+  .mt-connections small {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 550px) {
+  .mt-chapters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mt-chapter {
+    padding: 1rem;
+  }
+  .mt-chapter-lenses,
+  .mt-interpretation,
+  .mt-connections {
+    grid-template-columns: 1fr;
+  }
+  .mt-chart-heading {
+    flex-direction: column;
+  }
+  .mt-selection-summary {
+    flex-wrap: wrap;
+    bottom: 0.25rem;
+    padding: 0.6rem;
+  }
+  .mt-detail {
+    padding: 1rem;
+  }
+  .mt-evidence > div {
+    grid-template-columns: 1fr;
+  }
+  .mt-evidence > div > div {
+    grid-column: 1;
+  }
+  .mt-labels {
+    width: 15.4%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mt * {
+    transition: none;
+    scroll-behavior: auto;
+  }
+}
