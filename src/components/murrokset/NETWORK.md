@@ -178,3 +178,11 @@ Aikakausien tilakuvaukset ja tapahtumien sijoittaminen mekanismeihin ovat
 sanallista toimituksellista tulkintaa. Sama tapahtuma usealla rivillä ei lisää
 lähdeverkostoon kausaalirelaatiota. Päätöskortit avautuvat alkuperäisillä
 lainsäädäntöaineiston tunnisteilla; ajoituserot selitetään. Ks. mekanismiosion README.
+
+Kehityspolkujen kuusi kysymysreittiä ovat toimituksellisia lukureittejä. Niiden
+katkoviivasiltoja ei lisätä TTT-verkostoon. Sillan lähdevertailu käyttää vain
+olemassa olevia oikeansuuntaisia suoria relaatioita päätösten tarkkojen
+vastinkorttien välillä; kontekstivastineet eivät tuota dokumentoidun sillan merkintää.
+Kuusi yhteistä tarkistuskysymystä erottaa tavoitteen, tapahtuman, vaikutuksen
+arvioinnin ja puuttuvan näytön. Haarautumiset ja palautteet esitetään tutkittavina
+kysymyksinä, eivät osoitettuina vaihtoehtohistorioina tai kausaalisilmukoina.

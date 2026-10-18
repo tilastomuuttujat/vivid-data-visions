@@ -9,6 +9,8 @@ import {
   timelineX,
   type MechanismId,
 } from "./mechanism-model";
+import { MAIN_PATHS, pathPosition, bridgePath } from "./path-model";
+import { PathPicker, PathProgress, BridgeReader, NodeQuestions } from "./PathReader";
 import "./mechanism.css";
 const W = 1460,
   H = 900,
@@ -18,6 +20,9 @@ export function MechanismTimeline({ onExplore }: { onExplore: (id: string) => vo
   const [era, setEra] = useState(0),
     [eventId, setEventId] = useState("school"),
     [focus, setFocus] = useState<MechanismId | null>(null);
+  const [routeId, setRouteId] = useState<string | null>(null);
+  const [bridge, setBridge] = useState<number | null>(null);
+  const route = MAIN_PATHS.find((p) => p.id === routeId);
   const selected = EVENTS.find((e) => e.id === eventId)!;
   const chapter = ERAS[era]!;
   const decisions = useMemo(() => eventDecisions(selected), [selected]);
@@ -26,10 +31,14 @@ export function MechanismTimeline({ onExplore }: { onExplore: (id: string) => vo
     detail = useRef<HTMLElement>(null);
   const choose = (id: string) => {
     const event = EVENTS.find((e) => e.id === id)!;
+    if (route && !route.steps.some((s) => s.event === id)) setRouteId(null);
+    setBridge(null);
     setEventId(id);
     setEra(eraOf(event.year));
   };
   const chooseEra = (index: number) => {
+    setRouteId(null);
+    setBridge(null);
     setEra(index);
     const event = EVENTS.find((e) => eraOf(e.year) === index)!;
     setEventId(event.id);
@@ -38,6 +47,36 @@ export function MechanismTimeline({ onExplore }: { onExplore: (id: string) => vo
         0,
         ((timelineX(ERAS[index]!.from) - 230) * scroll.current.scrollWidth) / W,
       );
+  };
+  const chooseRoute = (id: string | null) => {
+    setRouteId(id);
+    setBridge(null);
+    setFocus(null);
+    const target = MAIN_PATHS.find((p) => p.id === id)?.steps[0];
+    if (target) {
+      const event = EVENTS.find((e) => e.id === target.event)!;
+      setEventId(event.id);
+      setEra(eraOf(event.year));
+    }
+    if (scroll.current)
+      scroll.current.scrollLeft = target
+        ? Math.max(0, ((pathPosition(target).x - 230) * scroll.current.scrollWidth) / W)
+        : 0;
+  };
+  const chooseStep = (index: number) => {
+    if (route?.steps[index]) {
+      const step = route.steps[index]!;
+      choose(step.event);
+      if (scroll.current)
+        scroll.current.scrollLeft = Math.max(
+          0,
+          ((pathPosition(step).x - 230) * scroll.current.scrollWidth) / W,
+        );
+    }
+  };
+  const chooseBridge = (index: number) => {
+    chooseStep(index + 1);
+    setBridge(index);
   };
   const events = EVENTS.filter((e) => eraOf(e.year) === era);
   return (
@@ -58,6 +97,13 @@ export function MechanismTimeline({ onExplore }: { onExplore: (id: string) => vo
           <span>Väri = mekanismi, ei onnistumisen arvosana</span>
         </div>
       </header>
+      <PathPicker routeId={routeId} onRoute={chooseRoute} />
+      {route && (
+        <PathProgress route={route} eventId={eventId} onStep={chooseStep} onBridge={chooseBridge} />
+      )}
+      {route && bridge !== null && (
+        <BridgeReader route={route} index={bridge} onClose={() => setBridge(null)} />
+      )}
       <nav className="mt-chapters" aria-label="Valitse aikakausi">
         {ERAS.map((e, i) => (
           <button
@@ -214,6 +260,35 @@ export function MechanismTimeline({ onExplore }: { onExplore: (id: string) => vo
             >
               {selected.year}
             </text>
+            {route && (
+              <g
+                className="mp-route-lines"
+                aria-label="Valitun kysymyksen toimituksellinen lukureitti"
+              >
+                {route.steps.slice(0, -1).map((step, i) => (
+                  <g key={i}>
+                    <path
+                      d={bridgePath(step, route.steps[i + 1]!)}
+                      className={`mp-route-line${bridge === i ? " selected" : ""}`}
+                    />
+                    <path
+                      d={bridgePath(step, route.steps[i + 1]!)}
+                      className="mp-route-hit"
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`Avaa reittisilta ${i + 1}: ${route.bridges[i]}`}
+                      onClick={() => chooseBridge(i)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          chooseBridge(i);
+                        }
+                      }}
+                    />
+                  </g>
+                ))}
+              </g>
+            )}
             {MECHANISMS.map((m, i) => {
               const top = TOP + i * ROW,
                 related = selected.mechanisms.includes(m.id);
@@ -277,7 +352,7 @@ export function MechanismTimeline({ onExplore }: { onExplore: (id: string) => vo
                         data-event={event.id}
                         aria-label={`${event.year}: ${event.title} · ${m.title}`}
                         aria-pressed={on}
-                        className={`mt-event${on ? " on" : ""}${event.kind === "context" ? " context" : ""}`}
+                        className={`mt-event${route && !route.steps.some((s) => s.event === event.id) ? " mp-off-route" : ""}${on ? " on" : ""}${event.kind === "context" ? " context" : ""}`}
                         onClick={() => choose(event.id)}
                         onKeyDown={(e) => {
                           if (e.key === "Enter" || e.key === " ") {
@@ -313,6 +388,21 @@ export function MechanismTimeline({ onExplore }: { onExplore: (id: string) => vo
                 </g>
               );
             })}
+            {route && (
+              <g className="mp-route-numbers" aria-hidden="true">
+                {route.steps.map((step, i) => {
+                  const p = pathPosition(step);
+                  return (
+                    <g key={step.event}>
+                      <circle cx={p.x} cy={p.y + 19} r="8" />
+                      <text x={p.x} y={p.y + 22} textAnchor="middle">
+                        {i + 1}
+                      </text>
+                    </g>
+                  );
+                })}
+              </g>
+            )}
           </svg>
         </div>
       </div>
@@ -339,6 +429,22 @@ export function MechanismTimeline({ onExplore }: { onExplore: (id: string) => vo
         >
           Lue valinnan tarina ↓
         </button>
+        {route && bridge !== null && (
+          <button
+            onClick={() =>
+              document
+                .getElementById("mp-bridge-reader")
+                ?.scrollIntoView({
+                  behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+                    ? "auto"
+                    : "smooth",
+                  block: "start",
+                })
+            }
+          >
+            Lue sillan perustelu ↑
+          </button>
+        )}
       </div>
       <div className="mt-events" role="group" aria-label="Aikakauden tapahtumat">
         {events.map((e) => (
@@ -359,16 +465,7 @@ export function MechanismTimeline({ onExplore }: { onExplore: (id: string) => vo
           <h3>{selected.title}</h3>
           <p className="mt-change">{selected.change}</p>
           {selected.dateNote && <p className="mt-date-note">Ajoitus: {selected.dateNote}</p>}
-          <div className="mt-interpretation">
-            <p>
-              <b>Mitä tämä mahdollisti?</b>
-              {selected.opportunity}
-            </p>
-            <p>
-              <b>Mikä jäi ratkaistavaksi?</b>
-              {selected.tension}
-            </p>
-          </div>
+          <NodeQuestions event={selected} route={route} />
           <p className="mt-editorial">
             Edellä oleva mekanismikuvaus on toimituksellinen tulkinta. Se ei mittaa päätöksen
             nettovaikutusta eikä osoita vaikutuksen suuruutta.

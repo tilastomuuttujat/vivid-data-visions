@@ -16,3 +16,13 @@ Separate Murrokset tab for seven persistent mechanisms, not a replacement for th
 The selected timeline is not a complete history. The energy/environment row is particularly selective: it does not claim to cover every energy-system transition. The qualitative narratives are hypotheses for reading and discussion, not an independent impact evaluation. Keep chronology, citations and interpretation visibly distinct.
 
 Validation: model tests check era boundaries, actual decision IDs, seven persistent rows and shared chronological positions. Interaction tests cover chapter navigation, keyboard event selection, cross-row selection and source handoff. Browser checks additionally cover sticky labels, mobile overflow and source navigation.
+
+## Question-led main paths
+
+`path-model.ts` defines six curated questions with chronological step IDs and a manually chosen mechanism row for each step. The chosen row must be among the event's existing mechanism memberships. Dashed gold curves show **editorial reading order**, never an inferred causal estimate. Number badges correspond to the text stepper. All seven rows and non-route events remain available; selecting a non-route event or an era exits the route and clears its bridge inspector.
+
+Each bridge opens its editorial rationale, an explicitly unproven branching question, and available exact source relations. `bridgeEvidence` permits only existing directed edges between exact `decision` crosswalk nodes of the two steps. Context mappings, reversed edges and multi-hop shortcuts are excluded. A source relation is labelled a recorded source claim, not independently verified impact research. No evidence is invented if none is available.
+
+All events expose the same six reader questions (need/pressure; actor/choice/alternatives; intended mechanism; observed change/distribution/lag; attribution evidence; next opportunities/constraints). The current dataset does not provide a complete actor/negotiation history, alternative-feasibility record or attributed outcome series. These gaps are stated. Dataset goals and risk assessments are not silently promoted to measured needs or outcomes. Enactment is not equated with goal achievement.
+
+Feedback is offered as a question at the end of the selected route, not a confirmed feedback edge. Routes and steps move only the internal horizontal viewport, not the document. The bridge inspector opens near the route controls without an automatic page jump; its text buttons duplicate SVG hit paths for touch and keyboard readers.
