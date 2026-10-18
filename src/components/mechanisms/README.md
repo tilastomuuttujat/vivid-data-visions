@@ -26,3 +26,13 @@ Each bridge opens its editorial rationale, an explicitly unproven branching ques
 All events expose the same six reader questions (need/pressure; actor/choice/alternatives; intended mechanism; observed change/distribution/lag; attribution evidence; next opportunities/constraints). The current dataset does not provide a complete actor/negotiation history, alternative-feasibility record or attributed outcome series. These gaps are stated. Dataset goals and risk assessments are not silently promoted to measured needs or outcomes. Enactment is not equated with goal achievement.
 
 Feedback is offered as a question at the end of the selected route, not a confirmed feedback edge. Routes and steps move only the internal horizontal viewport, not the document. The bridge inspector opens near the route controls without an automatic page jump; its text buttons duplicate SVG hit paths for touch and keyboard readers.
+
+## Progressive landscape entry
+
+`MechanismTimeline` now starts at a deliberately compressed overview, not the full atlas. Seven duration-proportional regions cover the existing eras. Three editorial theme bands connect the reading across time: participation/capacity; livelihood/risk; external connections/environment. These are summaries of the seven mechanisms, not replacement mechanisms, measured trend lines, relative influence scores or new source relations. Mobile uses a vertical chronology without horizontal scrolling.
+
+Selecting a region shows that era's opportunity, unresolved tension and inheritance, plus up to three explicitly curated landmarks. Other events, long question-led routes and the seven mechanism state captions stay behind closed disclosures. A landmark opens the shared `EventReader` with all six questions and exact existing source handoffs. A breadcrumb and back button retain the era context. Returning to the overview clears the route and bridge. Heading focus follows view navigation for keyboard/screen-reader use; no animation is required.
+
+The former dense timeline is preserved as `MechanismExplorer`, explicitly opened from the era's mechanism disclosure and initialized to that era. It shares `EventReader` with the progressive view, preventing evidence/source differences between entry points. Neither the source graph, decision dates, crosswalk nor editorial event memberships changed. No additional runtime data calls are needed for app, Pages or offline exports.
+
+Tests validate proportional durations, landmark membership in the correct era, progressive visibility, exact decision handoff, return navigation and the optional atlas. Existing mechanism and route tests exercise `MechanismExplorer` directly.
