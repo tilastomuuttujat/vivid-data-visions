@@ -31,6 +31,10 @@ const MunicipalExplorer = lazy(() =>
   import("../kunnat/MunicipalExplorer").then((m) => ({ default: m.MunicipalExplorer })),
 );
 
+const MechanismTimeline = lazy(() =>
+  import("../mechanisms/MechanismTimeline").then((m) => ({ default: m.MechanismTimeline })),
+);
+
 type Focus = { from: number; to: number; title: string; sub: string };
 const Q = [
   ["vahvistui", "Mikä vahvistui?"],
@@ -48,7 +52,14 @@ export function Murrokset() {
   });
   const [open, setOpen] = useState<string | null>(null);
   const [mode, setMode] = useState<
-    "maisema" | "kronologia" | "juuret" | "verkosto" | "ankkurit" | "systeemi" | "kunnat"
+    | "maisema"
+    | "kronologia"
+    | "juuret"
+    | "verkosto"
+    | "ankkurit"
+    | "systeemi"
+    | "kunnat"
+    | "mekanismit"
   >("maisema");
   const [networkDecision, setNetworkDecision] = useState("d050");
   const [networkFocus, setNetworkFocus] = useState<string | undefined>();
@@ -132,6 +143,14 @@ export function Murrokset() {
             </button>
             <button
               role="tab"
+              aria-selected={mode === "mekanismit"}
+              className={mode === "mekanismit" ? "on" : ""}
+              onClick={() => setMode("mekanismit")}
+            >
+              Yhteiskunnan kehityspolut
+            </button>
+            <button
+              role="tab"
               aria-selected={mode === "kunnat"}
               className={mode === "kunnat" ? "on" : ""}
               onClick={() => setMode("kunnat")}
@@ -141,7 +160,11 @@ export function Murrokset() {
           </div>
         </div>
 
-        {mode === "kunnat" ? (
+        {mode === "mekanismit" ? (
+          <Suspense fallback={<p role="status">Ladataan kehityspolkuja…</p>}>
+            <MechanismTimeline onExplore={exploreDecision} />
+          </Suspense>
+        ) : mode === "kunnat" ? (
           <Suspense fallback={<p role="status">Ladataan kuntien yhteyksiä…</p>}>
             <MunicipalExplorer />
           </Suspense>
