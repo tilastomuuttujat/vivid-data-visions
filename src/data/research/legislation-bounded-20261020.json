@@ -1,0 +1,898 @@
+{
+  "schema_version": 1,
+  "batch_key": "legislation_bounded_20261020",
+  "checked_on": "2026-10-20",
+  "scope": "Five existing evidence gaps, land-reform anchors and pension succession chains. Research supplement; not automatically loaded by the website or Excel importer.",
+  "decision_ids": {
+    "d017": "torpparivapautus-1918",
+    "d021": "oppivelvollisuus-1921",
+    "d024": "avioliittolaki-1929",
+    "d029": "kansanelakelaki-1937",
+    "d033": "maanhankintalaki-1945",
+    "d039": "kansanelakeuudistus-1956",
+    "d042": "tyoelake-1961",
+    "d061": "vammaispalvelulaki-1987",
+    "d112": "uusi-vammaispalvelulaki-2025"
+  },
+  "sources": [
+    {
+      "document_key": "1929/234:436b15ecef826d62a6bef4b209608829115d1fe7f58a2accb7ea4feb08f70871",
+      "statute_id": "1929/234",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/1929/234/fin%40",
+      "sha256": "436b15ecef826d62a6bef4b209608829115d1fe7f58a2accb7ea4feb08f70871",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "1929-06-13",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "1929/235:70a01390dbad68827c981466876dba0f21d0942f9490cfe3e8ac03694c195ba1",
+      "statute_id": "1929/235",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/1929/235/fin%40",
+      "sha256": "70a01390dbad68827c981466876dba0f21d0942f9490cfe3e8ac03694c195ba1",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "1929-06-13",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "2007/568:67fc5d0cda4ae8e22221254d3fb474e9142e9c864fa0c8e0497ee208b25e79d0",
+      "statute_id": "2007/568",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2007/568/fin%40",
+      "sha256": "67fc5d0cda4ae8e22221254d3fb474e9142e9c864fa0c8e0497ee208b25e79d0",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "2007-05-11",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "2007/569:d213dbd0ac4c1666eadc784c47bd28757b3d470c0b00cbcf83518211e9549fb1",
+      "statute_id": "2007/569",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2007/569/fin%40",
+      "sha256": "d213dbd0ac4c1666eadc784c47bd28757b3d470c0b00cbcf83518211e9549fb1",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "2007-05-11",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "2020/1214:ac7e3ae8942ea5494879d34d180f21c475b919fa572af4017cdf185a4805305f",
+      "statute_id": "2020/1214",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2020/1214/fin%40",
+      "sha256": "ac7e3ae8942ea5494879d34d180f21c475b919fa572af4017cdf185a4805305f",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "2020-12-30",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "2023/675:5173fbbb85aa93bc46d6b930ee9479011dccdfbc64f1eb007587c25d24125cd2",
+      "statute_id": "2023/675",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2023/675/fin%40",
+      "sha256": "5173fbbb85aa93bc46d6b930ee9479011dccdfbc64f1eb007587c25d24125cd2",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "2023-04-14",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "2023/953:cb4851f0fb1141723c1ea2d64f0d4037fde23b959bfda0a5a37c40b58b51179c",
+      "statute_id": "2023/953",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2023/953/fin%40",
+      "sha256": "cb4851f0fb1141723c1ea2d64f0d4037fde23b959bfda0a5a37c40b58b51179c",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "2023-09-29",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "1956/347:70630defd0d5ccf6bf1347848656600d0aaa62f37629fd3b803fc445fdca91e8",
+      "statute_id": "1956/347",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/1956/347/fin%40",
+      "sha256": "70630defd0d5ccf6bf1347848656600d0aaa62f37629fd3b803fc445fdca91e8",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "1956-06-08",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "1961/395:e8efa716fdf7b0ea1bfb359b826a572e550c9582eb1da040a089c7ede566b6ee",
+      "statute_id": "1961/395",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/1961/395/fin%40",
+      "sha256": "e8efa716fdf7b0ea1bfb359b826a572e550c9582eb1da040a089c7ede566b6ee",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "1961-07-08",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "1962/134:ce4e91dcfbbd6f6ea0decdce82e18be497424401d7ecbb73b0f0262da249b8bf",
+      "statute_id": "1962/134",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/1962/134/fin%40",
+      "sha256": "ce4e91dcfbbd6f6ea0decdce82e18be497424401d7ecbb73b0f0262da249b8bf",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "1962-02-09",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "2006/395:3c3ece719e0d545c0a9edba2db776f05215d97c0e52a6be8faea44f87edeee51",
+      "statute_id": "2006/395",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2006/395/fin%40",
+      "sha256": "3c3ece719e0d545c0a9edba2db776f05215d97c0e52a6be8faea44f87edeee51",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "2006-05-19",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "2006/396:137774f059c072edb3635384eff71b6e379364e007da3310a1a8e4ff27258ca8",
+      "statute_id": "2006/396",
+      "source_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2006/396/fin%40",
+      "sha256": "137774f059c072edb3635384eff71b6e379364e007da3310a1a8e4ff27258ca8",
+      "document_kind": "original_statute_xml",
+      "source_format": "gzip+base64",
+      "date_issued": "2006-05-19",
+      "verification_status": "original_xml_retrieved",
+      "notes": "Täydellinen alkuperäinen XML. Ei ajantasainen oikeustila; myöhemmät muutokset erillisiä asiakirjoja. XML:n mahdolliset kirjoitus-/digitointivirheet säilytetty."
+    },
+    {
+      "document_key": "1918/135-001:a606d9c057cc50ea421acb4b0c0cdcb46307194746c44e4009d6a970cc9f81fe",
+      "statute_id": "1918/135-001",
+      "source_url": "https://mlang.name/arkisto/torpparilaki.html",
+      "sha256": "a606d9c057cc50ea421acb4b0c0cdcb46307194746c44e4009d6a970cc9f81fe",
+      "document_kind": "historical_transcription",
+      "source_format": "gzip+base64",
+      "date_issued": "1918-10-15",
+      "verification_status": "historical_transcription_retrieved",
+      "notes": "Jälkikäteen julkaistu historiallinen tekstijäljennös; ei alkuperäispainatteen kuvavarmennusta. Valitut pykälät eroteltu; täydellinen HTML-lähde säilytetty. Finlexin tunniste-erottelu säilytetty."
+    },
+    {
+      "document_key": "1919/46-001:7d180ae7563a4838cbd1f646ca830bba18e426b6da3392fd806f1e256d3922f7",
+      "statute_id": "1919/46-001",
+      "source_url": "https://mlang.name/arkisto/toimeenpano-1919.html",
+      "sha256": "7d180ae7563a4838cbd1f646ca830bba18e426b6da3392fd806f1e256d3922f7",
+      "document_kind": "historical_transcription",
+      "source_format": "gzip+base64",
+      "date_issued": "1919-04-11",
+      "verification_status": "historical_transcription_retrieved",
+      "notes": "Jälkikäteen julkaistu historiallinen tekstijäljennös; ei alkuperäispainatteen kuvavarmennusta. Valitut pykälät eroteltu; täydellinen HTML-lähde säilytetty. Finlexin tunniste-erottelu säilytetty."
+    },
+    {
+      "document_key": "1945/396:131fbd969f816aa07d9f6f8315cfe27b8c36baeb54b6e07df0cbe2065ed54c04",
+      "statute_id": "1945/396",
+      "source_url": "https://agricolaverkko.fi/vintti/julkaisut/historiakone/dokumentti.php?id=1394",
+      "sha256": "131fbd969f816aa07d9f6f8315cfe27b8c36baeb54b6e07df0cbe2065ed54c04",
+      "document_kind": "historical_transcription",
+      "source_format": "gzip+base64",
+      "date_issued": "1945-05-05",
+      "verification_status": "historical_transcription_retrieved",
+      "notes": "Jälkikäteen julkaistu historiallinen tekstijäljennös; ei alkuperäispainatteen kuvavarmennusta. Maanhankintalain ote sisältää vain alkupykälät (1–5), ei koko lakia. Ei varmennettuja rahoituspykäliä."
+    },
+    {
+      "document_key": "1937/248:7431952906819e3699c6473d1bd4679f04cb76d418f5d9aa687b4efa2a5260cb",
+      "statute_id": "1937/248",
+      "source_url": "https://www.finlex.fi/fi/lainsaadanto/1937/248",
+      "sha256": "7431952906819e3699c6473d1bd4679f04cb76d418f5d9aa687b4efa2a5260cb",
+      "document_kind": "official_metadata",
+      "source_format": "gzip+base64",
+      "date_issued": null,
+      "verification_status": "official_metadata_verified",
+      "notes": "Vain säädösidentiteetti varmennettu. Sivu ei tarjoa alkuperäistä pykälätekstiä tässä haussa."
+    },
+    {
+      "document_key": "1945/506:56d303a7baab2007f3d2b9b86fc64ab6106b0f9dd0cf2acedbfbfa9045b338c2",
+      "statute_id": "1945/506",
+      "source_url": "https://www.finlex.fi/fi/lainsaadanto/1945/506",
+      "sha256": "56d303a7baab2007f3d2b9b86fc64ab6106b0f9dd0cf2acedbfbfa9045b338c2",
+      "document_kind": "official_metadata",
+      "source_format": "gzip+base64",
+      "date_issued": null,
+      "verification_status": "official_metadata_verified",
+      "notes": "Vain säädösidentiteetti varmennettu. Sivu ei tarjoa alkuperäistä pykälätekstiä tässä haussa."
+    },
+    {
+      "document_key": "1945/506:70f3b9151fc1c12c150574559335ad1038fa1f358a7dec2f72c4a145976e2105",
+      "statute_id": "1945/506",
+      "source_url": "https://portti.kansallisarkisto.fi/arkistojen-portti/maanhankintalain-toimeenpano",
+      "sha256": "70f3b9151fc1c12c150574559335ad1038fa1f358a7dec2f72c4a145976e2105",
+      "document_kind": "historical_reference",
+      "source_format": "gzip+base64",
+      "date_issued": null,
+      "verification_status": "archive_guide_retrieved",
+      "notes": "Kansallisarkiston aineisto-opas; tunnistaa lain 5.5.1945 ja asetuksen 2.6.1945. Opas ei ole asetuksen alkuperäisteksti eikä kustannusarvio."
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "avioliittolaki-1929",
+      "statute_id": "1929/234",
+      "link_type": "direct_statute",
+      "document_key": "1929/234:436b15ecef826d62a6bef4b209608829115d1fe7f58a2accb7ea4feb08f70871",
+      "source_locator": "Alkuperäislaki 234/1929; voimaantulo erillisessä 235/1929 1 §:ssä",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "1930-01-01",
+      "temporal_notes": "Säätäminen 13.6.1929; voimaantulo 1.1.1930 lain 235/1929 1 §:n perusteella. Alkuperäisteksti ei kuvaa nykyistä avioliitto-oikeutta.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "avioliittolaki-1929",
+      "statute_id": "1929/235",
+      "link_type": "implementation_statute",
+      "document_key": "1929/235:70a01390dbad68827c981466876dba0f21d0942f9490cfe3e8ac03694c195ba1",
+      "source_locator": "1 ja 17 §",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "1930-01-01",
+      "temporal_notes": "Voimaanpanolaki vahvistaa avioliittolain ja voimaanpanolain voimaantulon 1.1.1930.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "kansanelakelaki-1937",
+      "statute_id": "2007/568",
+      "link_type": "historical_to_current",
+      "document_key": "2007/568:67fc5d0cda4ae8e22221254d3fb474e9142e9c864fa0c8e0497ee208b25e79d0",
+      "source_locator": "568/2007 1 § ja 109 §; välivaiheet 347/1956 99 § ja 569/2007 1 §",
+      "source_version": "originalVersion",
+      "verification_scope": "institutional_continuity_original_sources",
+      "valid_from": "2008-01-01",
+      "temporal_notes": "Institutionaalinen jatkumo: 1937 → 1956 → 2007. Vuoden 2007 laki ei ole vuoden 1937 laki eikä näyttö sen alkuperäisestä sisällöstä. Vuoden 2007 lain voimaantulo 1.1.2008 perustuu lakiin 569/2007.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "oppivelvollisuus-1921",
+      "statute_id": "2020/1214",
+      "link_type": "historical_to_current",
+      "document_key": "2020/1214:ac7e3ae8942ea5494879d34d180f21c475b919fa572af4017cdf185a4805305f",
+      "source_locator": "2 § ja 25 §",
+      "source_version": "originalVersion",
+      "verification_scope": "institutional_context_original_source",
+      "valid_from": "2021-08-01",
+      "temporal_notes": "Institutionaalinen vertailuyhteys, ei suora korvaavuusketju 1921→2020. Yleinen voimaantulo 1.8.2021; 25 § sisältää myös 1.1.2021 ja 1.8.2022 voimaantuloja sekä kohorttirajauksen. Ei vuoden 1921 alkuperäissäädöksen evidenssi.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "vammaispalvelulaki-1987",
+      "statute_id": "2023/675",
+      "link_type": "historical_to_current",
+      "document_key": "2023/675:5173fbbb85aa93bc46d6b930ee9479011dccdfbc64f1eb007587c25d24125cd2",
+      "source_locator": "Alkuperäisen 675/2023 41–42 §; voimaantulomuutos 953/2023 41 §",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "2025-01-01",
+      "temporal_notes": "Alkuperäinen 675/2023 41 § sisälsi voimaantulon 1.10.2023. Muutoslaki 953/2023 siirsi yleisen voimaantulon 1.1.2025. Kumottu laki on 380/1987. Päätösten siirtymäajat eivät tarkoita kaikkien palvelujen samanaikaista muuttumista.",
+      "open_questions": [
+        "Vuoden 2024 ja myöhempien muutosten sekä palvelukohtaisten siirtymien täydentäminen",
+        "Toteutunut toimeenpano ja rahoitus hyvinvointialueittain"
+      ]
+    },
+    {
+      "item_id": "vammaispalvelulaki-1987",
+      "statute_id": "2023/953",
+      "link_type": "implementation_statute",
+      "document_key": "2023/953:cb4851f0fb1141723c1ea2d64f0d4037fde23b959bfda0a5a37c40b58b51179c",
+      "source_locator": "41–42 § ja entryIntoForce",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "2023-09-30",
+      "temporal_notes": "Muutoslaki tuli voimaan 30.9.2023 ja muutti lain 675/2023 yleiseksi voimaantuloksi 1.1.2025.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "uusi-vammaispalvelulaki-2025",
+      "statute_id": "2023/675",
+      "link_type": "direct_statute",
+      "document_key": "2023/675:5173fbbb85aa93bc46d6b930ee9479011dccdfbc64f1eb007587c25d24125cd2",
+      "source_locator": "Alkuperäisen 675/2023 41–42 §; voimaantulomuutos 953/2023 41 §",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "2025-01-01",
+      "temporal_notes": "Alkuperäinen 675/2023 41 § sisälsi voimaantulon 1.10.2023. Muutoslaki 953/2023 siirsi yleisen voimaantulon 1.1.2025. Kumottu laki on 380/1987. Päätösten siirtymäajat eivät tarkoita kaikkien palvelujen samanaikaista muuttumista.",
+      "open_questions": [
+        "Vuoden 2024 ja myöhempien muutosten sekä palvelukohtaisten siirtymien täydentäminen",
+        "Toteutunut toimeenpano ja rahoitus hyvinvointialueittain"
+      ]
+    },
+    {
+      "item_id": "uusi-vammaispalvelulaki-2025",
+      "statute_id": "2023/953",
+      "link_type": "implementation_statute",
+      "document_key": "2023/953:cb4851f0fb1141723c1ea2d64f0d4037fde23b959bfda0a5a37c40b58b51179c",
+      "source_locator": "41–42 § ja entryIntoForce",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "2023-09-30",
+      "temporal_notes": "Muutoslaki tuli voimaan 30.9.2023 ja muutti lain 675/2023 yleiseksi voimaantuloksi 1.1.2025.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "torpparivapautus-1918",
+      "statute_id": "1918/135-001",
+      "link_type": "direct_statute",
+      "document_key": "1918/135-001:a606d9c057cc50ea421acb4b0c0cdcb46307194746c44e4009d6a970cc9f81fe",
+      "source_locator": "Tekstijäljennöksen 1, 11 ja 19–22 §",
+      "source_version": "historical_transcription",
+      "verification_scope": "historical_transcription_selected_provisions",
+      "valid_from": null,
+      "temporal_notes": "Lain antopäivä 15.10.1918. Finlexin erottelutunnus 135-001 erottaa lain täytäntöönpanoasetuksesta 135-026. Valtion lunastusrahoitus on takaisin maksettavaa rahoitusta, ei sellaisenaan avustusmenoa.",
+      "open_questions": [
+        "Alkuperäispainatteen kuvavarmennus ja lain tarkan voimaantulopäivän varmennus",
+        "Vuoden 1919 muutokset, rajaukset ja toteutuneet lunastukset",
+        "Valtion maksut, lainasaamiset, takaisinmaksut ja mahdolliset tappiot eroteltuina"
+      ]
+    },
+    {
+      "item_id": "torpparivapautus-1918",
+      "statute_id": "1919/46-001",
+      "link_type": "implementation_statute",
+      "document_key": "1919/46-001:7d180ae7563a4838cbd1f646ca830bba18e426b6da3392fd806f1e256d3922f7",
+      "source_locator": "Asetuksen johdanto ja 100 §",
+      "source_version": "historical_transcription",
+      "verification_scope": "historical_transcription_selected_provisions",
+      "valid_from": "1919-05-01",
+      "temporal_notes": "Asetus annettu 11.4.1919. Sen 100 § käynnistää asetuksen soveltamisen ja viranomaiskäsittelyn 1.5.1919; päivää ei merkitty vuoden 1918 lain omaksi voimaantuloksi.",
+      "open_questions": [
+        "Alkuperäispainatteen ja liitteiden kuvavarmennus",
+        "Vuoden 1918 täytäntöönpanoasetuksen ja vuoden 1919 muutosten koko ketju"
+      ]
+    },
+    {
+      "item_id": "maanhankintalaki-1945",
+      "statute_id": "1945/396",
+      "link_type": "direct_statute",
+      "document_key": "1945/396:131fbd969f816aa07d9f6f8315cfe27b8c36baeb54b6e07df0cbe2065ed54c04",
+      "source_locator": "Agricolan julkaisema historiallinen ote, 1–4 §",
+      "source_version": "historical_transcription",
+      "verification_scope": "historical_transcription_selected_provisions",
+      "valid_from": null,
+      "temporal_notes": "Lain 5.5.1945 tekstijäljennöksen alkuosa yksilöi maansaajaryhmät sekä vapaaehtoisen hankinnan ja pakkolunastuksen järjestyksen. Ote ei sisällä koko lakia eikä rahoitussääntöjä.",
+      "open_questions": [
+        "Koko alkuperäislaki ja rahoituspykälät alkuperäispainatteesta",
+        "Tarkka voimaantulo, muutosketju ja alueellinen toteutuminen",
+        "Korvaukset, lainat, takaisinmaksut sekä toimeenpanokustannukset"
+      ]
+    },
+    {
+      "item_id": "maanhankintalaki-1945",
+      "statute_id": "1945/506",
+      "link_type": "implementation_statute",
+      "document_key": "1945/506:70f3b9151fc1c12c150574559335ad1038fa1f358a7dec2f72c4a145976e2105",
+      "source_locator": "Kansallisarkiston oppaan johdanto ja toimeenpano-organisaation kuvaus",
+      "source_version": "historical_reference",
+      "verification_scope": "archive_guide_implementation_context",
+      "valid_from": null,
+      "temporal_notes": "Kansallisarkisto tunnistaa toimeenpanoasetuksen 2.6.1945/506 ja kuvaa hakemus-, tila-akti- ja myyntiaktiaineistot. Antopäivä ei ole tässä varmennettu voimaantulopäiväksi.",
+      "open_questions": [
+        "Asetuksen alkuperäinen teksti ja voimaantulo",
+        "Paikalliset tila- ja myyntiaktit sekä toteutuneet rahavirrat"
+      ]
+    },
+    {
+      "item_id": "kansanelakelaki-1937",
+      "statute_id": "1937/248",
+      "link_type": "direct_statute",
+      "document_key": "1937/248:7431952906819e3699c6473d1bd4679f04cb76d418f5d9aa687b4efa2a5260cb",
+      "source_locator": "Finlexin nimike 248/1937; kumoaminen 347/1956 99 §:ssä",
+      "source_version": "official_metadata",
+      "verification_scope": "referenced_statute_identity_verified",
+      "valid_from": null,
+      "temporal_notes": "Säädösidentiteetti varmennettu. Alkuperäistä vuoden 1937 pykälätekstiä ei saatu rajapinnasta. Vuoden 1956 alkuperäislaki vahvistaa vuoden 1937 lain korvaamisen; tämä ei varmista kaikkia vuoden 1937 sääntöjä.",
+      "open_questions": [
+        "Vuoden 1937 alkuperäisteksti ja voimaantulosäännös",
+        "Alkuperäiset vakuutusmaksu-, rahastointi- ja etuussäännöt sekä muutosketju"
+      ]
+    },
+    {
+      "item_id": "kansanelakeuudistus-1956",
+      "statute_id": "1956/347",
+      "link_type": "direct_statute",
+      "document_key": "1956/347:70630defd0d5ccf6bf1347848656600d0aaa62f37629fd3b803fc445fdca91e8",
+      "source_locator": "1, 62–63 ja 93–99 §",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "1957-01-01",
+      "temporal_notes": "Vuoden 1956 laki tuli voimaan 1.1.1957 ja kumosi vuoden 1937 lain; 99 § sallii eräiden aikaisempien sääntöjen siirtymäkäytön vuoden 1957 loppuun. Alkuperäisrahoitus eroteltu etuuslajeittain.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "elakejarjestelman-rakentuminen-1937",
+      "statute_id": "1956/347",
+      "link_type": "documented_legal_context",
+      "document_key": "1956/347:70630defd0d5ccf6bf1347848656600d0aaa62f37629fd3b803fc445fdca91e8",
+      "source_locator": "1, 62–63 ja 93–99 §",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "1957-01-01",
+      "temporal_notes": "Vuoden 1956 laki tuli voimaan 1.1.1957 ja kumosi vuoden 1937 lain; 99 § sallii eräiden aikaisempien sääntöjen siirtymäkäytön vuoden 1957 loppuun. Alkuperäisrahoitus eroteltu etuuslajeittain.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "kansanelakelaki-1937",
+      "statute_id": "1956/347",
+      "link_type": "documented_legal_context",
+      "document_key": "1956/347:70630defd0d5ccf6bf1347848656600d0aaa62f37629fd3b803fc445fdca91e8",
+      "source_locator": "94–99 §",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "1957-01-01",
+      "temporal_notes": "Alkuperäisteksti osoittaa aikaisempien etuuksien muuntamisen ja vuoden 1937 lain kumoamisen 1.1.1957; siirtymäkäyttö mahdollinen vuoden 1957 loppuun.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "kansanelakeuudistus-1956",
+      "statute_id": "2007/569",
+      "link_type": "implementation_statute",
+      "document_key": "2007/569:d213dbd0ac4c1666eadc784c47bd28757b3d470c0b00cbcf83518211e9549fb1",
+      "source_locator": "1 § ja 17 §",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "2008-01-01",
+      "temporal_notes": "Laki 569/2007 kumoaa vuoden 1956 kansaneläkelain ja saattaa lain 568/2007 voimaan 1.1.2008.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "tyoelake-1961",
+      "statute_id": "1961/395",
+      "link_type": "direct_statute",
+      "document_key": "1961/395:e8efa716fdf7b0ea1bfb359b826a572e550c9582eb1da040a089c7ede566b6ee",
+      "source_locator": "1, 11–13 ja 15 § sekä entryIntoForce",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "1962-07-01",
+      "temporal_notes": "TEL säädettiin 8.7.1961 ja tuli voimaan 1.7.1962. Työnantajalla oli kahden vuoden järjestämisaika, mutta eläketurva alkoi lain voimaantulosta; odotusajan etuuksista vastasi säännöksen mukaan Eläketurvakeskus takaisinperintäoikeuksin.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "tyoelake-1961",
+      "statute_id": "1962/134",
+      "link_type": "documented_legal_context",
+      "document_key": "1962/134:ce4e91dcfbbd6f6ea0decdce82e18be497424401d7ecbb73b0f0262da249b8bf",
+      "source_locator": "1–2 ja 15 §",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "1962-07-01",
+      "temporal_notes": "LEL on TEL:n rinnakkainen, eräitä lyhytaikaisia työsuhteita koskeva laki. Voimaantulo ja työnantajan maksuvelvollisuus 1.7.1962. Ei TEL:n muutoslaki.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "tel-1962",
+      "statute_id": "1961/395",
+      "link_type": "direct_statute",
+      "document_key": "1961/395:e8efa716fdf7b0ea1bfb359b826a572e550c9582eb1da040a089c7ede566b6ee",
+      "source_locator": "1, 11–13 ja 15 § sekä entryIntoForce",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "1962-07-01",
+      "temporal_notes": "TEL säädettiin 8.7.1961 ja tuli voimaan 1.7.1962. Työnantajalla oli kahden vuoden järjestämisaika, mutta eläketurva alkoi lain voimaantulosta; odotusajan etuuksista vastasi säännöksen mukaan Eläketurvakeskus takaisinperintäoikeuksin.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "tel-1962",
+      "statute_id": "1962/134",
+      "link_type": "documented_legal_context",
+      "document_key": "1962/134:ce4e91dcfbbd6f6ea0decdce82e18be497424401d7ecbb73b0f0262da249b8bf",
+      "source_locator": "1–2 ja 15 §",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "1962-07-01",
+      "temporal_notes": "LEL on TEL:n rinnakkainen, eräitä lyhytaikaisia työsuhteita koskeva laki. Voimaantulo ja työnantajan maksuvelvollisuus 1.7.1962. Ei TEL:n muutoslaki.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "tyoelake-1961",
+      "statute_id": "2006/395",
+      "link_type": "historical_to_current",
+      "document_key": "2006/395:3c3ece719e0d545c0a9edba2db776f05215d97c0e52a6be8faea44f87edeee51",
+      "source_locator": "Voimaanpano: 396/2006 1–2 §",
+      "source_version": "originalVersion",
+      "verification_scope": "institutional_continuity_original_sources",
+      "valid_from": "2007-01-01",
+      "temporal_notes": "TyEL korvasi TEL:n, LEL:n ja TaEL:n vuoden 2007 alusta voimaanpanolain 396/2006 mukaisesti. Alkuperäinen TyEL ei ole vuoden 1961 eläketurvan sisältö.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    },
+    {
+      "item_id": "tyoelake-1961",
+      "statute_id": "2006/396",
+      "link_type": "implementation_statute",
+      "document_key": "2006/396:137774f059c072edb3635384eff71b6e379364e007da3310a1a8e4ff27258ca8",
+      "source_locator": "1–2 ja 32 §",
+      "source_version": "originalVersion",
+      "verification_scope": "original_selected_provisions_verified",
+      "valid_from": "2007-01-01",
+      "temporal_notes": "Voimaanpanolaki vahvistaa TyEL:n alkamisen 1.1.2007 sekä kumottavat lait ja siirtymäsäännöt.",
+      "open_questions": [
+        "Myöhemmät muutosversiot ja soveltamiskäytäntö",
+        "Toteutunut rahoitus, toimeenpano ja vaikutukset erillisillä lähteillä"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "event_key": "legislation_bounded_20261020:1929/235:commencement",
+      "statute_id": "1929/235",
+      "source_document_key": "1929/235:70a01390dbad68827c981466876dba0f21d0942f9490cfe3e8ac03694c195ba1",
+      "event_type": "commencement",
+      "event_year": 1930,
+      "event_date": "1930-01-01",
+      "date_precision": "day",
+      "source_locator": "1 ja 17 §",
+      "interpretation": "Avioliittolain ja voimaanpanolain alku.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020"
+      }
+    },
+    {
+      "event_key": "legislation_bounded_20261020:2020/1214:general_commencement",
+      "statute_id": "2020/1214",
+      "source_document_key": "2020/1214:ac7e3ae8942ea5494879d34d180f21c475b919fa572af4017cdf185a4805305f",
+      "event_type": "general_commencement",
+      "event_year": 2021,
+      "event_date": "2021-08-01",
+      "date_precision": "day",
+      "source_locator": "25 §",
+      "interpretation": "Yleinen voimaantulo; pykälässä erilliset poikkeukset ja kohorttirajaus.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020"
+      }
+    },
+    {
+      "event_key": "legislation_bounded_20261020:2023/953:amendment_commencement",
+      "statute_id": "2023/953",
+      "source_document_key": "2023/953:cb4851f0fb1141723c1ea2d64f0d4037fde23b959bfda0a5a37c40b58b51179c",
+      "event_type": "amendment_commencement",
+      "event_year": 2023,
+      "event_date": "2023-09-30",
+      "date_precision": "day",
+      "source_locator": "entryIntoForce",
+      "interpretation": "Voimaantuloa muuttavan lain alku, ei pääsäädöksen voimaantulo.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020"
+      }
+    },
+    {
+      "event_key": "legislation_bounded_20261020:2023/953:target_statute_commencement",
+      "statute_id": "2023/953",
+      "source_document_key": "2023/953:cb4851f0fb1141723c1ea2d64f0d4037fde23b959bfda0a5a37c40b58b51179c",
+      "event_type": "target_statute_commencement",
+      "event_year": 2025,
+      "event_date": "2025-01-01",
+      "date_precision": "day",
+      "source_locator": "41 §",
+      "interpretation": "Lain 675/2023 voimaantulo sellaisena kuin 953/2023 sen muutti.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020",
+        "target_statute_id": "2023/675",
+        "source_amendment_id": "2023/953",
+        "scope": "commencement_as_amended_by_953_2023_not_complete_current_law"
+      }
+    },
+    {
+      "event_key": "legislation_bounded_20261020:1918/135-001:issued",
+      "statute_id": "1918/135-001",
+      "source_document_key": "1918/135-001:a606d9c057cc50ea421acb4b0c0cdcb46307194746c44e4009d6a970cc9f81fe",
+      "event_type": "issued",
+      "event_year": 1918,
+      "event_date": "1918-10-15",
+      "date_precision": "day",
+      "source_locator": "Otsikko ja allekirjoitus",
+      "interpretation": "Lain antopäivä tekstijäljennöksessä; ei voimaantulopäivä.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020"
+      }
+    },
+    {
+      "event_key": "legislation_bounded_20261020:1919/46-001:implementation_commencement",
+      "statute_id": "1919/46-001",
+      "source_document_key": "1919/46-001:7d180ae7563a4838cbd1f646ca830bba18e426b6da3392fd806f1e256d3922f7",
+      "event_type": "implementation_commencement",
+      "event_year": 1919,
+      "event_date": "1919-05-01",
+      "date_precision": "day",
+      "source_locator": "100 §",
+      "interpretation": "Asetuksen voimaantulo ja lunastusasioiden viranomaiskäsittelyn aloitus.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020"
+      }
+    },
+    {
+      "event_key": "legislation_bounded_20261020:1945/396:issued",
+      "statute_id": "1945/396",
+      "source_document_key": "1945/396:131fbd969f816aa07d9f6f8315cfe27b8c36baeb54b6e07df0cbe2065ed54c04",
+      "event_type": "issued",
+      "event_year": 1945,
+      "event_date": "1945-05-05",
+      "date_precision": "day",
+      "source_locator": "Otsikko",
+      "interpretation": "Antopäivä; ei tässä varmennettu lain voimaantuloksi.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020"
+      }
+    },
+    {
+      "event_key": "legislation_bounded_20261020:1956/347:commencement",
+      "statute_id": "1956/347",
+      "source_document_key": "1956/347:70630defd0d5ccf6bf1347848656600d0aaa62f37629fd3b803fc445fdca91e8",
+      "event_type": "commencement",
+      "event_year": 1957,
+      "event_date": "1957-01-01",
+      "date_precision": "day",
+      "source_locator": "99 §",
+      "interpretation": "Uusi kansaneläkelaki ja vuoden 1937 lain kumoaminen; siirtymäpoikkeukset erikseen.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020"
+      }
+    },
+    {
+      "event_key": "legislation_bounded_20261020:2007/569:commencement",
+      "statute_id": "2007/569",
+      "source_document_key": "2007/569:d213dbd0ac4c1666eadc784c47bd28757b3d470c0b00cbcf83518211e9549fb1",
+      "event_type": "commencement",
+      "event_year": 2008,
+      "event_date": "2008-01-01",
+      "date_precision": "day",
+      "source_locator": "1 ja 17 §",
+      "interpretation": "Lain 568/2007 ja sen voimaanpanolain alku.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020"
+      }
+    },
+    {
+      "event_key": "legislation_bounded_20261020:1961/395:commencement",
+      "statute_id": "1961/395",
+      "source_document_key": "1961/395:e8efa716fdf7b0ea1bfb359b826a572e550c9582eb1da040a089c7ede566b6ee",
+      "event_type": "commencement",
+      "event_year": 1962,
+      "event_date": "1962-07-01",
+      "date_precision": "day",
+      "source_locator": "entryIntoForce",
+      "interpretation": "TEL:n alku; työnantajien järjestämisajan pituus kaksi vuotta, turva takautuu alkuun.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020"
+      }
+    },
+    {
+      "event_key": "legislation_bounded_20261020:1962/134:commencement",
+      "statute_id": "1962/134",
+      "source_document_key": "1962/134:ce4e91dcfbbd6f6ea0decdce82e18be497424401d7ecbb73b0f0262da249b8bf",
+      "event_type": "commencement",
+      "event_year": 1962,
+      "event_date": "1962-07-01",
+      "date_precision": "day",
+      "source_locator": "15 §",
+      "interpretation": "LEL:n ja työnantajan maksuvelvollisuuden alku.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020"
+      }
+    },
+    {
+      "event_key": "legislation_bounded_20261020:2006/396:commencement",
+      "statute_id": "2006/396",
+      "source_document_key": "2006/396:137774f059c072edb3635384eff71b6e379364e007da3310a1a8e4ff27258ca8",
+      "event_type": "commencement",
+      "event_year": 2007,
+      "event_date": "2007-01-01",
+      "date_precision": "day",
+      "source_locator": "1 ja 32 §",
+      "interpretation": "TyEL:n ja sen voimaanpanolain alku.",
+      "parameters": {
+        "batch_key": "legislation_bounded_20261020"
+      }
+    }
+  ],
+  "arcs": [
+    {
+      "from_statute_id": "1937/248",
+      "to_statute_id": "1956/347",
+      "relation_type": "successor",
+      "source_item_id": "kansanelakelaki-1937",
+      "source_year": 1937,
+      "target_year": 1956,
+      "confidence": "vahva",
+      "status": "confirmed",
+      "evidence": "347/1956 94–99 §; nimenomainen kumoaminen ja etuuksien muunto. https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/1956/347/fin%40"
+    },
+    {
+      "from_statute_id": "1956/347",
+      "to_statute_id": "2007/568",
+      "relation_type": "successor",
+      "source_item_id": "kansanelakeuudistus-1956",
+      "source_year": 1956,
+      "target_year": 2007,
+      "confidence": "vahva",
+      "status": "confirmed",
+      "evidence": "569/2007 1 §; nimenomainen kumoaminen ja uuden lain soveltaminen aiempiin etuuksiin. https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2007/569/fin%40"
+    },
+    {
+      "from_statute_id": "1961/395",
+      "to_statute_id": "2006/395",
+      "relation_type": "successor",
+      "source_item_id": "tyoelake-1961",
+      "source_year": 1961,
+      "target_year": 2006,
+      "confidence": "vahva",
+      "status": "confirmed",
+      "evidence": "396/2006 1–2 §; nimenomainen TEL:n ja LEL:n kumoaminen. https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2006/396/fin%40"
+    },
+    {
+      "from_statute_id": "1962/134",
+      "to_statute_id": "2006/395",
+      "relation_type": "successor",
+      "source_item_id": "tyoelake-1961",
+      "source_year": 1962,
+      "target_year": 2006,
+      "confidence": "vahva",
+      "status": "confirmed",
+      "evidence": "396/2006 1–2 §; nimenomainen TEL:n ja LEL:n kumoaminen. https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2006/396/fin%40"
+    },
+    {
+      "from_statute_id": "1987/380",
+      "to_statute_id": "2023/675",
+      "relation_type": "successor",
+      "source_item_id": "vammaispalvelulaki-1987",
+      "source_year": 1987,
+      "target_year": 2023,
+      "confidence": "vahva",
+      "status": "confirmed",
+      "evidence": "675/2023 41 § kumoaa 380/1987; 953/2023 siirtää yleisen voimaantulon 1.1.2025. https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2023/953/fin%40"
+    },
+    {
+      "from_statute_id": "2023/953",
+      "to_statute_id": "2023/675",
+      "relation_type": "amendment_parent",
+      "source_item_id": "uusi-vammaispalvelulaki-2025",
+      "source_year": 2023,
+      "target_year": 2023,
+      "confidence": "vahva",
+      "status": "confirmed",
+      "evidence": "953/2023 muuttaa 675/2023 41–42 §:ää. https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2023/953/fin%40"
+    }
+  ],
+  "funding_rules": [
+    {
+      "rule_key": "legislation_bounded_20261020:1918/135-001:state_redemption_financing",
+      "document_key": "1918/135-001:a606d9c057cc50ea421acb4b0c0cdcb46307194746c44e4009d6a970cc9f81fe",
+      "eid": "transcribed_sec_19",
+      "rule_type": "state_redemption_financing",
+      "parameters": {
+        "state_pays_landlord": true,
+        "bond_interest_percent": 5,
+        "repayment_section": "20 §",
+        "exception_section": "12 §",
+        "source_status": "historical_transcription"
+      },
+      "interpretation": "19 §: valtio maksaa säännöksen mukaisen lunastushinnan rahassa tai takaamissaan obligaatioissa. Valtion rahoitussuoritus ei sellaisenaan ole lopullinen avustusmeno; rajaukset ja takaisinmaksut huomioitava.",
+      "is_realized_expenditure": false
+    },
+    {
+      "rule_key": "legislation_bounded_20261020:1918/135-001:redemption_repayment",
+      "document_key": "1918/135-001:a606d9c057cc50ea421acb4b0c0cdcb46307194746c44e4009d6a970cc9f81fe",
+      "eid": "transcribed_sec_20",
+      "rule_type": "redemption_repayment",
+      "parameters": {
+        "annual_payment_percent_of_redemption_price": 6,
+        "interest_percent_of_outstanding_principal": 5,
+        "remainder": "principal_amortization",
+        "source_status": "historical_transcription"
+      },
+      "interpretation": "20 §: vuotuismaksu on 6 prosenttia lunastushinnasta; maksamatta olevalle pääomalle lasketaan 5 prosentin korko, loppu lyhentää pääomaa. Ei 6 prosentin korkolaina.",
+      "is_realized_expenditure": false
+    },
+    {
+      "rule_key": "legislation_bounded_20261020:1956/347:pension_supplement_cost_sharing",
+      "document_key": "1956/347:70630defd0d5ccf6bf1347848656600d0aaa62f37629fd3b803fc445fdca91e8",
+      "eid": "chp_6__sec_62",
+      "rule_type": "pension_supplement_cost_sharing",
+      "parameters": {
+        "municipal_cost_base_rates_percent": [
+          10,
+          15,
+          20,
+          25,
+          30
+        ],
+        "state": "remainder",
+        "base": "kunta-specific weighted share of national supplements, not simply municipality actual benefit expenditure"
+      },
+      "interpretation": "Alkuperäisen 62 §:n kuntaryhmäkohtaiset osuudet koskevat laissa määriteltyä laskennallista kustannusosuusperustetta; niitä ei sovelleta kaikkiin eläkemenoihin.",
+      "is_realized_expenditure": false
+    },
+    {
+      "rule_key": "legislation_bounded_20261020:1956/347:pension_other_costs_state_guarantee",
+      "document_key": "1956/347:70630defd0d5ccf6bf1347848656600d0aaa62f37629fd3b803fc445fdca91e8",
+      "eid": "chp_6__sec_63",
+      "rule_type": "pension_other_costs_state_guarantee",
+      "parameters": {
+        "primary_revenue": [
+          "insurance_contributions",
+          "asset_income"
+        ],
+        "state": "shortfall",
+        "excludes_sections": [
+          "58",
+          "62"
+        ]
+      },
+      "interpretation": "63 §: muut kuin 58 ja 62 §:n kustannukset rahoitetaan vakuutusmaksuilla ja omaisuuden tuotolla; puuttuva osa valtion varoista. Toteutunut alijäämä ei ilmene säännöksestä.",
+      "is_realized_expenditure": false
+    },
+    {
+      "rule_key": "legislation_bounded_20261020:1961/395:employer_minimum_pension_obligation",
+      "document_key": "1961/395:e8efa716fdf7b0ea1bfb359b826a572e550c9582eb1da040a089c7ede566b6ee",
+      "eid": "sec_1",
+      "rule_type": "employer_minimum_pension_obligation",
+      "parameters": {
+        "payer": "employer",
+        "minimum_age": 18,
+        "continuous_employment_months": 6,
+        "eligibility_exceptions": "1 §"
+      },
+      "interpretation": "Alkuperäisen TEL:n 1 § velvoittaa työnantajan järjestämään ja kustantamaan vähimmäisturvan laissa rajatulle työntekijäjoukolle. Tämä ei ole nykyisen työeläkemaksun tai nykyisen kattavuuden kuvaus.",
+      "is_realized_expenditure": false
+    }
+  ],
+  "unresolved": [
+    "Original 1937/248 statute text and commencement remain missing.",
+    "1945/396 historical excerpt is partial; original full text, finance and commencement remain missing.",
+    "1945/506 evidence is archive context, not original decree text.",
+    "Historical transcriptions have not been checked against facsimiles.",
+    "2023/675 plus 953/2023 is a selected chain, not a complete consolidated statement of 2025 or 2026 law.",
+    "No causal impact estimates or realized expenditure derived from these legal rules."
+  ]
+}
