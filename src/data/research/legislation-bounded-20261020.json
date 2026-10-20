@@ -617,7 +617,10 @@
       "source_locator": "41 §",
       "interpretation": "Lain 675/2023 voimaantulo sellaisena kuin 953/2023 sen muutti.",
       "parameters": {
-        "batch_key": "legislation_bounded_20261020"
+        "batch_key": "legislation_bounded_20261020",
+        "target_statute_id": "2023/675",
+        "source_amendment_id": "2023/953",
+        "scope": "commencement_as_amended_by_953_2023_not_complete_current_law"
       }
     },
     {
