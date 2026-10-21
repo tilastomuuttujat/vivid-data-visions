@@ -35,6 +35,10 @@ const MechanismTimeline = lazy(() =>
   import("../mechanisms/MechanismTimeline").then((m) => ({ default: m.MechanismTimeline })),
 );
 
+const EvidenceExplorer = lazy(() =>
+  import("./EvidenceExplorer").then((m) => ({ default: m.EvidenceExplorer })),
+);
+
 type Focus = { from: number; to: number; title: string; sub: string };
 const Q = [
   ["vahvistui", "Mikä vahvistui?"],
@@ -60,6 +64,7 @@ export function Murrokset() {
     | "systeemi"
     | "kunnat"
     | "mekanismit"
+    | "naytto"
   >("maisema");
   const [networkDecision, setNetworkDecision] = useState("d050");
   const [networkFocus, setNetworkFocus] = useState<string | undefined>();
@@ -157,10 +162,22 @@ export function Murrokset() {
             >
               Kuntien yhteydet
             </button>
+            <button
+              role="tab"
+              aria-selected={mode === "naytto"}
+              className={mode === "naytto" ? "on" : ""}
+              onClick={() => setMode("naytto")}
+            >
+              Näyttö ja toteutuminen
+            </button>
           </div>
         </div>
 
-        {mode === "mekanismit" ? (
+        {mode === "naytto" ? (
+          <Suspense fallback={<p role="status">Ladataan näyttöä ja toteutumistietoja…</p>}>
+            <EvidenceExplorer />
+          </Suspense>
+        ) : mode === "mekanismit" ? (
           <Suspense fallback={<p role="status">Ladataan kehityspolkuja…</p>}>
             <MechanismTimeline onExplore={exploreDecision} />
           </Suspense>

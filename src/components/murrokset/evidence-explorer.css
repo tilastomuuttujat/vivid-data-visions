@@ -1,0 +1,135 @@
+.ev {
+  color: var(--v-text, #dfe9ee);
+  margin: 2rem 0;
+  line-height: 1.6;
+}
+.ev h2 {
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+.ev h3 {
+  margin: 1rem 0 0.6rem;
+}
+.ev p {
+  margin: 0.5rem 0 1rem;
+}
+.ev-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.ev-controls label {
+  display: grid;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 220px;
+}
+.ev select {
+  max-width: 100%;
+  width: 100%;
+  padding: 0.7rem;
+  background: #172631;
+  color: #ecf4f5;
+  border: 1px solid #56727a;
+  border-radius: 6px;
+}
+.ev-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+.ev-panel {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid #38525c;
+  border-radius: 10px;
+  background: #12212bc9;
+  margin: 1rem 0;
+}
+.ev svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.ev svg text {
+  font-size: 12px;
+  fill: currentColor;
+}
+.ev-table {
+  overflow-x: auto;
+}
+.ev table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+.ev th,
+.ev td {
+  padding: 0.6rem;
+  border-bottom: 1px solid #38525c;
+  vertical-align: top;
+}
+.ev caption {
+  text-align: left;
+  font-weight: 600;
+}
+.ev summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+.ev a {
+  color: #80e4ed;
+  overflow-wrap: anywhere;
+}
+.ev-note,
+.ev small {
+  font-size: 0.85rem;
+  color: #afc3cc;
+}
+.ev-events {
+  padding-left: 1.25rem;
+}
+.ev-events li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #38525c;
+}
+.ev-record {
+  border-top: 1px solid #38525c;
+  padding: 0.4rem 0;
+}
+.ev-fact {
+  padding: 0.8rem;
+  margin: 0.8rem 0;
+  border-left: 3px solid #66d6df;
+  background: #1a303b;
+}
+.ev-alert {
+  padding: 0.8rem;
+  border-left: 3px solid #f4bd4f;
+  background: #443619;
+}
+.ev code {
+  overflow-wrap: anywhere;
+}
+.ev button:focus-visible,
+.ev select:focus-visible,
+.ev summary:focus-visible {
+  outline: 3px solid #f4bd4f;
+  outline-offset: 3px;
+}
+@media (max-width: 850px) {
+  .ev-grid {
+    grid-template-columns: 1fr;
+  }
+  .ev-panel {
+    padding: 1rem;
+  }
+  .ev-controls label {
+    min-width: 0;
+    flex-basis: 100%;
+  }
+}
