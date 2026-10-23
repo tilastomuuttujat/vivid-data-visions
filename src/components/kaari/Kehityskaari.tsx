@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MainLinks } from "@/components/MainLinks";
 import { evidence, type Metric } from "@/components/murrokset/evidence-model";
-import { ERAS, LINE_TURNS, LINES, NOW, TURNS, YEAR_MAX, YEAR_MIN, episodeFor, levelAt, type Turn } from "./kaari-model";
+import { ERAS, LINE_TURNS, LINES, NOW, TURNS, YEAR_MAX, YEAR_MIN, episodeFor, type Turn } from "./kaari-model";
 import "./kaari.css";
 
 const W = 1000;
@@ -19,6 +19,29 @@ function linePath(points: [number, number][]) {
       return `C${mx},${y(pv)} ${mx},${y(v)} ${x(yr)},${y(v)}`;
     })
     .join(" ");
+}
+
+/** Exact SVG y on the drawn Bézier curve at a given year (solves the cubic for x). */
+function curveY(points: [number, number][], year: number) {
+  const X = x(year);
+  for (let i = 1; i < points.length; i++) {
+    const [py, pv] = points[i - 1]!;
+    const [cyr, cv] = points[i]!;
+    const x0 = x(py), x3 = x(cyr);
+    if (X > x3 && i < points.length - 1) continue;
+    const mx = (x0 + x3) / 2;
+    let lo = 0, hi = 1, t = 0.5;
+    for (let k = 0; k < 40; k++) {
+      t = (lo + hi) / 2;
+      const u = 1 - t;
+      const bx = u * u * u * x0 + 3 * u * u * t * mx + 3 * u * t * t * mx + t * t * t * x3;
+      if (bx < X) lo = t; else hi = t;
+    }
+    const u = 1 - t;
+    const y0 = y(pv), y3 = y(cv);
+    return u * u * u * y0 + 3 * u * u * t * y0 + 3 * u * t * t * y3 + t * t * t * y3;
+  }
+  return y(points.at(-1)![1]);
 }
 
 function Spark({ m }: { m: Metric }) {
@@ -145,17 +168,16 @@ export function Kehityskaari() {
             <path key={l.id} d={linePath(l.points)} stroke={l.tone} className={`k-line ${focus && focus !== l.id ? "dim" : ""}`} />
           ))}
           {turns.map((t) => {
-            const lv = focus
-              ? levelAt(LINES.find((l) => l.id === focus)!, t.year)
-              : Math.max(...t.lines.map((id) => levelAt(LINES.find((l) => l.id === id)!, t.year)));
-            const tone = focus ? LINES.find((l) => l.id === focus)!.tone : undefined;
+            const cy = focus
+              ? curveY(LINES.find((l) => l.id === focus)!.points, t.year)
+              : [...LINES.map((l) => curveY(l.points, t.year))].sort((a, b) => a - b)[1]!;
             const active = sel?.id === t.id;
             return (
               <g key={t.id} className={`k-turn ${active ? "on" : ""}`} tabIndex={0} role="button" aria-label={`${t.year} ${t.title}`}
                 onClick={() => pick(t)} onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && pick(t)}>
-                <line x1={x(t.year)} x2={x(t.year)} y1={focus ? y(lv) : y(lv) - 14} y2={H - PAD.b} className="k-turn-stem" />
-                {focus ? <circle cx={x(t.year)} cy={y(lv)} r={active ? 8 : 5.5} style={{ fill: tone }} /> : <circle cx={x(t.year)} cy={y(lv) - 14} r={active ? 9 : 6} />}
-                <text x={x(t.year)} y={y(lv) - 28} textAnchor="middle">{t.year}</text>
+                <line x1={x(t.year)} x2={x(t.year)} y1={cy} y2={H - PAD.b} className="k-turn-stem" />
+                <circle cx={x(t.year)} cy={cy} r={active ? 8 : 6} />
+                <text x={x(t.year)} y={cy - 14} textAnchor="middle">{t.year}</text>
               </g>
             );
           })}
