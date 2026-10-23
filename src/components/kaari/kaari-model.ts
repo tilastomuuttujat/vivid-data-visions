@@ -53,6 +53,34 @@ export const TURNS: Turn[] = [
   { id: "t2022", year: 2022, title: "Hintashokki ja turvallisuusmurros", happened: "Energia ja hinnat nousevat, ostovoima laskee.", mechanism: "Ulkoinen shokki osuu supistuvaan työvoimaan ja jo valmiiksi kireään julkiseen talouteen.", later: "Kysymys siirtyy siitä mitä luvataan siihen, minkä varaan lupaukset voidaan rakentaa.", lines: ["kantokyky", "turva"], episode: "price_shock_2022_2023" },
 ];
 
+/** Line-specific turning points shown when one force is focused. Years are editorial anchors; episode "" = no evidence panel. */
+const lt = (line: string, year: number, title: string, happened: string, mechanism: string, later: string): Turn =>
+  ({ id: `${line}-${year}`, year, title, happened, mechanism, later, lines: [line], episode: "" });
+
+export const LINE_TURNS: Record<string, Turn[]> = {
+  tuotanto: [
+    lt("tuotanto", 1870, "Höyrysahat ja metsäteollisuus", "Sahateollisuus vapautetaan, vienti kasvaa.", "Metsästä tulee viennin ja pääoman kivijalka.", "Raaka-ainevetoinen vientirakenne kantaa vuosisadan."),
+    lt("tuotanto", 1944, "Sotakorvausteollisuus", "Sotakorvaukset pakottavat konepajateollisuuden kasvuun.", "Metalli- ja konepajaosaaminen syntyy nopeasti valtion ohjauksessa.", "Teollinen pohja kantaa jälleenrakennuksen ja idänkaupan."),
+    lt("tuotanto", 1991, "Laman tuotantoromahdus", "Idänkauppa loppuu, konkursseja ja joukkotyöttömyyttä.", "Devalvaatiot ja karsinta nostavat tuottavuutta rajusti.", "Tuotanto keskittyy harvoihin vientiklustereihin."),
+    lt("tuotanto", 2007, "Nokian huippu", "ICT-klusteri tuottaa ison osan tuottavuuskasvusta.", "Kasvu nojaa yhteen klusteriin.", "Haavoittuvuus paljastuu, kun klusteri romahtaa."),
+    lt("tuotanto", 2015, "Tuottavuuskuoppa", "Tuotanto ei palaa vuoden 2008 tasolle.", "Uutta laajaa kasvualaa ei synny Nokian tilalle.", "Pysähtynyt tuottavuus kiristää julkista taloutta."),
+  ],
+  turva: [
+    lt("turva", 1921, "Torpparivapautus ja oppivelvollisuus", "Maareformi ja oppivelvollisuus sodan jälkeen.", "Ristiriitaa puretaan laajentamalla omistusta ja sivistystä.", "Laaja luottamus instituutioihin."),
+    lt("turva", 1937, "Kansaneläke", "Ensimmäinen yleinen eläkejärjestelmä.", "Turva alkaa siirtyä perheeltä valtiolle.", "Universaalin turvan malli juurtuu."),
+    lt("turva", 1966, "Hyvinvointivaltion lakipaketti", "TEL 1961, peruskoulu 1968, kansanterveyslaki 1972.", "Laaja turva mitoitetaan kasvavalle väestölle.", "Rakenne on tämän päivän kestävyysvajeen juuri."),
+    lt("turva", 1993, "Laman leikkauslogiikka", "Perheiltä, kouluilta ja mielenterveydeltä leikataan.", "Riski siirtyy kotitalouksille.", "Pitkät seuraukset näkyvät palvelutarpeena."),
+    lt("turva", 2023, "Hyvinvointialueet", "Sote siirtyy kunnilta alueille.", "Rahoitus valtiolta, vastuu alueilla.", "Lupausten ja rahoituksen kuilu tulee näkyviin."),
+  ],
+  kantokyky: [
+    lt("kantokyky", 1868, "Nälkävuodet", "Kuolleisuuspiikki ja väestökato.", "Väestö haavoittuu toimeentulon häiriöille.", "Paikallinen vastuu toimeentulosta vahvistuu."),
+    lt("kantokyky", 1947, "Suuret ikäluokat", "Ennätyksellinen syntyvyys sodan jälkeen.", "Poikkeuksellisen suuri työvoima 1970–2010.", "Sama ikäluokka eläköityy 2010-luvulla."),
+    lt("kantokyky", 1970, "Muutto Ruotsiin ja kaupunkeihin", "Maaseutu tyhjenee nopeasti.", "Työvoima keskittyy kasvukeskuksiin.", "Alueellinen kantokyky eriytyy."),
+    lt("kantokyky", 2010, "Syntyvyys kääntyy laskuun", "Syntyvyys alkaa pudota ja eläköityminen kiihtyy.", "Huoltosuhde heikkenee kahdesta suunnasta.", "Työikäisiä on yhä vähemmän lupausten kantajiksi."),
+    lt("kantokyky", 2024, "Huoltosuhteen kiristyminen", "Hoivan tarve kasvaa, työikäiset vähenevät.", "Palvelut ja verotulot ajautuvat ristiin.", "Kysymys: minkä varaan lupaukset rakennetaan."),
+  ],
+};
+
 export const ERAS = [
   { from: 1860, to: 1955, label: "Perustan rakentaminen" },
   { from: 1955, to: 1987, label: "Kultainen arkkitehtuuri" },

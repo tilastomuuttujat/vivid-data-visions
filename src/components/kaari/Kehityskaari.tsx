@@ -34,7 +34,12 @@ function Spark({ m }: { m: Metric }) {
   return (
     <svg viewBox="0 0 280 64" className="k-spark" aria-hidden>
       <rect x={sx(m.shock.window[0])} width={Math.max(2, sx(m.shock.window[1]) - sx(m.shock.window[0]))} y={0} height={64} className="k-spark-shock" />
-      <polyline points={obs.map((o) => `${sx(o.year)},${sy(o.value)}`).join(" ")} />
+      <path d={obs.map((o, i) => {
+        if (i === 0) return `M${sx(o.year)},${sy(o.value)}`;
+        const p = obs[i - 1]!;
+        const mx = (sx(p.year) + sx(o.year)) / 2;
+        return `C${mx},${sy(p.value)} ${mx},${sy(o.value)} ${sx(o.year)},${sy(o.value)}`;
+      }).join(" ")} />
     </svg>
   );
 }
