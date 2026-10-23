@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MainLinks } from "@/components/MainLinks";
 import { evidence, type Metric } from "@/components/murrokset/evidence-model";
-import { ERAS, LINE_TURNS, LINES, NOW, TURNS, YEAR_MAX, YEAR_MIN, episodeFor, levelAt, type Turn } from "./kaari-model";
+import { ERAS, LINE_TURNS, LINES, NOW, TURNS, YEAR_MAX, YEAR_MIN, episodeFor, type Turn } from "./kaari-model";
 import "./kaari.css";
 
 const W = 1000;
