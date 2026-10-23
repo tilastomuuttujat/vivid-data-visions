@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MainLinks } from "@/components/MainLinks";
 import { evidence, type Metric } from "@/components/murrokset/evidence-model";
-import { ERAS, LINES, NOW, TURNS, YEAR_MAX, YEAR_MIN, episodeFor, levelAt, type Turn } from "./kaari-model";
+import { ERAS, LINE_TURNS, LINES, NOW, TURNS, YEAR_MAX, YEAR_MIN, episodeFor, levelAt, type Turn } from "./kaari-model";
 import "./kaari.css";
 
 const W = 1000;
@@ -108,6 +108,8 @@ export function Kehityskaari() {
   const [focus, setFocus] = useState<string | null>(null);
 
   const pick = (t: Turn) => { setSel(t); setDeep(false); };
+  const turns = focus ? LINE_TURNS[focus] ?? TURNS : TURNS;
+  const toggleFocus = (id: string) => { setFocus(focus === id ? null : id); setSel(null); setDeep(false); };
 
   return (
     <div className="k-page">
@@ -120,7 +122,7 @@ export function Kehityskaari() {
 
       <div className="k-legend">
         {LINES.map((l) => (
-          <button key={l.id} className={focus === l.id ? "on" : ""} style={{ ["--c" as string]: l.tone }} onClick={() => setFocus(focus === l.id ? null : l.id)}>
+          <button key={l.id} className={focus === l.id ? "on" : ""} style={{ ["--c" as string]: l.tone }} onClick={() => toggleFocus(l.id)}>
             <i /> <span><b>{l.label}</b>{l.question}</span>
           </button>
         ))}
@@ -142,14 +144,17 @@ export function Kehityskaari() {
           {LINES.map((l) => (
             <path key={l.id} d={linePath(l.points)} stroke={l.tone} className={`k-line ${focus && focus !== l.id ? "dim" : ""}`} />
           ))}
-          {TURNS.map((t) => {
-            const lv = Math.max(...t.lines.map((id) => levelAt(LINES.find((l) => l.id === id)!, t.year)));
+          {turns.map((t) => {
+            const lv = focus
+              ? levelAt(LINES.find((l) => l.id === focus)!, t.year)
+              : Math.max(...t.lines.map((id) => levelAt(LINES.find((l) => l.id === id)!, t.year)));
+            const tone = focus ? LINES.find((l) => l.id === focus)!.tone : undefined;
             const active = sel?.id === t.id;
             return (
               <g key={t.id} className={`k-turn ${active ? "on" : ""}`} tabIndex={0} role="button" aria-label={`${t.year} ${t.title}`}
                 onClick={() => pick(t)} onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && pick(t)}>
-                <line x1={x(t.year)} x2={x(t.year)} y1={y(lv) - 14} y2={H - PAD.b} className="k-turn-stem" />
-                <circle cx={x(t.year)} cy={y(lv) - 14} r={active ? 9 : 6} />
+                <line x1={x(t.year)} x2={x(t.year)} y1={focus ? y(lv) : y(lv) - 14} y2={H - PAD.b} className="k-turn-stem" />
+                {focus ? <circle cx={x(t.year)} cy={y(lv)} r={active ? 8 : 5.5} style={{ fill: tone }} /> : <circle cx={x(t.year)} cy={y(lv) - 14} r={active ? 9 : 6} />}
                 <text x={x(t.year)} y={y(lv) - 28} textAnchor="middle">{t.year}</text>
               </g>
             );
@@ -159,17 +164,17 @@ export function Kehityskaari() {
 
       {sel ? (
         <section className="k-card" aria-live="polite">
-          <p className="k-kicker">{sel.year} · Mekanismi</p>
+          <p className="k-kicker">{sel.year} · {focus ? `${LINES.find((l) => l.id === focus)!.label} – oma käänne` : "Yhteinen käänne · mekanismi"}</p>
           <h2>{sel.title}</h2>
           <div className="k-steps">
             <div><h4>Mitä tapahtui</h4><p>{sel.happened}</p></div>
             <div><h4>Mikä muuttui</h4><p>{sel.mechanism}</p></div>
             <div><h4>Mitä seurasi viiveellä</h4><p>{sel.later}</p></div>
           </div>
-          <button className="k-open" onClick={() => setDeep(true)}>Avaa tilastot ja säädökset →</button>
+          {episodeFor(sel) && <button className="k-open" onClick={() => setDeep(true)}>Avaa tilastot ja säädökset →</button>}
         </section>
       ) : (
-        <p className="k-hint">Valitse käänne aikajanalta.</p>
+        <p className="k-hint">{focus ? "Näet nyt valitun voiman omat käännekohdat. Klikkaa voimaa uudelleen palataksesi seitsemään yhteiseen käänteeseen." : "Seitsemän yhteistä käännettä. Valitse voima yläpuolelta nähdäksesi sen omat käännekohdat."}</p>
       )}
 
       {sel && deep && <DeepPanel turn={sel} onClose={() => setDeep(false)} />}
