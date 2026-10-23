@@ -6,6 +6,7 @@ const pages = [
   { to: "/observatorio", label: "Observatorio" },
   { to: "/planeetta", label: "Planeetta" },
   { to: "/laboratorio", label: "Laboratorio" },
+  { to: "/teemavertailu", label: "Teemavertailu" },
   { to: "/murrokset", label: "Murrokset" },
   { to: "/kehityskaari", label: "Kehityskaari" },
 ] as const;
