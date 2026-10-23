@@ -15,6 +15,7 @@ import { Planeetta } from "@/components/planeetta/Planeetta";
 import { Laboratorio } from "@/components/planeetta/Laboratorio";
 import { Murrokset } from "@/components/murrokset/Murrokset";
 import { Kehityskaari } from "@/components/kaari/Kehityskaari";
+import { Teemavertailu } from "@/components/teemavertailu/Teemavertailu";
 import { AdminBar } from "@/components/editor/AdminBar";
 
 const rootRoute = createRootRoute({
@@ -44,6 +45,7 @@ const routes = [
   createRoute({ getParentRoute: () => rootRoute, path: "/laboratorio", component: Laboratorio }),
   createRoute({ getParentRoute: () => rootRoute, path: "/murrokset", component: Murrokset }),
   createRoute({ getParentRoute: () => rootRoute, path: "/kehityskaari", component: Kehityskaari }),
+  createRoute({ getParentRoute: () => rootRoute, path: "/teemavertailu", component: Teemavertailu }),
 ];
 const router = createRouter({
   routeTree: rootRoute.addChildren(routes),
