@@ -7,6 +7,7 @@ const pages = [
   { to: "/planeetta", label: "Planeetta" },
   { to: "/laboratorio", label: "Laboratorio" },
   { to: "/murrokset", label: "Murrokset" },
+  { to: "/kehityskaari", label: "Kehityskaari" },
 ] as const;
 
 export function MainLinks({

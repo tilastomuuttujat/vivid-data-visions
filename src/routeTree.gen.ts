@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as KehityskaariRouteImport } from './routes/kehityskaari'
 import { Route as LaboratorioRouteImport } from './routes/laboratorio'
 import { Route as MinkaVaraanRouteImport } from './routes/minka-varaan'
 import { Route as MurroksetRouteImport } from './routes/murrokset'
@@ -19,6 +20,11 @@ import { Route as PlaneettaRouteImport } from './routes/planeetta'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KehityskaariRoute = KehityskaariRouteImport.update({
+  id: '/kehityskaari',
+  path: '/kehityskaari',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LaboratorioRoute = LaboratorioRouteImport.update({
@@ -49,6 +55,7 @@ const PlaneettaRoute = PlaneettaRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kehityskaari': typeof KehityskaariRoute
   '/laboratorio': typeof LaboratorioRoute
   '/minka-varaan': typeof MinkaVaraanRoute
   '/murrokset': typeof MurroksetRoute
@@ -57,6 +64,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kehityskaari': typeof KehityskaariRoute
   '/laboratorio': typeof LaboratorioRoute
   '/minka-varaan': typeof MinkaVaraanRoute
   '/murrokset': typeof MurroksetRoute
@@ -66,6 +74,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kehityskaari': typeof KehityskaariRoute
   '/laboratorio': typeof LaboratorioRoute
   '/minka-varaan': typeof MinkaVaraanRoute
   '/murrokset': typeof MurroksetRoute
@@ -76,6 +85,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/kehityskaari'
     | '/laboratorio'
     | '/minka-varaan'
     | '/murrokset'
@@ -84,6 +94,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/kehityskaari'
     | '/laboratorio'
     | '/minka-varaan'
     | '/murrokset'
@@ -92,6 +103,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/kehityskaari'
     | '/laboratorio'
     | '/minka-varaan'
     | '/murrokset'
@@ -101,6 +113,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KehityskaariRoute: typeof KehityskaariRoute
   LaboratorioRoute: typeof LaboratorioRoute
   MinkaVaraanRoute: typeof MinkaVaraanRoute
   MurroksetRoute: typeof MurroksetRoute
@@ -115,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kehityskaari': {
+      id: '/kehityskaari'
+      path: '/kehityskaari'
+      fullPath: '/kehityskaari'
+      preLoaderRoute: typeof KehityskaariRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/laboratorio': {
@@ -157,6 +177,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KehityskaariRoute: KehityskaariRoute,
   LaboratorioRoute: LaboratorioRoute,
   MinkaVaraanRoute: MinkaVaraanRoute,
   MurroksetRoute: MurroksetRoute,
