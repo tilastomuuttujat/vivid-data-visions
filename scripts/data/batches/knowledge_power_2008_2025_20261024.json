@@ -1,0 +1,874 @@
+{
+  "batch_id": "knowledge_power_2008_2025_20261024",
+  "taxonomy_id": "knowledge_power_taxonomy_v1",
+  "title": "Tieto ja valta Suomessa 2008–2025",
+  "period": [
+    2008,
+    2025
+  ],
+  "primary_theme_id": 29,
+  "taxonomy": {
+    "access": "Tiedon saavutettavuus",
+    "language_access": "Kielellinen pääsy tietoon",
+    "credential_gatekeeping": "Tutkinnot ja muodolliset pääsyehdot",
+    "knowledge_production": "Tiedon ja käsitteiden tuottaminen",
+    "classification_power": "Luokittelun ja tiedonkeruun valinnat",
+    "distribution_gatekeeping": "Julkaisemisen ja jakelun portinvartijuus",
+    "expert_recognition": "Asiantuntijuuden ja tunnustuksen valinta",
+    "institutional_use": "Tiedon käyttö hallinnossa ja päätöksenteossa",
+    "alternative_publics": "Vaihtoehtoiset sivistys- ja julkaisukanavat"
+  },
+  "selection": "Rajattu mekanismien monipuolisuutta tavoitteleva laadullinen erä; ei edustava otos kaikesta tiedontuotannosta.",
+  "sources": [
+    {
+      "source_id": "univ",
+      "title": "Yliopistolaki 558/2009; historiallinen versio",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/2009/558/muutoshistoria/20150278",
+      "locator": "Antopäivä ja voimaantulo; ei vuoden2015 muutosten ajoittamista vuoteen2009",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_legal_excerpt_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "social",
+      "title": "Sosiaalinen media: verkkomedian ja yhteisöpalvelujen käyttö2010",
+      "publisher_or_author": "Tilastokeskus",
+      "url": "https://stat.fi/til/sutivi/2010/sutivi_2010_2010-10-26_kat_003_fi.html",
+      "locator": "Internetin yhteisöpalvelut; rekisteröityminen keväällä2010",
+      "source_type": "official_statistical_release",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "maps",
+      "title": "Maanmittauslaitoksen avoimien aineistojen jakelu avattu Karttapaikka-palveluun",
+      "publisher_or_author": "Maanmittauslaitos2.2.2023",
+      "url": "https://www.sttinfo.fi/tiedote/69964325/maanmittauslaitoksen-avoimien-aineistojen-jakelu-avattu-karttapaikka-palveluun?publisherId=69817990",
+      "locator": "Aineistoja ladattu avoimesti vuodesta2012",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "initiative",
+      "title": "Kansalaisaloitelaki12/2012",
+      "publisher_or_author": "Finlex",
+      "url": "https://finlex.fi/fi/lainsaadanto/2012/12",
+      "locator": "17 § voimaantulo; verkkopalvelun erillinen ajankohta",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_legal_excerpt_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "att",
+      "title": "Avoimen tieteen ja tutkimuksen tiekartta2014–2017",
+      "publisher_or_author": "Opetus- ja kulttuuriministeriö2014",
+      "url": "https://julkaisut.valtioneuvosto.fi/items/53d98f7b-9d15-451f-9b7e-e19f5c1d2902",
+      "locator": "Julkaisun tiivistelmä; avoimuuden tavoitteet",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_abstract_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "stn",
+      "title": "Laki Suomen Akatemiasta;5b §2014",
+      "publisher_or_author": "Finlex",
+      "url": "https://finlex.fi/fi/lainsaadanto/2009/922/muutoshistoria/20180213",
+      "locator": "5b § lisätty27.6.2014/482;teemat ja hankkeiden valinta",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_legal_excerpt_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "gdpr",
+      "title": "Legal Framework",
+      "publisher_or_author": "Euroopan tietosuojaneuvosto",
+      "url": "https://www.edpb.europa.eu/about-edpb/legal-framework_en",
+      "locator": "Voimaantulo24.5.2016;soveltaminen25.5.2018",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "media",
+      "title": "Medialukutaito Suomessa",
+      "publisher_or_author": "Kansallinen audiovisuaalinen instituutti",
+      "url": "https://kavi.fi/mediakasvatus/medialukutaito-suomessa/",
+      "locator": "Vuoden2019 kansalliset linjaukset",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "lumi",
+      "title": "LUMI is solving global challenges and promoting a green transformation",
+      "publisher_or_author": "LUMI/CSC13.6.2022",
+      "url": "https://lumi-supercomputer.eu/lumi-europes-most-powerful-supercomputer-is-solving-global-challenges-and-promoting-a-green-transformation/",
+      "locator": "Kajaanin avajaiset; resurssien hakeminen",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "chatgpt",
+      "title": "Introducing ChatGPT",
+      "publisher_or_author": "OpenAI30.11.2022",
+      "url": "https://openai.com/index/chatgpt/",
+      "locator": "Julkaisu ja Limitations",
+      "source_type": "provider_launch_announcement",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "dsa",
+      "title": "Digital Services Act:Questions and Answers",
+      "publisher_or_author": "Euroopan komissio",
+      "url": "https://digital-strategy.ec.europa.eu/en/faqs/digital-services-act-questions-and-answers",
+      "locator": "Yleinen soveltaminen17.2.2024;suuret alustat aiemmin;poikkeukset",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_official_explanation_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "ai2024",
+      "title": "Background material:The Artificial Intelligence Act",
+      "publisher_or_author": "Opetushallitus",
+      "url": "https://www.oph.fi/en/teemat-ja-kehittaminen/backround-material-artificial-intelligence-act",
+      "locator": "Voimaantulo1.8.2024 ja vuoden2025 soveltamisvaiheet",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_official_explanation_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "ailiteracy",
+      "title": "First rules of the Artificial Intelligence Act are now applicable",
+      "publisher_or_author": "Euroopan komissio/JRC",
+      "url": "https://knowledge4policy.ec.europa.eu/news/first-rules-artificial-intelligence-act-are-now-applicable_en",
+      "locator": "Soveltaminen2.2.2025",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "gpai",
+      "title": "EU rules on general-purpose AI models start to apply",
+      "publisher_or_author": "Euroopan komissio1.8.2025",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-rules-general-purpose-ai-models-start-apply-bringing-more-transparency-safety-and-accountability",
+      "locator": "2.8.2025 alkavat velvoitteet;vanhojen mallien siirtymä2.8.2027",
+      "source_type": "official_policy_law_or_institutional_source",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_official_release_checked",
+      "contemporaneous_primary_source": true
+    }
+  ],
+  "entries": [
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:univ2009",
+      "primary_item_id": "education_needs_2009_2025_20261023:univ2009",
+      "reuse_existing_item": true,
+      "title": "Yliopistolaki uudistaa yliopistojen institutionaalista kehystä",
+      "year_start": 2009,
+      "year_end": 2010,
+      "theme_ids": [
+        4,
+        8,
+        14,
+        29
+      ],
+      "dimension_codes": [
+        "institutional_use",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "univ"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:univ2009:1",
+          "year": 2009,
+          "statement": "Yliopistolaki 558/2009 annettiin 24.7.2009 ja tuli voimaan 1.1.2010.",
+          "source_ids": [
+            "univ"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Hallinnon ja rahoituksen järjestäminen voi muuttaa tiedontuotannon toimintaedellytyksiä.",
+      "case_limitations": "Tässä vahvistettu säädös ja ajoitus. Ei päätelmää tutkimuksen vapauden kasvusta tai heikkenemisestä ilman toimeenpanon ja rahoitusmallin erillistä analyysiä.",
+      "gatekeepers": [
+        "lainsäätäjä",
+        "yliopistojen hallinto"
+      ],
+      "affected_groups": [
+        "tutkijat",
+        "opiskelijat"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:social2010",
+      "primary_item_id": "knowledge_power_2008_2025_20261024:social2010",
+      "reuse_existing_item": false,
+      "title": "Yhteisöpalveluista tulee merkittävä osallistumisen kanava",
+      "year_start": 2010,
+      "year_end": 2010,
+      "theme_ids": [
+        16,
+        25,
+        27,
+        29
+      ],
+      "dimension_codes": [
+        "alternative_publics",
+        "distribution_gatekeeping"
+      ],
+      "source_ids": [
+        "social"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:social2010:1",
+          "year": 2010,
+          "statement": "Keväällä 2010 johonkin yhteisöpalveluun oli rekisteröitynyt 42 prosenttia Suomen 16–74-vuotiaista.",
+          "source_ids": [
+            "social"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Julkaisemisen madaltuva kynnys voi avata uusia vaikuttaja-asemia samalla kun jakelu riippuu alustan rakenteista.",
+      "case_limitations": "Rekisteröityminen ei tarkoita aktiivista käyttöä tai poliittista vaikutusvaltaa. Yksi väestörajattu havainto, ei pitkä aikasarja tai arvio suosittelualgoritmien vaikutuksesta.",
+      "gatekeepers": [
+        "palvelualustat",
+        "käyttäjät"
+      ],
+      "affected_groups": [
+        "16–74-vuotiaat",
+        "sisällöntuottajat"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:maps2012",
+      "primary_item_id": "knowledge_power_2008_2025_20261024:maps2012",
+      "reuse_existing_item": false,
+      "title": "Maanmittauslaitoksen paikkatietoa avataan ladattavaksi",
+      "year_start": 2012,
+      "year_end": 2012,
+      "theme_ids": [
+        9,
+        10,
+        16,
+        20,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "maps"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:maps2012:1",
+          "year": 2012,
+          "statement": "Maanmittauslaitoksen mukaan avoimia paikkatietoaineistoja on voinut ladata vuodesta 2012.",
+          "source_ids": [
+            "maps"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Uudelleenkäytettävä julkinen aineisto voi antaa viranomaisten ulkopuolisille mahdollisuuden omiin analyyseihin.",
+      "case_limitations": "Vuoden 2023 aineistovalikoimaa tai käyttöliittymää ei siirretä kokonaisuudessaan vuoteen 2012. Kaikki kiinteistö- tai paikkatieto ei ole avointa.",
+      "gatekeepers": [
+        "Maanmittauslaitos",
+        "aineiston käyttäjät"
+      ],
+      "affected_groups": [
+        "tutkijat",
+        "yritykset",
+        "kansalaiset"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:initiative2012",
+      "primary_item_id": "cleavages_1995_2025_20261023:initiative2012",
+      "reuse_existing_item": true,
+      "title": "Kansalaisaloite avaa virallisen agendan ulkopuolisen lakialoitteen kanavan",
+      "year_start": 2012,
+      "year_end": 2012,
+      "theme_ids": [
+        8,
+        19,
+        25,
+        29
+      ],
+      "dimension_codes": [
+        "alternative_publics",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "initiative"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:initiative2012:1",
+          "year": 2012,
+          "statement": "Kansalaisaloitelaki tuli voimaan 1.3.2012; verkkopalvelua koskeva 8 § tuli voimaan 1.12.2012.",
+          "source_ids": [
+            "initiative"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Organisoitu kansalaistieto voi saada uuden väylän parlamentaariseen käsittelyyn.",
+      "case_limitations": "Aloitteen käsittely, hyväksyminen ja väitteiden paikkansapitävyys eri asioita. Myöhempiä 2019 muutoksia ei ajoiteta vuoteen 2012.",
+      "gatekeepers": [
+        "eduskunta",
+        "aloitteiden tekijät",
+        "allekirjoittajat"
+      ],
+      "affected_groups": [
+        "äänioikeutetut kansalaiset"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:att2014",
+      "primary_item_id": "knowledge_power_2008_2025_20261024:att2014",
+      "reuse_existing_item": false,
+      "title": "Avoimen tieteen tiekartta laajentaa avoimuuden tavoitteita",
+      "year_start": 2014,
+      "year_end": 2017,
+      "theme_ids": [
+        4,
+        14,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "att"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:att2014:1",
+          "year": 2014,
+          "statement": "Vuoden 2014 ATT-tiekartta tavoittelee tutkimustulosten, datan ja menetelmien saatavuutta etiikan ja oikeudellisten rajojen puitteissa.",
+          "source_ids": [
+            "att"
+          ],
+          "evidence_kind": "documented_programmatic_goal",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Tarkasteltavat aineistot ja menetelmät voivat vähentää luottamuksen riippuvuutta pelkästä asiantuntija-asemasta.",
+      "case_limitations": "Tavoiteasiakirja ei osoita toteutunutta avoimuutta tai tutkimusten toistettavuutta; varmennettu julkaisun indeksoitu tiivistelmä.",
+      "gatekeepers": [
+        "tutkimusorganisaatiot",
+        "rahoittajat",
+        "oikeudenhaltijat"
+      ],
+      "affected_groups": [
+        "tutkijat",
+        "tiedon käyttäjät"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:stn2014",
+      "primary_item_id": "knowledge_power_2008_2025_20261024:stn2014",
+      "reuse_existing_item": false,
+      "title": "Strategisen tutkimuksen teemat ja hankepäätökset jaetaan eri toimijoille",
+      "year_start": 2014,
+      "year_end": 2014,
+      "theme_ids": [
+        8,
+        14,
+        17,
+        29
+      ],
+      "dimension_codes": [
+        "institutional_use",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "stn"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:stn2014:1",
+          "year": 2014,
+          "statement": "Vuoden 2014 lainmuutoksella perustetun strategisen tutkimuksen neuvoston tehtäviin kuuluvat teema-aloitteet valtioneuvostolle ja ohjelmarakenne valtioneuvoston teemapäätöksen perusteella.",
+          "source_ids": [
+            "stn"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:stn2014:2",
+          "year": 2014,
+          "statement": "Neuvosto valitsee hankkeita yhteiskunnallisen merkityksen, vaikuttavuuden ja tutkimuksen laadun perusteella.",
+          "source_ids": [
+            "stn"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Rahoituksen teemoitus voi ohjata tutkittavien kysymysten valikoitumista ilman suoraa määräysvaltaa tutkimustuloksiin.",
+      "case_limitations": "Lakisääteinen toimivallan jako ei osoita tosiasiallista poliittista painostusta tai yksittäisten tulosten ohjaamista.",
+      "gatekeepers": [
+        "valtioneuvosto",
+        "strategisen tutkimuksen neuvosto"
+      ],
+      "affected_groups": [
+        "tutkijat",
+        "tutkimustiedon käyttäjät"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:gdpr2018",
+      "primary_item_id": "tietosuoja-asetus-2018",
+      "reuse_existing_item": true,
+      "title": "GDPR:n soveltaminen vahvistaa henkilötietojen käsittelyn yhteistä kehystä",
+      "year_start": 2018,
+      "year_end": 2018,
+      "theme_ids": [
+        8,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "classification_power",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "gdpr"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:gdpr2018:1",
+          "year": 2018,
+          "statement": "GDPR tuli voimaan 24.5.2016 ja sitä alettiin soveltaa 25.5.2018.",
+          "source_ids": [
+            "gdpr"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Tietosuojan valvonta ja oikeudet voivat rajoittaa tiedon kerääjien valtaa yksilöihin.",
+      "case_limitations": "Voimaantulo ja soveltaminen erotettu; aiemman kortin otsikkoa ei muutettu. Ei päätelmää profiloinnin päättymisestä tai kaikkien tietojen käsittelyn perustumisesta suostumukseen.",
+      "gatekeepers": [
+        "rekisterinpitäjät",
+        "valvontaviranomaiset"
+      ],
+      "affected_groups": [
+        "rekisteröidyt henkilöt"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:media2019",
+      "primary_item_id": "knowledge_power_2008_2025_20261024:media2019",
+      "reuse_existing_item": false,
+      "title": "Kansalliset medialukutaitolinjaukset vastaavat muuttuneeseen tietoympäristöön",
+      "year_start": 2019,
+      "year_end": 2019,
+      "theme_ids": [
+        4,
+        14,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "expert_recognition"
+      ],
+      "source_ids": [
+        "media"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:media2019:1",
+          "year": 2019,
+          "statement": "Opetus- ja kulttuuriministeriön kansallinen Medialukutaito Suomessa -linjausasiakirja julkaistiin 2019.",
+          "source_ids": [
+            "media"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Tiedon arvioinnin taidot voivat vaikuttaa siihen, miten ihmiset kykenevät haastamaan näkyviä mutta heikosti perusteltuja väitteitä.",
+      "case_limitations": "Linjaus ei osoita taitojen kasvua; ohjelman kattavuus ja vaikutukset väestöryhmittäin vaativat mittausta. Ei uuden virallisen totuuden määrittelyksi tulkintaa.",
+      "gatekeepers": [
+        "koulutus- ja mediakasvatustoimijat"
+      ],
+      "affected_groups": [
+        "median käyttäjät"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:lumi2022",
+      "primary_item_id": "vivid:local:kajaani-lumi",
+      "reuse_existing_item": true,
+      "title": "LUMI vahvistaa tutkimuksen laskennallista infrastruktuuria",
+      "year_start": 2022,
+      "year_end": 2022,
+      "theme_ids": [
+        4,
+        14,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "access"
+      ],
+      "source_ids": [
+        "lumi"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:lumi2022:1",
+          "year": 2022,
+          "statement": "LUMI-supertietokone vihittiin Kajaanissa 13.6.2022; eurooppalaiset tutkijat voivat hakea sen laskentaresursseja.",
+          "source_ids": [
+            "lumi"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Laskentakapasiteetin saatavuus voi vaikuttaa siihen, ketkä voivat tutkia suuria aineistoja ja kehittää malleja.",
+      "case_limitations": "Resurssin hakumahdollisuus ei ole rajaton tai yhtäläinen käyttöoikeus. Ei automaattista vaikutusta tutkimuksen laatuun.",
+      "gatekeepers": [
+        "EuroHPC",
+        "resurssien jakajat",
+        "CSC"
+      ],
+      "affected_groups": [
+        "tutkijat",
+        "yritysten tutkimusryhmät"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:chatgpt2022",
+      "primary_item_id": "tekoaly-murros",
+      "reuse_existing_item": true,
+      "title": "ChatGPT tuo generatiivisen kielimallin yleisölle keskustelupalveluna",
+      "year_start": 2022,
+      "year_end": 2022,
+      "theme_ids": [
+        4,
+        15,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "alternative_publics",
+        "expert_recognition"
+      ],
+      "source_ids": [
+        "chatgpt"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:chatgpt2022:1",
+          "year": 2022,
+          "statement": "OpenAI julkaisi ChatGPT:n 30.11.2022 maksuttomana tutkimusennakkona.",
+          "source_ids": [
+            "chatgpt"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:chatgpt2022:2",
+          "year": 2022,
+          "statement": "Julkaisun rajoituskuvaus varoittaa uskottavilta kuulostavista mutta virheellisistä vastauksista.",
+          "source_ids": [
+            "chatgpt"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Tekstin tuottamisen kynnys voi laskea ilman akateemista asemaa, mutta perusteltu tieto ja vakuuttava esitystapa voivat erkaantua.",
+      "case_limitations": "Yhden palvelun julkistus ei osoita Suomen väestön käyttöönottoa tai asiantuntijuuden tarpeettomuutta. Julkaisijan oma lähde ei ole riippumaton vaikuttavuusarvio; käyttö ja vaikutukset vielä kerättävä.",
+      "gatekeepers": [
+        "mallin tarjoaja",
+        "koulutusaineistojen ja käyttöliittymän valitsijat",
+        "käyttäjät"
+      ],
+      "affected_groups": [
+        "tekstin tuottajat",
+        "lukijat"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:dsa2024",
+      "primary_item_id": "knowledge_power_2008_2025_20261024:dsa2024",
+      "reuse_existing_item": false,
+      "title": "DSA kohdistaa läpinäkyvyys- ja vastuuehtoja alustojen tiedonvälitykseen",
+      "year_start": 2023,
+      "year_end": 2024,
+      "theme_ids": [
+        8,
+        16,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "distribution_gatekeeping",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "dsa"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:dsa2024:1",
+          "year": 2024,
+          "statement": "DSA:n yleinen soveltaminen alkoi 17.2.2024; ensimmäisten nimettyjen erittäin suurten alustojen velvoitteet alkoivat jo 2023.",
+          "source_ids": [
+            "dsa"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:dsa2024:2",
+          "year": 2024,
+          "statement": "Sääntelyyn kuuluu moderointipäätösten perustelemista ja läpinäkyvyyttä koskevia velvoitteita soveltamisalan ja poikkeusten mukaan.",
+          "source_ids": [
+            "dsa"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Näkyvyyttä rajaavien päätösten dokumentointi voi tehdä alustojen portinvartijuutta tutkittavaksi ja haastettavaksi.",
+      "case_limitations": "Velvoitteet vaihtelevat palvelutyypin ja koon mukaan. Sääntely ei takaa sisällön totuutta tai todista algoritmien aiheuttaneen polarisaatiota.",
+      "gatekeepers": [
+        "alustat",
+        "valvontaviranomaiset"
+      ],
+      "affected_groups": [
+        "käyttäjät",
+        "sisällöntuottajat",
+        "tutkijat"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:aiact2024",
+      "primary_item_id": "eu-tekoalyasetus-2024",
+      "reuse_existing_item": true,
+      "title": "EU:n tekoälyasetus tulee voimaan vaiheittaista soveltamista varten",
+      "year_start": 2024,
+      "year_end": 2024,
+      "theme_ids": [
+        8,
+        16,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "institutional_use",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "ai2024"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:aiact2024:1",
+          "year": 2024,
+          "statement": "EU:n tekoälyasetus tuli voimaan 1.8.2024; osa velvoitteista alkoi soveltua 2025.",
+          "source_ids": [
+            "ai2024"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Tekoälyn tarjoajien velvoitteet voivat tehdä tiedontuotannon teknisiä valtarakenteita valvottaviksi.",
+      "case_limitations": "Ei väitettä kaikkien asetuksen velvoitteiden soveltumisesta 2024 tai 2025. Tämän erän tarkastelu päättyy 2025.",
+      "gatekeepers": [
+        "EU",
+        "kansalliset viranomaiset",
+        "tekoälyn tarjoajat"
+      ],
+      "affected_groups": [
+        "tekoälyn käyttäjät",
+        "järjestelmien vaikutusten kohteet"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:ailiteracy2025",
+      "primary_item_id": "knowledge_power_2008_2025_20261024:ailiteracy2025",
+      "reuse_existing_item": false,
+      "title": "Tekoälylukutaito ja kielletyt käytännöt tulevat ensimmäiseen soveltamisvaiheeseen",
+      "year_start": 2025,
+      "year_end": 2025,
+      "theme_ids": [
+        4,
+        8,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "ailiteracy"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:ailiteracy2025:1",
+          "year": 2025,
+          "statement": "Tekoälyasetuksen ensimmäisten säännösten, mukaan lukien tekoälylukutaitoa ja kiellettyjä käytäntöjä koskevien sääntöjen, soveltaminen alkoi 2.2.2025.",
+          "source_ids": [
+            "ailiteracy"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Tekoälyn käytön osaamisvaatimukset voivat tukea mahdollisuutta arvioida tuotoksia ja niiden riskejä.",
+      "case_limitations": "Ei väitettä kaikille kansalaisille asetetusta koulutuspakosta tai toteutuneesta osaamisen paranemisesta. Säännöksen soveltamisala ja vaikuttavuus erotettava.",
+      "gatekeepers": [
+        "tarjoajat",
+        "käyttöönottajat",
+        "valvojat"
+      ],
+      "affected_groups": [
+        "tekoälyä työssä käyttävät",
+        "järjestelmien vaikutusten kohteet"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_2008_2025_20261024:gpai2025",
+      "primary_item_id": "knowledge_power_2008_2025_20261024:gpai2025",
+      "reuse_existing_item": false,
+      "title": "Yleiskäyttöisten tekoälymallien avoimuusvelvoitteet alkavat vaiheittain",
+      "year_start": 2025,
+      "year_end": 2025,
+      "theme_ids": [
+        8,
+        14,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "gpai"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:gpai2025:1",
+          "year": 2025,
+          "statement": "Yleiskäyttöisten tekoälymallien velvoitteiden soveltaminen alkoi 2.8.2025; komission mukaan ennen tätä markkinoille tulleilla malleilla on siirtymäaika 2.8.2027 asti.",
+          "source_ids": [
+            "gpai"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_2008_2025_20261024:gpai2025:2",
+          "year": 2025,
+          "statement": "Velvoitteisiin sisältyy dokumentointia, tekijänoikeuslinjausta ja koulutussisällön yhteenvedon julkaisemista.",
+          "source_ids": [
+            "gpai"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Koulutussisällön näkyvyys voi mahdollistaa tietoa välittävien mallien perusteiden ulkopuolista arviointia.",
+      "case_limitations": "Velvoite ei tarkoita koko koulutusaineiston avaamista, kaikkien mallien välitöntä noudattamista tai vastausten oikeellisuuden takuuta. Ei tämän erän ulkopuolisten seuraamusten toteumakirjausta.",
+      "gatekeepers": [
+        "mallien tarjoajat",
+        "EU-valvonta",
+        "oikeudenhaltijat"
+      ],
+      "affected_groups": [
+        "mallien käyttäjät",
+        "tutkijat",
+        "sisällöntuottajat"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    }
+  ],
+  "limitations": [
+    "Dokumentoidut faktat, ohjelmatavoitteet ja vaikutushypoteesit erotettu. Ei kausaalista varmistusta tai laskennallisia vaikutuskertoimia.",
+    "Saatavuus, julkaiseminen, näkyvyys, käyttöönotto ja luotettavuus eivät ole sama ilmiö.",
+    "Säädöksen voimaantulo, soveltamisen alku, siirtymäaika ja toteutunut valvonta erotettu.",
+    "Globaalit ja EU-tapahtumat ovat Suomen tietoympäristön kontekstia; niiden tapahtuminen ei osoita Suomen väestön käyttöönottoa tai vaikutuksen suuruutta.",
+    "Osa varmennuksesta on indeksoitujen viranomaisotteiden tasolla, joka on merkitty lähteittäin."
+  ],
+  "open_tasks": [
+    "Sosiaalisen median ja generatiivisen tekoälyn käyttöaikasarjat ikä-, koulutus-, kieli- ja tuloryhmittäin.",
+    "Mielipidevaikuttajien yleisöt, rahoitus ja osoitettavat vaikutusketjut.",
+    "Alustojen moderointi- ja suosittelutietojen Suomea koskevat havainnot.",
+    "Tutkimusrahoituksen teema- ja hankepäätökset sekä kilpailevat selitykset tutkimuksen suuntautumiselle.",
+    "Avoimen tieteen toteutuminen, käyttöesteet ja tutkimustulosten tarkistettavuus.",
+    "Tekoälyn vastausten lähdeuskollisuus, virheet ja käyttäjien mahdollisuudet havaita ne."
+  ],
+  "causal_confirmation": false,
+  "numeric_effects_created": false
+}
