@@ -49,3 +49,14 @@
 .k-delta { margin:.3rem 0 0; font-size:.78rem; color:var(--k-ink); }
 .k-list { padding-left:1.1rem; line-height:1.45; } .k-list li { margin-bottom:.6rem; }
 .k-list a { color:var(--k-teal); }
+.k-subs { display:flex; flex-wrap:wrap; align-items:center; gap:.4rem .9rem; margin:0 0 1rem; font-family:system-ui,sans-serif; }
+.k-subs-label { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--k-mute); }
+.k-subs-group { display:flex; flex-wrap:wrap; gap:.35rem; }
+.k-subs button { background:transparent; color:var(--k-mute); border:1px dashed color-mix(in srgb, var(--c, var(--k-line)) 55%, transparent); border-radius:99px; padding:.3rem .7rem; font-size:.76rem; cursor:pointer; }
+.k-subs button.on { color:var(--k-ink); border-style:solid; border-color:var(--c); background:color-mix(in srgb, var(--c) 14%, transparent); }
+.k-subs .k-subs-clear { border-color:var(--k-line); }
+.k-sub path { fill:none; stroke-width:2; stroke-dasharray:6 5; opacity:.85; stroke-linecap:round; }
+.k-sub text { font:600 11px system-ui,sans-serif; paint-order:stroke; stroke:var(--k-bg); stroke-width:3px; }
+.k-sub-notes { list-style:none; padding:0; margin:1rem 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr)); gap:.5rem 1rem; font:.85rem/1.45 system-ui,sans-serif; color:var(--k-mute); }
+.k-sub-notes li { border-left:3px solid var(--c); padding-left:.6rem; }
+.k-sub-notes b { color:var(--k-ink); display:block; }
