@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MainLinks } from "@/components/MainLinks";
 import { evidence, type Metric } from "@/components/murrokset/evidence-model";
-import { ERAS, LINE_TURNS, LINES, NOW, TURNS, YEAR_MAX, YEAR_MIN, episodeFor, type Turn } from "./kaari-model";
+import { ERAS, LINE_TURNS, LINES, SUBLINES, NOW, TURNS, YEAR_MAX, YEAR_MIN, episodeFor, type Turn } from "./kaari-model";
 import "./kaari.css";
 
 const W = 1000;
@@ -129,6 +129,8 @@ export function Kehityskaari() {
   const [sel, setSel] = useState<Turn | null>(null);
   const [deep, setDeep] = useState(false);
   const [focus, setFocus] = useState<string | null>(null);
+  const [subs, setSubs] = useState<string[]>([]);
+  const toggleSub = (id: string) => setSubs((c) => (c.includes(id) ? c.filter((s) => s !== id) : [...c, id]));
 
   const pick = (t: Turn) => { setSel(t); setDeep(false); };
   const turns = focus ? LINE_TURNS[focus] ?? TURNS : TURNS;
@@ -151,6 +153,20 @@ export function Kehityskaari() {
         ))}
       </div>
 
+      <div className="k-subs" aria-label="Alavirrat">
+        <span className="k-subs-label">Alavirrat</span>
+        {LINES.map((l) => (
+          <div key={l.id} className="k-subs-group" style={{ ["--c" as string]: l.tone }}>
+            {SUBLINES.filter((s) => s.parent === l.id).map((s) => (
+              <button key={s.id} aria-pressed={subs.includes(s.id)} className={subs.includes(s.id) ? "on" : ""} onClick={() => toggleSub(s.id)} title={s.note}>
+                {subs.includes(s.id) ? "−" : "+"} {s.label}
+              </button>
+            ))}
+          </div>
+        ))}
+        {subs.length > 0 && <button className="k-subs-clear" onClick={() => setSubs([])}>Tyhjennä</button>}
+      </div>
+
       <div className="k-chart">
         <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Kolme voimalinjaa ja seitsemän käännekohtaa">
           {ERAS.map((e, i) => (
@@ -167,6 +183,16 @@ export function Kehityskaari() {
           {LINES.map((l) => (
             <path key={l.id} d={linePath(l.points)} stroke={l.tone} className={`k-line ${focus && focus !== l.id ? "dim" : ""}`} />
           ))}
+          {SUBLINES.filter((s) => subs.includes(s.id)).map((s) => {
+            const tone = LINES.find((l) => l.id === s.parent)!.tone;
+            const end = s.points.at(-1)!;
+            return (
+              <g key={s.id} className="k-sub">
+                <path d={linePath(s.points)} stroke={tone} />
+                <text x={x(end[0]) - 4} y={y(end[1]) - 8} textAnchor="end" fill={tone}>{s.label}</text>
+              </g>
+            );
+          })}
           {turns.map((t) => {
             const cy = focus
               ? curveY(LINES.find((l) => l.id === focus)!.points, t.year)
@@ -183,6 +209,14 @@ export function Kehityskaari() {
           })}
         </svg>
       </div>
+
+      {subs.length > 0 && (
+        <ul className="k-sub-notes">
+          {SUBLINES.filter((s) => subs.includes(s.id)).map((s) => (
+            <li key={s.id} style={{ ["--c" as string]: LINES.find((l) => l.id === s.parent)!.tone }}><b>{s.label}</b> {s.note}</li>
+          ))}
+        </ul>
+      )}
 
       {sel ? (
         <section className="k-card" aria-live="polite">

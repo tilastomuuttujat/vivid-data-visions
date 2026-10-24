@@ -102,3 +102,27 @@ export function levelAt(line: ForceLine, year: number): number {
   }
   return p.at(-1)![1];
 }
+
+/** Nine editorial sub-streams (three per force). Levels are interpretive readings, never measured values. */
+export type SubLine = { id: string; parent: string; label: string; note: string; points: [number, number][] };
+
+export const SUBLINES: SubLine[] = [
+  { id: "metsa", parent: "tuotanto", label: "Metsä ja perusteollisuus", note: "Sahat, paperi ja metalli kantoivat vientiä vuosisadan.",
+    points: [[1860, 0.12], [1880, 0.35], [1920, 0.4], [1950, 0.6], [1975, 0.7], [1992, 0.55], [2008, 0.5], [2026, 0.42], [2050, 0.4]] },
+  { id: "ict", parent: "tuotanto", label: "Korkea teknologia ja ICT", note: "Nokia-klusteri nousi nopeasti ja romahti yhtä nopeasti.",
+    points: [[1860, 0.02], [1960, 0.05], [1985, 0.15], [1995, 0.4], [2007, 0.92], [2013, 0.35], [2026, 0.45], [2050, 0.55]] },
+  { id: "paaoma", parent: "tuotanto", label: "Pääomat ja investointikyky", note: "Säännelty pääoma, vapautus 1986, sen jälkeen ohut kotimainen omistus.",
+    points: [[1860, 0.1], [1918, 0.2], [1950, 0.4], [1975, 0.55], [1989, 0.75], [1993, 0.3], [2007, 0.55], [2026, 0.4], [2050, 0.45]] },
+  { id: "perusturva", parent: "turva", label: "Perusturva ja toimeentulo", note: "Köyhäinhoidosta universaaliin turvaan ja laman jälkeiseen kiristykseen.",
+    points: [[1860, 0.05], [1922, 0.2], [1948, 0.45], [1975, 0.8], [1990, 0.82], [1996, 0.58], [2026, 0.45], [2050, 0.4]] },
+  { id: "elake", parent: "turva", label: "Työeläkejärjestelmä", note: "TEL 1961 rakensi rahastot, jotka ovat yhä vahvin puskuri.",
+    points: [[1860, 0.02], [1937, 0.15], [1961, 0.45], [1980, 0.75], [2005, 0.85], [2026, 0.75], [2050, 0.62]] },
+  { id: "palvelut", parent: "turva", label: "Sote- ja koulutuspalvelut", note: "Peruskoulu ja kansanterveys laajenivat, nyt lupaus ja rahoitus erkanevat.",
+    points: [[1860, 0.08], [1921, 0.25], [1950, 0.4], [1972, 0.8], [1990, 0.85], [1994, 0.62], [2010, 0.6], [2026, 0.45], [2050, 0.38]] },
+  { id: "syntyvyys", parent: "kantokyky", label: "Syntyvyys ja väestörakenne", note: "Suuret ikäluokat, sitten pitkä lasku ja jyrkkä pudotus 2010 jälkeen.",
+    points: [[1860, 0.55], [1868, 0.3], [1920, 0.5], [1947, 0.9], [1970, 0.55], [1990, 0.55], [2010, 0.5], [2026, 0.2], [2050, 0.18]] },
+  { id: "velka", parent: "kantokyky", label: "Julkinen talous ja velka", note: "Korkea arvo = liikkumavaraa. Lama ja 2008 jälkeinen velkaura kaventavat sitä.",
+    points: [[1860, 0.4], [1918, 0.3], [1945, 0.25], [1960, 0.7], [1990, 0.75], [1994, 0.35], [2008, 0.65], [2026, 0.32], [2050, 0.25]] },
+  { id: "alueet", parent: "kantokyky", label: "Alueellinen tasapaino", note: "Hajautettu asutus, sitten suuri muutto ja kasvukeskusten vetovoima.",
+    points: [[1860, 0.5], [1950, 0.75], [1965, 0.7], [1975, 0.45], [2000, 0.35], [2026, 0.25], [2050, 0.2]] },
+];

@@ -1,0 +1,27 @@
+.tk-presets { display:flex; flex-wrap:wrap; gap:.4rem; align-items:center; margin-bottom:1rem; font-family:system-ui,sans-serif; }
+.tk-presets button { background:transparent; color:var(--k-ink); border:1px solid var(--k-line); border-radius:99px; padding:.35rem .8rem; font-size:.8rem; cursor:pointer; }
+.tk-presets button:hover { border-color:var(--k-gold); }
+.tk-layout { display:grid; grid-template-columns:minmax(14rem,18rem) 1fr; gap:1rem; align-items:start; }
+@media (max-width: 800px) { .tk-layout { grid-template-columns:1fr; } }
+.tk-list { border:1px solid var(--k-line); border-radius:14px; padding:.9rem; max-height:560px; overflow-y:auto; font-family:system-ui,sans-serif; background:#0b0f15aa; transition:border-color .2s; }
+.tk-list.over, .tk-chart.over { border-color:var(--k-gold); box-shadow:0 0 0 2px #e0b45c33; }
+.tk-list input { width:100%; padding:.5rem .7rem; background:#0d1117; color:var(--k-ink); border:1px solid var(--k-line); border-radius:8px; }
+.tk-tip { color:var(--k-mute); font-size:.75rem; margin:.5rem 0; }
+.tk-list h3 { font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--k-gold); margin:.9rem 0 .3rem; }
+.tk-item { display:flex; gap:.5rem; width:100%; text-align:left; background:transparent; color:var(--k-ink); border:0; border-radius:6px; padding:.35rem .4rem; font-size:.82rem; cursor:grab; }
+.tk-item span { color:var(--k-mute); }
+.tk-item:hover:not(:disabled) { background:#ffffff0c; }
+.tk-item:disabled { opacity:.4; cursor:not-allowed; }
+.tk-chart { transition:border-color .2s; }
+.tk-chips { display:flex; flex-wrap:wrap; gap:.4rem; padding:.8rem .8rem 0; font-family:system-ui,sans-serif; min-height:2.4rem; }
+.tk-chip { display:inline-flex; align-items:center; gap:.4rem; border:1px solid var(--c); border-radius:99px; padding:.25rem .3rem .25rem .7rem; font-size:.8rem; cursor:grab; background:color-mix(in srgb, var(--c) 12%, transparent); }
+.tk-chip i { width:14px; height:3px; background:var(--c); border-radius:2px; }
+.tk-chip button { background:none; border:0; color:var(--k-mute); font-size:1rem; cursor:pointer; padding:0 .3rem; }
+.tk-chip button:hover { color:var(--k-ink); }
+.tk-empty { color:var(--k-mute); font-size:.85rem; border:1px dashed var(--k-line); border-radius:99px; padding:.3rem .9rem; }
+.tk-grid { stroke:var(--k-line); stroke-dasharray:2 4; }
+.tk-arc { transition:opacity .25s; }
+.tk-arc.dim { opacity:.15; }
+.tk-dot { fill:var(--k-bg); stroke:var(--c); stroke-width:2; cursor:pointer; outline:none; }
+.tk-dot:hover, .tk-dot:focus-visible, .tk-dot.on { fill:var(--c); }
+.k-muted { color:var(--k-mute); }
