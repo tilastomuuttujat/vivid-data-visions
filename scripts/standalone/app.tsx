@@ -17,7 +17,7 @@ import { Murrokset } from "@/components/murrokset/Murrokset";
 import { Kehityskaari } from "@/components/kaari/Kehityskaari";
 import { Kokonaiskuva } from "@/components/kokonaiskuva/Kokonaiskuva";
 import { ErotusTulot } from "@/components/erotus-tulot/ErotusTulot";
-import { Dekompositio } from "@/components/dekompositio/Dekompositio";
+import { ErotusTuotanto } from "@/components/erotus-tuotanto/ErotusTuotanto";
 import { Erotus } from "@/components/erotus/Erotus";
 import { Teemavertailu } from "@/components/teemavertailu/Teemavertailu";
 import { AdminBar } from "@/components/editor/AdminBar";
@@ -33,7 +33,7 @@ const rootRoute = createRootRoute({
 const routes = [
   createRoute({ getParentRoute: () => rootRoute, path: "/kokonaiskuva", component: Kokonaiskuva }),
   createRoute({ getParentRoute: () => rootRoute, path: "/erotus-tulot", component: ErotusTulot }),
-  createRoute({ getParentRoute: () => rootRoute, path: "/dekompositio", component: Dekompositio }),
+  createRoute({ getParentRoute: () => rootRoute, path: "/erotus-tuotanto", component: ErotusTuotanto }),
   createRoute({
     getParentRoute: () => rootRoute,
     path: "/",

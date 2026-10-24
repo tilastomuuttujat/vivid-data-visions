@@ -1,6 +1,6 @@
 """Fetch StatFin 15ai inputs for the impact-layer production model (1975-2025).
 Matches supabase/impact-layer bindings: GDP (2015 prices), hours, domestic employed, mean population.
-Standard library only; writes src/components/dekompositio/production-data.json atomically."""
+Standard library only; writes src/components/erotus-tuotanto/production-data.json atomically."""
 import json, urllib.request, pathlib, datetime, hashlib
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 URL = 'https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/ntp/15ai.px'
@@ -29,7 +29,7 @@ if not points or points[0]['year'] != 1975:
     raise SystemExit('1975 baseline missing; refusing to write')
 out = {'retrieved': datetime.date.today().isoformat(), 'source': {'title': 'Tilastokeskus 15ai, kansantalouden tilinpito', 'url': URL, 'query': query, 'sha256': hashlib.sha256(raw).hexdigest()},
        'units': {'gdp': 'milj. euroa, viitevuoden 2015 hinnoin', 'hours': 'milj. tuntia', 'employed': '1000 henkeä, kotimaa', 'population': '1000 henkeä, keskiväkiluku'}, 'points': points}
-target = ROOT / 'src/components/dekompositio/production-data.json'
+target = ROOT / 'src/components/erotus-tuotanto/production-data.json'
 target.parent.mkdir(parents=True, exist_ok=True)
 tmp = target.with_suffix('.tmp'); tmp.write_text(json.dumps(out, ensure_ascii=False, indent=1) + '\n'); tmp.replace(target)
 print(len(points), points[0], points[-1])

@@ -10,9 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as DekompositioRouteImport } from './routes/dekompositio'
 import { Route as ErotusRouteImport } from './routes/erotus'
 import { Route as ErotusTulotRouteImport } from './routes/erotus-tulot'
+import { Route as ErotusTuotantoRouteImport } from './routes/erotus-tuotanto'
 import { Route as KehityskaariRouteImport } from './routes/kehityskaari'
 import { Route as KokonaiskuvaRouteImport } from './routes/kokonaiskuva'
 import { Route as LaboratorioRouteImport } from './routes/laboratorio'
@@ -27,11 +27,6 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DekompositioRoute = DekompositioRouteImport.update({
-  id: '/dekompositio',
-  path: '/dekompositio',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ErotusRoute = ErotusRouteImport.update({
   id: '/erotus',
   path: '/erotus',
@@ -40,6 +35,11 @@ const ErotusRoute = ErotusRouteImport.update({
 const ErotusTulotRoute = ErotusTulotRouteImport.update({
   id: '/erotus-tulot',
   path: '/erotus-tulot',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErotusTuotantoRoute = ErotusTuotantoRouteImport.update({
+  id: '/erotus-tuotanto',
+  path: '/erotus-tuotanto',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KehityskaariRoute = KehityskaariRouteImport.update({
@@ -85,9 +85,9 @@ const TeemavertailuRoute = TeemavertailuRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/dekompositio': typeof DekompositioRoute
   '/erotus': typeof ErotusRoute
   '/erotus-tulot': typeof ErotusTulotRoute
+  '/erotus-tuotanto': typeof ErotusTuotantoRoute
   '/kehityskaari': typeof KehityskaariRoute
   '/kokonaiskuva': typeof KokonaiskuvaRoute
   '/laboratorio': typeof LaboratorioRoute
@@ -99,9 +99,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/dekompositio': typeof DekompositioRoute
   '/erotus': typeof ErotusRoute
   '/erotus-tulot': typeof ErotusTulotRoute
+  '/erotus-tuotanto': typeof ErotusTuotantoRoute
   '/kehityskaari': typeof KehityskaariRoute
   '/kokonaiskuva': typeof KokonaiskuvaRoute
   '/laboratorio': typeof LaboratorioRoute
@@ -114,9 +114,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/dekompositio': typeof DekompositioRoute
   '/erotus': typeof ErotusRoute
   '/erotus-tulot': typeof ErotusTulotRoute
+  '/erotus-tuotanto': typeof ErotusTuotantoRoute
   '/kehityskaari': typeof KehityskaariRoute
   '/kokonaiskuva': typeof KokonaiskuvaRoute
   '/laboratorio': typeof LaboratorioRoute
@@ -130,9 +130,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/dekompositio'
     | '/erotus'
     | '/erotus-tulot'
+    | '/erotus-tuotanto'
     | '/kehityskaari'
     | '/kokonaiskuva'
     | '/laboratorio'
@@ -144,9 +144,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/dekompositio'
     | '/erotus'
     | '/erotus-tulot'
+    | '/erotus-tuotanto'
     | '/kehityskaari'
     | '/kokonaiskuva'
     | '/laboratorio'
@@ -158,9 +158,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/dekompositio'
     | '/erotus'
     | '/erotus-tulot'
+    | '/erotus-tuotanto'
     | '/kehityskaari'
     | '/kokonaiskuva'
     | '/laboratorio'
@@ -173,9 +173,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  DekompositioRoute: typeof DekompositioRoute
   ErotusRoute: typeof ErotusRoute
   ErotusTulotRoute: typeof ErotusTulotRoute
+  ErotusTuotantoRoute: typeof ErotusTuotantoRoute
   KehityskaariRoute: typeof KehityskaariRoute
   KokonaiskuvaRoute: typeof KokonaiskuvaRoute
   LaboratorioRoute: typeof LaboratorioRoute
@@ -195,13 +195,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/dekompositio': {
-      id: '/dekompositio'
-      path: '/dekompositio'
-      fullPath: '/dekompositio'
-      preLoaderRoute: typeof DekompositioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/erotus': {
       id: '/erotus'
       path: '/erotus'
@@ -214,6 +207,13 @@ declare module '@tanstack/react-router' {
       path: '/erotus-tulot'
       fullPath: '/erotus-tulot'
       preLoaderRoute: typeof ErotusTulotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erotus-tuotanto': {
+      id: '/erotus-tuotanto'
+      path: '/erotus-tuotanto'
+      fullPath: '/erotus-tuotanto'
+      preLoaderRoute: typeof ErotusTuotantoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kehityskaari': {
@@ -277,9 +277,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  DekompositioRoute: DekompositioRoute,
   ErotusRoute: ErotusRoute,
   ErotusTulotRoute: ErotusTulotRoute,
+  ErotusTuotantoRoute: ErotusTuotantoRoute,
   KehityskaariRoute: KehityskaariRoute,
   KokonaiskuvaRoute: KokonaiskuvaRoute,
   LaboratorioRoute: LaboratorioRoute,
