@@ -77,9 +77,9 @@ export function sample(o: Observable, step = 1): Sample[] {
 /** Editorial names for what drives the gap; sign = whether the factor carries (+) or lags (−). */
 export type Factor = { year: number; label: string };
 const FACTORS: Record<string, Factor[]> = {
-  ict: [{ year: 2000, label: "Nokia-klusterin nousu" }, { year: 2012, label: "Älypuhelinmurros, vienti putoaa" }],
+  ict: [{ year: 2006, label: "Nokia-klusterin nousu" }, { year: 2015, label: "Älypuhelinmurros, vienti putoaa" }],
   metsa: [{ year: 1890, label: "Höyrysahat ja viennin synty" }, { year: 1960, label: "Paperin kultakausi" }, { year: 2010, label: "Paperin kysyntäromahdus" }],
-  suuret: [{ year: 1985, label: "Paras työikä, eläkekertymä" }, { year: 2040, label: "Hoivatarve kasvaa" }],
+  suuret: [{ year: 1985, label: "Paras työikä, eläkekertymä" }, { year: 2040, label: "Turvattu eläkeikä" }],
   lama: [{ year: 1993, label: "Joukkotyöttömyys työuran alussa" }],
   lapset: [{ year: 2040, label: "Velka- ja hoivakuorma" }],
   maaseutu: [{ year: 1940, label: "Torpparivapautus, pienomistus" }, { year: 2010, label: "Suuri muutto, keskittyminen" }],
