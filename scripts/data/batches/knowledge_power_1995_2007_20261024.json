@@ -1,0 +1,715 @@
+{
+  "batch_id": "knowledge_power_1995_2007_20261024",
+  "taxonomy_id": "knowledge_power_taxonomy_v1",
+  "title": "Tieto ja valta Suomessa 1995–2007",
+  "period": [
+    1995,
+    2007
+  ],
+  "primary_theme_id": 29,
+  "taxonomy": {
+    "access": "Tiedon saavutettavuus",
+    "language_access": "Kielellinen pääsy tietoon",
+    "credential_gatekeeping": "Tutkinnot ja muodolliset pääsyehdot",
+    "knowledge_production": "Tiedon ja käsitteiden tuottaminen",
+    "classification_power": "Luokittelun ja tiedonkeruun valinnat",
+    "distribution_gatekeeping": "Julkaisemisen ja jakelun portinvartijuus",
+    "expert_recognition": "Asiantuntijuuden ja tunnustuksen valinta",
+    "institutional_use": "Tiedon käyttö hallinnossa ja päätöksenteossa",
+    "alternative_publics": "Vaihtoehtoiset sivistys- ja julkaisukanavat"
+  },
+  "selection": "Rajattu mekanismien monipuolisuutta tavoitteleva laadullinen erä; ei edustava otos kaikesta tiedontuotannosta.",
+  "sources": [
+    {
+      "source_id": "stats",
+      "title": "Tilastoviraston historia",
+      "publisher_or_author": "Tilastokeskus",
+      "url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/tilastoviraston-historia",
+      "locator": "1995 internetpalvelu; 2002 SVT-neuvottelukunta",
+      "source_type": "institutional_history_or_official_report",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "finelib",
+      "title": "Kun open access tuli Suomeen – ja mitä sitten tapahtui",
+      "publisher_or_author": "Kansalliskirjasto / Tietolinja 2020",
+      "url": "https://tietolinja.kansalliskirjasto.fi/arkisto/2020-2/2002-openaccess/",
+      "locator": "FinELib aloitti 1997; lisenssisopimukset",
+      "source_type": "institutional_history_or_official_report",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_excerpt_checked_full_document_pending",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "publicity",
+      "title": "Laki viranomaisten toiminnan julkisuudesta 621/1999",
+      "publisher_or_author": "Finlex",
+      "url": "https://finlex.fi/fi/lainsaadanto/saadoskokoelma/1999/621",
+      "locator": "Alkuperäinen säädös; 1 §,9 §,37 §",
+      "source_type": "original_statute",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_original_statute_text_checked",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "privacy",
+      "title": "Henkilötietolaki 523/1999",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/1999/523",
+      "locator": "Voimaantulo ja henkilörekisterilain kumoaminen",
+      "source_type": "legal_consolidation",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_consolidation_excerpt_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "constitution",
+      "title": "Suomen perustuslaki 731/1999",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1999/731",
+      "locator": "12 § sananvapaus ja julkisuus;130 § voimaantulo",
+      "source_type": "original_statute",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_original_statute_text_checked",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "ogp",
+      "title": "Finland Open Government Action Plan 2015–2017",
+      "publisher_or_author": "Suomen hallinnon OGP-toimintasuunnitelma",
+      "url": "https://www.opengovpartnership.org/wp-content/uploads/2001/01/OGP_Action_Plan_Finland-2015_2017.pdf",
+      "locator": "s.3: hankerekisteri 1999; Otakantaa 2000",
+      "source_type": "institutional_history_or_official_report",
+      "checked_on": "2026-10-24",
+      "verification": "pdf_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "wiki",
+      "title": "Suomenkielinen Wikipedia 15 vuotta",
+      "publisher_or_author": "Heikki Kastemaa / Wikimedia Suomi 2017",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/SuomenkielinenWikipedia15vuotta_%281%29.pdf",
+      "locator": "s.1: aloitus 21.2.2002",
+      "source_type": "institutional_history_or_official_report",
+      "checked_on": "2026-10-24",
+      "verification": "pdf_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "speech",
+      "title": "Laki sananvapauden käyttämisestä joukkoviestinnässä 460/2003",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2003/460",
+      "locator": "Alkuperäinen säädös;1 § ja25 §",
+      "source_type": "original_statute",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_original_statute_text_checked",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "doria",
+      "title": "Julkaisuarkistojen infrastruktuuri -hanke",
+      "publisher_or_author": "Kansalliskirjasto / Tietolinja 2008",
+      "url": "https://tietolinja.kansalliskirjasto.fi/arkisto/2008-2/0802-julkaisuarkistohanke/",
+      "locator": "Doria; OA-JES 2006–2007",
+      "source_type": "institutional_history_or_official_report",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_excerpt_checked_full_document_pending",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "tv",
+      "title": "Finland will switch over to all-digital television",
+      "publisher_or_author": "Liikenne- ja viestintäministeriö 31.8.2007",
+      "url": "https://lvm.fi/en/-/finland-will-switch-over-to-all-digital-television-767845?languageId=fi_FI",
+      "locator": "Maanpäällisten analogilähetysten päättyminen",
+      "source_type": "contemporaneous_ministry_press_release",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_excerpt_checked_full_document_pending",
+      "contemporaneous_primary_source": true
+    }
+  ],
+  "entries": [
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:stats1995",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:stats1995",
+      "reuse_existing_item": false,
+      "title": "Tilastokeskus avaa internetpalvelun",
+      "year_start": 1995,
+      "year_end": 1995,
+      "theme_ids": [
+        8,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "distribution_gatekeeping"
+      ],
+      "source_ids": [
+        "stats"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:stats1995:1",
+          "year": 1995,
+          "statement": "Tilastokeskus avasi internetpalvelunsa helmikuussa 1995.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Verkkojakelu voi pienentää virallisen tilastotiedon löytämisen kustannuksia.",
+      "case_limitations": "Ei väitettä kaikkien tilastojen maksuttomuudesta, avoimesta lisenssistä tai koneellisesta saatavuudesta 1995.",
+      "gatekeepers": [
+        "tilastoviranomainen",
+        "palvelun ylläpito"
+      ],
+      "affected_groups": [
+        "kansalaiset",
+        "toimittajat",
+        "tutkijat"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:finelib1997",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:finelib1997",
+      "reuse_existing_item": false,
+      "title": "FinELib kokoaa elektronisten tutkimusaineistojen sopimusneuvotteluja",
+      "year_start": 1997,
+      "year_end": 1997,
+      "theme_ids": [
+        4,
+        14,
+        17,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "distribution_gatekeeping"
+      ],
+      "source_ids": [
+        "finelib"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:finelib1997:1",
+          "year": 1997,
+          "statement": "Kansalliskirjaston historiakuvauksen mukaan FinELib-konsortio aloitti toimintansa vuonna 1997 ja neuvotteli aineistosopimuksia.",
+          "source_ids": [
+            "finelib"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Yhteishankinta voi vahvistaa tutkimusorganisaatioiden neuvotteluasemaa samalla kun tiedonsaanti säilyy lisenssiehtojen rajaamana.",
+      "case_limitations": "Varmennus rajattu indeksoituun artikkeliotteeseen. Sopimuskattavuus, hinnat ja organisaatioiden ulkopuolisten käyttöoikeudet tarkistettava alkuperäissopimuksista. Ei oletusta avoimesta saatavuudesta.",
+      "gatekeepers": [
+        "konsortio",
+        "kustantajat",
+        "kirjastot"
+      ],
+      "affected_groups": [
+        "tutkijat",
+        "opiskelijat",
+        "organisaatioiden ulkopuoliset"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:publicity1999",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:publicity1999",
+      "reuse_existing_item": false,
+      "title": "Uusi julkisuuslaki uudistaa asiakirjatiedon saamisen kehystä",
+      "year_start": 1999,
+      "year_end": 1999,
+      "theme_ids": [
+        8,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "publicity"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:publicity1999:1",
+          "year": 1999,
+          "statement": "Laki viranomaisten toiminnan julkisuudesta 621/1999 tuli voimaan 1.12.1999.",
+          "source_ids": [
+            "publicity"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:publicity1999:2",
+          "year": 1999,
+          "statement": "Alkuperäisen lain lähtökohtana on viranomaisasiakirjojen julkisuus laissa säädetyin poikkeuksin.",
+          "source_ids": [
+            "publicity"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Oikeus saada asiakirjatietoa voi mahdollistaa päätösten perusteiden ulkopuolisen tarkastamisen.",
+      "case_limitations": "Ei väitettä kaikkien valmisteluasiakirjojen avoimuudesta tai toteutuneesta moitteettomasta tiedonsaannista; lain 14 §:n lyhyemmät määräajat tulivat sovellettaviksi vasta 2003.",
+      "gatekeepers": [
+        "viranomaiset",
+        "tuomioistuimet"
+      ],
+      "affected_groups": [
+        "kansalaiset",
+        "journalistit"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:privacy1999",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:privacy1999",
+      "reuse_existing_item": false,
+      "title": "Henkilötietolaki korvaa henkilörekisterilain",
+      "year_start": 1999,
+      "year_end": 1999,
+      "theme_ids": [
+        8,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "institutional_use",
+        "classification_power"
+      ],
+      "source_ids": [
+        "privacy"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:privacy1999:1",
+          "year": 1999,
+          "statement": "Henkilötietolaki 523/1999 tuli voimaan 1.6.1999 ja kumosi vuoden 1987 henkilörekisterilain.",
+          "source_ids": [
+            "privacy"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Tietojen käsittelyä koskevat ehdot voivat rajata rekisterinpitäjien tiedollista valtaa.",
+      "case_limitations": "Varmennettu koosteesta voimaantulo ja kumoaminen; alkuperäisten käsittelyperusteiden ja oikeuksien poiminta jatkotehtävä. GDPR:n myöhempiä oikeuksia ei siirretä vuoteen 1999.",
+      "gatekeepers": [
+        "lainsäätäjä",
+        "rekisterinpitäjät",
+        "tietosuojavalvonta"
+      ],
+      "affected_groups": [
+        "rekisteröidyt henkilöt"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:projects1999",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:projects1999",
+      "reuse_existing_item": false,
+      "title": "Valtion hankerekisteri avaa valmistelun seuraamisen välinettä",
+      "year_start": 1999,
+      "year_end": 1999,
+      "theme_ids": [
+        8,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "ogp"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:projects1999:1",
+          "year": 1999,
+          "statement": "Suomen OGP-toimintasuunnitelma ajoittaa valtion hankerekisterin käynnistämisen vuoteen 1999.",
+          "source_ids": [
+            "ogp"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Hankkeiden näkyvyys voi helpottaa keskeneräisen valmistelun tunnistamista ja osallistumisen ajoittamista.",
+      "case_limitations": "Retrospektiivinen hallinnon oma yhteenveto; alkuperäinen tietosisältö ja julkisen verkkokäytön kattavuus selvitettävä. Ei väitettä kaikkien valmisteluasiakirjojen julkaisemisesta.",
+      "gatekeepers": [
+        "valtionhallinto",
+        "rekisterin ylläpitäjät"
+      ],
+      "affected_groups": [
+        "kansalaiset",
+        "järjestöt",
+        "journalistit"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:constitution2000",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:constitution2000",
+      "reuse_existing_item": false,
+      "title": "Perustuslaki kokoaa sananvapauden ja julkisuuden suojan",
+      "year_start": 2000,
+      "year_end": 2000,
+      "theme_ids": [
+        8,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "constitution"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:constitution2000:1",
+          "year": 2000,
+          "statement": "Vuonna 2000 voimaan tulleen perustuslain 12 § turvaa tietojen ilmaisemisen, julkistamisen ja vastaanottamisen sekä tiedonsaannin julkisista asiakirjoista.",
+          "source_ids": [
+            "constitution"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Perustuslaillinen suoja voi rajoittaa julkisen vallan mahdollisuuksia estää tiedonvälitystä.",
+      "case_limitations": "Ei oikeuksien ensimmäinen syntyhetki Suomessa: mukana aiempi perusoikeusuudistus ja jatkuvuus. Ei päätelmää suojan täydellisestä toteutumisesta.",
+      "gatekeepers": [
+        "julkinen valta",
+        "lainsäätäjä",
+        "tuomioistuimet"
+      ],
+      "affected_groups": [
+        "kaikki ihmiset"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:otakantaa2000",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:otakantaa2000",
+      "reuse_existing_item": false,
+      "title": "Otakantaa avaa hallinnon verkkokeskustelukanavan",
+      "year_start": 2000,
+      "year_end": 2000,
+      "theme_ids": [
+        8,
+        19,
+        25,
+        29
+      ],
+      "dimension_codes": [
+        "alternative_publics",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "ogp"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:otakantaa2000:1",
+          "year": 2000,
+          "statement": "Suomen OGP-toimintasuunnitelman mukaan Otakantaa.fi-keskustelufoorumi käynnistyi vuonna 2000.",
+          "source_ids": [
+            "ogp"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Verkkokeskustelu voi avata valmisteluun osallistumista vakiintuneiden lausunnonantajien ulkopuolelle.",
+      "case_limitations": "Kanavan perustaminen ei osoita osallistujien edustavuutta tai vaikutusta päätökseen. Nykyisiä palveluominaisuuksia ei siirretä vuoteen 2000.",
+      "gatekeepers": [
+        "hallinto",
+        "keskustelujen järjestäjät"
+      ],
+      "affected_groups": [
+        "verkkoyhteyden haltijat",
+        "kansalaiset",
+        "järjestöt"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:wiki2002",
+      "primary_item_id": "civil_society_1990_2007_20261022:wiki2002",
+      "reuse_existing_item": true,
+      "title": "Suomenkielinen Wikipedia avaa tietosanakirjatyön vapaaehtoisille",
+      "year_start": 2002,
+      "year_end": 2002,
+      "theme_ids": [
+        4,
+        14,
+        21,
+        25,
+        29
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "alternative_publics"
+      ],
+      "source_ids": [
+        "wiki"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:wiki2002:1",
+          "year": 2002,
+          "statement": "Suomenkielinen Wikipedia aloitettiin 21.2.2002 vapaaehtoisten muokkaamana verkkotietosanakirjana.",
+          "source_ids": [
+            "wiki"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Avoin yhteiskirjoittaminen voi laajentaa osallistumista tiedon kokoamiseen ilman muodollista akateemista asemaa.",
+      "case_limitations": "Perustaminen ei osoita kaikkien osallistumisen tasa-arvoa tai artikkeleiden luotettavuutta. Vuoden 2017 käyttäjä- ja artikkelimääriä ei siirretä vuoteen 2002.",
+      "gatekeepers": [
+        "muokkaajayhteisö",
+        "ylläpitäjät"
+      ],
+      "affected_groups": [
+        "kirjoittajat",
+        "lukijat"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:svt2002",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:svt2002",
+      "reuse_existing_item": false,
+      "title": "Suomen virallisen tilaston neuvottelukunta perustetaan",
+      "year_start": 2002,
+      "year_end": 2002,
+      "theme_ids": [
+        8,
+        17,
+        29
+      ],
+      "dimension_codes": [
+        "expert_recognition",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "stats"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:svt2002:1",
+          "year": 2002,
+          "statement": "Suomen virallisen tilaston neuvottelukunta perustettiin vuonna 2002.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Yhteinen koordinaatio voi vahvistaa tilastotuotannon vertailtavuutta ja legitimiteettiä.",
+      "case_limitations": "Tehtävät ja valintakriteerit poimittava alkuperäisistä asiakirjoista. Vuoden 2013 laatulupausta ei ajoiteta vuoteen 2002.",
+      "gatekeepers": [
+        "tilastotuottajat",
+        "neuvottelukunta"
+      ],
+      "affected_groups": [
+        "tilastotiedon käyttäjät"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:speech2003",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:speech2003",
+      "reuse_existing_item": false,
+      "title": "Sananvapauslaki uudistaa joukkoviestinnän oikeudellista kehystä",
+      "year_start": 2003,
+      "year_end": 2004,
+      "theme_ids": [
+        8,
+        16,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "distribution_gatekeeping",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "speech"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:speech2003:1",
+          "year": 2003,
+          "statement": "Laki 460/2003 annettiin 13.6.2003 ja tuli voimaan 1.1.2004.",
+          "source_ids": [
+            "speech"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:speech2003:2",
+          "year": 2004,
+          "statement": "Laki korvasi vuoden 1919 painovapauslain ja vuoden 1971 radiovastuulain.",
+          "source_ids": [
+            "speech"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Viestintämuotoja yhdistävä sääntely voi muuttaa julkaisijoiden vastuusuhteita uudessa mediaympäristössä.",
+      "case_limitations": "Ei tulkintaa kaikkien verkkokirjoittajien rinnastumisesta vastaaviin toimittajiin; täsmälliset soveltamisrajat ja oikeuskäytäntö erikseen. Myöhempiä lainmuutoksia ei sisällytetä.",
+      "gatekeepers": [
+        "julkaisijat",
+        "toimitukset",
+        "tuomioistuimet"
+      ],
+      "affected_groups": [
+        "kirjoittajat",
+        "yleisöt",
+        "viestinnän kohteet"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:doria2006",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:doria2006",
+      "reuse_existing_item": false,
+      "title": "Dorian kehitys vahvistaa julkaisuarkistojen yhteistä infrastruktuuria",
+      "year_start": 2006,
+      "year_end": 2007,
+      "theme_ids": [
+        4,
+        14,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "doria"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:doria2006:1",
+          "year": 2006,
+          "statement": "Kansalliskirjaston mukaan Doria-julkaisuarkistoympäristön kehitystyö tapahtui suurelta osin OA-JES-hankkeessa 2006–2007.",
+          "source_ids": [
+            "doria"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Julkaisuarkisto voi avata tutkimusjulkaisuille kustantajan jakelukanavaa täydentävän reitin.",
+      "case_limitations": "Varmennus rajattu indeksoituun artikkeliotteeseen. Ei väitettä kaikkien julkaisujen avoimuudesta, vertaisarvioinnista tai tekijänoikeusrajojen poistumisesta.",
+      "gatekeepers": [
+        "kirjastot",
+        "julkaisijat",
+        "oikeudenhaltijat"
+      ],
+      "affected_groups": [
+        "tutkijat",
+        "opiskelijat",
+        "yleisö"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1995_2007_20261024:digitaltv2007",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:digitaltv2007",
+      "reuse_existing_item": false,
+      "title": "Maanpäällinen televisio siirtyy digitaaliseen jakeluun",
+      "year_start": 2007,
+      "year_end": 2007,
+      "theme_ids": [
+        16,
+        18,
+        20,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "distribution_gatekeeping"
+      ],
+      "source_ids": [
+        "tv"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1995_2007_20261024:digitaltv2007:1",
+          "year": 2007,
+          "statement": "Liikenne- ja viestintäministeriön 31.8.2007 tiedote kuvaa analogisten lähetysten päättymistä maanpäällisessä televisioverkossa.",
+          "source_ids": [
+            "tv"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Jakelutekniikan vaihto voi laajentaa kanavatarjontaa mutta luoda vastaanottamiseen uusia laite- ja osaamisehtoja.",
+      "case_limitations": "Varmennus indeksoidusta aikalaisotteesta. Ei väitettä kaapelijakelun samanaikaisesta täydellisestä loppumisesta tai automaattisesta sisältömoninaisuuden kasvusta.",
+      "gatekeepers": [
+        "jakeluverkon toimijat",
+        "lähetystoiminnan harjoittajat",
+        "valtio"
+      ],
+      "affected_groups": [
+        "television katsojat",
+        "uusia laitteita tarvitsevat"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    }
+  ],
+  "limitations": [
+    "Tapahtumafaktat ja vaikutushypoteesit on erotettu. Ei määrällistä vaikutusarviota eikä kausaalista varmistusta.",
+    "Tekninen saatavuus, käyttöoikeus, tosiasiallinen käyttö ja tiedon luotettavuus ovat eri asioita.",
+    "Osa lähteistä on retrospektiivisiä; FinELib-, Doria- ja televisiopoimintojen varmennus rajattu indeksoituun lähdeotteeseen.",
+    "Edustavuus väestöryhmien, kielen ja alueiden välillä ei ole mitattu. Akateeminen asema eikä avoin osallistuminen yksin takaa tiedon oikeellisuutta."
+  ],
+  "open_tasks": [
+    "Hakukoneiden ja kaupallisten alustojen näkyvyysvalta Suomessa1995–2007.",
+    "Blogit ja verkkokeskustelut sekä niiden yleisöjen ja vaikutusvallan erot.",
+    "Tutkimuksen rahoituksen ja tulosohjauksen toteutuneet vaikutukset.",
+    "Alkuperäiset FinELib-sopimukset, OA-JES-raportit ja digisiirtymän väestöryhmittäiset seuraukset.",
+    "Julkisuuslain toimeenpano ja asiakirjapyynnöistä kieltäytymisen käytännöt."
+  ],
+  "causal_confirmation": false,
+  "numeric_effects_created": false
+}
