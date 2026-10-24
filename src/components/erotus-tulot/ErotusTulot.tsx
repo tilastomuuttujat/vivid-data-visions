@@ -6,7 +6,8 @@ import type { Factor } from "./model";
 import "./tulot.css";
 const euro = (n: number) => new Intl.NumberFormat("fi-FI", { maximumFractionDigits: 0 }).format(n);
 const signed = (n: number) => `${n > 0 ? "+" : n < 0 ? "−" : ""}${euro(Math.abs(n))}`;
-export function ErotusTulot() {
+export function ErotusTulot({ embedded = false }: { embedded?: boolean } = {}) {
+  const Container = embedded ? "section" : "main";
   const [vintageId, setVintage] = useState("2025");
   const [profileId, setProfile] = useState("single-parent");
   const [factor, setFactor] = useState<Factor>("transfers");
@@ -33,10 +34,12 @@ export function ErotusTulot() {
     .filter((p) => p.id !== "rounding")
     .sort((a, b) => Math.abs(b.value) - Math.abs(a.value))[0]!;
   return (
-    <main className="et-page">
-      <nav aria-label="Näkymät">
-        <MainLinks exclude="/erotus-tulot" />
-      </nav>
+    <Container className="et-page">
+      {!embedded && (
+        <nav aria-label="Näkymät">
+          <MainLinks exclude="/erotus-tulot" />
+        </nav>
+      )}
       <header>
         <span className="et-kicker">EROTUS / TULOJEN RAKENNE</span>
         <h1>Mistä muutos syntyy?</h1>
@@ -281,6 +284,6 @@ export function ErotusTulot() {
           </details>
         </section>
       </div>
-    </main>
+    </Container>
   );
 }

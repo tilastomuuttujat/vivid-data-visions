@@ -1,0 +1,342 @@
+.kk-page {
+  --kk-gold: #eab875;
+  background: #101e28;
+  color: #f2f0e7;
+  min-height: 100vh;
+  padding: 24px clamp(16px, 4vw, 70px);
+  font-family: system-ui, sans-serif;
+}
+.kk-page nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+.kk-page a {
+  color: #9ed2d2;
+}
+.kk-head > span,
+.kk-kicker {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  color: var(--kk-gold);
+}
+.kk-head h1 {
+  font-size: clamp(30px, 4vw, 54px);
+  margin: 10px 0;
+}
+.kk-page p {
+  line-height: 1.65;
+  color: #c0cdd3;
+}
+.kk-head p {
+  max-width: 76ch;
+  margin-bottom: 24px;
+}
+.kk-overview {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #101e28;
+  border: 1px solid #ffffff25;
+  border-radius: 10px;
+  padding: 14px 18px 8px;
+  box-shadow: 0 14px 32px #09121c77;
+}
+.kk-chart-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.kk-legend {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.kk-page button {
+  background: #1a303e;
+  color: #f2f0e7;
+  border: 1px solid #ffffff30;
+  border-radius: 5px;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.kk-page button[aria-pressed="true"] {
+  border-color: var(--kk-gold);
+  color: var(--kk-gold);
+  background: #eab87510;
+}
+.kk-page :focus-visible {
+  outline: 3px solid #83c8c6;
+  outline-offset: 3px;
+}
+.kk-axis-note,
+.kk-small {
+  font-size: 11px;
+}
+.kk-axis-note {
+  margin: 8px 0 0;
+}
+.kk-overview svg {
+  width: 100%;
+  max-height: 34vh;
+  display: block;
+  cursor: crosshair;
+}
+.kk-overview svg text {
+  fill: #b6c5cd;
+  font-size: 13px;
+}
+.kk-overview svg .kk-cursor {
+  fill: #83c8c6;
+  font-weight: 700;
+}
+.kk-line {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+.kk-time {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
+}
+.kk-time label {
+  min-width: 145px;
+}
+.kk-time input {
+  width: 100%;
+  accent-color: #83c8c6;
+}
+.kk-eras {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+.kk-eras button {
+  font-size: 11px;
+  padding: 7px 2px;
+}
+.kk-overview > .kk-small {
+  margin: 8px 0 0;
+}
+.kk-controls {
+  border: 1px solid #ffffff30;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 18px;
+  background: #192c39;
+}
+.kk-controls[hidden] {
+  display: none;
+}
+.kk-controls h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+.kk-controls > div {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.kk-controls p {
+  font-size: 12px;
+}
+.kk-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 44px;
+  margin-top: 36px;
+}
+.kk-story h2 {
+  font-size: clamp(24px, 3vw, 35px);
+  max-width: 32ch;
+  margin: 12px 0;
+}
+.kk-lead {
+  font-size: 18px;
+  max-width: 78ch;
+}
+.kk-reading {
+  padding: 18px 24px;
+  background: #ffffff05;
+  border-left: 3px solid var(--kk-gold);
+  margin: 26px 0;
+}
+.kk-reading h3 {
+  margin-top: 0;
+}
+.kk-reading b {
+  color: #f2f0e7;
+}
+.kk-question {
+  font-size: 23px;
+  max-width: 60ch;
+}
+.kk-chain {
+  padding: 0;
+  list-style: none;
+  margin: 28px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.kk-chain li {
+  padding: 18px 20px;
+  background: #18303b;
+  border-top: 2px solid #83c8c6;
+}
+.kk-chain li > span {
+  font-size: 12px;
+  color: #83c8c6;
+}
+.kk-chain li p {
+  color: #f2f0e7;
+  margin-bottom: 0;
+}
+.kk-return {
+  border: 1px solid #eab87555;
+  border-radius: 6px;
+  padding: 18px 24px;
+}
+.kk-return h3 {
+  color: var(--kk-gold);
+  margin-top: 0;
+}
+.kk-aside {
+  border-left: 1px solid #ffffff25;
+  padding-left: 24px;
+}
+.kk-aside h2 {
+  font-size: 22px;
+}
+.kk-aside button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 8px 0;
+}
+.kk-page hr {
+  border: 0;
+  border-top: 1px solid #ffffff25;
+  margin: 28px 0;
+}
+.kk-page details {
+  border-top: 1px solid #ffffff25;
+  padding: 18px 0;
+  margin-top: 12px;
+}
+.kk-page summary {
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.kk-page details p,
+.kk-page details li {
+  font-size: 13px;
+}
+.kk-page details li {
+  margin: 12px 0;
+  color: #c0cdd3;
+}
+.kk-table {
+  max-height: 260px;
+  overflow: auto;
+}
+.kk-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+.kk-table th,
+.kk-table td {
+  text-align: left;
+  padding: 9px;
+  border-bottom: 1px solid #ffffff20;
+}
+.kk-table caption {
+  text-align: left;
+  margin-bottom: 10px;
+}
+@media (max-width: 800px) {
+  .kk-page {
+    padding: 16px 12px;
+  }
+  .kk-page nav {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .kk-overview {
+    padding: 10px 8px 7px;
+  }
+  .kk-overview svg {
+    max-height: 29vh;
+  }
+  .kk-legend {
+    gap: 4px;
+    flex-direction: column;
+    font-size: 10px;
+  }
+  .kk-chart-top > button {
+    font-size: 11px;
+    padding: 8px;
+  }
+  .kk-axis-note {
+    font-size: 9px;
+  }
+  .kk-time {
+    gap: 6px;
+  }
+  .kk-time label {
+    min-width: 115px;
+    font-size: 10px;
+  }
+  .kk-eras button {
+    font-size: 9px;
+  }
+  .kk-overview > .kk-small {
+    font-size: 9px;
+  }
+  .kk-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 26px;
+  }
+  .kk-aside {
+    border-left: 0;
+    border-top: 1px solid #ffffff25;
+    padding: 22px 0;
+  }
+  .kk-chain {
+    grid-template-columns: 1fr;
+  }
+  .kk-lead {
+    font-size: 16px;
+  }
+  .kk-overview svg text {
+    font-size: 24px;
+  }
+}
+@media (max-height: 650px) {
+  .kk-overview svg {
+    max-height: 23vh;
+  }
+}
+
+.kk-drilldown .et-page {
+  min-height: 0;
+  padding: 24px 0;
+}
+.kk-drilldown .et-page h1 {
+  font-size: 30px;
+}
+.kk-drilldown .et-layout {
+  gap: 24px;
+}
