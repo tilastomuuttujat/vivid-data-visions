@@ -1,179 +1,203 @@
-import { useState } from "react";
-import { ErotusTulot } from "../erotus-tulot/ErotusTulot";
+import { useId, useState } from "react";
 import { MainLinks } from "../MainLinks";
-import { evidence } from "../murrokset/evidence-model";
+import { ErotusTulot } from "../erotus-tulot/ErotusTulot";
+import { eras, eraAt, MIN, MAX } from "./model";
 import {
-  BASE,
-  MIN,
-  MAX,
-  FUTURE,
-  eras,
-  eraAt,
-  lenses,
-  national,
-  periodChange,
-  project,
-  scenarios,
-  segments,
-} from "./model";
-import type { Point } from "./model";
+  ageData,
+  allocated,
+  assess,
+  FIRST,
+  LAST,
+  futures,
+  futureProfiles,
+  historic,
+  profile,
+  views,
+} from "./age-effect";
 import "./kokonaiskuva.css";
-const x = (year: number) => 65 + ((year - MIN) / (MAX - MIN)) * 1000;
-const y = (value: number) => 325 - value * 0.7;
-const pct = (n: number) =>
-  `${n > 0 ? "+" : ""}${n.toLocaleString("fi-FI", { maximumFractionDigits: 1 })} %`;
-function path(points: Point[]) {
+const X = (year: number) => 60 + ((year - MIN) / (MAX - MIN)) * 1040;
+const Y = (value: number) => 360 - ((value - 30) / 25) * 310;
+type Plot = { year: number; actual: number; reference: number };
+function curve(rows: Plot[], key: "actual" | "reference", reverse = false) {
+  const points = reverse ? [...rows].reverse() : rows;
   return points
     .map((p, i) => {
-      if (!i) return `M${x(p.year)},${y(p.value)}`;
+      if (!i) return `M ${X(p.year)} ${Y(p[key])}`;
       const prev = points[i - 1]!,
-        mid = (x(prev.year) + x(p.year)) / 2;
-      return `C${mid},${y(prev.value)} ${mid},${y(p.value)} ${x(p.year)},${y(p.value)}`;
+        mid = (X(prev.year) + X(p.year)) / 2;
+      return `C ${mid} ${Y(prev[key])} ${mid} ${Y(p[key])} ${X(p.year)} ${Y(p[key])}`;
     })
     .join(" ");
 }
+function area(rows: Plot[]) {
+  if (rows.length < 2) return "";
+  return `${curve(rows, "actual")} L ${X(rows.at(-1)!.year)} ${Y(rows.at(-1)!.reference)} ${curve(rows, "reference", true).replace(/^M [\d.e+-]+ [\d.e+-]+ /, "")} Z`;
+}
+const fmt = (n: number) => n.toLocaleString("fi-FI", { maximumFractionDigits: 1 });
+const pp = (n: number) => `${n > 0 ? "+" : n < 0 ? "−" : ""}${fmt(Math.abs(n))}`;
 export function Kokonaiskuva() {
-  const [year, setYear] = useState(2024);
-  const [lensId, setLens] = useState("all");
-  const [scenarioId, setScenario] = useState("shared");
-  const [controls, setControls] = useState(false);
-  const [drilldown, setDrilldown] = useState(false);
+  const [baseYear, setBase] = useState(FIRST),
+    [year, setYear] = useState(LAST),
+    [viewId, setView] = useState("all");
+  const [futureId, setFuture] = useState("fixed"),
+    [open, setOpen] = useState(false),
+    [drilldown, setDrilldown] = useState(false);
+  const uid = useId().replaceAll(":", "");
+  const actualRows = historic(FIRST);
+  const rows = historic(baseYear),
+    base = profile(baseYear),
+    projected = futureProfiles(futureId).map((p) => assess(p, base));
+  const selected =
+    year > LAST ? projected.find((p) => p.year === year) : rows.find((p) => p.year === year);
+  const sourceRow = year <= LAST ? ageData.rows.find((r) => r.year === year) : null;
+  const baseRate = assess(base, base).actual;
   const era = eraAt(year),
-    lens = lenses.find((l) => l.id === lensId)!,
-    scenario = scenarios.find((s) => s.id === scenarioId)!;
-  const episodes = evidence.episodes.filter((e) => era.episodes.includes(e.code));
-  const start = era.start >= 1995 ? 2007 : Math.max(BASE, era.start),
-    end = Math.min(FUTURE, era.end);
-  const changes = national.map((s) => periodChange(s.points, start, end));
-  const projected = national.map((s, i) => project(s.points.at(-1)!, scenario.growth[i]!));
-  const factor = projected[1]!.at(-1)!.value / national[1]!.points.at(-1)!.value - 1;
+    view = views.find((v) => v.id === viewId)!;
+  const selectedPart = selected ? allocated(selected.parts, viewId) : null;
+  const groupEffects = selected
+    ? views.slice(1).map((v) => ({ ...v, value: allocated(selected.parts, v.id) }))
+    : [];
+  const maxPart = Math.max(0.1, ...groupEffects.map((v) => Math.abs(v.value)));
+  const forecast = futures.find((f) => f.id === futureId)!;
   return (
-    <main className="kk-page">
+    <main className="kk-page kk-impact">
       <nav aria-label="Näkymät">
         <MainLinks exclude="/kokonaiskuva" />
       </nav>
-      <header className="kk-head">
-        <span>SUOMEN KEHITYSKAARI · 1850–2050</span>
-        <h1>Miten kasvu kantaa yhteiskuntaa?</h1>
+      <header className="ki-head">
+        <span>EROTUS · KOKONAISKUVA 1850–2050</span>
+        <h1>Mitä ikärakenne tekee työllisten osuudelle?</h1>
         <p>
-          Tuotanto luo mahdollisuuksia. Työ, tulonjako ja yhteiset palvelut ratkaisevat, miten ne
-          välittyvät ihmisten elämään.
+          Valkoinen käyrä näyttää kokonaisuuden. Kultainen näyttää saman vuoden työllisyyden
+          vertailuvuoden ikäjakaumalla.{" "}
+          <b>Varjostettu väli on ikärakenteen muutoksen laskennallinen vaikutus.</b>
         </p>
       </header>
-      <section className="kk-overview" aria-label="Koko aikajana 1850–2050">
-        <div className="kk-chart-top">
-          <div className="kk-legend">
-            {national.map((s) => (
-              <span key={s.key} style={{ color: s.color }}>
-                ━ {s.label}
-              </span>
-            ))}
+      <section className="ki-overview" aria-label="Koko aikajana 1850–2050">
+        <div className="ki-toolbar">
+          <div className="ki-legend">
+            <span>━ Työllisten osuus koko väestöstä</span>
+            <span>━ Vertailu: vuoden {baseYear} ikäjakauma</span>
           </div>
           <button
-            onClick={() => setControls(!controls)}
-            aria-expanded={controls}
-            aria-controls="kk-controls"
+            aria-expanded={open}
+            aria-controls={`${uid}-controls`}
+            onClick={() => setOpen(!open)}
           >
-            {controls ? "Sulje näkökulmat" : "Valitse näkökulma"} ☰
+            Näkökulma ja vertailuvuosi ☰
           </button>
         </div>
-        <p className="kk-axis-note">
-          Reaalinen kehitys · {BASE} = 100 · molemmat asukasta kohti · ei hyvinvointi-indeksi
+        <p className="ki-axis">
+          % koko väestöstä · ei 15–64-vuotiaiden virallinen työllisyysaste · pystyakseli rajattu
+          30–55 prosenttiin
         </p>
         <svg
-          viewBox="0 0 1130 395"
+          viewBox="0 0 1160 440"
           role="img"
-          aria-labelledby="kk-title"
-          aria-describedby="kk-desc"
+          aria-labelledby={`${uid}-title`}
+          aria-describedby={`${uid}-desc`}
           onClick={(e) => {
             const box = e.currentTarget.getBoundingClientRect();
-            const px = ((e.clientX - box.left) / box.width) * 1130;
             setYear(
-              Math.round(Math.max(MIN, Math.min(MAX, MIN + ((px - 65) / 1000) * (MAX - MIN)))),
+              Math.round(
+                Math.max(
+                  MIN,
+                  Math.min(
+                    MAX,
+                    MIN + ((((e.clientX - box.left) / box.width) * 1160 - 60) / 1040) * (MAX - MIN),
+                  ),
+                ),
+              ),
             );
           }}
         >
-          <title id="kk-title">Suomen tuotanto ja kotitalouksien reaalitulo 1850–2050</title>
-          <desc id="kk-desc">
-            Yhteinen aikajana pysyy aina vuosissa 1850–2050. Tuotantohavaintoja vuodesta 1861,
-            kotitalouksien reaalitulohavaintoja vuodesta 1975; puuttuvia vuosia ei yhdistetä.
-            Historiallinen aineisto päättyy vuoteen 2025. Sen jälkeen katkoviivat ovat valitun
-            skenaarion laskuesimerkkejä.
+          <title id={`${uid}-title`}>
+            Toteutunut kokonaisuus ja vertailukäyrä samalla aikajanalla 1850–2050
+          </title>
+          <desc id={`${uid}-desc`}>
+            Laskettu historia {baseYear}–{LAST}. Ennen vuotta {baseYear} vaikutusaluetta ei ole
+            laskettu. Vuodet {LAST + 1}–2050 ovat skenaario. Varjostettu erotus näyttää koko
+            ikärakenteen laskennallisen vaikutuksen. Ryhmävalinta avaa sen osan vaihtamatta
+            kokonaiskäyriä.
           </desc>
+          <defs>
+            <pattern id={`${uid}-hatch`} width="7" height="7" patternUnits="userSpaceOnUse">
+              <path d="M0 7L7 0" stroke="#eeb776" strokeWidth="1.3" opacity=".7" />
+            </pattern>
+            <linearGradient id={`${uid}-fade`} x1="0" x2="0" y1="0" y2="1">
+              <stop stopColor="#eeb776" stopOpacity=".18" />
+              <stop offset="1" stopColor="#eeb776" stopOpacity=".03" />
+            </linearGradient>
+          </defs>
           <rect
-            x={x(FUTURE)}
-            y="20"
-            width={x(MAX) - x(FUTURE)}
-            height="305"
-            fill="#eab875"
-            opacity=".07"
+            x={X(LAST)}
+            y="34"
+            width={X(MAX) - X(LAST)}
+            height="326"
+            fill="#eeb776"
+            opacity=".055"
           />
-          <rect
-            x={x(era.start)}
-            y="20"
-            width={Math.max(2, x(era.end) - x(era.start))}
-            height="305"
-            fill="#fff"
-            opacity=".035"
-          />
-          {[0, 100, 200, 300, 400].map((v) => (
+          {[30, 35, 40, 45, 50, 55].map((v) => (
             <g key={v}>
-              <path d={`M65 ${y(v)} H1065`} stroke="#ffffff15" />
-              <text x="50" y={y(v) + 5} textAnchor="end">
+              <path d={`M60 ${Y(v)} H1100`} stroke="#ffffff15" />
+              <text x="45" y={Y(v) + 5} textAnchor="end">
                 {v}
               </text>
             </g>
           ))}
-          {[1850, 1900, 1950, 2000, 2025, 2050].map((v) => (
+          {[1850, 1900, 1950, 1987, 2025, 2050].map((v) => (
             <g key={v}>
-              <path d={`M${x(v)} 20 V330`} stroke="#ffffff15" />
-              <text x={x(v)} y="354" textAnchor="middle">
+              <path d={`M${X(v)} 34 V365`} stroke="#ffffff12" />
+              <text x={X(v)} y="395" textAnchor="middle">
                 {v}
               </text>
             </g>
           ))}
-          {national.map((s, i) => (
-            <g key={s.key}>
-              {segments(s.points).map((seg, j) => (
-                <g key={j}>
-                  <path d={path(seg)} stroke={s.color} className="kk-line" />
-                  {seg.map((p) => (
-                    <circle key={p.year} cx={x(p.year)} cy={y(p.value)} r="2" fill={s.color}>
-                      <title>
-                        {p.year}: {p.value.toFixed(1)} ({BASE}=100)
-                      </title>
-                    </circle>
-                  ))}
-                </g>
-              ))}
+          <path d={area(rows)} fill={`url(#${uid}-fade)`} />
+          <path d={area(rows)} fill={`url(#${uid}-hatch)`} />
+          <path d={area(projected)} fill={`url(#${uid}-hatch)`} opacity=".3" />
+          <path d={curve(rows, "reference")} className="ki-reference" />
+          <path d={curve(actualRows, "actual")} className="ki-actual" />
+          <path d={curve(projected, "reference")} className="ki-reference ki-projection" />
+          <path d={curve(projected, "actual")} className="ki-actual ki-projection" />
+          {actualRows.map((p) => (
+            <circle key={p.year} cx={X(p.year)} cy={Y(p.actual)} r="1.6" fill="#f5f1e8">
+              <title>
+                {p.year}: {fmt(p.actual)} %
+              </title>
+            </circle>
+          ))}
+          <text x={X((MIN + baseYear) / 2)} y="190" textAnchor="middle" className="ki-gap-title">
+            Historiallinen tausta 1850–{baseYear - 1}
+          </text>
+          <text x={X((MIN + baseYear) / 2)} y="218" textAnchor="middle">
+            Tälle jaksolle ei vielä laskettua vaikutusaluetta
+          </text>
+          <text x={X(2037)} y="24" textAnchor="middle">
+            SKENAARIO
+          </text>
+          <path d={`M${X(year)} 34 V365`} stroke="#80c9c5" strokeDasharray="3 4" />
+          {selected && (
+            <g>
               <path
-                d={path(projected[i]!)}
-                stroke={s.color}
-                className="kk-line"
-                strokeDasharray="6 6"
+                d={`M${X(year)} ${Y(selected.actual)} V${Y(selected.reference)}`}
+                stroke="#eeb776"
+                strokeWidth="5"
               />
+              <circle cx={X(year)} cy={Y(selected.actual)} r="5" fill="#f5f1e8" />
+              <circle cx={X(year)} cy={Y(selected.reference)} r="5" fill="#eeb776" />
             </g>
-          ))}
-          <path d={`M${x(year)} 20 V330`} stroke="#83c8c6" strokeWidth="1.5" />
-          <text x={x(year)} y="385" textAnchor="middle" className="kk-cursor">
+          )}
+          <text x={X(year)} y="430" textAnchor="middle" fill="#80c9c5">
             {year}
           </text>
-          <text x={x(1889)} y="308" textAnchor="middle">
-            aineistoaukko
-          </text>
-          <text x={x(1949)} y="308" textAnchor="middle">
-            aineistoaukko
-          </text>
-          <text x={x(2037)} y="35" textAnchor="middle">
-            LASKUESIMERKKI
-          </text>
         </svg>
-        <div className="kk-time">
-          <label htmlFor="kk-year">
+        <div className="ki-cursor">
+          <label htmlFor={`${uid}-year`}>
             Tarkasteluvuosi <b>{year}</b>
           </label>
           <input
-            id="kk-year"
+            id={`${uid}-year`}
             aria-label="Tarkasteluvuosi 1850–2050"
             type="range"
             min={MIN}
@@ -182,250 +206,349 @@ export function Kokonaiskuva() {
             onChange={(e) => setYear(Number(e.target.value))}
           />
         </div>
-        <div className="kk-eras" aria-label="Kehitysvaiheet">
+        <div className="ki-eras" aria-label="Historialliset vaiheet">
           {eras.map((e) => (
             <button
               key={e.start}
-              aria-pressed={e === era}
-              onClick={() =>
-                setYear(e.start === FUTURE ? FUTURE : Math.floor((e.start + e.end) / 2))
-              }
+              aria-pressed={era === e}
+              onClick={() => setYear(e.start === 2025 ? 2035 : Math.floor((e.start + e.end) / 2))}
             >
               {e.label}
             </button>
           ))}
         </div>
-        <p className="kk-small">
-          Yhtenäinen viiva: lähteen vuosihavainnot ja niiden välinen kaari. Katkos: aineisto
-          puuttuu. Katkoviiva: oletettu tulevaisuus. Vuoden 2025 lähdeluvut voivat tarkentua.
+        <p className="ki-note">
+          Koko aikajana säilyy. Yhtenäiset käyrät: lähdehavaintoihin perustuva laskelma.
+          Katkoviivat: näkyvistä oletuksista laskettu tulevaisuus. Varjostus ei ole epävarmuusväli.
         </p>
       </section>
-      <section
-        id="kk-controls"
-        className="kk-controls"
-        hidden={!controls}
-        aria-label="Näkökulman valinta"
-      >
-        <h2>Mistä asemasta katsot kokonaisuutta?</h2>
-        <div>
-          {lenses.map((l) => (
-            <button key={l.id} aria-pressed={lensId === l.id} onClick={() => setLens(l.id)}>
-              {l.label}
-            </button>
-          ))}
-        </div>
-        <p>
-          Näkökulma vaihtaa kysymykset ja vaikutuksen välittymisen. Se ei muuta kansallisia käyriä
-          ryhmäkohtaisiksi mittauksiksi.
-        </p>
-      </section>
-      <div className="kk-content">
-        <article className="kk-story" aria-live="polite">
-          <span className="kk-kicker">
-            {era.label} · {lens.label}
-          </span>
-          <h2>{era.title}</h2>
-          <p className="kk-lead">{era.whole}</p>
-          <section className="kk-reading">
-            <h3>Mitä kokonaiskäyrät kertovat?</h3>
-            {year >= FUTURE ? (
-              <>
-                <p>
-                  {scenario.text} Vuoteen 2050 mennessä kotitalouksien reaalitulo asukasta kohti
-                  muuttuu tällä oletuksella <b>{pct(factor * 100)}</b>.
-                </p>
-                <p>
-                  Kasvuprosentti kertautuu 25 vuotta. Se näyttää oletuksen kokonaisseuraamuksen
-                  reaalitulolle, ei tietyn päätöksen vaikutusta.
-                </p>
-              </>
-            ) : changes.every((c) => c !== null) && end > start ? (
-              <>
-                <p>
-                  Vuosina {start}–{end} tuotanto asukasta kohti muuttui <b>{pct(changes[0]!)}</b> ja
-                  kotitalouksien reaalitulo asukasta kohti <b>{pct(changes[1]!)}</b>.
-                </p>
-                <p>
-                  {changes[1]! > changes[0]!
-                    ? "Kotitalouksien tulokehitys on tässä vertailussa tuotantoa vahvempaa. Kasvun hidastuminen ei siis siirry tuloihin yksi yhteen."
-                    : "Tuotannon kasvu ja kotitalouksien tulokehitys eroavat tässä vertailussa. Ero ohjaa kysymään, mitkä kanavat välittivät tai vaimensivat muutosta."}{" "}
-                  Indeksieroa ei voi tulkita menetetyiksi euroiksi.
-                </p>
-              </>
-            ) : (
-              <p>
-                Tämän vaiheen molempia käyriä kattavaa vertailua ei aineistosta voi tehdä.
-                Historiallinen selityspolku antaa kontekstin; puuttuvaa tulokäyrää ei korvata
-                arviolla.
-              </p>
-            )}
-          </section>
-          <h3 className="kk-question">{lens.question}</h3>
-          <p>{lens.exposure}</p>
-          <p className="kk-small">Selityspolku · mekanismitulkinta, ei laskettu nettovaikutus.</p>
-          <ol className="kk-chain" aria-label="Vaikutuksen välittyminen kokonaisuuteen">
-            {era.chain.map((step, i) => (
-              <li key={step}>
-                <span>
-                  {String(i + 1).padStart(2, "0")} · {lens.channels[i]}
-                </span>
-                <p>{step}</p>
-              </li>
+      <section id={`${uid}-controls`} className="ki-controls" hidden={!open}>
+        <label>
+          Vertailuvuosi
+          <select value={baseYear} onChange={(e) => setBase(Number(e.target.value))}>
+            {[1987, 1995, 2000, 2010].map((v) => (
+              <option key={v}>{v}</option>
             ))}
-          </ol>
-          <section className="kk-return">
-            <h3>Miten vaikutus palaa kokonaisuuteen?</h3>
-            <p>
-              {era.chain[3]}. Tämä paluuyhteys on syy tarkastella tuotannon rinnalla toimeentuloa ja
-              osallistumista.
-            </p>
-            <p>
-              <b>Vastavoima:</b> {era.counter}
-            </p>
-          </section>
-          <details className="kk-method">
-            <summary>Mihin tulkinta perustuu ja mitä se ei vielä osoita?</summary>
-            <p>{era.limit}</p>
-            <p>
-              Selityspolku on toimituksellinen mekanismitulkinta. Alla oleva tapausaineisto ankkuroi
-              ajanjaksoa; se ei sellaisenaan todista jokaista nuolta tai väestöryhmän
-              nettovaikutusta. Vaikutusten suuruutta, viivettä ja vastakkaisia vaikutuksia ei ole
-              yhdistetty kausaaliseksi kokonaismalliksi.
-            </p>
-            <p>
-              Kotitalouksien käytettävissä oleva nettotulo sisältää tulonsiirtojen ja verotuksen
-              vaikutusta; julkiset luontoismuotoiset palvelut eivät sisälly siihen kattavasti. BKT
-              on tuotannon bruttomitta, joten käyrien erotus ei ole kansantalouden tilinpidon
-              jakautumislaskelma. Reaalisarjat käyttävät eri hintakäsitteitä.
-            </p>
-            <p>
-              Mahdollisia vaihtoehtoisia selityksiä ovat kansainvälinen suhdanne, väestörakenne,
-              omaisuustulot, tulonsiirrot, verotus ja hintakehitys. Niiden keskinäiset osuudet eivät
-              ratkea näistä kahdesta käyrästä.
-            </p>
-            <p>
-              Vaiherajat ovat lukemista ohjaavia toimituksellisia valintoja. Käyrät eivät määrää
-              niitä tilastollisesti. Kotitalousryhmän nykyistä rakennetta ei projisoida samanlaisena
-              koko historiaan.
-            </p>
-          </details>
-          <details className="kk-evidence">
-            <summary>Avaa ajanjakson aineisto ja lähteet ({episodes.length} tapausta)</summary>
-            {episodes.length ? (
-              episodes.map((e) => (
-                <section key={e.code}>
-                  <h3>{e.title}</h3>
-                  <p>{e.selection}</p>
-                  <p>{e.limitations.join(" ")}</p>
-                  <ul>
-                    {e.metrics.map((m) => (
-                      <li key={`${m.series_key}-${m.group_key}`}>
-                        <b>{m.title}</b> · {m.unit} · {m.observations.length} havaintoa.{" "}
-                        {m.source_urls.map((url) => (
-                          <a key={url} href={url} target="_blank" rel="noreferrer">
-                            Lähde ↗{" "}
-                          </a>
-                        ))}
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              ))
-            ) : (
-              <p>
-                Tulevaisuuden laskuesimerkillä ei ole toteumahavaintoja. Oletukset näkyvät
-                skenaariovalinnassa.
+          </select>
+        </label>
+        <label>
+          Minkä ryhmän osuutta tutkit?
+          <select value={viewId} onChange={(e) => setView(e.target.value)}>
+            {views.map((v) => (
+              <option key={v.id} value={v.id}>
+                {v.label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <p>Ryhmävalinta avaa vaikutuksen osiin. Pääkuva säilyttää koko väestön molemmat käyrät.</p>
+      </section>
+      <div className="ki-content">
+        <article aria-live="polite">
+          <span className="ki-kicker">
+            {year} ·{" "}
+            {year > LAST
+              ? "LASKUESIMERKKI"
+              : selected
+                ? "LÄHDEAINEISTOSTA LASKETTU"
+                : "HISTORIALLINEN KONTEKSTI"}
+          </span>
+          {selected ? (
+            <>
+              <h2>
+                Ikärakenteen muutos{" "}
+                {selected.effect < 0
+                  ? "painaa osuutta alaspäin"
+                  : selected.effect > 0
+                    ? "nostaa osuutta"
+                    : "ei muuta osuutta"}
+                .
+              </h2>
+              <div className="ki-result">
+                <strong>
+                  {pp(selected.effect)} <small>prosenttiyksikköä</small>
+                </strong>
+                <p>
+                  {year > LAST ? "Skenaarion" : "Havaittu"} osuus <b>{fmt(selected.actual)} %</b> ·
+                  vertailu <b>{fmt(selected.reference)} %</b>
+                </p>
+              </div>
+              <p className="ki-lead">
+                Vuoden {baseYear} ikäjakaumalla ja vuoden {year} ikäryhmittäisillä työllisten
+                osuuksilla kokonaisosuus olisi laskennallisesti {fmt(selected.reference)} %.{" "}
+                {Math.abs(selected.effect) < 0.00001
+                  ? "Vertailuvuonna käyrät kohtaavat."
+                  : `Erotus ${fmt(Math.abs(selected.effect))} prosenttiyksikköä syntyy ikäosuuksien muuttumisesta, ei siitä, että vertailussa olisi poistettu jokin ihmisryhmä.`}
               </p>
-            )}
+              <section className="ki-meaning">
+                <h3>Mitä se merkitsee kokonaisuudelle?</h3>
+                <p>
+                  Kun työllisten osuus koko väestöstä pienenee, työssä olevia on vähemmän suhteessa
+                  koko väestöön. Tämä on yksi tuotannon ja yhteisten tehtävien rahoituksen
+                  edellytyksistä. Työtunnit, tuottavuus, palkat ja verotus voivat kuitenkin muuttaa
+                  seurauksia olennaisesti.
+                </p>
+                <p>
+                  Vertailu erottaa ikärakenteen siitä, miten hyvin eri-ikäiset työllistyvät. Se ei
+                  yksin selitä julkista velkaa, palvelujen tarvetta tai ihmisten hyvinvointia.
+                </p>
+              </section>
+              <section className="ki-reconcile">
+                <h3>Mistä koko muutos vuodesta {baseYear} syntyy?</h3>
+                <div>
+                  <p>
+                    <span>Ikärakenne</span>
+                    <b>{pp(selected.effect)} pp</b>
+                  </p>
+                  <p>
+                    <span>Työllistyminen ikäryhmissä</span>
+                    <b>{pp(selected.reference - baseRate)} pp</b>
+                  </p>
+                  <p>
+                    <span>Kokonaismuutos</span>
+                    <b>{pp(selected.actual - baseRate)} pp</b>
+                  </p>
+                </div>
+                <p className="ki-note">
+                  Kaksi ensimmäistä osaa summautuvat kokonaismuutokseen. Jako käyttää samaa
+                  ilmoitettua vakiointijärjestystä kuin vertailukäyrä.
+                </p>
+              </section>
+              <h3>Mistä varjostettu erotus muodostuu?</h3>
+              <p>
+                Ryhmien osuudet summautuvat koko vaikutukseen ennen lukujen pyöristämistä. Valinta
+                näyttää ryhmän ikäosuuden muutoksen osuuden tässä hajotelmassa.
+              </p>
+              <div className="ki-parts">
+                {groupEffects.map((g) => (
+                  <button
+                    key={g.id}
+                    aria-pressed={viewId === g.id}
+                    onClick={() => setView(viewId === g.id ? "all" : g.id)}
+                  >
+                    <span>{g.label}</span>
+                    <span className="ki-part-track">
+                      <i
+                        style={{
+                          width: `${(Math.abs(g.value) / maxPart) * 48}%`,
+                          left:
+                            g.value >= 0 ? "50%" : `${50 - (Math.abs(g.value) / maxPart) * 48}%`,
+                          background: g.value < 0 ? "#eeb776" : "#80c9c5",
+                        }}
+                      />
+                    </span>
+                    <b>{pp(g.value)} pp</b>
+                  </button>
+                ))}
+              </div>
+              {viewId !== "all" && (
+                <section className="ki-selected">
+                  <h3>
+                    {view.label}: {pp(selectedPart!)} prosenttiyksikköä
+                  </h3>
+                  <p>
+                    Osuus kuvaa ryhmän väestöosuuden muutosta suhteessa vertailuvuoteen ja ryhmän
+                    työllisten osuutta suhteessa vertailutasoon. Se ei ole ryhmän aiheuttama vahinko
+                    tai hyöty. Muu osa kokonaiserosta on {pp(selected.effect - selectedPart!)}{" "}
+                    prosenttiyksikköä.
+                  </p>
+                </section>
+              )}
+            </>
+          ) : (
+            <>
+              <h2>{era.title}</h2>
+              <p className="ki-lead">{era.whole}</p>
+              <p>
+                Yhtenäistä ikäryhmittäistä laskenta-aineistoa on tässä poiminnassa vuodesta {FIRST}.{" "}
+                {year < FIRST
+                  ? "Aikaisemmille vuosille ei esitetä keksittyä vertailukäyrää."
+                  : `Valittu vertailuvuosi ${baseYear} on tarkasteluvuoden jälkeen. Valitse aiempi vertailuvuosi.`}
+              </p>
+              <p>{era.counter}</p>
+            </>
+          )}
+          <details>
+            <summary>Miksi tämä erotus kestää tarkastelua?</summary>
+            <p>
+              Kunkin vuoden työllisten osuus = Σ ikäryhmän väestöosuus × ryhmän työllisten osuus.
+              Vertailukäyrässä väestöosuudet ovat vuodelta {baseYear} mutta työllisten osuudet
+              tarkasteluvuodelta. Erotus on tämän vakioinnin kirjanpidollinen rakennevaikutus, ei
+              tunnistettu kausaalinen vaikutus.
+            </p>
+            <p>
+              Vertailu ei laske uudelleen palkkoja, työpaikkojen määrää, muuttoliikettä, veroja tai
+              käyttäytymistä toisessa ikärakenteessa. Ikärakenteen ja työllistymisen muutosten
+              vuorovaikutus kohdistuu tässä järjestyksessä rakenneosaan. Vertailuvuoden vaihtaminen
+              näyttää herkkyyden valitulle lähtötilanteelle.
+            </p>
+            <p>
+              Ryhmän osuus = (nykyinen väestöosuus − vertailuvuoden väestöosuus) × (nykyinen ryhmän
+              työllisten osuus − koko vertailukäyrän työllisten osuus). Summataan lähteen ikäluokat
+              valittuihin ryhmiin. Keskitys tekee osista yhteenlaskettavia, koska väestöosuuksien
+              muutosten summa on nolla. Tämä on ilmoitettu jakotapa; ryhmäkohtainen jako ei ole
+              yksikäsitteinen kausaalinen vastuunjako.
+            </p>
+            <p>
+              Molempien käyrien yksikkö on prosenttia koko väestöstä, kaikki iät. Mittari eroaa
+              virallisesta työikäisen väestön työllisyysasteesta ja huomioi myös lapset sekä
+              eläkeikäiset nimittäjässä. Samaa henkilöä ei seurata ikäryhmässä ajan yli.
+            </p>
+            <p>
+              Lähteen kaikki 13 ikäluokkaa ovat mukana. Väestö ja työlliset on tarkistettu joka
+              vuodelta lähteen koko maan yhteensä-lukuja vasten. Käyrien kaaret ovat esitysmuoto
+              lähdevuosien välillä. Hallinnollisen tilaston kattavuus tai menetelmät voivat muuttua;
+              pelkkä aineiston sisäinen täsmääminen ei poista tätä rajoitetta.
+            </p>
           </details>
           <details>
-            <summary>Kansallisten käyrien tarkat luvut ja määritelmät</summary>
+            <summary>Avaa vuosiluvut ja alkuperäislähde</summary>
             <p>
-              Sama vertailuvuosi {BASE} = 100. Indeksointi näyttää suhteellisen muutoksen; se ei tee
-              eri käsitteistä samoja. Käyrien lähdepoiminta: {evidence.source.capturedAt}.
+              <a href={ageData.source.url} target="_blank" rel="noreferrer">
+                {ageData.source.title} ↗
+              </a>{" "}
+              · {ageData.source.scope} · {ageData.source.unit}. Päivitetty {ageData.source.updated},
+              poimittu {ageData.source.retrieved}.
             </p>
-            {national.map((s) => (
-              <section key={s.key}>
-                <h3>{s.label}</h3>
-                <p>
-                  {s.source.title} · {s.source.unit}.{" "}
-                  <a href={s.source.source_url} target="_blank" rel="noreferrer">
-                    Alkuperäislähde ↗
-                  </a>
-                </p>
-                <div className="kk-table">
+            <div className="ki-table">
+              <table>
+                <caption>
+                  Käyrien laskenta {baseYear}–{LAST}; prosenttia koko väestöstä, erotus
+                  prosenttiyksikköä
+                </caption>
+                <thead>
+                  <tr>
+                    <th>Vuosi</th>
+                    <th>Lähteen työlliset</th>
+                    <th>Lähteen väestö</th>
+                    <th>Havaittu %</th>
+                    <th>Vertailu %</th>
+                    <th>Erotus pp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {rows.map((p) => {
+                    const r = ageData.rows.find((r) => r.year === p.year)!;
+                    return (
+                      <tr key={p.year}>
+                        <th scope="row">{p.year}</th>
+                        <td>{r.totalEmployed.toLocaleString("fi-FI")}</td>
+                        <td>{r.totalPopulation.toLocaleString("fi-FI")}</td>
+                        <td>{fmt(p.actual)}</td>
+                        <td>{fmt(p.reference)}</td>
+                        <td>{pp(p.effect)}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            {sourceRow && (
+              <p>
+                Valittu vuosi {year}: {sourceRow.totalEmployed.toLocaleString("fi-FI")} työllistä /{" "}
+                {sourceRow.totalPopulation.toLocaleString("fi-FI")} asukasta.
+              </p>
+            )}
+            {sourceRow && selected && (
+              <details>
+                <summary>Ikäluokkien lähtöarvot vuodelta {year}</summary>
+                <div className="ki-table">
                   <table>
-                    <caption>{s.label}: lähteessä olevat vuodet</caption>
+                    <caption>Kaikki lähteen ikäluokat; vertailuvuosi {baseYear}</caption>
                     <thead>
                       <tr>
-                        <th>Vuosi</th>
-                        <th>Indeksi {BASE}=100</th>
-                        <th>Lähteen arvo</th>
+                        <th>Ikä</th>
+                        <th>Väestö</th>
+                        <th>Työlliset</th>
+                        <th>Ikäosuus {baseYear} %</th>
+                        <th>Ikäosuus {year} %</th>
+                        <th>Ryhmän työllisten osuus %</th>
+                        <th>Osuus erotuksesta pp</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {s.points.map((p) => (
-                        <tr key={p.year}>
-                          <th scope="row">{p.year}</th>
-                          <td>{p.value.toLocaleString("fi-FI", { maximumFractionDigits: 2 })}</td>
+                      {ageData.groups.map((g, i) => (
+                        <tr key={g.id}>
+                          <th scope="row">{g.label}</th>
+                          <td>{sourceRow.population[i]!.toLocaleString("fi-FI")}</td>
+                          <td>{sourceRow.employed[i]!.toLocaleString("fi-FI")}</td>
+                          <td>{fmt(base.weights[i]! * 100)}</td>
                           <td>
-                            {s.rawPoints
-                              .find((r) => r.year === p.year)!
-                              .value.toLocaleString("fi-FI", { maximumFractionDigits: 2 })}
+                            {fmt((sourceRow.population[i]! / sourceRow.totalPopulation) * 100)}
                           </td>
+                          <td>{fmt((sourceRow.employed[i]! / sourceRow.population[i]!) * 100)}</td>
+                          <td>{pp(selected.parts[i]!)}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-              </section>
-            ))}
+                <p>
+                  Ikäosuudet on laskettu koko väestöstä; ryhmän työllisten osuus oman ikäryhmän
+                  väestöstä. Esitysluvut pyöristetään, laskenta käyttää täysiä lähdelukuja.
+                </p>
+              </details>
+            )}
+            <p>
+              Lähdevastauksen SHA-256: <code>{ageData.source.sha256}</code>. Päivitysskripti ja
+              lähdekysely tallennetaan samaan julkaisuun.
+            </p>
+          </details>
+          <details>
+            <summary>Historiallinen yhteys: {era.label}</summary>
+            <h3>{era.title}</h3>
+            <p>{era.whole}</p>
+            <ol>
+              {era.chain.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
+            </ol>
+            <p>{era.counter}</p>
+            <p>{era.limit} Historiallinen kuvaus ei korvaa puuttuvaa vaikutuslaskelmaa.</p>
           </details>
         </article>
-        <aside className="kk-aside">
-          <span className="kk-kicker">2025 → 2050</span>
-          <h2>Mitä jos kasvu välittyy eri tavoin?</h2>
-          <p>Kaikki vaihtoehdot näkyvät samalla täydellä aikajanalla. Valitse yksi oletuspari.</p>
-          {scenarios.map((s) => (
+        <aside>
+          <span className="ki-kicker">2025–2050</span>
+          <h2>Mihin suunta voi jatkua?</h2>
+          <p>Valitse yksi näkyvä oletus. Koko aikajana ja historiallinen laskelma säilyvät.</p>
+          {futures.map((f) => (
             <button
-              key={s.id}
-              aria-pressed={s.id === scenarioId}
+              key={f.id}
+              aria-pressed={futureId === f.id}
               onClick={() => {
-                setScenario(s.id);
-                setYear(FUTURE);
+                setFuture(f.id);
+                setYear(2050);
               }}
             >
-              {s.label}
+              {f.label}
             </button>
           ))}
-          <p>{scenario.text}</p>
-          <p className="kk-small">
-            Oletukset on valittu havainnollistamiseen. Ne eivät ole lähteestä saatu ennuste eivätkä
-            suositeltujen toimien vaikuttavuusarvio. Kumpikaan käyrä ei kuvaa julkisen talouden
-            tasapainoa.
+          <p>{forecast.description}</p>
+          <p className="ki-note">
+            Jatkettaessa ikäosuudet rajataan vähintään nollaan ja normalisoidaan summautumaan
+            yhteen. Laskuesimerkki ei huomioi syntyvyyden, kuolleisuuden tai muuttoliikkeen
+            erillisiä oletuksia eikä ole Tilastokeskuksen väestöennuste.
           </p>
           <hr />
-          <h3>Kun tarvitset yksityiskohdan</h3>
+          <h3>Mitä seuraavaksi voi laskea?</h3>
           <p>
-            Kokonaiskuvasta voi jatkaa kotitalouden tuloihin. Koko aikajana säilyy näkyvissä myös
-            yksityiskohtaa avatessa.
+            Työllistymisen, työtuntien ja tuottavuuden muutokset vaativat kukin oman hajotelmansa.
+            Niitä ei muuteta painokertoimilla tämän käyrän vaikutuksiksi.
           </p>
-          <button onClick={() => setDrilldown(true)}>Avaa tulojen hajotelma alempana ↓</button>
-          <p className="kk-small">
-            Erillinen esimerkkikotitalouksien laskelma; ei yllä olevien kansallisten käyrien
-            ryhmäkohtainen jako.
-          </p>
+          <button onClick={() => setDrilldown(!drilldown)} aria-expanded={drilldown}>
+            Avaa toimeentulon yksityiskohta ↓
+          </button>
         </aside>
       </div>
       <details
-        className="kk-drilldown"
+        className="ki-drilldown"
         open={drilldown}
         onToggle={(e) => setDrilldown(e.currentTarget.open)}
       >
-        <summary>Yksityiskohta: esimerkkikotitalouden tulot</summary>
+        <summary>Erillinen esimerkkikotitalouden tulohajotelma</summary>
         <p>
-          Seuraava laskelma syventää yhtä toimeentulon kanavaa. Se ei hajota kansallista käyrää
-          väestöryhmiin. Täysi aikajana säilyy yläpuolella.
+          Syventävä esimerkki ei ole pääkuvan ikärakennevaikutuksen rahamääräinen vastine. Koko
+          aikajana säilyy yläpuolella.
         </p>
         {drilldown && <ErotusTulot embedded />}
       </details>

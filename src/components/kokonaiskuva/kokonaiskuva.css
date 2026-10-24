@@ -1,223 +1,258 @@
 .kk-page {
-  --kk-gold: #eab875;
   background: #101e28;
-  color: #f2f0e7;
+  color: #f5f1e8;
   min-height: 100vh;
-  padding: 24px clamp(16px, 4vw, 70px);
+  padding: 24px clamp(14px, 4vw, 65px);
   font-family: system-ui, sans-serif;
 }
 .kk-page nav {
   display: flex;
-  gap: 16px;
   flex-wrap: wrap;
+  gap: 14px;
   font-size: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 .kk-page a {
-  color: #9ed2d2;
+  color: #91cbc8;
 }
-.kk-head > span,
-.kk-kicker {
+.kk-page p,
+.kk-page li {
+  line-height: 1.65;
+  color: #bccbd2;
+}
+.kk-page button,
+.kk-page select {
+  font: inherit;
+  color: #f5f1e8;
+  background: #1c303d;
+  border: 1px solid #ffffff30;
+  border-radius: 5px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.kk-page button[aria-pressed="true"] {
+  color: #eeb776;
+  border-color: #eeb776;
+}
+.kk-page :focus-visible {
+  outline: 3px solid #80c9c5;
+  outline-offset: 4px;
+}
+.ki-head > span,
+.ki-kicker {
   font-size: 11px;
-  letter-spacing: 0.13em;
-  color: var(--kk-gold);
+  letter-spacing: 0.14em;
+  color: #eeb776;
 }
-.kk-head h1 {
-  font-size: clamp(30px, 4vw, 54px);
+.ki-head h1 {
+  font-size: clamp(30px, 4vw, 53px);
+  max-width: 29ch;
   margin: 10px 0;
 }
-.kk-page p {
-  line-height: 1.65;
-  color: #c0cdd3;
-}
-.kk-head p {
-  max-width: 76ch;
+.ki-head p {
+  max-width: 90ch;
   margin-bottom: 24px;
 }
-.kk-overview {
+.ki-overview {
   position: sticky;
   top: 0;
   z-index: 10;
+  padding: 14px 16px 9px;
   background: #101e28;
   border: 1px solid #ffffff25;
-  border-radius: 10px;
-  padding: 14px 18px 8px;
-  box-shadow: 0 14px 32px #09121c77;
+  border-radius: 9px;
+  box-shadow: 0 12px 28px #07121b88;
 }
-.kk-chart-top {
+.ki-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
 }
-.kk-legend {
+.ki-legend {
   display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
-  font-size: 13px;
-}
-.kk-page button {
-  background: #1a303e;
-  color: #f2f0e7;
-  border: 1px solid #ffffff30;
-  border-radius: 5px;
-  padding: 10px 12px;
-  font: inherit;
-  font-size: 13px;
-  cursor: pointer;
-}
-.kk-page button[aria-pressed="true"] {
-  border-color: var(--kk-gold);
-  color: var(--kk-gold);
-  background: #eab87510;
-}
-.kk-page :focus-visible {
-  outline: 3px solid #83c8c6;
-  outline-offset: 3px;
-}
-.kk-axis-note,
-.kk-small {
-  font-size: 11px;
-}
-.kk-axis-note {
-  margin: 8px 0 0;
-}
-.kk-overview svg {
-  width: 100%;
-  max-height: 34vh;
-  display: block;
-  cursor: crosshair;
-}
-.kk-overview svg text {
-  fill: #b6c5cd;
-  font-size: 13px;
-}
-.kk-overview svg .kk-cursor {
-  fill: #83c8c6;
-  font-weight: 700;
-}
-.kk-line {
-  fill: none;
-  stroke-width: 3;
-  stroke-linejoin: round;
-}
-.kk-time {
-  display: flex;
-  align-items: center;
   gap: 20px;
   font-size: 12px;
 }
-.kk-time label {
-  min-width: 145px;
+.ki-legend span:last-child {
+  color: #eeb776;
 }
-.kk-time input {
+.ki-toolbar button {
+  font-size: 11px;
+}
+.ki-axis,
+.ki-note {
+  font-size: 11px;
+}
+.ki-axis {
+  margin: 8px 0 0;
+}
+.ki-overview svg {
   width: 100%;
-  accent-color: #83c8c6;
+  max-height: 36vh;
+  display: block;
+  cursor: crosshair;
 }
-.kk-eras {
+.ki-overview svg text {
+  fill: #aebfc7;
+  font-size: 13px;
+}
+.ki-overview .ki-gap-title {
+  fill: #c7d4da;
+  font-size: 19px;
+}
+.ki-reference,
+.ki-actual {
+  fill: none;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+.ki-reference {
+  stroke: #eeb776;
+}
+.ki-actual {
+  stroke: #f5f1e8;
+  stroke-width: 4;
+}
+.ki-projection {
+  stroke-dasharray: 7 6;
+  stroke-width: 2;
+}
+.ki-cursor {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 12px;
+}
+.ki-cursor label {
+  min-width: 150px;
+}
+.ki-cursor input {
+  width: 100%;
+  accent-color: #80c9c5;
+}
+.ki-eras {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 5px;
-  margin-top: 10px;
+  margin-top: 8px;
 }
-.kk-eras button {
+.ki-eras button {
   font-size: 11px;
-  padding: 7px 2px;
+  padding: 7px 3px;
 }
-.kk-overview > .kk-small {
-  margin: 8px 0 0;
+.ki-overview > .ki-note {
+  margin: 7px 0 0;
 }
-.kk-controls {
-  border: 1px solid #ffffff30;
-  border-radius: 8px;
+.ki-controls {
   padding: 20px;
-  margin-top: 18px;
-  background: #192c39;
-}
-.kk-controls[hidden] {
-  display: none;
-}
-.kk-controls h2 {
-  font-size: 20px;
-  margin-top: 0;
-}
-.kk-controls > div {
+  margin: 18px 0;
+  background: #1b303e;
+  border: 1px solid #ffffff25;
+  border-radius: 6px;
   display: flex;
-  gap: 8px;
+  gap: 22px;
+  align-items: center;
   flex-wrap: wrap;
 }
-.kk-controls p {
+.ki-controls[hidden] {
+  display: none;
+}
+.ki-controls label {
   font-size: 12px;
 }
-.kk-content {
+.ki-controls select {
+  display: block;
+  margin-top: 8px;
+}
+.ki-controls p {
+  font-size: 12px;
+  max-width: 40ch;
+}
+.ki-content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 270px;
+  grid-template-columns: minmax(0, 1fr) 275px;
   gap: 44px;
-  margin-top: 36px;
+  margin: 30px 0;
 }
-.kk-story h2 {
-  font-size: clamp(24px, 3vw, 35px);
-  max-width: 32ch;
-  margin: 12px 0;
+.ki-content h2 {
+  font-size: clamp(24px, 3vw, 34px);
+  max-width: 34ch;
 }
-.kk-lead {
-  font-size: 18px;
-  max-width: 78ch;
-}
-.kk-reading {
-  padding: 18px 24px;
+.ki-result {
+  border-left: 3px solid #eeb776;
+  padding: 16px 25px;
   background: #ffffff05;
-  border-left: 3px solid var(--kk-gold);
-  margin: 26px 0;
 }
-.kk-reading h3 {
-  margin-top: 0;
+.ki-result strong {
+  font-size: clamp(35px, 5vw, 65px);
+  color: #eeb776;
+  font-weight: 500;
 }
-.kk-reading b {
-  color: #f2f0e7;
+.ki-result strong small {
+  font-size: 16px;
 }
-.kk-question {
-  font-size: 23px;
-  max-width: 60ch;
+.ki-result p {
+  margin: 6px 0 0;
 }
-.kk-chain {
-  padding: 0;
-  list-style: none;
-  margin: 28px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+.ki-lead {
+  font-size: 18px;
+  max-width: 80ch;
 }
-.kk-chain li {
-  padding: 18px 20px;
-  background: #18303b;
-  border-top: 2px solid #83c8c6;
+.ki-meaning {
+  padding: 8px 0 14px;
 }
-.kk-chain li > span {
-  font-size: 12px;
-  color: #83c8c6;
-}
-.kk-chain li p {
-  color: #f2f0e7;
-  margin-bottom: 0;
-}
-.kk-return {
-  border: 1px solid #eab87555;
-  border-radius: 6px;
-  padding: 18px 24px;
-}
-.kk-return h3 {
-  color: var(--kk-gold);
-  margin-top: 0;
-}
-.kk-aside {
-  border-left: 1px solid #ffffff25;
-  padding-left: 24px;
-}
-.kk-aside h2 {
+.ki-meaning h3 {
   font-size: 22px;
 }
-.kk-aside button {
+.ki-parts {
+  display: grid;
+  gap: 8px;
+  margin: 22px 0;
+}
+.ki-parts button {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.3fr) minmax(90px, 1fr) 75px;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+  font-size: 13px;
+}
+.ki-parts button > b {
+  text-align: right;
+  font-weight: 500;
+}
+.ki-part-track {
+  height: 22px;
+  position: relative;
+  background: #ffffff05;
+}
+.ki-part-track:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  border-left: 1px solid #ffffff45;
+}
+.ki-part-track i {
+  display: block;
+  position: absolute;
+  top: 4px;
+  height: 14px;
+}
+.ki-selected {
+  border: 1px solid #eeb77655;
+  border-radius: 5px;
+  padding: 12px 20px;
+}
+.ki-content aside {
+  border-left: 1px solid #ffffff25;
+  padding-left: 25px;
+}
+.ki-content aside h2 {
+  font-size: 23px;
+}
+.ki-content aside button {
   display: block;
   width: 100%;
   text-align: left;
@@ -226,7 +261,7 @@
 .kk-page hr {
   border: 0;
   border-top: 1px solid #ffffff25;
-  margin: 28px 0;
+  margin: 26px 0;
 }
 .kk-page details {
   border-top: 1px solid #ffffff25;
@@ -234,109 +269,162 @@
   margin-top: 12px;
 }
 .kk-page summary {
-  cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
   line-height: 1.5;
 }
 .kk-page details p,
 .kk-page details li {
   font-size: 13px;
 }
-.kk-page details li {
-  margin: 12px 0;
-  color: #c0cdd3;
-}
-.kk-table {
-  max-height: 260px;
+.ki-table {
   overflow: auto;
+  max-height: 360px;
 }
-.kk-table table {
+.ki-table table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 13px;
+  font-size: 12px;
 }
-.kk-table th,
-.kk-table td {
-  text-align: left;
-  padding: 9px;
+.ki-table th,
+.ki-table td {
+  text-align: right;
+  padding: 10px 8px;
+  white-space: nowrap;
   border-bottom: 1px solid #ffffff20;
 }
-.kk-table caption {
+.ki-table caption {
   text-align: left;
-  margin-bottom: 10px;
+  margin: 16px 0;
+}
+.kk-page code {
+  overflow-wrap: anywhere;
+}
+.ki-drilldown .et-page {
+  padding: 24px 0;
+  min-height: 0;
+}
+.ki-drilldown .et-page h1 {
+  font-size: 30px;
 }
 @media (max-width: 800px) {
   .kk-page {
-    padding: 16px 12px;
+    padding: 16px 10px;
   }
-  .kk-page nav {
-    gap: 10px;
-    margin-bottom: 20px;
+  .ki-head h1 {
+    font-size: 31px;
   }
-  .kk-overview {
-    padding: 10px 8px 7px;
+  .ki-head p {
+    font-size: 14px;
   }
-  .kk-overview svg {
+  .ki-toolbar {
+    align-items: flex-start;
+  }
+  .ki-toolbar button {
+    font-size: 10px;
+    padding: 7px;
+  }
+  .ki-legend {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 10px;
+  }
+  .ki-axis {
+    font-size: 9px;
+  }
+  .ki-overview {
+    padding: 10px 7px 7px;
+  }
+  .ki-overview svg {
     max-height: 29vh;
   }
-  .kk-legend {
-    gap: 4px;
-    flex-direction: column;
-    font-size: 10px;
+  .ki-overview svg text {
+    font-size: 22px;
   }
-  .kk-chart-top > button {
-    font-size: 11px;
-    padding: 8px;
+  .ki-overview .ki-gap-title {
+    font-size: 23px;
   }
-  .kk-axis-note {
-    font-size: 9px;
-  }
-  .kk-time {
+  .ki-cursor {
     gap: 6px;
-  }
-  .kk-time label {
-    min-width: 115px;
     font-size: 10px;
   }
-  .kk-eras button {
+  .ki-cursor label {
+    min-width: 115px;
+  }
+  .ki-eras button {
+    font-size: 9px;
+    padding: 7px 0;
+  }
+  .ki-overview > .ki-note {
     font-size: 9px;
   }
-  .kk-overview > .kk-small {
-    font-size: 9px;
-  }
-  .kk-content {
+  .ki-content {
     grid-template-columns: 1fr;
-    gap: 24px;
-    margin-top: 26px;
+    gap: 22px;
   }
-  .kk-aside {
+  .ki-content aside {
     border-left: 0;
     border-top: 1px solid #ffffff25;
     padding: 22px 0;
   }
-  .kk-chain {
-    grid-template-columns: 1fr;
+  .ki-parts button {
+    grid-template-columns: minmax(130px, 1.3fr) minmax(60px, 1fr) 65px;
+    gap: 6px;
+    font-size: 11px;
   }
-  .kk-lead {
+  .ki-result strong small {
+    font-size: 12px;
+  }
+  .ki-controls {
+    gap: 10px;
+  }
+  .ki-lead {
     font-size: 16px;
-  }
-  .kk-overview svg text {
-    font-size: 24px;
   }
 }
 @media (max-height: 650px) {
-  .kk-overview svg {
-    max-height: 23vh;
+  .ki-overview svg {
+    max-height: 22vh;
+  }
+  .ki-overview > .ki-note {
+    display: none;
   }
 }
 
-.kk-drilldown .et-page {
-  min-height: 0;
-  padding: 24px 0;
+.ki-reconcile {
+  margin: 24px 0;
+  padding: 16px;
+  background: #ffffff04;
 }
-.kk-drilldown .et-page h1 {
-  font-size: 30px;
+.ki-reconcile > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
-.kk-drilldown .et-layout {
-  gap: 24px;
+.ki-reconcile > div p {
+  margin: 0;
+}
+.ki-reconcile span {
+  display: block;
+  font-size: 11px;
+}
+.ki-reconcile b {
+  display: block;
+  color: #f5f1e8;
+  font-size: 22px;
+  font-weight: 500;
+}
+.ki-reconcile > div p:first-child b {
+  color: #eeb776;
+}
+@media (max-width: 600px) {
+  .ki-reconcile > div {
+    gap: 8px;
+  }
+  .ki-reconcile b {
+    font-size: 18px;
+  }
+  .ki-reconcile span {
+    font-size: 10px;
+  }
 }

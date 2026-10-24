@@ -1,41 +1,58 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, expect, it, vi } from "vitest";
 vi.mock("../MainLinks", () => ({ MainLinks: () => null }));
-vi.mock("@tanstack/react-router", () => ({
-  Link: ({ children, to }: any) => <a href={to}>{children}</a>,
-}));
 import { Kokonaiskuva } from "./Kokonaiskuva";
 afterEach(cleanup);
-it("keeps the 1850–2050 overview fixed across group, era and future choices", () => {
+it("shows actual and standardized whole curves with a real shaded difference", () => {
   render(<Kokonaiskuva />);
   const chart = screen.getByRole("img");
-  const slider = screen.getByRole("slider");
-  const viewBox = chart.getAttribute("viewBox");
-  expect(slider).toHaveAttribute("min", "1850");
-  expect(slider).toHaveAttribute("max", "2050");
-  fireEvent.click(screen.getByRole("button", { name: /Valitse näkökulma/ }));
-  fireEvent.click(screen.getByRole("button", { name: "Lapsiperhe" }));
-  expect(screen.getByText(/Miten lasten ja vanhempien toimintamahdollisuudet/)).toBeInTheDocument();
-  fireEvent.click(screen.getByRole("button", { name: "1850–1917" }));
-  expect(screen.getByText(/Tämän vaiheen molempia käyriä kattavaa vertailua/)).toBeInTheDocument();
-  fireEvent.click(screen.getByRole("button", { name: "Kasvu eriytyy" }));
-  expect(slider).toHaveValue("2025");
-  expect(screen.getByText(/oletuksen kokonaisseuraamuksen/)).toBeInTheDocument();
-  expect(chart).toHaveAttribute("viewBox", viewBox);
-  expect(chart).toHaveAccessibleDescription(/Yhteinen aikajana pysyy aina vuosissa 1850–2050/);
+  expect(chart.querySelector("path.ki-actual")?.getAttribute("d")).not.toBe(
+    chart.querySelector("path.ki-reference")?.getAttribute("d"),
+  );
+  expect(chart.querySelector('path[fill*="hatch"]')?.getAttribute("d")).toMatch(/Z$/);
+  expect(screen.getByText("−3,4", { selector: "strong" })).toBeInTheDocument();
+  expect(chart).toHaveAccessibleDescription(/Laskettu historia 1987–2024/);
   expect(chart.innerHTML).not.toMatch(/NaN|Infinity/);
 });
-it("opens source cases and keeps the household drilldown distinct from national evidence", () => {
+it("keeps the full domain and whole curves unchanged when opening an age-group part", () => {
   render(<Kokonaiskuva />);
-  fireEvent.click(screen.getByText(/Avaa ajanjakson aineisto ja lähteet/));
-  expect(screen.getAllByRole("link", { name: /Lähde ↗/ }).length).toBeGreaterThan(0);
-  fireEvent.click(screen.getByRole("button", { name: /Avaa tulojen hajotelma/ }));
-  expect(screen.getAllByRole("img")).toHaveLength(2);
-  expect(screen.getByRole("slider", { name: "Tarkasteluvuosi 1850–2050" })).toHaveAttribute(
-    "min",
-    "1850",
-  );
+  const chart = screen.getByRole("img");
+  const original = chart.querySelector("path.ki-reference")!.getAttribute("d");
+  const actual = chart.querySelector("path.ki-actual")!.getAttribute("d");
+  fireEvent.click(screen.getByRole("button", { name: /Näkökulma ja vertailuvuosi/ }));
+  fireEvent.change(screen.getByRole("combobox", { name: /Minkä ryhmän/ }), {
+    target: { value: "old" },
+  });
   expect(
-    screen.getByText(/ei yllä olevien kansallisten käyrien ryhmäkohtainen jako/),
+    screen.getByRole("heading", { name: /65 vuotta täyttäneiden osuus:/ }),
   ).toBeInTheDocument();
+  expect(chart.querySelector("path.ki-reference")).toHaveAttribute("d", original);
+  fireEvent.change(screen.getByRole("combobox", { name: "Vertailuvuosi" }), {
+    target: { value: "2000" },
+  });
+  expect(chart.querySelector("path.ki-reference")!.getAttribute("d")).not.toBe(original);
+  expect(chart.querySelector("path.ki-actual")).toHaveAttribute("d", actual);
+  const slider = screen.getByRole("slider");
+  expect(slider).toHaveAttribute("min", "1850");
+  expect(slider).toHaveAttribute("max", "2050");
+  fireEvent.change(slider, { target: { value: "1900" } });
+  expect(
+    screen.getByText(/Aikaisemmille vuosille ei esitetä keksittyä vertailukäyrää/),
+  ).toBeInTheDocument();
+  expect(screen.queryByText(/prosenttiyksikköä$/, { selector: "small" })).not.toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: "Rakennemuutos jatkuu" }));
+  expect(slider).toHaveValue("2050");
+  expect(chart).toHaveAttribute("viewBox", "0 0 1160 440");
+});
+it("opens exact source totals and inline drilldown while retaining the long timeline", () => {
+  render(<Kokonaiskuva />);
+  fireEvent.click(screen.getByText("Avaa vuosiluvut ja alkuperäislähde"));
+  expect(screen.getByRole("table", { name: /Käyrien laskenta/ })).toHaveTextContent("2024");
+  expect(screen.getByRole("link", { name: /Tilastokeskus, työssäkäynti/ })).toHaveAttribute(
+    "href",
+    "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tyokay/115w.px",
+  );
+  fireEvent.click(screen.getByRole("button", { name: /Avaa toimeentulon yksityiskohta/ }));
+  expect(screen.getAllByRole("img")).toHaveLength(2);
+  expect(screen.getByRole("slider")).toHaveAttribute("min", "1850");
 });

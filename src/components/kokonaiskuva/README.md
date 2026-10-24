@@ -1,19 +1,33 @@
-# Kokonaiskuva 1850–2050
+# Erotus · kokonaiskuva 1850–2050
 
-`/kokonaiskuva` (Pages `/#/kokonaiskuva`) is the long-run entry point. Its sticky SVG and year selector always span 1850–2050. Era, social-position and scenario choices change explanation or scenario assumptions, never the time domain. The same React component serves TanStack and standalone exports.
+`/kokonaiskuva` (Pages `/#/kokonaiskuva`) preserves the original Erotus visual: one actual aggregate curve, one transparent reference calculation, and a hatched difference. The complete sticky timeline always spans 1850–2050. The original `/erotus` is unchanged.
 
-Two national series from the pinned murrosmatriisi evidence snapshot are rebased at their common 1975 observation:
-- real GDP per capita (source volume index);
-- household real disposable net income per capita (derived source series).
+## Measured whole and reference
 
-Rebasing preserves each series' relative changes. Different price concepts and gross/net accounting scopes mean the index gap is not lost income, a distributional identity or a causal effect. The chart is not a welfare or fiscal-balance score. A source table exposes original values, rebased values, source definitions and URLs. Source-vintage 2025 values may be revised.
+The whole is **employed persons as a percentage of the entire population, all ages**, not the official 15–64 employment rate, fiscal balance or welfare score. Source: Statistics Finland, employment statistics table 115w, year-end counts for the entire country, both sexes and all 13 mutually exclusive age cells. Actual calculation coverage: 1987–2024. Before coverage, the same timeline shows explicitly unquantified historical context; no artificial curve fills the gap.
 
-Published FI observations are deduplicated; conflicts fail. No missing annual observations are generated. The chart breaks lines at every missing year. GDP coverage starts in 1861 and household income in 1975, while the full domain still starts at 1850. Curves only connect adjacent observed years using endpoint-bounded cubic segments.
+For year t, weights w are population shares and r are within-age employed proportions:
 
-Six editorial phases and five social-position lenses explain the channels production → household circumstances → collective responsibility → productive participation. These are mechanism interpretations, not an identified causal network or estimates of group effects. Period-specific counterforces, alternatives and limitations are exposed. Existing episode codes connect the reader to relevant snapshot cases and primary-source URLs; association with an episode does not validate every chain link.
+- Actual R(t) = 100 Σ w(t)r(t).
+- Reference C(t) = 100 Σ w(base)r(t).
+- Composition effect = R(t) − C(t).
+- Within-age employment component = C(t) − R(base).
+- These two changes sum exactly to R(t) − R(base).
 
-2025–2050 is a distinct scenario layer. Three explicit illustrative pairs of annual growth rates compound from the 2025 observations. These are neither forecasts nor policy treatment effects. They do not include employment, public finance, inequality or behavioural feedback. Only one scenario is shown at a time; the axis is fixed across scenarios.
+The base is selectable (1987, 1995, 2000, 2010). This fixed-weight standardization does not rerun employment, wages, migration, policy or behaviour in an alternative population. The order assigns the interaction term to composition. It is a transparent accounting calculation, not an identified causal effect.
 
-The household accounting prototype opens inline on demand using `ErotusTulot embedded`. The long-run overview stays mounted and sticky. Example households are not presented as decompositions of the national series. The original separate income route remains available.
+## Group allocation
 
-Tests cover the complete year-to-era mapping, baseline and source-ratio preservation, gaps, unavailable comparisons, scenario compounding and join, fixed domain across all selection types, source opening and inline drilldown. No historical aggregate impact weights or invented annual observations are used.
+Each original age cell contributes (w(t)−w(base)) × (100r(t)−C(t)). The centered contributions sum to the aggregate composition effect because the population-share changes sum to zero. They are aggregated into under 25, 25–44, 45–64 and 65+. This is an explicit allocation convention, not unique causal attribution or a group's responsibility for the outcome. Selecting a group changes its explanation and contribution highlight, never the two whole-population curves.
+
+## Future and display
+
+2025–2050 uses dashed, separately labelled illustrative scenarios. Either latest population weights and rates are held constant, or the last ten years' average weight changes continue linearly, clamped to zero and renormalized. Both keep within-age rates at the latest source values. These are not official population forecasts and contain no cohort-component demographic model.
+
+Curves are endpoint-bounded cubic segments between annual calculated points. The percentage axis is visibly fixed at 30–55%, not zero. The hatch is an arithmetic difference, not uncertainty. No unsupported confidence bands are fabricated. Exact actual/reference values and source counts are available in a table. An example household drilldown opens inline; it is not a monetary equivalent of the composition effect.
+
+## Reproducible data refresh
+
+Run `python3 scripts/data/fetch-employment-age-effect.py`. It fetches metadata and source counts, checks every age count for missing/invalid values, and requires age cells to sum exactly to both published population and employed totals in every year before replacing JSON atomically. Query, source update/capture date and response SHA-256 are saved in `employment-age-data.json`. No production-browser API dependency.
+
+Tests check all source totals, weighted aggregates, exact whole-change and group-allocation identities, a known synthetic two-age shift, the 2024 regression, baseline sensitivity, future joins and valid weights, fixed-domain interactions and inline drilldown. The main app and Pages export share the same component.
