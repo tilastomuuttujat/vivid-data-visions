@@ -53,7 +53,6 @@ const PlaneettaRoute = PlaneettaRouteImport.update({
   path: '/planeetta',
   getParentRoute: () => rootRouteImport,
 } as any)
-
 const TeemavertailuRoute = TeemavertailuRouteImport.update({
   id: '/teemavertailu',
   path: '/teemavertailu',
@@ -61,7 +60,6 @@ const TeemavertailuRoute = TeemavertailuRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/teemavertailu': typeof TeemavertailuRoute
   '/': typeof IndexRoute
   '/kehityskaari': typeof KehityskaariRoute
   '/laboratorio': typeof LaboratorioRoute
@@ -69,9 +67,9 @@ export interface FileRoutesByFullPath {
   '/murrokset': typeof MurroksetRoute
   '/observatorio': typeof ObservatorioRoute
   '/planeetta': typeof PlaneettaRoute
+  '/teemavertailu': typeof TeemavertailuRoute
 }
 export interface FileRoutesByTo {
-  '/teemavertailu': typeof TeemavertailuRoute
   '/': typeof IndexRoute
   '/kehityskaari': typeof KehityskaariRoute
   '/laboratorio': typeof LaboratorioRoute
@@ -79,9 +77,9 @@ export interface FileRoutesByTo {
   '/murrokset': typeof MurroksetRoute
   '/observatorio': typeof ObservatorioRoute
   '/planeetta': typeof PlaneettaRoute
+  '/teemavertailu': typeof TeemavertailuRoute
 }
 export interface FileRoutesById {
-  '/teemavertailu': typeof TeemavertailuRoute
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/kehityskaari': typeof KehityskaariRoute
@@ -90,6 +88,7 @@ export interface FileRoutesById {
   '/murrokset': typeof MurroksetRoute
   '/observatorio': typeof ObservatorioRoute
   '/planeetta': typeof PlaneettaRoute
+  '/teemavertailu': typeof TeemavertailuRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -179,18 +178,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ObservatorioRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/teemavertailu': {
-      id: '/teemavertailu'
-      path: '/teemavertailu'
-      fullPath: '/teemavertailu'
-      preLoaderRoute: typeof TeemavertailuRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/planeetta': {
       id: '/planeetta'
       path: '/planeetta'
       fullPath: '/planeetta'
       preLoaderRoute: typeof PlaneettaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teemavertailu': {
+      id: '/teemavertailu'
+      path: '/teemavertailu'
+      fullPath: '/teemavertailu'
+      preLoaderRoute: typeof TeemavertailuRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
