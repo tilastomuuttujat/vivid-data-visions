@@ -103,7 +103,8 @@ export function Teemavertailu() {
             <line x1={x(NOW)} x2={x(NOW)} y1={PAD.t} y2={H - PAD.b} className="k-now" />
             <text x={x(NOW) + 4} y={PAD.t + 12} className="k-now-label">Nyt</text>
             {chosen.map((t, i) => {
-              const arc = themeArc(t);
+              const off = (i - (chosen.length - 1) / 2) * 0.035; // separates overlapping arcs
+              const arc = themeArc(t).map((p) => ({ ...p, level: p.level + off }));
               const dim = hover !== null && hover !== t.id;
               return (
                 <g key={t.id} className={`tk-arc ${dim ? "dim" : ""}`} style={{ ["--c" as string]: PALETTE[i] }}>
