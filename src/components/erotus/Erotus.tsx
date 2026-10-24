@@ -2,10 +2,10 @@ import { useMemo, useState } from "react";
 import { MainLinks } from "@/components/MainLinks";
 import { ERAS, NOW, YEAR_MAX, YEAR_MIN } from "@/components/kaari/kaari-model";
 import "@/components/kaari/kaari.css";
-import { OBSERVABLES, factorsFor, sample, type Sample } from "./erotus-model";
+import { OBSERVABLES, factorsFor, sample, whyAt, type Sample } from "./erotus-model";
 import "./erotus.css";
 
-const W = 1000, H = 440, PAD = { l: 20, r: 20, t: 36, b: 40 };
+const W = 1200, H = 560, PAD = { l: 20, r: 20, t: 36, b: 40 };
 const x = (yr: number) => PAD.l + ((yr - YEAR_MIN) / (YEAR_MAX - YEAR_MIN)) * (W - PAD.l - PAD.r);
 const y = (v: number) => H - PAD.b - v * (H - PAD.t - PAD.b);
 
