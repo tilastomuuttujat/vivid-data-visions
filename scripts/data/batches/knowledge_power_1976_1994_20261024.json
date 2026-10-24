@@ -1,0 +1,952 @@
+{
+  "batch_id": "knowledge_power_1976_1994_20261024",
+  "taxonomy_id": "knowledge_power_taxonomy_v1",
+  "title": "Tieto ja valta Suomessa 1976–1994",
+  "period": [
+    1976,
+    1994
+  ],
+  "primary_theme_id": 29,
+  "taxonomy": {
+    "access": "Tiedon saavutettavuus",
+    "language_access": "Kielellinen pääsy tietoon",
+    "credential_gatekeeping": "Tutkinnot ja muodolliset pääsyehdot",
+    "knowledge_production": "Tiedon ja käsitteiden tuottaminen",
+    "classification_power": "Luokittelun ja tiedonkeruun valinnat",
+    "distribution_gatekeeping": "Julkaisemisen ja jakelun portinvartijuus",
+    "expert_recognition": "Asiantuntijuuden ja tunnustuksen valinta",
+    "institutional_use": "Tiedon käyttö hallinnossa ja päätöksenteossa",
+    "alternative_publics": "Vaihtoehtoiset sivistys- ja julkaisukanavat"
+  },
+  "selection": "Rajattu mekanismien monipuolisuutta tavoitteleva laadullinen erä; ei edustava otos kaikesta tiedontuotannosta.",
+  "sources": [
+    {
+      "source_id": "radio",
+      "title": "RadioMedian historia",
+      "publisher_or_author": "RadioMedia",
+      "url": "https://radiomedia.fi/tietoa-radiomediasta/radiomedian-historiaa/",
+      "locator": "1983,1985,1989,1991",
+      "source_type": "institutional_history_or_methodology",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "funet",
+      "title": "Funetin juhlavuosi: 40 vuotta toimintaa ja 35 vuotta internetissä",
+      "publisher_or_author": "CSC",
+      "url": "https://csc.fi/uutinen/funetin-juhlavuosi-40-vuotta-toimintaa-ja-35-vuotta-internetissa/",
+      "locator": "Perustaminen 1983, verkko 1984, internet 1988, Linux 1991",
+      "source_type": "institutional_history_or_methodology",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "privacy",
+      "title": "Tietosuojavaltuutetun toimiston vuosi 2017",
+      "publisher_or_author": "Tietosuojavaltuutetun toimisto",
+      "url": "https://tietosuoja.fi/documents/6927448/10717840/Vuosikertomus%2B2017.pdf/f6f9580b-edfa-1a29-bc7d-0f95700fc7d8?t=1541078617000",
+      "locator": "Hakukoneen indeksoima ote: toimisto 1.11.1987, laki 1.1.1988; PDF-suorahaku estyi",
+      "source_type": "institutional_history_or_methodology",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_excerpt_checked_full_document_pending",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "stats",
+      "title": "Laatuseloste: työssäkäyntitilasto 2011",
+      "publisher_or_author": "Tilastokeskus",
+      "url": "https://stat.fi/til/tyokay/2011/04/tyokay_2011_04_2013-11-06_laa_001_fi.html",
+      "locator": "Oikeellisuus ja tarkkuus: vuosien 1980,1985,1990 vertailut",
+      "source_type": "institutional_history_or_methodology",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "tenk",
+      "title": "Toiminta",
+      "publisher_or_author": "Tutkimuseettinen neuvottelukunta",
+      "url": "https://tenk.fi/fi/tenk/toiminta",
+      "locator": "Perustaminen asetuksella 1991",
+      "source_type": "institutional_history_or_methodology",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "yle",
+      "title": "Ylen historia",
+      "publisher_or_author": "Yleisradio",
+      "url": "https://yle.fi/a/20-10006904",
+      "locator": "1990 kanavat,1992 ohjelmaneuvostot,1993 kanavauudistus",
+      "source_type": "institutional_history_or_methodology",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "library",
+      "title": "Kirjaston tarina -dokumentin tieto-osuuksien tekstit",
+      "publisher_or_author": "Kirjastokaista 2017",
+      "url": "https://www.kirjastokaista.fi/kirjaston-tarina-dokumentin-tieto-osuuksien-tekstit/",
+      "locator": "Kirjasto osana informaatioyhteiskuntaa: 1994 tehtävä",
+      "source_type": "institutional_history_or_methodology",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "future",
+      "title": "EU:n ennakointiverkosto",
+      "publisher_or_author": "Valtioneuvosto",
+      "url": "https://valtioneuvosto.fi/tulevaisuustyo-ja-ennakointi/eun-ennakointiverkosto",
+      "locator": "Suomi on ennakoinnin edelläkävijä: valiokunta ja selonteko 1993",
+      "source_type": "institutional_history_or_methodology",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "tekes",
+      "title": "Laki teknologian kehittämiskeskuksesta 161/1983",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/en/legislation/1983/161",
+      "locator": "Säädöksen nimi ja vuosi; alkuperäissisältö jatkopoiminta",
+      "source_type": "statute_identity_record",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_excerpt_checked_full_document_pending",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "school",
+      "title": "Koulutuksen niukkuudesta koulutuksen valintamyymälään",
+      "publisher_or_author": "Aila Repo / Tilastokeskus",
+      "url": "https://stat.fi/artikkelit/2010/art_2010-06-07_005.html?s=0",
+      "locator": "Siirtymä 1972–1977",
+      "source_type": "institutional_history_or_methodology",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "grant",
+      "title": "Sosiaalivakuutus 1/2014",
+      "publisher_or_author": "Kela",
+      "url": "https://www.kela.fi/documents/20124/410408/2014_1.pdf/afa9cd26-f6a1-06f4-f9a2-e5bad7d2292e?t=1676528123124",
+      "locator": "s.22 opintotuen uudistus 1992; indeksoitu ote",
+      "source_type": "institutional_history_or_methodology",
+      "checked_on": "2026-10-24",
+      "verification": "indexed_excerpt_checked_full_document_pending",
+      "contemporaneous_primary_source": false
+    }
+  ],
+  "entries": [
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:school1977",
+      "primary_item_id": "education_needs_1946_1975_20261022:reform1972",
+      "reuse_existing_item": true,
+      "title": "Peruskouluun siirtyminen saavuttaa viimeiset alueet",
+      "year_start": 1977,
+      "year_end": 1977,
+      "theme_ids": [
+        4,
+        19,
+        20,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "credential_gatekeeping"
+      ],
+      "source_ids": [
+        "school"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:school1977:1",
+          "year": 1977,
+          "statement": "Vuosina 1972–1977 toteutettu peruskouluun siirtyminen päättyi Helsingissä.",
+          "source_ids": [
+            "school"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Yhteinen koulupohja voi avata aikaisemmin varhain eriytyneitä jatko-opintopolkuja.",
+      "case_limitations": "Ei väitettä tasokurssien tai muun valikoinnin poistumisesta 1977; ei mitattua vaikutusta asiantuntija-asemien jakautumiseen.",
+      "gatekeepers": [
+        "kouluhallinto",
+        "kunnat"
+      ],
+      "affected_groups": [
+        "lapset",
+        "perheet"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:tekes1983",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:tekes1983",
+      "reuse_existing_item": false,
+      "title": "Teknologian kehittämiskeskuksen lakiperusta syntyy",
+      "year_start": 1983,
+      "year_end": 1983,
+      "theme_ids": [
+        8,
+        15,
+        16,
+        17,
+        29
+      ],
+      "dimension_codes": [
+        "institutional_use",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "tekes"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:tekes1983:1",
+          "year": 1983,
+          "statement": "Laki teknologian kehittämiskeskuksesta annettiin vuonna 1983 numerolla 161/1983.",
+          "source_ids": [
+            "tekes"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Erillinen teknologian kehittämisinstituutio voi vaikuttaa siihen, millaisille hankkeille syntyy resursseja.",
+      "case_limitations": "Tässä vahvistettu säädöksen identiteetti; alkuperäiset tehtävät, määrärahat ja hankekohtaiset valinnat kerättävä erikseen. Myöhempiä Business Finlandin tehtäviä ei siirretä vuoteen 1983.",
+      "gatekeepers": [
+        "lainsäätäjä",
+        "kehittämiskeskus"
+      ],
+      "affected_groups": [
+        "yritykset",
+        "tutkimusorganisaatiot"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:funet1983",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:funet1983",
+      "reuse_existing_item": false,
+      "title": "Funet-projekti rakentaa yliopistojen yhteistä tietoliikenneverkkoa",
+      "year_start": 1983,
+      "year_end": 1984,
+      "theme_ids": [
+        4,
+        14,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "funet"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:funet1983:1",
+          "year": 1983,
+          "statement": "Opetusministeriö asetti Funet-projektin vuonna 1983; perustamispäiväksi CSC ilmoittaa 29.12.1983.",
+          "source_ids": [
+            "funet"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:funet1983:2",
+          "year": 1984,
+          "statement": "Funet-verkko yhdisti yliopistojen keskustietokoneet vuonna 1984.",
+          "source_ids": [
+            "funet"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Yhteinen verkko voi madaltaa tutkimusyhteisöjen välisen tiedonvaihdon kustannuksia.",
+      "case_limitations": "Verkon perustaminen ja kansainvälinen internetyhteys 1988 eri tapahtumia; ei yleisen kotitalouspääsyn alkamisajankohta.",
+      "gatekeepers": [
+        "opetusministeriö",
+        "verkon ylläpitäjät",
+        "yliopistot"
+      ],
+      "affected_groups": [
+        "tutkijat",
+        "korkeakouluyhteisöt"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:radio1985",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:radio1985",
+      "reuse_existing_item": false,
+      "title": "Kaupalliset paikallisradiot saavat ensimmäiset toimiluvat",
+      "year_start": 1985,
+      "year_end": 1985,
+      "theme_ids": [
+        8,
+        16,
+        18,
+        20,
+        29
+      ],
+      "dimension_codes": [
+        "distribution_gatekeeping",
+        "alternative_publics"
+      ],
+      "source_ids": [
+        "radio"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:radio1985:1",
+          "year": 1985,
+          "statement": "Valtioneuvosto myönsi ensimmäiset kaupalliset radiotoimiluvat tammikuussa 1985.",
+          "source_ids": [
+            "radio"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:radio1985:2",
+          "year": 1985,
+          "statement": "Vuoden aikana aloitti 18 radiokanavaa; ensimmäisenä Radio Lakeus Nivalassa 27.4.1985.",
+          "source_ids": [
+            "radio"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Uudet kanavat voivat laajentaa aiheiden ja esiintyjien kirjoa sekä tuoda mainosrahoituksen valintoihin.",
+      "case_limitations": "Kanavamäärä ei osoita sisältöjen tai omistuksen moninaisuutta; toimiluvat rajasivat edelleen markkinoille pääsyä.",
+      "gatekeepers": [
+        "valtioneuvosto",
+        "radioyhtiöt",
+        "mainosrahoittajat"
+      ],
+      "affected_groups": [
+        "kuulijat",
+        "paikalliset toimijat"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:privacy1987",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:privacy1987",
+      "reuse_existing_item": false,
+      "title": "Tietosuojavaltuutettu ja henkilörekisterilaki vahvistavat tietovallan valvontaa",
+      "year_start": 1987,
+      "year_end": 1988,
+      "theme_ids": [
+        8,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "institutional_use",
+        "classification_power"
+      ],
+      "source_ids": [
+        "privacy"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:privacy1987:1",
+          "year": 1987,
+          "statement": "Tietosuojavaltuutetun toimisto aloitti 1.11.1987.",
+          "source_ids": [
+            "privacy"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:privacy1987:2",
+          "year": 1988,
+          "statement": "Henkilörekisterilaki tuli voimaan 1.1.1988.",
+          "source_ids": [
+            "privacy"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Rekisterien käytön valvonta voi rajata organisaatioiden valtaa kerätä ja yhdistellä yksilöitä koskevaa tietoa.",
+      "case_limitations": "Ajankohdat tarkistettu viranomaisen vuosikertomuksen indeksoidusta otteesta, koko PDF jäi teknisesti saavuttamatta. Alkuperäiset oikeudet ja poikkeukset jatkopoimintaan; GDPR-oikeuksia ei ajoiteta vuoteen 1988.",
+      "gatekeepers": [
+        "tietosuojavaltuutettu",
+        "rekisterinpitäjät"
+      ],
+      "affected_groups": [
+        "rekisteröidyt henkilöt"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:internet1988",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:internet1988",
+      "reuse_existing_item": false,
+      "title": "Funet liittää Suomen kansainväliseen internetiin Nordunetin kautta",
+      "year_start": 1988,
+      "year_end": 1988,
+      "theme_ids": [
+        4,
+        13,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "alternative_publics"
+      ],
+      "source_ids": [
+        "funet"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:internet1988:1",
+          "year": 1988,
+          "statement": "CSC ajoittaa ensimmäisen Suomesta Nordunetin kautta Yhdysvaltoihin kulkeneen IP-reititystestin päivään 1.12.1988.",
+          "source_ids": [
+            "funet"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Kansainvälinen yhteys voi antaa tutkijoille suoran kanavan ulkomaisiin aineistoihin ja keskusteluun.",
+      "case_limitations": "IP-yhteys erotettu varhaisemmista sähköposti- ja muista verkkoyhteyksistä. Ei oletusta kaikkien kansalaisten pääsystä tai WWW:n käytöstä vuonna 1988.",
+      "gatekeepers": [
+        "tutkimusverkot",
+        "jäsenorganisaatiot"
+      ],
+      "affected_groups": [
+        "verkkoon pääsevät tutkijat",
+        "opiskelijat"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:licences1989",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:licences1989",
+      "reuse_existing_item": false,
+      "title": "Pidemmät radiotoimiluvat muuttavat paikallisradiotoiminnan ehtoja",
+      "year_start": 1989,
+      "year_end": 1989,
+      "theme_ids": [
+        8,
+        18,
+        29
+      ],
+      "dimension_codes": [
+        "distribution_gatekeeping",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "radio"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:licences1989:1",
+          "year": 1989,
+          "statement": "Ensimmäiset viisivuotiset kaupallisen radion toimiluvat jaettiin vuonna 1989 aiempien kaksivuotisten kausien jälkeen.",
+          "source_ids": [
+            "radio"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Pidempi toimilupa voi vahvistaa jatkuvuutta mutta myös vakiinnuttaa luvan saaneiden asemaa.",
+      "case_limitations": "Ei mitattua näyttöä tulokkaiden syrjäyttämisestä, omistuksen keskittymisestä tai ohjelmien muutoksesta.",
+      "gatekeepers": [
+        "valtioneuvosto",
+        "luvanhaltijat"
+      ],
+      "affected_groups": [
+        "radiotoimijat",
+        "kuulijat"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:register1990",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:register1990",
+      "reuse_existing_item": false,
+      "title": "Rekisteripohjainen väestölaskenta muuttaa väestön kuvaamisen menetelmää",
+      "year_start": 1990,
+      "year_end": 1990,
+      "theme_ids": [
+        6,
+        8,
+        15,
+        26,
+        29
+      ],
+      "dimension_codes": [
+        "classification_power",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "stats"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:register1990:1",
+          "year": 1990,
+          "statement": "Vuoden 1990 väestölaskenta oli ensimmäinen kokonaan rekisteripohjainen laskenta.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:register1990:2",
+          "year": 1990,
+          "statement": "Luotettavuustutkimus vertasi rekisteri- ja lomaketietoja; lähde korostaa, ettei ero yksin ratkaise kumman tieto on oikea.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Hallinnolliset luokittelusäännöt voivat tehdä väestöstä säännöllisesti kuvattavan, mutta tulos voi erota ihmisen omasta kuvauksesta.",
+      "case_limitations": "Luokituksen ero ei itsessään osoita virhettä tai syrjintää. Laatuselosteen nykyisiä rekisterimääriä ei siirretä vuoteen 1990.",
+      "gatekeepers": [
+        "tilastoviranomaiset",
+        "rekisterinpitäjät"
+      ],
+      "affected_groups": [
+        "väestö",
+        "monirooliset henkilöt"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:channels1990",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:channels1990",
+      "reuse_existing_item": false,
+      "title": "Yleisradio eriyttää radiokanavat kohderyhmien mukaan",
+      "year_start": 1990,
+      "year_end": 1990,
+      "theme_ids": [
+        14,
+        16,
+        18,
+        29
+      ],
+      "dimension_codes": [
+        "distribution_gatekeeping",
+        "classification_power"
+      ],
+      "source_ids": [
+        "yle"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:channels1990:1",
+          "year": 1990,
+          "statement": "Yleisradio jakoi radio-ohjelmansa 1.6.1990 kolmeen kanavaan: Radio Ylen Ykkönen, Radiomafia ja Radio Suomi.",
+          "source_ids": [
+            "yle"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Kanavaprofilointi voi helpottaa sisällön löytämistä ja samalla eriyttää yhteisiä yleisöjä.",
+      "case_limitations": "Ei näyttöä kuplautumisesta tai poliittisesta polarisaatiosta; niitä ei päätellä kanavarakenteesta.",
+      "gatekeepers": [
+        "ohjelmajohto",
+        "toimitukset"
+      ],
+      "affected_groups": [
+        "erilaiset kuulijaryhmät"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:measurement1991",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:measurement1991",
+      "reuse_existing_item": false,
+      "title": "Kansallinen radiotutkimus yhtenäistää yleisöjen mittaamista",
+      "year_start": 1991,
+      "year_end": 1991,
+      "theme_ids": [
+        16,
+        18,
+        29
+      ],
+      "dimension_codes": [
+        "classification_power",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "radio"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:measurement1991:1",
+          "year": 1991,
+          "statement": "Radioalan toimijat solmivat vuonna 1991 sopimuksen radiokuuntelun tutkimustulosten yhteismitallisuudesta; syntyi Kansallinen radiotutkimus.",
+          "source_ids": [
+            "radio"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Yhteinen yleisömittari voi tehdä kuulijamääristä ohjelmisto- ja mainospäätöksiä ohjaavaa tietoa.",
+      "case_limitations": "Tosiasiallinen vaikutus ohjelmavalintoihin, alkuperäinen otos ja katveryhmät tutkittava erikseen. Toimialan oma historia ei ole riippumaton vaikuttavuusarvio.",
+      "gatekeepers": [
+        "tutkimuksen tilaajat",
+        "mittausorganisaatio",
+        "mediayhtiöt"
+      ],
+      "affected_groups": [
+        "kuulijat",
+        "mainostajat"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:tenk1991",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:tenk1991",
+      "reuse_existing_item": false,
+      "title": "Tutkimuseettinen neuvottelukunta perustetaan",
+      "year_start": 1991,
+      "year_end": 1991,
+      "theme_ids": [
+        4,
+        14,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "expert_recognition",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "tenk"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:tenk1991:1",
+          "year": 1991,
+          "statement": "Tutkimuseettinen neuvottelukunta perustettiin asetuksella vuonna 1991 tutkimuseettisten kysymysten käsittelyyn ja tutkimusetiikan edistämiseen.",
+          "source_ids": [
+            "tenk"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Asiantuntijatiedon uskottavuutta voidaan tukea menettelyjen julkisella arvioinnilla pelkän aseman sijasta.",
+      "case_limitations": "Nykyistä HTK-prosessia, ohjeita tai tehtävävalikoimaa ei kokonaisuudessaan siirretä vuoteen 1991. Perustaminen ei takaa jokaisen tutkimustuloksen oikeellisuutta.",
+      "gatekeepers": [
+        "tiedeyhteisö",
+        "neuvottelukunta",
+        "opetusministeriö"
+      ],
+      "affected_groups": [
+        "tutkijat",
+        "tiedon käyttäjät"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:linux1991",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:linux1991",
+      "reuse_existing_item": false,
+      "title": "Linuxin varhainen julkaisu avaa ohjelmistokehitystä verkossa",
+      "year_start": 1991,
+      "year_end": 1991,
+      "theme_ids": [
+        4,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "alternative_publics"
+      ],
+      "source_ids": [
+        "funet"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:linux1991:1",
+          "year": 1991,
+          "statement": "Linus Torvalds saattoi Linuxin version 0.01 saataville CSC:n nic.funet.fi-palvelimen kautta 17.9.1991.",
+          "source_ids": [
+            "funet"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Verkossa jaettu koodi voi mahdollistaa osallistumisen muodollisen institutionaalisen aseman ulkopuolelta.",
+      "case_limitations": "Ei väitettä välittömästä massakäytöstä tai tietoteknisten taitojen tasa-arvosta. Varhaisen version lisenssiä ei rinnasteta myöhempään GPL-lisensointiin.",
+      "gatekeepers": [
+        "kehittäjät",
+        "palvelimen ylläpito"
+      ],
+      "affected_groups": [
+        "ohjelmoijat",
+        "verkkoyhteyden haltijat"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:grant1992",
+      "primary_item_id": "education_needs_1976_1994_20261023:grant1992",
+      "reuse_existing_item": true,
+      "title": "Opintotuen painotus siirtyy opintorahaan",
+      "year_start": 1992,
+      "year_end": 1992,
+      "theme_ids": [
+        4,
+        5,
+        17,
+        26,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "credential_gatekeeping"
+      ],
+      "source_ids": [
+        "grant"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:grant1992:1",
+          "year": 1992,
+          "statement": "Kelan historiakuvauksen mukaan vuoden 1992 uudistus siirsi opintotuen painotusta lainasta opintorahaan.",
+          "source_ids": [
+            "grant"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Opiskelun rahoituksen muutos voi vaikuttaa siihen, ketkä voivat hankkia tutkintoon sidottua asiantuntija-asemaa.",
+      "case_limitations": "Vahvistettu vain uudistuksen yleissuunta indeksoidusta Kelan otteesta; väestöryhmittäiset vaikutukset vaativat aineistoa. Ei automaattista sosiaalisen tasa-arvon vaikutusarviota.",
+      "gatekeepers": [
+        "lainsäätäjä",
+        "opintotukihallinto"
+      ],
+      "affected_groups": [
+        "korkeakouluopiskelijat"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:mtv1993",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:mtv1993",
+      "reuse_existing_item": false,
+      "title": "MTV siirtyy omalle kanavalle ja saa valtakunnallisen toimiluvan",
+      "year_start": 1993,
+      "year_end": 1993,
+      "theme_ids": [
+        8,
+        16,
+        18,
+        29
+      ],
+      "dimension_codes": [
+        "distribution_gatekeeping",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "yle"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:mtv1993:1",
+          "year": 1993,
+          "statement": "MTV:n ohjelmat siirtyivät kolmosverkkoon vuoden 1993 alussa ja Yleisradio sai TV1- ja TV2-verkot kokonaan käyttöönsä.",
+          "source_ids": [
+            "yle"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:mtv1993:2",
+          "year": 1993,
+          "statement": "MTV jatkoi 2.9.1993 alkaen kaupallista televisiotoimintaa omalla valtakunnallisella toimiluvalla.",
+          "source_ids": [
+            "yle"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Eriytyvät jakelurakenteet voivat muuttaa julkisen ja kaupallisen viestinnän kilpailuasetelmaa.",
+      "case_limitations": "Ei kaupallisen television alkamisvuosi Suomessa; vaikutukset sisältöön ja omistuksen keskittymiseen tutkittava erikseen.",
+      "gatekeepers": [
+        "valtioneuvosto",
+        "MTV",
+        "Yleisradio"
+      ],
+      "affected_groups": [
+        "katsojat",
+        "mainostajat"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:foresight1993",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:foresight1993",
+      "reuse_existing_item": false,
+      "title": "Tulevaisuusvaliokunta ja ensimmäinen selonteko tuovat ennakointia parlamenttiin",
+      "year_start": 1993,
+      "year_end": 1993,
+      "theme_ids": [
+        8,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "institutional_use",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "future"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:foresight1993:1",
+          "year": 1993,
+          "statement": "Tulevaisuusvaliokunta perustettiin vuonna 1993 ja samana vuonna annettiin ensimmäinen tulevaisuusselonteko.",
+          "source_ids": [
+            "future"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Ennakoinnin institutionaalinen paikka voi tuoda pitkän aikavälin oletuksia parlamentaariseen arviointiin.",
+      "case_limitations": "Ennuste ja skenaario eivät ole toteutumia; ei näyttöä tässä erässä ennakoinnin vaikuttavuudesta yksittäiseen päätökseen.",
+      "gatekeepers": [
+        "eduskunta",
+        "valtioneuvosto",
+        "asiantuntijat"
+      ],
+      "affected_groups": [
+        "päätöksentekijät",
+        "kansalaiset"
+      ],
+      "mechanism_ids": [
+        181
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1976_1994_20261024:library1994",
+      "primary_item_id": "knowledge_power_1976_1994_20261024:library1994",
+      "reuse_existing_item": false,
+      "title": "Kirjastoille määritellään tehtävä verkkopalvelujen tasapuolisessa saatavuudessa",
+      "year_start": 1994,
+      "year_end": 1994,
+      "theme_ids": [
+        4,
+        8,
+        16,
+        20,
+        26,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "library"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1976_1994_20261024:library1994:1",
+          "year": 1994,
+          "statement": "Kirjastokaistan historiakuvauksen mukaan valtio antoi yleisille kirjastoille vuonna 1994 erityisen tehtävän verkkopalvelujen tasa-arvoisen saatavuuden takaajana.",
+          "source_ids": [
+            "library"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Yhteinen julkinen käyttöpaikka voi vähentää pääsyn riippuvuutta kotitalouden omista laitteista.",
+      "case_limitations": "Kyseessä historiallisen yhteenvedon väite tehtävästä; alkuperäinen päätös tai strategia ja toteutunut kuntakohtainen saatavuus jatkoselvitettäviä. Ei oletusta internetpisteestä jokaisessa kirjastossa vuonna 1994.",
+      "gatekeepers": [
+        "valtio",
+        "kunnat",
+        "kirjastot"
+      ],
+      "affected_groups": [
+        "ilman omaa yhteyttä olevat ihmiset",
+        "kirjastojen käyttäjät"
+      ],
+      "mechanism_ids": [],
+      "related_item_ids": []
+    }
+  ],
+  "limitations": [
+    "Tapahtumafaktat ja analyyttinen mekanismihypoteesi erotetaan; syyvaikutuksen suuruutta ei lasketa.",
+    "Lähteet ovat historiallisia asiantuntija-, viranomais- ja instituutiokuvauksia. Aikalaispäätökset ja yksilöityjen valintojen arkistoaineisto ovat pääosin jatkotyötä.",
+    "Koulutus, näkyvyys, tiedon luotettavuus ja päätösvalta eivät ole sama asia. Akateeminen asema ei takaa yksittäisen väitteen oikeellisuutta.",
+    "Tieto, jolla ei ollut kirjallista tai institutionaalista julkaisukanavaa, jää tässä otoksessa aliedustetuksi.",
+    "Saamen- ja romanikieliset yhteisöt, uskonnolliset vähemmistöt, naisten oma julkaisutoiminta sekä kirkon paikalliset lukutaitokäytännöt vaativat oman täydennyksen.",
+    "Tietosuojan, opintotuen ja Tekes-lain poiminnoissa varmennus on rajattu indeksoituun lähdeotteeseen tai säädöksen identiteettiin; alkuperäiset asiakirjat vielä tarkistettava."
+  ],
+  "open_tasks": [
+    "Tekesin alkuperäiset tehtävät, rahoituksen kriteerit ja saajarakenteet.",
+    "Henkilörekisterilain alkuperäiset oikeudet ja toimeenpano.",
+    "Kaupalliset internetpalvelut, BBS-kulttuuri, vähemmistökieliset verkostot ja osallistumisen erot.",
+    "1990-luvun tutkimuksen tulosohjaus sekä talousasiantuntijoiden vaikutus päätöksiin.",
+    "Kirjastojen vuoden 1994 tehtävän alkuperäinen strategia ja kuntakohtainen toteuma.",
+    "Itsesensuurin muutos 1976–1994 ja vastakkaiset tutkimustulkinnat."
+  ],
+  "causal_confirmation": false,
+  "numeric_effects_created": false
+}
