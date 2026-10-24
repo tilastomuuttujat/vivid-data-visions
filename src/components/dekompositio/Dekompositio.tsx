@@ -6,6 +6,9 @@ import "./dekompositio.css";
 const W = 1000,
   H = 420,
   PAD = { l: 64, r: 24, t: 24, b: 40 };
+const AXIS_MIN = 1850,
+  AXIS_MAX = 2050,
+  NOW = 2025;
 const eur = (v: number) => Math.round(v).toLocaleString("fi-FI") + " €";
 const signed = (v: number) => (v >= 0 ? "+" : "−") + eur(Math.abs(v));
 
@@ -26,12 +29,13 @@ export function Dekompositio() {
   const [hover, setHover] = useState<number | null>(null);
   const series = useMemo(() => decompose(points, baseline), [baseline]);
   const fi = factorIndex(factor);
-  const rows = series.map((s) => ({ ...s, comparison: s.actual - s.parts[fi] }));
+  const rows = series.map((s) => ({ ...s, comparison: s.actual - s.parts[fi]! }));
   const all = rows.flatMap((r) => [r.actual, r.comparison]);
   const lo = Math.floor(Math.min(...all) / 5000) * 5000,
     hi = Math.ceil(Math.max(...all) / 5000) * 5000;
-  const x0 = rows[0]!.year,
-    x1 = rows[rows.length - 1]!.year;
+  const x0 = AXIS_MIN,
+    x1 = AXIS_MAX;
+  const d0 = rows[0]!.year;
   const x = (y: number) => PAD.l + ((y - x0) / (x1 - x0)) * (W - PAD.l - PAD.r);
   const y = (v: number) => PAD.t + (1 - (v - lo) / (hi - lo)) * (H - PAD.t - PAD.b);
   const actual = rows.map((r) => ({ x: x(r.year), y: y(r.actual) }));
@@ -90,13 +94,22 @@ export function Dekompositio() {
             </text>
           </g>
         ))}
-        {rows
-          .filter((r) => r.year % 5 === 0)
-          .map((r) => (
-            <text key={r.year} x={x(r.year)} y={H - 14} textAnchor="middle" className="dk-axis">
-              {r.year}
-            </text>
-          ))}
+        <rect x={x(AXIS_MIN)} width={x(d0) - x(AXIS_MIN)} y={PAD.t} height={H - PAD.t - PAD.b} className="dk-nodata" />
+        <rect x={x(NOW)} width={x(AXIS_MAX) - x(NOW)} y={PAD.t} height={H - PAD.t - PAD.b} className="dk-future" />
+        <text x={(x(AXIS_MIN) + x(d0)) / 2} y={PAD.t + 22} textAnchor="middle" className="dk-zone">
+          Ei vertailukelpoista lähdeaineistoa {AXIS_MIN}–{d0 - 1}
+        </text>
+        <text x={(x(NOW) + x(AXIS_MAX)) / 2} y={PAD.t + 22} textAnchor="middle" className="dk-zone">
+          Tulevaisuus – ei ennustetta
+        </text>
+        <line x1={x(NOW)} x2={x(NOW)} y1={PAD.t} y2={H - PAD.b} className="dk-now" />
+        <line x1={x(baseline)} x2={x(baseline)} y1={PAD.t} y2={H - PAD.b} className="dk-base-line" />
+        <text x={x(baseline) + 5} y={H - PAD.b - 8} className="dk-axis">vertailuvuosi {baseline}</text>
+        {[1850, 1875, 1900, 1925, 1950, 1975, 2000, 2025, 2050].map((yr) => (
+          <text key={yr} x={x(yr)} y={H - 14} textAnchor="middle" className={yr === NOW ? "dk-axis dk-axis-now" : "dk-axis"}>
+            {yr}
+          </text>
+        ))}
         <path d={band} fill={last.parts[fi]! >= 0 ? "url(#dk-up)" : "url(#dk-down)"} />
         <path d={curve(comp)} className="dk-comp" />
         <path d={curve(actual)} className="dk-actual" />
@@ -105,8 +118,8 @@ export function Dekompositio() {
         {rows.map((r) => (
           <rect
             key={r.year}
-            x={x(r.year) - (W - PAD.l - PAD.r) / (x1 - x0) / 2}
-            width={(W - PAD.l - PAD.r) / (x1 - x0)}
+            x={x(r.year - 0.5)}
+            width={x(1) - x(0)}
             y={PAD.t}
             height={H - PAD.t - PAD.b}
             fill="transparent"
