@@ -103,7 +103,7 @@ export function Erotus() {
               <path d={valuePath} className="e-value" />
               {factors.map((f) => {
                 const pos = f.delta >= 0;
-                const fx = x(f.year), fy = y(pos ? f.value : f.total) + (pos ? -1 : 1) * 10;
+                const fx = x(f.year), fy = y(f.value) + (pos ? -1 : 1) * 10;
                 const ly = pos ? Math.max(PAD.t + 14, fy - 26) : Math.min(H - PAD.b - 6, fy + 30);
                 const anchor = fx > W - 160 ? "end" : fx < 140 ? "start" : "middle";
                 return (
