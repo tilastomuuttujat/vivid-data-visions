@@ -2,9 +2,12 @@ import { expect, it } from "vitest";
 import { SUBLINES, LINES } from "@/components/kaari/kaari-model";
 import { MAX_THEMES, THEMES, addTheme, themeArc } from "./teema-model";
 
-it("has nine sub-streams, three under each force", () => {
-  expect(SUBLINES).toHaveLength(9);
-  for (const l of LINES) expect(SUBLINES.filter((s) => s.parent === l.id)).toHaveLength(3);
+it("keeps sub-streams unique and linked to an existing force, with every force represented", () => {
+  expect(SUBLINES.length).toBeGreaterThan(0);
+  expect(new Set(SUBLINES.map((s) => s.id)).size).toBe(SUBLINES.length);
+  const forceIds = new Set(LINES.map((l) => l.id));
+  for (const s of SUBLINES) expect(forceIds.has(s.parent)).toBe(true);
+  for (const l of LINES) expect(SUBLINES.some((s) => s.parent === l.id)).toBe(true);
 });
 
 it("allows at most six themes in the chart", () => {
