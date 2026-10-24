@@ -1,0 +1,896 @@
+{
+  "batch_id": "knowledge_power_1946_1975_20261024",
+  "taxonomy_id": "knowledge_power_taxonomy_v1",
+  "title": "Tieto ja valta Suomessa 1946–1975",
+  "period": [
+    1946,
+    1975
+  ],
+  "primary_theme_id": 29,
+  "taxonomy": {
+    "access": "Tiedon saavutettavuus",
+    "language_access": "Kielellinen pääsy tietoon",
+    "credential_gatekeeping": "Tutkinnot ja muodolliset pääsyehdot",
+    "knowledge_production": "Tiedon ja käsitteiden tuottaminen",
+    "classification_power": "Luokittelun ja tiedonkeruun valinnat",
+    "distribution_gatekeeping": "Julkaisemisen ja jakelun portinvartijuus",
+    "expert_recognition": "Asiantuntijuuden ja tunnustuksen valinta",
+    "institutional_use": "Tiedon käyttö hallinnossa ja päätöksenteossa",
+    "alternative_publics": "Vaihtoehtoiset sivistys- ja julkaisukanavat"
+  },
+  "selection": "Rajattu mekanismien monipuolisuutta tavoitteleva laadullinen erä; ei edustava otos kaikesta tiedontuotannosta.",
+  "sources": [
+    {
+      "source_id": "cens",
+      "title": "Suomalaisen sensuurin läpileikkaus",
+      "publisher_or_author": "Esko Salminen / Helsingin yliopiston kirjasto 2003",
+      "url": "https://extra.kansalliskirjasto.fi/verkkonayttelyt/kirjatietoverkkojenmaailmassa/salminen_tulosta.html",
+      "locator": "Täyskäännös; itsesensuurin käsite",
+      "source_type": "retrospective_institutional_or_expert_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "stats",
+      "title": "Tilastokeskuksen vaiheita historian käänteissä",
+      "publisher_or_author": "Tilastokeskus",
+      "url": "https://guides.stat.fi/suomentilastojenhistoria/tilastokeskuksen-vaiheita-historian-kaanteissa",
+      "locator": "7.3, vuodet 1948,1950,1971,1975",
+      "source_type": "retrospective_institutional_or_expert_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "yle",
+      "title": "Ylen historia",
+      "publisher_or_author": "Yleisradio",
+      "url": "https://yle.fi/a/20-10006904",
+      "locator": "Vuodet 1948–1949,1958,1965",
+      "source_type": "retrospective_institutional_or_expert_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "law",
+      "title": "Laki yleisten asiakirjain julkisuudesta 83/1951",
+      "publisher_or_author": "Finlex",
+      "url": "https://finlex.fi/fi/lainsaadanto/1951/83",
+      "locator": "Antopäivä, voimaantulo, 1 ja 28 §; myöhempi kooste",
+      "source_type": "legal_consolidation_with_later_amendments",
+      "checked_on": "2026-10-24",
+      "verification": "search_full_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "oulu",
+      "title": "Oulun yliopisto",
+      "publisher_or_author": "Oulun yliopisto",
+      "url": "https://www.oulu.fi/fi/yliopisto",
+      "locator": "Perustamisvuosi 1958",
+      "source_type": "retrospective_institutional_or_expert_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "library",
+      "title": "Kirjastojen kehitys ja valtionapupolitiikka vuosikymmenittäin",
+      "publisher_or_author": "Anni Vartola / Museovirasto",
+      "url": "https://www.rakennettuhyvinvointi.fi/fi/kulttuurirakennukset/kirjastojen-kehitys-ja-valtionapupolitiikka-vuosikymmenittain",
+      "locator": "Kirjastot 1960-luvulla",
+      "source_type": "retrospective_institutional_or_expert_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "sitra",
+      "title": "Sitran arviointi 2002",
+      "publisher_or_author": "Vihko ym. / Sitra",
+      "url": "https://www.sitra.fi/wp-content/uploads/2017/02/raportti26-2.pdf",
+      "locator": "Esipuhe s.5: perustamisvuosi 1967",
+      "source_type": "retrospective_institutional_or_expert_history",
+      "checked_on": "2026-10-24",
+      "verification": "pdf_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "jsn",
+      "title": "JSN:n historia",
+      "publisher_or_author": "Julkisen sanan neuvosto",
+      "url": "https://jsn.fi/mika-on-jsn/jsnn-historia/",
+      "locator": "Perussopimus 10.12.1968",
+      "source_type": "retrospective_institutional_or_expert_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "school",
+      "title": "Koulutuksen niukkuudesta koulutuksen valintamyymälään",
+      "publisher_or_author": "Aila Repo / Tilastokeskus 2010",
+      "url": "https://stat.fi/artikkelit/2010/art_2010-06-07_005.html?s=0",
+      "locator": "Hyppäys kansakoulusta peruskouluun",
+      "source_type": "retrospective_institutional_or_expert_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    }
+  ],
+  "entries": [
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:censorship1947",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:censorship1947",
+      "reuse_existing_item": false,
+      "title": "Ennakkosensuurin sodanjälkeinen jatkuminen vuoteen 1947",
+      "year_start": 1946,
+      "year_end": 1947,
+      "theme_ids": [
+        8,
+        13,
+        29,
+        32
+      ],
+      "dimension_codes": [
+        "distribution_gatekeeping",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "cens"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:censorship1947:1",
+          "year": 1946,
+          "statement": "Salminen kuvaa sensorien jatkaneen Helsingin lehdissä ja Suomen Tietotoimistossa Pariisin rauhansopimukseen 1947 asti.",
+          "source_ids": [
+            "cens"
+          ],
+          "evidence_kind": "reported_historical_interpretation",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Sodan jälkeinen siirtymä voi jättää poikkeusajan tiedonvalvontaa voimaan.",
+      "case_limitations": "Vuosirajaus kattaa tämän erän osuuden aiemmin alkaneesta jatkumosta; ei väitettä kaikkien lehtien sensuroinnista vuoteen 1947.",
+      "gatekeepers": [
+        "sensuuriviranomaiset",
+        "toimitukset"
+      ],
+      "affected_groups": [
+        "lukijat",
+        "toimittajat"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:income1948",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:income1948",
+      "reuse_existing_item": false,
+      "title": "Kansantulolaskenta vahvistaa talouden yhteistä tilannekuvaa",
+      "year_start": 1948,
+      "year_end": 1948,
+      "theme_ids": [
+        8,
+        15,
+        17,
+        29
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "classification_power"
+      ],
+      "source_ids": [
+        "stats"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:income1948:1",
+          "year": 1948,
+          "statement": "Tilastokeskuksen historiallinen aikajana sijoittaa kansantulon laskennan aloittamisen vuoteen 1948.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Yhteinen talousmittari voi ohjata sitä, mitä tuotannossa ja hyvinvoinnissa pidetään näkyvänä.",
+      "case_limitations": "Ei väitettä nykyisen BKT-menetelmän käyttöönotosta 1948 tai aiemman taloustiedon puuttumisesta; rajaukset ja päätöskäyttö selvitettävä.",
+      "gatekeepers": [
+        "tilastoviranomaiset"
+      ],
+      "affected_groups": [
+        "talouspolitiikan valmistelijat",
+        "kansalaiset"
+      ],
+      "mechanism_ids": [
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:ylegovernance1948",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:ylegovernance1948",
+      "reuse_existing_item": false,
+      "title": "Yleisradion hallintoneuvoston valinta siirtyy eduskunnalle",
+      "year_start": 1948,
+      "year_end": 1949,
+      "theme_ids": [
+        8,
+        19,
+        29,
+        32
+      ],
+      "dimension_codes": [
+        "institutional_use",
+        "distribution_gatekeeping"
+      ],
+      "source_ids": [
+        "yle"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:ylegovernance1948:1",
+          "year": 1948,
+          "statement": "Hallintoneuvoston jäsenten valinta siirtyi vuoden 1948 lailla yhtiökokoukselta eduskunnalle.",
+          "source_ids": [
+            "yle"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:ylegovernance1948:2",
+          "year": 1948,
+          "statement": "Ensimmäinen eduskunnan valitsema hallintoneuvosto aloitti vuonna 1949.",
+          "source_ids": [
+            "yle"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Parlamentaarinen valinta voi vahvistaa julkista vastuuta ja samalla avata puoluepoliittisen vaikutuskanavan.",
+      "case_limitations": "Ei näyttöä yksittäisen ohjelman ohjauksesta tai hallintoneuvoston täydellisestä määräysvallasta toimituksiin.",
+      "gatekeepers": [
+        "eduskunta",
+        "hallintoneuvosto"
+      ],
+      "affected_groups": [
+        "kuulijat",
+        "toimittajat"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:census1950",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:census1950",
+      "reuse_existing_item": false,
+      "title": "Koko maan kattava väestölaskenta kokoaa väestöstä yhteisen tietopohjan",
+      "year_start": 1950,
+      "year_end": 1950,
+      "theme_ids": [
+        3,
+        6,
+        8,
+        20,
+        29
+      ],
+      "dimension_codes": [
+        "classification_power",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "stats"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:census1950:1",
+          "year": 1950,
+          "statement": "Ensimmäinen koko maan kattava väestölaskenta toteutettiin vuonna 1950.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Yhtenäinen laskenta voi tehdä alueelliset erot näkyviksi mutta sitoo havainnot valittuihin luokkiin.",
+      "case_limitations": "Ei väitettä väestötilastojen alkamisesta 1950; luokituksia ja ryhmien katveita ei vielä poimittu.",
+      "gatekeepers": [
+        "tilastoviranomaiset"
+      ],
+      "affected_groups": [
+        "väestö",
+        "alueet"
+      ],
+      "mechanism_ids": [
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:publicity1951",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:publicity1951",
+      "reuse_existing_item": false,
+      "title": "Yleisten asiakirjojen julkisuudesta säädetään lailla",
+      "year_start": 1951,
+      "year_end": 1952,
+      "theme_ids": [
+        8,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "law"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:publicity1951:1",
+          "year": 1951,
+          "statement": "Laki yleisten asiakirjain julkisuudesta 83/1951 annettiin 9.2.1951 ja tuli voimaan 1.1.1952.",
+          "source_ids": [
+            "law"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:publicity1951:2",
+          "year": 1951,
+          "statement": "Lain ensimmäinen pykälä lähtee yleisten asiakirjojen julkisuudesta lain säätämissä rajoissa.",
+          "source_ids": [
+            "law"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Asiakirjajulkisuus voi mahdollistaa hallinnon perustelujen ulkopuolisen tarkastelun.",
+      "case_limitations": "Lähde on myöhempi kooste: vuosien 1982–1999 muutoksia ei tulkita alkuperäisen lain sisällöksi. Käytännön saatavuus, kieltäytymiset ja alkuperäiset salassapitorajat jatkotehtävä.",
+      "gatekeepers": [
+        "viranomaiset",
+        "lainsäätäjä"
+      ],
+      "affected_groups": [
+        "kansalaiset",
+        "journalistit",
+        "tutkijat"
+      ],
+      "mechanism_ids": [
+        181
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:oulu1958",
+      "primary_item_id": "education_needs_1946_1975_20261022:oulu1958",
+      "reuse_existing_item": true,
+      "title": "Oulun yliopisto laajentaa akateemisten instituutioiden alueellista verkkoa",
+      "year_start": 1958,
+      "year_end": 1958,
+      "theme_ids": [
+        4,
+        14,
+        20,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "oulu"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:oulu1958:1",
+          "year": 1958,
+          "statement": "Oulun yliopisto perustettiin vuonna 1958.",
+          "source_ids": [
+            "oulu"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Uusi yliopisto voi siirtää koulutuksen ja tutkimuksen mahdollisuuksia uusille alueille.",
+      "case_limitations": "Perustaminen ei yksin mittaa opiskelijoiden sosiaalista taustaa tai tutkimuksen alueellisia vaikutuksia.",
+      "gatekeepers": [
+        "yliopisto",
+        "valtio"
+      ],
+      "affected_groups": [
+        "pohjoisen opiskelijat",
+        "tutkijat"
+      ],
+      "mechanism_ids": [
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:television1958",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:television1958",
+      "reuse_existing_item": false,
+      "title": "Yleisradion säännöllinen televisiotoiminta alkaa",
+      "year_start": 1958,
+      "year_end": 1958,
+      "theme_ids": [
+        14,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "distribution_gatekeeping"
+      ],
+      "source_ids": [
+        "yle"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:television1958:1",
+          "year": 1958,
+          "statement": "Yleisradio aloitti säännölliset televisiolähetykset 1.1.1958 nimellä Suomen Televisio.",
+          "source_ids": [
+            "yle"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Televisio voi yhdistää laajan yleisön samoihin kuviin ja aihevalintoihin.",
+      "case_limitations": "Ei väitettä Suomen ensimmäisestä televisiolähetyksestä tai kaikkien kotitalouksien tavoittamisesta 1958.",
+      "gatekeepers": [
+        "televisiotoimitukset",
+        "ohjelman valitsijat"
+      ],
+      "affected_groups": [
+        "katsojat"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:library1961",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:library1961",
+      "reuse_existing_item": false,
+      "title": "Kirjastojen valtiontuki laajenee ja kytkeytyy normeihin",
+      "year_start": 1961,
+      "year_end": 1961,
+      "theme_ids": [
+        4,
+        8,
+        14,
+        20,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "library"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:library1961:1",
+          "year": 1961,
+          "statement": "Vuoden 1961 kirjastolaki lisäsi valtion tukea kirjastojen rakentamiseen, kunnostamiseen, ylläpitoon ja toimintaan.",
+          "source_ids": [
+            "library"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:library1961:2",
+          "year": 1961,
+          "statement": "Valtionavun ehtoihin kuului tilanormeja ja hankkeiden viranomaisvalvontaa.",
+          "source_ids": [
+            "library"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Julkinen rahoitus voi laajentaa tiedon saatavuutta samalla kun se yhdenmukaistaa palvelurakennetta.",
+      "case_limitations": "Rahoituksen kasvu ei yksin osoita kaikille yhdenvertaista palvelua; ei yksittäisten kirjojen sisällöllistä valvontaa koskevaa päätelmää.",
+      "gatekeepers": [
+        "opetusministeriö",
+        "kouluhallitus",
+        "lääninhallitukset",
+        "kunnat"
+      ],
+      "affected_groups": [
+        "kirjastojen käyttäjät",
+        "maaseudun asukkaat"
+      ],
+      "mechanism_ids": [
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:news1965",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:news1965",
+      "reuse_existing_item": false,
+      "title": "Yleisradio käynnistää oman uutistoiminnan",
+      "year_start": 1965,
+      "year_end": 1965,
+      "theme_ids": [
+        8,
+        16,
+        29
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "distribution_gatekeeping"
+      ],
+      "source_ids": [
+        "yle"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:news1965:1",
+          "year": 1965,
+          "statement": "Yleisradio aloitti oman uutistoiminnan vuonna 1965; aiemmin sen kanavien uutiset olivat STT:n toimittamia.",
+          "source_ids": [
+            "yle"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Oma uutistoimitus voi muuttaa aiheiden valinnan ja tarkistamisen vastuusuhteita.",
+      "case_limitations": "Ei väitettä STT:n syrjäytymisestä koko uutisjärjestelmässä tai uutisten luotettavuuden automaattisesta muutoksesta.",
+      "gatekeepers": [
+        "uutistoimitukset",
+        "Yleisradio",
+        "STT"
+      ],
+      "affected_groups": [
+        "kuulijat",
+        "katsojat"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:sitra1967",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:sitra1967",
+      "reuse_existing_item": false,
+      "title": "Sitra perustetaan uudeksi kehittämisrahoituksen instituutioksi",
+      "year_start": 1967,
+      "year_end": 1967,
+      "theme_ids": [
+        8,
+        15,
+        17,
+        29
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "sitra"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:sitra1967:1",
+          "year": 1967,
+          "statement": "Suomen itsenäisyyden juhlarahasto Sitra perustettiin vuonna 1967 itsenäisyyden 50-vuotisjuhlan kunniaksi.",
+          "source_ids": [
+            "sitra"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Uusi rahoittaja voi laajentaa tiedon ja kokeilujen tuottamista sekä vaikuttaa hankkeiden valikoitumiseen.",
+      "case_limitations": "Vuoden 2002 raportin kuvaamia tavoitteita ja toimintamuotoja ei sellaisinaan ajoiteta vuoteen 1967; alkuperäinen ohjesääntö ja ensimmäiset rahoituspäätökset jatkotehtävä.",
+      "gatekeepers": [
+        "rahaston päätöksenteko"
+      ],
+      "affected_groups": [
+        "tutkijat",
+        "kehittämishankkeiden toteuttajat"
+      ],
+      "mechanism_ids": [
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:jsn1968",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:jsn1968",
+      "reuse_existing_item": false,
+      "title": "Julkisen sanan neuvoston perustaminen luo journalistisen itsesääntelyn rakenteen",
+      "year_start": 1968,
+      "year_end": 1968,
+      "theme_ids": [
+        8,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "expert_recognition",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "jsn"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:jsn1968:1",
+          "year": 1968,
+          "statement": "Julkisen sanan neuvoston perussopimus allekirjoitettiin 10.12.1968.",
+          "source_ids": [
+            "jsn"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:jsn1968:2",
+          "year": 1968,
+          "statement": "JSN:n oma historia kuvaa toimittajien ja kustantajien pyrkineen ammattieettiseen itsesääntelyyn valtiollisen sääntelyn sijaan.",
+          "source_ids": [
+            "jsn"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Itsesääntely voi tarjota julkisen arviointikanavan journalistiselle vallankäytölle.",
+      "case_limitations": "Nykyisiä kantelusääntöjä tai jäsenkattavuutta ei siirretä vuoteen 1968. Oman historiakuvauksen väite vapauden turvaamisesta ei ole tämän erän kausaalinen tulos.",
+      "gatekeepers": [
+        "toimittajat",
+        "kustantajat",
+        "JSN"
+      ],
+      "affected_groups": [
+        "yleisöt",
+        "uutisoinnin kohteet"
+      ],
+      "mechanism_ids": [
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:selfcensorship1970",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:selfcensorship1970",
+      "reuse_existing_item": false,
+      "title": "Ulkopoliittinen itsesensuuri rajaa julkisen keskustelun aiheita",
+      "year_start": 1970,
+      "year_end": 1975,
+      "theme_ids": [
+        8,
+        13,
+        29,
+        32
+      ],
+      "dimension_codes": [
+        "distribution_gatekeeping",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "cens"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:selfcensorship1970:1",
+          "year": 1970,
+          "statement": "Salminen tulkitsee Neuvostoliiton arvostelun välttämisen olleen merkittävä ilmiö erityisesti 1970-luvun suomalaisessa tiedonvälityksessä.",
+          "source_ids": [
+            "cens"
+          ],
+          "evidence_kind": "reported_historical_interpretation",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Ennakoitu poliittinen seuraus voi rajata julkaisemista myös ilman ennakkotarkastusta.",
+      "case_limitations": "Vuosirajaus on tämän erän tarkasteluikkuna, ei ilmiön alkamis- tai loppumisvuosi. Yksi nimetty tulkinta; lehtikohtaiset erot ja vastaesimerkit kerättävä. Journalismin etiikkaa ei rinnasteta itsesensuuriin.",
+      "gatekeepers": [
+        "kustantajat",
+        "toimitukset",
+        "poliittiset vaikuttajat"
+      ],
+      "affected_groups": [
+        "journalistit",
+        "yleisöt"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:classification1971",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:classification1971",
+      "reuse_existing_item": false,
+      "title": "Ensimmäinen koulutusluokitus yhtenäistää koulutuksen tilastollista kuvausta",
+      "year_start": 1971,
+      "year_end": 1971,
+      "theme_ids": [
+        4,
+        15,
+        29
+      ],
+      "dimension_codes": [
+        "classification_power",
+        "knowledge_production"
+      ],
+      "source_ids": [
+        "stats"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:classification1971:1",
+          "year": 1971,
+          "statement": "Tilastokeskuksen historiallinen aikajana sijoittaa ensimmäisen koulutusluokituksen vuoteen 1971.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Luokitus voi yhdistää koulutus- ja työelämätietoa sekä rajata vertailussa näkyvät koulutusmuodot.",
+      "case_limitations": "Ei väitettä koulutustilastoinnin alkamisesta 1971; luokkien sisältö ja muunnokset tarkistettava alkuperäisjulkaisusta.",
+      "gatekeepers": [
+        "tilastoviranomaiset"
+      ],
+      "affected_groups": [
+        "opiskelijat",
+        "koulutuspolitiikan valmistelijat"
+      ],
+      "mechanism_ids": [
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:school1972",
+      "primary_item_id": "education_needs_1946_1975_20261022:reform1972",
+      "reuse_existing_item": true,
+      "title": "Peruskouluun siirtyminen muuttaa tiedollisten valmiuksien jakautumisen ehtoja",
+      "year_start": 1972,
+      "year_end": 1975,
+      "theme_ids": [
+        4,
+        19,
+        20,
+        26,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "credential_gatekeeping"
+      ],
+      "source_ids": [
+        "school"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:school1972:1",
+          "year": 1972,
+          "statement": "Peruskoulu yhdisti kansakoulun, kansalaiskoulun ja keskikoulun koko ikäluokan oppivelvollisuuskouluksi.",
+          "source_ids": [
+            "school"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:school1972:2",
+          "year": 1972,
+          "statement": "Alueittainen siirtymä toteutettiin vuosina 1972–1977 pohjoisesta etelään.",
+          "source_ids": [
+            "school"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Yhteinen perusopetus voi siirtää koulutuspolkujen varhaista eriytymistä ja laajentaa tiedollista osallistumista.",
+      "case_limitations": "Kortin tarkastelu päättyy 1975; uudistus valmistui 1977. Ei oletusta täydellisestä tasa-arvosta tai kaikkien valikointimekanismien poistumisesta.",
+      "gatekeepers": [
+        "kouluhallinto",
+        "kunnat"
+      ],
+      "affected_groups": [
+        "lapset",
+        "perheet"
+      ],
+      "mechanism_ids": [
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1946_1975_20261024:interviews1975",
+      "primary_item_id": "knowledge_power_1946_1975_20261024:interviews1975",
+      "reuse_existing_item": false,
+      "title": "Tilastokeskuksen haastattelijaorganisaatio vahvistaa tiedonkeruun infrastruktuuria",
+      "year_start": 1975,
+      "year_end": 1975,
+      "theme_ids": [
+        8,
+        15,
+        26,
+        29
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "classification_power"
+      ],
+      "source_ids": [
+        "stats"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1946_1975_20261024:interviews1975:1",
+          "year": 1975,
+          "statement": "Tilastokeskuksen haastattelijaorganisaatio perustettiin vuonna 1975.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Haastatteluihin perustuva tiedonkeruu voi tehdä rekistereihin huonosti tallentuvia kokemuksia näkyviksi.",
+      "case_limitations": "Ei väitettä haastattelututkimuksen alkamisesta Suomessa 1975; vastauskato, kysymysten vaikutus ja aineistojen edustavuus tutkittava erikseen.",
+      "gatekeepers": [
+        "tilastoviranomaiset",
+        "haastattelusuunnittelijat"
+      ],
+      "affected_groups": [
+        "haastateltavat",
+        "tiedon käyttäjät"
+      ],
+      "mechanism_ids": [
+        185
+      ],
+      "related_item_ids": []
+    }
+  ],
+  "limitations": [
+    "Tapahtumafaktat ja analyyttinen mekanismihypoteesi erotetaan; syyvaikutuksen suuruutta ei lasketa.",
+    "Lähteet ovat historiallisia asiantuntija-, viranomais- ja instituutiokuvauksia. Aikalaispäätökset ja yksilöityjen valintojen arkistoaineisto ovat pääosin jatkotyötä.",
+    "Koulutus, näkyvyys, tiedon luotettavuus ja päätösvalta eivät ole sama asia. Akateeminen asema ei takaa yksittäisen väitteen oikeellisuutta.",
+    "Tieto, jolla ei ollut kirjallista tai institutionaalista julkaisukanavaa, jää tässä otoksessa aliedustetuksi.",
+    "Saamen- ja romanikieliset yhteisöt, uskonnolliset vähemmistöt, naisten oma julkaisutoiminta sekä kirkon paikalliset lukutaitokäytännöt vaativat oman täydennyksen.",
+    "Asiakirjajulkisuuden lähde on myöhempi lakikooste; tästä erästä ei johdeta myöhempien muutosten sisältöä vuoteen 1951."
+  ],
+  "open_tasks": [
+    "Suomen Akatemian 1948 ja 1969–1970 rakenteet sekä rahoituksen valinta alkuperäisasiakirjoista.",
+    "Komitealaitos, koulutussuunnittelu ja tutkimustiedon osoitettu päätöskäyttö.",
+    "Vähemmistöjen kieli- ja julkaisukanavat sekä sukupuolen ja luokan vaikutus asiantuntija-asemaan.",
+    "Lehtikohtainen itsesensuuri ja sen vastaesimerkit useista tutkimuksista.",
+    "Vuoden 1951 lain alkuperäinen teksti ja käytännön asiakirjapyynnöt."
+  ],
+  "causal_confirmation": false,
+  "numeric_effects_created": false
+}
