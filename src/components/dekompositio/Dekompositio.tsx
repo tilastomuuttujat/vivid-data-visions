@@ -119,8 +119,8 @@ export function Dekompositio() {
         {rows.map((r) => (
           <rect
             key={r.year}
-            x={x(r.year) - (W - PAD.l - PAD.r) / (x1 - x0) / 2}
-            width={(W - PAD.l - PAD.r) / (x1 - x0)}
+            x={x(r.year - 0.5)}
+            width={x(1) - x(0)}
             y={PAD.t}
             height={H - PAD.t - PAD.b}
             fill="transparent"
