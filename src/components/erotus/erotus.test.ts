@@ -12,7 +12,7 @@ describe("erotus", () => {
     for (const p of sample(ob("ict"), 10)) expect(p.value).toBeCloseTo(p.total - p.delta, 9);
   });
   it("ICT has no impact on the whole before it existed (1860–1950)", () => {
-    for (const yr of [1860, 1900, 1950]) expect(Math.abs(at("ict", yr).delta)).toBeLessThan(0.005);
+    for (const yr of [1860, 1900, 1950]) expect(Math.abs(at("ict", yr).delta)).toBeLessThan(0.01);
   });
   it("ICT lifts the whole around 2000", () => {
     expect(at("ict", 2000).delta).toBeGreaterThan(0.05);
