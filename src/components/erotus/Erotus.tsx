@@ -3,6 +3,7 @@ import { MainLinks } from "@/components/MainLinks";
 import { ERAS, NOW, YEAR_MAX, YEAR_MIN } from "@/components/kaari/kaari-model";
 import "@/components/kaari/kaari.css";
 import { OBSERVABLES, factorsFor, sample, whyAt, type Sample } from "./erotus-model";
+import { DEBATES } from "./debates";
 import "./erotus.css";
 
 const W = 1200, H = 560, PAD = { l: 20, r: 20, t: 36, b: 40 };
@@ -50,16 +51,38 @@ function bands(s: Sample[]) {
 }
 
 export function Erotus() {
+  const [mode, setMode] = useState<"yksi" | "pari" | "debatti">("yksi");
   const [sel, setSel] = useState("ict");
+  const [selB, setSelB] = useState("metsa");
+  const [slot, setSlot] = useState<"a" | "b">("a");
+  const [debate, setDebate] = useState(DEBATES[0]!.id);
   const [open, setOpen] = useState(false);
+  const deb = DEBATES.find((d) => d.id === debate)!;
+  const pair = mode !== "yksi";
+  const idA = mode === "debatti" ? deb.a : sel, idB = mode === "debatti" ? deb.b : selB;
+  const obsA = OBSERVABLES.find((o) => o.id === idA)!, obsB = OBSERVABLES.find((o) => o.id === idB)!;
+  const sA = useMemo(() => sample(obsA, 1), [obsA]);
+  const sB = useMemo(() => sample(obsB, 1), [obsB]);
   const [hover, setHover] = useState<number | null>(null);
-  const obs = OBSERVABLES.find((o) => o.id === sel)!;
-  const s = useMemo(() => sample(obs, 1), [obs]);
+  const obs = obsA;
+  const s = sA;
   const factors = useMemo(() => factorsFor(obs, s), [obs, s]);
   const groups = [...new Set(OBSERVABLES.map((o) => o.group))];
   const h = hover != null ? s.reduce((a, b) => (Math.abs(b.year - hover) < Math.abs(a.year - hover) ? b : a)) : null;
   const totalPath = smooth(s.map((p) => [x(p.year), y(p.total)]));
   const valuePath = smooth(s.map((p) => [x(p.year), y(p.value)]));
+  const valuePathB = smooth(sB.map((p) => [x(p.year), y(p.value)]));
+  const hB = h ? sB.find((p) => p.year === h.year) ?? null : null;
+  const factorsB = useMemo(() => factorsFor(obsB, sB), [obsB, sB]);
+  // impact strip
+  const maxImp = Math.max(0.02, ...sA.map((p) => Math.abs(p.delta)), ...sB.map((p) => Math.abs(p.delta)));
+  const IH = 170, iy = (d: number) => IH / 2 - (d / maxImp) * (IH / 2 - 14);
+  const impA = smooth(sA.map((p) => [x(p.year), iy(p.delta)]));
+  const impB = smooth(sB.map((p) => [x(p.year), iy(p.delta)]));
+  const pick = (id: string) => {
+    if (mode === "pari") { if (slot === "a") { setSel(id); setSlot("b"); } else { setSelB(id); setSlot("a"); setOpen(false); } }
+    else { setSel(id); setOpen(false); }
+  };
 
   const onMove = (e: React.PointerEvent<SVGSVGElement>) => {
     const r = e.currentTarget.getBoundingClientRect();
@@ -76,21 +99,41 @@ export function Erotus() {
         <p className="k-lede">Paksu valkoinen käyrä on yhteiskunnan rakenteellinen kantokyky. Ohut kultainen käyrä näyttää, missä kokonaisuus olisi ilman valittua tekijää – viivoitettu väli on tekijän vaikutus.</p>
       </header>
 
-      <button className="e-open" onClick={() => setOpen(true)} aria-expanded={open}>
-        <span aria-hidden>☰</span> Tarkasteltava tekijä: <strong>{obs.label}</strong>
-      </button>
+      <div className="e-modes" role="tablist">
+        {([["yksi", "Yksittäinen tekijä"], ["pari", "Vapaa parivertailu"], ["debatti", "Debatit & myytit"]] as const).map(([m, l]) => (
+          <button key={m} role="tab" aria-selected={mode === m} className={mode === m ? "on" : ""} onClick={() => setMode(m)}>{l}</button>
+        ))}
+      </div>
+
+      {mode === "yksi" && (
+        <button className="e-open" onClick={() => setOpen(true)} aria-expanded={open}>
+          <span aria-hidden>☰</span> Tarkasteltava tekijä: <strong>{obs.label}</strong>
+        </button>
+      )}
+      {mode === "pari" && (
+        <div className="e-pairbar">
+          <button className="e-open e-a" onClick={() => { setSlot("a"); setOpen(true); }}><span aria-hidden>☰</span> A: <strong>{obsA.label}</strong></button>
+          <span className="e-vs">vs.</span>
+          <button className="e-open e-b" onClick={() => { setSlot("b"); setOpen(true); }}><span aria-hidden>☰</span> B: <strong>{obsB.label}</strong></button>
+        </div>
+      )}
+      {mode === "debatti" && (
+        <div className="e-debates">
+          {DEBATES.map((d) => <button key={d.id} className={d.id === debate ? "on" : ""} onClick={() => setDebate(d.id)}>{d.title}</button>)}
+        </div>
+      )}
 
       <div className={`e-scrim ${open ? "on" : ""}`} onClick={() => setOpen(false)} aria-hidden />
       <aside className={`e-drawer ${open ? "on" : ""}`} aria-label="Havainnointikäyrä" aria-hidden={!open}>
         <div className="e-drawer-head">
-          <span>Valitse tekijä</span>
+          <span>{mode === "pari" ? `Valitse tekijä ${slot.toUpperCase()}` : "Valitse tekijä"}</span>
           <button onClick={() => setOpen(false)} aria-label="Sulje">×</button>
         </div>
         {groups.map((g) => (
           <section key={g}>
             <h3>{g}</h3>
             {OBSERVABLES.filter((o) => o.group === g).map((o) => (
-              <button key={o.id} tabIndex={open ? 0 : -1} className={o.id === sel ? "on" : ""} onClick={() => { setSel(o.id); setOpen(false); }}>{o.label}</button>
+              <button key={o.id} tabIndex={open ? 0 : -1} className={o.id === (mode === "pari" && slot === "b" ? selB : sel) ? "on" : ""} onClick={() => pick(o.id)}>{o.label}</button>
             ))}
           </section>
         ))}
@@ -116,10 +159,11 @@ export function Erotus() {
           ))}
           {[1900, 1950, 2000, 2050].map((yr) => <text key={yr} x={x(yr)} y={H - 16} textAnchor="middle" className="k-axis">{yr}</text>)}
           <line x1={x(NOW)} x2={x(NOW)} y1={PAD.t} y2={H - PAD.b} className="k-now" />
-          {bands(s).map((b, i) => <path key={i} d={b.d} fill={`url(#e-hatch-${b.pos ? "pos" : "neg"})`} className="e-band" />)}
-          <path d={valuePath} className="e-value" />
+          {!pair && bands(s).map((b, i) => <path key={i} d={b.d} fill={`url(#e-hatch-${b.pos ? "pos" : "neg"})`} className="e-band" />)}
+          <path d={valuePath} className={pair ? "e-value e-line-a" : "e-value"} />
+          {pair && <path d={valuePathB} className="e-value e-line-b" />}
           <path d={totalPath} className="e-total" />
-          {factors.map((f, i) => {
+          {!pair && factors.map((f, i) => {
             const pos = f.delta >= 0;
             const prev = factors[i - 1];
             const stack = prev && (prev.delta >= 0) === pos && f.year - prev.year < 30 ? (i % 2 ? 40 : 0) : 0;
@@ -139,12 +183,40 @@ export function Erotus() {
           {h && (
             <g>
               <line x1={x(h.year)} x2={x(h.year)} y1={PAD.t} y2={H - PAD.b} className="e-cursor" />
-              <circle cx={x(h.year)} cy={y(h.value)} r={4} className="e-dot-value" />
+              <circle cx={x(h.year)} cy={y(h.value)} r={4} className={pair ? "e-dot-value e-dot-a" : "e-dot-value"} />
+              {pair && hB && <circle cx={x(h.year)} cy={y(hB.value)} r={4} className="e-dot-value e-dot-b" />}
               <circle cx={x(h.year)} cy={y(h.total)} r={5} className="e-dot-total" />
             </g>
           )}
         </svg>
       </div>
+      {pair && (
+        <div className="e-impact">
+          <p className="e-impact-title">Kummankin vaikutus kokonaisuuteen (pistettä) – yläpuolella kannattelee, alapuolella painaa</p>
+          <svg viewBox={`0 0 ${W} ${IH}`} onPointerMove={onMove} onPointerLeave={() => setHover(null)} role="img" aria-label={`${obsA.label} ja ${obsB.label}: vaikutukset`}>
+            <rect x={PAD.l} y={0} width={W - PAD.l - PAD.r} height={IH / 2} className="e-imp-up" />
+            <rect x={PAD.l} y={IH / 2} width={W - PAD.l - PAD.r} height={IH / 2} className="e-imp-down" />
+            <line x1={PAD.l} x2={W - PAD.r} y1={IH / 2} y2={IH / 2} className="e-zero" />
+            <line x1={x(NOW)} x2={x(NOW)} y1={0} y2={IH} className="k-now" />
+            <path d={impA} className="e-imp e-line-a" />
+            <path d={impB} className="e-imp e-line-b" />
+            {[...factors.map((f) => ({ ...f, k: "a" })), ...factorsB.map((f) => ({ ...f, k: "b" }))].map((f) => (
+              <text key={f.k + f.year + f.label} x={x(f.year)} y={iy(f.delta) + (f.delta >= 0 ? -8 : 16)} textAnchor="middle" className={`e-imp-lbl e-lbl-${f.k}`}>{f.label}</text>
+            ))}
+            {h && <line x1={x(h.year)} x2={x(h.year)} y1={0} y2={IH} className="e-cursor" />}
+          </svg>
+        </div>
+      )}
+      {pair ? (
+        <div className="e-readout">
+          <div><span className="e-sw e-sw-total" /> Kokonaisuus</div>
+          <div><span className="e-sw e-sw-a" /> ilman: {obsA.label}</div>
+          <div><span className="e-sw e-sw-b" /> ilman: {obsB.label}</div>
+          {h && hB ? (
+            <strong>{h.year}: <span className="e-ta">A {h.delta >= 0 ? "+" : "−"}{Math.abs(h.delta * 100).toFixed(0)}</span> · <span className="e-tb">B {hB.delta >= 0 ? "+" : "−"}{Math.abs(hB.delta * 100).toFixed(0)}</span> pistettä. {Math.abs(h.delta) + Math.abs(hB.delta) < 0.01 ? "Kumpikaan ei vielä vaikuta." : Math.abs(h.delta) > Math.abs(hB.delta) ? `${obsA.label} vaikuttaa enemmän.` : `${obsB.label} vaikuttaa enemmän.`}</strong>
+          ) : <span className="e-hint">Vie osoitin kuvaajan päälle verrataksesi vuotta.</span>}
+        </div>
+      ) : (
       <div className="e-readout">
         <div><span className="e-sw e-sw-total" /> Kokonaisuus</div>
         <div><span className="e-sw e-sw-value" /> Kokonaisuus ilman: {obs.label}</div>
@@ -154,7 +226,14 @@ export function Erotus() {
           </strong>
         ) : <span className="e-hint">Vie osoitin kuvaajan päälle nähdäksesi vuoden vaikutuksen.</span>}
       </div>
-      <p className="e-note">{obs.note}</p>
+      )}
+      {mode === "debatti" && (
+        <div className="e-debate-card">
+          <div><h3>Julkinen väite</h3><p>”{deb.claim}”</p></div>
+          <div><h3>Mitä rakenne näyttää</h3><p>{deb.reading}</p></div>
+        </div>
+      )}
+      {!pair && <p className="e-note">{obs.note}</p>}
       <details className="e-method">
         <summary>Miten vaikutus on laskettu?</summary>
         <p>Kokonaisuus = kolmen päävoiman keskiarvo, josta vähennetään puolet siitä osuudesta, jolla yhteisen turvan lupaukset ylittävät tuotannon ja väestön kantokyvyn. Tekijän vaikutus = sen painoarvo kokonaisuudessa × muutos tekijän lähtötasosta (päävoimat 1/3, alavirrat 0,3, väestöryhmät 0,25). Tekijä, jota ei vielä ollut, ei siirrä kokonaisuutta. Kaikki käyrät ovat toimituksellisia tulkintoja, eivät mittauksia; vaikutus kertoo suuntaa, ei todistettua syy-yhteyttä.</p>
