@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ErotusRouteImport } from './routes/erotus'
+import { Route as ErotusTulotRouteImport } from './routes/erotus-tulot'
 import { Route as KehityskaariRouteImport } from './routes/kehityskaari'
 import { Route as LaboratorioRouteImport } from './routes/laboratorio'
 import { Route as MinkaVaraanRouteImport } from './routes/minka-varaan'
@@ -27,6 +28,11 @@ const IndexRoute = IndexRouteImport.update({
 const ErotusRoute = ErotusRouteImport.update({
   id: '/erotus',
   path: '/erotus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErotusTulotRoute = ErotusTulotRouteImport.update({
+  id: '/erotus-tulot',
+  path: '/erotus-tulot',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KehityskaariRoute = KehityskaariRouteImport.update({
@@ -68,6 +74,7 @@ const TeemavertailuRoute = TeemavertailuRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/erotus': typeof ErotusRoute
+  '/erotus-tulot': typeof ErotusTulotRoute
   '/kehityskaari': typeof KehityskaariRoute
   '/laboratorio': typeof LaboratorioRoute
   '/minka-varaan': typeof MinkaVaraanRoute
@@ -79,6 +86,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/erotus': typeof ErotusRoute
+  '/erotus-tulot': typeof ErotusTulotRoute
   '/kehityskaari': typeof KehityskaariRoute
   '/laboratorio': typeof LaboratorioRoute
   '/minka-varaan': typeof MinkaVaraanRoute
@@ -91,6 +99,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/erotus': typeof ErotusRoute
+  '/erotus-tulot': typeof ErotusTulotRoute
   '/kehityskaari': typeof KehityskaariRoute
   '/laboratorio': typeof LaboratorioRoute
   '/minka-varaan': typeof MinkaVaraanRoute
@@ -104,6 +113,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/erotus'
+    | '/erotus-tulot'
     | '/kehityskaari'
     | '/laboratorio'
     | '/minka-varaan'
@@ -115,6 +125,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/erotus'
+    | '/erotus-tulot'
     | '/kehityskaari'
     | '/laboratorio'
     | '/minka-varaan'
@@ -126,6 +137,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/erotus'
+    | '/erotus-tulot'
     | '/kehityskaari'
     | '/laboratorio'
     | '/minka-varaan'
@@ -138,6 +150,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ErotusRoute: typeof ErotusRoute
+  ErotusTulotRoute: typeof ErotusTulotRoute
   KehityskaariRoute: typeof KehityskaariRoute
   LaboratorioRoute: typeof LaboratorioRoute
   MinkaVaraanRoute: typeof MinkaVaraanRoute
@@ -161,6 +174,13 @@ declare module '@tanstack/react-router' {
       path: '/erotus'
       fullPath: '/erotus'
       preLoaderRoute: typeof ErotusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erotus-tulot': {
+      id: '/erotus-tulot'
+      path: '/erotus-tulot'
+      fullPath: '/erotus-tulot'
+      preLoaderRoute: typeof ErotusTulotRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kehityskaari': {
@@ -218,6 +238,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ErotusRoute: ErotusRoute,
+  ErotusTulotRoute: ErotusTulotRoute,
   KehityskaariRoute: KehityskaariRoute,
   LaboratorioRoute: LaboratorioRoute,
   MinkaVaraanRoute: MinkaVaraanRoute,

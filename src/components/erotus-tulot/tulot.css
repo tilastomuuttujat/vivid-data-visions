@@ -1,0 +1,202 @@
+.et-page {
+  background: #101d27;
+  color: #f3f0e8;
+  min-height: 100vh;
+  padding: 28px clamp(18px, 5vw, 80px);
+  font-family: system-ui, sans-serif;
+}
+.et-page nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-bottom: 48px;
+}
+.et-page a {
+  color: #bed5dd;
+}
+.et-kicker {
+  color: #efbc74;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+.et-page h1 {
+  font-size: clamp(34px, 5vw, 62px);
+  margin: 12px 0;
+}
+.et-page h2 {
+  font-size: 26px;
+}
+.et-page p {
+  line-height: 1.65;
+  color: #b8c6cf;
+  max-width: 85ch;
+}
+.et-layout {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  gap: 48px;
+  margin-top: 38px;
+}
+.et-page aside {
+  border-right: 1px solid #ffffff20;
+  padding-right: 24px;
+}
+.et-page label {
+  display: block;
+  font-size: 13px;
+  margin: 0 0 24px;
+}
+.et-page select {
+  display: block;
+  background: #1c303d;
+  border: 1px solid #6d8797;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 8px;
+  font: inherit;
+}
+.et-page aside p {
+  font-size: 12px;
+}
+.et-main {
+  min-width: 0;
+}
+.et-main svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+.et-main svg text {
+  fill: #b8c6cf;
+  font-size: 15px;
+}
+.et-actual,
+.et-comparison {
+  fill: none;
+  stroke-width: 3;
+}
+.et-actual {
+  stroke: #f3f0e8;
+  stroke-width: 4;
+}
+.et-comparison {
+  stroke: #efbc74;
+  stroke-dasharray: 5 5;
+}
+.et-legend {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.et-legend span:last-child {
+  color: #efbc74;
+}
+.et-caption {
+  font-size: 12px;
+}
+.et-finding {
+  border-left: 3px solid #efbc74;
+  padding: 20px 26px;
+  background: #ffffff05;
+  margin: 28px 0;
+}
+.et-finding > span {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+.et-finding strong {
+  display: block;
+  font-size: 38px;
+  color: #efbc74;
+  margin-top: 8px;
+}
+.et-parts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 30px;
+}
+.et-parts button {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #ffffff30;
+  border-radius: 5px;
+  background: #1c303d;
+  color: #f3f0e8;
+  font: inherit;
+  cursor: pointer;
+}
+.et-parts button[aria-pressed="true"] {
+  border-color: #efbc74;
+}
+.et-parts button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+.et-page details {
+  border-top: 1px solid #ffffff25;
+  padding: 18px 0;
+}
+.et-page summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.et-table {
+  overflow-x: auto;
+}
+.et-page table {
+  border-collapse: collapse;
+  font-size: 13px;
+  width: 100%;
+  margin: 20px 0;
+}
+.et-page th,
+.et-page td {
+  padding: 12px 8px;
+  text-align: right;
+  border-bottom: 1px solid #ffffff20;
+  white-space: nowrap;
+}
+.et-page caption {
+  text-align: left;
+  color: #b8c6cf;
+}
+.et-page :focus-visible {
+  outline: 3px solid #efbc74;
+  outline-offset: 4px;
+}
+@media (max-width: 800px) {
+  .et-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .et-page aside {
+    border: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .et-page aside p {
+    display: none;
+  }
+  .et-page label {
+    margin-bottom: 8px;
+  }
+  .et-parts {
+    grid-template-columns: 1fr;
+  }
+  .et-page nav {
+    margin-bottom: 28px;
+  }
+  .et-main svg text {
+    font-size: 18px;
+  }
+}

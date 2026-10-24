@@ -15,6 +15,7 @@ import { Planeetta } from "@/components/planeetta/Planeetta";
 import { Laboratorio } from "@/components/planeetta/Laboratorio";
 import { Murrokset } from "@/components/murrokset/Murrokset";
 import { Kehityskaari } from "@/components/kaari/Kehityskaari";
+import { ErotusTulot } from "@/components/erotus-tulot/ErotusTulot";
 import { Erotus } from "@/components/erotus/Erotus";
 import { Teemavertailu } from "@/components/teemavertailu/Teemavertailu";
 import { AdminBar } from "@/components/editor/AdminBar";
@@ -28,6 +29,7 @@ const rootRoute = createRootRoute({
   ),
 });
 const routes = [
+  createRoute({ getParentRoute: () => rootRoute, path: "/erotus-tulot", component: ErotusTulot }),
   createRoute({
     getParentRoute: () => rootRoute,
     path: "/",
