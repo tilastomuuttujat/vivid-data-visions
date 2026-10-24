@@ -21,3 +21,7 @@
 .e-note { color:var(--k-mute); margin:.6rem 0; }
 .e-method { font-family:system-ui,sans-serif; font-size:.82rem; color:var(--k-mute); }
 .e-method summary { cursor:pointer; color:var(--k-ink); }
+
+.e-factor line { stroke: var(--k-ink); stroke-width: 1; stroke-dasharray: 2 3; opacity: .55; }
+.e-factor text { font-size: 13px; font-style: italic; fill: var(--k-ink); paint-order: stroke; stroke: var(--k-bg, #0b0f14); stroke-width: 4px; stroke-linejoin: round; }
+.e-factor.pos text { fill: var(--k-gold); }
