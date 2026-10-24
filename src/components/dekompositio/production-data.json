@@ -1,0 +1,467 @@
+{
+ "retrieved": "2026-10-24",
+ "source": {
+  "title": "Tilastokeskus 15ai, kansantalouden tilinpito",
+  "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/ntp/15ai.px",
+  "query": [
+   {
+    "code": "timeperiod_y",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "1975",
+      "1976",
+      "1977",
+      "1978",
+      "1979",
+      "1980",
+      "1981",
+      "1982",
+      "1983",
+      "1984",
+      "1985",
+      "1986",
+      "1987",
+      "1988",
+      "1989",
+      "1990",
+      "1991",
+      "1992",
+      "1993",
+      "1994",
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ]
+    }
+   },
+   {
+    "code": "toimiala_79_20180101",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "SSS"
+     ]
+    }
+   },
+   {
+    "code": "taloustoimi_1_20180101",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "B1GMH",
+      "E1",
+      "E2",
+      "EP"
+     ]
+    }
+   },
+   {
+    "code": "contentscode",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "ntp-R2015P",
+      "ntp-TP2010",
+      "ntp-MH2010",
+      "ntp-TP"
+     ]
+    }
+   }
+  ],
+  "sha256": "7371a2ab224fc69071333b0d17830fe44e77bd90dea95e5ff9bd4d059b0c980e"
+ },
+ "units": {
+  "gdp": "milj. euroa, viitevuoden 2015 hinnoin",
+  "hours": "milj. tuntia",
+  "employed": "1000 henkeä, kotimaa",
+  "population": "1000 henkeä, keskiväkiluku"
+ },
+ "points": [
+  {
+   "year": 1975,
+   "gdp": 87588.0,
+   "employed": 2300.0,
+   "hours": 4159.0,
+   "population": 4711.0
+  },
+  {
+   "year": 1976,
+   "gdp": 87993.0,
+   "employed": 2283.0,
+   "hours": 4111.0,
+   "population": 4726.0
+  },
+  {
+   "year": 1977,
+   "gdp": 88322.0,
+   "employed": 2259.0,
+   "hours": 4038.0,
+   "population": 4739.0
+  },
+  {
+   "year": 1978,
+   "gdp": 91103.0,
+   "employed": 2248.0,
+   "hours": 4033.0,
+   "population": 4753.0
+  },
+  {
+   "year": 1979,
+   "gdp": 97656.0,
+   "employed": 2299.0,
+   "hours": 4110.0,
+   "population": 4765.0
+  },
+  {
+   "year": 1980,
+   "gdp": 103151.0,
+   "employed": 2360.0,
+   "hours": 4225.0,
+   "population": 4780.0
+  },
+  {
+   "year": 1981,
+   "gdp": 104481.0,
+   "employed": 2399.0,
+   "hours": 4279.0,
+   "population": 4800.0
+  },
+  {
+   "year": 1982,
+   "gdp": 107706.0,
+   "employed": 2414.0,
+   "hours": 4288.0,
+   "population": 4827.0
+  },
+  {
+   "year": 1983,
+   "gdp": 111049.0,
+   "employed": 2406.0,
+   "hours": 4250.0,
+   "population": 4856.0
+  },
+  {
+   "year": 1984,
+   "gdp": 114631.0,
+   "employed": 2414.0,
+   "hours": 4254.0,
+   "population": 4882.0
+  },
+  {
+   "year": 1985,
+   "gdp": 118690.0,
+   "employed": 2426.0,
+   "hours": 4259.0,
+   "population": 4902.0
+  },
+  {
+   "year": 1986,
+   "gdp": 121959.0,
+   "employed": 2417.0,
+   "hours": 4203.0,
+   "population": 4918.0
+  },
+  {
+   "year": 1987,
+   "gdp": 126302.0,
+   "employed": 2441.0,
+   "hours": 4262.0,
+   "population": 4932.0
+  },
+  {
+   "year": 1988,
+   "gdp": 132909.0,
+   "employed": 2449.0,
+   "hours": 4285.0,
+   "population": 4947.0
+  },
+  {
+   "year": 1989,
+   "gdp": 139666.0,
+   "employed": 2477.0,
+   "hours": 4334.0,
+   "population": 4964.0
+  },
+  {
+   "year": 1990,
+   "gdp": 140632.0,
+   "employed": 2468.0,
+   "hours": 4262.0,
+   "population": 4986.0
+  },
+  {
+   "year": 1991,
+   "gdp": 132363.0,
+   "employed": 2332.0,
+   "hours": 3981.0,
+   "population": 5014.0
+  },
+  {
+   "year": 1992,
+   "gdp": 127980.0,
+   "employed": 2176.0,
+   "hours": 3713.0,
+   "population": 5042.0
+  },
+  {
+   "year": 1993,
+   "gdp": 126982.0,
+   "employed": 2051.0,
+   "hours": 3499.0,
+   "population": 5066.0
+  },
+  {
+   "year": 1994,
+   "gdp": 132016.0,
+   "employed": 2018.0,
+   "hours": 3484.0,
+   "population": 5088.0
+  },
+  {
+   "year": 1995,
+   "gdp": 137606.0,
+   "employed": 2059.0,
+   "hours": 3567.0,
+   "population": 5108.0
+  },
+  {
+   "year": 1996,
+   "gdp": 142646.0,
+   "employed": 2094.0,
+   "hours": 3624.0,
+   "population": 5125.0
+  },
+  {
+   "year": 1997,
+   "gdp": 151772.0,
+   "employed": 2165.0,
+   "hours": 3738.0,
+   "population": 5140.0
+  },
+  {
+   "year": 1998,
+   "gdp": 160049.0,
+   "employed": 2208.0,
+   "hours": 3790.0,
+   "population": 5154.0
+  },
+  {
+   "year": 1999,
+   "gdp": 167074.0,
+   "employed": 2253.0,
+   "hours": 3867.0,
+   "population": 5166.0
+  },
+  {
+   "year": 2000,
+   "gdp": 176687.0,
+   "employed": 2300.0,
+   "hours": 3921.0,
+   "population": 5176.0
+  },
+  {
+   "year": 2001,
+   "gdp": 181352.0,
+   "employed": 2336.0,
+   "hours": 3947.0,
+   "population": 5188.0
+  },
+  {
+   "year": 2002,
+   "gdp": 184412.0,
+   "employed": 2364.0,
+   "hours": 3978.0,
+   "population": 5201.0
+  },
+  {
+   "year": 2003,
+   "gdp": 188122.0,
+   "employed": 2370.0,
+   "hours": 3973.0,
+   "population": 5213.0
+  },
+  {
+   "year": 2004,
+   "gdp": 195657.0,
+   "employed": 2383.0,
+   "hours": 3997.0,
+   "population": 5228.0
+  },
+  {
+   "year": 2005,
+   "gdp": 201092.0,
+   "employed": 2419.0,
+   "hours": 4032.0,
+   "population": 5246.0
+  },
+  {
+   "year": 2006,
+   "gdp": 209175.0,
+   "employed": 2464.0,
+   "hours": 4095.0,
+   "population": 5266.0
+  },
+  {
+   "year": 2007,
+   "gdp": 220288.0,
+   "employed": 2519.0,
+   "hours": 4176.0,
+   "population": 5289.0
+  },
+  {
+   "year": 2008,
+   "gdp": 222016.0,
+   "employed": 2575.0,
+   "hours": 4259.0,
+   "population": 5313.0
+  },
+  {
+   "year": 2009,
+   "gdp": 204086.0,
+   "employed": 2510.0,
+   "hours": 4097.0,
+   "population": 5339.0
+  },
+  {
+   "year": 2010,
+   "gdp": 210552.0,
+   "employed": 2491.0,
+   "hours": 4081.0,
+   "population": 5363.0
+  },
+  {
+   "year": 2011,
+   "gdp": 215584.0,
+   "employed": 2529.0,
+   "hours": 4122.0,
+   "population": 5388.0
+  },
+  {
+   "year": 2012,
+   "gdp": 212301.0,
+   "employed": 2544.0,
+   "hours": 4117.0,
+   "population": 5414.0
+  },
+  {
+   "year": 2013,
+   "gdp": 210221.0,
+   "employed": 2524.0,
+   "hours": 4064.0,
+   "population": 5439.0
+  },
+  {
+   "year": 2014,
+   "gdp": 209216.0,
+   "employed": 2510.0,
+   "hours": 4032.0,
+   "population": 5463.0
+  },
+  {
+   "year": 2015,
+   "gdp": 210192.0,
+   "employed": 2518.0,
+   "hours": 4041.0,
+   "population": 5481.0
+  },
+  {
+   "year": 2016,
+   "gdp": 215598.0,
+   "employed": 2532.0,
+   "hours": 4062.0,
+   "population": 5495.0
+  },
+  {
+   "year": 2017,
+   "gdp": 222720.0,
+   "employed": 2547.0,
+   "hours": 4071.0,
+   "population": 5508.0
+  },
+  {
+   "year": 2018,
+   "gdp": 225377.0,
+   "employed": 2614.0,
+   "hours": 4172.0,
+   "population": 5516.0
+  },
+  {
+   "year": 2019,
+   "gdp": 228419.0,
+   "employed": 2652.0,
+   "hours": 4205.0,
+   "population": 5522.0
+  },
+  {
+   "year": 2020,
+   "gdp": 222729.0,
+   "employed": 2590.0,
+   "hours": 4086.0,
+   "population": 5531.0
+  },
+  {
+   "year": 2021,
+   "gdp": 228690.0,
+   "employed": 2650.0,
+   "hours": 4175.0,
+   "population": 5542.0
+  },
+  {
+   "year": 2022,
+   "gdp": 230007.0,
+   "employed": 2743.0,
+   "hours": 4281.0,
+   "population": 5557.0
+  },
+  {
+   "year": 2023,
+   "gdp": 227205.0,
+   "employed": 2770.0,
+   "hours": 4288.0,
+   "population": 5577.0
+  },
+  {
+   "year": 2024,
+   "gdp": 229463.0,
+   "employed": 2748.0,
+   "hours": 4252.0,
+   "population": 5621.0
+  },
+  {
+   "year": 2025,
+   "gdp": 231397.0,
+   "employed": 2732.0,
+   "hours": 4224.0,
+   "population": 5650.0
+  }
+ ]
+}
