@@ -1,0 +1,1243 @@
+{
+  "batch_id": "knowledge_power_1850_1917_20261024",
+  "taxonomy_id": "knowledge_power_taxonomy_v1",
+  "title": "Tieto ja valta 1850–1917: ensimmäinen lähteistetty poiminta",
+  "period": [
+    1850,
+    1917
+  ],
+  "primary_theme_id": 29,
+  "taxonomy": {
+    "access": "Tiedon saavutettavuus",
+    "language_access": "Kielellinen pääsy tietoon",
+    "credential_gatekeeping": "Tutkinnot ja muodolliset pääsyehdot",
+    "knowledge_production": "Tiedon ja käsitteiden tuottaminen",
+    "classification_power": "Luokittelun ja tiedonkeruun valinnat",
+    "distribution_gatekeeping": "Julkaisemisen ja jakelun portinvartijuus",
+    "expert_recognition": "Asiantuntijuuden ja tunnustuksen valinta",
+    "institutional_use": "Tiedon käyttö hallinnossa ja päätöksenteossa",
+    "alternative_publics": "Vaihtoehtoiset sivistys- ja julkaisukanavat"
+  },
+  "selection": "Tarkoituksellinen mekanismikirjon otos: sensuuri, kieli, tutkinto, kirjasto, kansansivistys, tilastointi, ammatillinen ja tieteellinen tunnustus. Ei kattavuus- tai edustavuusväite.",
+  "sources": [
+    {
+      "source_id": "cens",
+      "title": "Suomalaisen sensuurin läpileikkaus",
+      "publisher_or_author": "Helsingin yliopiston kirjasto / Kansalliskirjasto; Esko Salminen, 2003",
+      "url": "https://extra.kansalliskirjasto.fi/verkkonayttelyt/kirjatietoverkkojenmaailmassa/salminen_tulosta.html",
+      "locator": "J. V. Snellmanin kohtalo; vuoden 1850 kielisäännös",
+      "source_type": "expert_historical_account",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "exam",
+      "title": "Ylioppilastutkinnon historia",
+      "publisher_or_author": "Ylioppilastutkintolautakunta",
+      "url": "https://www.ylioppilastutkinto.fi/fi/tietopalvelut/tietoa-ylioppilastutkinnosta/ylioppilastutkinnon-historia",
+      "locator": "Johdanto; Jatkuvasti muuttuva tutkinto",
+      "source_type": "institutional_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "lyseo",
+      "title": "Jyväskylän seminaari",
+      "publisher_or_author": "Jyväskylän yliopisto / JYX-EXPO",
+      "url": "https://expo.oscapps.jyu.fi/s/isa-asp/page/jyvaskylan-seminaari",
+      "locator": "Jyväskylän seminaari, perustamista käsittelevä kappale",
+      "source_type": "institutional_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "library",
+      "title": "Kirjastot helsinkiläisten olohuoneina",
+      "publisher_or_author": "Helsingin kaupunki; Niina Hägg ja Eva Sundgren, 2025",
+      "url": "https://historia.hel.fi/fi/ilmiot/tiedetta-taidetta-ja-sivistysta/kirjastot-helsinkilaisten-olohuoneina",
+      "locator": "Johdanto; vuoden 1860 kansankirjasto",
+      "source_type": "municipal_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "language",
+      "title": "Että oppisit vähän isänmaata tuntemaan",
+      "publisher_or_author": "Kotimaisten kielten keskus, 2025",
+      "url": "https://kotus.fi/etta-oppisit-vahan-isanmaata-tuntemaan/",
+      "locator": "Kieliasetusta ja 20 vuoden siirtymää käsittelevät kappaleet",
+      "source_type": "institutional_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "teachers",
+      "title": "Suomenkielinen jouluperinne on kotoisin Seminaarinmäeltä",
+      "publisher_or_author": "Jyväskylän yliopisto; Erja Kosonen, 2023",
+      "url": "https://www.jyu.fi/fi/uutinen/suomenkielinen-jouluperinne-on-kotoisin-seminaarinmaelta",
+      "locator": "Johdanto: seminaari aloitti 1863",
+      "source_type": "institutional_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "stats",
+      "title": "Suomen tilastojen historia: Autonomian aika",
+      "publisher_or_author": "Tilastokeskus",
+      "url": "https://guides.stat.fi/suomentilastojenhistoria/autonomianaika",
+      "locator": "Osat 1.3–1.5: toimisto, senaatin tietovalinnat ja vuosikirja",
+      "source_type": "institutional_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "kvs",
+      "title": "Historia",
+      "publisher_or_author": "Kvs-säätiö / Kansanvalistusseura",
+      "url": "https://kansanvalistusseura.fi/tietoa-meista/saation-historia/",
+      "locator": "1874; 1880-luvun alun kirjasto-ohjaus",
+      "source_type": "organizational_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "duodecim",
+      "title": "Seuran historia",
+      "publisher_or_author": "Suomalainen Lääkäriseura Duodecim",
+      "url": "https://www.duodecim.fi/duodecim/seuran-historia/",
+      "locator": "Seuran historia: 18.11.1881 perustaminen ja sanastotyön tavoite",
+      "source_type": "organizational_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "kaukas",
+      "title": "Koulumme historia",
+      "publisher_or_author": "Lappeenrannan kaupunki / Kaukaan koulu",
+      "url": "https://www.lappeenranta.fi/fi/kasvatus-ja-koulutus/koulut/kaukaan-koulu/koulumme-historia",
+      "locator": "Aloitimme yli 100 vuotta sitten: johtokuntaehto ja 19.10.1896",
+      "source_type": "municipal_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "workers",
+      "title": "Työväenopistotoiminta alkaa",
+      "publisher_or_author": "Tampereen kaupunki",
+      "url": "https://www.tampere.fi/tampereen-seudun-tyovaenopisto/tyovaenopiston-historia/tyovaenopistotoiminta-alkaa",
+      "locator": "Suomi saa ensimmäisen kansalaisopistonsa vuonna 1899",
+      "source_type": "municipal_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "women",
+      "title": "Tiedenaisia: naisten oikeuksien virstanpylväät",
+      "publisher_or_author": "Helsingin yliopiston verkkonäyttely",
+      "url": "https://www.mv.helsinki.fi/home/eisaksso/tiedenaiset/virstanp.html",
+      "locator": "Virstanpylväät 1901 ja 1916",
+      "source_type": "institutional_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "women_research",
+      "title": "Huippuhetkiä ja kompastuskiviä naisten akateemisella uralla",
+      "publisher_or_author": "Anu Lahtinen / Suomen Naisliiton juhlaseminaari 26.8.2022",
+      "url": "https://www.suomalainennaisliitto.fi/doc/2022-elokuu-Huippuhetkia-ja-kompastuskivia-naisten-akateemisella-uralla-uusittu2-1.pdf",
+      "locator": "PDF s. 3–4: erivapaus ja akateemiselle uralle pääsy",
+      "source_type": "expert_historical_account",
+      "checked_on": "2026-10-24",
+      "verification": "pdf_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "press",
+      "title": "Helsingin Suomalainen Sanomalehti Osakeyhtiö",
+      "publisher_or_author": "Median museo ja arkisto Merkki",
+      "url": "https://merkkiin.fi/arkisto/sahkoinen-arkisto/helsingin-suomalainen-sanomalehti-osakeyhtio/",
+      "locator": "Arkistoesittely: lakkautus ja jatkava lehti heinäkuussa 1904",
+      "source_type": "archive_description",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "academy",
+      "title": "Historia",
+      "publisher_or_author": "Suomalainen Tiedeakatemia; pohjana Paaskoski 2008",
+      "url": "https://acadsci.fi/suomalainen-tiedeakatemia/tiedeakatemian-historiaa/",
+      "locator": "Suomalainen Tiedeakatemia: kieli, poliittiset jäsenvalinnat, perustava kokous",
+      "source_type": "organizational_history",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "parliament",
+      "title": "Avoin tulevaisuus",
+      "publisher_or_author": "Eduskunnan kirjaston johtaja Antti Virrankoski / Kirjastolehti 5/2022",
+      "url": "https://suomenkirjastoseura.fi/hallinta/wp-content/uploads/2022/12/Kirjastolehti_5_2022__web.pdf",
+      "locator": "Painetut s. 22–23, PDF:n sivu 12: kirjasto avataan yleisölle 1913",
+      "source_type": "institutional_author_historical_account",
+      "checked_on": "2026-10-24",
+      "verification": "pdf_text_checked",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "school1917",
+      "title": "Mitä tilastot kertovat koulutuksesta Suomessa vuonna 1917?",
+      "publisher_or_author": "Opetushallitus, 25.1.2018",
+      "url": "https://www.oph.fi/fi/uutiset/2018/mita-tilastot-kertovat-koulutuksesta-suomessa-vuonna-1917",
+      "locator": "Koulutusta koskevaa tilastotietoa; vuoden 1917 vuosikirjan luokitukset",
+      "source_type": "official_historical_statistics_summary",
+      "checked_on": "2026-10-24",
+      "verification": "page_text_checked",
+      "contemporaneous_primary_source": false
+    }
+  ],
+  "entries": [
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:censorship1850",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:censorship1850",
+      "reuse_existing_item": false,
+      "title": "Suomenkielisten julkaisujen sisällöllinen rajaaminen 1850",
+      "year_start": 1850,
+      "year_end": 1850,
+      "theme_ids": [
+        8,
+        19,
+        28,
+        29,
+        32
+      ],
+      "dimension_codes": [
+        "distribution_gatekeeping",
+        "language_access"
+      ],
+      "source_ids": [
+        "cens"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:censorship1850:1",
+          "year": 1850,
+          "statement": "Vuoden 1850 kielisäännös rajasi suomeksi painettavan sisällön uskonnollisiin ja taloudellista hyötyä edistäviin teksteihin.",
+          "source_ids": [
+            "cens"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Julkaisulupa voi rajata sitä, mitä kansankielisessä julkisuudessa voidaan käsitellä.",
+      "case_limitations": "Alkuperäinen säädösteksti ja soveltamiskäytäntö tarkistettava erikseen. Ei väitettä kaikkien lukijoiden mielipiteistä tai rajoituksen koko voimassaoloajan täsmällisestä kattavuudesta.",
+      "gatekeepers": [
+        "painoviranomaiset",
+        "kustantajat"
+      ],
+      "affected_groups": [
+        "suomenkieliset lukijat",
+        "kirjoittajat"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:examination1852",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:examination1852",
+      "reuse_existing_item": false,
+      "title": "Ylioppilastutkinto kytketään lukion oppimäärään",
+      "year_start": 1852,
+      "year_end": 1852,
+      "theme_ids": [
+        4,
+        22,
+        29
+      ],
+      "dimension_codes": [
+        "credential_gatekeeping",
+        "expert_recognition"
+      ],
+      "source_ids": [
+        "exam"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:examination1852:1",
+          "year": 1852,
+          "statement": "Vuonna 1852 ylioppilastutkinto sidottiin lukion oppimäärään ja suullisten kokeiden rinnalle säädettiin kirjallisia kokeita.",
+          "source_ids": [
+            "exam"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:examination1852:2",
+          "year": 1852,
+          "statement": "Tutkinto suoritettiin tuolloin yliopistossa; kirjalliset kokeet siirtyivät lukioihin vuonna 1874.",
+          "source_ids": [
+            "exam"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Tutkinnon ja institutionaalisen arvioinnin kautta määritellään pääsyä korkeampaan koulutukseen.",
+      "case_limitations": "Tutkinnon suorittaminen ei yksin osoita tiedon todenperäisyyttä eikä kaikkia virka- tai urakelpoisuuksia. Pääsyyn vaikuttaneita kustannuksia ja sosiaalista valikoitumista ei tässä mitata.",
+      "gatekeepers": [
+        "yliopisto",
+        "oppikoulut",
+        "tutkinnon arvioijat"
+      ],
+      "affected_groups": [
+        "jatko-opintoihin hakevat"
+      ],
+      "mechanism_ids": [
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:finnishschool1858",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:finnishschool1858",
+      "reuse_existing_item": false,
+      "title": "Suomenkielinen oppikoulureitti Jyväskylässä",
+      "year_start": 1858,
+      "year_end": 1858,
+      "theme_ids": [
+        4,
+        14,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "language_access",
+        "access"
+      ],
+      "source_ids": [
+        "lyseo"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:finnishschool1858:1",
+          "year": 1858,
+          "statement": "Jyväskylän poikalyseo aloitti toimintansa vuonna 1858. Lähde sijoittaa sen suomenkielisten koulujen varhaiseen kehitykseen.",
+          "source_ids": [
+            "lyseo"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Suomenkielinen opetus voi laajentaa reittiä koulutukseen ilman ruotsin omaksumista ensisijaiseksi opetuskieleksi.",
+      "case_limitations": "Yhden oppilaitoksen perustaminen ei mittaa koko maan saavutettavuutta. Kustannukset, valintaehdot ja tyttöjen erilliset koulureitit jäivät rajaaviksi tekijöiksi.",
+      "gatekeepers": [
+        "koulun järjestäjät",
+        "opiskelijavalinta"
+      ],
+      "affected_groups": [
+        "suomenkieliset pojat"
+      ],
+      "mechanism_ids": [
+        121
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:publiclibrary1860",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:publiclibrary1860",
+      "reuse_existing_item": false,
+      "title": "Maksuton kansankirjasto avaa kirjallisuutta Helsingissä",
+      "year_start": 1860,
+      "year_end": 1860,
+      "theme_ids": [
+        19,
+        21,
+        27,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "distribution_gatekeeping"
+      ],
+      "source_ids": [
+        "library"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:publiclibrary1860:1",
+          "year": 1860,
+          "statement": "Helsinkiin perustettiin kansankirjasto vuonna 1860, ja lainaaminen oli maksutonta.",
+          "source_ids": [
+            "library"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:publiclibrary1860:2",
+          "year": 1860,
+          "statement": "Säätyläisnaisten käynnistämä kirjastotoiminta siirtyi kaupungille vuonna 1876.",
+          "source_ids": [
+            "library"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Yhteinen kokoelma voi vähentää kirjan omistamisesta riippuvaa tiedonsaantia; hankinnat ja aukiolo rajaavat silti tarjontaa.",
+      "case_limitations": "Paikallinen tapaus. Lainaaminen, lukeminen, ymmärtäminen ja poliittinen vaikutus eivät ole sama mittari.",
+      "gatekeepers": [
+        "kirjaston perustajat",
+        "kirjavalinnat",
+        "kaupunki"
+      ],
+      "affected_groups": [
+        "helsinkiläiset lukijat"
+      ],
+      "mechanism_ids": [
+        214,
+        181
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:language1863",
+      "primary_item_id": "kieliasetus-1863",
+      "reuse_existing_item": true,
+      "title": "Hallinnon kieli tiedon ja asioinnin pääsykynnyksenä",
+      "year_start": 1863,
+      "year_end": 1863,
+      "theme_ids": [
+        4,
+        8,
+        19,
+        28,
+        29
+      ],
+      "dimension_codes": [
+        "language_access",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "language"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:language1863:1",
+          "year": 1863,
+          "statement": "Vuoden 1863 kieliasetus käynnisti suomen aseman vahvistamisen suhteessa ruotsiin; lähteen kuvaama siirtymäaika oli 20 vuotta.",
+          "source_ids": [
+            "language"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Asiointi- ja opetuskielen muuttuminen voi vähentää kielellistä riippuvuutta koulutetuista välittäjistä.",
+      "case_limitations": "Oikeudellinen tavoite ja toteutunut kielten yhdenvertaisuus erotetaan. Kaikkien kieliryhmien tai virastojen käytäntöä ei ole kartoitettu.",
+      "gatekeepers": [
+        "viranomaiset",
+        "virkakielen osaajat"
+      ],
+      "affected_groups": [
+        "suomenkielinen väestö"
+      ],
+      "mechanism_ids": [
+        185,
+        121
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:teachers1863",
+      "primary_item_id": "education_needs_1850_1917_20261022:teachers1863",
+      "reuse_existing_item": true,
+      "title": "Opettajankoulutus tiedon välittämisen ammattirakenteena",
+      "year_start": 1863,
+      "year_end": 1863,
+      "theme_ids": [
+        4,
+        15,
+        19,
+        22,
+        29
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "credential_gatekeeping"
+      ],
+      "source_ids": [
+        "teachers",
+        "women"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:teachers1863:1",
+          "year": 1863,
+          "statement": "Jyväskylän seminaari aloitti toimintansa vuonna 1863.",
+          "source_ids": [
+            "teachers"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:teachers1863:2",
+          "year": 1863,
+          "statement": "Helsingin yliopiston virstanpylväsluettelo mainitsee seminaarin myös naisten koulutusreittinä.",
+          "source_ids": [
+            "women"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Opettajankoulutus voi levittää osaamista ja samalla vakiinnuttaa instituution hyväksymiä opettamisen käytäntöjä.",
+      "case_limitations": "Ei väitetä, että tutkinto olisi ollut heti kaikkien opettajien pakollinen kelpoisuusehto. Oppimisen tai maailmankuvien vaikutusta ei ole mitattu.",
+      "gatekeepers": [
+        "seminaari",
+        "opettajankouluttajat"
+      ],
+      "affected_groups": [
+        "tulevat opettajat",
+        "naisopiskelijat",
+        "oppilaat"
+      ],
+      "mechanism_ids": [
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:statisticaloffice1865",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:statisticaloffice1865",
+      "reuse_existing_item": false,
+      "title": "Virallinen tilastotuotanto ja tiedon määrittelyvalta",
+      "year_start": 1865,
+      "year_end": 1865,
+      "theme_ids": [
+        8,
+        17,
+        22,
+        29
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "classification_power",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "stats"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:statisticaloffice1865:1",
+          "year": 1865,
+          "statement": "Tilastollinen toimisto perustettiin vuonna 1865 ja vakinaistettiin vuonna 1870.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:statisticaloffice1865:2",
+          "year": 1865,
+          "statement": "Tilastokeskuksen historiakuvauksen mukaan senaatin talousosasto päätti yleensä tilastojen sisällöstä.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Säännöllinen tilastointi voi vahvistaa yhteistä tietopohjaa; kerättävien asioiden valinta vaikuttaa siihen, mitkä ilmiöt tulevat hallinnolle näkyviksi.",
+      "case_limitations": "Tilastot eivät ala vasta vuodesta 1865. Luokitteluvallan olemassaolo ei osoita tilastojen vääristelyä tai yksittäisen päätöksen määräytymistä niiden perusteella.",
+      "gatekeepers": [
+        "senaatin talousosasto",
+        "tilastovirasto",
+        "tiedon tuottavat virastot"
+      ],
+      "affected_groups": [
+        "päätöksentekijät",
+        "tilastoihin luokitellut väestöryhmät"
+      ],
+      "mechanism_ids": [
+        185,
+        215
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:kvs1874",
+      "primary_item_id": "civil_society_1850_1879_20261022:kvsoper1874",
+      "reuse_existing_item": true,
+      "title": "Kansanvalistus ja kirjallisuuden välittäjien valinnat",
+      "year_start": 1874,
+      "year_end": 1874,
+      "theme_ids": [
+        4,
+        21,
+        23,
+        25,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "alternative_publics",
+        "distribution_gatekeeping"
+      ],
+      "source_ids": [
+        "kvs"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:kvs1874:1",
+          "year": 1874,
+          "statement": "Kansanvalistusseuran toiminta käynnistyi vuonna 1874, ja sen tavoitteena oli edullinen kansantajuinen kirjallisuus.",
+          "source_ids": [
+            "kvs"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:kvs1874:2",
+          "year": 1874,
+          "statement": "Seura alkoi 1880-luvun alussa tukea kirjastoja opastuksella ja kirjavalintasuosituksilla.",
+          "source_ids": [
+            "kvs"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Kansansivistys voi laajentaa pääsyä tietoon samalla, kun välittäjät valitsevat, mitä pidetään hyödyllisenä kirjallisuutena.",
+      "case_limitations": "Perustamisen eri vaiheita ei kirjata uusiksi tapahtumiksi. Seuran oma historia kuvaa tavoitteita ja toimintaa, ei koko väestön vastaanottoa.",
+      "gatekeepers": [
+        "seura",
+        "kirjavalintasuositusten laatijat",
+        "paikalliset kirjastot"
+      ],
+      "affected_groups": [
+        "aikuislukijat",
+        "kirjastojen käyttäjät"
+      ],
+      "mechanism_ids": [
+        214,
+        121
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:yearbook1879",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:yearbook1879",
+      "reuse_existing_item": false,
+      "title": "Tilastollinen vuosikirja kokoaa yhteiskuntaa koskevan tiedon",
+      "year_start": 1879,
+      "year_end": 1879,
+      "theme_ids": [
+        8,
+        19,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "knowledge_production",
+        "classification_power"
+      ],
+      "source_ids": [
+        "stats"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:yearbook1879:1",
+          "year": 1879,
+          "statement": "Ensimmäinen Suomenmaan tilastollinen vuosikirja ilmestyi vuonna 1879.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:yearbook1879:2",
+          "year": 1879,
+          "statement": "Tilastokeskuksen historiakuvaus kertoo tärkeimpien tilastojen kokoamisesta yhteen julkaisuun.",
+          "source_ids": [
+            "stats"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Yhteenvetojulkaisu voi vähentää tiedon hajanaisuutta ja tarjota yhteisiä vertailukohteita.",
+      "case_limitations": "Julkaiseminen ei osoita yleistä lukijakuntaa tai tosiasiallista vaikutusta kansalaisten päätösvaltaan.",
+      "gatekeepers": [
+        "tilastovirasto",
+        "julkaisusarjan toimitus"
+      ],
+      "affected_groups": [
+        "viranomaiset",
+        "tutkijat",
+        "tilastojen lukijat"
+      ],
+      "mechanism_ids": [
+        181,
+        215
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:duodecim1881",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:duodecim1881",
+      "reuse_existing_item": false,
+      "title": "Lääketieteen suomenkielinen sanasto ja asiantuntijayhteisön omaehtoinen rakentuminen",
+      "year_start": 1881,
+      "year_end": 1881,
+      "theme_ids": [
+        4,
+        7,
+        14,
+        21,
+        29
+      ],
+      "dimension_codes": [
+        "language_access",
+        "knowledge_production",
+        "expert_recognition"
+      ],
+      "source_ids": [
+        "duodecim"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:duodecim1881:1",
+          "year": 1881,
+          "statement": "Duodecim perustettiin vuonna 1881 suomenkielisen lääketieteellisen terminologian ja korkeimman opetuksen edistämiseksi.",
+          "source_ids": [
+            "duodecim"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:duodecim1881:2",
+          "year": 1881,
+          "statement": "Seuran oma historia liittää sanaston puutteen myös lääkärin ja potilaan väliseen keskusteluun.",
+          "source_ids": [
+            "duodecim"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Asiantuntijayhteisö voi sekä kehittää tiedon käsitteitä että muuttaa sitä, millä kielellä asiantuntemusta voidaan käyttää.",
+      "case_limitations": "Seuran tavoite ja sen historiakuvauksen arvio erotetaan todetusta terveyshyödystä. Hallinnon toimettomuutta koskeva kuvaus on seuran esittämä tulkinta, ei tässä erikseen varmennettu hallintotutkimus.",
+      "gatekeepers": [
+        "lääketieteen opetus",
+        "lääkäriseura",
+        "sanastotyö"
+      ],
+      "affected_groups": [
+        "suomenkieliset lääketieteen opiskelijat",
+        "potilaat"
+      ],
+      "mechanism_ids": [
+        185,
+        121
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:kaukas1896",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:kaukas1896",
+      "reuse_existing_item": false,
+      "title": "Tehtaan rahoittama koulu ja johtokunnan nimitysvalta",
+      "year_start": 1896,
+      "year_end": 1896,
+      "theme_ids": [
+        2,
+        4,
+        15,
+        22,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "institutional_use",
+        "distribution_gatekeeping"
+      ],
+      "source_ids": [
+        "kaukas"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:kaukas1896:1",
+          "year": 1896,
+          "statement": "Kaukaan koulu aloitti toimintansa 19.10.1896.",
+          "source_ids": [
+            "kaukas"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:kaukas1896:2",
+          "year": 1896,
+          "statement": "Koulun historiassa tehtaan johdon rahoitus- ja ylläpitositoumuksen ehdoksi kuvataan oikeus valita johtokunta.",
+          "source_ids": [
+            "kaukas"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Rahoittaja voi yhtä aikaa mahdollistaa koulutuksen ja saada valtaa sen hallintoon.",
+      "case_limitations": "Yhden tehtaan paikallinen tapaus. Johtokunnan nimitysvalta ei yksin osoita opetuksen sisällön manipulointia tai työntekijöiden mielipiteiden muuttumista.",
+      "gatekeepers": [
+        "tehtaan johto",
+        "koulun johtokunta"
+      ],
+      "affected_groups": [
+        "tehdastyöläisten lapset",
+        "paikalliset perheet"
+      ],
+      "mechanism_ids": [
+        185,
+        214
+      ],
+      "related_item_ids": [
+        "kansakouluasetus-1866"
+      ]
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:workers1899",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:workers1899",
+      "reuse_existing_item": false,
+      "title": "Työväenopisto avaa aikuisille oman sivistysreitin",
+      "year_start": 1899,
+      "year_end": 1899,
+      "theme_ids": [
+        4,
+        15,
+        21,
+        25,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "alternative_publics"
+      ],
+      "source_ids": [
+        "workers"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:workers1899:1",
+          "year": 1899,
+          "statement": "Tampereen työväenopiston avajaiset pidettiin 16.1.1899.",
+          "source_ids": [
+            "workers"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:workers1899:2",
+          "year": 1899,
+          "statement": "Kaupungin historia kuvaa luentoja ja keskusteluja etenkin työväestölle sekä ammattitaidon kehittämisen tavoitetta.",
+          "source_ids": [
+            "workers"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Aikuiskoulutus voi luoda koulututkintojen ulkopuolisen väylän tietoon ja keskusteluun.",
+      "case_limitations": "Avaus ja ohjelmallinen tavoite eivät osoita koko työväestön osallistumista tai opiston poliittista vaikutusta.",
+      "gatekeepers": [
+        "opiston hallinto",
+        "luennoitsijat"
+      ],
+      "affected_groups": [
+        "työväestö",
+        "aikuisopiskelijat"
+      ],
+      "mechanism_ids": [
+        121,
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:women1901",
+      "primary_item_id": "access_exclusion_1850_1917_20261023:university1901",
+      "reuse_existing_item": true,
+      "title": "Naisille pääsy yliopistoon ilman sukupuoleen sidottua erivapautta",
+      "year_start": 1901,
+      "year_end": 1901,
+      "theme_ids": [
+        4,
+        19,
+        22,
+        28,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "credential_gatekeeping",
+        "expert_recognition"
+      ],
+      "source_ids": [
+        "women",
+        "women_research"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:women1901:1",
+          "year": 1901,
+          "statement": "Naisten yliopisto-opiskelun erivapausvaatimus poistui vuonna 1901.",
+          "source_ids": [
+            "women",
+            "women_research"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:women1901:2",
+          "year": 1901,
+          "statement": "Tutkijan esitys erottaa opinto-oikeuden myöhemmistä akateemisen uran pääsyvaiheista.",
+          "source_ids": [
+            "women",
+            "women_research"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Muodollisen opinto-oikeuden muutos voi laajentaa pääsyä tunnustetun asiantuntemuksen tuottamiseen, vaikka urapolun muut esteet säilyvät.",
+      "case_limitations": "Opiskeluoikeus ei takaa virkaa, julkaisujen näkyvyyttä tai toteutunutta yhdenvertaisuutta.",
+      "gatekeepers": [
+        "yliopisto",
+        "opinto-oikeuden myöntäjät"
+      ],
+      "affected_groups": [
+        "naiset"
+      ],
+      "mechanism_ids": [
+        121,
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:press1904",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:press1904",
+      "reuse_existing_item": false,
+      "title": "Päivälehden lakkautus ja julkaisutoiminnan jatkuminen",
+      "year_start": 1904,
+      "year_end": 1904,
+      "theme_ids": [
+        8,
+        19,
+        29,
+        32
+      ],
+      "dimension_codes": [
+        "distribution_gatekeeping",
+        "alternative_publics"
+      ],
+      "source_ids": [
+        "press"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:press1904:1",
+          "year": 1904,
+          "statement": "Painoviranomaiset lakkauttivat Päivälehden heinäkuun alussa 1904.",
+          "source_ids": [
+            "press"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:press1904:2",
+          "year": 1904,
+          "statement": "Arkistoesittelyn mukaan jatkajaksi perustetun Helsingin Sanomien ensimmäinen numero ilmestyi 7.7.1904.",
+          "source_ids": [
+            "press"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Julkaisuvallan rajoittaminen ja uuden julkaisukanavan perustaminen voivat esiintyä rinnakkain.",
+      "case_limitations": "Yhden lehden tapaus ei osoita koko julkisuuden vapautta. Jatkava julkaisu ei todista sensuurin vaikutuksen poistumista tai sisältöjen muuttumattomuutta.",
+      "gatekeepers": [
+        "painoviranomaiset",
+        "kustannusyhtiöt",
+        "toimitukset"
+      ],
+      "affected_groups": [
+        "toimittajat",
+        "lukijat"
+      ],
+      "mechanism_ids": [
+        214
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:academy1908",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:academy1908",
+      "reuse_existing_item": false,
+      "title": "Tieteellisen tunnustuksen kieli- ja poliittiset rajat",
+      "year_start": 1908,
+      "year_end": 1908,
+      "theme_ids": [
+        4,
+        14,
+        22,
+        23,
+        29,
+        32
+      ],
+      "dimension_codes": [
+        "knowledge_production",
+        "expert_recognition",
+        "language_access"
+      ],
+      "source_ids": [
+        "academy"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:academy1908:1",
+          "year": 1908,
+          "statement": "Suomalainen Tiedeakatemia perustettiin vuonna 1908.",
+          "source_ids": [
+            "academy"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:academy1908:2",
+          "year": 1908,
+          "statement": "Seuran historiakuvaus liittää perustamisen kielijännitteisiin ja kertoo poliittisten erimielisyyksien vaikuttaneen aiemmin tieteellisten seurojen jäsenvalintoihin.",
+          "source_ids": [
+            "academy"
+          ],
+          "evidence_kind": "reported_historical_interpretation",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Tieteellisen tunnustuksen ja verkostojen pääsyehdot voivat sisältää tutkimuksellisen arvioinnin ohella kielellisiä ja poliittisia rajoja.",
+      "case_limitations": "Jäsenvalintoja koskeva väite tallennetaan nimetyn historiakuvauksen tulkintana. Se ei osoita koko akateemisen yhteisön puolueellisuutta tai yksittäisen tutkimuksen epäluotettavuutta.",
+      "gatekeepers": [
+        "tieteelliset seurat",
+        "jäsenten valitsijat",
+        "professoriverkostot"
+      ],
+      "affected_groups": [
+        "suomenkieliset tutkijat",
+        "tieteellisten verkostojen ulkopuolelle jääneet"
+      ],
+      "mechanism_ids": [
+        121,
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:parliamentlibrary1913",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:parliamentlibrary1913",
+      "reuse_existing_item": false,
+      "title": "Eduskunnan kirjasto avataan yleisölle",
+      "year_start": 1913,
+      "year_end": 1913,
+      "theme_ids": [
+        8,
+        19,
+        28,
+        29
+      ],
+      "dimension_codes": [
+        "access",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "parliament"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:parliamentlibrary1913:1",
+          "year": 1913,
+          "statement": "Eduskunnan kirjaston johtajan historiakuvauksen mukaan kirjasto avattiin yleisölle vuonna 1913.",
+          "source_ids": [
+            "parliament"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Pääsy päätöksenteon tausta-aineistoihin voi vahvistaa mahdollisuuksia ymmärtää ja arvioida vallankäyttöä.",
+      "case_limitations": "Johtajan vuoden 2022 essee, ei alkuperäinen vuoden 1913 päätös. Avoimuus ei yksin osoita käyttöä, ymmärtämistä tai vaikutusta päätöksiin.",
+      "gatekeepers": [
+        "eduskunta",
+        "kirjaston käyttöehdot"
+      ],
+      "affected_groups": [
+        "kansalaiset",
+        "tutkijat"
+      ],
+      "mechanism_ids": [
+        181
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:academicposts1916",
+      "primary_item_id": "knowledge_power_1850_1917_20261024:academicposts1916",
+      "reuse_existing_item": false,
+      "title": "Opinto-oikeudesta yliopistovirkojen kelpoisuuteen",
+      "year_start": 1916,
+      "year_end": 1916,
+      "theme_ids": [
+        4,
+        15,
+        19,
+        22,
+        29
+      ],
+      "dimension_codes": [
+        "credential_gatekeeping",
+        "expert_recognition",
+        "institutional_use"
+      ],
+      "source_ids": [
+        "women"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:academicposts1916:1",
+          "year": 1916,
+          "statement": "Helsingin yliopiston virstanpylväsluettelo ajoittaa yliopistovirkojen avaamisen naisille vuoteen 1916.",
+          "source_ids": [
+            "women"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Tutkinnon saavuttaminen ja oikeus toimia tiedon tuottajan institutionaalisessa asemassa ovat erillisiä portteja.",
+      "case_limitations": "Yksittäisten virkojen oikeudellinen soveltamisala ja nimitysten toteutuminen tarkistettava alkuperäisistä päätöksistä. Ei väitettä muiden valtion virkojen yleisestä avaamisesta vuonna 1916.",
+      "gatekeepers": [
+        "yliopisto",
+        "virantäyttömenettelyt"
+      ],
+      "affected_groups": [
+        "akateemisesti koulutetut naiset"
+      ],
+      "mechanism_ids": [
+        121,
+        185
+      ],
+      "related_item_ids": []
+    },
+    {
+      "case_key": "knowledge_power_1850_1917_20261024:classification1917",
+      "primary_item_id": "education_needs_1850_1917_20261022:access1917",
+      "reuse_existing_item": true,
+      "title": "Luku- ja kirjoitustaito sekä koulutettujen luokittelu isän aseman mukaan",
+      "year_start": 1917,
+      "year_end": 1917,
+      "theme_ids": [
+        4,
+        19,
+        22,
+        26,
+        29
+      ],
+      "dimension_codes": [
+        "classification_power",
+        "access"
+      ],
+      "source_ids": [
+        "school1917"
+      ],
+      "observations": [
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:classification1917:1",
+          "year": 1917,
+          "statement": "Opetushallituksen historiakooste erottaa lukutaidon ja kirjoitustaidon sekä kertoo jatko-opiskelun olleen rajallista.",
+          "source_ids": [
+            "school1917"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        },
+        {
+          "observation_id": "knowledge_power_1850_1917_20261024:classification1917:2",
+          "year": 1917,
+          "statement": "Vuoden 1917 vuosikirjassa koululaisia ja opiskelijoita luokiteltiin isän yhteiskunnallisen aseman mukaan; mukana olivat myös vuoden 1916 yliopistoon sisäänkirjoitetut.",
+          "source_ids": [
+            "school1917"
+          ],
+          "evidence_kind": "documented_historical_claim",
+          "inference": false
+        }
+      ],
+      "mechanism_hypothesis": "Lukutaito ei yksin merkitse yhtäläistä tiedon tuottamisen tai korkeakoulutuksen mahdollisuutta. Tilastoluokat tekevät yhteiskunnallisen aseman näkyväksi valitulla tavalla.",
+      "case_limitations": "Ei uutta prosenttisarjaa: lukutaitoluvun ikäraja ja nimittäjä tarkistettava alkuperäistaulukosta. Isän aseman luokittelu ei yksin osoita koulutusvalinnan syrjivää mekanismia.",
+      "gatekeepers": [
+        "koulutusjärjestelmä",
+        "tilastoluokitusten laatijat"
+      ],
+      "affected_groups": [
+        "eri sosiaaliryhmien lapset",
+        "opiskelijat"
+      ],
+      "mechanism_ids": [
+        121,
+        185
+      ],
+      "related_item_ids": []
+    }
+  ],
+  "limitations": [
+    "Tapahtumafaktat ja analyyttinen mekanismihypoteesi erotetaan; syyvaikutuksen suuruutta ei lasketa.",
+    "Lähteet ovat historiallisia asiantuntija-, viranomais- ja instituutiokuvauksia. Aikalaispäätökset ja yksilöityjen valintojen arkistoaineisto ovat pääosin jatkotyötä.",
+    "Koulutus, näkyvyys, tiedon luotettavuus ja päätösvalta eivät ole sama asia. Akateeminen asema ei takaa yksittäisen väitteen oikeellisuutta.",
+    "Tieto, jolla ei ollut kirjallista tai institutionaalista julkaisukanavaa, jää tässä otoksessa aliedustetuksi.",
+    "Saamen- ja romanikieliset yhteisöt, uskonnolliset vähemmistöt, naisten oma julkaisutoiminta sekä kirkon paikalliset lukutaitokäytännöt vaativat oman täydennyksen."
+  ],
+  "open_tasks": [
+    "Alkuperäiset säädökset ja toimeenpanoasiakirjat; opinto- ja virkakelpoisuuden täsmälliset rajaukset.",
+    "Lukutaito ja kirjoitustaito ikärajoineen; koulutuksen sosiaalinen rekrytointi vertailukelpoisista taulukoista.",
+    "Sanomalehtien levikki, kieli, omistus, toimittajat ja sensuuripäätökset; näkyvyys erotettava mielipidevaikutuksesta.",
+    "Tutkimustiedon toteutunut käyttö yksittäisten päätösten valmistelussa ja kilpailevat selitykset."
+  ],
+  "causal_confirmation": false,
+  "numeric_effects_created": false
+}
