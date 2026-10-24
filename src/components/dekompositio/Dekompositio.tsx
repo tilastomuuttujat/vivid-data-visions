@@ -35,8 +35,7 @@ export function Dekompositio() {
     hi = Math.ceil(Math.max(...all) / 5000) * 5000;
   const x0 = AXIS_MIN,
     x1 = AXIS_MAX;
-  const d0 = rows[0]!.year,
-    d1 = rows[rows.length - 1]!.year;
+  const d0 = rows[0]!.year;
   const x = (y: number) => PAD.l + ((y - x0) / (x1 - x0)) * (W - PAD.l - PAD.r);
   const y = (v: number) => PAD.t + (1 - (v - lo) / (hi - lo)) * (H - PAD.t - PAD.b);
   const actual = rows.map((r) => ({ x: x(r.year), y: y(r.actual) }));
