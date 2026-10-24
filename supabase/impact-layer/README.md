@@ -10,7 +10,7 @@ This backend layer is installed in the **murrosmatriisi** database, in the priva
 | `production_components` | Real GDP/person = GDP/hour × hours/employed × employed/population; three-factor Shapley | 1975–2025 | 1975, 1990, 2007 |
 | `real_income_components` | Real disposable income/person = nominal disposable income × price adjustment × inverse population; three-factor Shapley | 1975–2025 | 1975, 1990, 2007 |
 
-All outputs retain the complete **1850–2025** domain. Missing years have `not_computable`, NULL actual/reference/effect and an explicit reason. No interpolation, invented historical effects, editorial theme scores or source projections enter these historical models.
+All outputs retain the complete **1850–2025** domain. Missing years have `not_computable`, NULL actual/reference/effect and an explicit reason. No interpolation, invented historical effects, editorial theme scores or source projections enter these historical models. Point `actual_unit` and `effect_unit` are explicit: employment levels use percent, their differences use percentage points. The legacy `unit` field denotes the effect unit.
 
 Shapley references are **allocation curves**, not predictions of a world without a factor. An allocated comparison can be negative; this does not mean counterfactual household income would actually be negative. The six update orders are averaged to distribute interactions. The age model instead uses a declared fixed-weight order and centered allocation. Alternative methods can allocate interactions differently.
 
@@ -20,7 +20,7 @@ The economic employment concept is domestic national-accounts employment, and it
 
 Every model has an explicit assessment against all 32 themes. `input_dimension` and `outcome_dimension` identify a model's actual measured concepts; `context_unquantified` means the theme has been considered but its separate effect has not been identified. A theme association is never treated as attribution of its whole effect.
 
-`impact_theme_year` has 32 × 176 = **5632 cells per release**. Cells describe linked annual observed/estimated candidates, mechanism connections and the presence of relevant numerical model dimensions. Linked proxy observations are not validated causal coverage. Zero linked candidates does not mean the database contains no other information about the theme.
+`impact_theme_year` has 32 × 176 = **5632 cells per release**. Cells describe linked annual observed/estimated candidates, mechanism connections and the presence of relevant numerical model dimensions. The mechanism count is theme-level registry membership repeated across years, not measured annual activity. The numerical-model count identifies available model dimensions, not identified whole-theme effects. Linked proxy observations are not validated causal coverage. Zero linked candidates does not mean the database contains no other information about the theme.
 
 The source's directed mechanism relationships, evidence statuses, original stages and lag fields are preserved. Many mechanisms have no single owning theme; their theme memberships come from `atlas_stage_mechanisms`. Do not infer a missing owning theme or invent quantitative propagation coefficients. `impact_channel` allows a future numerical coefficient only when it references a calibration run. The current links are contextual, not a calibrated 32-theme dynamic causal model.
 

@@ -269,7 +269,8 @@ end $$;
 create view research.impact_visual_point with (security_invoker=true) as
  select mr.release_id,mr.model_key,mr.baseline_year,p.year,p.factor_key,p.group_key,
  d.value as effect,(d.dims->>'actual')::numeric actual,(d.dims->>'comparison')::numeric comparison,
- d.unit,d.value_status,d.not_computable_reason,d.dims,m.method_kind
+ d.unit,d.value_status,d.not_computable_reason,d.dims,m.method_kind,
+ case when m.engine='age_standardization' then '%' else m.unit end actual_unit,m.unit effect_unit
  from research.impact_point p join research.impact_model_run mr using(computation_run_id)
  join research.derived_value d using(derived_value_id) join research.impact_model m using(model_key)
  where d.retracted_at is null and not exists(select 1 from research.computation_run cr where cr.computation_run_id=mr.computation_run_id and cr.retracted_at is not null);
@@ -339,3 +340,6 @@ create index impact_snapshot_retrieval_idx on research.impact_snapshot(retrieval
 create index impact_model_run_model_idx on research.impact_model_run(model_key);
 create index impact_channel_target_mechanism_idx on research.impact_channel(target_mechanism_id);
 create index impact_channel_calibration_idx on research.impact_channel(calibration_run_id);
+
+comment on column research.impact_theme_year.mechanism_count is 'Theme-level registered mechanism memberships, repeated across years; not measured annual activity or identified annual impact.';
+comment on column research.impact_theme_year.quantitative_model_count is 'Available model dimensions connected to this theme; not the number of identified whole-theme causal effects.';
