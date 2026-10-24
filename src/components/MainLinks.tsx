@@ -9,6 +9,7 @@ const pages = [
   { to: "/teemavertailu", label: "Teemavertailu" },
   { to: "/murrokset", label: "Murrokset" },
   { to: "/kehityskaari", label: "Kehityskaari" },
+  { to: "/erotus", label: "Erotus" },
 ] as const;
 
 export function MainLinks({
