@@ -6,6 +6,9 @@ import "./dekompositio.css";
 const W = 1000,
   H = 420,
   PAD = { l: 64, r: 24, t: 24, b: 40 };
+const AXIS_MIN = 1850,
+  AXIS_MAX = 2050,
+  NOW = 2025;
 const eur = (v: number) => Math.round(v).toLocaleString("fi-FI") + " €";
 const signed = (v: number) => (v >= 0 ? "+" : "−") + eur(Math.abs(v));
 
@@ -30,8 +33,10 @@ export function Dekompositio() {
   const all = rows.flatMap((r) => [r.actual, r.comparison]);
   const lo = Math.floor(Math.min(...all) / 5000) * 5000,
     hi = Math.ceil(Math.max(...all) / 5000) * 5000;
-  const x0 = rows[0]!.year,
-    x1 = rows[rows.length - 1]!.year;
+  const x0 = AXIS_MIN,
+    x1 = AXIS_MAX;
+  const d0 = rows[0]!.year,
+    d1 = rows[rows.length - 1]!.year;
   const x = (y: number) => PAD.l + ((y - x0) / (x1 - x0)) * (W - PAD.l - PAD.r);
   const y = (v: number) => PAD.t + (1 - (v - lo) / (hi - lo)) * (H - PAD.t - PAD.b);
   const actual = rows.map((r) => ({ x: x(r.year), y: y(r.actual) }));
