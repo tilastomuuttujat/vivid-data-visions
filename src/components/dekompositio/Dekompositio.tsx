@@ -29,7 +29,7 @@ export function Dekompositio() {
   const [hover, setHover] = useState<number | null>(null);
   const series = useMemo(() => decompose(points, baseline), [baseline]);
   const fi = factorIndex(factor);
-  const rows = series.map((s) => ({ ...s, comparison: s.actual - s.parts[fi] }));
+  const rows = series.map((s) => ({ ...s, comparison: s.actual - s.parts[fi]! }));
   const all = rows.flatMap((r) => [r.actual, r.comparison]);
   const lo = Math.floor(Math.min(...all) / 5000) * 5000,
     hi = Math.ceil(Math.max(...all) / 5000) * 5000;

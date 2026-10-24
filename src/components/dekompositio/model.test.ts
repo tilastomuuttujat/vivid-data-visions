@@ -8,7 +8,7 @@ describe("tuotannon Shapley-hajotelma", () => {
         expect(p.parts[0] + p.parts[1] + p.parts[2]).toBeCloseTo(p.actual - p.baseTotal, 6);
   });
   it("vertailuvuonna kaikki osuudet ovat nolla", () => {
-    expect(decompose(points, 1990)[0].parts).toEqual([0, 0, 0]);
+    expect(decompose(points, 1990)[0]!.parts).toEqual([0, 0, 0]);
   });
   it("symmetria: vain yhden tekijän muutos kohdistuu kokonaan sille", () => {
     const [a, b2, c] = shapley3([2, 3, 4], [5, 3, 4]);

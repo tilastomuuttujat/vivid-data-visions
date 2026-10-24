@@ -19,12 +19,13 @@ export function factorize(r: Row): [number, number, number] {
 export const total = (f: [number, number, number]) => f[0] * f[1] * f[2];
 
 /** Exact three-factor Shapley allocation (same closed form as research.impact_shapley3). */
-export function shapley3(b: number[], c: number[]): [number, number, number] {
+export function shapley3(b: readonly [number, number, number] | number[], c: readonly [number, number, number] | number[]): [number, number, number] {
   const out: number[] = [];
   for (let i = 0; i < 3; i++) {
     const j = (i + 1) % 3,
       k = (j + 1) % 3;
-    out.push((c[i] - b[i]) * ((b[j] * b[k]) / 3 + (c[j] * b[k] + b[j] * c[k]) / 6 + (c[j] * c[k]) / 3));
+    const [bi, bj, bk, ci, cj, ck] = [b[i]!, b[j]!, b[k]!, c[i]!, c[j]!, c[k]!];
+    out.push((ci - bi) * ((bj * bk) / 3 + (cj * bk + bj * ck) / 6 + (cj * ck) / 3));
   }
   return out as [number, number, number];
 }
