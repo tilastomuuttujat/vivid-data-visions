@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { MainLinks } from "@/components/MainLinks";
 import { ERAS, NOW, YEAR_MAX, YEAR_MIN } from "@/components/kaari/kaari-model";
 import "@/components/kaari/kaari.css";
-import { OBSERVABLES, sample, type Sample } from "./erotus-model";
+import { OBSERVABLES, factorsFor, sample, type Sample } from "./erotus-model";
 import "./erotus.css";
 
 const W = 1000, H = 440, PAD = { l: 20, r: 20, t: 36, b: 40 };
@@ -53,7 +53,8 @@ export function Erotus() {
   const [sel, setSel] = useState("ict");
   const [hover, setHover] = useState<number | null>(null);
   const obs = OBSERVABLES.find((o) => o.id === sel)!;
-  const s = useMemo(() => sample(obs, 2), [obs]);
+  const s = useMemo(() => sample(obs, 1), [obs]);
+  const factors = useMemo(() => factorsFor(obs, s), [obs, s]);
   const groups = [...new Set(OBSERVABLES.map((o) => o.group))];
   const h = hover != null ? s.reduce((a, b) => (Math.abs(b.year - hover) < Math.abs(a.year - hover) ? b : a)) : null;
   const totalPath = smooth(s.map((p) => [x(p.year), y(p.total)]));
@@ -100,6 +101,18 @@ export function Erotus() {
               {bands(s).map((b, i) => <path key={i} d={b.d} className={b.pos ? "e-band-pos" : "e-band-neg"} />)}
               <path d={totalPath} className="e-total" />
               <path d={valuePath} className="e-value" />
+              {factors.map((f) => {
+                const pos = f.delta >= 0;
+                const fx = x(f.year), fy = y(f.value) + (pos ? -1 : 1) * 10;
+                const ly = pos ? Math.max(PAD.t + 14, fy - 26) : Math.min(H - PAD.b - 6, fy + 30);
+                const anchor = fx > W - 160 ? "end" : fx < 140 ? "start" : "middle";
+                return (
+                  <g key={f.year + f.label} className={`e-factor ${pos ? "pos" : "neg"}`}>
+                    <line x1={fx} x2={fx} y1={fy} y2={ly + (pos ? 4 : -12)} />
+                    <text x={fx} y={ly} textAnchor={anchor}>{pos ? "+ " : "− "}{f.label}</text>
+                  </g>
+                );
+              })}
               {h && (
                 <g>
                   <line x1={x(h.year)} x2={x(h.year)} y1={PAD.t} y2={H - PAD.b} className="e-cursor" />
