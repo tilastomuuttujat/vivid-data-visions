@@ -17,3 +17,21 @@ describe("tuotannon Shapley-hajotelma", () => {
     expect(c).toBe(0);
   });
 });
+
+describe("kytkentä pääkäyrään", async () => {
+  const { linkedSample, factors } = await import("./model");
+  const flat = () => 0.5;
+  it("ennen vertailuvuotta ja aineiston jälkeen vaikutus on nolla", () => {
+    const s = linkedSample("productivity", 1975, flat, 1850, 2050);
+    expect(s[0]!.delta).toBe(0);
+    expect(s.find((p) => p.year === 1975)!.delta).toBeCloseTo(0, 12);
+    expect(s.at(-1)!.delta).toBe(0);
+    expect(s.length).toBe(201);
+  });
+  it("kolmen tekijän vaikutukset summautuvat BKT/asukas-muutokseen skaalattuna", () => {
+    const yr = (points as { year: number }[]).at(-1)!.year;
+    const sum = factors.reduce((a, f) => a + linkedSample(f.id, 1975, flat, 1850, 2050).find((p) => p.year === yr)!.share, 0);
+    const d = decompose(points, 1975).at(-1)!;
+    expect(sum).toBeCloseTo((d.actual - d.baseTotal) / d.baseTotal, 9);
+  });
+});

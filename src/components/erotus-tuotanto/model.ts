@@ -46,3 +46,34 @@ export function decompose(rows: Row[], baseline: number) {
 }
 
 export const factorIndex = (id: FactorId) => factors.findIndex((f) => f.id === id);
+
+/**
+ * Mitattujen osuuksien kytkentä Erotusanalyysin pääkäyrään (1850–2050).
+ * Muunnos on ilmoitettu esitysskaala: BKT/asukas-muutos suhteessa vertailuvuoteen × LEVEL_PER_DOUBLING
+ * tuotantovoiman tasoa × tuotantovoiman paino 1/3. Osuuksien suunta ja suhteet ovat mitattuja,
+ * skaalaus kokonaiskäyrän pisteiksi on toimituksellinen. Mittausvälin ulkopuolella vaikutusta ei piirretä.
+ */
+export const LEVEL_PER_DOUBLING = 0.5;
+export const FORCE_WEIGHT = 1 / 3;
+export type LinkedSample = { year: number; total: number; value: number; delta: number; measured: boolean; euros: number; share: number };
+
+export function linkedSample(
+  factor: FactorId,
+  baseline: number,
+  totalAt: (year: number) => number,
+  yearMin: number,
+  yearMax: number,
+): LinkedSample[] {
+  const idx = factorIndex(factor);
+  const rows = new Map(decompose(points as Row[], baseline).map((r) => [r.year, r]));
+  const out: LinkedSample[] = [];
+  for (let yr = yearMin; yr <= yearMax; yr++) {
+    const total = totalAt(yr);
+    const r = rows.get(yr);
+    const euros = r ? r.parts[idx]! : 0;
+    const share = r ? euros / r.baseTotal : 0;
+    const delta = FORCE_WEIGHT * LEVEL_PER_DOUBLING * share;
+    out.push({ year: yr, total, value: total - delta, delta, measured: !!r, euros, share });
+  }
+  return out;
+}

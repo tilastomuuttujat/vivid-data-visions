@@ -12,7 +12,7 @@ const pages = [
   { to: "/kehityskaari", label: "Kehityskaari" },
   { to: "/erotus", label: "Erotus" },
   { to: "/erotus-tulot", label: "Erotus · tulot" },
-  { to: "/dekompositio", label: "Dekompositio" },
+  { to: "/erotus-tuotanto", label: "Erotus · tuotanto" },
 ] as const;
 
 export function MainLinks({
