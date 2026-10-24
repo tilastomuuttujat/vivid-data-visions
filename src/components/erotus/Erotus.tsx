@@ -2,10 +2,10 @@ import { useMemo, useState } from "react";
 import { MainLinks } from "@/components/MainLinks";
 import { ERAS, NOW, YEAR_MAX, YEAR_MIN } from "@/components/kaari/kaari-model";
 import "@/components/kaari/kaari.css";
-import { OBSERVABLES, factorsFor, sample, type Sample } from "./erotus-model";
+import { OBSERVABLES, factorsFor, sample, whyAt, type Sample } from "./erotus-model";
 import "./erotus.css";
 
-const W = 1000, H = 440, PAD = { l: 20, r: 20, t: 36, b: 40 };
+const W = 1200, H = 560, PAD = { l: 20, r: 20, t: 36, b: 40 };
 const x = (yr: number) => PAD.l + ((yr - YEAR_MIN) / (YEAR_MAX - YEAR_MIN)) * (W - PAD.l - PAD.r);
 const y = (v: number) => H - PAD.b - v * (H - PAD.t - PAD.b);
 
@@ -51,6 +51,7 @@ function bands(s: Sample[]) {
 
 export function Erotus() {
   const [sel, setSel] = useState("ict");
+  const [open, setOpen] = useState(false);
   const [hover, setHover] = useState<number | null>(null);
   const obs = OBSERVABLES.find((o) => o.id === sel)!;
   const s = useMemo(() => sample(obs, 1), [obs]);
@@ -72,72 +73,92 @@ export function Erotus() {
       <header className="k-head">
         <p className="k-kicker">Kehitysversio · Erotusanalyysi</p>
         <h1>Mitä yksi tekijä tekee kokonaisuudelle?</h1>
-        <p className="k-lede">Valkoinen käyrä on yhteiskunnan rakenteellinen kantokyky: tuotannon, väestön ja yhteisen turvan synteesi. Valitse tekijä – varjostus näyttää, kantaako se kokonaisuutta vai jääkö siitä jälkeen.</p>
+        <p className="k-lede">Paksu valkoinen käyrä on yhteiskunnan rakenteellinen kantokyky. Ohut kultainen käyrä näyttää, missä kokonaisuus olisi ilman valittua tekijää – viivoitettu väli on tekijän vaikutus.</p>
       </header>
 
-      <div className="e-layout">
-        <aside className="e-picker" aria-label="Havainnointikäyrä">
-          {groups.map((g) => (
-            <section key={g}>
-              <h3>{g}</h3>
-              {OBSERVABLES.filter((o) => o.group === g).map((o) => (
-                <button key={o.id} className={o.id === sel ? "on" : ""} onClick={() => setSel(o.id)}>{o.label}</button>
-              ))}
-            </section>
-          ))}
-        </aside>
+      <button className="e-open" onClick={() => setOpen(true)} aria-expanded={open}>
+        <span aria-hidden>☰</span> Tarkasteltava tekijä: <strong>{obs.label}</strong>
+      </button>
 
-        <div>
-          <div className="k-chart">
-            <svg viewBox={`0 0 ${W} ${H}`} onPointerMove={onMove} onPointerLeave={() => setHover(null)} role="img" aria-label={`${obs.label} suhteessa kokonaisuuteen`}>
-              {ERAS.map((e, i) => (
-                <g key={e.label}>
-                  <rect x={x(e.from)} width={x(e.to) - x(e.from)} y={PAD.t} height={H - PAD.t - PAD.b} className={`k-era k-era-${i}`} />
-                  <text x={x(e.from) + 6} y={PAD.t - 12} className="k-era-label">{e.label}</text>
-                </g>
-              ))}
-              {[1900, 1950, 2000, 2050].map((yr) => <text key={yr} x={x(yr)} y={H - 16} textAnchor="middle" className="k-axis">{yr}</text>)}
-              <line x1={x(NOW)} x2={x(NOW)} y1={PAD.t} y2={H - PAD.b} className="k-now" />
-              {bands(s).map((b, i) => <path key={i} d={b.d} className={b.pos ? "e-band-pos" : "e-band-neg"} />)}
-              <path d={totalPath} className="e-total" />
-              <path d={valuePath} className="e-value" />
-              {factors.map((f) => {
-                const pos = f.delta >= 0;
-                const fx = x(f.year), fy = y(f.value) + (pos ? -1 : 1) * 10;
-                const ly = pos ? Math.max(PAD.t + 14, fy - 26) : Math.min(H - PAD.b - 6, fy + 30);
-                const anchor = fx > W - 160 ? "end" : fx < 140 ? "start" : "middle";
-                return (
-                  <g key={f.year + f.label} className={`e-factor ${pos ? "pos" : "neg"}`}>
-                    <line x1={fx} x2={fx} y1={fy} y2={ly + (pos ? 4 : -12)} />
-                    <text x={fx} y={ly} textAnchor={anchor}>{pos ? "+ " : "− "}{f.label}</text>
-                  </g>
-                );
-              })}
-              {h && (
-                <g>
-                  <line x1={x(h.year)} x2={x(h.year)} y1={PAD.t} y2={H - PAD.b} className="e-cursor" />
-                  <circle cx={x(h.year)} cy={y(h.total)} r={5} className="e-dot-total" />
-                  <circle cx={x(h.year)} cy={y(h.value)} r={5} className="e-dot-value" />
-                </g>
-              )}
-            </svg>
-          </div>
-          <div className="e-readout">
-            <div><span className="e-sw e-sw-total" /> Kokonaisuus</div>
-            <div><span className="e-sw e-sw-value" /> {obs.label}</div>
-            {h ? (
-              <strong className={h.delta >= 0 ? "pos" : "neg"}>
-                {h.year}: {h.delta >= 0 ? "+" : "−"}{Math.abs(h.delta * 100).toFixed(0)} pistettä — {h.delta >= 0 ? "kantaa kokonaisuutta" : "jää kokonaisuudesta jälkeen"}
-              </strong>
-            ) : <span className="e-hint">Vie osoitin kuvaajan päälle nähdäksesi vuoden erotuksen.</span>}
-          </div>
-          <p className="e-note">{obs.note}</p>
-          <details className="e-method">
-            <summary>Miten kokonaiskäyrä on laskettu?</summary>
-            <p>Kokonaisuus = kolmen päävoiman keskiarvo, josta vähennetään puolet siitä osuudesta, jolla yhteisen turvan lupaukset ylittävät tuotannon ja väestön keskimääräisen kantokyvyn. Kaikki käyrät ovat toimituksellisia tulkintoja suunnasta (0–1), eivät mitattuja arvoja; erotus kertoo suhteellisen aseman, ei syy-yhteyttä.</p>
-          </details>
+      <div className={`e-scrim ${open ? "on" : ""}`} onClick={() => setOpen(false)} aria-hidden />
+      <aside className={`e-drawer ${open ? "on" : ""}`} aria-label="Havainnointikäyrä" aria-hidden={!open}>
+        <div className="e-drawer-head">
+          <span>Valitse tekijä</span>
+          <button onClick={() => setOpen(false)} aria-label="Sulje">×</button>
         </div>
+        {groups.map((g) => (
+          <section key={g}>
+            <h3>{g}</h3>
+            {OBSERVABLES.filter((o) => o.group === g).map((o) => (
+              <button key={o.id} tabIndex={open ? 0 : -1} className={o.id === sel ? "on" : ""} onClick={() => { setSel(o.id); setOpen(false); }}>{o.label}</button>
+            ))}
+          </section>
+        ))}
+      </aside>
+
+      <div className="k-chart">
+        <svg viewBox={`0 0 ${W} ${H}`} onPointerMove={onMove} onPointerLeave={() => setHover(null)} role="img" aria-label={`${obs.label}: vaikutus kokonaisuuteen`}>
+          <defs>
+            <pattern id="e-hatch-pos" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <rect width="7" height="7" className="e-hatch-bg-pos" />
+              <line x1="0" y1="0" x2="0" y2="7" className="e-hatch-pos" />
+            </pattern>
+            <pattern id="e-hatch-neg" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+              <rect width="7" height="7" className="e-hatch-bg-neg" />
+              <line x1="0" y1="0" x2="0" y2="7" className="e-hatch-neg" />
+            </pattern>
+          </defs>
+          {ERAS.map((e, i) => (
+            <g key={e.label}>
+              <rect x={x(e.from)} width={x(e.to) - x(e.from)} y={PAD.t} height={H - PAD.t - PAD.b} className={`k-era k-era-${i}`} />
+              <text x={x(e.from) + 6} y={PAD.t - 12} className="k-era-label">{e.label}</text>
+            </g>
+          ))}
+          {[1900, 1950, 2000, 2050].map((yr) => <text key={yr} x={x(yr)} y={H - 16} textAnchor="middle" className="k-axis">{yr}</text>)}
+          <line x1={x(NOW)} x2={x(NOW)} y1={PAD.t} y2={H - PAD.b} className="k-now" />
+          {bands(s).map((b, i) => <path key={i} d={b.d} fill={`url(#e-hatch-${b.pos ? "pos" : "neg"})`} className="e-band" />)}
+          <path d={valuePath} className="e-value" />
+          <path d={totalPath} className="e-total" />
+          {factors.map((f, i) => {
+            const pos = f.delta >= 0;
+            const prev = factors[i - 1];
+            const stack = prev && (prev.delta >= 0) === pos && f.year - prev.year < 30 ? (i % 2 ? 40 : 0) : 0;
+            const fx = x(f.year), fy = y(pos ? f.total : f.value) + (pos ? -8 : 8);
+            const ly = pos ? Math.max(PAD.t + 16, fy - 46 - stack) : Math.min(H - PAD.b - 22, fy + 30 + stack);
+            const anchor = fx > W - 200 ? "end" : fx < 180 ? "start" : "middle";
+            return (
+              <g key={f.year + f.label} className={`e-factor ${pos ? "pos" : "neg"}`}>
+                <line x1={fx} x2={fx} y1={fy} y2={ly + (pos ? 22 : -14)} />
+                <text x={fx} y={ly} textAnchor={anchor}>
+                  <tspan className="e-f-title">{pos ? "+ " : "− "}{f.label}</tspan>
+                  {f.why && <tspan x={fx} dy="15" className="e-f-why">{f.why}</tspan>}
+                </text>
+              </g>
+            );
+          })}
+          {h && (
+            <g>
+              <line x1={x(h.year)} x2={x(h.year)} y1={PAD.t} y2={H - PAD.b} className="e-cursor" />
+              <circle cx={x(h.year)} cy={y(h.value)} r={4} className="e-dot-value" />
+              <circle cx={x(h.year)} cy={y(h.total)} r={5} className="e-dot-total" />
+            </g>
+          )}
+        </svg>
       </div>
+      <div className="e-readout">
+        <div><span className="e-sw e-sw-total" /> Kokonaisuus</div>
+        <div><span className="e-sw e-sw-value" /> Kokonaisuus ilman: {obs.label}</div>
+        {h ? (
+          <strong className={Math.abs(h.delta) < 0.005 ? "" : h.delta >= 0 ? "pos" : "neg"}>
+            {h.year}: {h.delta >= 0 ? "+" : "−"}{Math.abs(h.delta * 100).toFixed(0)} pistettä. {whyAt(factors, h.year, h.delta)}
+          </strong>
+        ) : <span className="e-hint">Vie osoitin kuvaajan päälle nähdäksesi vuoden vaikutuksen.</span>}
+      </div>
+      <p className="e-note">{obs.note}</p>
+      <details className="e-method">
+        <summary>Miten vaikutus on laskettu?</summary>
+        <p>Kokonaisuus = kolmen päävoiman keskiarvo, josta vähennetään puolet siitä osuudesta, jolla yhteisen turvan lupaukset ylittävät tuotannon ja väestön kantokyvyn. Tekijän vaikutus = sen painoarvo kokonaisuudessa × muutos tekijän lähtötasosta (päävoimat 1/3, alavirrat 0,3, väestöryhmät 0,25). Tekijä, jota ei vielä ollut, ei siirrä kokonaisuutta. Kaikki käyrät ovat toimituksellisia tulkintoja, eivät mittauksia; vaikutus kertoo suuntaa, ei todistettua syy-yhteyttä.</p>
+      </details>
     </main>
   );
 }
