@@ -119,10 +119,12 @@ export function Erotus() {
           {bands(s).map((b, i) => <path key={i} d={b.d} fill={`url(#e-hatch-${b.pos ? "pos" : "neg"})`} className="e-band" />)}
           <path d={valuePath} className="e-value" />
           <path d={totalPath} className="e-total" />
-          {factors.map((f) => {
+          {factors.map((f, i) => {
             const pos = f.delta >= 0;
+            const prev = factors[i - 1];
+            const stack = prev && (prev.delta >= 0) === pos && f.year - prev.year < 30 ? (i % 2 ? 40 : 0) : 0;
             const fx = x(f.year), fy = y(pos ? f.total : f.value) + (pos ? -8 : 8);
-            const ly = pos ? Math.max(PAD.t + 16, fy - 46) : Math.min(H - PAD.b - 22, fy + 30);
+            const ly = pos ? Math.max(PAD.t + 16, fy - 46 - stack) : Math.min(H - PAD.b - 22, fy + 30 + stack);
             const anchor = fx > W - 200 ? "end" : fx < 180 ? "start" : "middle";
             return (
               <g key={f.year + f.label} className={`e-factor ${pos ? "pos" : "neg"}`}>

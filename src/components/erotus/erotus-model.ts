@@ -94,7 +94,7 @@ export function sample(o: Observable, step = 1): Sample[] {
 export type Factor = { year: number; label: string; why: string };
 const FACTORS: Record<string, Factor[]> = {
   ict: [{ year: 2000, label: "Nokia-klusteri", why: "ICT-vienti ja tuottavuuskasvu nostivat koko talouden kantokykyä." },
-    { year: 2015, label: "Älypuhelinmurros", why: "Klusterin romahdus vei viennin ja verotulot, nousu kutistui." }],
+    { year: 2015, label: "Älypuhelinmurros, vaikutus kutistuu", why: "Klusterin romahdus vei viennin ja verotulot, nousu kutistui." }],
   metsa: [{ year: 1900, label: "Puu viennin moottorina", why: "Sahat ja paperi toivat valuuttaa ja palkkatuloja maaseudulle." },
     { year: 1965, label: "Paperin kultakausi", why: "Perusteollisuus rahoitti hyvinvointivaltion rakentamisen." },
     { year: 2012, label: "Paperin kysynnän romahdus", why: "Tehtaita suljettiin, vetovoima kokonaisuuteen heikkeni." }],
