@@ -134,7 +134,7 @@ export function Kehityskaari() {
 
   const pick = (t: Turn) => { setSel(t); setDeep(false); };
   const turns = focus ? LINE_TURNS[focus] ?? TURNS : TURNS;
-  const toggleFocus = (id: string) => { setFocus(focus === id ? null : id); setSel(null); setDeep(false); };
+  const toggleFocus = (id: string) => { setFocus(focus === id ? null : id); setSel(null); setDeep(false); setSubs([]); };
 
   return (
     <div className="k-page">
@@ -153,19 +153,23 @@ export function Kehityskaari() {
         ))}
       </div>
 
-      <div className="k-subs" aria-label="Alavirrat">
-        <span className="k-subs-label">Alavirrat</span>
-        {LINES.map((l) => (
-          <div key={l.id} className="k-subs-group" style={{ ["--c" as string]: l.tone }}>
-            {SUBLINES.filter((s) => s.parent === l.id).map((s) => (
-              <button key={s.id} aria-pressed={subs.includes(s.id)} className={subs.includes(s.id) ? "on" : ""} onClick={() => toggleSub(s.id)} title={s.note}>
-                {subs.includes(s.id) ? "−" : "+"} {s.label}
-              </button>
-            ))}
-          </div>
-        ))}
-        {subs.length > 0 && <button className="k-subs-clear" onClick={() => setSubs([])}>Tyhjennä</button>}
-      </div>
+      {focus ? (
+        <div className="k-subs" aria-label="Alavirrat">
+          <span className="k-subs-label">Alavirrat</span>
+          {LINES.filter((l) => l.id === focus).map((l) => (
+            <div key={l.id} className="k-subs-group" style={{ ["--c" as string]: l.tone }}>
+              {SUBLINES.filter((s) => s.parent === l.id).map((s) => (
+                <button key={s.id} aria-pressed={subs.includes(s.id)} className={subs.includes(s.id) ? "on" : ""} onClick={() => toggleSub(s.id)} title={s.note}>
+                  {subs.includes(s.id) ? "−" : "+"} {s.label}
+                </button>
+              ))}
+            </div>
+          ))}
+          {subs.length > 0 && <button className="k-subs-clear" onClick={() => setSubs([])}>Tyhjennä</button>}
+        </div>
+      ) : (
+        <p className="k-subs-hint">Valitse voima yltä nähdäksesi sen alavirrat.</p>
+      )}
 
       <div className="k-chart">
         <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Kolme voimalinjaa ja seitsemän käännekohtaa">
