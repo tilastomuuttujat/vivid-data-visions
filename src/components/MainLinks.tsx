@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 const pages = [
+  { to: "/selityspolku", label: "Selityspolku" },
   { to: "/kokonaiskuva", label: "Kokonaiskuva" },
   { to: "/", label: "Atlas" },
   { to: "/minka-varaan", label: "Minkä varaan?" },

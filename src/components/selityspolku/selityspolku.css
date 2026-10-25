@@ -1,0 +1,207 @@
+.sp-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+  color: #263b3b;
+  background: #faf8f2;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+}
+.sp-page nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+}
+.sp-page header {
+  max-width: 850px;
+  margin: 36px 0 24px;
+}
+.sp-page h1 {
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+.sp-page h2 {
+  font-size: 23px;
+}
+.sp-page p {
+  line-height: 1.65;
+}
+.sp-eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #6f6c61;
+}
+.sp-ruler {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #faf8f2f5;
+  border-block: 1px solid #d7cebf;
+  padding: 8px 0;
+  backdrop-filter: blur(8px);
+}
+.sp-ruler svg {
+  width: 100%;
+  max-height: 62px;
+}
+.sp-page svg text {
+  font: 12px system-ui;
+  fill: #5f6259;
+}
+.sp-ruler label {
+  font-size: 13px;
+  margin-right: 16px;
+}
+.sp-ruler input {
+  width: 55%;
+  accent-color: #06716c;
+}
+.sp-years {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+.sp-page button {
+  cursor: pointer;
+  border: 1px solid #cdc4b6;
+  border-radius: 6px;
+  background: #fffdf8;
+  padding: 8px 12px;
+  color: inherit;
+  font: inherit;
+}
+.sp-page button[aria-pressed="true"] {
+  background: #163d3a;
+  color: white;
+  border-color: #163d3a;
+}
+.sp-page button:focus-visible,
+.sp-page summary:focus-visible {
+  outline: 3px solid #bf7c35;
+  outline-offset: 3px;
+}
+.sp-years button {
+  font-size: 12px;
+  padding: 4px 10px;
+}
+.sp-summary {
+  border-left: 4px solid #a45e13;
+  padding: 4px 24px;
+  margin: 24px 0;
+}
+.sp-charts {
+  display: grid;
+  gap: 12px;
+}
+.sp-chart {
+  border: 1px solid #ded6c9;
+  background: #fffdf8;
+  border-radius: 10px;
+  padding: 12px 18px;
+}
+.sp-chart.sp-active {
+  border-color: #06716c;
+  box-shadow: 0 0 0 1px #06716c;
+}
+.sp-chart-title {
+  font-weight: 700 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  margin-right: 20px;
+}
+.sp-chart > span {
+  font-size: 12px;
+}
+.sp-chart svg {
+  width: 100%;
+  display: block;
+}
+.sp-chart p {
+  font-size: 12px;
+  margin: 0;
+  color: #666;
+}
+.sp-steps {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sp-explain {
+  margin-top: 32px;
+}
+.sp-explain > article {
+  background: white;
+  border: 1px solid #ded6c9;
+  padding: 24px;
+  margin-top: 14px;
+  border-radius: 10px;
+}
+.sp-parts {
+  list-style: none;
+  padding: 0;
+  max-width: 650px;
+}
+.sp-parts li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9e4dc;
+}
+.sp-evidence {
+  margin: 35px 0;
+}
+.sp-evidence article {
+  border-top: 1px solid #d7cebf;
+  padding: 16px 0;
+  max-width: 850px;
+}
+.sp-source {
+  padding: 20px;
+  background: #eeeae1;
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+.sp-page summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.sp-page a {
+  color: #08645e;
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .sp-page {
+    padding: 14px;
+  }
+  .sp-ruler input {
+    width: 65%;
+  }
+  .sp-chart {
+    padding: 12px 6px;
+  }
+  .sp-chart > span {
+    display: block;
+    margin-top: 5px;
+  }
+  .sp-explain > article {
+    padding: 16px;
+  }
+  .sp-parts li {
+    font-size: 13px;
+  }
+  .sp-page svg text {
+    font-size: 14px;
+  }
+  .sp-years {
+    justify-content: space-between;
+    gap: 3px;
+  }
+  .sp-steps button {
+    flex: 1 1 40%;
+    font-size: 13px;
+  }
+}

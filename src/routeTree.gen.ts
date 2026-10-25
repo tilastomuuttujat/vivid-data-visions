@@ -20,6 +20,7 @@ import { Route as MinkaVaraanRouteImport } from './routes/minka-varaan'
 import { Route as MurroksetRouteImport } from './routes/murrokset'
 import { Route as ObservatorioRouteImport } from './routes/observatorio'
 import { Route as PlaneettaRouteImport } from './routes/planeetta'
+import { Route as SelityspolkuRouteImport } from './routes/selityspolku'
 import { Route as TeemavertailuRouteImport } from './routes/teemavertailu'
 
 const IndexRoute = IndexRouteImport.update({
@@ -77,6 +78,11 @@ const PlaneettaRoute = PlaneettaRouteImport.update({
   path: '/planeetta',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SelityspolkuRoute = SelityspolkuRouteImport.update({
+  id: '/selityspolku',
+  path: '/selityspolku',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TeemavertailuRoute = TeemavertailuRouteImport.update({
   id: '/teemavertailu',
   path: '/teemavertailu',
@@ -95,6 +101,7 @@ export interface FileRoutesByFullPath {
   '/murrokset': typeof MurroksetRoute
   '/observatorio': typeof ObservatorioRoute
   '/planeetta': typeof PlaneettaRoute
+  '/selityspolku': typeof SelityspolkuRoute
   '/teemavertailu': typeof TeemavertailuRoute
 }
 export interface FileRoutesByTo {
@@ -109,6 +116,7 @@ export interface FileRoutesByTo {
   '/murrokset': typeof MurroksetRoute
   '/observatorio': typeof ObservatorioRoute
   '/planeetta': typeof PlaneettaRoute
+  '/selityspolku': typeof SelityspolkuRoute
   '/teemavertailu': typeof TeemavertailuRoute
 }
 export interface FileRoutesById {
@@ -124,6 +132,7 @@ export interface FileRoutesById {
   '/murrokset': typeof MurroksetRoute
   '/observatorio': typeof ObservatorioRoute
   '/planeetta': typeof PlaneettaRoute
+  '/selityspolku': typeof SelityspolkuRoute
   '/teemavertailu': typeof TeemavertailuRoute
 }
 export interface FileRouteTypes {
@@ -140,6 +149,7 @@ export interface FileRouteTypes {
     | '/murrokset'
     | '/observatorio'
     | '/planeetta'
+    | '/selityspolku'
     | '/teemavertailu'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -154,6 +164,7 @@ export interface FileRouteTypes {
     | '/murrokset'
     | '/observatorio'
     | '/planeetta'
+    | '/selityspolku'
     | '/teemavertailu'
   id:
     | '__root__'
@@ -168,6 +179,7 @@ export interface FileRouteTypes {
     | '/murrokset'
     | '/observatorio'
     | '/planeetta'
+    | '/selityspolku'
     | '/teemavertailu'
   fileRoutesById: FileRoutesById
 }
@@ -183,6 +195,7 @@ export interface RootRouteChildren {
   MurroksetRoute: typeof MurroksetRoute
   ObservatorioRoute: typeof ObservatorioRoute
   PlaneettaRoute: typeof PlaneettaRoute
+  SelityspolkuRoute: typeof SelityspolkuRoute
   TeemavertailuRoute: typeof TeemavertailuRoute
 }
 
@@ -265,6 +278,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlaneettaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/selityspolku': {
+      id: '/selityspolku'
+      path: '/selityspolku'
+      fullPath: '/selityspolku'
+      preLoaderRoute: typeof SelityspolkuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/teemavertailu': {
       id: '/teemavertailu'
       path: '/teemavertailu'
@@ -287,6 +307,7 @@ const rootRouteChildren: RootRouteChildren = {
   MurroksetRoute: MurroksetRoute,
   ObservatorioRoute: ObservatorioRoute,
   PlaneettaRoute: PlaneettaRoute,
+  SelityspolkuRoute: SelityspolkuRoute,
   TeemavertailuRoute: TeemavertailuRoute,
 }
 export const routeTree = rootRouteImport

@@ -22,6 +22,8 @@ import { Erotus } from "@/components/erotus/Erotus";
 import { Teemavertailu } from "@/components/teemavertailu/Teemavertailu";
 import { AdminBar } from "@/components/editor/AdminBar";
 
+import { Selityspolku } from "@/components/selityspolku/Selityspolku";
+
 const rootRoute = createRootRoute({
   component: () => (
     <>
@@ -31,9 +33,14 @@ const rootRoute = createRootRoute({
   ),
 });
 const routes = [
+  createRoute({ getParentRoute: () => rootRoute, path: "/selityspolku", component: Selityspolku }),
   createRoute({ getParentRoute: () => rootRoute, path: "/kokonaiskuva", component: Kokonaiskuva }),
   createRoute({ getParentRoute: () => rootRoute, path: "/erotus-tulot", component: ErotusTulot }),
-  createRoute({ getParentRoute: () => rootRoute, path: "/erotus-tuotanto", component: ErotusTuotanto }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/erotus-tuotanto",
+    component: ErotusTuotanto,
+  }),
   createRoute({
     getParentRoute: () => rootRoute,
     path: "/",
@@ -53,7 +60,11 @@ const routes = [
   createRoute({ getParentRoute: () => rootRoute, path: "/murrokset", component: Murrokset }),
   createRoute({ getParentRoute: () => rootRoute, path: "/kehityskaari", component: Kehityskaari }),
   createRoute({ getParentRoute: () => rootRoute, path: "/erotus", component: Erotus }),
-  createRoute({ getParentRoute: () => rootRoute, path: "/teemavertailu", component: Teemavertailu }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/teemavertailu",
+    component: Teemavertailu,
+  }),
 ];
 const router = createRouter({
   routeTree: rootRoute.addChildren(routes),
