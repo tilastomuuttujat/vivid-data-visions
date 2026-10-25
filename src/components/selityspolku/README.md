@@ -25,3 +25,7 @@ The net-lending ratio is `100 × (OTRS − OTES) / nominal GDP`. Relative to 199
 Nominal components mix quantities and prices. Tax receipts do not identify tax-base versus rate changes. Expense changes do not distinguish demographic needs, indexation, policy and service volumes. No causal policy coefficients or unsupported automatic-stabilizer estimates enter this implementation. Future years stay null.
 
 `python3 scripts/data/persist-fiscal-model.py` emits a transaction to persist immutable, content-addressed input/output manifests into existing `public.dataset_meta` (no schema/API privilege changes). Apply via the authorized backend SQL connector or psql. Same payload is idempotent; different contents under an existing ID raise. This is an explicit reviewed rebuild/persist/export workflow, not a scheduled source updater.
+
+### Murroskertomus 1985–2000
+
+`Recovery.tsx` tiivistää neljän nykyisen mallin havainnot yhdeksi päähavainnoksi ja kolmeksi vuosivalinnaksi (1990, 1993, 2000). Taulukon muutokset ja ensimmäinen paluuvuosi 1994–2000 lasketaan samoista julkaistuista sarjoista kuin käyrät. Paluu tarkoittaa 1990-tason saavuttamista, ei pysyvää palautumista tai paluuta kasvutrendille. Mittareita ei summata eikä historiallisia taustaselityksiä muuteta numeerisiksi syyvaikutuksiksi. Koko 1850–2050-aikajana ja lähdeosio säilyvät. Tämä on näkymän synteesi, eikä lisää uusia havaintoja tietokantaan.

@@ -265,3 +265,45 @@
   display: block;
   font-size: 19px;
 }
+
+.sp-recovery {
+  margin: 24px 0;
+  padding: 24px;
+  border-left: 4px solid #06716c;
+  background: #f2f4ee;
+  border-radius: 8px;
+}
+.sp-recovery h2 {
+  max-width: 38ch;
+}
+.sp-recovery details {
+  margin-top: 18px;
+}
+.sp-recovery summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.sp-recovery-scroll {
+  overflow-x: auto;
+}
+.sp-recovery table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+.sp-recovery th,
+.sp-recovery td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.sp-recovery caption {
+  text-align: left;
+  padding: 8px;
+}
+.sp-recovery li {
+  margin: 12px 0;
+}
+.sp-charts + .sp-chart {
+  margin-top: 12px;
+}

@@ -1,3 +1,4 @@
+import { Recovery } from "./Recovery";
 import { useState } from "react";
 import { MainLinks } from "../MainLinks";
 import {
@@ -95,6 +96,7 @@ export function Selityspolku() {
           ))}
         </div>
       </section>
+      <Recovery year={year} onYear={setYear} />
       <section className="sp-summary" aria-live="polite">
         <h2>
           {year}:{" "}
