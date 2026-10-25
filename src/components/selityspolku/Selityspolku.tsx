@@ -1,3 +1,4 @@
+import { ThemeCoverage } from "./ThemeCoverage";
 import { LongView } from "./LongView";
 import { Recovery } from "./Recovery";
 import { useState } from "react";
@@ -98,6 +99,7 @@ export function Selityspolku() {
         </div>
       </section>
       <LongView onYear={setYear} />
+      <ThemeCoverage onYear={setYear} />
       <Recovery year={year} onYear={setYear} />
       <section className="sp-summary" aria-live="polite">
         <h2>

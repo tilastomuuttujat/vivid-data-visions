@@ -358,3 +358,37 @@
 .sp-longview a {
   overflow-wrap: anywhere;
 }
+.sp-coverage {
+  margin: 24px 0;
+  padding: 24px;
+  border: 1px solid #c9c3b8;
+  border-radius: 8px;
+}
+.sp-coverage summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+.sp-coverage select {
+  max-width: 100%;
+  display: block;
+  padding: 10px;
+  margin: 12px 0;
+  color: inherit;
+  background: #faf8f2;
+}
+.sp-coverage dt {
+  font-weight: bold;
+  margin-top: 12px;
+}
+.sp-coverage dd {
+  margin-left: 0;
+}
+.sp-coverage code {
+  overflow-wrap: anywhere;
+}
+.sp-coverage details {
+  margin-top: 20px;
+}
+.sp-coverage li {
+  margin: 12px 0;
+}

@@ -33,3 +33,13 @@ Nominal components mix quantities and prices. Tax receipts do not identify tax-b
 ### Koko aikajanan tutkimuskehys
 
 `LongView.tsx` ja `src/data/research/long-view.json` muodostavat kuuden historiallisen jakson kartoituksen (1850–2025) ja erillisen tulevaisuusosion (2025–2050). Kehys on toimituksellinen, ei uusi mitattu indeksi. Täsmälliset episode-koodit kytkevät kaikki yhdeksän nykyisen murrosmatriisipoiminnan tapausta jaksoihin; 1917–1919 tapaus on sijoitettu 1918–1945 jaksoon, mutta sen alkuperäinen aikarajaus näytetään muuttamatta. Sarjat, vertailuikkunat, puutteet ja päätösten toteutushavainnot luetaan suoraan poiminnasta. Ryhmät ja kanavat ovat tutkimuskohteita, eivät väitteitä osoitetuista vaikutuksista. Lähteen tarkistusstatus ei ole syyvaikutuksen varmuusaste. Kehys ei arvioi tietokannan kaikkia 32 teemaa eikä muuta Supabase-aineistoa. Tulevaisuuskysymyksillä ei ole keksittyjä numeerisia tuloksia.
+
+### 32 teeman × kuuden jakson kartoitus
+
+`ThemeCoverage.tsx` lukee `theme-coverage.json`-inventaarion. 192 solua erottavat julkaistujen, olemassa olevilla teema–muuttuja–sarjakytkennöillä löytyvien indikaattorien kalenterikattavuuden vaikutusten arvioinnista. Tässä rajauksessa on 51 havaintoehdokkaita sisältävää solua, 2 vain arvioita sisältävää ja 139 ilman historiallista havainto-/arvioehdokasta. Muita aineistoperheitä (esim. säädöksiä, tutkimuskortteja, erillisiä julkisen talouden tauluja) ei ole auditoitu; lukumäärät eivät kuvaa koko tietokannan puutteita. Kytkennät ovat context/proxy; kaikki kuusi arviointikysymystä säilyvät avoimina. Ryhmäavainten tai havaintovuosien määrä ei osoita vertailukelpoisuutta. Mukana 12 toimituksellista jatkotehtävää, myös onnistumisten ja oikeuksien toteutumisen arviointiin.
+
+Toistaminen:
+1. Suorita `scripts/data/export-theme-coverage.sql` saman tietokannan lukupoimintana ja tallenna payload tiedostoon `src/data/research/theme-coverage-inputs.json`. Kysely palauttaa myös alkuperäiset luokitukset ja tarkistusstatukset; ei uusia lähdetarkistuksia.
+2. `python scripts/data/build-theme-coverage.py` tuottaa deterministisen inventaarion annetusta syötteestä ja long-view-jaksotuksesta.
+3. `python scripts/data/persist-theme-coverage.py` tuottaa transaktionaalisen, idempotentin SQL:n dataset_meta-tauluun. Manifestit ovat sisältötunnisteisia; vanhoja ei korvata. Ei muutoksia RLS:ään, käyttöoikeuksiin tai aiempiin havaintoihin.
+4. `python -m unittest discover -s scripts/data -p 'test_theme_coverage.py'` ja komponenttitestit tarkistavat rajauksen. Aiempi tulkinta tai suunniteltu tehtävä ei muutu toteutetuksi lähdehavainnoksi.
