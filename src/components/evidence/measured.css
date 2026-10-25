@@ -1,0 +1,14 @@
+.m-box { margin: 1rem 0; padding: .9rem 1rem; border: 1px solid color-mix(in oklab, var(--k-ink, currentColor) 18%, transparent); border-radius: 10px; font-family: system-ui, sans-serif; font-size: .84rem; color: var(--k-mute, inherit); }
+.m-kicker { text-transform: uppercase; letter-spacing: .08em; font-size: .7rem; margin: 0 0 .5rem; }
+.m-item { margin-bottom: .8rem; }
+.m-item h4 { margin: 0 0 .3rem; color: var(--k-ink, inherit); font-size: .88rem; font-weight: 600; }
+.m-item p { margin: .2rem 0; }
+.m-spark { width: 100%; max-width: 720px; height: auto; display: block; }
+.m-tick { font-size: 9px; fill: currentColor; opacity: .7; }
+.m-zero { stroke: currentColor; opacity: .45; stroke-dasharray: 3 3; }
+.m-now { stroke: #d9a441; opacity: .6; }
+.m-line { fill: none; stroke-width: 2; stroke-linejoin: round; }
+.m-a { stroke: #5fc4b8; background: #5fc4b8; }
+.m-b { stroke: #e08a6c; background: #e08a6c; }
+.m-sw { display: inline-block; width: 10px; height: 3px; vertical-align: middle; }
+.m-link { color: var(--k-ink, inherit); text-decoration: underline; text-underline-offset: 3px; }
