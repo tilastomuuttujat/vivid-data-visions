@@ -1,0 +1,321 @@
+{
+ "retrieved": "2026-10-25",
+ "sources": [
+  "Tilastokeskus 15ai (BKT 2015 hinnoin, tehdyt työtunnit)",
+  "Tilastokeskus 15ah (S13 D62K sosiaalietuudet rahana, B9 nettoluotonanto % BKT)",
+  "Tilastokeskus 15a9 (BKT käyvin hinnoin)"
+ ],
+ "units": {
+  "productivity_index": "BKT per tehty työtunti, 1975 = 100",
+  "benefits_pct_gdp": "julkisyhteisöjen sosiaalietuudet rahana, % BKT:sta",
+  "net_lending_pct_gdp": "julkisyhteisöjen nettoluotonanto, % BKT:sta"
+ },
+ "points": [
+  {
+   "year": 1975,
+   "productivity_index": 100.0,
+   "benefits_pct_gdp": 9.24,
+   "net_lending_pct_gdp": 5
+  },
+  {
+   "year": 1976,
+   "productivity_index": 101.6,
+   "benefits_pct_gdp": 10.19,
+   "net_lending_pct_gdp": 7.6
+  },
+  {
+   "year": 1977,
+   "productivity_index": 103.9,
+   "benefits_pct_gdp": 11.46,
+   "net_lending_pct_gdp": 6.3
+  },
+  {
+   "year": 1978,
+   "productivity_index": 107.3,
+   "benefits_pct_gdp": 11.8,
+   "net_lending_pct_gdp": 3.8
+  },
+  {
+   "year": 1979,
+   "productivity_index": 112.8,
+   "benefits_pct_gdp": 11.11,
+   "net_lending_pct_gdp": 3.4
+  },
+  {
+   "year": 1980,
+   "productivity_index": 115.9,
+   "benefits_pct_gdp": 10.73,
+   "net_lending_pct_gdp": 3.7
+  },
+  {
+   "year": 1981,
+   "productivity_index": 115.9,
+   "benefits_pct_gdp": 10.97,
+   "net_lending_pct_gdp": 5.1
+  },
+  {
+   "year": 1982,
+   "productivity_index": 119.3,
+   "benefits_pct_gdp": 11.93,
+   "net_lending_pct_gdp": 3.1
+  },
+  {
+   "year": 1983,
+   "productivity_index": 124.1,
+   "benefits_pct_gdp": 12.73,
+   "net_lending_pct_gdp": 1.5
+  },
+  {
+   "year": 1984,
+   "productivity_index": 128.0,
+   "benefits_pct_gdp": 12.86,
+   "net_lending_pct_gdp": 3.2
+  },
+  {
+   "year": 1985,
+   "productivity_index": 132.3,
+   "benefits_pct_gdp": 13.6,
+   "net_lending_pct_gdp": 3.3
+  },
+  {
+   "year": 1986,
+   "productivity_index": 137.8,
+   "benefits_pct_gdp": 13.96,
+   "net_lending_pct_gdp": 3.8
+  },
+  {
+   "year": 1987,
+   "productivity_index": 140.7,
+   "benefits_pct_gdp": 14.17,
+   "net_lending_pct_gdp": 1.6
+  },
+  {
+   "year": 1988,
+   "productivity_index": 147.3,
+   "benefits_pct_gdp": 13.47,
+   "net_lending_pct_gdp": 5.1
+  },
+  {
+   "year": 1989,
+   "productivity_index": 153.0,
+   "benefits_pct_gdp": 13.13,
+   "net_lending_pct_gdp": 6.7
+  },
+  {
+   "year": 1990,
+   "productivity_index": 156.7,
+   "benefits_pct_gdp": 14.37,
+   "net_lending_pct_gdp": 5.3
+  },
+  {
+   "year": 1991,
+   "productivity_index": 157.9,
+   "benefits_pct_gdp": 17.94,
+   "net_lending_pct_gdp": -0.9
+  },
+  {
+   "year": 1992,
+   "productivity_index": 163.7,
+   "benefits_pct_gdp": 21.65,
+   "net_lending_pct_gdp": -5.3
+  },
+  {
+   "year": 1993,
+   "productivity_index": 172.3,
+   "benefits_pct_gdp": 23.14,
+   "net_lending_pct_gdp": -8
+  },
+  {
+   "year": 1994,
+   "productivity_index": 179.9,
+   "benefits_pct_gdp": 23.0,
+   "net_lending_pct_gdp": -6.4
+  },
+  {
+   "year": 1995,
+   "productivity_index": 183.2,
+   "benefits_pct_gdp": 21.32,
+   "net_lending_pct_gdp": -5.8
+  },
+  {
+   "year": 1996,
+   "productivity_index": 186.9,
+   "benefits_pct_gdp": 20.7,
+   "net_lending_pct_gdp": -3.1
+  },
+  {
+   "year": 1997,
+   "productivity_index": 192.8,
+   "benefits_pct_gdp": 19.09,
+   "net_lending_pct_gdp": -1.2
+  },
+  {
+   "year": 1998,
+   "productivity_index": 200.5,
+   "benefits_pct_gdp": 17.63,
+   "net_lending_pct_gdp": 1.7
+  },
+  {
+   "year": 1999,
+   "productivity_index": 205.2,
+   "benefits_pct_gdp": 17.05,
+   "net_lending_pct_gdp": 1.7
+  },
+  {
+   "year": 2000,
+   "productivity_index": 214.0,
+   "benefits_pct_gdp": 15.65,
+   "net_lending_pct_gdp": 6.9
+  },
+  {
+   "year": 2001,
+   "productivity_index": 218.2,
+   "benefits_pct_gdp": 15.26,
+   "net_lending_pct_gdp": 5
+  },
+  {
+   "year": 2002,
+   "productivity_index": 220.1,
+   "benefits_pct_gdp": 15.77,
+   "net_lending_pct_gdp": 4.1
+  },
+  {
+   "year": 2003,
+   "productivity_index": 224.8,
+   "benefits_pct_gdp": 16.04,
+   "net_lending_pct_gdp": 2.4
+  },
+  {
+   "year": 2004,
+   "productivity_index": 232.4,
+   "benefits_pct_gdp": 15.87,
+   "net_lending_pct_gdp": 2.2
+  },
+  {
+   "year": 2005,
+   "productivity_index": 236.8,
+   "benefits_pct_gdp": 15.72,
+   "net_lending_pct_gdp": 2.7
+  },
+  {
+   "year": 2006,
+   "productivity_index": 242.5,
+   "benefits_pct_gdp": 15.31,
+   "net_lending_pct_gdp": 4
+  },
+  {
+   "year": 2007,
+   "productivity_index": 250.5,
+   "benefits_pct_gdp": 14.48,
+   "net_lending_pct_gdp": 5.1
+  },
+  {
+   "year": 2008,
+   "productivity_index": 247.5,
+   "benefits_pct_gdp": 14.63,
+   "net_lending_pct_gdp": 4.2
+  },
+  {
+   "year": 2009,
+   "productivity_index": 236.5,
+   "benefits_pct_gdp": 17.18,
+   "net_lending_pct_gdp": -2.5
+  },
+  {
+   "year": 2010,
+   "productivity_index": 245.0,
+   "benefits_pct_gdp": 17.31,
+   "net_lending_pct_gdp": -2.6
+  },
+  {
+   "year": 2011,
+   "productivity_index": 248.3,
+   "benefits_pct_gdp": 17.08,
+   "net_lending_pct_gdp": -1
+  },
+  {
+   "year": 2012,
+   "productivity_index": 244.9,
+   "benefits_pct_gdp": 17.95,
+   "net_lending_pct_gdp": -2.2
+  },
+  {
+   "year": 2013,
+   "productivity_index": 245.6,
+   "benefits_pct_gdp": 18.83,
+   "net_lending_pct_gdp": -2.5
+  },
+  {
+   "year": 2014,
+   "productivity_index": 246.4,
+   "benefits_pct_gdp": 19.5,
+   "net_lending_pct_gdp": -3
+  },
+  {
+   "year": 2015,
+   "productivity_index": 247.0,
+   "benefits_pct_gdp": 19.71,
+   "net_lending_pct_gdp": -2.4
+  },
+  {
+   "year": 2016,
+   "productivity_index": 252.0,
+   "benefits_pct_gdp": 19.53,
+   "net_lending_pct_gdp": -1.7
+  },
+  {
+   "year": 2017,
+   "productivity_index": 259.8,
+   "benefits_pct_gdp": 18.93,
+   "net_lending_pct_gdp": -0.6
+  },
+  {
+   "year": 2018,
+   "productivity_index": 256.5,
+   "benefits_pct_gdp": 18.49,
+   "net_lending_pct_gdp": -0.9
+  },
+  {
+   "year": 2019,
+   "productivity_index": 257.9,
+   "benefits_pct_gdp": 18.28,
+   "net_lending_pct_gdp": -0.9
+  },
+  {
+   "year": 2020,
+   "productivity_index": 258.8,
+   "benefits_pct_gdp": 19.58,
+   "net_lending_pct_gdp": -5.5
+  },
+  {
+   "year": 2021,
+   "productivity_index": 260.1,
+   "benefits_pct_gdp": 18.73,
+   "net_lending_pct_gdp": -2.7
+  },
+  {
+   "year": 2022,
+   "productivity_index": 255.1,
+   "benefits_pct_gdp": 17.7,
+   "net_lending_pct_gdp": -0.2
+  },
+  {
+   "year": 2023,
+   "productivity_index": 251.6,
+   "benefits_pct_gdp": 18.36,
+   "net_lending_pct_gdp": -3
+  },
+  {
+   "year": 2024,
+   "productivity_index": 256.2,
+   "benefits_pct_gdp": 19.11,
+   "net_lending_pct_gdp": -4.4
+  },
+  {
+   "year": 2025,
+   "productivity_index": 260.1,
+   "benefits_pct_gdp": 18.86,
+   "net_lending_pct_gdp": -3.8
+  }
+ ]
+}
