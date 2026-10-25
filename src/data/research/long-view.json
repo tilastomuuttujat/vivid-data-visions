@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "periods": [
+    {
+      "id": "1850",
+      "start": 1850,
+      "end": 1917,
+      "title": "Elämänmahdollisuuksien avautuminen",
+      "question": "Miten maahan, säätyyn ja paikallisyhteisöön sidotut mahdollisuudet muuttuivat?",
+      "episodes": ["famine_1866_1870"],
+      "focus": "Toimeentulon haavoittuvuus",
+      "channel": "Koulutuksen, maan hallinnan ja paikallisen vastuun yhteydet toimeentuloon",
+      "groups": "Maattomat, maanomistajat, naiset ja eri alueet",
+      "alternative": "Sadon, kaupan, hallinnon ja kulkuyhteyksien osuutta ei eroteta väestösarjasta.",
+      "priority_gap": "Vertailukelpoinen toimeentulo ja ryhmäerot ennen vuotta 1917",
+      "status": "editorial_research_framework"
+    },
+    {
+      "id": "1918",
+      "start": 1918,
+      "end": 1945,
+      "title": "Valtio, jakautuminen ja kriisit",
+      "question": "Miten maan hallinta, toimeentulo ja yhteinen vastuu muuttuivat kriisien keskellä?",
+      "episodes": ["crisis_1917_1919", "depression_1930_1934"],
+      "focus": "Kriisien ja päätösten erottaminen",
+      "channel": "Maan hallinnan, sosiaalisten oikeuksien ja kriisitoimien toimeenpano",
+      "groups": "Tilattomat, pienviljelijät, palkansaajat ja siirtymään joutuneet",
+      "alternative": "Sodan, suhdanteen ja uudistusten vaikutukset voivat limittyä.",
+      "priority_gap": "Sotavuosien ja jälleenasuttamisen ryhmäkohtaiset toteumat",
+      "status": "editorial_research_framework"
+    },
+    {
+      "id": "1946",
+      "start": 1946,
+      "end": 1975,
+      "title": "Rakennemuutos ja yhteiset palvelut",
+      "question": "Laajenivatko tuotanto, osallistumisen mahdollisuudet ja turva yhdessä?",
+      "episodes": ["structural_1965_1974"],
+      "focus": "Rakennemuutos ja toimeentulon jatkuvuus",
+      "channel": "Muuttoliikkeen, koulutuksen ja palvelujen välityskanavat",
+      "groups": "Maaseudulta muuttaneet, naiset, nuoret ja lähtöalueet",
+      "alternative": "Koulutuksen, työvoimakysynnän ja muuttoliikkeen erilliset osuudet ovat avoimia.",
+      "priority_gap": "Kotitaloustulot ja yhteinen rahoitus ennen vuotta 1975",
+      "status": "editorial_research_framework"
+    },
+    {
+      "id": "1976",
+      "start": 1976,
+      "end": 1994,
+      "title": "Rahoitus, tuotanto ja kriisi",
+      "question": "Mikä muuttui ennen lamaa ja mikä itse kriisissä?",
+      "episodes": ["purchasing_power_1977_1978", "recession_1990_1994"],
+      "focus": "Kasvun haavoittuvuus",
+      "channel": "Luoton, tuotannon, työllisyyden ja julkisen tasapainon yhteydet",
+      "groups": "Työttömät, velalliset, yrittäjät ja eri toimialat",
+      "alternative": "Rahoitus, korot, ulkomaankauppa ja politiikka vaativat erillistä näyttöä.",
+      "priority_gap": "Päätösten vaikutusten erottaminen suhdanteesta",
+      "status": "editorial_research_framework"
+    },
+    {
+      "id": "1995",
+      "start": 1995,
+      "end": 2007,
+      "title": "Kasvu ja toipumisen erot",
+      "question": "Kenelle ja minne kasvu välittyi?",
+      "episodes": [],
+      "focus": "Tuotannon ja työn käytön eritahtisuus",
+      "channel": "Tuottavuuden, työllisyyden ja kotitaloustulojen erittely",
+      "groups": "Pitkäaikaistyöttömät, ikäryhmät ja kasvualueiden ulkopuoli",
+      "alternative": "Kasvun samanaikaisuus integraation tai teknologian kanssa ei osoita niiden osuutta.",
+      "priority_gap": "Kasvun ryhmä- ja aluekohtainen jakautuminen",
+      "status": "editorial_research_framework"
+    },
+    {
+      "id": "2008",
+      "start": 2008,
+      "end": 2025,
+      "title": "Kriisinkestävyys ja kasautuvat paineet",
+      "question": "Mitkä rakenteet kantoivat ja mihin haitat kasautuivat?",
+      "episodes": ["financial_2008_2009", "pandemic_2020_2021", "price_shock_2022_2023"],
+      "focus": "Toimeentulon ja yhteisen vastuun puskurit",
+      "channel": "Työn, hintojen, tulonsiirtojen ja rahoituksen välityskanavat",
+      "groups": "Pienituloiset, vuokralaiset, velalliset ja palvelujen käyttäjät",
+      "alternative": "Peräkkäiset kriisit, ikääntyminen ja päätökset on erotettava toisistaan.",
+      "priority_gap": "Kriisien yhteisaltistus ja palvelujen toteutuminen",
+      "status": "editorial_research_framework"
+    }
+  ],
+  "scope": [1850, 2050],
+  "historical_end": 2025
+}

@@ -1,3 +1,4 @@
+import { LongView } from "./LongView";
 import { Recovery } from "./Recovery";
 import { useState } from "react";
 import { MainLinks } from "../MainLinks";
@@ -52,10 +53,10 @@ export function Selityspolku() {
       </nav>
       <header>
         <p className="sp-eyebrow">SUOMEN KEHITYSSUUNNAT · SELITYSPOLKU</p>
-        <h1>Tuotanto elpyy. Palaako toimeentulo mukana?</h1>
+        <h1>Suomen suunnat: mikä kantoi, mikä jäi jälkeen?</h1>
         <p>
-          Seuraa vuosien 1985–2000 murrosta tuotannosta työn käyttöön, toimeentuloon ja yhteiseen
-          vastuuseen. Koko aikajana säilyy näkyvissä.
+          Tutki vuosien 1850–2025 murroksia ja tulevaisuuden avoimia kysymyksiä. Avaa sen jälkeen
+          laman ja toipumisen laskettu selityspolku. Koko aikajana säilyy näkyvissä.
         </p>
       </header>
       <section className="sp-ruler" aria-label="Koko aikajana 1850–2050">
@@ -96,6 +97,7 @@ export function Selityspolku() {
           ))}
         </div>
       </section>
+      <LongView onYear={setYear} />
       <Recovery year={year} onYear={setYear} />
       <section className="sp-summary" aria-live="polite">
         <h2>

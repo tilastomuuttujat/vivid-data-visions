@@ -29,3 +29,7 @@ Nominal components mix quantities and prices. Tax receipts do not identify tax-b
 ### Murroskertomus 1985–2000
 
 `Recovery.tsx` tiivistää neljän nykyisen mallin havainnot yhdeksi päähavainnoksi ja kolmeksi vuosivalinnaksi (1990, 1993, 2000). Taulukon muutokset ja ensimmäinen paluuvuosi 1994–2000 lasketaan samoista julkaistuista sarjoista kuin käyrät. Paluu tarkoittaa 1990-tason saavuttamista, ei pysyvää palautumista tai paluuta kasvutrendille. Mittareita ei summata eikä historiallisia taustaselityksiä muuteta numeerisiksi syyvaikutuksiksi. Koko 1850–2050-aikajana ja lähdeosio säilyvät. Tämä on näkymän synteesi, eikä lisää uusia havaintoja tietokantaan.
+
+### Koko aikajanan tutkimuskehys
+
+`LongView.tsx` ja `src/data/research/long-view.json` muodostavat kuuden historiallisen jakson kartoituksen (1850–2025) ja erillisen tulevaisuusosion (2025–2050). Kehys on toimituksellinen, ei uusi mitattu indeksi. Täsmälliset episode-koodit kytkevät kaikki yhdeksän nykyisen murrosmatriisipoiminnan tapausta jaksoihin; 1917–1919 tapaus on sijoitettu 1918–1945 jaksoon, mutta sen alkuperäinen aikarajaus näytetään muuttamatta. Sarjat, vertailuikkunat, puutteet ja päätösten toteutushavainnot luetaan suoraan poiminnasta. Ryhmät ja kanavat ovat tutkimuskohteita, eivät väitteitä osoitetuista vaikutuksista. Lähteen tarkistusstatus ei ole syyvaikutuksen varmuusaste. Kehys ei arvioi tietokannan kaikkia 32 teemaa eikä muuta Supabase-aineistoa. Tulevaisuuskysymyksillä ei ole keksittyjä numeerisia tuloksia.
