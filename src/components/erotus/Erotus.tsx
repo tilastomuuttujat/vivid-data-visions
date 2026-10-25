@@ -6,6 +6,7 @@ import "@/components/kaari/kaari.css";
 import { OBSERVABLES, factorsFor, sample, whyAt, type Sample } from "./erotus-model";
 import { DEBATES, costAt } from "./debates";
 import "./erotus.css";
+import { CumulativeMeter, MeasuredSopeutus } from "./SopeutusPanels";
 
 const W = 1200, H = 560, PAD = { l: 20, r: 20, t: 36, b: 40 };
 const x = (yr: number) => PAD.l + ((yr - YEAR_MIN) / (YEAR_MAX - YEAR_MIN)) * (W - PAD.l - PAD.r);
@@ -241,6 +242,7 @@ export function Erotus() {
           <div><h3>Mitä rakenne näyttää</h3><p>{deb.reading}</p></div>
         </div>
       )}
+      {mode === "debatti" && deb.id === "sopeutus" && (<><CumulativeMeter net={sNet} year={h?.year} /><MeasuredSopeutus year={h?.year} /></>)}
       {!pair && <p className="e-note">{obs.note}</p>}
       {(hasMeasured(idA) || (pair && hasMeasured(idB))) && <MeasuredEvidence factor={hasMeasured(idA) ? idA : idB} year={h?.year} />}
       <details className="e-method">
