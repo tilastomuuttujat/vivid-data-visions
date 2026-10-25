@@ -87,8 +87,6 @@ export function Erotus() {
   const h = hover != null ? s.reduce((a, b) => (Math.abs(b.year - hover) < Math.abs(a.year - hover) ? b : a)) : null;
   const totalPath = smooth(s.map((p) => [x(p.year), y(p.total)]));
   const valuePath = smooth(s.map((p) => [x(p.year), y(p.value)]));
-  const liftPathA = smooth(sA.map((p) => [x(p.year), y(p.total + p.delta)]));
-  const valuePathB = smooth(sB.map((p) => [x(p.year), y(p.total + p.delta)]));
   const hB = h ? sB.find((p) => p.year === h.year) ?? null : null;
   // Net difference A + B (B is negative when read as a cost): band between total and total + net.
   const sNet = useMemo<Sample[]>(() => sA.map((p, i) => {
@@ -215,8 +213,7 @@ export function Erotus() {
       {pair ? (
         <div className="e-readout">
           <div><span className="e-sw e-sw-total" /> Kokonaisuus</div>
-          <div><span className="e-sw e-sw-a" /> {obsA.label}: {h && h.delta < 0 ? "rasite (alapuolella)" : "noste (yläpuolella)"}</div>
-          <div><span className="e-sw e-sw-b" /> {obsB.label}: {hB && hB.delta < 0 ? "rasite (alapuolella)" : "noste (yläpuolella)"}</div>
+          <div>A: {obsA.label} · B: {obsB.label}</div>
           <div><i className="e-g e-g-pos" /> Viivoitus = erotus A + B: turkoosi yläpuolella, kun hyöty on suurempi; punainen alapuolella, kun rasite on suurempi.</div>
           {h && hB && hNet ? (
             <strong className={Math.abs(hNet.delta) < 0.005 ? "" : hNet.delta >= 0 ? "pos" : "neg"}>{h.year}: <span className="e-ta">A {h.delta >= 0 ? "+" : "−"}{Math.abs(h.delta * 100).toFixed(0)}</span> · <span className="e-tb">B {hB.delta >= 0 ? "+" : "−"}{Math.abs(hB.delta * 100).toFixed(0)}</span> → erotus {hNet.delta >= 0 ? "+" : "−"}{Math.abs(hNet.delta * 100).toFixed(0)} pistettä. {Math.abs(hNet.delta) < 0.005 ? "Tekijät kumoavat toisensa." : hNet.delta > 0 ? `${obsA.label} on suurempi kuin ${obsB.label.toLowerCase()}.` : `${obsB.label} ylittää: ${obsA.label.toLowerCase()}.`}</strong>
