@@ -1,6 +1,17 @@
 /** Curated A-vs-B pairings. Claims and readings are editorial interpretations, not proven causal findings. */
 /** bAsCost: B is read as a cost the whole must carry, so its impact is drawn below the total. */
-export type Debate = { id: string; title: string; a: string; b: string; claim: string; reading: string; bAsCost?: boolean; bLabel?: string };
+/** bCostPoints: editorial cost magnitude by year (impact points on the total), replacing B's own curve. */
+export type Debate = { id: string; title: string; a: string; b: string; claim: string; reading: string; bAsCost?: boolean; bLabel?: string; bCostPoints?: [number, number][] };
+
+/** Linear interpolation of an editorial cost curve; 0 before the first point. */
+export function costAt(points: [number, number][], year: number): number {
+  if (year <= points[0]![0]) return points[0]![1];
+  for (let i = 1; i < points.length; i++) {
+    const [x1, y1] = points[i]!, [x0, y0] = points[i - 1]!;
+    if (year <= x1) return y0 + ((year - x0) / (x1 - x0)) * (y1 - y0);
+  }
+  return points.at(-1)![1];
+}
 
 export const DEBATES: Debate[] = [
   { id: "sukupolvet", title: "Sukupolvisota: kuka maksaa viulut?", a: "suuret", b: "lapset",
@@ -13,9 +24,11 @@ export const DEBATES: Debate[] = [
     claim: "Velkaantuminen johtuu holtittomasta kulutuksesta.",
     reading: "Velka kasvoi ryöpsähdyksinä kriisien jälkeen (1993, 2009, 2020), kun tuottavuuden kasvu oli pysähtynyt. Velka näyttää enemmän oireelta hyytyneestä tuottavuudesta ja ikääntymisestä kuin itsenäiseltä syyltä." },
   { id: "sopeutus", title: "Tuottavuus vs. työttömyyden hinta: kuka maksaa sopeutuksen?", a: "tuottavuus", b: "perusturva",
-    bAsCost: true, bLabel: "Toimeentulon korjauskustannus",
+    bAsCost: true, bLabel: "Käyttämättömän työpanoksen korjauskustannus",
+    // Toimituksellinen tulkinta: pieni täystyöllisyyden aikana, hyppää laman 1991–93 myötä ja kasvaa uudelleen 2008 jälkeen.
+    bCostPoints: [[1860, 0], [1930, 0.03], [1945, 0.04], [1975, 0.04], [1989, 0.05], [1994, 0.17], [2001, 0.15], [2008, 0.14], [2016, 0.17], [2025, 0.18], [2050, 0.16]],
     claim: "Työn tuottavuuden kasvu rikastuttaa automaattisesti koko yhteiskuntaa.",
-    reading: "Laman jälkeen tuottavuus nousi nopeasti, mutta työttömyys jäi pysyvästi korkeaksi. Yritykset hyötyivät tehostamisesta, ja käyttämättömän työvoiman toimeentulo jäi julkisen talouden maksettavaksi, usein velalla. Työvoiman ylitarjonta myös hillitsi palkkojen nousua. Yhteiskunnan nettotulos on tuottavuushyöty miinus tämä korjauskustannus. Se oli selvästi plussalla, kun kasvu työllisti (1960–1985). Vuoden 1991 jälkeen se on kapeampi ja epävarmempi. Kuvaaja näyttää suunnan tulkintana, ei mitattuna nettolukuna." },
+    reading: "Kun tuottavuuden kasvu työllisti (1950–1990), hyöty ylitti selvästi käyttämättömän työpanoksen kustannuksen. Laman 1991–93 jälkeen tuottavuus palautui tehostamalla, mutta työttömyys jäi pysyväksi ja sen toimeentulo julkisen talouden maksettavaksi. Kun tuottavuuden kasvu hyytyi 2008 jälkeen, korjauskustannus ylitti hyödyn ja erotus on katettu velalla. Työvoiman ylitarjonta myös hillitsi palkkojen nousua. Kustannuskäyrä on toimituksellinen tulkinta, ei mitattu nettoluku." },
   { id: "sopiminen", title: "Sopimusyhteiskunnan hinta", a: "sopiminen", b: "paaoma",
     claim: "Ammattiliitot ja tulopolitiikka jäykistävät talouden.",
     reading: "Tulopolitiikka vakautti ja loi luottamusta 1968–1990, mikä tuki investointeja. 2010-luvulla sama malli sopeutui hitaammin, mutta investointien heikkous liittyy myös pääomien ja teollisuuden rakennemuutokseen." },

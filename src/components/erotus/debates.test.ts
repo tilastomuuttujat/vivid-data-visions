@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { DEBATES } from "./debates";
-import { OBSERVABLES } from "./erotus-model";
+import { DEBATES, costAt } from "./debates";
+import { OBSERVABLES, impactAt } from "./erotus-model";
 
 describe("debates", () => {
   it("every debate pairs two distinct existing factors", () => {
@@ -10,9 +10,17 @@ describe("debates", () => {
 });
 
 describe("sopeutus-debatti", () => {
-  it("lukee toimeentulon kustannukseksi kokonaisuuden alapuolelle", () => {
-    const d = DEBATES.find((x) => x.id === "sopeutus")!;
+  const d = DEBATES.find((x) => x.id === "sopeutus")!;
+  const prod = OBSERVABLES.find((o) => o.id === d.a)!;
+  const net = (yr: number) => impactAt(prod, yr) - costAt(d.bCostPoints!, yr);
+  it("lukee korjauskustannuksen kokonaisuuden rasitteeksi", () => {
     expect(d.a).toBe("tuottavuus");
     expect(d.bAsCost).toBe(true);
+  });
+  it("tuottavuushyöty ylittää kustannuksen 1900-luvulla", () => {
+    for (const yr of [1960, 1970, 1980, 1990]) expect(net(yr)).toBeGreaterThan(0.05);
+  });
+  it("korjauskustannus ylittää hyödyn 2010-luvulta alkaen", () => {
+    for (const yr of [2012, 2015, 2020, 2025]) expect(net(yr)).toBeLessThan(0);
   });
 });
