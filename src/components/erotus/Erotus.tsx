@@ -184,8 +184,7 @@ export function Erotus() {
           {[1900, 1950, 2000, 2050].map((yr) => <text key={yr} x={x(yr)} y={H - 16} textAnchor="middle" className="k-axis">{yr}</text>)}
           <line x1={x(NOW)} x2={x(NOW)} y1={PAD.t} y2={H - PAD.b} className="k-now" />
           {bands(pair ? sNet : s).map((b, i) => <path key={i} d={b.d} fill={`url(#e-hatch-${b.pos ? "pos" : "neg"})`} className="e-band" />)}
-          <path d={pair ? liftPathA : valuePath} className={pair ? "e-value e-line-a" : "e-value"} />
-          {pair && <path d={valuePathB} className="e-value e-line-b" />}
+          {!pair && <path d={valuePath} className="e-value" />}
           <path d={totalPath} className="e-total" />
           {!pair && factors.map((f, i) => {
             const pos = f.delta >= 0;
@@ -207,8 +206,7 @@ export function Erotus() {
           {h && (
             <g>
               <line x1={x(h.year)} x2={x(h.year)} y1={PAD.t} y2={H - PAD.b} className="e-cursor" />
-              <circle cx={x(h.year)} cy={y(pair ? h.total + h.delta : h.value)} r={4} className={pair ? "e-dot-value e-dot-a" : "e-dot-value"} />
-              {pair && hB && <circle cx={x(h.year)} cy={y(hB.total + hB.delta)} r={4} className="e-dot-value e-dot-b" />}
+              {!pair && <circle cx={x(h.year)} cy={y(h.value)} r={4} className="e-dot-value" />}
               <circle cx={x(h.year)} cy={y(h.total)} r={5} className="e-dot-total" />
             </g>
           )}
