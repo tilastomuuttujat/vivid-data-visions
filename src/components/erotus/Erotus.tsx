@@ -72,7 +72,8 @@ export function Erotus() {
   const h = hover != null ? s.reduce((a, b) => (Math.abs(b.year - hover) < Math.abs(a.year - hover) ? b : a)) : null;
   const totalPath = smooth(s.map((p) => [x(p.year), y(p.total)]));
   const valuePath = smooth(s.map((p) => [x(p.year), y(p.value)]));
-  const valuePathB = smooth(sB.map((p) => [x(p.year), y(p.value)]));
+  const liftPathA = smooth(sA.map((p) => [x(p.year), y(p.total + p.delta)]));
+  const valuePathB = smooth(sB.map((p) => [x(p.year), y(p.total + p.delta)]));
   const hB = h ? sB.find((p) => p.year === h.year) ?? null : null;
   const factorsB = useMemo(() => factorsFor(obsB, sB), [obsB, sB]);
   // impact strip
@@ -161,7 +162,7 @@ export function Erotus() {
           {[1900, 1950, 2000, 2050].map((yr) => <text key={yr} x={x(yr)} y={H - 16} textAnchor="middle" className="k-axis">{yr}</text>)}
           <line x1={x(NOW)} x2={x(NOW)} y1={PAD.t} y2={H - PAD.b} className="k-now" />
           {!pair && bands(s).map((b, i) => <path key={i} d={b.d} fill={`url(#e-hatch-${b.pos ? "pos" : "neg"})`} className="e-band" />)}
-          <path d={valuePath} className={pair ? "e-value e-line-a" : "e-value"} />
+          <path d={pair ? liftPathA : valuePath} className={pair ? "e-value e-line-a" : "e-value"} />
           {pair && <path d={valuePathB} className="e-value e-line-b" />}
           <path d={totalPath} className="e-total" />
           {!pair && factors.map((f, i) => {
@@ -184,8 +185,8 @@ export function Erotus() {
           {h && (
             <g>
               <line x1={x(h.year)} x2={x(h.year)} y1={PAD.t} y2={H - PAD.b} className="e-cursor" />
-              <circle cx={x(h.year)} cy={y(h.value)} r={4} className={pair ? "e-dot-value e-dot-a" : "e-dot-value"} />
-              {pair && hB && <circle cx={x(h.year)} cy={y(hB.value)} r={4} className="e-dot-value e-dot-b" />}
+              <circle cx={x(h.year)} cy={y(pair ? h.total + h.delta : h.value)} r={4} className={pair ? "e-dot-value e-dot-a" : "e-dot-value"} />
+              {pair && hB && <circle cx={x(h.year)} cy={y(hB.total + hB.delta)} r={4} className="e-dot-value e-dot-b" />}
               <circle cx={x(h.year)} cy={y(h.total)} r={5} className="e-dot-total" />
             </g>
           )}
@@ -211,8 +212,8 @@ export function Erotus() {
       {pair ? (
         <div className="e-readout">
           <div><span className="e-sw e-sw-total" /> Kokonaisuus</div>
-          <div><span className="e-sw e-sw-a" /> ilman: {obsA.label}</div>
-          <div><span className="e-sw e-sw-b" /> ilman: {obsB.label}</div>
+          <div><span className="e-sw e-sw-a" /> {obsA.label}: {h && h.delta < 0 ? "rasite (alapuolella)" : "noste (yläpuolella)"}</div>
+          <div><span className="e-sw e-sw-b" /> {obsB.label}: {hB && hB.delta < 0 ? "rasite (alapuolella)" : "noste (yläpuolella)"}</div>
           {h && hB ? (
             <strong>{h.year}: <span className="e-ta">A {h.delta >= 0 ? "+" : "−"}{Math.abs(h.delta * 100).toFixed(0)}</span> · <span className="e-tb">B {hB.delta >= 0 ? "+" : "−"}{Math.abs(hB.delta * 100).toFixed(0)}</span> pistettä. {Math.abs(h.delta) + Math.abs(hB.delta) < 0.01 ? "Kumpikaan ei vielä vaikuta." : Math.abs(h.delta) > Math.abs(hB.delta) ? `${obsA.label} vaikuttaa enemmän.` : `${obsB.label} vaikuttaa enemmän.`}</strong>
           ) : <span className="e-hint">Vie osoitin kuvaajan päälle verrataksesi vuotta.</span>}
