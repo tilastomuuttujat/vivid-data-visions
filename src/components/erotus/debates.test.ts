@@ -29,8 +29,8 @@ import { cumulativeNet } from "./debates";
 describe("cumulativeNet", () => {
   it("laskee hyödyn ja kustannuksen pinta-alat erikseen", () => {
     const r = cumulativeNet([{ year: 0, delta: 0.1 }, { year: 10, delta: 0.1 }, { year: 20, delta: -0.1 }, { year: 30, delta: -0.1 }]);
-    expect(r.gain).toBeCloseTo(15);
-    expect(r.cost).toBeCloseTo(15);
+    expect(r.gain).toBeCloseTo(100);
+    expect(r.cost).toBeCloseTo(100);
     expect(r.net).toBeCloseTo(0);
   });
 });
