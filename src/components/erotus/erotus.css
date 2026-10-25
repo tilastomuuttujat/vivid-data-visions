@@ -74,3 +74,24 @@
 .e-g { display:inline-block; width:22px; height:12px; vertical-align:middle; border-radius:3px; }
 .e-g-pos { background:repeating-linear-gradient(45deg, var(--k-teal) 0 2px, transparent 2px 6px); border-top:3px solid var(--k-ink); }
 .e-g-neg { background:repeating-linear-gradient(-45deg, var(--k-rose) 0 2px, transparent 2px 6px); border-bottom:3px solid var(--k-ink); }
+.e-cum, .e-meas { margin:1rem 0; padding:1rem 1.2rem; border:1px solid var(--k-line); border-radius:14px; font-family:system-ui,sans-serif; color:var(--k-ink); }
+.e-cum h3, .e-meas h3 { margin:0 0 .7rem; font-size:.95rem; font-weight:600; }
+.e-cum h3 small, .e-meas h3 small { color:var(--k-muted, #8a93a3); font-weight:400; margin-left:.4rem; }
+.e-cum-bars > div { display:grid; grid-template-columns:9rem 1fr 4rem; gap:.6rem; align-items:center; margin:.3rem 0; font-size:.85rem; }
+.e-cum-bars i { display:block; height:12px; border-radius:6px; min-width:2px; }
+.e-cum-bars i.pos { background:var(--k-teal); } .e-cum-bars i.neg { background:var(--k-rose); }
+.e-cum-bars b { text-align:right; font-variant-numeric:tabular-nums; }
+.e-cum-net { margin:.7rem 0; font-size:.9rem; } .e-cum-net.pos { color:var(--k-teal); } .e-cum-net.neg { color:var(--k-rose); }
+.e-cum-periods { display:flex; flex-wrap:wrap; gap:.5rem; }
+.e-cum-periods div { border:1px solid var(--k-line); border-radius:10px; padding:.35rem .7rem; font-size:.8rem; display:flex; gap:.5rem; }
+.e-cum-periods .pos b { color:var(--k-teal); } .e-cum-periods .neg b { color:var(--k-rose); }
+.e-cum-note { font-size:.78rem; opacity:.7; margin:.7rem 0 0; }
+.e-meas svg { width:100%; height:auto; display:block; }
+.e-meas-span { fill:var(--k-ink); fill-opacity:.04; }
+path.e-meas-prod, path.e-meas-ben, path.e-meas-b9 { fill:none; stroke-width:2; }
+.e-meas-prod { stroke:var(--k-teal); background:var(--k-teal); }
+.e-meas-ben { stroke:var(--k-rose); background:var(--k-rose); }
+.e-meas-b9 { stroke:var(--k-gold); background:var(--k-gold); stroke-dasharray:5 4; }
+.e-meas-legend { display:flex; flex-wrap:wrap; gap:1rem; font-size:.8rem; margin:.4rem 0; }
+.e-meas-legend i { display:inline-block; width:14px; height:3px; vertical-align:middle; margin-right:.3rem; }
+.e-meas strong { display:block; font-size:.85rem; margin-top:.3rem; }
