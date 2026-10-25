@@ -4,7 +4,7 @@ import { MainLinks } from "@/components/MainLinks";
 import { ERAS, NOW, YEAR_MAX, YEAR_MIN } from "@/components/kaari/kaari-model";
 import "@/components/kaari/kaari.css";
 import { OBSERVABLES, factorsFor, sample, whyAt, type Sample } from "./erotus-model";
-import { DEBATES } from "./debates";
+import { DEBATES, costAt } from "./debates";
 import "./erotus.css";
 
 const W = 1200, H = 560, PAD = { l: 20, r: 20, t: 36, b: 40 };
@@ -77,8 +77,12 @@ export function Erotus() {
   const sA = useMemo(() => sample(obsA, 1), [obsA]);
   const sB = useMemo(() => {
     const raw = sample(obsB, 1);
-    return bCost ? raw.map((p) => { const d = -Math.abs(p.delta); return { ...p, delta: d, value: p.total - d }; }) : raw;
-  }, [obsB, bCost]);
+    if (!bCost) return raw;
+    return raw.map((p) => {
+      const d = deb.bCostPoints ? -costAt(deb.bCostPoints, p.year) : -Math.abs(p.delta);
+      return { ...p, delta: d, value: p.total - d };
+    });
+  }, [obsB, bCost, deb.bCostPoints]);
   const [hover, setHover] = useState<number | null>(null);
   const obs = obsA;
   const s = sA;
