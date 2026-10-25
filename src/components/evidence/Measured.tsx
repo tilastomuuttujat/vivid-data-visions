@@ -50,7 +50,7 @@ export function hasMeasured(factor: string) {
 }
 
 /** Compact measured panel under the editorial curves. */
-export function MeasuredEvidence({ factor, year }: { factor?: string; year?: number }) {
+export function MeasuredEvidence({ factor, year }: { factor?: string | undefined; year?: number | undefined }) {
   const showFiscal = factor ? FISCAL.has(factor) : year != null && year >= 1970;
   const showEdu = factor ? EDU.has(factor) : false;
   const period = year != null ? periodFor(year) : null;
