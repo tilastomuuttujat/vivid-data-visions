@@ -185,7 +185,7 @@ export function Erotus() {
           ))}
           {[1900, 1950, 2000, 2050].map((yr) => <text key={yr} x={x(yr)} y={H - 16} textAnchor="middle" className="k-axis">{yr}</text>)}
           <line x1={x(NOW)} x2={x(NOW)} y1={PAD.t} y2={H - PAD.b} className="k-now" />
-          {(pair ? [...bands(sA), ...bands(sB)] : bands(s)).map((b, i) => <path key={i} d={b.d} fill={`url(#e-hatch-${b.pos ? "pos" : "neg"})`} className="e-band" />)}
+          {bands(pair ? sNet.map((p) => ({ ...p, value: p.total - p.delta })) : s).map((b, i) => <path key={i} d={b.d} fill={`url(#e-hatch-${b.pos ? "pos" : "neg"})`} className="e-band" />)}
           {!pair && <path d={valuePath} className="e-value" />}
           <path d={totalPath} className="e-total" />
           {!pair && factors.map((f, i) => {
@@ -218,8 +218,8 @@ export function Erotus() {
         <div className="e-readout">
           <div><span className="e-sw e-sw-total" /> Kokonaisuus</div>
           <div>A: {obsA.label} · B: {obsB.label}</div>
-          <div><i className="e-g e-g-pos" /> Turkoosi valkoisen viivan alla = toteutunut hyöty: ilman sitä kokonaisuus putoaisi varjon pohjalle.</div>
-          <div><i className="e-g e-g-neg" /> Punainen valkoisen viivan päällä = korjauskustannus: ilman sitä kokonaisuus nousisi varjon laelle.</div>
+          <div><i className="e-g e-g-pos" /> Turkoosi valkoisen viivan alla = nettohyöty: A ylittää B:n, ja ilman tätä erotusta kokonaisuus olisi varjon pohjalla.</div>
+          <div><i className="e-g e-g-neg" /> Punainen valkoisen viivan päällä = nettorasite: B ylittää A:n, ja ilman tätä erotusta kokonaisuus olisi varjon laella.</div>
           {h && hB && hNet ? (
             <strong className={Math.abs(hNet.delta) < 0.005 ? "" : hNet.delta >= 0 ? "pos" : "neg"}>{h.year}: <span className="e-ta">A {h.delta >= 0 ? "+" : "−"}{Math.abs(h.delta * 100).toFixed(0)}</span> · <span className="e-tb">B {hB.delta >= 0 ? "+" : "−"}{Math.abs(hB.delta * 100).toFixed(0)}</span> → erotus {hNet.delta >= 0 ? "+" : "−"}{Math.abs(hNet.delta * 100).toFixed(0)} pistettä. {Math.abs(hNet.delta) < 0.005 ? "Tekijät kumoavat toisensa." : hNet.delta > 0 ? `${obsA.label} on suurempi kuin ${obsB.label.toLowerCase()}.` : `${obsB.label} ylittää: ${obsA.label.toLowerCase()}.`}</strong>
           ) : <span className="e-hint">Vie osoitin kuvaajan päälle verrataksesi vuotta.</span>}
