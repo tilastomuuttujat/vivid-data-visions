@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { MeasuredEvidence, hasMeasured } from "@/components/evidence/Measured";
 import { MainLinks } from "@/components/MainLinks";
 import { ERAS, NOW, YEAR_MAX, YEAR_MIN } from "@/components/kaari/kaari-model";
 import "@/components/kaari/kaari.css";
@@ -234,6 +235,7 @@ export function Erotus() {
         </div>
       )}
       {!pair && <p className="e-note">{obs.note}</p>}
+      {(hasMeasured(idA) || (pair && hasMeasured(idB))) && <MeasuredEvidence factor={hasMeasured(idA) ? idA : idB} year={h?.year} />}
       <details className="e-method">
         <summary>Miten vaikutus on laskettu?</summary>
         <p>Kokonaisuus = kolmen päävoiman keskiarvo, josta vähennetään puolet siitä osuudesta, jolla yhteisen turvan lupaukset ylittävät tuotannon ja väestön kantokyvyn. Tekijän vaikutus = sen painoarvo kokonaisuudessa × muutos tekijän lähtötasosta (päävoimat 1/3, alavirrat 0,3, väestöryhmät 0,25). Tekijä, jota ei vielä ollut, ei siirrä kokonaisuutta. Kaikki käyrät ovat toimituksellisia tulkintoja, eivät mittauksia; vaikutus kertoo suuntaa, ei todistettua syy-yhteyttä.</p>

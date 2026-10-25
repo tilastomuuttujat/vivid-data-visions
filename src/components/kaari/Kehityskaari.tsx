@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MeasuredEvidence } from "@/components/evidence/Measured";
 import { MainLinks } from "@/components/MainLinks";
 import { evidence, type Metric } from "@/components/murrokset/evidence-model";
 import { ERAS, LINE_TURNS, LINES, SUBLINES, NOW, TURNS, YEAR_MAX, YEAR_MIN, episodeFor, type Turn } from "./kaari-model";
@@ -232,6 +233,7 @@ export function Kehityskaari() {
             <div><h4>Mitä seurasi viiveellä</h4><p>{sel.later}</p></div>
           </div>
           {episodeFor(sel) && <button className="k-open" onClick={() => setDeep(true)}>Avaa tilastot ja säädökset →</button>}
+          <MeasuredEvidence year={sel.year} factor={focus ?? undefined} />
         </section>
       ) : (
         <p className="k-hint">{focus ? "Näet nyt valitun voiman omat käännekohdat. Klikkaa voimaa uudelleen palataksesi seitsemään yhteiseen käänteeseen." : "Seitsemän yhteistä käännettä. Valitse voima yläpuolelta nähdäksesi sen omat käännekohdat."}</p>
