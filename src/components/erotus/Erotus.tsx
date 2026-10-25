@@ -90,12 +90,12 @@ export function Erotus() {
   const liftPathA = smooth(sA.map((p) => [x(p.year), y(p.total + p.delta)]));
   const valuePathB = smooth(sB.map((p) => [x(p.year), y(p.total + p.delta)]));
   const hB = h ? sB.find((p) => p.year === h.year) ?? null : null;
-  const factorsB = useMemo(() => factorsFor(obsB, sB), [obsB, sB]);
-  // impact strip
-  const maxImp = Math.max(0.02, ...sA.map((p) => Math.abs(p.delta)), ...sB.map((p) => Math.abs(p.delta)));
-  const IH = 170, iy = (d: number) => IH / 2 - (d / maxImp) * (IH / 2 - 14);
-  const impA = smooth(sA.map((p) => [x(p.year), iy(p.delta)]));
-  const impB = smooth(sB.map((p) => [x(p.year), iy(p.delta)]));
+  // Net difference A + B (B is negative when read as a cost): band between total and total + net.
+  const sNet = useMemo<Sample[]>(() => sA.map((p, i) => {
+    const net = p.delta + (sB[i]?.delta ?? 0);
+    return { ...p, delta: net, value: p.total + net };
+  }), [sA, sB]);
+  const hNet = h ? sNet.find((p) => p.year === h.year) ?? null : null;
   const pick = (id: string) => {
     if (mode === "pari") { if (slot === "a") { setSel(id); setSlot("b"); } else { setSelB(id); setSlot("a"); setOpen(false); } }
     else { setSel(id); setOpen(false); }
@@ -183,7 +183,7 @@ export function Erotus() {
           ))}
           {[1900, 1950, 2000, 2050].map((yr) => <text key={yr} x={x(yr)} y={H - 16} textAnchor="middle" className="k-axis">{yr}</text>)}
           <line x1={x(NOW)} x2={x(NOW)} y1={PAD.t} y2={H - PAD.b} className="k-now" />
-          {!pair && bands(s).map((b, i) => <path key={i} d={b.d} fill={`url(#e-hatch-${b.pos ? "pos" : "neg"})`} className="e-band" />)}
+          {bands(pair ? sNet : s).map((b, i) => <path key={i} d={b.d} fill={`url(#e-hatch-${b.pos ? "pos" : "neg"})`} className="e-band" />)}
           <path d={pair ? liftPathA : valuePath} className={pair ? "e-value e-line-a" : "e-value"} />
           {pair && <path d={valuePathB} className="e-value e-line-b" />}
           <path d={totalPath} className="e-total" />
@@ -214,30 +214,14 @@ export function Erotus() {
           )}
         </svg>
       </div>
-      {pair && (
-        <div className="e-impact">
-          <p className="e-impact-title">Kummankin vaikutus kokonaisuuteen (pistettä) – yläpuolella kannattelee, alapuolella painaa</p>
-          <svg viewBox={`0 0 ${W} ${IH}`} onPointerMove={onMove} onPointerLeave={() => setHover(null)} role="img" aria-label={`${obsA.label} ja ${obsB.label}: vaikutukset`}>
-            <rect x={PAD.l} y={0} width={W - PAD.l - PAD.r} height={IH / 2} className="e-imp-up" />
-            <rect x={PAD.l} y={IH / 2} width={W - PAD.l - PAD.r} height={IH / 2} className="e-imp-down" />
-            <line x1={PAD.l} x2={W - PAD.r} y1={IH / 2} y2={IH / 2} className="e-zero" />
-            <line x1={x(NOW)} x2={x(NOW)} y1={0} y2={IH} className="k-now" />
-            <path d={impA} className="e-imp e-line-a" />
-            <path d={impB} className="e-imp e-line-b" />
-            {[...factors.map((f) => ({ ...f, k: "a" })), ...factorsB.map((f) => ({ ...f, k: "b" }))].map((f) => (
-              <text key={f.k + f.year + f.label} x={x(f.year)} y={iy(f.delta) + (f.delta >= 0 ? -8 : 16)} textAnchor="middle" className={`e-imp-lbl e-lbl-${f.k}`}>{f.label}</text>
-            ))}
-            {h && <line x1={x(h.year)} x2={x(h.year)} y1={0} y2={IH} className="e-cursor" />}
-          </svg>
-        </div>
-      )}
       {pair ? (
         <div className="e-readout">
           <div><span className="e-sw e-sw-total" /> Kokonaisuus</div>
           <div><span className="e-sw e-sw-a" /> {obsA.label}: {h && h.delta < 0 ? "rasite (alapuolella)" : "noste (yläpuolella)"}</div>
           <div><span className="e-sw e-sw-b" /> {obsB.label}: {hB && hB.delta < 0 ? "rasite (alapuolella)" : "noste (yläpuolella)"}</div>
-          {h && hB ? (
-            <strong>{h.year}: <span className="e-ta">A {h.delta >= 0 ? "+" : "−"}{Math.abs(h.delta * 100).toFixed(0)}</span> · <span className="e-tb">B {hB.delta >= 0 ? "+" : "−"}{Math.abs(hB.delta * 100).toFixed(0)}</span> pistettä. {Math.abs(h.delta) + Math.abs(hB.delta) < 0.01 ? "Kumpikaan ei vielä vaikuta." : Math.abs(h.delta) > Math.abs(hB.delta) ? `${obsA.label} vaikuttaa enemmän.` : `${obsB.label} vaikuttaa enemmän.`}</strong>
+          <div><i className="e-g e-g-pos" /> Viivoitus = erotus A + B: turkoosi yläpuolella, kun hyöty on suurempi; punainen alapuolella, kun rasite on suurempi.</div>
+          {h && hB && hNet ? (
+            <strong className={Math.abs(hNet.delta) < 0.005 ? "" : hNet.delta >= 0 ? "pos" : "neg"}>{h.year}: <span className="e-ta">A {h.delta >= 0 ? "+" : "−"}{Math.abs(h.delta * 100).toFixed(0)}</span> · <span className="e-tb">B {hB.delta >= 0 ? "+" : "−"}{Math.abs(hB.delta * 100).toFixed(0)}</span> → erotus {hNet.delta >= 0 ? "+" : "−"}{Math.abs(hNet.delta * 100).toFixed(0)} pistettä. {Math.abs(hNet.delta) < 0.005 ? "Tekijät kumoavat toisensa." : hNet.delta > 0 ? `${obsA.label} on suurempi kuin ${obsB.label.toLowerCase()}.` : `${obsB.label} ylittää: ${obsA.label.toLowerCase()}.`}</strong>
           ) : <span className="e-hint">Vie osoitin kuvaajan päälle verrataksesi vuotta.</span>}
         </div>
       ) : (
