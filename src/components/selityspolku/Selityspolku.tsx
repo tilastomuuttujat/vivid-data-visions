@@ -1,3 +1,4 @@
+import { EducationAssessment } from "./EducationAssessment";
 import { ThemeCoverage } from "./ThemeCoverage";
 import { LongView } from "./LongView";
 import { Recovery } from "./Recovery";
@@ -100,6 +101,7 @@ export function Selityspolku() {
       </section>
       <LongView onYear={setYear} />
       <ThemeCoverage onYear={setYear} />
+      <EducationAssessment onYear={setYear} />
       <Recovery year={year} onYear={setYear} />
       <section className="sp-summary" aria-live="polite">
         <h2>

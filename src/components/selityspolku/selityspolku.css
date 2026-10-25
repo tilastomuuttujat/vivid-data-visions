@@ -392,3 +392,52 @@
 .sp-coverage li {
   margin: 12px 0;
 }
+.sp-education {
+  margin: 24px 0;
+  padding: 24px;
+  border-left: 4px solid #574a9a;
+  background: #f4f1f8;
+  border-radius: 8px;
+}
+.sp-education svg {
+  width: 100%;
+  display: block;
+}
+.sp-education svg text {
+  font: 12px sans-serif;
+  fill: #443f38;
+}
+.sp-education summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.sp-education details {
+  margin-top: 18px;
+}
+.sp-education code {
+  overflow-wrap: anywhere;
+}
+.sp-education table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.sp-education th,
+.sp-education td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+.sp-education-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+.sp-education-legend span {
+  display: inline-block;
+  width: 16px;
+  height: 4px;
+  vertical-align: middle;
+  margin-right: 6px;
+}

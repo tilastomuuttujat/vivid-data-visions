@@ -50,6 +50,20 @@ export function ThemeCoverage({ onYear }: { onYear: (year: number) => void }) {
           </button>
         ))}
       </div>
+      {[4, 15, 26].includes(theme) && (
+        <p>
+          <a
+            href="#sp-education"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("sp-education")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Avaa rajattu koulutuksen, työn ja toimeentulon arvio alempana
+          </a>
+          . Se ei muuta koko teemajakson kattavuusluokitusta.
+        </p>
+      )}
       <article aria-live="polite">
         <h4>
           {title.name} · {cell.start}–{cell.end}
