@@ -205,3 +205,63 @@
     font-size: 13px;
   }
 }
+.sp-fiscal-toggle {
+  font-size: 12px;
+  margin: 8px 0;
+}
+.sp-fiscal-toggle input {
+  accent-color: #06716c;
+}
+.sp-fiscal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 22px 0;
+  font-size: 14px;
+}
+.sp-fiscal-table caption {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.sp-fiscal-table th,
+.sp-fiscal-table td {
+  text-align: left;
+  padding: 9px;
+  border-bottom: 1px solid #ded6c9;
+}
+.sp-fiscal-table td {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.sp-fiscal-table tbody th {
+  font-weight: 400;
+}
+.sp-fiscal-bar {
+  position: relative;
+  height: 7px;
+  background: linear-gradient(
+    to right,
+    transparent 49.8%,
+    #777 49.8%,
+    #777 50.2%,
+    transparent 50.2%
+  );
+  margin-top: 6px;
+}
+.sp-fiscal-bar span {
+  position: absolute;
+  height: 7px;
+}
+.sp-fiscal-totals {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.sp-fiscal-totals span {
+  font-size: 13px;
+}
+.sp-fiscal-totals strong {
+  display: block;
+  font-size: 19px;
+}

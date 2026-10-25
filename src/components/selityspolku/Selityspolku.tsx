@@ -15,6 +15,7 @@ import {
   smooth,
 } from "./model";
 import "./selityspolku.css";
+import { FiscalChart, FiscalDetails, fiscalPoint } from "./Fiscal";
 const x = (year: number) => 60 + (year - 1850) * 4.8;
 const ticks = [1850, 1900, 1950, 1985, 2000, 2025, 2050];
 const evidence = [
@@ -40,6 +41,7 @@ export function Selityspolku() {
     income = change("real_income_components", year);
   const age = point("age_structure", year);
   const interpretation = reading(year);
+  const fiscal = fiscalPoint(year);
   const selectedParts = step < 3 ? parts(selected.id, year) : [];
   const sum = selectedParts.reduce((s, p) => s + (p.effect ?? 0), 0);
   return (
@@ -114,6 +116,13 @@ export function Selityspolku() {
             {year > 2025
               ? "Vuosille 2026–2050 ei ole tässä polussa laskettu skenaariokäyriä. Suuntaa ei jatketa huomaamatta ennusteeksi."
               : "Katkos tarkoittaa puuttuvaa laskentapohjaa, ei nollatasoa tai nollavaikutusta. Historiallinen konteksti ei korvaa havaintoja."}
+          </p>
+        )}
+        {fiscal && (
+          <p>
+            Julkisyhteisöjen tasapaino on {signed(fiscal.balance_pct!)} % BKT:sta; muutos vuodesta
+            1990 {signed(fiscal.change_pp!)} prosenttiyksikköä. Avaa vaihe 4 nähdäksesi tulo- ja
+            menoerät. Tämä ei ole kolmen muun mallin yhteenlaskettu seuraus.
           </p>
         )}
         {interpretation && (
@@ -204,6 +213,7 @@ export function Selityspolku() {
           );
         })}
       </div>
+      <FiscalChart year={year} active={step === 3} onOpen={() => setStep(3)} />
       <section className="sp-explain">
         <h2>Avaa yksi vaihe kerrallaan</h2>
         <div className="sp-steps" role="group" aria-label="Selityspolun vaiheet">
@@ -216,7 +226,7 @@ export function Selityspolku() {
         <article aria-live="polite">
           <p className="sp-eyebrow">
             {step === 3
-              ? "HISTORIALLINEN TULKINTA · LASKENTAA PUUTTUU"
+              ? "JULKISEN TALOUDEN KIRJANPIDOLLINEN OSITTELU"
               : "LASKENNALLINEN OSITTELU · EI SYYVAIKUTUS"}
           </p>
           <h3>
@@ -225,24 +235,12 @@ export function Selityspolku() {
                 "Mistä tuotannon muutos koostuu?",
                 "Selittääkö ikärakenne työllisten osuuden muutoksen?",
                 "Miksi reaalitulo kulkee eri tahtia kuin tuotanto?",
-                "Mitä siirtyi julkisen talouden kannettavaksi?",
+                "Mistä julkisen tasapainon muutos koostui?",
               ][step]
             }
           </h3>
           {step === 3 ? (
-            <>
-              <p>
-                Työtulojen heikkeneminen voi pienentää veropohjaa ja lisätä tulonsiirtojen tarvetta.
-                Palvelutarpeisiin vaikuttavat lisäksi esimerkiksi väestörakenne, terveys ja
-                politiikkapäätökset. Tämä on selvitettävä välitysketju, ei kolmen mallin
-                yhteenlaskettu tulos.
-              </p>
-              <p>
-                <strong>Tässä ei vielä ole julkisen talouden laskentamallia.</strong> Menojen,
-                veropohjan ja tulonsiirtojen erittely sekä väestöryhmien jakautuminen ovat seuraava
-                laskentavaihe.
-              </p>
-            </>
+            <FiscalDetails year={year} />
           ) : step === 1 ? (
             <p>
               {age?.effect != null
@@ -334,7 +332,7 @@ export function Selityspolku() {
           eivät erittele yksittäisten politiikkapäätösten syyvaikutuksia.
         </p>
         <p>
-          Väestöryhmien tulonjakovaikutus ja julkisen talouden seuraukset puuttuvat tästä
+          Väestöryhmien tulonjakovaikutus ja päätösten erilliset syyvaikutukset puuttuvat tästä
           laskentapohjasta. Ryhmävalintaa ei siksi esitetä valmiina vaikutusarviona.
         </p>
       </details>

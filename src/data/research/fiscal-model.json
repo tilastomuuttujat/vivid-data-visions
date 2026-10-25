@@ -1,0 +1,4754 @@
+{
+  "model": "fiscal_balance_v1",
+  "release_id": "649a1ee96de54457ad19d990e3cd7b06b5f54f368a5ff14a3f965c042f73b358",
+  "input_sha256": "3346f7aae75b02a4fce65aed6e81fc5e21ed1d1de22ad500a2592804f8560a27",
+  "formula_sha256": "731f7ae2d103ff4c6fa0d33ba019e8334b12cf10183a4f44691b78085784fb2e",
+  "engine_sha256": "a4dd0f60934f81a99c5e90bf740b42fd16595ab334e5a65a82410acf0f349781",
+  "formula": "balance=OTRS-OTES; parts=[D2R,D5R,D61R,other_revenue,-D62K,-D1K,-P2K-D632K,-D411K+D411KS13,-other_expenditure]; numerator_i=100*(ci_t-ci_b)*(1/Gt+1/Gb)/2; denominator=50*(Bt+Bb)*(1/Gt-1/Gb); baseline=1990",
+  "baseline": 1990,
+  "sector": "S13 Julkisyhteisöt, sulautettu",
+  "unit": "prosenttia BKT:sta; muutos prosenttiyksikköinä",
+  "source_vintage": "2026-09-18",
+  "sources": [
+    {
+      "title": "Tilastokeskus 15ah, julkisyhteisöjen tulot ja menot",
+      "url": "https://pxdata.stat.fi/PxWeb/fi/StatFin/StatFin__ntp/15ah.px/"
+    },
+    {
+      "title": "Tilastokeskus 15ai, BKT käyvin hinnoin",
+      "url": "https://pxdata.stat.fi/PxWeb/fi/StatFin/StatFin__ntp/15ai.px/"
+    }
+  ],
+  "points": [
+    {
+      "year": 1850,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1851,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1852,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1853,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1854,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1855,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1856,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1857,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1858,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1859,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1860,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1861,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1862,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1863,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1864,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1865,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1866,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1867,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1868,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1869,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1870,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1871,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1872,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1873,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1874,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1875,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1876,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1877,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1878,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1879,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1880,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1881,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1882,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1883,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1884,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1885,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1886,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1887,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1888,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1889,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1890,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1891,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1892,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1893,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1894,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1895,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1896,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1897,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1898,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1899,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1900,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1901,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1902,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1903,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1904,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1905,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1906,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1907,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1908,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1909,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1910,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1911,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1912,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1913,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1914,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1915,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1916,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1917,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1918,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1919,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1920,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1921,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1922,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1923,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1924,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1925,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1926,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1927,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1928,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1929,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1930,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1931,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1932,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1933,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1934,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1935,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1936,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1937,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1938,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1939,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1940,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1941,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1942,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1943,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1944,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1945,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1946,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1947,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1948,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1949,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1950,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1951,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1952,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1953,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1954,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1955,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1956,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1957,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1958,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1959,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1960,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1961,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1962,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1963,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1964,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1965,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1966,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1967,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1968,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1969,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1970,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1971,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1972,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1973,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1974,
+      "status": "not_computable",
+      "reason": "no_source",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 1975,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 4.955079093865403,
+      "revenue_pct": 43.53194069338037,
+      "expenditure_pct": 38.57686159951496,
+      "change_pp": -0.35361445523094315,
+      "balance_million_euros": 899.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -37.09490243949536
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -41.64003618163634
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -31.217631316930508
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -23.87269518963068
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 37.66345735123954
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 36.47015314693925
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 21.003476216410043
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 3.7319679962743058
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 21.9653917938377
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 12.637204167761105
+        }
+      ]
+    },
+    {
+      "year": 1976,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 7.647858599592114,
+      "revenue_pct": 47.4701369330873,
+      "expenditure_pct": 39.82227833349519,
+      "change_pp": 2.3391650504957684,
+      "balance_million_euros": 1575.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -32.494108127012154
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -34.6677266492076
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -26.911183840551256
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -20.881625611173487
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 32.66978414455946
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 31.484715416020023
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 18.22564243062782
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 3.3170014160626353
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 19.56852181899788
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 12.028144052172443
+        }
+      ]
+    },
+    {
+      "year": 1977,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 6.279296011320421,
+      "revenue_pct": 47.943751658264794,
+      "expenditure_pct": 41.66445564694437,
+      "change_pp": 0.9706024622240752,
+      "balance_million_euros": 1420.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -28.813297763109958
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -31.932874889900628
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -24.009701125396884
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -18.883104024113454
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 28.932007335191372
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 28.332938099338648
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 16.357074757729855
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 2.962217926589727
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 17.643555236565653
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 10.381786909329742
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 3.836021076161584,
+      "revenue_pct": 45.12214593645218,
+      "expenditure_pct": 41.2861248602906,
+      "change_pp": -1.472672472934762,
+      "balance_million_euros": 961.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -25.612988385064916
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -29.899638399023306
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -22.077265778539857
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -16.795318760152885
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 25.750446283374746
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 25.457711870307516
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 14.649448236538323
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 2.6575193673233724
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 16.02402721963662
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 8.373385872665626
+        }
+      ]
+    },
+    {
+      "year": 1979,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 3.406744666207846,
+      "revenue_pct": 43.737095664143155,
+      "expenditure_pct": 40.330350997935305,
+      "change_pp": -1.9019488828885,
+      "balance_million_euros": 990.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -21.76484950233899
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -25.962534568556244
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -18.83396176816567
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -14.425143813274428
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 22.34603250772115
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 21.678580149977577
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 12.574893229733563
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 2.231651930822909
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 13.439856999462483
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 6.813525951729147
+        }
+      ]
+    },
+    {
+      "year": 1980,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 3.7017231134878195,
+      "revenue_pct": 43.79382055852644,
+      "expenditure_pct": 40.09209744503862,
+      "change_pp": -1.6069704356085264,
+      "balance_million_euros": 1246.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -18.391295056478697
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -21.95273871575033
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -15.770072523254777
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -12.351086610354013
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 19.25011175602877
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 18.38111950316649
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 10.545943452768906
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 1.868231588120775
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 11.127985102227013
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 5.684831067917331
+        }
+      ]
+    },
+    {
+      "year": 1981,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 5.107590446914164,
+      "revenue_pct": 46.14960195475684,
+      "expenditure_pct": 41.04201150784267,
+      "change_pp": -0.2011031021821817,
+      "balance_million_euros": 1944.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -15.57200484380018
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -17.903054031259078
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -13.404930339391946
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -10.544690129360442
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 16.576349777485508
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 15.490017502274847
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 8.917986739550994
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 1.5894364163888421
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 9.475127992189053
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 5.174657813740221
+        }
+      ]
+    },
+    {
+      "year": 1982,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 3.0543092166760144,
+      "revenue_pct": 45.788932510749675,
+      "expenditure_pct": 42.73462329407366,
+      "change_pp": -2.2543843324203316,
+      "balance_million_euros": 1307.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -13.318794147157327
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -15.401144315675733
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -11.851527609273896
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -8.89122287300557
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 13.683033615578038
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 13.006097999739547
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 7.685109161536987
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 1.2937373571735638
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 7.743524925340308
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 3.796801553323748
+        }
+      ]
+    },
+    {
+      "year": 1983,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 1.5187699011228424,
+      "revenue_pct": 45.89827383945031,
+      "expenditure_pct": 44.37950393832747,
+      "change_pp": -3.7899236479735037,
+      "balance_million_euros": 725.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -11.344169468214016
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -13.086600678944903
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -10.478543697163474
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -7.370595818077951
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 11.168488961174239
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 10.777200559131096
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 6.551285817065168
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 0.9183299231624749
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 6.31012439376511
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 2.764556360128752
+        }
+      ]
+    },
+    {
+      "year": 1984,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 3.229669548295348,
+      "revenue_pct": 47.59926649451742,
+      "expenditure_pct": 44.369596946222075,
+      "change_pp": -2.0790240008009975,
+      "balance_million_euros": 1726.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -8.86849777972307
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -10.56466667345004
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -8.70660425133757
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -5.9395616515010135
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 9.202681668592218
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 8.792749431579395
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 5.326148557710086
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 0.6059867851493907
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 5.542996770042956
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 2.529743142136648
+        }
+      ]
+    },
+    {
+      "year": 1985,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 3.3370545298411334,
+      "revenue_pct": 49.61099184199227,
+      "expenditure_pct": 46.27393731215114,
+      "change_pp": -1.9716390192552122,
+      "balance_million_euros": 1943.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -7.35891955350853
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -8.501136540665549
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -6.834992649411847
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -4.764636334836241
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 7.256105940607837
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 6.984283648966278
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 4.3378894210155545
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 0.332383734857036
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 4.484363609257638
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 2.0930197044626095
+        }
+      ]
+    },
+    {
+      "year": 1986,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 3.8308124321909505,
+      "revenue_pct": 50.76105686387134,
+      "expenditure_pct": 46.930244431680386,
+      "change_pp": -1.4778811169053956,
+      "balance_million_euros": 2401.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -5.9300021385589705
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -6.447412004772705
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -5.911138237186595
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -4.035527472161808
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 5.8262506810109045
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 5.746752810941607
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 3.499253704575698
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 0.31664405875059265
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 3.6636391308206866
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 1.7936583496751957
+        }
+      ]
+    },
+    {
+      "year": 1987,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 1.6279138476083552,
+      "revenue_pct": 49.366265843353915,
+      "expenditure_pct": 47.73835199574556,
+      "change_pp": -3.6807797014879906,
+      "balance_million_euros": 1102.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -4.56053208145673
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -6.548357223176428
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -4.900639558717909
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -3.2696696109427057
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 4.478081783938867
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 4.3943432005222895
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 2.6641752385459085
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 0.2099906014908042
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 2.731166105279171
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 1.1206618430287412
+        }
+      ]
+    },
+    {
+      "year": 1988,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 5.094578211161663,
+      "revenue_pct": 51.51807480217445,
+      "expenditure_pct": 46.423496591012785,
+      "change_pp": -0.2141153379346829,
+      "balance_million_euros": 3908.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -1.683276280438039
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -3.2391954689942564
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -3.4146118408314825
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -2.312852847853837
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 3.286053266950776
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 2.938824969272979
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 1.9175652702206356
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 0.05887261794537039
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 1.342055392754668
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 0.8924495830385034
+        }
+      ]
+    },
+    {
+      "year": 1989,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 6.732963808281709,
+      "revenue_pct": 51.12371326098095,
+      "expenditure_pct": 44.39074945269924,
+      "change_pp": 1.4242702591853627,
+      "balance_million_euros": 5782.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -0.17431303901963918
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -1.6265443965663733
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": -2.0057318515766274
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": -1.2643354843177725
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 2.0351613256968264
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 1.5586302255197608
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 1.1534090049416386
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 0.04753991973262887
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 1.3548877123799228
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 0.3455668423949982
+        }
+      ]
+    },
+    {
+      "year": 1990,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 5.308693549096346,
+      "revenue_pct": 53.18917373906161,
+      "expenditure_pct": 47.88048018996526,
+      "change_pp": 0.0,
+      "balance_million_euros": 4829.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 0.0
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 0.0
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 0.0
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 0.0
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": 0.0
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": 0.0
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": 0.0
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": 0.0
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": 0.0
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 0.0
+        }
+      ]
+    },
+    {
+      "year": 1991,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -0.8997503250376814,
+      "revenue_pct": 55.78567072819946,
+      "expenditure_pct": 56.68542105323714,
+      "change_pp": -6.208443874134027,
+      "balance_million_euros": -782.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -0.6041013355578118
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -0.6850981626717082
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 0.2204913626989406
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 1.1834536406085994
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -2.8405137286470663
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -1.627811233802893
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -0.7987187118175909
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -0.39260962031597074
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -0.7672199457177422
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 0.10368386108921585
+        }
+      ]
+    },
+    {
+      "year": 1992,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -5.321633288514613,
+      "revenue_pct": 56.48692001037907,
+      "expenditure_pct": 61.808553298893685,
+      "change_pp": -10.630326837610959,
+      "balance_million_euros": -4512.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -1.2567449656227703
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -2.04178329863645
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 0.7508566929695427
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 1.9893714505687734
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -6.02394436377841
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -1.6692034221553567
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -0.781620169009266
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -0.9662010252476059
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -0.6437542208312468
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 0.01269648413183102
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -7.980376124284546,
+      "revenue_pct": 56.14531012732157,
+      "expenditure_pct": 64.12568625160613,
+      "change_pp": -13.289069673380892,
+      "balance_million_euros": -6832.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -1.4035353577405256
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -2.6959669472592647
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 1.3547857451534153
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 2.3853298810065153
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -7.642352056970019
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -0.6042684536960421
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -0.8287434139808758
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -2.7889313247509637
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -0.9965327782341857
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -0.06885496690894623
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -6.389691767976524,
+      "revenue_pct": 56.156918121042295,
+      "expenditure_pct": 62.54660988901882,
+      "change_pp": -11.69838531707287,
+      "balance_million_euros": -5792.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": -0.5693536535832275
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": -0.38213871913613146
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 2.8632872327202934
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 0.8644924914174732
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -8.568937676075617
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -0.6112016977537549
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -1.2455299462333276
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -2.0009972699433742
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -2.046149107074733
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -0.0018569714104714379
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -5.832165275153879,
+      "revenue_pct": 55.18516261401263,
+      "expenditure_pct": 61.017327889166516,
+      "change_pp": -11.140858824250225,
+      "balance_million_euros": -5742.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 0.020092868275083737
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 1.145293491679773
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 2.9441339619912172
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 2.1816624869209345
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -8.37661103194412
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -1.3271868255384258
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -1.988136439850391
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.806243105991738
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -3.9720428021691854
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 0.03817857237662746
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -3.143846161389333,
+      "revenue_pct": 56.31465918785609,
+      "expenditure_pct": 59.45850534924542,
+      "change_pp": -8.452539710485679,
+      "balance_million_euros": -3206.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 0.6281446815325619
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 3.401757041875844
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 2.8380907879178165
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 2.538578092087721
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -8.359316142646907
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -2.078909301959588
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -2.6196961138750385
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.9561922946403125
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -2.7486529690241075
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -0.09634349175366826
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -1.176374995485898,
+      "revenue_pct": 54.87703586002672,
+      "expenditure_pct": 56.053410855512624,
+      "change_pp": -6.485068544582243,
+      "balance_million_euros": -1303.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 2.438626509839402
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 4.294625503781213
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 3.0092410872648783
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 2.6718777318396407
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -8.080703278909546
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -2.4696599342257
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -3.1533963489302614
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -2.172339707040847
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -2.6768831228696888
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -0.34645698533133473
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 1.6756482965349453,
+      "revenue_pct": 53.98609992443806,
+      "expenditure_pct": 52.31045162790311,
+      "change_pp": -3.6330452525614003,
+      "balance_million_euros": 2018.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 3.3065186580822137
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 6.265693657889085
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 3.723331048012624
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 2.752698491832085
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -7.876982294888588
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -2.879092989704501
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -3.4435264344019316
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.4974371045648076
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -3.063378097289474
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -0.9208701875281055
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 1.6841624109450855,
+      "revenue_pct": 52.65903789168401,
+      "expenditure_pct": 50.974875480738916,
+      "change_pp": -3.6245311381512604,
+      "balance_million_euros": 2137.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 3.9853139141509755
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 6.7494589424598095
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 4.286359412283621
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 2.376277631028216
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -8.080098918532004
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -3.206747970704479
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -3.9022668801833493
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.1702082059074614
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -3.578572190968624
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -1.0840468717779652
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 6.888536946607423,
+      "revenue_pct": 54.820876042995614,
+      "expenditure_pct": 47.93233909638819,
+      "change_pp": 1.5798433975110773,
+      "balance_million_euros": 9395.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 4.4769174206220965
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 11.354474145793906
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 4.300992708227614
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 4.043519561441939
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -7.576674202031134
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -3.7842138655688213
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -4.4567593806602295
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.3881559337377152
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -2.7863908874563643
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -2.603866169120215
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 4.979497002344187,
+      "revenue_pct": 52.25878724595991,
+      "expenditure_pct": 47.27929024361572,
+      "change_pp": -0.3291965467521582,
+      "balance_million_euros": 7201.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 4.670502283546948
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 9.806622126036459
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 5.093139760125583
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 4.776161652691607
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -8.060556280001844
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -4.460078963640212
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -5.379673642551776
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.6520469158635196
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -2.670137616859087
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -2.4531289502363145
+        }
+      ]
+    },
+    {
+      "year": 2002,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 4.083804904338454,
+      "revenue_pct": 52.543115063325246,
+      "expenditure_pct": 48.459310158986796,
+      "change_pp": -1.2248886447578926,
+      "balance_million_euros": 6062.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 5.504306022983191
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 10.247104738228813
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 5.2658363305717755
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 5.233922170992552
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -9.164682825833504
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -5.282679914794143
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -6.479460899015001
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.321778109239481
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -2.909507548305819
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -2.317948610346276
+        }
+      ]
+    },
+    {
+      "year": 2003,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 2.4407767246266,
+      "revenue_pct": 51.77570955877506,
+      "expenditure_pct": 49.33493283414846,
+      "change_pp": -2.867916824469746,
+      "balance_million_euros": 3703.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 6.413143563203271
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 9.135256597433779
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 5.3167369244159834
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 5.659638760123315
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -9.899312226227808
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -6.000782124878301
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -7.268639681519255
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.18345095092838
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -3.1626100077930035
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -1.8778976782993477
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 2.2149287203683987,
+      "revenue_pct": 51.33834359113273,
+      "expenditure_pct": 49.12341487076433,
+      "change_pp": -3.093764828727947,
+      "balance_million_euros": 3516.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 6.560937547127398
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 9.88377399857845
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 5.758545606730162
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 6.4269173415653595
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -10.480380074951395
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -6.642214316952117
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -7.972905261210033
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.138739424033577
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -3.531216254937835
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -1.958483990644358
+        }
+      ]
+    },
+    {
+      "year": 2005,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 2.6593225073785725,
+      "revenue_pct": 51.67794201595958,
+      "expenditure_pct": 49.018619508581004,
+      "change_pp": -2.6493710417177736,
+      "balance_million_euros": 4379.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 7.242067045315373
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 10.521348729673448
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 6.638774786444398
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 6.9254879391751585
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -10.937765451496697
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -7.362384171907746
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -8.678192747832844
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.041041804558119
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -3.6922851543630992
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -2.2653802121676474
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 3.9881754704647085,
+      "revenue_pct": 52.05164843429114,
+      "expenditure_pct": 48.06347296382643,
+      "change_pp": -1.320518078631637,
+      "balance_million_euros": 6894.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 7.920222426217792
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 11.301060936720672
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 7.698748141658794
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 7.973913161868458
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -11.232269681668257
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -7.809485283938293
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -9.456280816473567
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -0.9387489561421151
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -3.724794785764961
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -3.0528832211101604
+        }
+      ]
+    },
+    {
+      "year": 2007,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 5.111756183877814,
+      "revenue_pct": 51.681555017400925,
+      "expenditure_pct": 46.569798833523116,
+      "change_pp": -0.19693736521853186,
+      "balance_million_euros": 9562.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 8.354267174626697
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 13.303431123765023
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 8.401651048685796
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 9.393444550543492
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -11.44483951196415
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -8.368972514851935
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -10.357461298642407
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.0081327687746278
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -4.406700287496226
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -4.063624881110195
+        }
+      ]
+    },
+    {
+      "year": 2008,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": 4.179600829845613,
+      "revenue_pct": 52.05582410567662,
+      "expenditure_pct": 47.876223275831,
+      "change_pp": -1.129092719250732,
+      "balance_million_euros": 8119.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 8.604919382102423
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 13.780622627030471
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 9.064138958956324
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 11.112468108438218
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -12.388436739380248
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -9.46686403602152
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -11.80654339155659
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.0362705389813835
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -5.208792880518574
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -3.7843342093198538
+        }
+      ]
+    },
+    {
+      "year": 2009,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -2.4816353481717885,
+      "revenue_pct": 51.61086196935098,
+      "expenditure_pct": 54.09249731752276,
+      "change_pp": -7.790328897268134,
+      "balance_million_euros": -4510.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 8.230618034849575
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 10.377556480055853
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 9.029018501603197
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 9.818346235780073
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -14.975782308724698
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -10.383330037150147
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -13.109273779526923
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -0.9394402186284866
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -5.750462865915547
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -0.08757893961103537
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -2.5745826401696545,
+      "revenue_pct": 51.443286366511295,
+      "expenditure_pct": 54.01786900668095,
+      "change_pp": -7.883276189266001,
+      "balance_million_euros": -4844.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 9.78175017407771
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 9.97908124627901
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 9.437643924206018
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 10.272631601619787
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -15.904721335894108
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -10.827115606152368
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -13.725109947488829
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.144846385829035
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -5.75684863529415
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 0.00425877520996468
+        }
+      ]
+    },
+    {
+      "year": 2011,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -1.0128759707571273,
+      "revenue_pct": 52.819306367154894,
+      "expenditure_pct": 53.832182337912016,
+      "change_pp": -6.321569519853473,
+      "balance_million_euros": -2002.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 12.023457727310701
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 11.650232904667211
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 10.20067585156153
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 11.08678381757962
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -16.61211646075765
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -11.472048150630965
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -14.393636009603659
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.3066881962658092
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -6.6594545235979234
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -0.8387764801165305
+        }
+      ]
+    },
+    {
+      "year": 2012,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -2.150934733353961,
+      "revenue_pct": 53.54629749772929,
+      "expenditure_pct": 55.697232231083255,
+      "change_pp": -7.459628282450307,
+      "balance_million_euros": -4310.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 12.791937448239976
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 11.519616792386044
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 11.348588764526282
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 11.422114832578142
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -18.295203802643353
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -12.312419613119147
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -15.334181170772236
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.4009912749446882
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -7.043317801533107
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -0.15577245716821628
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -2.521904499820636,
+      "revenue_pct": 54.584588470591704,
+      "expenditure_pct": 57.10649297041234,
+      "change_pp": -7.830598048916982,
+      "balance_million_euros": -5132.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 13.73607216723293
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 12.788784271970949
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 11.591749610032004
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 11.749233239974803
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -20.087116536390713
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -12.71322394447314
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -16.228767602792164
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.2026022650177295
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -7.556828121649106
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 0.09210113219519016
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -2.9948264555148043,
+      "revenue_pct": 54.6302008695441,
+      "expenditure_pct": 57.6250273250589,
+      "change_pp": -8.30352000461115,
+      "balance_million_euros": -6165.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 14.003696929911685
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 13.301491062013005
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 11.85665889815376
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 11.622061903912217
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -21.46007707121052
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -12.712620904170208
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -16.43526307292878
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.2245012030513076
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -7.664822740912101
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 0.4098561936710991
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -2.426828804140976,
+      "revenue_pct": 53.31649158864276,
+      "expenditure_pct": 55.743320392783744,
+      "change_pp": -7.735522353237322,
+      "balance_million_euros": -5101.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 14.076592742550751
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 13.956885788490792
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 12.296739346659251
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 9.823845690420615
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -22.34109784719032
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -12.576318088049288
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -15.179944338853405
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.1293406060656697
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -6.747691989379817
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 0.08480694817976285
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -1.701303096186207,
+      "revenue_pct": 53.40237440720944,
+      "expenditure_pct": 55.10367750339565,
+      "change_pp": -7.009996645282553,
+      "balance_million_euros": -3670.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 15.125025979461777
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 14.408433428536101
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 12.979937045665725
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 9.699396665310234
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -22.705121665371323
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -12.210205679622334
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -15.522785639681155
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.0455843327574197
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -7.370666238092663
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -0.36842620873149895
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -0.6292666862478082,
+      "revenue_pct": 52.220234439667834,
+      "expenditure_pct": 52.849501125915644,
+      "change_pp": -5.937960235344154,
+      "balance_million_euros": -1414.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 15.396516421324495
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 15.401921688135733
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 12.333274501298703
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 10.117115108691184
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -22.74536274168887
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -11.5332950132355
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -15.790328717571825
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -0.9127179101261624
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -7.0878491514788875
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -1.117234420693027
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -0.8719087557404972,
+      "revenue_pct": 51.794053599534294,
+      "expenditure_pct": 52.665962355274786,
+      "change_pp": -6.180602304836843,
+      "balance_million_euros": -2022.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 16.403638086686108
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 15.351386984787654
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 12.694357293302971
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 10.443687845533256
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -22.810508068572563
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -12.103566129182528
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -16.57582463063313
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -0.8448619756333784
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -7.801198351092988
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -0.9377133600322459
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -0.9341014095372258,
+      "revenue_pct": 51.665283123286294,
+      "expenditure_pct": 52.59938453282352,
+      "change_pp": -6.242794958633572,
+      "balance_million_euros": -2228.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 16.784233336992127
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 15.939896423590849
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 13.069758354654851
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 11.037882832836669
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -23.188133991332393
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -12.778948068834087
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -17.40230010633443
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -0.6674209953954345
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -8.153318143977447
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -0.8844446008342755
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -5.5341452787166805,
+      "revenue_pct": 50.91862073633491,
+      "expenditure_pct": 56.45276601505159,
+      "change_pp": -10.842838827813026,
+      "balance_million_euros": -13082.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 16.488801478751558
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 15.621049946770357
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 12.356325104079682
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 10.325482045021923
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -25.290390043925793
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -13.199718698321059
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -18.314885623683928
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -0.3524289116730667
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -11.267829761331333
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 2.7907556364986332
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -2.6523130356482447,
+      "revenue_pct": 52.46136900837742,
+      "expenditure_pct": 55.113682044025666,
+      "change_pp": -7.961006584744591,
+      "balance_million_euros": -6598.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 17.452884837580935
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 18.528583072946674
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 14.35190129934236
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 11.312472021606222
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -25.170437913502205
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -14.181501090390494
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -20.09896737747224
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -0.11034727187631817
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -10.662398977763424
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 0.6168048147838967
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -0.1795467292006218,
+      "revenue_pct": 52.54960119547256,
+      "expenditure_pct": 52.729147924673185,
+      "change_pp": -5.488240278296968,
+      "balance_million_euros": -477.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 18.46672552688339
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 20.794712062917156
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 15.400866871663007
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 12.650079611335311
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -25.051496318504732
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -14.899851702735297
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -21.223415764164578
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -0.23611907813971647
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -9.816650673658712
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": -1.5730908138927937
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "status": "computed",
+      "preliminary": false,
+      "balance_pct": -2.9585495077639465,
+      "revenue_pct": 53.095128971345815,
+      "expenditure_pct": 56.053678479109756,
+      "change_pp": -8.267243056860293,
+      "balance_million_euros": -8069.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 17.718715681674333
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 20.573735645275107
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 16.723306924146772
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 15.664127502477164
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -27.114260198602377
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -16.6822591403312
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -24.287094088305025
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -1.3956246497293647
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -10.654831884698552
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 1.186941151232851
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "status": "computed",
+      "preliminary": true,
+      "balance_pct": -4.445756126177345,
+      "revenue_pct": 53.417514330927645,
+      "expenditure_pct": 57.86327045710499,
+      "change_pp": -9.75444967527369,
+      "balance_million_euros": -12277.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 18.342012625383862
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 20.92367592985305
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 15.637586956026238
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 17.533827056535028
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -29.01941545722757
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -17.370874631712887
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -25.08444322553592
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -2.236759517401697
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -11.22544910366706
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 2.7453896924732644
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "status": "computed",
+      "preliminary": true,
+      "balance_pct": -3.813217972695301,
+      "revenue_pct": 53.665764080870744,
+      "expenditure_pct": 57.47898205356604,
+      "change_pp": -9.121911521791647,
+      "balance_million_euros": -10745.0,
+      "source_identity_residual_million": 0.0,
+      "parts": [
+        {
+          "key": "production_taxes",
+          "label": "Tuotannon ja tuonnin verot",
+          "value_pp": 19.007369620790293
+        },
+        {
+          "key": "income_taxes",
+          "label": "Tulo- ja varallisuusverot pl. pääomaverot",
+          "value_pp": 21.248321121164253
+        },
+        {
+          "key": "contributions",
+          "label": "Sosiaaliturvamaksut",
+          "value_pp": 16.572279882064663
+        },
+        {
+          "key": "other_revenue",
+          "label": "Muut tulot",
+          "value_pp": 17.946516850171992
+        },
+        {
+          "key": "benefits",
+          "label": "Rahamääräiset sosiaalietuudet",
+          "value_pp": -29.134550833382285
+        },
+        {
+          "key": "staff",
+          "label": "Palkansaajakorvaukset",
+          "value_pp": -18.122477350850286
+        },
+        {
+          "key": "purchases",
+          "label": "Välituotekäyttö ja ostetut luontoisetuudet",
+          "value_pp": -25.065646032573497
+        },
+        {
+          "key": "interest",
+          "label": "Todelliset korkomenot, julkisyhteisöjen väliset korot vähennetty",
+          "value_pp": -2.3929173873233944
+        },
+        {
+          "key": "other_expenditure",
+          "label": "Muut menot",
+          "value_pp": -11.382899331068899
+        },
+        {
+          "key": "gdp_denominator",
+          "label": "BKT:n nimittäjävaikutus",
+          "value_pp": 2.2020919392155083
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2027,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2028,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2029,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2030,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2031,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2032,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2033,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2034,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2035,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2036,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2037,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2038,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2039,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2040,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2041,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2042,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2043,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2044,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2045,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2046,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2047,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2048,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2049,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    },
+    {
+      "year": 2050,
+      "status": "not_computable",
+      "reason": "no_scenario",
+      "balance_pct": null,
+      "revenue_pct": null,
+      "expenditure_pct": null,
+      "change_pp": null,
+      "parts": []
+    }
+  ],
+  "checks": {
+    "accounting_identity": true,
+    "component_reconciliation": true,
+    "ratio_reconciliation": true,
+    "source_gdp_ratio": true
+  },
+  "limitations": [
+    "Kirjanpidollinen osittelu, ei suhdanteen ja päätösten syyvaikutusten erottelu.",
+    "Verokertymä ei erottele veropohjaa, verokantoja eikä maksujen ajoitusta.",
+    "Rahamääräiset sosiaalietuudet sisältävät myös eläkkeitä; eivät yksin työttömyysmenoja.",
+    "Palkansaajakorvaukset ja ostot eivät mittaa palvelutarvetta tai laatua.",
+    "Muut menot sisältävät esimerkiksi investointeja ja pääomansiirtoja; eivät selittämätön kausaalinen vaikutus.",
+    "S13 sisältää valtion, paikallishallinnon ja sosiaaliturvarahastot; ei valtion budjettivaje eikä velan muutos.",
+    "Käypähintaisten erien muutoksissa näkyy myös hintojen muutos. Ei inflaatiosta puhdistettua menotarpeen arviota.",
+    "Lähteen euromäärät pyöristetty; tulot miinus menot täsmäytetään B9-sarjaan enintään2milj.euron toleranssilla.",
+    "Puuttuvia vuosia ei interpoloida eikä tulevaisuutta ekstrapoloida."
+  ]
+}
