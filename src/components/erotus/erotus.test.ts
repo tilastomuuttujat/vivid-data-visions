@@ -35,3 +35,9 @@ describe("rounded curve and factors", () => {
     expect(factorsFor(ob("huoltosuhde"), sample(ob("huoltosuhde"))).map((f) => f.label)).toContain("Demografinen osinko");
   });
 });
+
+import { readShadow } from "./Erotus";
+describe("varjon luenta", () => {
+  it("hyöty on kannatustyyny, ilman sitä putoaisi", () => { expect(readShadow("X", 0.18)).toContain("+18"); expect(readShadow("X", 0.18)).toContain("putoaisi"); });
+  it("kustannus on painolasti, ilman sitä nousisi", () => { expect(readShadow("X", -0.08)).toContain("−8"); expect(readShadow("X", -0.08)).toContain("nousisi"); });
+});
