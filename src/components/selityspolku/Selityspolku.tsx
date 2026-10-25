@@ -1,3 +1,4 @@
+import { EducationIncome } from "./EducationIncome";
 import { EducationAssessment } from "./EducationAssessment";
 import { ThemeCoverage } from "./ThemeCoverage";
 import { LongView } from "./LongView";
@@ -102,6 +103,7 @@ export function Selityspolku() {
       <LongView onYear={setYear} />
       <ThemeCoverage onYear={setYear} />
       <EducationAssessment onYear={setYear} />
+      <EducationIncome onYear={setYear} />
       <Recovery year={year} onYear={setYear} />
       <section className="sp-summary" aria-live="polite">
         <h2>

@@ -235,7 +235,11 @@ export function EducationAssessment({ onYear }: { onYear: (year: number) => void
           </div>
         </details>
         <h3>4. Mihin päätelmä päättyy?</h3>
-        <p>{assessment.conclusion.not_identified}</p>
+        <p>
+          Koulutuksen osuutta koko tuotannon tai kotitalouksien reaalitulon kasvusta ei tässä
+          tunnisteta. Seuraava täydentävä tulotarkastelu lisää koulutusryhmien mediaanit vuosilta
+          2010–2024, mutta ei erittele koulutuksen syyvaikutusta.
+        </p>
         <p>{assessment.conclusion.future}</p>
         <h3>Lähteet ja laskennan rajat</h3>
         <p>
