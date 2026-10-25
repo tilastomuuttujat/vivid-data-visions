@@ -61,9 +61,15 @@ export function Erotus() {
   const deb = DEBATES.find((d) => d.id === debate)!;
   const pair = mode !== "yksi";
   const idA = mode === "debatti" ? deb.a : sel, idB = mode === "debatti" ? deb.b : selB;
-  const obsA = OBSERVABLES.find((o) => o.id === idA)!, obsB = OBSERVABLES.find((o) => o.id === idB)!;
+  const bCost = mode === "debatti" && !!deb.bAsCost;
+  const obsA = OBSERVABLES.find((o) => o.id === idA)!;
+  const obsBRaw = OBSERVABLES.find((o) => o.id === idB)!;
+  const obsB = useMemo(() => (bCost && deb.bLabel ? { ...obsBRaw, label: deb.bLabel } : obsBRaw), [bCost, deb.bLabel, obsBRaw]);
   const sA = useMemo(() => sample(obsA, 1), [obsA]);
-  const sB = useMemo(() => sample(obsB, 1), [obsB]);
+  const sB = useMemo(() => {
+    const raw = sample(obsB, 1);
+    return bCost ? raw.map((p) => { const d = -Math.abs(p.delta); return { ...p, delta: d, value: p.total - d }; }) : raw;
+  }, [obsB, bCost]);
   const [hover, setHover] = useState<number | null>(null);
   const obs = obsA;
   const s = sA;

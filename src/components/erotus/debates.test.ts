@@ -8,3 +8,11 @@ describe("debates", () => {
     for (const d of DEBATES) { expect(ids.has(d.a)).toBe(true); expect(ids.has(d.b)).toBe(true); expect(d.a).not.toBe(d.b); }
   });
 });
+
+describe("sopeutus-debatti", () => {
+  it("lukee toimeentulon kustannukseksi kokonaisuuden alapuolelle", () => {
+    const d = DEBATES.find((x) => x.id === "sopeutus")!;
+    expect(d.a).toBe("tuottavuus");
+    expect(d.bAsCost).toBe(true);
+  });
+});
