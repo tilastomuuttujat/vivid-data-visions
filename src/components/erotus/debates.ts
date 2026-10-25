@@ -36,3 +36,15 @@ export const DEBATES: Debate[] = [
     claim: "Maahanmuutto on uhka – tai vaihtoehtoisesti ratkaisu kaikkeen.",
     reading: "Syntyvyyden pudotus painaa kokonaisuutta vuosikymmenten viiveellä. Maahanmuutto voi paikata työikäistä väestöä vain osin ja hitaasti, joten kumpikaan ei yksin ratkaise kantokyvyn kysymystä." },
 ];
+
+/** Cumulative area of a yearly net-impact series (points × years): stock, not flow. */
+export function cumulativeNet(s: { year: number; delta: number }[], upTo = Infinity) {
+  let gain = 0, cost = 0;
+  for (let i = 1; i < s.length; i++) {
+    const a = s[i - 1]!, b = s[i]!;
+    if (b.year > upTo) break;
+    const area = ((a.delta + b.delta) / 2) * (b.year - a.year) * 100;
+    if (area >= 0) gain += area; else cost -= area;
+  }
+  return { gain, cost, net: gain - cost };
+}
