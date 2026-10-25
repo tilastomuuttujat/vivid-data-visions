@@ -68,3 +68,9 @@
 .e-debate-card > div:last-child { border-color:var(--k-teal); }
 .e-debate-card h3 { margin:0 0 .4rem; font:600 .7rem system-ui,sans-serif; letter-spacing:.12em; text-transform:uppercase; color:var(--k-mute); }
 .e-debate-card p { margin:0; color:var(--k-ink); line-height:1.55; }
+
+.e-guide { display:flex; flex-wrap:wrap; gap:.4rem 1.4rem; align-items:center; margin:.6rem 0 .4rem; padding:.6rem .9rem; border:1px solid var(--k-line); border-radius:10px; font-size:.82rem; color:var(--k-ink); }
+.e-guide strong { color:var(--k-gold); font-weight:600; }
+.e-g { display:inline-block; width:22px; height:12px; vertical-align:middle; border-radius:3px; }
+.e-g-pos { background:repeating-linear-gradient(45deg, var(--k-teal) 0 2px, transparent 2px 6px); border-top:3px solid var(--k-ink); }
+.e-g-neg { background:repeating-linear-gradient(-45deg, var(--k-rose) 0 2px, transparent 2px 6px); border-bottom:3px solid var(--k-ink); }

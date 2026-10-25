@@ -51,6 +51,15 @@ function bands(s: Sample[]) {
   return out;
 }
 
+/** Plain-language reading of the shadow at one year: cushion below the total, ballast above it. */
+export function readShadow(label: string, delta: number): string {
+  const pts = Math.abs(delta * 100).toFixed(0);
+  if (Math.abs(delta) < 0.005) return `${label} ei vielä siirrä kokonaisuutta.`;
+  return delta > 0
+    ? `${label} kantaa kokonaisuutta +${pts} pistettä. Ilman sitä valkoinen viiva putoaisi varjon pohjalle.`
+    : `${label} painaa kokonaisuutta −${pts} pistettä. Ilman sitä valkoinen viiva nousisi varjon laelle.`;
+}
+
 export function Erotus() {
   const [mode, setMode] = useState<"yksi" | "pari" | "debatti">("yksi");
   const [sel, setSel] = useState("ict");
@@ -147,6 +156,13 @@ export function Erotus() {
         ))}
       </aside>
 
+      {!pair && (
+        <div className="e-guide" aria-label="Miten luet varjoa?">
+          <strong>Miten luet varjoa?</strong>
+          <span><i className="e-g e-g-pos" /> <b>Kannatustyyny</b> valkoisen viivan alla: tekijä kantaa kokonaisuutta. Ilman sitä kokonaisuus putoaisi varjon pohjalle (katkoviiva).</span>
+          <span><i className="e-g e-g-neg" /> <b>Painolasti</b> valkoisen viivan päällä: tekijä painaa kokonaisuutta. Ilman sitä kokonaisuus nousisi varjon laelle (katkoviiva).</span>
+        </div>
+      )}
       <div className="k-chart">
         <svg viewBox={`0 0 ${W} ${H}`} onPointerMove={onMove} onPointerLeave={() => setHover(null)} role="img" aria-label={`${obs.label}: vaikutus kokonaisuuteen`}>
           <defs>
@@ -230,7 +246,7 @@ export function Erotus() {
         <div><span className="e-sw e-sw-value" /> Kokonaisuus ilman: {obs.label}</div>
         {h ? (
           <strong className={Math.abs(h.delta) < 0.005 ? "" : h.delta >= 0 ? "pos" : "neg"}>
-            {h.year}: {h.delta >= 0 ? "+" : "−"}{Math.abs(h.delta * 100).toFixed(0)} pistettä. {whyAt(factors, h.year, h.delta)}
+            {h.year}: {readShadow(obs.label, h.delta)} {whyAt(factors, h.year, h.delta)}
           </strong>
         ) : <span className="e-hint">Vie osoitin kuvaajan päälle nähdäksesi vuoden vaikutuksen.</span>}
       </div>
