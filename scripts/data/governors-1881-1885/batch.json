@@ -1,0 +1,447 @@
+{
+  "batch_id": "governors_1881_1885_selected_20261026_v1",
+  "source_title": "Katsaus Suomenmaan taloudelliseen tilaan 1881–1885 (1890)",
+  "source_url": "https://otos.stat.fi/server/api/core/bitstreams/12e9d88e-cb40-4fbf-a1e5-6ba847a8588f/content",
+  "source_sha256": "e6c7a920ffb308facdc408d7932e3fb8f2e2acf8a4a2af5639080215720a3d3a",
+  "series": [
+    {
+      "key": "vaccinations",
+      "title": "Rokotukset ja niiden tarkastus",
+      "unit": "henkilöä vuodessa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.161 / PDF s.165",
+      "description": "Lähteen rokotukset yhteensä sekä tarkastuksessa todetut ja tarkastuksesta pois jääneet; osajoukot sisältyvät kokonaismäärään. Aiemman lapsi- ja henkilörajauksen jatkuvuus on varmistettava.",
+      "rows": [
+        [
+          1881,
+          "TOTAL",
+          "Rokotettuja yhteensä",
+          72857
+        ],
+        [
+          1882,
+          "TOTAL",
+          "Rokotettuja yhteensä",
+          57807
+        ],
+        [
+          1883,
+          "TOTAL",
+          "Rokotettuja yhteensä",
+          58787
+        ],
+        [
+          1884,
+          "TOTAL",
+          "Rokotettuja yhteensä",
+          60874
+        ],
+        [
+          1885,
+          "TOTAL",
+          "Rokotettuja yhteensä",
+          60796
+        ],
+        [
+          1881,
+          "SUCCESS",
+          "Todellisella vaksiiinirokolla",
+          60094
+        ],
+        [
+          1882,
+          "SUCCESS",
+          "Todellisella vaksiiinirokolla",
+          48138
+        ],
+        [
+          1883,
+          "SUCCESS",
+          "Todellisella vaksiiinirokolla",
+          50068
+        ],
+        [
+          1884,
+          "SUCCESS",
+          "Todellisella vaksiiinirokolla",
+          52505
+        ],
+        [
+          1885,
+          "SUCCESS",
+          "Todellisella vaksiiinirokolla",
+          52275
+        ],
+        [
+          1881,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          10786
+        ],
+        [
+          1882,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          7903
+        ],
+        [
+          1883,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          7097
+        ],
+        [
+          1884,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          7067
+        ],
+        [
+          1885,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          7123
+        ]
+      ],
+      "published": true,
+      "period": false
+    },
+    {
+      "key": "granary_stock",
+      "title": "Pitäjänmakasiinien varastot vuoden lopussa",
+      "unit": "tynnyriä",
+      "theme": "Ruokahuolto ja kriisivarautuminen",
+      "variable": 12,
+      "page": "liitetaulu s.142–143 / PDF s.285–286",
+      "description": "Lähteen koko maan summat: tilipäätöksen mukainen säästö ja siitä makasiineissa ollut määrä ovat päällekkäisiä, niitä ei summata. Fyysisesti makasiinissa ollut ei välttämättä ole vapaasti jaettavissa.",
+      "rows": [
+        [
+          1881,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          192046
+        ],
+        [
+          1882,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          197133
+        ],
+        [
+          1883,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          201860
+        ],
+        [
+          1884,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          207171
+        ],
+        [
+          1885,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          210823
+        ],
+        [
+          1881,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          109405
+        ],
+        [
+          1882,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          113857
+        ],
+        [
+          1883,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          115844
+        ],
+        [
+          1884,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          118483
+        ],
+        [
+          1885,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          119547
+        ],
+        [
+          1881,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          17504
+        ],
+        [
+          1882,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          19571
+        ],
+        [
+          1883,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          21103
+        ],
+        [
+          1884,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          24099
+        ],
+        [
+          1885,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          25164
+        ],
+        [
+          1881,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          69580
+        ],
+        [
+          1882,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          110661
+        ],
+        [
+          1883,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          136012
+        ],
+        [
+          1884,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          128149
+        ],
+        [
+          1885,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          125415
+        ],
+        [
+          1881,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          50391
+        ],
+        [
+          1882,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          63158
+        ],
+        [
+          1883,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          75245
+        ],
+        [
+          1884,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          68990
+        ],
+        [
+          1885,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          66877
+        ],
+        [
+          1881,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          12241
+        ],
+        [
+          1882,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          16106
+        ],
+        [
+          1883,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          17383
+        ],
+        [
+          1884,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          17963
+        ],
+        [
+          1885,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          19320
+        ]
+      ],
+      "published": true,
+      "period": false
+    },
+    {
+      "key": "health_staff",
+      "title": "Lääkärit ja kätilöt kaupungeissa ja maaseudulla 1885",
+      "unit": "henkilöä",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.159–160 / PDF s.163–164",
+      "description": "Lähteen 1885 vuoden lopun julkisten, yksityisten ja vapaasti harjoittavien lukumäärät. Alueelliset ryhmät sisältyvät kokonaisuuteen. Ei sama kuin kaikkien laillistettujen määrä.",
+      "rows": [
+        [
+          1885,
+          "DOCTOR_ALL",
+          "Lääkärit yhteensä",
+          181
+        ],
+        [
+          1885,
+          "DOCTOR_CITY",
+          "Lääkärit kaupungeissa",
+          146
+        ],
+        [
+          1885,
+          "DOCTOR_RURAL",
+          "Lääkärit maaseudulla",
+          35
+        ],
+        [
+          1885,
+          "MIDWIFE_ALL",
+          "Kätilöt yhteensä",
+          381
+        ],
+        [
+          1885,
+          "MIDWIFE_CITY",
+          "Kätilöt kaupungeissa",
+          218
+        ],
+        [
+          1885,
+          "MIDWIFE_RURAL",
+          "Kätilöt maaseudulla",
+          163
+        ]
+      ],
+      "published": true,
+      "period": false
+    },
+    {
+      "key": "hospital_general",
+      "title": "Yleisten sairashuoneiden lasarettiosastoissa hoidettuja",
+      "unit": "hoidettuja, lähteen laskentatapa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.162 / PDF s.166",
+      "description": "Hoidetut eivät välttämättä ole yksilöllisiä henkilöitä; vertailu muihin julkaisuihin vaatii laitosten ja määritelmien tarkistuksen.",
+      "rows": [
+        [
+          1881,
+          "FI",
+          "Koko maa",
+          4905
+        ],
+        [
+          1882,
+          "FI",
+          "Koko maa",
+          5340
+        ],
+        [
+          1883,
+          "FI",
+          "Koko maa",
+          5181
+        ],
+        [
+          1884,
+          "FI",
+          "Koko maa",
+          5575
+        ],
+        [
+          1885,
+          "FI",
+          "Koko maa",
+          5708
+        ]
+      ],
+      "published": true,
+      "period": false
+    },
+    {
+      "key": "grain_trade_period",
+      "title": "Jauhamattoman viljan tuonti ja vienti viisivuotiskaudella",
+      "unit": "tynnyriä / 5 vuotta",
+      "theme": "Ruokahuolto ja kauppa",
+      "variable": 12,
+      "page": "painettu s.35–36 / PDF s.40–41",
+      "description": "Viisivuotinen summa, EI vuoden 1885 havainto. Vuosi 1885 on jakson pääteankkuri. Julkaisematonta kunnes ajanjakso näkyy käyttöliittymässä. Lähteen 1871–1875 tuontiyhteenveto ristiriidassa aikaisemman julkaisun kanssa; vanhoja arvoja ei korvata.",
+      "rows": [
+        [
+          1885,
+          "IMPORT",
+          "Tuonti 1881–1885",
+          1334163
+        ],
+        [
+          1885,
+          "EXPORT",
+          "Vienti 1881–1885",
+          1277114
+        ]
+      ],
+      "published": false,
+      "period": true
+    },
+    {
+      "key": "flour_trade_period",
+      "title": "Jauhojen tuonti ja vienti viisivuotiskaudella",
+      "unit": "leiviskää / 5 vuotta",
+      "theme": "Ruokahuolto ja kauppa",
+      "variable": 12,
+      "page": "painettu s.35–36 / PDF s.40–41",
+      "description": "Viisivuotinen summa, EI vuoden 1885 havainto. Vuosi 1885 on jakson pääteankkuri. Ei yhdistetä tynnyrimääriin ilman perusteltua muuntosääntöä.",
+      "rows": [
+        [
+          1885,
+          "IMPORT",
+          "Tuonti 1881–1885",
+          40794803
+        ],
+        [
+          1885,
+          "EXPORT",
+          "Vienti 1881–1885",
+          239697
+        ]
+      ],
+      "published": false,
+      "period": true
+    }
+  ],
+  "content_sha256": "e7d9079b877ec62b40df62174731cc565484c28642ec4ecf8d07823b0a3fe6d9"
+}
