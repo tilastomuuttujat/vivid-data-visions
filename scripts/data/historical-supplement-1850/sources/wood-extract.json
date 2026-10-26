@@ -1,0 +1,1167 @@
+{
+  "sheet": "Taul1",
+  "records": [
+    {
+      "year": 1860,
+      "domestic": "1.1599999999999999",
+      "imported": "-",
+      "energy": "14.55",
+      "sheet_row": 12
+    },
+    {
+      "year": 1861,
+      "domestic": "1.28",
+      "imported": "-",
+      "energy": "14.77",
+      "sheet_row": 13
+    },
+    {
+      "year": 1862,
+      "domestic": "1.18",
+      "imported": "-",
+      "energy": "14.81",
+      "sheet_row": 14
+    },
+    {
+      "year": 1863,
+      "domestic": "2.57",
+      "imported": "-",
+      "energy": "14.86",
+      "sheet_row": 15
+    },
+    {
+      "year": 1864,
+      "domestic": "1.46",
+      "imported": "-",
+      "energy": "15.03",
+      "sheet_row": 16
+    },
+    {
+      "year": 1865,
+      "domestic": "2.31",
+      "imported": "-",
+      "energy": "15.2",
+      "sheet_row": 17
+    },
+    {
+      "year": 1866,
+      "domestic": "1.4",
+      "imported": "-",
+      "energy": "15.05",
+      "sheet_row": 18
+    },
+    {
+      "year": 1867,
+      "domestic": "1.3",
+      "imported": "-",
+      "energy": "14.71",
+      "sheet_row": 19
+    },
+    {
+      "year": 1868,
+      "domestic": "1.6",
+      "imported": "-",
+      "energy": "13.84",
+      "sheet_row": 20
+    },
+    {
+      "year": 1869,
+      "domestic": "1.61",
+      "imported": "-",
+      "energy": "13.8",
+      "sheet_row": 21
+    },
+    {
+      "year": 1870,
+      "domestic": "1.25",
+      "imported": "-",
+      "energy": "13.95",
+      "sheet_row": 22
+    },
+    {
+      "year": 1871,
+      "domestic": "1.46",
+      "imported": "-",
+      "energy": "14",
+      "sheet_row": 23
+    },
+    {
+      "year": 1872,
+      "domestic": "1.93",
+      "imported": "-",
+      "energy": "14.12",
+      "sheet_row": 24
+    },
+    {
+      "year": 1873,
+      "domestic": "2.2599999999999998",
+      "imported": "-",
+      "energy": "14.24",
+      "sheet_row": 25
+    },
+    {
+      "year": 1874,
+      "domestic": "2.71",
+      "imported": "-",
+      "energy": "14.26",
+      "sheet_row": 26
+    },
+    {
+      "year": 1875,
+      "domestic": "2.31",
+      "imported": "-",
+      "energy": "14.33",
+      "sheet_row": 27
+    },
+    {
+      "year": 1876,
+      "domestic": "3.31",
+      "imported": "-",
+      "energy": "14.44",
+      "sheet_row": 28
+    },
+    {
+      "year": 1877,
+      "domestic": "3.98",
+      "imported": "-",
+      "energy": "14.4",
+      "sheet_row": 29
+    },
+    {
+      "year": 1878,
+      "domestic": "2.64",
+      "imported": "-",
+      "energy": "14.45",
+      "sheet_row": 30
+    },
+    {
+      "year": 1879,
+      "domestic": "2.0099999999999998",
+      "imported": "-",
+      "energy": "14.56",
+      "sheet_row": 31
+    },
+    {
+      "year": 1880,
+      "domestic": "1.97",
+      "imported": "-",
+      "energy": "14.62",
+      "sheet_row": 32
+    },
+    {
+      "year": 1881,
+      "domestic": "1.9200000000000002",
+      "imported": "-",
+      "energy": "14.51",
+      "sheet_row": 33
+    },
+    {
+      "year": 1882,
+      "domestic": "2.46",
+      "imported": "-",
+      "energy": "14.62",
+      "sheet_row": 34
+    },
+    {
+      "year": 1883,
+      "domestic": "2.48",
+      "imported": "-",
+      "energy": "14.73",
+      "sheet_row": 35
+    },
+    {
+      "year": 1884,
+      "domestic": "2.2400000000000002",
+      "imported": "-",
+      "energy": "14.77",
+      "sheet_row": 36
+    },
+    {
+      "year": 1885,
+      "domestic": "2.11",
+      "imported": "-",
+      "energy": "14.83",
+      "sheet_row": 37
+    },
+    {
+      "year": 1886,
+      "domestic": "2.6799999999999997",
+      "imported": "-",
+      "energy": "14.8",
+      "sheet_row": 38
+    },
+    {
+      "year": 1887,
+      "domestic": "2.91",
+      "imported": "-",
+      "energy": "14.98",
+      "sheet_row": 39
+    },
+    {
+      "year": 1888,
+      "domestic": "2.98",
+      "imported": "-",
+      "energy": "14.95",
+      "sheet_row": 40
+    },
+    {
+      "year": 1889,
+      "domestic": "3.92",
+      "imported": "-",
+      "energy": "15.09",
+      "sheet_row": 41
+    },
+    {
+      "year": 1890,
+      "domestic": "3.82",
+      "imported": "-",
+      "energy": "15.21",
+      "sheet_row": 42
+    },
+    {
+      "year": 1891,
+      "domestic": "3.92",
+      "imported": "-",
+      "energy": "15.23",
+      "sheet_row": 43
+    },
+    {
+      "year": 1892,
+      "domestic": "3.8200000000000003",
+      "imported": "-",
+      "energy": "15.22",
+      "sheet_row": 44
+    },
+    {
+      "year": 1893,
+      "domestic": "3.87",
+      "imported": "-",
+      "energy": "15.08",
+      "sheet_row": 45
+    },
+    {
+      "year": 1894,
+      "domestic": "4.22",
+      "imported": "-",
+      "energy": "15.12",
+      "sheet_row": 46
+    },
+    {
+      "year": 1895,
+      "domestic": "4.7100000000000009",
+      "imported": "-",
+      "energy": "15.26",
+      "sheet_row": 47
+    },
+    {
+      "year": 1896,
+      "domestic": "5.33",
+      "imported": "-",
+      "energy": "15.21",
+      "sheet_row": 48
+    },
+    {
+      "year": 1897,
+      "domestic": "6.1000000000000005",
+      "imported": "-",
+      "energy": "15.4",
+      "sheet_row": 49
+    },
+    {
+      "year": 1898,
+      "domestic": "6.24",
+      "imported": "-",
+      "energy": "15.73",
+      "sheet_row": 50
+    },
+    {
+      "year": 1899,
+      "domestic": "6.4399999999999995",
+      "imported": "-",
+      "energy": "16.07",
+      "sheet_row": 51
+    },
+    {
+      "year": 1900,
+      "domestic": "7.37",
+      "imported": "-",
+      "energy": "16.399999999999999",
+      "sheet_row": 52
+    },
+    {
+      "year": 1901,
+      "domestic": "6.5100000000000007",
+      "imported": "-",
+      "energy": "16.600000000000001",
+      "sheet_row": 53
+    },
+    {
+      "year": 1902,
+      "domestic": "6.5699999999999994",
+      "imported": "-",
+      "energy": "16.98",
+      "sheet_row": 54
+    },
+    {
+      "year": 1903,
+      "domestic": "7.56",
+      "imported": "-",
+      "energy": "17.329999999999998",
+      "sheet_row": 55
+    },
+    {
+      "year": 1904,
+      "domestic": "8.33",
+      "imported": "-",
+      "energy": "17.66",
+      "sheet_row": 56
+    },
+    {
+      "year": 1905,
+      "domestic": "7.71",
+      "imported": "-",
+      "energy": "17.920000000000002",
+      "sheet_row": 57
+    },
+    {
+      "year": 1906,
+      "domestic": "8.620000000000001",
+      "imported": "-",
+      "energy": "18.47",
+      "sheet_row": 58
+    },
+    {
+      "year": 1907,
+      "domestic": "8.92",
+      "imported": "-",
+      "energy": "19.010000000000002",
+      "sheet_row": 59
+    },
+    {
+      "year": 1908,
+      "domestic": "8.11",
+      "imported": "-",
+      "energy": "19.239999999999998",
+      "sheet_row": 60
+    },
+    {
+      "year": 1909,
+      "domestic": "9.6999999999999993",
+      "imported": "-",
+      "energy": "19.38",
+      "sheet_row": 61
+    },
+    {
+      "year": 1910,
+      "domestic": "10.4",
+      "imported": "-",
+      "energy": "20.16",
+      "sheet_row": 62
+    },
+    {
+      "year": 1911,
+      "domestic": "11.049999999999999",
+      "imported": "-",
+      "energy": "20.71",
+      "sheet_row": 63
+    },
+    {
+      "year": 1912,
+      "domestic": "11.09",
+      "imported": "-",
+      "energy": "21.24",
+      "sheet_row": 64
+    },
+    {
+      "year": 1913,
+      "domestic": "12.329999999999998",
+      "imported": "-",
+      "energy": "21.71",
+      "sheet_row": 65
+    },
+    {
+      "year": 1914,
+      "domestic": "9.7900000000000027",
+      "imported": "-",
+      "energy": "21.2",
+      "sheet_row": 66
+    },
+    {
+      "year": 1915,
+      "domestic": "7.25",
+      "imported": "-",
+      "energy": "21.74",
+      "sheet_row": 67
+    },
+    {
+      "year": 1916,
+      "domestic": "6.17",
+      "imported": "-",
+      "energy": "22.66",
+      "sheet_row": 68
+    },
+    {
+      "year": 1917,
+      "domestic": "4.2799999999999994",
+      "imported": "-",
+      "energy": "22.5",
+      "sheet_row": 69
+    },
+    {
+      "year": 1918,
+      "domestic": "2.5300000000000002",
+      "imported": "-",
+      "energy": "21.31",
+      "sheet_row": 70
+    },
+    {
+      "year": 1919,
+      "domestic": "4.66",
+      "imported": "-",
+      "energy": "21.58",
+      "sheet_row": 71
+    },
+    {
+      "year": 1920,
+      "domestic": "9.01",
+      "imported": "-",
+      "energy": "21.57",
+      "sheet_row": 72
+    },
+    {
+      "year": 1921,
+      "domestic": "9.5400000000000027",
+      "imported": "-",
+      "energy": "21.45",
+      "sheet_row": 73
+    },
+    {
+      "year": 1922,
+      "domestic": "11.68",
+      "imported": "-",
+      "energy": "21.22",
+      "sheet_row": 74
+    },
+    {
+      "year": 1923,
+      "domestic": "15.32",
+      "imported": "-",
+      "energy": "20.16",
+      "sheet_row": 75
+    },
+    {
+      "year": 1924,
+      "domestic": "15.41",
+      "imported": "0.03",
+      "energy": "20.16",
+      "sheet_row": 76
+    },
+    {
+      "year": 1925,
+      "domestic": "16.72",
+      "imported": "-",
+      "energy": "20.46",
+      "sheet_row": 77
+    },
+    {
+      "year": 1926,
+      "domestic": "18.43",
+      "imported": "0.11",
+      "energy": "20.72",
+      "sheet_row": 78
+    },
+    {
+      "year": 1927,
+      "domestic": "20.97",
+      "imported": "0.12",
+      "energy": "20.99",
+      "sheet_row": 79
+    },
+    {
+      "year": 1928,
+      "domestic": "20.85",
+      "imported": "0.17",
+      "energy": "20.81",
+      "sheet_row": 80
+    },
+    {
+      "year": 1929,
+      "domestic": "18.88",
+      "imported": "0.36",
+      "energy": "20.329999999999998",
+      "sheet_row": 81
+    },
+    {
+      "year": 1930,
+      "domestic": "16.130000000000003",
+      "imported": "0.37",
+      "energy": "19.78",
+      "sheet_row": 82
+    },
+    {
+      "year": 1931,
+      "domestic": "14.57",
+      "imported": "0.26",
+      "energy": "19.579999999999998",
+      "sheet_row": 83
+    },
+    {
+      "year": 1932,
+      "domestic": "15.24",
+      "imported": "0.43",
+      "energy": "19.77",
+      "sheet_row": 84
+    },
+    {
+      "year": 1933,
+      "domestic": "18.07",
+      "imported": "0.54",
+      "energy": "19.809999999999999",
+      "sheet_row": 85
+    },
+    {
+      "year": 1934,
+      "domestic": "22",
+      "imported": "0.65",
+      "energy": "20.100000000000001",
+      "sheet_row": 86
+    },
+    {
+      "year": 1935,
+      "domestic": "20.78",
+      "imported": "0.12",
+      "energy": "19.940000000000001",
+      "sheet_row": 87
+    },
+    {
+      "year": 1936,
+      "domestic": "22.68",
+      "imported": "0.08",
+      "energy": "19.88",
+      "sheet_row": 88
+    },
+    {
+      "year": 1937,
+      "domestic": "25.39",
+      "imported": "-",
+      "energy": "19.93",
+      "sheet_row": 89
+    },
+    {
+      "year": 1938,
+      "domestic": "20.9",
+      "imported": "-",
+      "energy": "19.510000000000002",
+      "sheet_row": 90
+    },
+    {
+      "year": 1939,
+      "domestic": "15.89",
+      "imported": "0.05",
+      "energy": "19.510000000000002",
+      "sheet_row": 91
+    },
+    {
+      "year": 1940,
+      "domestic": "7.8",
+      "imported": "-",
+      "energy": "22.53",
+      "sheet_row": 92
+    },
+    {
+      "year": 1941,
+      "domestic": "8.61",
+      "imported": "-",
+      "energy": "25.39",
+      "sheet_row": 93
+    },
+    {
+      "year": 1942,
+      "domestic": "8.65",
+      "imported": "-",
+      "energy": "24.89",
+      "sheet_row": 94
+    },
+    {
+      "year": 1943,
+      "domestic": "9.98",
+      "imported": "-",
+      "energy": "25.59",
+      "sheet_row": 95
+    },
+    {
+      "year": 1944,
+      "domestic": "8.08",
+      "imported": "-",
+      "energy": "23.96",
+      "sheet_row": 96
+    },
+    {
+      "year": 1945,
+      "domestic": "10.14",
+      "imported": "-",
+      "energy": "24.57",
+      "sheet_row": 97
+    },
+    {
+      "year": 1946,
+      "domestic": "13.26",
+      "imported": "-",
+      "energy": "27.23",
+      "sheet_row": 98
+    },
+    {
+      "year": 1947,
+      "domestic": "16.079999999999998",
+      "imported": "-",
+      "energy": "24.57",
+      "sheet_row": 99
+    },
+    {
+      "year": 1948,
+      "domestic": "17.73",
+      "imported": "-",
+      "energy": "21.88",
+      "sheet_row": 100
+    },
+    {
+      "year": 1949,
+      "domestic": "17.100000000000001",
+      "imported": "-",
+      "energy": "21.67",
+      "sheet_row": 101
+    },
+    {
+      "year": 1950,
+      "domestic": "20.11",
+      "imported": "-",
+      "energy": "20.48",
+      "sheet_row": 102
+    },
+    {
+      "year": 1951,
+      "domestic": "22.75",
+      "imported": "-",
+      "energy": "20.62",
+      "sheet_row": 103
+    },
+    {
+      "year": 1952,
+      "domestic": "17.53",
+      "imported": "-",
+      "energy": "19.95",
+      "sheet_row": 104
+    },
+    {
+      "year": 1953,
+      "domestic": "18.23",
+      "imported": "-",
+      "energy": "19.260000000000002",
+      "sheet_row": 105
+    },
+    {
+      "year": 1954,
+      "domestic": "22.47",
+      "imported": "-",
+      "energy": "19.47",
+      "sheet_row": 106
+    },
+    {
+      "year": 1955,
+      "domestic": "25.61",
+      "imported": "0.08",
+      "energy": "18.39",
+      "sheet_row": 107
+    },
+    {
+      "year": 1956,
+      "domestic": "22.78",
+      "imported": "0.17",
+      "energy": "18.02",
+      "sheet_row": 108
+    },
+    {
+      "year": 1957,
+      "domestic": "23.91",
+      "imported": "0.17",
+      "energy": "17.489999999999998",
+      "sheet_row": 109
+    },
+    {
+      "year": 1958,
+      "domestic": "24.97",
+      "imported": "0.23",
+      "energy": "17.34",
+      "sheet_row": 110
+    },
+    {
+      "year": 1959,
+      "domestic": "26.25",
+      "imported": "0.26",
+      "energy": "17",
+      "sheet_row": 111
+    },
+    {
+      "year": 1960,
+      "domestic": "31.45",
+      "imported": "0.32",
+      "energy": "16.73",
+      "sheet_row": 112
+    },
+    {
+      "year": 1961,
+      "domestic": "33.49",
+      "imported": "0.5",
+      "energy": "16.239999999999998",
+      "sheet_row": 113
+    },
+    {
+      "year": 1962,
+      "domestic": "32.24",
+      "imported": "0.63",
+      "energy": "15.78",
+      "sheet_row": 114
+    },
+    {
+      "year": 1963,
+      "domestic": "32.950000000000003",
+      "imported": "1.08",
+      "energy": "15.36",
+      "sheet_row": 115
+    },
+    {
+      "year": 1964,
+      "domestic": "36.83",
+      "imported": "2.3199999999999998",
+      "energy": "12.75",
+      "sheet_row": 116
+    },
+    {
+      "year": 1965,
+      "domestic": "35.79",
+      "imported": "3.35",
+      "energy": "12.22",
+      "sheet_row": 117
+    },
+    {
+      "year": 1966,
+      "domestic": "34.950000000000003",
+      "imported": "2.97",
+      "energy": "11.86",
+      "sheet_row": 118
+    },
+    {
+      "year": 1967,
+      "domestic": "35.1",
+      "imported": "3.01",
+      "energy": "11.34",
+      "sheet_row": 119
+    },
+    {
+      "year": 1968,
+      "domestic": "35.56",
+      "imported": "3.09",
+      "energy": "10.86",
+      "sheet_row": 120
+    },
+    {
+      "year": 1969,
+      "domestic": "39.74",
+      "imported": "2.85",
+      "energy": "9.99",
+      "sheet_row": 121
+    },
+    {
+      "year": 1970,
+      "domestic": "41.12",
+      "imported": "3.28",
+      "energy": "9.5299999999999994",
+      "sheet_row": 122
+    },
+    {
+      "year": 1971,
+      "domestic": "38.39",
+      "imported": "3.85",
+      "energy": "9.1300000000000008",
+      "sheet_row": 123
+    },
+    {
+      "year": 1972,
+      "domestic": "39.22",
+      "imported": "3.38",
+      "energy": "8.73",
+      "sheet_row": 124
+    },
+    {
+      "year": 1973,
+      "domestic": "39.89",
+      "imported": "5.61",
+      "energy": "8.43",
+      "sheet_row": 125
+    },
+    {
+      "year": 1974,
+      "domestic": "37.85",
+      "imported": "6",
+      "energy": "7.97",
+      "sheet_row": 126
+    },
+    {
+      "year": 1975,
+      "domestic": "27.8",
+      "imported": "5.83",
+      "energy": "7.63",
+      "sheet_row": 127
+    },
+    {
+      "year": 1976,
+      "domestic": "29.15",
+      "imported": "5.45",
+      "energy": "6.38",
+      "sheet_row": 128
+    },
+    {
+      "year": 1977,
+      "domestic": "31.31",
+      "imported": "4.4800000000000004",
+      "energy": "5.99",
+      "sheet_row": 129
+    },
+    {
+      "year": 1978,
+      "domestic": "36.35",
+      "imported": "3.94",
+      "energy": "5.45",
+      "sheet_row": 130
+    },
+    {
+      "year": 1979,
+      "domestic": "44.97",
+      "imported": "3.75",
+      "energy": "5.1100000000000003",
+      "sheet_row": 131
+    },
+    {
+      "year": 1980,
+      "domestic": "46.97",
+      "imported": "4.09",
+      "energy": "4.78",
+      "sheet_row": 132
+    },
+    {
+      "year": 1981,
+      "domestic": "42.94",
+      "imported": "4.1100000000000003",
+      "energy": "4.6100000000000003",
+      "sheet_row": 133
+    },
+    {
+      "year": 1982,
+      "domestic": "36.97",
+      "imported": "5.37",
+      "energy": "4.5199999999999996",
+      "sheet_row": 134
+    },
+    {
+      "year": 1983,
+      "domestic": "38.31",
+      "imported": "6.67",
+      "energy": "4.4000000000000004",
+      "sheet_row": 135
+    },
+    {
+      "year": 1984,
+      "domestic": "40.82",
+      "imported": "7.57",
+      "energy": "4.2699999999999996",
+      "sheet_row": 136
+    },
+    {
+      "year": 1985,
+      "domestic": "41.51",
+      "imported": "6.05",
+      "energy": "4.09",
+      "sheet_row": 137
+    },
+    {
+      "year": 1986,
+      "domestic": "42.31",
+      "imported": "5.25",
+      "energy": "4.0199999999999996",
+      "sheet_row": 138
+    },
+    {
+      "year": 1987,
+      "domestic": "44.21",
+      "imported": "6",
+      "energy": "3.88",
+      "sheet_row": 139
+    },
+    {
+      "year": 1988,
+      "domestic": "47.08",
+      "imported": "6.22",
+      "energy": "3.88",
+      "sheet_row": 140
+    },
+    {
+      "year": 1989,
+      "domestic": "46.936",
+      "imported": "6.7709999999999999",
+      "energy": "3.7919999999999998",
+      "sheet_row": 141
+    },
+    {
+      "year": 1990,
+      "domestic": "45.167000000000002",
+      "imported": "6.016",
+      "energy": "3.7919999999999998",
+      "sheet_row": 142
+    },
+    {
+      "year": 1991,
+      "domestic": "39.993000000000002",
+      "imported": "5.58",
+      "energy": "3.7919999999999998",
+      "sheet_row": 143
+    },
+    {
+      "year": 1992,
+      "domestic": "40.878999999999998",
+      "imported": "6.9320000000000004",
+      "energy": "3.7919999999999998",
+      "sheet_row": 144
+    },
+    {
+      "year": 1993,
+      "domestic": "45.917999999999999",
+      "imported": "6.976",
+      "energy": "4.6360000000000001",
+      "sheet_row": 145
+    },
+    {
+      "year": 1994,
+      "domestic": "50.009",
+      "imported": "8.5370000000000008",
+      "energy": "4.6360000000000001",
+      "sheet_row": 146
+    },
+    {
+      "year": 1995,
+      "domestic": "49.341000000000001",
+      "imported": "8.9580000000000002",
+      "energy": "4.6360000000000001",
+      "sheet_row": 147
+    },
+    {
+      "year": 1996,
+      "domestic": "48.267000000000003",
+      "imported": "7.9560000000000004",
+      "energy": "4.6360000000000001",
+      "sheet_row": 148
+    },
+    {
+      "year": 1997,
+      "domestic": "55.432000000000002",
+      "imported": "9.49",
+      "energy": "4.6360000000000001",
+      "sheet_row": 149
+    },
+    {
+      "year": 1998,
+      "domestic": "56.848999999999997",
+      "imported": "10.855",
+      "energy": "4.6360000000000001",
+      "sheet_row": 150
+    },
+    {
+      "year": 1999,
+      "domestic": "57.109000000000002",
+      "imported": "11.724",
+      "energy": "4.6360000000000001",
+      "sheet_row": 151
+    },
+    {
+      "year": 2000,
+      "domestic": "57.957000000000001",
+      "imported": "12.837",
+      "energy": "4.9580000000000002",
+      "sheet_row": 152
+    },
+    {
+      "year": 2001,
+      "domestic": "53.783999999999999",
+      "imported": "13.539",
+      "energy": "5.524",
+      "sheet_row": 153
+    },
+    {
+      "year": 2002,
+      "domestic": "55.045999999999999",
+      "imported": "16.260999999999999",
+      "energy": "5.5830000000000002",
+      "sheet_row": 154
+    },
+    {
+      "year": 2003,
+      "domestic": "56.960999999999999",
+      "imported": "16.507000000000001",
+      "energy": "5.6790000000000003",
+      "sheet_row": 155
+    },
+    {
+      "year": 2004,
+      "domestic": "57.526000000000003",
+      "imported": "17.402000000000001",
+      "energy": "5.835",
+      "sheet_row": 156
+    },
+    {
+      "year": 2005,
+      "domestic": "49.88",
+      "imported": "17.928999999999998",
+      "energy": "5.8959999999999999",
+      "sheet_row": 157
+    },
+    {
+      "year": 2006,
+      "domestic": "56.343000000000004",
+      "imported": "19.175999999999998",
+      "energy": "6.02",
+      "sheet_row": 158
+    },
+    {
+      "year": 2007,
+      "domestic": "59.444000000000003",
+      "imported": "15.981",
+      "energy": "5.9720000000000004",
+      "sheet_row": 159
+    },
+    {
+      "year": 2008,
+      "domestic": "51.531999999999996",
+      "imported": "14.728999999999999",
+      "energy": "6.49",
+      "sheet_row": 160
+    },
+    {
+      "year": 2009,
+      "domestic": "44.17",
+      "imported": "7.3120000000000003",
+      "energy": "8.016",
+      "sheet_row": 161
+    },
+    {
+      "year": 2010,
+      "domestic": "53.134999999999998",
+      "imported": "9.4030000000000005",
+      "energy": "8.3819999999999997",
+      "sheet_row": 162
+    },
+    {
+      "year": 2011,
+      "domestic": "52.777999999999999",
+      "imported": "8.859",
+      "energy": "9.0039999999999996",
+      "sheet_row": 163
+    },
+    {
+      "year": 2012,
+      "domestic": "52.62",
+      "imported": "8.4719999999999995",
+      "energy": "9.32",
+      "sheet_row": 164
+    },
+    {
+      "year": 2013,
+      "domestic": "53.841999999999999",
+      "imported": "9.9979999999999993",
+      "energy": "9.4209999999999994",
+      "sheet_row": 165
+    },
+    {
+      "year": 2014,
+      "domestic": "54.988",
+      "imported": "8.9130000000000003",
+      "energy": "9.5280000000000005",
+      "sheet_row": 166
+    },
+    {
+      "year": 2015,
+      "domestic": "56.149000000000001",
+      "imported": "8.5210000000000008",
+      "energy": "9.6050000000000004",
+      "sheet_row": 167
+    },
+    {
+      "year": 2016,
+      "domestic": "58.912999999999997",
+      "imported": "8.5129999999999999",
+      "energy": "9.5229999999999997",
+      "sheet_row": 168
+    },
+    {
+      "year": 2017,
+      "domestic": "62.195",
+      "imported": "7.4790000000000001",
+      "energy": "10.904999999999999",
+      "sheet_row": 169
+    },
+    {
+      "year": 2018,
+      "domestic": "64.471000000000004",
+      "imported": "9.0820000000000007",
+      "energy": "10.829000000000001",
+      "sheet_row": 170
+    },
+    {
+      "year": 2019,
+      "domestic": "61.326000000000001",
+      "imported": "9.7569999999999997",
+      "energy": "10.795999999999999",
+      "sheet_row": 171
+    },
+    {
+      "year": 2020,
+      "domestic": "57.322000000000003",
+      "imported": "9.7170000000000005",
+      "energy": "11.282999999999999",
+      "sheet_row": 172
+    },
+    {
+      "year": 2021,
+      "domestic": "62.351999999999997",
+      "imported": "9.8049999999999997",
+      "energy": "13.025",
+      "sheet_row": 173
+    },
+    {
+      "year": 2022,
+      "domestic": "61.262",
+      "imported": "3.9489999999999998",
+      "energy": "13.4",
+      "sheet_row": 174
+    },
+    {
+      "year": 2023,
+      "domestic": "57.841116",
+      "imported": "3.3288670000000002",
+      "energy": "14.2",
+      "sheet_row": 175
+    },
+    {
+      "year": 2024,
+      "domestic": "58.823",
+      "imported": "3.8330000000000002",
+      "energy": "14.073",
+      "sheet_row": 176
+    }
+  ],
+  "unit": "miljoonaa m³",
+  "columns": {
+    "domestic": "B: metsäteollisuuden kotimainen puu",
+    "imported": "C: metsäteollisuuden tuontipuu",
+    "energy": "D: puun käyttö energiantuotannossa"
+  },
+  "footnote_summary": "Energiakäyttö sisältää runkopuuhaketta sekä pientalojen polttopuuta ja metsäteollisuuden polttopuuta 1955–1988. Vuoteen 1992 saakka mukana myös muita käyttötarkoituksia; rajaus muuttuu vuonna 1993."
+}

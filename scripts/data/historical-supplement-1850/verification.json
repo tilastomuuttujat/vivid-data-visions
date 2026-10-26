@@ -1,0 +1,13 @@
+{
+  "series": 32,
+  "values": 4774,
+  "mismatches": 0,
+  "invalid": 0,
+  "context_links": 32,
+  "derived_series": 6,
+  "marked_source_interpolations": 2,
+  "batch_id": "historical_finance_prices_1850_20261026_v1",
+  "checked_on": "2026-10-26",
+  "idempotent_replay": true,
+  "unit_tests_passed": 6
+}
