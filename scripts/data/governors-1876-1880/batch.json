@@ -1,0 +1,1113 @@
+{
+  "batch_id": "governors_1876_1880_food_health_land_20261026_v1",
+  "source_url": "https://otos.stat.fi/server/api/core/bitstreams/c7d90bd8-3032-414a-a1ef-ad8032995ac9/content",
+  "source_title": "Katsaus Suomenmaan taloudelliseen tilaan 1876–1880 (1884)",
+  "source_sha256": "90bb2f11c2205a308ceeb8bbbf3018e50d5289928e4c51c9b723c9a5ccbeb3b6",
+  "series": [
+    {
+      "key": "grain_trade",
+      "title": "Jauhamattoman viljan tuonti ja vienti",
+      "unit": "tynnyriä",
+      "theme": "Ruokahuolto ja kauppa",
+      "variable": 12,
+      "page": "liitetaulu 5, PDF s.106",
+      "description": "Jauhamaton vilja; ei sisällä jauhoja. Osat sisältyvät kokonaissummaan, eikä niitä saa lisätä kokonaisuuteen.",
+      "rows": [
+        [
+          1876,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          127481
+        ],
+        [
+          1877,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          170196
+        ],
+        [
+          1878,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          197415
+        ],
+        [
+          1879,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          110377
+        ],
+        [
+          1880,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          110397
+        ],
+        [
+          1876,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          25674
+        ],
+        [
+          1877,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          50623
+        ],
+        [
+          1878,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          92898
+        ],
+        [
+          1879,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          56098
+        ],
+        [
+          1880,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          11414
+        ],
+        [
+          1876,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          56206
+        ],
+        [
+          1877,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          67241
+        ],
+        [
+          1878,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          50717
+        ],
+        [
+          1879,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          19784
+        ],
+        [
+          1880,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          41923
+        ],
+        [
+          1876,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          36899
+        ],
+        [
+          1877,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          42629
+        ],
+        [
+          1878,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          42713
+        ],
+        [
+          1879,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          25067
+        ],
+        [
+          1880,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          34990
+        ],
+        [
+          1876,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          141093
+        ],
+        [
+          1877,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          148788
+        ],
+        [
+          1878,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          176296
+        ],
+        [
+          1879,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          328345
+        ],
+        [
+          1880,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          417951
+        ],
+        [
+          1876,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          20865
+        ],
+        [
+          1877,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          27434
+        ],
+        [
+          1878,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          15964
+        ],
+        [
+          1879,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          11532
+        ],
+        [
+          1880,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          99653
+        ],
+        [
+          1876,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          332
+        ],
+        [
+          1877,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          932
+        ],
+        [
+          1878,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          252
+        ],
+        [
+          1879,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          81
+        ],
+        [
+          1880,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          22487
+        ],
+        [
+          1876,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          119815
+        ],
+        [
+          1877,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          120338
+        ],
+        [
+          1878,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          159958
+        ],
+        [
+          1879,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          316652
+        ],
+        [
+          1880,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          295646
+        ]
+      ],
+      "published": true
+    },
+    {
+      "key": "flour_trade",
+      "title": "Jauhojen ja ryynien tuonti ja vienti",
+      "unit": "leiviskää",
+      "theme": "Ruokahuolto ja kauppa",
+      "variable": 12,
+      "page": "liitetaulu 5, PDF s.106",
+      "description": "Jauhot ja ryynit ilmoitetaan painoyksikössä, jauhamattomat jyvät tilavuusyksikössä; niitä ei summata ilman erikseen dokumentoitua muuntoa.",
+      "rows": [
+        [
+          1876,
+          "IMPORT",
+          "Tuonti",
+          10917642
+        ],
+        [
+          1877,
+          "IMPORT",
+          "Tuonti",
+          9325009
+        ],
+        [
+          1878,
+          "IMPORT",
+          "Tuonti",
+          9404154
+        ],
+        [
+          1879,
+          "IMPORT",
+          "Tuonti",
+          9204038
+        ],
+        [
+          1880,
+          "IMPORT",
+          "Tuonti",
+          4673715
+        ],
+        [
+          1876,
+          "EXPORT",
+          "Vienti",
+          108137
+        ],
+        [
+          1877,
+          "EXPORT",
+          "Vienti",
+          293093
+        ],
+        [
+          1878,
+          "EXPORT",
+          "Vienti",
+          63481
+        ],
+        [
+          1879,
+          "EXPORT",
+          "Vienti",
+          99359
+        ],
+        [
+          1880,
+          "EXPORT",
+          "Vienti",
+          72472
+        ]
+      ],
+      "published": true
+    },
+    {
+      "key": "physicians",
+      "title": "Laillisiksi julistetut lääkärit vuoden lopussa",
+      "unit": "henkilöä",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.71, PDF s.75",
+      "description": "Lähteen laillisiksi julistetut lääkärit; ei nykyinen työssä olevien lääkärien määritelmä.",
+      "rows": [
+        [
+          1876,
+          "FI",
+          "Koko maa",
+          141
+        ],
+        [
+          1877,
+          "FI",
+          "Koko maa",
+          142
+        ],
+        [
+          1878,
+          "FI",
+          "Koko maa",
+          146
+        ],
+        [
+          1879,
+          "FI",
+          "Koko maa",
+          145
+        ],
+        [
+          1880,
+          "FI",
+          "Koko maa",
+          155
+        ]
+      ],
+      "published": true
+    },
+    {
+      "key": "pharmacies",
+      "title": "Apteekit ja apteekinlaatikot",
+      "unit": "kappaletta",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.71, PDF s.75",
+      "description": "Lähteen yhteenlaskettu määrä sisältää myös apteekinlaatikot. Kolme erillistä alaryhmää eikä yhteenlaskettua lukua pidä laskea toistensa päälle.",
+      "rows": [
+        [
+          1876,
+          "PERMANENT",
+          "Laitoksenomaiset oikeudet",
+          34
+        ],
+        [
+          1877,
+          "PERMANENT",
+          "Laitoksenomaiset oikeudet",
+          34
+        ],
+        [
+          1878,
+          "PERMANENT",
+          "Laitoksenomaiset oikeudet",
+          34
+        ],
+        [
+          1879,
+          "PERMANENT",
+          "Laitoksenomaiset oikeudet",
+          34
+        ],
+        [
+          1880,
+          "PERMANENT",
+          "Laitoksenomaiset oikeudet",
+          34
+        ],
+        [
+          1876,
+          "PERSONAL",
+          "Henkilökohtaiset oikeudet",
+          59
+        ],
+        [
+          1877,
+          "PERSONAL",
+          "Henkilökohtaiset oikeudet",
+          58
+        ],
+        [
+          1878,
+          "PERSONAL",
+          "Henkilökohtaiset oikeudet",
+          58
+        ],
+        [
+          1879,
+          "PERSONAL",
+          "Henkilökohtaiset oikeudet",
+          56
+        ],
+        [
+          1880,
+          "PERSONAL",
+          "Henkilökohtaiset oikeudet",
+          55
+        ],
+        [
+          1876,
+          "DEPOT",
+          "Apteekinlaatikot",
+          26
+        ],
+        [
+          1877,
+          "DEPOT",
+          "Apteekinlaatikot",
+          26
+        ],
+        [
+          1878,
+          "DEPOT",
+          "Apteekinlaatikot",
+          26
+        ],
+        [
+          1879,
+          "DEPOT",
+          "Apteekinlaatikot",
+          27
+        ],
+        [
+          1880,
+          "DEPOT",
+          "Apteekinlaatikot",
+          27
+        ]
+      ],
+      "published": true
+    },
+    {
+      "key": "vaccinations",
+      "title": "Rokotettujen ja tarkastuksen tietoja",
+      "unit": "henkilöä",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.72, PDF s.76",
+      "description": "Lähteen rokonpanot sekä osajoukot; ei lasketa kokonaismäärää ja sen osia yhteen. Määritelmien jatkuvuus aiempiin sarjoihin tarkistettava.",
+      "rows": [
+        [
+          1876,
+          "TOTAL",
+          "Rokotetut yhteensä",
+          47742
+        ],
+        [
+          1877,
+          "TOTAL",
+          "Rokotetut yhteensä",
+          54437
+        ],
+        [
+          1878,
+          "TOTAL",
+          "Rokotetut yhteensä",
+          52930
+        ],
+        [
+          1879,
+          "TOTAL",
+          "Rokotetut yhteensä",
+          58045
+        ],
+        [
+          1880,
+          "TOTAL",
+          "Rokotetut yhteensä",
+          60301
+        ],
+        [
+          1876,
+          "SUCCESS",
+          "Puhjenneet rakkulat",
+          38014
+        ],
+        [
+          1877,
+          "SUCCESS",
+          "Puhjenneet rakkulat",
+          42332
+        ],
+        [
+          1878,
+          "SUCCESS",
+          "Puhjenneet rakkulat",
+          42244
+        ],
+        [
+          1879,
+          "SUCCESS",
+          "Puhjenneet rakkulat",
+          47048
+        ],
+        [
+          1880,
+          "SUCCESS",
+          "Puhjenneet rakkulat",
+          47332
+        ],
+        [
+          1876,
+          "ABSENT",
+          "Tarkastuksesta pois",
+          7965
+        ],
+        [
+          1877,
+          "ABSENT",
+          "Tarkastuksesta pois",
+          9861
+        ],
+        [
+          1878,
+          "ABSENT",
+          "Tarkastuksesta pois",
+          8913
+        ],
+        [
+          1879,
+          "ABSENT",
+          "Tarkastuksesta pois",
+          9182
+        ],
+        [
+          1880,
+          "ABSENT",
+          "Tarkastuksesta pois",
+          10887
+        ]
+      ],
+      "published": true
+    },
+    {
+      "key": "hospital_general",
+      "title": "Yleisten sairashuoneiden lasarettiosastoissa hoidettuja",
+      "unit": "hoidettuja, lähteen laskentatapa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.72, PDF s.76",
+      "description": "Hoidettujen määrä ei välttämättä ole eri henkilöiden määrä; laitosluokkien vertailu aiempiin vuosiin on tarkistettava.",
+      "rows": [
+        [
+          1876,
+          "FI",
+          "Koko maa",
+          4975
+        ],
+        [
+          1877,
+          "FI",
+          "Koko maa",
+          4803
+        ],
+        [
+          1878,
+          "FI",
+          "Koko maa",
+          5062
+        ],
+        [
+          1879,
+          "FI",
+          "Koko maa",
+          5226
+        ],
+        [
+          1880,
+          "FI",
+          "Koko maa",
+          5660
+        ]
+      ],
+      "published": true
+    },
+    {
+      "key": "landowner_size",
+      "title": "Maanomistajien viljellyn alan kokoluokat 1880",
+      "unit": "maanomistajaa, ilmoitusten summa",
+      "theme": "Maanomistus",
+      "variable": 2,
+      "page": "liitetaulu 9, PDF s.110",
+      "description": "Kuntien ilmoitusten summa; eri kunnissa omistava voi esiintyä useasti. Viljelty maa, ei tilan koko eikä kaikkien viljelijöiden jakauma. Kokonaismäärä sisältää kokoluokat.",
+      "rows": [
+        [
+          1880,
+          "FI_ALL",
+          "Suomi – Maanomistajia yhteensä",
+          105953
+        ],
+        [
+          1880,
+          "FI_OVER200",
+          "Suomi – 200 tynnyrinalaa tai enemmän",
+          1194
+        ],
+        [
+          1880,
+          "FI_50_200",
+          "Suomi – 50–200 tynnyrinalaa",
+          9814
+        ],
+        [
+          1880,
+          "FI_10_50",
+          "Suomi – 10–50 tynnyrinalaa",
+          54009
+        ],
+        [
+          1880,
+          "FI_UNDER10",
+          "Suomi – Alle 10 tynnyrinalaa",
+          40936
+        ],
+        [
+          1880,
+          "UUS_ALL",
+          "Uudenmaan lääni – Maanomistajia yhteensä",
+          5981
+        ],
+        [
+          1880,
+          "UUS_OVER200",
+          "Uudenmaan lääni – 200 tynnyrinalaa tai enemmän",
+          230
+        ],
+        [
+          1880,
+          "UUS_50_200",
+          "Uudenmaan lääni – 50–200 tynnyrinalaa",
+          704
+        ],
+        [
+          1880,
+          "UUS_10_50",
+          "Uudenmaan lääni – 10–50 tynnyrinalaa",
+          4178
+        ],
+        [
+          1880,
+          "UUS_UNDER10",
+          "Uudenmaan lääni – Alle 10 tynnyrinalaa",
+          869
+        ],
+        [
+          1880,
+          "TUR_ALL",
+          "Turun ja Porin lääni – Maanomistajia yhteensä",
+          11406
+        ],
+        [
+          1880,
+          "TUR_OVER200",
+          "Turun ja Porin lääni – 200 tynnyrinalaa tai enemmän",
+          248
+        ],
+        [
+          1880,
+          "TUR_50_200",
+          "Turun ja Porin lääni – 50–200 tynnyrinalaa",
+          1908
+        ],
+        [
+          1880,
+          "TUR_10_50",
+          "Turun ja Porin lääni – 10–50 tynnyrinalaa",
+          6685
+        ],
+        [
+          1880,
+          "TUR_UNDER10",
+          "Turun ja Porin lääni – Alle 10 tynnyrinalaa",
+          2565
+        ],
+        [
+          1880,
+          "HAM_ALL",
+          "Hämeenlinnan lääni – Maanomistajia yhteensä",
+          8132
+        ],
+        [
+          1880,
+          "HAM_OVER200",
+          "Hämeenlinnan lääni – 200 tynnyrinalaa tai enemmän",
+          465
+        ],
+        [
+          1880,
+          "HAM_50_200",
+          "Hämeenlinnan lääni – 50–200 tynnyrinalaa",
+          1265
+        ],
+        [
+          1880,
+          "HAM_10_50",
+          "Hämeenlinnan lääni – 10–50 tynnyrinalaa",
+          4831
+        ],
+        [
+          1880,
+          "HAM_UNDER10",
+          "Hämeenlinnan lääni – Alle 10 tynnyrinalaa",
+          1571
+        ],
+        [
+          1880,
+          "VII_ALL",
+          "Viipurin lääni – Maanomistajia yhteensä",
+          24401
+        ],
+        [
+          1880,
+          "VII_OVER200",
+          "Viipurin lääni – 200 tynnyrinalaa tai enemmän",
+          63
+        ],
+        [
+          1880,
+          "VII_50_200",
+          "Viipurin lääni – 50–200 tynnyrinalaa",
+          1439
+        ],
+        [
+          1880,
+          "VII_10_50",
+          "Viipurin lääni – 10–50 tynnyrinalaa",
+          9982
+        ],
+        [
+          1880,
+          "VII_UNDER10",
+          "Viipurin lääni – Alle 10 tynnyrinalaa",
+          12917
+        ],
+        [
+          1880,
+          "MIK_ALL",
+          "Mikkelin lääni – Maanomistajia yhteensä",
+          8865
+        ],
+        [
+          1880,
+          "MIK_OVER200",
+          "Mikkelin lääni – 200 tynnyrinalaa tai enemmän",
+          20
+        ],
+        [
+          1880,
+          "MIK_50_200",
+          "Mikkelin lääni – 50–200 tynnyrinalaa",
+          230
+        ],
+        [
+          1880,
+          "MIK_10_50",
+          "Mikkelin lääni – 10–50 tynnyrinalaa",
+          4994
+        ],
+        [
+          1880,
+          "MIK_UNDER10",
+          "Mikkelin lääni – Alle 10 tynnyrinalaa",
+          3621
+        ],
+        [
+          1880,
+          "KUO_ALL",
+          "Kuopion lääni – Maanomistajia yhteensä",
+          13090
+        ],
+        [
+          1880,
+          "KUO_OVER200",
+          "Kuopion lääni – 200 tynnyrinalaa tai enemmän",
+          35
+        ],
+        [
+          1880,
+          "KUO_50_200",
+          "Kuopion lääni – 50–200 tynnyrinalaa",
+          1114
+        ],
+        [
+          1880,
+          "KUO_10_50",
+          "Kuopion lääni – 10–50 tynnyrinalaa",
+          7555
+        ],
+        [
+          1880,
+          "KUO_UNDER10",
+          "Kuopion lääni – Alle 10 tynnyrinalaa",
+          4386
+        ],
+        [
+          1880,
+          "VAA_ALL",
+          "Vaasan lääni – Maanomistajia yhteensä",
+          20315
+        ],
+        [
+          1880,
+          "VAA_OVER200",
+          "Vaasan lääni – 200 tynnyrinalaa tai enemmän",
+          132
+        ],
+        [
+          1880,
+          "VAA_50_200",
+          "Vaasan lääni – 50–200 tynnyrinalaa",
+          3050
+        ],
+        [
+          1880,
+          "VAA_10_50",
+          "Vaasan lääni – 10–50 tynnyrinalaa",
+          10479
+        ],
+        [
+          1880,
+          "VAA_UNDER10",
+          "Vaasan lääni – Alle 10 tynnyrinalaa",
+          6654
+        ],
+        [
+          1880,
+          "OUL_ALL",
+          "Oulun lääni – Maanomistajia yhteensä",
+          13763
+        ],
+        [
+          1880,
+          "OUL_OVER200",
+          "Oulun lääni – 200 tynnyrinalaa tai enemmän",
+          1
+        ],
+        [
+          1880,
+          "OUL_50_200",
+          "Oulun lääni – 50–200 tynnyrinalaa",
+          104
+        ],
+        [
+          1880,
+          "OUL_10_50",
+          "Oulun lääni – 10–50 tynnyrinalaa",
+          5305
+        ],
+        [
+          1880,
+          "OUL_UNDER10",
+          "Oulun lääni – Alle 10 tynnyrinalaa",
+          8353
+        ]
+      ],
+      "published": true
+    },
+    {
+      "key": "tenant_farmers",
+      "title": "Torppareiden ilmoitettu määrä 1880",
+      "unit": "torpparia, ilmoitusten summa",
+      "theme": "Maanomistus",
+      "variable": 2,
+      "page": "liitetaulu 9, PDF s.110",
+      "description": "Torpparit ovat taulukossa erikseen; ei lasketa maanomistajien kokoluokkiin. Kuntailmoitusten rajaukset.",
+      "rows": [
+        [
+          1880,
+          "FI",
+          "Suomi",
+          61953
+        ],
+        [
+          1880,
+          "UUS",
+          "Uudenmaan lääni",
+          4730
+        ],
+        [
+          1880,
+          "TUR",
+          "Turun ja Porin lääni",
+          15143
+        ],
+        [
+          1880,
+          "HAM",
+          "Hämeenlinnan lääni",
+          8175
+        ],
+        [
+          1880,
+          "VII",
+          "Viipurin lääni",
+          3351
+        ],
+        [
+          1880,
+          "MIK",
+          "Mikkelin lääni",
+          6393
+        ],
+        [
+          1880,
+          "KUO",
+          "Kuopion lääni",
+          7477
+        ],
+        [
+          1880,
+          "VAA",
+          "Vaasan lääni",
+          12850
+        ],
+        [
+          1880,
+          "OUL",
+          "Oulun lääni",
+          3834
+        ]
+      ],
+      "published": true
+    },
+    {
+      "key": "granary_rye_book_barrels",
+      "title": "Pitäjänmakasiinien rukiin kirjanpidollinen säästö, tynnyrit",
+      "unit": "tynnyriä",
+      "theme": "Ruokahuolto ja kriisivarautuminen",
+      "variable": 12,
+      "page": "liitetaulu 32, PDF s.193",
+      "description": "Koko maan lähdesumma; erilliset tynnyri- ja kappajäännökset. 1 tynnyri = 30 kappaa lähteen mittataulun mukaan. Kirjanpidolliseen säästöön kuuluu myös varastojen ulkopuolella olevia eriä. Vuoden 1879 otsikon tekstintunnistus epäselvä; sarjat pidetty tarkistettavina.",
+      "rows": [
+        [
+          1877,
+          "FI",
+          "Koko maa",
+          175784
+        ],
+        [
+          1878,
+          "FI",
+          "Koko maa",
+          180438
+        ],
+        [
+          1879,
+          "FI",
+          "Koko maa",
+          186420
+        ],
+        [
+          1880,
+          "FI",
+          "Koko maa",
+          186644
+        ]
+      ],
+      "published": false
+    },
+    {
+      "key": "granary_rye_book_kappa",
+      "title": "Pitäjänmakasiinien rukiin kirjanpidollinen säästö, kappajäännös",
+      "unit": "kappaa",
+      "theme": "Ruokahuolto ja kriisivarautuminen",
+      "variable": 12,
+      "page": "liitetaulu 32, PDF s.193",
+      "description": "Koko maan lähdesumma; erilliset tynnyri- ja kappajäännökset. 1 tynnyri = 30 kappaa lähteen mittataulun mukaan. Kirjanpidolliseen säästöön kuuluu myös varastojen ulkopuolella olevia eriä. Vuoden 1879 otsikon tekstintunnistus epäselvä; sarjat pidetty tarkistettavina.",
+      "rows": [
+        [
+          1877,
+          "FI",
+          "Koko maa",
+          6
+        ],
+        [
+          1878,
+          "FI",
+          "Koko maa",
+          16
+        ],
+        [
+          1879,
+          "FI",
+          "Koko maa",
+          17
+        ],
+        [
+          1880,
+          "FI",
+          "Koko maa",
+          8
+        ]
+      ],
+      "published": false
+    },
+    {
+      "key": "granary_rye_physical_barrels",
+      "title": "Makasiineissa ollut ruis, tynnyrit",
+      "unit": "tynnyriä",
+      "theme": "Ruokahuolto ja kriisivarautuminen",
+      "variable": 12,
+      "page": "liitetaulu 32, PDF s.193",
+      "description": "Koko maan lähdesumma; erilliset tynnyri- ja kappajäännökset. 1 tynnyri = 30 kappaa lähteen mittataulun mukaan. Kirjanpidolliseen säästöön kuuluu myös varastojen ulkopuolella olevia eriä. Vuoden 1879 otsikon tekstintunnistus epäselvä; sarjat pidetty tarkistettavina.",
+      "rows": [
+        [
+          1877,
+          "FI",
+          "Koko maa",
+          115033
+        ],
+        [
+          1878,
+          "FI",
+          "Koko maa",
+          98294
+        ],
+        [
+          1879,
+          "FI",
+          "Koko maa",
+          112767
+        ],
+        [
+          1880,
+          "FI",
+          "Koko maa",
+          112153
+        ]
+      ],
+      "published": false
+    },
+    {
+      "key": "granary_rye_physical_kappa",
+      "title": "Makasiineissa ollut ruis, kappajäännös",
+      "unit": "kappaa",
+      "theme": "Ruokahuolto ja kriisivarautuminen",
+      "variable": 12,
+      "page": "liitetaulu 32, PDF s.193",
+      "description": "Koko maan lähdesumma; erilliset tynnyri- ja kappajäännökset. 1 tynnyri = 30 kappaa lähteen mittataulun mukaan. Kirjanpidolliseen säästöön kuuluu myös varastojen ulkopuolella olevia eriä. Vuoden 1879 otsikon tekstintunnistus epäselvä; sarjat pidetty tarkistettavina.",
+      "rows": [
+        [
+          1877,
+          "FI",
+          "Koko maa",
+          17
+        ],
+        [
+          1878,
+          "FI",
+          "Koko maa",
+          1
+        ],
+        [
+          1879,
+          "FI",
+          "Koko maa",
+          6
+        ],
+        [
+          1880,
+          "FI",
+          "Koko maa",
+          3
+        ]
+      ],
+      "published": false
+    }
+  ],
+  "content_sha256": "5cbf384ae9109bec0a3a3339aa4de6ef3aa7c9665a05ff99365fa751fa10c561"
+}
