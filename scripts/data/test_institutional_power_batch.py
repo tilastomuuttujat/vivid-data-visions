@@ -1,6 +1,6 @@
 import json,pathlib,unittest
 ROOT=pathlib.Path(__file__).resolve().parents[2]
-BATCHES=[('institutional_power_1850_1917_20261026',1850,1917,11,12,4),('institutional_power_1918_1945_20261026',1918,1945,15,16,7),('institutional_power_1946_1975_20261026',1946,1975,14,15,10)]
+BATCHES=[('institutional_power_1850_1917_20261026',1850,1917,11,12,4),('institutional_power_1918_1945_20261026',1918,1945,15,16,7),('institutional_power_1946_1975_20261026',1946,1975,14,15,10),('institutional_power_1976_1995_20261026',1976,1995,14,14,6)]
 class InstitutionalBatchTest(unittest.TestCase):
  def test_references_scope_and_evidence(self):
   for batch,a,b,n,obs,reused in BATCHES:
@@ -29,3 +29,13 @@ class InstitutionalBatchTest(unittest.TestCase):
   self.assertEqual(rows['school1972']['formal_authority_status'],'phased_implementation_scope_clipped')
   self.assertEqual(rows['dissolutions']['documented_event_years'],[1953,1961,1971,1975])
   self.assertIn('eläkeyhtiöiden',rows['pensions1961']['case_limitations'])
+
+ def test_1976_1995_scope_and_timing(self):
+  p=json.loads((ROOT/'scripts/data/batches/institutional_power_1976_1995_20261026.json').read_text())
+  rows={e['case_key'].split(':')[-1]:e for e in p['entries']}
+  self.assertEqual(p['period'],[1976,1995])
+  self.assertEqual(rows['cooperation1978']['year_end'],1979)
+  self.assertEqual(rows['election1994']['year_start'],1991)
+  self.assertEqual(rows['election1994']['year_end'],1994)
+  self.assertEqual(rows['eu1995']['year_end'],1995)
+  self.assertEqual(rows['rights1995']['year_start'],1995)

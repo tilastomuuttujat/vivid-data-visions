@@ -31,3 +31,17 @@ ETK:n hallinnon työmarkkinaedustus erotetaan eläkeyhtiöiden myöhemmästä ed
 Suurin osa lähteistä tarkistettiin sivu- tai PDF-tekstistä. Vuoden 1951 julkisuuslain ja vuoden 1979 terveydenhuoltotilaston tiedot tarkistettiin hakutulosotteista; tarkistustaso näkyy lähdemetadatassa. SAK:n lähde on osapuolen historiakuvaus. Tulevat alkuperäisasiakirjojen tarkistukset, nimityskäytännöt, omistusvalta ja paikalliset toteumaerot on nimetty jatkotehtäviksi. Ei uusia numeerisia sarjoja eikä verkkonäkymien staattisen poiminnan päivitystä.
 
 Lopputarkistus: 14 tapausta / 15 väitettä / 10 aiempaa / 4 uutta tapahtumakorttia. Sama erä voidaan tuoda uudelleen ilman uusia rivejä; muuttunut payload hylätään. Sama luokitus ja tarkistustestit kuin aiemmissa erissä.
+
+## Jatko 1976–1995
+
+`institutional_power_1976_1995_20261026` sisältää 14 tapausta, 14 lähteistettyä väitettä ja 15 lähdettä. Kuusi aiempaa tapahtumakorttia hyödynnetään, kahdeksan lisätään. Vuosi 1995 sisältyy erään käyttäjän rajauksen mukaisesti, vaikka monet aiemmat keruut päättyvät vuoteen 1994.
+
+Mukana ovat yritysten yhteistoiminta, hallintomenettely, korkosäännöstelyn purkaminen, tasa-arvovalvonta, lääninoikeuksien eriyttäminen, ihmisoikeussopimus, presidentin toimivallan ja valintatavan muutokset, Sitran vastuusuhde, pankkitukirahasto, kilpailuvalvonta, valtionosuudet sekä EU-asioiden parlamentaarinen valmistelu ja vuoden 1995 perusoikeusuudistus.
+
+Ajoituserot: YT-laki annettiin 1978, mutta tuli voimaan 1.7.1979; hallintomenettelylaki 1982/1983; tasa-arvolaki 1986/1987; suora presidentinvaali säädettiin 1991, ensimmäinen soveltaminen 1994; EU-valmistelun valtiopäiväjärjestyksen muutos annettiin 1994 ja tuli voimaan 1.1.1995. Vuoden 1995 perusoikeusuudistusta ei rinnasteta vuoden 2000 perustuslain tuomioistuinkontrolliin. Vuoden 1992 kilpailusääntöihin ei siirretä vuoden 1998 yrityskauppavalvontaa tai vuoden 2002 markkinaoikeusrakennetta.
+
+Menettelyyn osallistuminen ei ole yleinen veto-oikeus. Suora vaalimandaatti ei tarkoita suurempaa muodollista toimivaltaa. Kuntien rahoitusharkinta, resurssien määrä ja lakisääteiset palveluvelvoitteet erotetaan; uudistustavoitetta ei merkitä toteutuneeksi vaikutukseksi. Korkosäännöstelyn purkaminen ei tarkoita kaiken sääntelyn poistumista eikä yksinomaista kriisiselitystä. Pankkituen alkuperäinen hallinto erotetaan myöhemmästä organisaatiosta.
+
+KHO:n, presidentin kanslian, tasa-arvovaltuutetun ja Sitran sivu-/PDF-tekstit sekä KKV:n ja Suomen Pankin tutkimusjulkaisut tukevat rajattuja havaintoja. Finlexin alkuperäissäädösten otteet sekä pankkitukirahaston ja EIS-taustan tiedot tarkistettiin hakutulosteksteistä, kun koko sivutekstiä ei saatu. Rajattu tarkistustaso on merkitty lähteisiin, eikä sitä rinnasteta koko alkuperäistekstin tai toteutuneen vaikutuksen tarkistukseen.
+
+Lopputarkistus: 14 tapausta / 14 väitettä / 6 aiempaa / 8 uutta tapahtumakorttia. Ei numeerisia vaikutussarjoja eikä verkkonäkymän staattisen poiminnan päivitystä. Myöhempien täydentävien erien tulee käyttää samoihin vuoden 1995 tapahtumiin olemassa olevia kortteja kaksoiskappaleiden välttämiseksi.

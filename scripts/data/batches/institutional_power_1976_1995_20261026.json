@@ -1,0 +1,871 @@
+{
+  "batch_id": "institutional_power_1976_1995_20261026",
+  "taxonomy_id": "institutional_power_taxonomy_v1",
+  "title": "Institutionaalinen valta 1976–1995: hallinnon menettelyt, markkinoiden ohjaus ja Eurooppa-integraatio",
+  "period": [
+    1976,
+    1995
+  ],
+  "taxonomy": {
+    "decision_authority": "Muodollinen päätös- ja estovalta",
+    "resource_control": "Rahoituksen ja varojen hallinta",
+    "agenda_preparation": "Valmistelu- ja asiantuntijavalta",
+    "access_representation": "Pääsy ja edustus",
+    "oversight_accountability": "Valvonta ja vastuu"
+  },
+  "sources": [
+    {
+      "source_id": "yt",
+      "title": "Laki yhteistoiminnasta yrityksissä 725/1978, alkuperäinen",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1978/725",
+      "locator": "1–3,7 ja 17§",
+      "source_type": "historical_statute",
+      "verification": "search_index_original_statute_excerpt_checked_page_body_unavailable",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "procedure",
+      "title": "Hallintomenettelylaki 598/1982, alkuperäinen",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1982/598",
+      "locator": "1–3§; voimaantulo 1.1.1983",
+      "source_type": "historical_statute",
+      "verification": "search_index_original_statute_excerpt_checked_page_body_unavailable",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "finance",
+      "title": "Rahapolitiikka Suomessa, A:90,1994",
+      "publisher_or_author": "Aaltonen, Aurikko ja Kontulainen / Suomen Pankki",
+      "url": "https://publications.bof.fi/bitstream/handle/10024/43711/a_90.pdf?sequence=1",
+      "locator": "Esipuhe ja s.28: korkosäännöstelyn purkaminen 1983–1986",
+      "source_type": "central_bank_research_publication",
+      "verification": "pdf_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "equalitylaw",
+      "title": "Laki naisten ja miesten välisestä tasa-arvosta 609/1986, alkuperäinen",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1986/609",
+      "locator": "25§, voimaantulo 1.1.1987",
+      "source_type": "historical_statute",
+      "verification": "search_index_original_statute_excerpt_checked_page_body_unavailable",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "equalityreport",
+      "title": "Tasa-arvovaltuutetun vuosikertomus 2015",
+      "publisher_or_author": "Tasa-arvovaltuutettu",
+      "url": "https://tasa-arvo.fi/documents/25249985/34307214/Tasa-arvo_vuosik_2015_FI_web_final.pdf/5ca4550a-2ded-41c1-97c0-2c8fd4180864/Tasa-arvo_vuosik_2015_FI_web_final.pdf?t=1471862515578",
+      "locator": "PDF-sivu 6: historiallinen kuvaus 1987",
+      "source_type": "official_annual_report_historical_account",
+      "verification": "pdf_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "kho",
+      "title": "Hallintolainkäytön kehittyminen",
+      "publisher_or_author": "Korkein hallinto-oikeus",
+      "url": "https://www.kho.fi/tietoa-meista/historia/hallintolainkayton-kehittyminen/",
+      "locator": "Lääninoikeuksista riippumattomia hallinto-oikeuksia:1989",
+      "source_type": "institutional_history",
+      "verification": "page_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "echr",
+      "title": "HankeUM 022:00/2005, lähtökohdat",
+      "publisher_or_author": "Ulkoasiainministeriö / Valtioneuvosto",
+      "url": "https://valtioneuvosto.fi/hanke?tunnus=UM022%3A00%2F2005",
+      "locator": "EIS:n voimaantulo Suomessa 1990, SopS 18–19/1990",
+      "source_type": "official_legislative_project_background",
+      "verification": "search_index_text_checked_page_403",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "presidentlaw",
+      "title": "Laki Suomen Hallitusmuodon muuttamisesta 1074/1991",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1991/1074",
+      "locator": "23,27,36a ja 36b§; voimaantulo 1.10.1991",
+      "source_type": "historical_statute",
+      "verification": "search_index_original_statute_excerpt_checked_page_body_unavailable",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "elections",
+      "title": "Presidentin valinta",
+      "publisher_or_author": "Tasavallan presidentin kanslia",
+      "url": "https://www.presidentti.fi/presidentin-toimi/presidentin-valinta/",
+      "locator": "Aikaisemmat vaalitavat: laki 1991 ja soveltaminen 1994",
+      "source_type": "institutional_history",
+      "verification": "page_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "sitra",
+      "title": "Sitran arviointi 2002, raportteja 26",
+      "publisher_or_author": "Vihko ym. / Sitra",
+      "url": "https://www.sitra.fi/wp-content/uploads/2017/02/raportti26-2.pdf",
+      "locator": "Liite 1, PDF-sivu 54: hallinnollinen muutos 1991",
+      "source_type": "commissioned_evaluation_historical_context",
+      "verification": "pdf_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "bankfund",
+      "title": "Markka ja talous 1–2/1993",
+      "publisher_or_author": "Suomen Pankki",
+      "url": "https://publications.bof.fi/bitstream/handle/10024/42910/Markka_ja_talous_93_1-2.pdf?isAllowed=y&sequence=1",
+      "locator": "Tukitoimet: vakuusrahaston perustaminen huhtikuussa 1992",
+      "source_type": "contemporary_central_bank_publication",
+      "verification": "search_index_pdf_excerpt_checked_full_fetch_403",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "competition",
+      "title": "Kilpailuvirasto kilpailupolitiikan suunnannäyttäjänä, selvityksiä 4/2015",
+      "publisher_or_author": "Kilpailu- ja kuluttajavirasto",
+      "url": "https://www.kkv.fi/uploads/sites/2/2021/11/2015-kkv-selvityksia-4-2015-kilpailuvirasto-kilpailupolitiikan-suunnannayttajana.pdf",
+      "locator": "Painettu s.28–29: vuoden 1992 lain kieltoperiaate",
+      "source_type": "commissioned_institutional_history",
+      "verification": "pdf_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "grants",
+      "title": "HE 255/1993, valtionosuusuudistuksen tausta",
+      "publisher_or_author": "Valtioneuvosto / Finlex",
+      "url": "https://www.finlex.fi/fi/hallituksen-esitykset/1993/255",
+      "locator": "Vuoden 1993 alussa voimaan tullut valtionosuusuudistus",
+      "source_type": "contemporary_legislative_background",
+      "verification": "search_index_text_checked_page_body_unavailable",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "eu",
+      "title": "Laki valtiopäiväjärjestyksen muuttamisesta 1551/1994",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1994/1551",
+      "locator": "54d–54f§; voimaantulo 1.1.1995",
+      "source_type": "historical_statute",
+      "verification": "search_index_original_statute_excerpt_checked_page_body_unavailable",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "rights",
+      "title": "HE 122/1995, säätämisjärjestys",
+      "publisher_or_author": "Valtioneuvosto / Finlex",
+      "url": "https://www.finlex.fi/fi/hallituksen-esitykset/1995/122",
+      "locator": "6.Säätämisjärjestys: perusoikeusuudistus 969/1995 ja sosiaaliset oikeudet",
+      "source_type": "contemporary_legislative_background",
+      "verification": "search_index_text_checked_page_body_unavailable",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    }
+  ],
+  "selection": "Rajattu tarkoituksellinen otos institutionaalisista toimivaltasuhteista. Ei kaikkien nimitysten, omistusjärjestelyjen tai hallinnon uudistusten kattavuusväite. Vuosi1995 kuuluu nimenomaisesti keruuseen.",
+  "entries": [
+    {
+      "case_key": "institutional_power_1976_1995_20261026:cooperation1978",
+      "primary_item_id": "cleavages_1976_1994_20261023:cooperation1978",
+      "reuse_existing_item": true,
+      "title": "Henkilöstön yhteistoimintamenettely ja työnantajan päätösvalta",
+      "year_start": 1978,
+      "year_end": 1979,
+      "theme_ids": [
+        15,
+        19,
+        21,
+        31
+      ],
+      "dimension_codes": [
+        "access_representation",
+        "agenda_preparation",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "yt"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:cooperation1978:1",
+          "statement": "Laki 725/1978 sääti henkilöstön osallistumisesta ja neuvotteluista ennen työnantajan ratkaisua lain soveltamisalalla. Se tuli voimaan 1.7.1979.",
+          "source_ids": [
+            "yt"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "työnantaja",
+        "henkilöstön edustajat"
+      ],
+      "affected_groups": [
+        "työntekijät",
+        "toimihenkilöt"
+      ],
+      "mechanism_hypothesis": "Tiedonsaanti ja ennakkoneuvottelut saattoivat avata vaikuttamisen kanavan yritysratkaisuihin.",
+      "case_limitations": "Menettelyoikeutta ei rinnasteta yleiseen veto-oikeuteen. Alkuperäisen lain soveltamisala ja erikseen sovittavat asiat erotetaan myöhemmistä uudistuksista.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:procedure1982",
+      "primary_item_id": "institutional_power_1976_1995_20261026:procedure1982",
+      "reuse_existing_item": false,
+      "title": "Hallintomenettelyn lakisääteinen kehys",
+      "year_start": 1982,
+      "year_end": 1983,
+      "theme_ids": [
+        8,
+        19,
+        28
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "procedure"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:procedure1982:1",
+          "statement": "Hallintomenettelylaki 598/1982 tuli voimaan 1.1.1983. Se erotti hallintoasian käsittelyn hallintolainkäytöstä ja sääti viranomaisten menettelyjen soveltamisalasta.",
+          "source_ids": [
+            "procedure"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "hallintoviranomaiset",
+        "Kela",
+        "kunnat"
+      ],
+      "affected_groups": [
+        "hallintoasioiden asianosaiset"
+      ],
+      "mechanism_hypothesis": "Menettelysäännöt saattoivat rajoittaa viranomaisharkinnan käyttötapaa.",
+      "case_limitations": "Ei nykyisen hallintolain takautuvaa soveltamista. Soveltamisalan poikkeukset ja etu-, oikeus- tai velvollisuusasian erityissäännökset tarkistettava tapauskohtaisesti.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:liberalisation1983",
+      "primary_item_id": "rahoitusmarkkinoiden-vapautuminen",
+      "reuse_existing_item": true,
+      "title": "Korkosäännöstelyn purkaminen ja ohjaustavan muutos",
+      "year_start": 1983,
+      "year_end": 1986,
+      "theme_ids": [
+        8,
+        17,
+        31
+      ],
+      "dimension_codes": [
+        "resource_control",
+        "decision_authority"
+      ],
+      "source_ids": [
+        "finance"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:liberalisation1983:1",
+          "statement": "Suomen Pankin tutkimus ajoittaa antolainauksen keskikorkosääntelyn lievennykset vuosiin 1983–1984 ja sen lopettamisen vuoteen 1986.",
+          "source_ids": [
+            "finance"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "Suomen Pankki",
+        "pankit"
+      ],
+      "affected_groups": [
+        "luotonhakijat",
+        "pankkiasiakkaat"
+      ],
+      "mechanism_hypothesis": "Luottojen hinnoittelun ehtojen muuttuminen saattoi muuttaa pankkien ja keskuspankin ohjaussuhdetta.",
+      "case_limitations": "Ei väitettä kaiken rahoitussääntelyn loppumisesta 1986 tai pankkikriisin yksinomaisesta syystä. Pääomanliikkeet, valvonta ja rahapolitiikan muut välineet arvioitava erikseen.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:equality1986",
+      "primary_item_id": "tasa-arvolaki-1987",
+      "reuse_existing_item": true,
+      "title": "Tasa-arvolaki ja uusi valvontatoimija",
+      "year_start": 1986,
+      "year_end": 1987,
+      "theme_ids": [
+        8,
+        19,
+        26,
+        28
+      ],
+      "dimension_codes": [
+        "oversight_accountability",
+        "access_representation"
+      ],
+      "source_ids": [
+        "equalitylaw",
+        "equalityreport"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:equality1986:1",
+          "statement": "Tasa-arvolaki 609/1986 tuli voimaan 1.1.1987. Valtuutetun vuosikertomuksen historiakuvaus ajoittaa uuden tasa-arvovalvonnan toimijan syntymisen samaan vaiheeseen.",
+          "source_ids": [
+            "equalitylaw",
+            "equalityreport"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "tasa-arvovaltuutettu",
+        "viranomaiset",
+        "työnantajat"
+      ],
+      "affected_groups": [
+        "syrjintää epäilevät",
+        "työnhakijat"
+      ],
+      "mechanism_hypothesis": "Erillinen valvontakanava saattoi vahvistaa mahdollisuutta haastaa syrjiviä käytäntöjä.",
+      "case_limitations": "Vuoden 2015 toimivaltakuvausta tai myöhempää lautakuntarakennetta ei siirretä vuoteen 1987. Lain alkuperäiset siirtymäsäännökset ja tosiasiallinen oikeussuoja ovat erillisiä kysymyksiä.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:courts1989",
+      "primary_item_id": "institutional_power_1976_1995_20261026:courts1989",
+      "reuse_existing_item": false,
+      "title": "Lääninoikeuksien erottaminen lääninhallinnosta",
+      "year_start": 1989,
+      "year_end": 1989,
+      "theme_ids": [
+        8,
+        24,
+        28
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "kho"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:courts1989:1",
+          "statement": "Lääninoikeudet irrotettiin 1989 lääninhallituksista riippumattomiksi yleisiksi hallintotuomioistuimiksi ja siirrettiin oikeusministeriön hallinnonalalle.",
+          "source_ids": [
+            "kho"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "lääninoikeudet",
+        "lääninhallitukset",
+        "oikeusministeriö"
+      ],
+      "affected_groups": [
+        "hallintopäätösten asianosaiset"
+      ],
+      "mechanism_hypothesis": "Organisatorinen erottaminen vahvisti hallinnon ja lainkäytön erillisyyttä.",
+      "case_limitations": "Hallinnonalasiirto ei mittaa yksittäisten ratkaisujen riippumattomuutta tai käsittelyn nopeutta. Vuoden 1999 hallinto-oikeusuudistusta ei ajoiteta tähän.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:echr1990",
+      "primary_item_id": "institutional_power_1976_1995_20261026:echr1990",
+      "reuse_existing_item": false,
+      "title": "Euroopan ihmisoikeussopimus kansallisen vallankäytön kehyksenä",
+      "year_start": 1990,
+      "year_end": 1990,
+      "theme_ids": [
+        8,
+        13,
+        19,
+        28
+      ],
+      "dimension_codes": [
+        "oversight_accountability",
+        "decision_authority"
+      ],
+      "source_ids": [
+        "echr"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:echr1990:1",
+          "statement": "Euroopan ihmisoikeussopimus tuli Suomessa voimaan 1990, SopS 18–19/1990.",
+          "source_ids": [
+            "echr"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "Suomen viranomaiset",
+        "Euroopan neuvoston ihmisoikeuselimet"
+      ],
+      "affected_groups": [
+        "Suomen lainkäyttövallan piirissä olevat"
+      ],
+      "mechanism_hypothesis": "Kansainvälinen velvoite muodosti kansallisen vallankäytön arvioinnille uuden oikeudellisen kehyksen.",
+      "case_limitations": "Nykyistä ihmisoikeustuomioistuimen menettelyä ei siirretä vuoteen 1990. Yksilövalituksen hyväksyminen, tutkittavuus ja komissio–tuomioistuinjärjestelmän vaiheet vahvistettava erikseen.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:president1991",
+      "primary_item_id": "institutional_power_1976_1995_20261026:president1991",
+      "reuse_existing_item": false,
+      "title": "Hajotusvallan ja hallituksen erottamisen ehtojen rajaaminen",
+      "year_start": 1991,
+      "year_end": 1991,
+      "theme_ids": [
+        8,
+        19,
+        28,
+        32
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "presidentlaw"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:president1991:1",
+          "statement": "Laki 1074/1991 tuli voimaan 1.10.1991. Hajottaminen edellytti pääministerin perusteltua aloitetta ja kuulemisia. Hallituksen erottamisen edellytyksiä sidottiin pyyntöön tai eduskunnan luottamukseen lain määrittelemin poikkeuksin.",
+          "source_ids": [
+            "presidentlaw"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "presidentti",
+        "pääministeri",
+        "eduskunta"
+      ],
+      "affected_groups": [
+        "ministerit",
+        "edustajat",
+        "äänestäjät"
+      ],
+      "mechanism_hypothesis": "Presidentin itsenäisen harkinnan ehtoja rajattiin suhteessa parlamentaariseen vastuuseen.",
+      "case_limitations": "Ei vuoden 2000 perustuslain pääministerinvalinnan takautuvaa soveltamista. Muodollinen muutos ei yksin kerro käytännön neuvotteluvoiman jakautumisesta.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:election1994",
+      "primary_item_id": "institutional_power_1976_1995_20261026:election1994",
+      "reuse_existing_item": false,
+      "title": "Suoran presidentinvaalin säätäminen ja ensimmäinen soveltaminen",
+      "year_start": 1991,
+      "year_end": 1994,
+      "theme_ids": [
+        8,
+        19,
+        28,
+        32
+      ],
+      "dimension_codes": [
+        "access_representation",
+        "decision_authority"
+      ],
+      "source_ids": [
+        "presidentlaw",
+        "elections"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:election1994:1",
+          "statement": "Suora presidentinvaali säädettiin 1991 ja sitä sovellettiin ensimmäisen kerran 1994.",
+          "source_ids": [
+            "presidentlaw",
+            "elections"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "äänestäjät",
+        "presidenttiehdokkaat"
+      ],
+      "affected_groups": [
+        "äänioikeutetut"
+      ],
+      "mechanism_hypothesis": "Valintamenettelyn muutos saattoi vahvistaa presidentin suoraa vaalimandaattia samaan aikaan kun toimivaltuuksia rajattiin.",
+      "case_limitations": "Vaalimandaatti ei ole sama kuin oikeudelliset valtaoikeudet. Vaalituloksen tai henkilön vaikutusta ei arvioida tästä menettelymuutoksesta.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:sitra1991",
+      "primary_item_id": "institutional_power_1976_1995_20261026:sitra1991",
+      "reuse_existing_item": false,
+      "title": "Sitran hallinnollinen asema muuttuu",
+      "year_start": 1991,
+      "year_end": 1991,
+      "theme_ids": [
+        8,
+        14,
+        17,
+        29
+      ],
+      "dimension_codes": [
+        "resource_control",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "sitra"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:sitra1991:1",
+          "statement": "Sitran arvioinnin aikajana kertoo rahaston siirtyneen 1991 Suomen Pankin alaisuudesta eduskunnan vastattavaksi julkisoikeudelliseksi rahastoksi.",
+          "source_ids": [
+            "sitra"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "Sitra",
+        "eduskunta",
+        "Suomen Pankki"
+      ],
+      "affected_groups": [
+        "hankerahoituksen toimijat"
+      ],
+      "mechanism_hypothesis": "Vastuusuhteen muutos saattoi muuttaa kehittämisrahoituksen institutionaalista valvontaa.",
+      "case_limitations": "Ei väitettä yksittäisen hankkeen poliittisesta ohjauksesta tai rahoituspäätösten vapautumisesta kaikista ehdoista. Toimivaltarajat tarkistettava ajankohdan säännöistä.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:bankfund1992",
+      "primary_item_id": "pankkikriisi",
+      "reuse_existing_item": true,
+      "title": "Valtion vakuusrahasto pankkituen päätös- ja valvontakanavana",
+      "year_start": 1992,
+      "year_end": 1992,
+      "theme_ids": [
+        8,
+        17,
+        28,
+        31
+      ],
+      "dimension_codes": [
+        "resource_control",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "bankfund"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:bankfund1992:1",
+          "statement": "Suomen Pankin vuoden 1993 kuvauksen mukaan valtion vakuusrahasto perustettiin huhtikuussa 1992. Alkuperäistä johtokuntaa valvoi eduskunnan valitsema hallintoneuvosto.",
+          "source_ids": [
+            "bankfund"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "valtion vakuusrahasto",
+        "eduskunta",
+        "pankit",
+        "viranomaiset"
+      ],
+      "affected_groups": [
+        "tallettajat",
+        "veronmaksajat",
+        "luotonottajat"
+      ],
+      "mechanism_hypothesis": "Julkinen tukirakenne muodosti kriisitoimille resurssi- ja vastuukanavan.",
+      "case_limitations": "Tukivaltuus ei osoita jokaisen tukipäätöksen sisältöä tai velalliskohtaisia vaikutuksia. Myöhempää rahaston organisaatiota ei sovelleta alkuperäiseen.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:competition1992",
+      "primary_item_id": "institutional_power_1976_1995_20261026:competition1992",
+      "reuse_existing_item": false,
+      "title": "Kilpailurajoitusten valvonnan kieltoperiaate vahvistuu",
+      "year_start": 1992,
+      "year_end": 1992,
+      "theme_ids": [
+        8,
+        18,
+        28,
+        31
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "competition"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:competition1992:1",
+          "statement": "KKV:n historiatutkimuksen mukaan vuoden 1992 laki 480/1992 laajensi kartellikieltoja ja kielsi määräävän markkina-aseman väärinkäytön.",
+          "source_ids": [
+            "competition"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "kilpailuviranomaiset",
+        "yritykset"
+      ],
+      "affected_groups": [
+        "kilpailijat",
+        "asiakkaat"
+      ],
+      "mechanism_hypothesis": "Markkinavallan käytölle asetettiin aiempaa laajempia oikeudellisia rajoja.",
+      "case_limitations": "Lain olemassaolo ei osoita markkinoiden toteutunutta kilpailullisuutta. Vuoden 1998 yrityskauppavalvontaa tai myöhempiä markkinaoikeuden valtuuksia ei siirretä vuoteen 1992.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:grants1993",
+      "primary_item_id": "institutional_power_1976_1995_20261026:grants1993",
+      "reuse_existing_item": false,
+      "title": "Valtionosuuksien uudistus ja paikallisen päätösvallan ehdot",
+      "year_start": 1993,
+      "year_end": 1993,
+      "theme_ids": [
+        7,
+        8,
+        17,
+        20
+      ],
+      "dimension_codes": [
+        "resource_control",
+        "decision_authority"
+      ],
+      "source_ids": [
+        "grants"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:grants1993:1",
+          "statement": "HE 255/1993:n taustakuvauksen mukaan vuoden 1993 alussa voimaan tulleella valtionosuusuudistuksella vahvistettiin kuntien ja yksityisten valtionapulaitosten itsenäistä asemaa.",
+          "source_ids": [
+            "grants"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "valtio",
+        "kunnat",
+        "valtionapulaitokset"
+      ],
+      "affected_groups": [
+        "kuntalaiset",
+        "palvelujen käyttäjät"
+      ],
+      "mechanism_hypothesis": "Rahoituksen ohjaustavan muutos saattoi siirtää käytännön valintoja paikallistasolle.",
+      "case_limitations": "Kuvaus uudistuksen tarkoituksesta ei todista kaikkien tavoitteiden toteutumista. Rahoituksen määrä, normiohjaus, palveluvelvoitteet ja samanaikaiset leikkaukset erotetaan toisistaan.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:eu1995",
+      "primary_item_id": "eu-jasenyys-1995",
+      "reuse_existing_item": true,
+      "title": "EU-asioiden ennakkokäsittely eduskunnassa",
+      "year_start": 1994,
+      "year_end": 1995,
+      "theme_ids": [
+        8,
+        11,
+        13,
+        28
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "agenda_preparation",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "eu"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:eu1995:1",
+          "statement": "Valtiopäiväjärjestyksen muutos 1551/1994 tuli voimaan 1.1.1995. Se sääti suuren valiokunnan ja ulkoasiainvaliokunnan tiedonsaannista sekä mahdollisuudesta lausua valtioneuvostolle EU-asioissa.",
+          "source_ids": [
+            "eu"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "eduskunta",
+        "suuri valiokunta",
+        "ulkoasiainvaliokunta",
+        "valtioneuvosto"
+      ],
+      "affected_groups": [
+        "kansalaiset",
+        "edustajat"
+      ],
+      "mechanism_hypothesis": "Ennakkokäsittely muodosti parlamentaarisen kanavan kansallisen EU-kannan valmisteluun.",
+      "case_limitations": "Tiedonsaanti ja lausuminen eivät tarkoita veto-oikeutta kaikkiin EU-päätöksiin. Kansanäänestys 1994, jäsenyyspäätös ja kansallinen käsittelyjärjestys ovat eri tapahtumia.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1976_1995_20261026:rights1995",
+      "primary_item_id": "perusoikeusuudistus-1995",
+      "reuse_existing_item": true,
+      "title": "Perusoikeusuudistus vahvistaa julkisen vallan velvoitteiden kehystä",
+      "year_start": 1995,
+      "year_end": 1995,
+      "theme_ids": [
+        5,
+        8,
+        19,
+        26,
+        28
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "rights"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1976_1995_20261026:rights1995:1",
+          "statement": "Vuoden 1995 hallituksen esityksen taustakuvauksen mukaan perusoikeusuudistus tuli voimaan 1.8.1995 ja hallitusmuotoon sisällytettiin keskeisiä sosiaalisia oikeuksia.",
+          "source_ids": [
+            "rights"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "eduskunta",
+        "viranomaiset",
+        "laillisuusvalvojat"
+      ],
+      "affected_groups": [
+        "oikeuksien haltijat",
+        "etuuksien ja palvelujen käyttäjät"
+      ],
+      "mechanism_hypothesis": "Perustuslaintasoisen oikeuskehyksen muutos saattoi vahvistaa yksilön asemaa suhteessa julkiseen valtaan.",
+      "case_limitations": "Perusoikeuden säätäminen ei osoita palvelun saatavuuden tai toimeentulon toteutumista. Tässä ei oleteta vuonna 1995 syntyneen nykyistä perustuslain 106§:n tuomioistuinkontrollia.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    }
+  ],
+  "limitations": [
+    "Muodollinen toimivalta, vaikutuskanavan hypoteesi ja toteutunut vaikutus erotetaan; ei numeerisia vaikutusarvioita.",
+    "Finlexin dynaamisista sivuista tarkistettiin hakutuloksissa näkyvät yksilöidyt alkuperäissäädösten otteet. Hakutulosotteen tarkistusta ei koroteta koko tekstin tarkistukseksi.",
+    "Vakuusrahaston ja EIS-taustan osalta käytettiin rajattua hakutulosotetta. Alkuperäisten päätösten ja valtiosopimusten koko tarkistus jää jatkotyöksi.",
+    "Nykyisiä perustuslakisääntöjä, yrityskauppavalvontaa tai tuomioistuinrakenteita ei siirretä takautuvasti.",
+    "Keruun loppuvuosi on1995, ei1994; tämän jälkeen jatkuvia kehityskulkuja ei oleteta päättyneiksi."
+  ],
+  "open_tasks": [
+    "Vuosien1976–1977 eläkeyhtiöiden hallintoedustuksen alkuperäiset säännöt ja kokoonpanot.",
+    "Omistajavallan, valtionyhtiöiden yhtiöittämisen ja yksityistämisen päätös- ja vastuuketjut.",
+    "Pankkitukipäätösten ehdot, valvonta ja velallisten oikeussuoja yksilöidyistä asiakirjoista.",
+    "Valtionosuusuudistuksen ja kuntalain1995 toimeenpano sekä alue- ja palveluryhmäkohtaiset vaikutukset.",
+    "EU- ja ETA-valmistelun1994–1995 toteutuneet valiokuntakannat ja valtioneuvoston ratkaisut.",
+    "Hallintomenettelyn, tasa-arvovalvonnan ja perusoikeuksien käytännön saavutettavuus sekä rahoitus."
+  ]
+}
