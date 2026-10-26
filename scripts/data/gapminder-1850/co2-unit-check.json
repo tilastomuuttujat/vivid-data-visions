@@ -1,0 +1,666 @@
+{
+  "source_url": "https://openclimatedata.github.io/global-carbon-budget/data/global-carbon-budget-2022-national-fossil-territorial-emissions.csv",
+  "source_sha256": "660c56dfaed4d471f9d7d670621f2f70a432d3781cbf8a4fcf79997d1ce4fc20",
+  "source_unit_header": [
+    "# All values in million tonnes of carbon per year. For values in million tonnes of CO2 per year, multiply the values below by 3.664",
+    "# 1MtC = 1 million tonne of carbon = 3.664 million tonnes of CO2"
+  ],
+  "source_edition": "Global Carbon Budget 2022, original national fossil workbook converted by Openclimatedata",
+  "finland_values": [
+    {
+      "year": 1860,
+      "finland_mtc_per_year": "0.01"
+    },
+    {
+      "year": 1861,
+      "finland_mtc_per_year": "0.02"
+    },
+    {
+      "year": 1862,
+      "finland_mtc_per_year": "0.02"
+    },
+    {
+      "year": 1863,
+      "finland_mtc_per_year": "0.021"
+    },
+    {
+      "year": 1864,
+      "finland_mtc_per_year": "0.013"
+    },
+    {
+      "year": 1865,
+      "finland_mtc_per_year": "0.017"
+    },
+    {
+      "year": 1866,
+      "finland_mtc_per_year": "0.019"
+    },
+    {
+      "year": 1867,
+      "finland_mtc_per_year": "0.017"
+    },
+    {
+      "year": 1868,
+      "finland_mtc_per_year": "0.024"
+    },
+    {
+      "year": 1869,
+      "finland_mtc_per_year": "0.019"
+    },
+    {
+      "year": 1870,
+      "finland_mtc_per_year": "0.025"
+    },
+    {
+      "year": 1871,
+      "finland_mtc_per_year": "0.031"
+    },
+    {
+      "year": 1872,
+      "finland_mtc_per_year": "0.025"
+    },
+    {
+      "year": 1873,
+      "finland_mtc_per_year": "0.024"
+    },
+    {
+      "year": 1874,
+      "finland_mtc_per_year": "0.034"
+    },
+    {
+      "year": 1875,
+      "finland_mtc_per_year": "0.023"
+    },
+    {
+      "year": 1876,
+      "finland_mtc_per_year": "0.026"
+    },
+    {
+      "year": 1877,
+      "finland_mtc_per_year": "0.031"
+    },
+    {
+      "year": 1878,
+      "finland_mtc_per_year": "0.035"
+    },
+    {
+      "year": 1879,
+      "finland_mtc_per_year": "0.021"
+    },
+    {
+      "year": 1880,
+      "finland_mtc_per_year": "0.027"
+    },
+    {
+      "year": 1881,
+      "finland_mtc_per_year": "0.027"
+    },
+    {
+      "year": 1882,
+      "finland_mtc_per_year": "0.033"
+    },
+    {
+      "year": 1883,
+      "finland_mtc_per_year": "0.032"
+    },
+    {
+      "year": 1884,
+      "finland_mtc_per_year": "0.039"
+    },
+    {
+      "year": 1885,
+      "finland_mtc_per_year": "0.06"
+    },
+    {
+      "year": 1886,
+      "finland_mtc_per_year": "0.035"
+    },
+    {
+      "year": 1887,
+      "finland_mtc_per_year": "0.035"
+    },
+    {
+      "year": 1888,
+      "finland_mtc_per_year": "0.033"
+    },
+    {
+      "year": 1889,
+      "finland_mtc_per_year": "0.044"
+    },
+    {
+      "year": 1890,
+      "finland_mtc_per_year": "0.057"
+    },
+    {
+      "year": 1891,
+      "finland_mtc_per_year": "0.06"
+    },
+    {
+      "year": 1892,
+      "finland_mtc_per_year": "0.053"
+    },
+    {
+      "year": 1893,
+      "finland_mtc_per_year": "0.053"
+    },
+    {
+      "year": 1894,
+      "finland_mtc_per_year": "0.06"
+    },
+    {
+      "year": 1895,
+      "finland_mtc_per_year": "0.064"
+    },
+    {
+      "year": 1896,
+      "finland_mtc_per_year": "0.081"
+    },
+    {
+      "year": 1897,
+      "finland_mtc_per_year": "0.141"
+    },
+    {
+      "year": 1898,
+      "finland_mtc_per_year": "0.133"
+    },
+    {
+      "year": 1899,
+      "finland_mtc_per_year": "0.201"
+    },
+    {
+      "year": 1900,
+      "finland_mtc_per_year": "0.164"
+    },
+    {
+      "year": 1901,
+      "finland_mtc_per_year": "0.115"
+    },
+    {
+      "year": 1902,
+      "finland_mtc_per_year": "0.109"
+    },
+    {
+      "year": 1903,
+      "finland_mtc_per_year": "0.14"
+    },
+    {
+      "year": 1904,
+      "finland_mtc_per_year": "0.144"
+    },
+    {
+      "year": 1905,
+      "finland_mtc_per_year": "0.16"
+    },
+    {
+      "year": 1906,
+      "finland_mtc_per_year": "0.168"
+    },
+    {
+      "year": 1907,
+      "finland_mtc_per_year": "0.242"
+    },
+    {
+      "year": 1908,
+      "finland_mtc_per_year": "0.384"
+    },
+    {
+      "year": 1909,
+      "finland_mtc_per_year": "0.35"
+    },
+    {
+      "year": 1910,
+      "finland_mtc_per_year": "0.29"
+    },
+    {
+      "year": 1911,
+      "finland_mtc_per_year": "0.359"
+    },
+    {
+      "year": 1912,
+      "finland_mtc_per_year": "0.405"
+    },
+    {
+      "year": 1913,
+      "finland_mtc_per_year": "0.454"
+    },
+    {
+      "year": 1914,
+      "finland_mtc_per_year": "0.188"
+    },
+    {
+      "year": 1915,
+      "finland_mtc_per_year": "0.029"
+    },
+    {
+      "year": 1916,
+      "finland_mtc_per_year": "0.049"
+    },
+    {
+      "year": 1917,
+      "finland_mtc_per_year": "0.033"
+    },
+    {
+      "year": 1918,
+      "finland_mtc_per_year": "0.02"
+    },
+    {
+      "year": 1919,
+      "finland_mtc_per_year": "0.065"
+    },
+    {
+      "year": 1920,
+      "finland_mtc_per_year": "0.075"
+    },
+    {
+      "year": 1921,
+      "finland_mtc_per_year": "0.077"
+    },
+    {
+      "year": 1922,
+      "finland_mtc_per_year": "0.194"
+    },
+    {
+      "year": 1923,
+      "finland_mtc_per_year": "0.403"
+    },
+    {
+      "year": 1924,
+      "finland_mtc_per_year": "0.476"
+    },
+    {
+      "year": 1925,
+      "finland_mtc_per_year": "0.467"
+    },
+    {
+      "year": 1926,
+      "finland_mtc_per_year": "0.436"
+    },
+    {
+      "year": 1927,
+      "finland_mtc_per_year": "0.778"
+    },
+    {
+      "year": 1928,
+      "finland_mtc_per_year": "0.853691811023622"
+    },
+    {
+      "year": 1929,
+      "finland_mtc_per_year": "0.914691811023622"
+    },
+    {
+      "year": 1930,
+      "finland_mtc_per_year": "0.722773227041371"
+    },
+    {
+      "year": 1931,
+      "finland_mtc_per_year": "0.82182157480315"
+    },
+    {
+      "year": 1932,
+      "finland_mtc_per_year": "0.824829891231816"
+    },
+    {
+      "year": 1933,
+      "finland_mtc_per_year": "0.879821371816577"
+    },
+    {
+      "year": 1934,
+      "finland_mtc_per_year": "1.07874858267717"
+    },
+    {
+      "year": 1935,
+      "finland_mtc_per_year": "0.959700233516596"
+    },
+    {
+      "year": 1936,
+      "finland_mtc_per_year": "1.35463503937008"
+    },
+    {
+      "year": 1937,
+      "finland_mtc_per_year": "1.85054607200558"
+    },
+    {
+      "year": 1938,
+      "finland_mtc_per_year": "1.55447283464567"
+    },
+    {
+      "year": 1939,
+      "finland_mtc_per_year": "1.32937598099824"
+    },
+    {
+      "year": 1940,
+      "finland_mtc_per_year": "0.631667480314961"
+    },
+    {
+      "year": 1941,
+      "finland_mtc_per_year": "0.88565937007874"
+    },
+    {
+      "year": 1942,
+      "finland_mtc_per_year": "0.766805354330709"
+    },
+    {
+      "year": 1943,
+      "finland_mtc_per_year": "1.07674023124433"
+    },
+    {
+      "year": 1944,
+      "finland_mtc_per_year": "0.743805354330709"
+    },
+    {
+      "year": 1945,
+      "finland_mtc_per_year": "0.174693562097351"
+    },
+    {
+      "year": 1946,
+      "finland_mtc_per_year": "0.895635039370079"
+    },
+    {
+      "year": 1947,
+      "finland_mtc_per_year": "1.48753771653543"
+    },
+    {
+      "year": 1948,
+      "finland_mtc_per_year": "2.30838362204724"
+    },
+    {
+      "year": 1949,
+      "finland_mtc_per_year": "1.34627818897638"
+    },
+    {
+      "year": 1950,
+      "finland_mtc_per_year": "1.78618040750015"
+    },
+    {
+      "year": 1951,
+      "finland_mtc_per_year": "2.17708312233479"
+    },
+    {
+      "year": 1952,
+      "finland_mtc_per_year": "2.36214067861758"
+    },
+    {
+      "year": 1953,
+      "finland_mtc_per_year": "2.06496950121065"
+    },
+    {
+      "year": 1954,
+      "finland_mtc_per_year": "2.49785691411024"
+    },
+    {
+      "year": 1955,
+      "finland_mtc_per_year": "2.98184834645669"
+    },
+    {
+      "year": 1956,
+      "finland_mtc_per_year": "3.32093755905512"
+    },
+    {
+      "year": 1957,
+      "finland_mtc_per_year": "3.34095377952756"
+    },
+    {
+      "year": 1958,
+      "finland_mtc_per_year": "2.89497811023622"
+    },
+    {
+      "year": 1959,
+      "finland_mtc_per_year": "3.69971047244094"
+    },
+    {
+      "year": 1960,
+      "finland_mtc_per_year": "4.1176131496063"
+    },
+    {
+      "year": 1961,
+      "finland_mtc_per_year": "4.07251546237852"
+    },
+    {
+      "year": 1962,
+      "finland_mtc_per_year": "4.58249993353884"
+    },
+    {
+      "year": 1963,
+      "finland_mtc_per_year": "5.27742661417323"
+    },
+    {
+      "year": 1964,
+      "finland_mtc_per_year": "6.23026440944882"
+    },
+    {
+      "year": 1965,
+      "finland_mtc_per_year": "6.90504543307087"
+    },
+    {
+      "year": 1966,
+      "finland_mtc_per_year": "8.04826440944882"
+    },
+    {
+      "year": 1967,
+      "finland_mtc_per_year": "7.80232929133858"
+    },
+    {
+      "year": 1968,
+      "finland_mtc_per_year": "9.08337002193389"
+    },
+    {
+      "year": 1969,
+      "finland_mtc_per_year": "10.3430211023622"
+    },
+    {
+      "year": 1970,
+      "finland_mtc_per_year": "11.0139317020098"
+    },
+    {
+      "year": 1971,
+      "finland_mtc_per_year": "11.0635262541303"
+    },
+    {
+      "year": 1972,
+      "finland_mtc_per_year": "12.0376864727009"
+    },
+    {
+      "year": 1973,
+      "finland_mtc_per_year": "13.4607426237712"
+    },
+    {
+      "year": 1974,
+      "finland_mtc_per_year": "12.7206252324238"
+    },
+    {
+      "year": 1975,
+      "finland_mtc_per_year": "12.5615926259023"
+    },
+    {
+      "year": 1976,
+      "finland_mtc_per_year": "13.9733801980716"
+    },
+    {
+      "year": 1977,
+      "finland_mtc_per_year": "13.6836753921822"
+    },
+    {
+      "year": 1978,
+      "finland_mtc_per_year": "14.1443819342853"
+    },
+    {
+      "year": 1979,
+      "finland_mtc_per_year": "14.8026798016229"
+    },
+    {
+      "year": 1980,
+      "finland_mtc_per_year": "15.8677094715189"
+    },
+    {
+      "year": 1981,
+      "finland_mtc_per_year": "14.0292796133525"
+    },
+    {
+      "year": 1982,
+      "finland_mtc_per_year": "11.7293872868689"
+    },
+    {
+      "year": 1983,
+      "finland_mtc_per_year": "11.3164222047999"
+    },
+    {
+      "year": 1984,
+      "finland_mtc_per_year": "11.5030406075492"
+    },
+    {
+      "year": 1985,
+      "finland_mtc_per_year": "13.523219429223"
+    },
+    {
+      "year": 1986,
+      "finland_mtc_per_year": "14.5235714248755"
+    },
+    {
+      "year": 1987,
+      "finland_mtc_per_year": "15.7023472041746"
+    },
+    {
+      "year": 1988,
+      "finland_mtc_per_year": "14.2079916841913"
+    },
+    {
+      "year": 1989,
+      "finland_mtc_per_year": "14.3143913516131"
+    },
+    {
+      "year": 1990,
+      "finland_mtc_per_year": "15.5333888732112"
+    },
+    {
+      "year": 1991,
+      "finland_mtc_per_year": "15.0624345393336"
+    },
+    {
+      "year": 1992,
+      "finland_mtc_per_year": "14.8103325999302"
+    },
+    {
+      "year": 1993,
+      "finland_mtc_per_year": "15.3693685568043"
+    },
+    {
+      "year": 1994,
+      "finland_mtc_per_year": "16.8484357917684"
+    },
+    {
+      "year": 1995,
+      "finland_mtc_per_year": "15.8612220739824"
+    },
+    {
+      "year": 1996,
+      "finland_mtc_per_year": "17.4762714891071"
+    },
+    {
+      "year": 1997,
+      "finland_mtc_per_year": "17.1114007347269"
+    },
+    {
+      "year": 1998,
+      "finland_mtc_per_year": "16.1985438036225"
+    },
+    {
+      "year": 1999,
+      "finland_mtc_per_year": "16.066292893253"
+    },
+    {
+      "year": 2000,
+      "finland_mtc_per_year": "15.5594767847252"
+    },
+    {
+      "year": 2001,
+      "finland_mtc_per_year": "17.0616092828202"
+    },
+    {
+      "year": 2002,
+      "finland_mtc_per_year": "17.7513564453885"
+    },
+    {
+      "year": 2003,
+      "finland_mtc_per_year": "19.8292369939311"
+    },
+    {
+      "year": 2004,
+      "finland_mtc_per_year": "18.8152596008233"
+    },
+    {
+      "year": 2005,
+      "finland_mtc_per_year": "15.5696823302317"
+    },
+    {
+      "year": 2006,
+      "finland_mtc_per_year": "18.6601229172991"
+    },
+    {
+      "year": 2007,
+      "finland_mtc_per_year": "18.2204790033033"
+    },
+    {
+      "year": 2008,
+      "finland_mtc_per_year": "15.9991810179679"
+    },
+    {
+      "year": 2009,
+      "finland_mtc_per_year": "15.2579346541258"
+    },
+    {
+      "year": 2010,
+      "finland_mtc_per_year": "17.4892898400444"
+    },
+    {
+      "year": 2011,
+      "finland_mtc_per_year": "15.4577432143985"
+    },
+    {
+      "year": 2012,
+      "finland_mtc_per_year": "13.9589753336911"
+    },
+    {
+      "year": 2013,
+      "finland_mtc_per_year": "14.1112860185571"
+    },
+    {
+      "year": 2014,
+      "finland_mtc_per_year": "12.9901284527704"
+    },
+    {
+      "year": 2015,
+      "finland_mtc_per_year": "12.0357792859386"
+    },
+    {
+      "year": 2016,
+      "finland_mtc_per_year": "12.8771454779193"
+    },
+    {
+      "year": 2017,
+      "finland_mtc_per_year": "12.1664289314519"
+    },
+    {
+      "year": 2018,
+      "finland_mtc_per_year": "12.4990340330787"
+    },
+    {
+      "year": 2019,
+      "finland_mtc_per_year": "11.5670962274789"
+    },
+    {
+      "year": 2020,
+      "finland_mtc_per_year": "10.2608972141054"
+    },
+    {
+      "year": 2021,
+      "finland_mtc_per_year": "10.2626440329747"
+    }
+  ],
+  "check_year": 2021,
+  "gapminder_raw_value": 37397074.856,
+  "reference_mtc": 10.2626440329747,
+  "conversion_reference_to_tco2": 3664000,
+  "ratio_gapminder_to_reference_tco2": 0.9945414847119072,
+  "resolution": "Gapminder raw numeric magnitude is tonnes CO2, not million tonnes. Store raw numeric values unchanged as t CO2; preserve contradictory source metadata. This is a unit-scale crosscheck, not exact-vintage numerical validation.",
+  "per_capita_resolution": "Raw values are tonnes CO2 per person, not million tonnes; parallel representations share one dependency cluster."
+}

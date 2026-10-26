@@ -1,0 +1,61 @@
+{
+  "batch_id": "gapminder_finland_1850_2025_20261026_v1",
+  "checked_on": "2026-10-26",
+  "country": "fin",
+  "requested_period": [
+    1850,
+    2025
+  ],
+  "sources": [
+    {
+      "id": "child",
+      "concept": "child_mortality_0_5_year_olds_dying_per_1000_born",
+      "repository": "open-numbers/ddf--gapminder--fasttrack",
+      "commit": "dee8978535ee563526704d2793497f8537280469",
+      "path": "countries_etc_datapoints/ddf--datapoints--child_mortality_0_5_year_olds_dying_per_1000_born--by--country--time.csv",
+      "documentation": "https://www.gapminder.org/data/documentation/gd005/",
+      "raw_url": "https://raw.githubusercontent.com/open-numbers/ddf--gapminder--fasttrack/dee8978535ee563526704d2793497f8537280469/countries_etc_datapoints/ddf--datapoints--child_mortality_0_5_year_olds_dying_per_1000_born--by--country--time.csv",
+      "git_blob_sha": "d9a49c5af34260e2d6b9e5c5a6c5caa8619f030c"
+    },
+    {
+      "id": "maternal",
+      "concept": "maternal_mortality_ratio_per_100000_live_births",
+      "repository": "open-numbers/ddf--gapminder--systema_globalis",
+      "commit": "ee190605fdec9d1c35c38e18e869a400a5818fe6",
+      "path": "countries-etc-datapoints/ddf--datapoints--maternal_mortality_ratio_per_100000_live_births--by--geo--time.csv",
+      "documentation": "https://www.gapminder.org/data/documentation/gd010/",
+      "raw_url": "https://raw.githubusercontent.com/open-numbers/ddf--gapminder--systema_globalis/ee190605fdec9d1c35c38e18e869a400a5818fe6/countries-etc-datapoints/ddf--datapoints--maternal_mortality_ratio_per_100000_live_births--by--geo--time.csv",
+      "git_blob_sha": null
+    },
+    {
+      "id": "fertility",
+      "concept": "children_per_woman_total_fertility",
+      "repository": "open-numbers/ddf--gapminder--fasttrack",
+      "commit": "dee8978535ee563526704d2793497f8537280469",
+      "path": "countries_etc_datapoints/ddf--datapoints--children_per_woman_total_fertility--by--country--time.csv",
+      "documentation": "https://www.gapminder.org/data/documentation/gd008/",
+      "raw_url": "https://raw.githubusercontent.com/open-numbers/ddf--gapminder--fasttrack/dee8978535ee563526704d2793497f8537280469/countries_etc_datapoints/ddf--datapoints--children_per_woman_total_fertility--by--country--time.csv",
+      "git_blob_sha": "aa281b29831359e2591db5c625bdbe753332ee85"
+    },
+    {
+      "id": "co2_total",
+      "concept": "co2_terr",
+      "repository": "open-numbers/ddf--gapminder--fasttrack",
+      "commit": "dee8978535ee563526704d2793497f8537280469",
+      "path": "countries_etc_datapoints/ddf--datapoints--co2_terr--by--country--time.csv",
+      "documentation": "https://gapm.io/dco2_territorial_historic",
+      "raw_url": "https://raw.githubusercontent.com/open-numbers/ddf--gapminder--fasttrack/dee8978535ee563526704d2793497f8537280469/countries_etc_datapoints/ddf--datapoints--co2_terr--by--country--time.csv",
+      "git_blob_sha": "a582ed10ac4ce8030e05861c3add9d48cf43f01e"
+    },
+    {
+      "id": "co2_per_capita",
+      "concept": "co2_pcap_terr",
+      "repository": "open-numbers/ddf--gapminder--fasttrack",
+      "commit": "dee8978535ee563526704d2793497f8537280469",
+      "path": "countries_etc_datapoints/ddf--datapoints--co2_pcap_terr--by--country--time.csv",
+      "documentation": "https://gapm.io/dco2_territorial_historic",
+      "raw_url": "https://raw.githubusercontent.com/open-numbers/ddf--gapminder--fasttrack/dee8978535ee563526704d2793497f8537280469/countries_etc_datapoints/ddf--datapoints--co2_pcap_terr--by--country--time.csv",
+      "git_blob_sha": "afeb17725764426f6592a58234c0efc54063a445"
+    }
+  ]
+}
