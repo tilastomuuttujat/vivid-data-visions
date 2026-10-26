@@ -45,3 +45,15 @@ Menettelyyn osallistuminen ei ole yleinen veto-oikeus. Suora vaalimandaatti ei t
 KHO:n, presidentin kanslian, tasa-arvovaltuutetun ja Sitran sivu-/PDF-tekstit sekä KKV:n ja Suomen Pankin tutkimusjulkaisut tukevat rajattuja havaintoja. Finlexin alkuperäissäädösten otteet sekä pankkitukirahaston ja EIS-taustan tiedot tarkistettiin hakutulosteksteistä, kun koko sivutekstiä ei saatu. Rajattu tarkistustaso on merkitty lähteisiin, eikä sitä rinnasteta koko alkuperäistekstin tai toteutuneen vaikutuksen tarkistukseen.
 
 Lopputarkistus: 14 tapausta / 14 väitettä / 6 aiempaa / 8 uutta tapahtumakorttia. Ei numeerisia vaikutussarjoja eikä verkkonäkymän staattisen poiminnan päivitystä. Myöhempien täydentävien erien tulee käyttää samoihin vuoden 1995 tapahtumiin olemassa olevia kortteja kaksoiskappaleiden välttämiseksi.
+
+## Jatko 1996–2025
+
+`institutional_power_1996_2025_20261026` sisältää 16 tapausta, 16 lähteistettyä havaintoa ja 14 lähdettä. Viisi olemassa olevaa tapahtumakorttia hyödynnetään ja 11 lisätään. Mukana ovat hallintolainkäyttö 1996, julkisuuslaki 1999, pääministerin parlamentaarinen valinta 2000, VTV:n asema 2001, hallintolaki 2003/2004, finanssivalvonnan yhdistäminen ja poliittisen rahoituksen valvonta, kansalaisaloite, finanssipolitiikan valvonta, euroalueen pankkivalvonta, GDPR, vuoden 2020 poikkeusolot, KKO:n yksilöity menettelyrajaus, hyvinvointialueet, avoimuusrekisteri ja TE-palvelujen siirto 2025.
+
+Ajoituserot säilyvät: perustuslaki voimaan 2000 / VTV:n siirto 2001; kansalaisaloitelaki maaliskuu 2012 / verkkopalvelu joulukuu; GDPR voimaan 2016 / soveltaminen 2018; avoimuusrekisterin rekisteröinti tammikuu 2024 / toimintailmoitukset heinäkuu. Julkisuuslain alkuperäisiä lyhyitä määräaikoja ei ajoiteta vuoteen 1999. Vuoden 2020 poikkeusolot eivät aktivoineet kaikkia valtuuksia eivätkä muuttaneet videokuulemisen lakisääteisiä edellytyksiä. KKO:n ratkaisu on rajattu oikeusohje, ei yleinen arvio kaikkien pandemiapäätösten laillisuudesta.
+
+Järjestämisvastuu ei osoita palvelu- tai työllisyysvaikutusta. Avoimuusrekisterin yhteydenotto ei todista päätösvaikutusta. VTV:n valvonta ei ole eduskunnan budjettivaltaa. Ahvenanmaa ei ole TE-uudistuksen 46. työllisyysalue. Vuoden 2026 tehtävämuutokset jäävät rajauksen ulkopuolelle.
+
+VTV:n ja Tilastokeskuksen sivutekstit sekä Finanssivalvonnan vuosikertomuksen PDF-teksti tarkistettiin. Muiden lähteiden yksilöidyt hakutulosotteet ja tarkistuksen rajat kirjattiin metatietoihin; hakutulosotetta ei rinnasteta kokotekstin tarkistukseen. Lähteet ja tosiasiat erotetaan tulkintahypoteeseista. Kattavuus on tarkoituksellinen otos, eikä se kata kaikkia vallankäytön muotoja.
+
+Tuonti on sisältötarkistettu ja toistettavissa ilman kaksoisrivejä. Odote: 16 tapausta / 16 havaintoa / 5 aiempaa / 11 uutta tapahtumakorttia. Ei numeerisia vaikutussarjoja, uusia teemoja tai verkkonäkymien staattisen poiminnan päivitystä. Nimitys-, omistaja-, hankinta- ja alustavallan sekä toteutuneen valvonnan keruu on nimetty jatkotehtäviksi.

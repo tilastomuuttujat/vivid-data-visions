@@ -1,0 +1,956 @@
+{
+  "batch_id": "institutional_power_1996_2025_20261026",
+  "taxonomy_id": "institutional_power_taxonomy_v1",
+  "title": "Institutionaalinen valta 1996–2025: parlamentaarinen vastuu, monitasoinen valvonta ja järjestämisvastuu",
+  "period": [
+    1996,
+    2025
+  ],
+  "taxonomy": {
+    "decision_authority": "Muodollinen päätös- ja estovalta",
+    "resource_control": "Rahoituksen ja varojen hallinta",
+    "agenda_preparation": "Valmistelu- ja asiantuntijavalta",
+    "access_representation": "Pääsy ja edustus",
+    "oversight_accountability": "Valvonta ja vastuu"
+  },
+  "sources": [
+    {
+      "source_id": "appeals",
+      "title": "Hallintolainkäyttölaki 586/1996, alkuperäinen",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1996/586",
+      "locator": "Valitusosoitus ja voimaantulo 1.12.1996",
+      "source_type": "historical_statute",
+      "verification": "search_index_original_statute_excerpt_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "publicity",
+      "title": "Laki viranomaisten toiminnan julkisuudesta 621/1999, alkuperäinen",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1999/621",
+      "locator": "1 ja 37 §; voimaantulo 1.12.1999 ja määräaikojen siirtymäsäännös",
+      "source_type": "historical_statute",
+      "verification": "search_index_original_statute_excerpt_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "constitution",
+      "title": "Suomen perustuslaki 731/1999",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
+      "locator": "61 § ja voimaantulo 1.3.2000; myöhempiä muutoksia ei käytetä historiallisina",
+      "source_type": "statute_limited_historical_provisions",
+      "verification": "search_index_statute_excerpt_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "vtv",
+      "title": "Historia",
+      "publisher_or_author": "Valtiontalouden tarkastusvirasto",
+      "url": "https://vtv.fi/tietoa-vtvsta/historia/",
+      "locator": "Eduskunnan yhteys 2001; vaalirahoitus 2009; puoluerahoitus 2010; finanssipolitiikan valvonta 2013–2025",
+      "source_type": "institutional_history",
+      "verification": "page_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "administration",
+      "title": "Hallintolaki 434/2003, alkuperäinen ja voimaantulotieto",
+      "publisher_or_author": "Finlex",
+      "url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2003/434",
+      "locator": "1 §; voimaantulo tarkistettu myös ajantasaisen säädöksen 70 §:stä",
+      "source_type": "historical_statute",
+      "verification": "search_index_original_purpose_and_consolidated_commencement_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "fiva",
+      "title": "Historia",
+      "publisher_or_author": "Finanssivalvonta",
+      "url": "https://www.finanssivalvonta.fi/finanssivalvonta/organisaatio-ja-tehtavat/historia/",
+      "locator": "Perustaminen 1.1.2009 ja edeltäjäviranomaiset",
+      "source_type": "institutional_history",
+      "verification": "search_index_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "initiative",
+      "title": "Kansalaisaloite lyhyesti",
+      "publisher_or_author": "Oikeusministeriö / Kansalaisaloite.fi",
+      "url": "https://www.kansalaisaloite.fi/fi/ohjeet/kansalaisaloite-lyhyesti",
+      "locator": "Laki 1.3.2012; verkkopalvelu 1.12.2012; aloite ei ole hyväksymispäätös",
+      "source_type": "official_service_guidance_historical_dates",
+      "verification": "search_index_text_checked_page_403",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "ssm",
+      "title": "Toimintakertomus 2014",
+      "publisher_or_author": "Finanssivalvonta",
+      "url": "https://www.finanssivalvonta.fi/globalassets/fi/liitteet-lehdistotiedotteet/2015/finanssivalvonnan_toimintakertomus_2014.pdf",
+      "locator": "Painettu s. 3 ja 16: 4.11.2014 ja yhteiset valvontatiimit",
+      "source_type": "official_annual_report",
+      "verification": "pdf_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "gdpr",
+      "title": "Legal framework of EU data protection",
+      "publisher_or_author": "Euroopan komissio",
+      "url": "https://commission.europa.eu/law/law-topic/data-protection/legal-framework-eu-data-protection_en",
+      "locator": "GDPR voimaan 24.5.2016; soveltaminen 25.5.2018",
+      "source_type": "official_legal_framework_summary",
+      "verification": "search_index_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": false
+    },
+    {
+      "source_id": "emergency",
+      "title": "Hallitus totesi Suomen olevan poikkeusoloissa koronavirustilanteen vuoksi, 16.3.2020",
+      "publisher_or_author": "Valtioneuvosto",
+      "url": "https://valtioneuvosto.fi/-/10616/hallitus-totesi-suomen-olevan-poikkeusoloissa-koronavirustilanteen-vuoksi",
+      "locator": "Toteaminen ja käyttöönottoasetuksen eduskuntakäsittely",
+      "source_type": "contemporary_official_release",
+      "verification": "search_index_text_checked_page_403",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "kko",
+      "title": "KKO:2021:5, 26.1.2021",
+      "publisher_or_author": "Korkein oikeus / Finlex",
+      "url": "https://www.finlex.fi/fi/oikeuskaytanto/korkein-oikeus/ennakkopaatokset/2021/5",
+      "locator": "Kohdat 14–16: poikkeusolojen päättyminen ja videokuulemisen ehdot",
+      "source_type": "judicial_decision",
+      "verification": "search_index_judgment_paragraphs_checked_page_body_unavailable",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "sote",
+      "title": "Vuodenvaihteen muutokset sosiaali- ja terveysministeriön hallinnonalalla, 21.12.2022",
+      "publisher_or_author": "Sosiaali- ja terveysministeriö",
+      "url": "https://valtioneuvosto.fi/-/1271139/vuodenvaihteen-muutokset-sosiaali-ja-terveysministerion-hallinnonalalla-2",
+      "locator": "Järjestämisvastuu 1.1.2023; 21 aluetta; Helsinki ja HUS",
+      "source_type": "contemporary_official_release",
+      "verification": "search_index_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "lobby",
+      "title": "Avoimuusrekisteri on otettu käyttöön, 1.1.2024",
+      "publisher_or_author": "Valtiontalouden tarkastusvirasto",
+      "url": "https://vtv.fi/2024/01/01/avoimuusrekisteri-on-otettu-kayttoon-paatoksentekoon-vaikuttaminen-tulee-jatkossa-paremmin-esiin/",
+      "locator": "Rekisteröinti 1.1.2024; ensimmäiset toimintailmoitukset 1.7.2024",
+      "source_type": "contemporary_official_release",
+      "verification": "page_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    },
+    {
+      "source_id": "employment",
+      "title": "Työllisyysalueet 2025",
+      "publisher_or_author": "Tilastokeskus",
+      "url": "https://stat.fi/fi/luokitukset/tyollisyysalue/tyollisyysalue_1_20250101",
+      "locator": "Voimassaolon alku ja käyttötarkoitus: järjestämisvastuu 1.1.2025; 45 aluetta",
+      "source_type": "official_classification_documentation",
+      "verification": "page_text_checked",
+      "checked_on": "2026-10-26",
+      "contemporaneous_primary_source": true
+    }
+  ],
+  "selection": "Rajattu tarkoituksellinen otos. Ei kaikkien toimivaltamuutosten tai tosiasiallisten valtaverkostojen kattavuusväite.",
+  "entries": [
+    {
+      "case_key": "institutional_power_1996_2025_20261026:appeals1996",
+      "primary_item_id": "institutional_power_1996_2025_20261026:appeals1996",
+      "reuse_existing_item": false,
+      "title": "Hallintolainkäytön yleislaki ja muutoksenhaun menettely",
+      "year_start": 1996,
+      "year_end": 1996,
+      "theme_ids": [
+        8,
+        19,
+        28
+      ],
+      "dimension_codes": [
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "appeals"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:appeals1996:1",
+          "statement": "Hallintolainkäyttölaki 586/1996 tuli voimaan 1.12.1996 ja sisälsi valitusosoitusta sekä muutoksenhaun menettelyä koskevia säännöksiä.",
+          "source_ids": [
+            "appeals"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "hallintotuomioistuimet",
+        "hallintoviranomaiset"
+      ],
+      "affected_groups": [
+        "hallintopäätösten asianosaiset"
+      ],
+      "mechanism_hypothesis": "Menettelykehys saattoi tukea hallintopäätösten ulkopuolista arviointia.",
+      "case_limitations": "Ei väitettä muutoksenhakuoikeuden syntymisestä vasta 1996 tai kaikkien päätösten valituskelpoisuudesta. Vuoden 2020 oikeudenkäyntilakia ei sovelleta takautuvasti.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:publicity1999",
+      "primary_item_id": "knowledge_power_1995_2007_20261024:publicity1999",
+      "reuse_existing_item": true,
+      "title": "Uusi julkisuuslaki ja tiedonsaannin ehdot",
+      "year_start": 1999,
+      "year_end": 1999,
+      "theme_ids": [
+        8,
+        19,
+        28,
+        32
+      ],
+      "dimension_codes": [
+        "oversight_accountability",
+        "access_representation"
+      ],
+      "source_ids": [
+        "publicity"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:publicity1999:1",
+          "statement": "Laki 621/1999 tuli voimaan 1.12.1999. Sen lähtökohtana on viranomaisten asiakirjojen julkisuus laissa säädetyin poikkeuksin.",
+          "source_ids": [
+            "publicity"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "viranomaiset",
+        "tietopyyntöjen tekijät"
+      ],
+      "affected_groups": [
+        "kansalaiset",
+        "toimittajat"
+      ],
+      "mechanism_hypothesis": "Tiedonsaanti tarjoaa edellytyksen julkisen vallan arvioinnille.",
+      "case_limitations": "Ei rajatonta pääsyä salassa pidettävään tietoon. Alkuperäisen 14 §:n 4 momentin lyhyitä määräaikoja sovellettiin vasta 1.1.2003; niitä ei siirretä vuoteen 1999.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:constitution2000",
+      "primary_item_id": "perustuslaki-2000",
+      "reuse_existing_item": true,
+      "title": "Pääministerin valinta ja parlamentaarinen vastuu",
+      "year_start": 2000,
+      "year_end": 2000,
+      "theme_ids": [
+        8,
+        19,
+        28,
+        32
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "constitution"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:constitution2000:1",
+          "statement": "Perustuslaki 731/1999 tuli voimaan 1.3.2000. Sen 61 §:n mukaan eduskunta valitsee pääministerin, jonka presidentti nimittää tehtävään.",
+          "source_ids": [
+            "constitution"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "eduskunta",
+        "presidentti",
+        "pääministeri"
+      ],
+      "affected_groups": [
+        "äänestäjät",
+        "ministerit"
+      ],
+      "mechanism_hypothesis": "Hallituksen muodostamisen menettely sitoo pääministerin valinnan eduskunnan ratkaisuun.",
+      "case_limitations": "Vuoden 2012 EU-edustussääntöjä ei esitetä vuoden 2000 muutoksena. Hajotusvallan rajoituksia oli jo 1991. Muodollinen valintavalta ei mittaa puolueiden neuvotteluvoimaa.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:vtv2001",
+      "primary_item_id": "institutional_power_1996_2025_20261026:vtv2001",
+      "reuse_existing_item": false,
+      "title": "Valtiontalouden tarkastusvirasto eduskunnan yhteyteen",
+      "year_start": 2001,
+      "year_end": 2001,
+      "theme_ids": [
+        8,
+        17,
+        28
+      ],
+      "dimension_codes": [
+        "oversight_accountability",
+        "resource_control"
+      ],
+      "source_ids": [
+        "vtv"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:vtv2001:1",
+          "statement": "VTV:n historiakuvauksen mukaan virasto siirrettiin vuonna 2001 valtiovarainministeriön alaisuudesta eduskunnan yhteyteen.",
+          "source_ids": [
+            "vtv"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "VTV",
+        "eduskunta",
+        "valtiovarainministeriö"
+      ],
+      "affected_groups": [
+        "veronmaksajat",
+        "julkisten varojen käyttäjät"
+      ],
+      "mechanism_hypothesis": "Organisatorinen erottaminen tarkastuskohteesta vahvisti riippumattoman tarkastuksen kehystä.",
+      "case_limitations": "Perustuslain voimaantulo 2000 ja organisatorinen siirto 2001 erotetaan. Nykyistä tarkastusvaliokuntaa ei ajoiteta siirtovuoteen. Ei todistetta jokaisen tarkastuksen riippumattomuudesta.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:administration2004",
+      "primary_item_id": "institutional_power_1996_2025_20261026:administration2004",
+      "reuse_existing_item": false,
+      "title": "Hyvän hallinnon ja hallintomenettelyn uusi yleislaki",
+      "year_start": 2003,
+      "year_end": 2004,
+      "theme_ids": [
+        8,
+        19,
+        28
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "administration"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:administration2004:1",
+          "statement": "Hallintolaki 434/2003 tuli voimaan 1.1.2004. Lain tarkoitukseen kuuluu hyvän hallinnon ja oikeusturvan edistäminen hallintoasioissa.",
+          "source_ids": [
+            "administration"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "hallintoviranomaiset"
+      ],
+      "affected_groups": [
+        "hallinnon asiakkaat"
+      ],
+      "mechanism_hypothesis": "Yleiset menettelyvaatimukset asettavat kehyksen viranomaisharkinnan käytölle.",
+      "case_limitations": "Lain tarkoitus ei osoita oikeusturvan toteutumista. Hyvän hallinnon vaatimuksia oli jo aiemmin; myöhempiä automaattista päätöksentekoa koskevia muutoksia ei siirretä vuoteen 2004.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:fiva2009",
+      "primary_item_id": "institutional_power_1996_2025_20261026:fiva2009",
+      "reuse_existing_item": false,
+      "title": "Rahoitus- ja vakuutusvalvonnan yhdistäminen",
+      "year_start": 2009,
+      "year_end": 2009,
+      "theme_ids": [
+        8,
+        17,
+        28,
+        31
+      ],
+      "dimension_codes": [
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "fiva"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:fiva2009:1",
+          "statement": "Finanssivalvonta perustettiin 1.1.2009 yhdistämällä Rahoitustarkastus ja Vakuutusvalvontavirasto. Se toimii Suomen Pankin yhteydessä.",
+          "source_ids": [
+            "fiva"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "Finanssivalvonta",
+        "Suomen Pankki",
+        "rahoitus- ja vakuutuslaitokset"
+      ],
+      "affected_groups": [
+        "tallettajat",
+        "vakuutetut",
+        "sijoittajat"
+      ],
+      "mechanism_hypothesis": "Valvonnan kokoaminen saattoi tukea finanssiryhmien kokonaisuuden tarkastelua.",
+      "case_limitations": "Yhdistäminen ei itsessään todista valvonnan tehokkuutta. Hallinnollinen yhteys ei tarkoita Suomen Pankin ohjausta kaikissa valvontapäätöksissä; myöhempi EKP-valvonta erotetaan.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:funding2009",
+      "primary_item_id": "institutional_power_1996_2025_20261026:funding2009",
+      "reuse_existing_item": false,
+      "title": "Vaali- ja puoluerahoituksen valvontatehtävät VTV:lle",
+      "year_start": 2009,
+      "year_end": 2010,
+      "theme_ids": [
+        8,
+        17,
+        19,
+        28
+      ],
+      "dimension_codes": [
+        "oversight_accountability",
+        "resource_control"
+      ],
+      "source_ids": [
+        "vtv"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:funding2009:1",
+          "statement": "Vaalirahoituksen valvonta siirtyi oikeusministeriöstä VTV:lle vuonna 2009. VTV:n puoluerahoituksen valvontatehtävä alkoi vuonna 2010.",
+          "source_ids": [
+            "vtv"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "VTV",
+        "oikeusministeriö",
+        "puolueet",
+        "ehdokkaat"
+      ],
+      "affected_groups": [
+        "äänestäjät",
+        "rahoittajat"
+      ],
+      "mechanism_hypothesis": "Ulkopuolinen valvonta voi tehdä poliittisen rahoituksen sidoksia näkyvämmiksi.",
+      "case_limitations": "Valvontatehtävä ei osoita rahoituksen kaikkien vaikutusten paljastumista, korruption määrää tai rahoittajan aiheuttamaa yksittäistä päätöstä.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:initiative2012",
+      "primary_item_id": "cleavages_1995_2025_20261023:initiative2012",
+      "reuse_existing_item": true,
+      "title": "Kansalaisaloitteen lakisääteinen vaikutuskanava",
+      "year_start": 2012,
+      "year_end": 2012,
+      "theme_ids": [
+        8,
+        19,
+        21,
+        28
+      ],
+      "dimension_codes": [
+        "access_representation",
+        "agenda_preparation"
+      ],
+      "source_ids": [
+        "initiative"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:initiative2012:1",
+          "statement": "Kansalaisaloitelaki tuli voimaan 1.3.2012. Kansalaisaloite.fi-verkkopalvelu avattiin 1.12.2012. Aloite on kanava asian saattamiseksi eduskuntakäsittelyyn.",
+          "source_ids": [
+            "initiative"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "kansalaiset",
+        "eduskunta",
+        "oikeusministeriö"
+      ],
+      "affected_groups": [
+        "äänioikeutetut",
+        "aloitteiden tukijat"
+      ],
+      "mechanism_hypothesis": "Aloite voi nostaa asialistalle kysymyksiä puolueiden ohjelmien ulkopuolelta.",
+      "case_limitations": "Kannatusten määrä ei sido eduskuntaa hyväksymään lakia. Lain voimaantulo ja palvelun avaaminen erotetaan; käyttö- ja läpimenotulokset vaativat erilliset tiedot.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:fiscal2013",
+      "primary_item_id": "institutional_power_1996_2025_20261026:fiscal2013",
+      "reuse_existing_item": false,
+      "title": "Finanssipolitiikan riippumaton valvontatehtävä",
+      "year_start": 2013,
+      "year_end": 2025,
+      "theme_ids": [
+        8,
+        17,
+        28
+      ],
+      "dimension_codes": [
+        "oversight_accountability",
+        "resource_control"
+      ],
+      "source_ids": [
+        "vtv"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:fiscal2013:1",
+          "statement": "VTV:n historiakuvauksen mukaan finanssipolitiikan valvontatehtävä alkoi vuoden 2013 alussa ja jatkui VTV:ssä vuoden 2025 loppuun.",
+          "source_ids": [
+            "vtv"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "VTV",
+        "valtioneuvosto",
+        "eduskunta"
+      ],
+      "affected_groups": [
+        "veronmaksajat",
+        "julkisten palvelujen käyttäjät"
+      ],
+      "mechanism_hypothesis": "Riippumaton arviointi voi tukea finanssipolitiikan sääntöjen ja ennusteiden julkista arviointia.",
+      "case_limitations": "Valvonta ei ole budjetin hyväksymisvaltaa. Vuoden 2026 tehtäväsiirtoa ei sisällytetä jaksoon; toteutunutta vaikutusta velkaan tai talouskasvuun ei tunnisteta.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:ssm2014",
+      "primary_item_id": "institutional_power_1996_2025_20261026:ssm2014",
+      "reuse_existing_item": false,
+      "title": "Euroalueen yhteinen pankkivalvonta alkaa",
+      "year_start": 2014,
+      "year_end": 2014,
+      "theme_ids": [
+        8,
+        13,
+        17,
+        28
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "ssm"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:ssm2014:1",
+          "statement": "Euroalueen yhteinen pankkivalvonta aloitti 4.11.2014. EKP:n suoraan valvontaan siirtyneiden pankkien yhteiset valvontatiimit toimivat EKP:n johdolla ja kansallisen valvojan osallistumisella.",
+          "source_ids": [
+            "ssm"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "EKP",
+        "Finanssivalvonta",
+        "valvottavat pankit"
+      ],
+      "affected_groups": [
+        "tallettajat",
+        "luotonottajat",
+        "sijoittajat"
+      ],
+      "mechanism_hypothesis": "Ylikansallinen valvontarakenne muuttaa kansallisen valvonnan toimivaltasuhteita.",
+      "case_limitations": "Ei väitettä kaikkien pankkien tai vakuutusvalvonnan siirtymisestä EKP:n suoraan valvontaan. Toimintakertomuksen tavoitteita ei tulkita todisteeksi kriisien estymisestä.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:gdpr2018",
+      "primary_item_id": "tietosuoja-asetus-2018",
+      "reuse_existing_item": true,
+      "title": "EU:n tietosuojasääntelyn soveltaminen",
+      "year_start": 2016,
+      "year_end": 2018,
+      "theme_ids": [
+        8,
+        19,
+        28,
+        32
+      ],
+      "dimension_codes": [
+        "oversight_accountability",
+        "decision_authority"
+      ],
+      "source_ids": [
+        "gdpr"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:gdpr2018:1",
+          "statement": "EU:n yleinen tietosuoja-asetus tuli voimaan 24.5.2016 ja sitä alettiin soveltaa 25.5.2018.",
+          "source_ids": [
+            "gdpr"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "EU",
+        "tietosuojaviranomaiset",
+        "rekisterinpitäjät"
+      ],
+      "affected_groups": [
+        "henkilötietojen käsittelyn kohteena olevat"
+      ],
+      "mechanism_hypothesis": "Yhteinen oikeuskehys voi rajata julkisten ja yksityisten rekisterinpitäjien tiedon käyttövaltaa.",
+      "case_limitations": "Voimaantulo ja soveltamisen alkaminen ovat eri ajankohtia. Asetus ei koske kaikkea tietoa tai poista tiedollista valtaeroa. Kansallisen lain myöhempi voimaantulo tarkistettava erikseen.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:emergency2020",
+      "primary_item_id": "institutional_power_1996_2025_20261026:emergency2020",
+      "reuse_existing_item": false,
+      "title": "Poikkeusolojen toteaminen ja erilliset käyttöönottovaltuudet",
+      "year_start": 2020,
+      "year_end": 2020,
+      "theme_ids": [
+        5,
+        8,
+        19,
+        28
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "oversight_accountability"
+      ],
+      "source_ids": [
+        "emergency",
+        "kko"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:emergency2020:1",
+          "statement": "Valtioneuvosto totesi 16.3.2020 yhteistoiminnassa presidentin kanssa poikkeusolot. Valmiuslain toimivaltuuksia otettiin käyttöön erillisillä asetuksilla. Ensimmäinen poikkeusolojakso päättyi 16.6.2020.",
+          "source_ids": [
+            "emergency",
+            "kko"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "valtioneuvosto",
+        "presidentti",
+        "eduskunta"
+      ],
+      "affected_groups": [
+        "asukkaat",
+        "viranomaiset"
+      ],
+      "mechanism_hypothesis": "Poikkeusvaltuudet muuttavat määräajaksi tavanomaisia toimivallan käytön ehtoja.",
+      "case_limitations": "Poikkeusolojen toteaminen ei aktivoi kaikkia valtuuksia. Suositukset ja velvoittavat päätökset erotetaan. Tämä kortti ei kuvaa vuoden 2021 erillistä jaksoa.",
+      "formal_authority_status": "documented_activation_episode",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:judicial2021",
+      "primary_item_id": "institutional_power_1996_2025_20261026:judicial2021",
+      "reuse_existing_item": false,
+      "title": "KKO rajaa pandemiasuositusten merkitystä videokuulemisessa",
+      "year_start": 2021,
+      "year_end": 2021,
+      "theme_ids": [
+        8,
+        19,
+        28
+      ],
+      "dimension_codes": [
+        "oversight_accountability",
+        "decision_authority"
+      ],
+      "source_ids": [
+        "kko"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:judicial2021:1",
+          "statement": "Ratkaisun KKO:2021:5 kohdissa 15–16 todetaan, etteivät yleisötilaisuusrajoitukset koske tuomioistuinten istuntoja eikä pandemia muuttanut videokuulemisen lakisääteisiä edellytyksiä.",
+          "source_ids": [
+            "kko"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "korkein oikeus",
+        "tuomioistuimet",
+        "Tuomioistuinvirasto"
+      ],
+      "affected_groups": [
+        "oikeudenkäyntien asianosaiset"
+      ],
+      "mechanism_hypothesis": "Oikeudellinen arviointi erottaa hallinnollisen ohjeen laissa säädetystä menettelyvallasta.",
+      "case_limitations": "Tämä on yksilöity oikeusohje videokuulemisesta. Se ei osoita kaikkien rajoitusten lainvastaisuutta tai kaikkien oikeudenkäyntien virheellisyyttä.",
+      "formal_authority_status": "documented_judicial_boundary",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:sote2023",
+      "primary_item_id": "hyvinvointialueet-2023",
+      "reuse_existing_item": true,
+      "title": "Sote-järjestämisvastuu hyvinvointialueille",
+      "year_start": 2023,
+      "year_end": 2023,
+      "theme_ids": [
+        5,
+        7,
+        8,
+        17,
+        28
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "resource_control",
+        "access_representation"
+      ],
+      "source_ids": [
+        "sote"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:sote2023:1",
+          "statement": "Sosiaali- ja terveydenhuollon sekä pelastustoimen järjestämisvastuu siirtyi vuoden 2023 alussa 21 hyvinvointialueelle; Helsingillä säilyi oma vastuu ja HUS-yhtymällä on erikseen säädetyt tehtävät.",
+          "source_ids": [
+            "sote"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "hyvinvointialueet",
+        "Helsinki",
+        "HUS-yhtymä",
+        "valtio",
+        "kunnat"
+      ],
+      "affected_groups": [
+        "palvelujen käyttäjät",
+        "henkilöstö"
+      ],
+      "mechanism_hypothesis": "Järjestämisen siirto muuttaa palveluratkaisujen päätöksentekotasoa ja vastuusuhteita.",
+      "case_limitations": "Ei väitettä tehtävien samanlaisesta siirrosta kaikkialla Suomessa. Järjestämisvastuu, rahoitusohjaus, tuotanto ja yksittäinen palvelupäätös erotetaan; saatavuusvaikutuksia ei päätellä rakenteesta.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:lobby2024",
+      "primary_item_id": "institutional_power_1996_2025_20261026:lobby2024",
+      "reuse_existing_item": false,
+      "title": "Avoimuusrekisterin käyttöönotto ja ilmoittamisen vaiheet",
+      "year_start": 2024,
+      "year_end": 2024,
+      "theme_ids": [
+        8,
+        19,
+        21,
+        28,
+        32
+      ],
+      "dimension_codes": [
+        "oversight_accountability",
+        "agenda_preparation"
+      ],
+      "source_ids": [
+        "lobby"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:lobby2024:1",
+          "statement": "Avoimuusrekisteriin rekisteröityminen alkoi 1.1.2024. Ensimmäiset vaikuttamistoimintaa koskevat toimintailmoitukset avautuivat 1.7.2024.",
+          "source_ids": [
+            "lobby"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "VTV",
+        "vaikuttamistoimintaa harjoittavat organisaatiot",
+        "eduskunta",
+        "ministeriöt"
+      ],
+      "affected_groups": [
+        "kansalaiset",
+        "järjestöt",
+        "yritykset"
+      ],
+      "mechanism_hypothesis": "Ilmoitukset voivat tehdä valmistelun yhteydenpitoa näkyväksi.",
+      "case_limitations": "Rekisteröinti ei ole sama asia kuin toimintailmoitus. Soveltamisala ja poikkeukset rajaavat havaintoja. Yhteydenotto ei todista onnistunutta vaikutusta, väärinkäytöstä tai kaikkien verkostojen kattavuutta.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    },
+    {
+      "case_key": "institutional_power_1996_2025_20261026:employment2025",
+      "primary_item_id": "institutional_power_1996_2025_20261026:employment2025",
+      "reuse_existing_item": false,
+      "title": "Työvoimapalvelujen järjestämisvastuu kuntatasolle",
+      "year_start": 2025,
+      "year_end": 2025,
+      "theme_ids": [
+        7,
+        8,
+        15,
+        28
+      ],
+      "dimension_codes": [
+        "decision_authority",
+        "resource_control"
+      ],
+      "source_ids": [
+        "employment"
+      ],
+      "observations": [
+        {
+          "observation_id": "institutional_power_1996_2025_20261026:employment2025:1",
+          "statement": "Julkisten työvoimapalvelujen järjestämisvastuu siirtyi valtion TE-toimistoilta kunnille ja yhteistoiminta-alueille 1.1.2025. Manner-Suomen työllisyysalueita on 45.",
+          "source_ids": [
+            "employment"
+          ],
+          "evidence_kind": "documented_institutional_claim",
+          "inference": false
+        }
+      ],
+      "institutional_actors": [
+        "kunnat",
+        "työllisyysalueet",
+        "valtio"
+      ],
+      "affected_groups": [
+        "työnhakijat",
+        "työnantajat"
+      ],
+      "mechanism_hypothesis": "Paikallinen järjestämisvastuu voi lähentää työvoima- ja muita kuntapalveluja.",
+      "case_limitations": "Ei tulkintaa toteutuneeksi työllisyysvaikutukseksi. Ahvenanmaa on mukana tilastoluokituksessa erikseen eikä ole lain tarkoittama 46. työllisyysalue. Tilastolliset tulokset ja vastuun siirto erotetaan.",
+      "formal_authority_status": "documented_arrangement",
+      "de_facto_influence_status": "not_independently_established",
+      "causal_effect_identified": false,
+      "numeric_effect": null,
+      "related_item_ids": []
+    }
+  ],
+  "limitations": [
+    "Muodollinen toimivalta, vaikutuskanavahypoteesi ja tunnistettu vaikutus erotetaan. Ei numeerisia vaikutusväitteitä.",
+    "Lähdekohtainen tarkistustaso näkyy metadatassa: hakutulosote ei ole koko alkuperäistekstin tarkistus.",
+    "Ajantasaisista oikeuslähteistä käytetään vain yksilöityjä historiallisia voimaantulo- ja pykälätietoja; myöhempiä muutoksia ei siirretä takautuvasti.",
+    "Keruu kattaa valitut järjestelyt, ei koko vallankäyttöä tai kaikkia vuosia. Väestöryhmien toteutunutta vaikutusvaltaa ei ole mitattu.",
+    "Vuoden 2026 poliittisen mainonnan valvontaa ja finanssipolitiikan valvonnan tehtäväsiirtoa ei sisällytetä jaksoon."
+  ],
+  "open_tasks": [
+    "Alkuperäissäädösten ja ratkaisujen koko tekstin arkistoitu tarkistus niille lähteille, joista saatiin vain hakutulosote.",
+    "Vuoden 2012 perustuslakimuutoksen EU-edustus ja ratkaisumenettely alkuperäislähteistä.",
+    "Nimitysvalta, omistajaohjaus, hankinnat, eläkeyhtiöt ja yksityisen alustavallan päätös- ja vastuuketjut.",
+    "Kansalaisaloitteiden läpimeno, julkisuuspyyntöjen toteutuminen, kantelut ja valvontapäätösten seuraukset.",
+    "Avoimuusrekisterin ilmoitusten poiminta: soveltamisala, puuttuvuus ja yhteydenpidon ero päätösvaikutukseen.",
+    "Sote- ja TE-uudistusten alueelliset resurssit, palvelut ja toteumat; vertailukelpoisuuden katkokset.",
+    "Poikkeusvaltuuksien asetuskohtainen eduskuntavalvonta sekä laillisuusvalvojien ratkaisut."
+  ]
+}
