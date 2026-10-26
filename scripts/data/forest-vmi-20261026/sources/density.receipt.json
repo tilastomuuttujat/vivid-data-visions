@@ -1,0 +1,22 @@
+{
+  "key": "density",
+  "url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.22_Puuston_keskitilavuus_metsamaalla.px",
+  "files": {
+    "metadata.json": {
+      "sha256": "42ddab7f11e3a14d177991068bd6e2ca3e5ccb44d3089a556d109f329042c48b",
+      "retrieved_at": "2026-10-26T17:42:18.506455+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.22_Puuston_keskitilavuus_metsamaalla.px"
+    },
+    "response.json": {
+      "sha256": "bb2f16e5ef2dea1df3b9d743e1bd01c8c910b1693ac22a0a22874c8cecec44c8",
+      "retrieved_at": "2026-10-26T17:42:22.937139+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.22_Puuston_keskitilavuus_metsamaalla.px"
+    },
+    "response.px": {
+      "sha256": "a0c1812df66f0c7c0523ca82454507de6bd435b0bd538df3680fbb716655e928",
+      "retrieved_at": "2026-10-26T17:42:27.259164+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.22_Puuston_keskitilavuus_metsamaalla.px"
+    }
+  },
+  "rows": 1100
+}

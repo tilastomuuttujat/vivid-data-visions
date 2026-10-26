@@ -1,0 +1,22 @@
+{
+  "key": "growth",
+  "url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.24_Puuston_vuotuinen_kasvu_metsa_ja_kitu.px",
+  "files": {
+    "metadata.json": {
+      "sha256": "2e64a75ee27633baf55fff055c601ef05b040d7723aeab3d34736967bb2e4f71",
+      "retrieved_at": "2026-10-26T17:42:31.567593+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.24_Puuston_vuotuinen_kasvu_metsa_ja_kitu.px"
+    },
+    "response.json": {
+      "sha256": "9f904f0a20b2faec5af75fe5e82a3f32357b1f2885c8c6a82b1e6a479887feb0",
+      "retrieved_at": "2026-10-26T17:42:35.964243+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.24_Puuston_vuotuinen_kasvu_metsa_ja_kitu.px"
+    },
+    "response.px": {
+      "sha256": "fa7c6b6bc2ed38d6a889712311d59a7a858e51d1d6f6b5714cd12046b58dacd4",
+      "retrieved_at": "2026-10-26T17:42:40.400328+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.24_Puuston_vuotuinen_kasvu_metsa_ja_kitu.px"
+    }
+  },
+  "rows": 1848
+}

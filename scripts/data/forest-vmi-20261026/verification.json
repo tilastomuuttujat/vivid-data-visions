@@ -1,0 +1,15 @@
+{
+  "series": 11,
+  "values": 1018,
+  "published": 987,
+  "held": 31,
+  "mismatches": 0,
+  "invalid": 0,
+  "context_links": 11,
+  "bad_anchors": 0,
+  "checked_on": "2026-10-26",
+  "batch_id": "luke_forest_vmi_1918_2025_20261026_v1",
+  "idempotent_replay": true,
+  "unit_tests_passed": 5,
+  "existing_vmi2019_2023_total_matches": true
+}

@@ -1,0 +1,22 @@
+{
+  "key": "stock",
+  "url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.16_Puuston_tilavuus_metsa_ja_kitumaalla_pu.px",
+  "files": {
+    "metadata.json": {
+      "sha256": "e7166e0bafb95cfecee66d7948881175adcf2561b0c3ee281628dbef5c2137e9",
+      "retrieved_at": "2026-10-26T17:42:18.507294+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.16_Puuston_tilavuus_metsa_ja_kitumaalla_pu.px"
+    },
+    "response.json": {
+      "sha256": "0dd4e32a1a915375c3afa542185346ea4a7720939f46aea9d66c7c9262e37616",
+      "retrieved_at": "2026-10-26T17:42:23.157054+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.16_Puuston_tilavuus_metsa_ja_kitumaalla_pu.px"
+    },
+    "response.px": {
+      "sha256": "5b4a3a35c422a4172175650ad77d98fa55d89dd3f09576308d3bdec46e18f4bd",
+      "retrieved_at": "2026-10-26T17:42:27.260159+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.16_Puuston_tilavuus_metsa_ja_kitumaalla_pu.px"
+    }
+  },
+  "rows": 1716
+}

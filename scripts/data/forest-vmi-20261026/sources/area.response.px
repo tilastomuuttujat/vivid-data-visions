@@ -1,0 +1,390 @@
+﻿CHARSET="ANSI";
+AXIS-VERSION="2010";
+CODEPAGE="utf-8";
+LANGUAGE="fi";
+LANGUAGES="fi","sv","en";
+CREATION-DATE="20170222 09:00";
+DECIMALS=3;
+SHOWDECIMALS=0;
+MATRIX="Luke_Met_Mvarat_1.01";
+COPYRIGHT=YES;
+SUBJECT-CODE="MAA";
+SUBJECT-AREA="Maa-, metsä- ja kalatalous";
+DESCRIPTION="Maaluokat metsätalousmaalla (1000 ha)";
+TITLE="Maaluokat metsätalousmaalla (1000 ha) muuttujina inventointi, maakunta ja maaluokka";
+CONTENTS="Maaluokat metsätalousmaalla (1000 ha)";
+STUB="inventointi","maakunta";
+HEADING="maaluokka";
+VARIABLECODE("inventointi")="inventointi";
+VALUES("inventointi")="VMI 1 (1921-1924)","VMI 2 (1936-1938)","VMI 3 (1951-1953)","VMI 5 (1964-1970)","VMI 6 (1971-1976)","VMI 7 (1977-1984)","VMI 8 (1986-1994)","VMI 9 (1996-2003)","VMI 10 (2004-2008)","VMI 11 (2009-2013)","VMI 12 (2014-2018)","VMI 13 (2019-2023)",
+"VMI 13/14 (2020-2024)";
+VARIABLECODE("maakunta")="maakunta";
+VALUES("maakunta")="KOKO MAA","ETELÄ-SUOMI","POHJOIS-SUOMI","Uusimaa","Varsinais-Suomi","Satakunta","Kanta-Häme","Pirkanmaa","Päijät-Häme","Kymenlaakso","Etelä-Karjala","Etelä-Savo","Pohjois-Savo","Pohjois-Karjala","Keski-Suomi","Etelä-Pohjanmaa","Pohjanmaa",
+"Keski-Pohjanmaa","Pohjois-Pohjanmaa","Kainuu","Lappi","Ahvenanmaa";
+VARIABLECODE("maaluokka")="maaluokka";
+VALUES("maaluokka")="Metsätalousmaa - Metsämaa","Metsätalousmaa - Kitumaa","Metsätalousmaa - Joutomaa","Metsätalousmaa - Metsätiet, varastot ym.","Metsätalousmaa - Yhteensä","Muu maa","Maapinta-ala";
+TIMEVAL("inventointi")=TLIST(A1),"2025","2026","2027","2028","2029","2030","2031","2032","2033","2034","2035","2036","2037";
+CODES("inventointi")="01","02","03","05","06","07","08","09","10","11","12","13","14";
+CODES("maakunta")="1","1.1","1.2","1.1.1","1.1.2","1.1.3","1.1.4","1.1.5","1.1.6","1.1.7","1.1.8","1.1.9","1.1.10","1.1.11","1.1.12","1.1.13","1.1.14","1.1.15","1.2.17","1.2.18","1.2.19","1.1.21";
+CODES("maaluokka")="Metsätalousmaa - Metsämaa","Metsätalousmaa - Kitumaa","Metsätalousmaa - Joutomaa","Metsätalousmaa - Metsätiet, varastot ym.","Metsätalousmaa - Yhteensä","Muu maa","Maapinta-ala";
+LAST-UPDATED="20251113 08:00";
+UNITS="1000 ha";
+CONTACT="tietopalvelu@luke.fi#<A HREF=https://www.luke.fi/fi/tilastot/metsavarat/ TARGET=_blank>Tilaston kotisivu</A>";
+DATABASE="Luke/Tilastot";
+SOURCE="Luonnonvarakeskus, Metsävarat";
+NOTE("inventointi")="VMI 1-VMI 3:n metsä- ja kitumaan luokitukset eivät täysin vastaa nykyisin käytettyä luokitusta.";
+NOTE("maaluokka")="Metsätalousmaa luokitellaan metsä-, kitu- tai joutomaaksi sen vuotuisen keskimääräisen puuntuotoskyvyn perusteella. Metsämaalla puuntuotoskyky on vähintään 1 m³/ha/vuosi, kitumaalla 0,1-1 m³/ha/vuosi ja joutomaalla pienempi kuin 0,1 m³/ha/vuosi. Metsätal"
+"ousmaahan sisältyy myös luonnonsuojelualueiden metsätalousmaa.";
+VALUENOTE("inventointi","VMI 1 (1921-1924)")="Luvut ovat laskettu Suomen nykyisten aluerajojen mukaan.";
+VALUENOTE("inventointi","VMI 13 (2019-2023)")="Ahvenanmaan maakunta mitattu vuonna 2023 ja Inarin, Utsjoen ja Enontekiön kunnat vuonna 2022.";
+VALUENOTE("inventointi","VMI 13/14 (2020-2024)")="- Etelä-Suomen, Pohjois-Suomen ja koko maan sekä maakunnittaiset tiedot perustuvat VMI13/14 (2020-2024) mittauksiin.#- Ahvenanmaan maakunta on mitattu vuonna 2023 ja Ylä-Lappi vuonna 2022.";
+CELLNOTE("VMI 12 (2014-2018)","Lappi","*")=
+"Mittaukset on laskettu VMI12 aineistosta.VMI12: n mittauksia ei tehty Enontekiön, Inarin ja Utsjoen alueella, minkä osalta tulokset on laskettu VMI11:n aineistosta.";
+SUBJECT-AREA[sv]="Jord- och skogsbruk samt fiske";
+DESCRIPTION[sv]="Ägoslag på skogsbruksmark (1000 ha)";
+TITLE[sv]="Ägoslag på skogsbruksmark (1000 ha) efter inventering, landskap och ägoslag";
+CONTENTS[sv]="Ägoslag på skogsbruksmark (1000 ha)";
+STUB[sv]="inventering","landskap";
+HEADING[sv]="ägoslag";
+VARIABLECODE[sv]("inventering")="inventointi";
+VALUES[sv]("inventering")="RST 1 (1921-1924)","RST 2 (1936-1938)","RST 3 (1951-1953)","RST 5 (1964-1970)","RST 6 (1971-1976)","RST 7 (1977-1984)","RST 8 (1986-1994)","RST 9 (1996-2003)","RST 10 (2004-2008)","RST 11 (2009-2013)","RST 12 (2014-2018)","RST 13 (2019-2023)",
+"RST 13/14 (2020-2024)";
+VARIABLECODE[sv]("landskap")="maakunta";
+VALUES[sv]("landskap")="HELA LANDET","SÖDRA FINLAND","NORRA FINLAND","Nyland","Egentliga Finland","Satakunta","Egentliga Tavastland","Birkaland","Päijänne-Tavastland","Kymmenedalen","Södra Karelen","Södra Savolax","Norra Savolax","Norra Karelen","Mellersta Finland",
+"Södra Österbotten","Österbotten","Mellersta Österbotten","Norra Österbotten","Kajanaland","Lappland","Åland";
+VARIABLECODE[sv]("ägoslag")="maaluokka";
+VALUES[sv]("ägoslag")="Skogsbruksmark - Skogsmark","Skogsbruksmark - Tvinmark","Skogsbruksmark - Impediment","Skogsbruksmark - Skogsbilvägar, lagringsplatser etc.","Skogsbruksmark - Totalt","Övrig mark","Markareal totalt";
+TIMEVAL[sv]("inventering")=TLIST(A1),"2025","2026","2027","2028","2029","2030","2031","2032","2033","2034","2035","2036","2037";
+CODES[sv]("landskap")="1","1.1","1.2","1.1.1","1.1.2","1.1.3","1.1.4","1.1.5","1.1.6","1.1.7","1.1.8","1.1.9","1.1.10","1.1.11","1.1.12","1.1.13","1.1.14","1.1.15","1.2.17","1.2.18","1.2.19","1.1.21";
+CODES[sv]("ägoslag")="Metsätalousmaa - Metsämaa","Metsätalousmaa - Kitumaa","Metsätalousmaa - Joutomaa","Metsätalousmaa - Metsätiet, varastot ym.","Metsätalousmaa - Yhteensä","Muu maa","Maapinta-ala";
+LAST-UPDATED[sv]="20251113 08:00";
+UNITS[sv]="1000 ha";
+CONTACT[sv]="tietopalvelu@luke.fi#<A HREF=https://www.luke.fi/sv/statistik/skogsresurser/ TARGET=_blank>Statistikens ingångssida</A>";
+DATABASE[sv]="LUKE/Tilastot";
+SOURCE[sv]="Luonnonvarakeskus";
+NOTE[sv]("inventering")="Klassificeringar av skogsmark och tvinmark i RST 1-RST 3 är inte helt motsvarande till den nutida klassificeringen.";
+NOTE[sv]("ägoslag")="Skogsbruksmarken klassificeras som skogsmark, tvinmark och impediment på grund av den genomsnittliga årliga virkesproduktionsförmågan. På skogsmarken är virkesproduktionsförmågan minst 1 m³/hektar/år, på tvinmarken mellan 0,1-1 m³/hektar/år och på impedi"
+"mentet mindre än 0,1 m³/hektar/år. Skogsbruksmarken innefattar också skogsbruksmarken på naturskyddsområden.";
+VALUENOTE[sv]("inventering","RST 1 (1921-1924)")="Inventeringsresultat är räknade på basis av Finlands nuvarande gränser.";
+VALUENOTE[sv]("inventering","RST 13 (2019-2023)")="Mätningarna utfördes på Åland under 2023 och inom kommunerna Enare, Utsjoki och Enontekis under 2022.";
+VALUENOTE[sv]("inventering","RST 13/14 (2020-2024)")="- Uppgifterna för Södra Finland, Norra Finland och hela landet samt landskapsvisa uppgifter baseras på mätningarna VMI13/14 (2020-2024).#- Mätningarna utfördes på Åland under 2023 och Övre Lappland under 2022.";
+CELLNOTE[sv]("RST 12 (2014-2018)","Lappland","*")=
+"RST12:s mätningar gjordes inte i området Enontekis, Enare och Utsjoki. Resultaten för området baserar sig på RST11.";
+SUBJECT-AREA[en]="Agriculture, Forestry and Fishery";
+DESCRIPTION[en]="Land classes on forestry land (1000 ha)";
+TITLE[en]="Land classes on forestry land (1000 ha) by inventory, region and land class";
+CONTENTS[en]="Land classes on forestry land (1000 ha)";
+STUB[en]="inventory","region";
+HEADING[en]="land class";
+VARIABLECODE[en]("inventory")="inventointi";
+VALUES[en]("inventory")="NFI 1 (1921-1924)","NFI 2 (1936-1938)","NFI 3 (1951-1953)","NFI 5 (1964-1970)","NFI 6 (1971-1976)","NFI 7 (1977-1984)","NFI 8 (1986-1994)","NFI 9 (1996-2003)","NFI 10 (2004-2008)","NFI 11 (2009-2013)","NFI 12 (2014-2018)","NFI 13 (2019-2023)",
+"NFI 13/14 (2020-2024)";
+VARIABLECODE[en]("region")="maakunta";
+VALUES[en]("region")="WHOLE COUNTRY","SOUTHERN FINLAND","NORTHERN FINLAND","Uusimaa","Varsnais-Suomi","Satakunta","Kanta-Häme","Pirkanmaa","Päijät-Häme","Kymenlaakso","South Karelia","Etelä-Savo","Pohjois-Savo","North Karelia","Central Finland","South Ostrobothnia",
+"Ostrobothnia","Central Ostrobothnia","North Ostrobothnia","Kainuu","Lapland","Åland";
+VARIABLECODE[en]("land class")="maaluokka";
+VALUES[en]("land class")="Forestry land - Forest land","Forestry land - Poorly productive forest land","Forestry land - Unproductive land","Forestry land - Forest roads, depots etc.","Forestry land - Total","Other land","Total land area";
+TIMEVAL[en]("inventory")=TLIST(A1),"2025","2026","2027","2028","2029","2030","2031","2032","2033","2034","2035","2036","2037";
+CODES[en]("region")="1","1.1","1.2","1.1.1","1.1.2","1.1.3","1.1.4","1.1.5","1.1.6","1.1.7","1.1.8","1.1.9","1.1.10","1.1.11","1.1.12","1.1.13","1.1.14","1.1.15","1.2.17","1.2.18","1.2.19","1.1.21";
+CODES[en]("land class")="Metsätalousmaa - Metsämaa","Metsätalousmaa - Kitumaa","Metsätalousmaa - Joutomaa","Metsätalousmaa - Metsätiet, varastot ym.","Metsätalousmaa - Yhteensä","Muu maa","Maapinta-ala";
+LAST-UPDATED[en]="20251113 08:00";
+UNITS[en]="1000 ha";
+CONTACT[en]="tietopalvelu@luke.fi#<A HREF=https://www.luke.fi/en/statistics/forest-resources/ TARGET=_blank>Home page of the statistics</A>";
+DATABASE[en]="LUKE/Tilastot";
+SOURCE[en]="Luonnonvarakeskus";
+NOTE[en]("inventory")="The forest land and poorly productive forest land categories in NFI 1-NFI 3 do not fully correspond to present categories.";
+NOTE[en]("land class")="Forestry land breaks down into forest land, poorly productive forest land and unproductive land according to its capability of producing volume increment. On forest land the capability is 1.0 m³/ha/year or more, on poorly productive forest land 0.1-1 m³/"
+"ha/year and on unproductive land less than 0.1 m³/ha/year. Forestry land also includes nature conservation areas.";
+VALUENOTE[en]("inventory","NFI 1 (1921-1924)")="Inventory results are calculated in accordance with present borders of Finland.";
+VALUENOTE[en]("inventory","NFI 13 (2019-2023)")="The region of Åland measured in 2023. Municipalities of Inari, Utsjoki and Enontekiö were measured in 2022.";
+VALUENOTE[en]("inventory","NFI 13/14 (2020-2024)")="- The data for Southern Finland, Northern Finland, whole country, and by region are based on VMI13/14 (2020-2024) measurements.#- The region of Åland measured in 2023 and Upper Lapland in 2022.";
+CELLNOTE[en]("NFI 12 (2014-2018)","Lapland","*")=
+"No NFI12 measurements in Enontekiö, Inari and Utsjoki region. Results are based on NFI11.";
+DATA=
+18032.000 4381.000 4471.000 ".." 26844.000 3661.000 30545.000 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+17085.000 4585.000 5004.000 ".." 26674.000 3826.000 30500.000 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+17352.000 4522.000 4441.000 ".." 26315.000 4225.000 30540.000 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+18697.000 3674.000 4226.000 70.000 26667.000 3883.000 30550.000 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+19738.000 3583.000 3371.000 86.000 26778.000 3772.000 30550.000 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+20065.000 3157.000 3049.000 103.000 26374.000 4096.000 30470.000 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+20074.000 2983.000 3093.000 150.000 26301.000 4158.000 30459.000 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+20338.000 2670.000 3156.000 154.000 26317.000 4130.000 30447.000 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+20085.000 2735.000 3259.000 184.000 26263.000 4151.000 30415.000 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." ".." 
+20264.000 2502.000 3229.000 198.000 26192.000 4197.000 30389.000 
+11141.000 364.000 351.000 109.000 11965.000 3457.000 15422.000 
+9123.000 2137.000 2878.000 89.000 14226.000 740.000 14967.000 
+523.000 27.000 10.000 4.000 564.000 345.000 910.000 
+542.000 60.000 25.000 4.000 631.000 435.000 1066.000 
+524.000 18.000 23.000 4.000 569.000 213.000 782.000 
+332.000 6.000 2.000 3.000 343.000 177.000 520.000 
+919.000 16.000 16.000 13.000 964.000 294.000 1258.000 
+354.000 3.000 3.000 3.000 363.000 149.000 512.000 
+337.000 10.000 4.000 4.000 355.000 159.000 515.000 
+404.000 5.000 2.000 3.000 415.000 118.000 533.000 
+1218.000 13.000 13.000 11.000 1256.000 170.000 1426.000 
+1346.000 18.000 21.000 14.000 1399.000 277.000 1677.000 
+1464.000 48.000 59.000 17.000 1589.000 187.000 1776.000 
+1379.000 28.000 26.000 14.000 1446.000 224.000 1670.000 
+888.000 45.000 49.000 7.000 989.000 355.000 1344.000 
+507.000 20.000 28.000 4.000 559.000 216.000 775.000 
+333.000 25.000 42.000 3.000 403.000 98.000 502.000 
+2538.000 348.000 331.000 27.000 3244.000 437.000 3681.000 
+1624.000 153.000 139.000 13.000 1930.000 90.000 2020.000 
+4961.000 1636.000 2408.000 49.000 9053.000 213.000 9266.000 
+69.000 21.000 27.000 1.000 117.000 38.000 155.000 
+20276.371 2535.517 3224.318 210.267 26246.473 4144.420 30390.893 
+11196.163 317.838 363.133 123.483 12000.617 3422.481 15423.098 
+9080.208 2217.678 2861.184 86.785 14245.855 721.940 14967.795 
+521.269 24.221 14.328 3.753 563.571 346.262 909.833 
+565.791 49.766 25.718 6.346 647.621 418.832 1066.453 
+523.064 11.289 22.920 5.131 562.405 219.626 782.031 
+349.458 6.210 4.830 2.760 363.257 156.618 519.875 
+910.108 11.312 13.712 12.340 947.472 311.254 1258.726 
+362.649 2.028 1.690 2.366 368.733 143.640 512.373 
+340.655 6.492 7.859 5.467 360.473 154.439 514.912 
+403.799 3.445 2.412 4.134 413.790 118.866 532.656 
+1210.134 11.360 9.689 10.357 1241.540 184.093 1425.633 
+1318.642 18.655 27.205 19.820 1384.322 292.643 1676.965 
+1477.267 45.324 59.536 17.669 1599.796 176.304 1776.100 
+1372.572 24.393 25.941 14.326 1437.232 233.086 1670.318 
+922.026 35.770 50.991 9.133 1017.920 326.495 1344.415 
+515.841 20.541 26.354 5.038 567.774 207.731 775.505 
+338.947 22.335 42.711 3.918 407.912 94.043 501.955 
+2487.407 366.067 355.106 26.026 3234.605 447.238 3681.843 
+1631.119 155.883 122.899 18.073 1927.974 91.722 2019.696 
+4961.682 1695.729 2383.180 42.685 9083.277 182.979 9266.256 
+63.940 24.699 27.238 0.923 116.800 38.548 155.348 
+20306.763 2586.409 3126.851 224.042 26244.065 4154.477 30398.542 
+11157.816 324.951 349.910 130.639 11963.316 3463.065 15426.381 
+9148.947 2261.458 2776.941 93.403 14280.749 691.412 14972.161 
+501.322 28.696 15.213 4.149 549.380 361.297 910.677 
+561.144 52.058 25.691 5.747 644.640 422.548 1067.188 
+525.095 13.376 25.723 4.459 568.653 213.673 782.326 
+339.663 3.427 5.141 5.141 353.372 166.575 519.947 
+960.252 11.326 14.609 13.978 1000.165 324.720 1324.885 
+393.462 2.740 2.397 3.082 401.681 169.850 571.531 
+309.327 8.048 7.348 4.199 328.922 127.020 455.942 
+415.111 3.860 4.913 2.807 426.691 105.971 532.662 
+1058.546 10.555 7.491 12.257 1088.849 176.368 1265.217 
+1367.685 18.334 25.106 18.664 1429.789 304.811 1734.600 
+1564.319 46.734 51.503 22.893 1685.449 193.968 1879.417 
+1313.046 21.797 19.617 13.950 1368.410 235.843 1604.253 
+941.663 33.938 45.107 8.592 1029.300 350.546 1379.846 
+498.457 18.268 31.752 4.350 552.827 187.465 740.292 
+344.989 24.362 44.809 5.221 419.381 82.658 502.039 
+2564.396 340.777 328.785 30.912 3264.870 418.362 3683.232 
+1617.791 156.355 132.195 14.131 1920.472 99.374 2019.846 
+4966.760 1764.326 2315.961 48.360 9095.407 173.676 9269.083 
+63.735 27.432 23.490 1.150 115.807 39.752 155.559 
+20319.416 2571.227 3122.305 228.421 26241.369 4158.627 30399.996 
+11168.545 318.928 342.776 132.295 11962.544 3464.763 15427.307 
+9150.871 2252.299 2779.529 96.126 14278.825 693.864 14972.689 
+508.808 26.688 16.290 3.813 555.599 355.265 910.864 
+566.629 51.666 26.513 6.458 651.266 416.389 1067.655 
+520.287 13.447 28.273 5.172 567.179 215.149 782.328 
+341.891 3.478 5.565 5.217 356.151 163.815 519.966 
+964.346 10.599 14.238 14.675 1003.858 321.048 1324.906 
+395.833 2.773 2.426 2.773 403.805 167.761 571.566 
+310.586 6.623 7.320 3.486 328.015 127.930 455.945 
+412.239 3.453 4.834 3.107 423.633 109.102 532.735 
+1054.180 10.454 8.431 11.803 1084.868 180.418 1265.286 
+1364.771 17.082 23.879 19.710 1425.442 309.173 1734.615 
+1564.368 45.761 49.600 22.932 1682.661 196.740 1879.401 
+1306.060 22.300 18.802 13.117 1360.279 243.984 1604.263 
+949.113 34.529 41.003 9.064 1033.709 346.152 1379.861 
+496.738 17.897 31.428 4.365 550.428 189.878 740.306 
+348.961 24.746 40.684 5.453 419.844 82.207 502.051 
+2561.967 340.692 330.348 30.690 3263.697 419.549 3683.246 
+1618.597 152.164 137.783 14.381 1922.925 96.958 2019.883 
+4970.307 1759.443 2311.398 51.055 9092.203 177.357 9269.560 
+63.735 27.432 23.490 1.150 115.807 39.752 155.559 
+;

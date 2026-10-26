@@ -1,0 +1,22 @@
+{
+  "key": "annual",
+  "url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/hakker/0500_hakker.px",
+  "files": {
+    "metadata.json": {
+      "sha256": "aadd1fc6467269bb4937305dccda6436799f3b3daa42d0236d17aa0f9da8be67",
+      "retrieved_at": "2026-10-26T17:42:31.676915+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/hakker/0500_hakker.px"
+    },
+    "response.json": {
+      "sha256": "85640f741f9a5d18a70026b2eff8ca18859aca7e5e72504f5efe027880fcf519",
+      "retrieved_at": "2026-10-26T17:42:35.888184+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/hakker/0500_hakker.px"
+    },
+    "response.px": {
+      "sha256": "d55f4112338ef57bcdac6b8cab60fe8640ca525f8f265d32cc56396564841d2b",
+      "retrieved_at": "2026-10-26T17:42:40.402338+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/hakker/0500_hakker.px"
+    }
+  },
+  "rows": 432
+}

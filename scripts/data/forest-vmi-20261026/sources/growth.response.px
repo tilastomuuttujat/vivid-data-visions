@@ -1,0 +1,433 @@
+﻿CHARSET="ANSI";
+AXIS-VERSION="2010";
+CODEPAGE="utf-8";
+LANGUAGE="fi";
+LANGUAGES="fi","sv","en";
+CREATION-DATE="20170222 09:00";
+DECIMALS=2;
+SHOWDECIMALS=1;
+MATRIX="Luke_Met_Mvarat_1.24";
+COPYRIGHT=YES;
+SUBJECT-CODE="MAA";
+SUBJECT-AREA="Maa-, metsä- ja kalatalous";
+DESCRIPTION="Puuston vuotuinen kasvu metsä- ja kitumaalla (milj. m³/vuosi, m³/ha/vuosi)";
+TITLE="Puuston vuotuinen kasvu metsä- ja kitumaalla muuttujina inventointi, maakunta ja puulaji";
+CONTENTS="Puuston vuotuinen kasvu metsä- ja kitumaalla";
+STUB="inventointi","maakunta";
+HEADING="puulaji";
+VARIABLECODE("inventointi")="inventointi";
+VALUES("inventointi")="VMI 1 (1921-1924)","VMI 2.1 (1936-1938)","VMI 2.2 (1936-1938)","VMI 3 (1951-1953)","VMI 5 (1964-1970)","VMI 6 (1971-1976)","VMI 7 (1977-1984)","VMI 8 (1986-1994)","VMI 9 (1996-2003)","VMI 10 (2004-2008)","VMI 11 (2009-2013)","VMI 12 (2014-2018)",
+"VMI 13 (2019-2023)","VMI 13/14 (2020-2024)";
+VARIABLECODE("maakunta")="maakunta";
+VALUES("maakunta")="KOKO MAA","ETELÄ-SUOMI","POHJOIS-SUOMI","Uusimaa","Varsinais-Suomi","Satakunta","Kanta-Häme","Pirkanmaa","Päijät-Häme","Kymenlaakso","Etelä-Karjala","Etelä-Savo","Pohjois-Savo","Pohjois-Karjala","Keski-Suomi","Etelä-Pohjanmaa","Pohjanmaa",
+"Keski-Pohjanmaa","Pohjois-Pohjanmaa","Kainuu","Lappi","Ahvenanmaa";
+VARIABLECODE("puulaji")="puulaji";
+VALUES("puulaji")="Mänty, milj. m³/vuosi","Kuusi, milj. m³/vuosi","Koivu, milj. m³/vuosi","Muut lehtipuut, milj. m³/vuosi","Koko puusto, milj. m³/vuosi","Keskikasvu, m³/ha/vuosi";
+TIMEVAL("inventointi")=TLIST(A1),"2025","2026","2027","2028","2029","2030","2031","2032","2033","2034","2035","2036","2037","2038";
+CODES("inventointi")="01","02a","02b","03","05","06","07","08","09","10","11","12","13","14";
+CODES("maakunta")="1","1.1","1.2","1.1.1","1.1.2","1.1.3","1.1.4","1.1.5","1.1.6","1.1.7","1.1.8","1.1.9","1.1.10","1.1.11","1.1.12","1.1.13","1.1.14","1.1.15","1.2.17","1.2.18","1.2.19","1.1.21";
+CODES("puulaji")="Mänty","Kuusi","Koivu","Muut lehtipuut","Koko puusto","Keskikasvu";
+PRECISION("puulaji","Mänty, milj. m³/vuosi")=2;
+PRECISION("puulaji","Kuusi, milj. m³/vuosi")=2;
+PRECISION("puulaji","Koivu, milj. m³/vuosi")=2;
+PRECISION("puulaji","Muut lehtipuut, milj. m³/vuosi")=2;
+PRECISION("puulaji","Koko puusto, milj. m³/vuosi")=2;
+LAST-UPDATED="20251113 08:00";
+UNITS="m³, ha, vuosi";
+CONTACT="tietopalvelu@luke.fi#<A HREF=https://www.luke.fi/fi/tilastot/metsavarat/ TARGET=_blank>Tilaston kotisivu</A>";
+DATABASE="Luke/Tilastot";
+SOURCE="Luonnonvarakeskus, Metsävarat";
+NOTE="Kasvulla tarkoitetaan inventointia edeltävän viiden kasvukauden keskimääräistä vuotuista kasvua.";
+NOTE("inventointi")="VMI 1 ja 2.1: Suomen rajojen mukaan lasketut inventointitulokset ennen vuoden 1944 alueiden luovutusta. VMI 1-3: koivu ja muut lehtipuut esitetään yhdessä.";
+VALUENOTE("inventointi","VMI 11 (2009-2013)")="VMI 11:n mukaisesta kasvusta oli metsämaalla 102,7 milj. m³ ja kitumaalla 1,7 milj. m³.";
+VALUENOTE("inventointi","VMI 12 (2014-2018)")="VMI 12:n mukaisesta kasvusta oli metsämaalla 106,1 milj. m³ ja kitumaalla 1,7 milj. m³.";
+VALUENOTE("inventointi","VMI 13 (2019-2023)")="Ahvenanmaan maakunta mitattu vuonna 2023 ja Inarin, Utsjoen ja Enontekiön kunnat vuonna 2022.#VMI13:n (2019-2023) mukaisesta kasvusta oli metsämaalla 101,5 milj. m³ ja kitumaalla 1,5 milj. m³.";
+VALUENOTE("inventointi","VMI 13/14 (2020-2024)")="- Etelä-Suomen, Pohjois-Suomen ja koko maan sekä maakunnittaiset tiedot perustuvat VMI13/14 (2020-2024) mittauksiin.#- Ahvenanmaan maakunta on mitattu vuonna 2023 ja Ylä-Lappi vuonna 2022.##- VMI 13/14 (2020-2024) mukaisesta kasvusta oli metsämaalla 101,"
+"7 milj. m³ ja kitumaalla 1,5 milj. m³.";
+VALUENOTE("puulaji","Mänty, milj. m³/vuosi")="Mänty sisältää kaikki muut havupuut paitsi kuusen.";
+CELLNOTE("VMI 12 (2014-2018)","Lappi","*")=
+"VMI12: n mittauksia ei tehty Enontekiön, Inarin ja Utsjoen alueella, minkä osalta tulokset on laskettu VMI11:n aineistosta.";
+SUBJECT-AREA[sv]="Jord- och skogsbruk samt fiske";
+DESCRIPTION[sv]="Virkesförrådets årlig tillväxt på skogs- och tvinmark fördelad på trädslag (mn m³/år, m³/ha/år)";
+TITLE[sv]="Virkesförrådets årlig tillväxt på skogs- och tvinmark fördelad på trädslag efter inventering, landskap och trädslag";
+CONTENTS[sv]="Virkesförrådets årlig tillväxt på skogs- och tvinmark fördelad på trädslag";
+STUB[sv]="inventering","landskap";
+HEADING[sv]="trädslag";
+VARIABLECODE[sv]("inventering")="inventointi";
+VALUES[sv]("inventering")="RST 1 (1921-1924)","RST 2.1 (1936-1938)","RST 2.2 (1936-1938)","RST 3 (1951-1953)","RST 5 (1964-1970)","RST 6 (1971-1976)","RST 7 (1977-1984)","RST 8 (1986-1994)","RST 9 (1996-2003)","RST 10 (2004-2008)","RST 11 (2009-2013)","RST 12 (2014-2018)",
+"RST 13 (2019-2023)","RST 13/14 (2020-2024)";
+VARIABLECODE[sv]("landskap")="maakunta";
+VALUES[sv]("landskap")="HELA LANDET","SÖDRA FINLAND","NORRA FINLAND","Nyland","Egentliga Finland","Satakunta","Egentliga Tavastland","Birkaland","Päijänne-Tavastland","Kymmenedalen","Södra Karelen","Södra Savolax","Norra Savolax","Norra Karelen","Mellersta Finland",
+"Södra Österbotten","Österbotten","Mellersta Österbotten","Norra Österbotten","Kajanaland","Lappland","Åland";
+VARIABLECODE[sv]("trädslag")="puulaji";
+VALUES[sv]("trädslag")="Tall, mn m³/år","Gran, mn m³/år","Björk, mn m³/år","Övrigt löv, mn m³/år","Totalt, mn m³/år","Medeltillväxt, m³/ha/år";
+TIMEVAL[sv]("inventering")=TLIST(A1),"2025","2026","2027","2028","2029","2030","2031","2032","2033","2034","2035","2036","2037","2038";
+CODES[sv]("landskap")="1","1.1","1.2","1.1.1","1.1.2","1.1.3","1.1.4","1.1.5","1.1.6","1.1.7","1.1.8","1.1.9","1.1.10","1.1.11","1.1.12","1.1.13","1.1.14","1.1.15","1.2.17","1.2.18","1.2.19","1.1.21";
+CODES[sv]("trädslag")="Mänty","Kuusi","Koivu","Muut lehtipuut","Koko puusto","Keskikasvu";
+PRECISION[sv]("trädslag","Tall, mn m³/år")=2;
+PRECISION[sv]("trädslag","Gran, mn m³/år")=2;
+PRECISION[sv]("trädslag","Björk, mn m³/år")=2;
+PRECISION[sv]("trädslag","Övrigt löv, mn m³/år")=2;
+PRECISION[sv]("trädslag","Totalt, mn m³/år")=2;
+LAST-UPDATED[sv]="20251113 08:00";
+UNITS[sv]="m³, ha, år";
+CONTACT[sv]="tietopalvelu@luke.fi#<A HREF=https://www.luke.fi/sv/statistik/skogsresurser/ TARGET=_blank>Statistikens ingångssida</A>";
+DATABASE[sv]="Luke/Tilastot";
+SOURCE[sv]="Luonnonvarakeskus, Metsävarat";
+NOTE[sv]="Med tillväxten menas genonsnittlig årlig tillväxt från femårsperioden före inventering.";
+NOTE[sv]("inventering")="RST 1 och 2.1: Inventeringsresultat är räknade på basis av Finlands gränser före landavträdelsen år 1944. RST 1-3: björk och andra lövträd visas tillsammans.";
+VALUENOTE[sv]("inventering","RST 11 (2009-2013)")="Efter RST 11 var årlig tillväxt på skogsmark 102,7 milj. m³ och på tvinmark 1,7 milj. m³";
+VALUENOTE[sv]("inventering","RST 12 (2014-2018)")="Efter RST 12 var årlig tillväxt på skogsmark 106,1 milj. m³ och på tvinmark 1,7 milj. m³";
+VALUENOTE[sv]("inventering","RST 13 (2019-2023)")="Mätningarna utfördes på Åland under 2023 och inom kommunerna Enare, Utsjoki och Enontekis under 2022.#Efter RST13 (2019-2023) var årlig tillväxt på skogsmark 101,5 milj. m³ och på tvinmark 1,5 milj. m³";
+VALUENOTE[sv]("inventering","RST 13/14 (2020-2024)")="- Uppgifterna för Södra Finland, Norra Finland och hela landet samt landskapsvisa uppgifter baseras på mätningarna VMI13/14 (2020-2024).#- Mätningarna utfördes på Åland under 2023 och Övre Lappland under 2022.##- Efter RST 13/14 (2020-2024) var årlig til"
+"lväxt på skogsmark 101,7 milj. m³ och på tvinmark 1,5 milj. m³";
+VALUENOTE[sv]("trädslag","Tall, mn m³/år")="Tall innehåller alla andra bärrträdslag utom gran.";
+CELLNOTE[sv]("RST 12 (2014-2018)","Lappland","*")=
+"RST12:s mätningar gjordes inte i området Enontekis, Enare och Utsjoki. Resultaten för området baserar sig på RST11.";
+SUBJECT-AREA[en]="Agriculture, Forestry and Fishery";
+DESCRIPTION[en]="Annual increment of growing stock on forest land and on poorly productive forest land (mill. m³/year, m³/ha/year)";
+TITLE[en]="Annual increment of growing stock on forest land and on poorly productive forest land by inventory, region and tree species";
+CONTENTS[en]="Annual increment of growing stock on forest land and on poorly productive forest land";
+STUB[en]="inventory","region";
+HEADING[en]="tree species";
+VARIABLECODE[en]("inventory")="inventointi";
+VALUES[en]("inventory")="NFI 1 (1921-1924)","NFI 2.1 (1936-1938)","NFI 2.2 (1936-1938)","NFI 3 (1951-1953)","NFI 5 (1964-1970)","NFI 6 (1971-1976)","NFI 7 (1977-1984)","NFI 8 (1986-1994)","NFI 9 (1996-2003)","NFI 10 (2004-2008)","NFI 11 (2009-2013)","NFI 12 (2014-2018)",
+"NFI 13 (2019-2023)","NFI 13/14 (2020-2024)";
+VARIABLECODE[en]("region")="maakunta";
+VALUES[en]("region")="WHOLE COUNTRY","SOUTHERN FINLAND","NORTHERN FINLAND","Uusimaa","Varsnais-Suomi","Satakunta","Kanta-Häme","Pirkanmaa","Päijät-Häme","Kymenlaakso","South Karelia","Etelä-Savo","Pohjois-Savo","North Karelia","Central Finland","South Ostrobothnia",
+"Ostrobothnia","Central Ostrobothnia","North Ostrobothnia","Kainuu","Lapland","Åland";
+VARIABLECODE[en]("tree species")="puulaji";
+VALUES[en]("tree species")="Pine, mill. m³/year","Spruce, mill. m³/year","Birch, mill. m³/year","Other broadleaved, mill. m³/year","Total, mill. m³/year","Mean annual increment, m³/ha/year";
+TIMEVAL[en]("inventory")=TLIST(A1),"2025","2026","2027","2028","2029","2030","2031","2032","2033","2034","2035","2036","2037","2038";
+CODES[en]("region")="1","1.1","1.2","1.1.1","1.1.2","1.1.3","1.1.4","1.1.5","1.1.6","1.1.7","1.1.8","1.1.9","1.1.10","1.1.11","1.1.12","1.1.13","1.1.14","1.1.15","1.2.17","1.2.18","1.2.19","1.1.21";
+CODES[en]("tree species")="Mänty","Kuusi","Koivu","Muut lehtipuut","Koko puusto","Keskikasvu";
+PRECISION[en]("tree species","Pine, mill. m³/year")=2;
+PRECISION[en]("tree species","Spruce, mill. m³/year")=2;
+PRECISION[en]("tree species","Birch, mill. m³/year")=2;
+PRECISION[en]("tree species","Other broadleaved, mill. m³/year")=2;
+PRECISION[en]("tree species","Total, mill. m³/year")=2;
+LAST-UPDATED[en]="20251113 08:00";
+UNITS[en]="m³, ha, year";
+CONTACT[en]="tietopalvelu@luke.fi#<A HREF=https://www.luke.fi/en/statistics/forest-resources/ TARGET=_blank>Home page of the statistics</A>";
+DATABASE[en]="Luke/Tilastot";
+SOURCE[en]="Luonnonvarakeskus, Metsävarat";
+NOTE[en]="Increment is the average annual increment during the last five growing periods preceding the inventory moment.";
+NOTE[en]("inventory")="NFI 1 and 2.1: Inventory results calculated in accordance with borders of Finland before year 1944. NFI 1-3: birch and other broadleaved combined.";
+VALUENOTE[en]("inventory","NFI 11 (2009-2013)")="According to the NFI 11, the increment on forest land amounted to 102.7 million m³ and 1.7 million m³ on poorly productive forest land.";
+VALUENOTE[en]("inventory","NFI 12 (2014-2018)")="According to the NFI 12, the increment on forest land amounted to 106,1 million m³ and 1,7 million m³ on poorly productive forest land.";
+VALUENOTE[en]("inventory","NFI 13 (2019-2023)")="The region of Åland measured in 2023. Municipalities of Inari, Utsjoki and Enontekiö were measured in 2022.#According to the NFI13 (2019-2023), the increment on forest land amounted to 101,5 million m³ and 1.5 million m³ on poorly productive forest land.";
+VALUENOTE[en]("inventory","NFI 13/14 (2020-2024)")="- The data for Southern Finland, Northern Finland, whole country, and by region are based on VMI13/14 (2020-2024) measurements.#- The region of Åland measured in 2023 and Upper Lapland in 2022.##- According to the NFI 13/14 (2020-2024), the increment on "
+"forest land amounted to 101,7 million m³ and 1.5 million m³ on poorly productive forest land.#";
+VALUENOTE[en]("tree species","Pine, mill. m³/year")="Pine includes all other conifers except Norway spruce.";
+CELLNOTE[en]("NFI 12 (2014-2018)","Lapland","*")=
+"No NFI12 measurements in Enontekiö, Inari and Utsjoki region. Results are based on NFI11.";
+DATA=
+24.80 15.40 ".." 14.30 54.50 2.20 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+22.70 17.60 ".." 14.00 54.30 2.20 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+21.50 15.30 ".." 10.60 47.40 2.20 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+21.50 20.30 ".." 13.40 55.20 2.50 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+20.70 24.40 10.30 1.80 57.20 2.60 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+22.20 23.00 10.00 2.20 57.40 2.50 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+27.50 25.00 12.80 3.10 68.40 2.90 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+33.10 27.50 13.10 4.10 77.70 3.30 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+39.50 27.30 15.50 4.40 86.70 3.80 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+47.40 29.80 18.30 4.10 99.50 4.40 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+".." ".." ".." ".." ".." ".." 
+47.80 32.90 20.00 4.70 105.50 4.60 
+29.36 27.06 14.11 3.97 74.49 6.50 
+18.89 5.79 5.67 0.72 31.10 2.80 
+1.07 1.61 0.81 0.39 3.87 7.00 
+1.53 1.31 0.61 0.22 3.66 6.10 
+1.53 1.29 0.59 0.17 3.58 6.60 
+0.62 1.29 0.47 0.16 2.53 7.50 
+2.16 2.72 1.12 0.31 6.31 6.70 
+0.59 1.37 0.52 0.28 2.75 7.70 
+0.96 1.04 0.38 0.14 2.53 7.30 
+1.08 1.03 0.51 0.14 2.76 6.70 
+3.29 3.36 1.81 0.49 8.97 7.30 
+2.90 3.90 2.17 0.55 9.52 7.00 
+4.36 2.58 1.84 0.35 9.15 6.00 
+3.83 3.16 1.54 0.40 8.93 6.30 
+2.80 0.96 0.77 0.13 4.64 5.00 
+1.41 1.02 0.58 0.14 3.15 6.00 
+1.02 0.33 0.31 0.05 1.72 4.80 
+6.34 2.02 2.09 0.37 10.83 3.80 
+4.02 1.53 1.23 0.15 6.93 3.90 
+8.53 2.24 2.35 0.20 13.34 2.00 
+0.21 0.10 0.08 0.05 0.44 4.90 
+49.81 33.69 20.30 4.02 107.82 4.73 
+30.71 28.06 14.98 3.51 77.26 6.71 
+19.10 5.63 5.32 0.50 30.56 2.70 
+1.00 1.53 0.84 0.39 3.77 6.90 
+1.40 1.46 0.52 0.16 3.54 5.74 
+1.29 1.26 0.69 0.10 3.34 6.26 
+0.64 1.55 0.48 0.24 2.90 8.29 
+2.37 2.85 1.17 0.23 6.61 7.18 
+0.64 1.44 0.62 0.27 2.97 8.14 
+0.96 0.87 0.45 0.11 2.39 6.89 
+1.16 1.17 0.55 0.18 3.05 7.49 
+3.46 3.45 1.83 0.40 9.14 7.48 
+3.31 3.98 1.98 0.47 9.74 7.28 
+4.15 2.47 1.98 0.28 8.87 5.83 
+4.18 3.37 1.80 0.38 9.73 6.97 
+3.24 1.15 1.18 0.12 5.69 5.94 
+1.74 1.03 0.55 0.12 3.44 6.41 
+0.95 0.41 0.28 0.03 1.68 4.64 
+6.47 2.32 1.91 0.30 11.00 3.85 
+4.39 1.47 1.37 0.12 7.34 4.11 
+8.25 1.84 2.05 0.09 12.22 1.84 
+0.21 0.08 0.07 0.05 0.41 4.68 
+44.68 35.25 18.99 4.11 103.03 4.50 
+26.70 29.13 13.74 3.62 73.19 6.37 
+17.97 6.12 5.25 0.49 29.83 2.61 
+0.99 1.46 0.70 0.45 3.59 6.78 
+1.44 1.18 0.54 0.17 3.34 5.44 
+1.22 1.28 0.51 0.15 3.16 5.86 
+0.60 1.35 0.39 0.15 2.50 7.30 
+2.18 3.13 1.20 0.32 6.83 7.03 
+0.62 1.54 0.57 0.25 2.97 7.50 
+0.97 0.74 0.42 0.16 2.28 7.20 
+1.11 1.15 0.54 0.19 2.98 7.12 
+2.65 2.95 1.48 0.38 7.46 6.98 
+2.62 4.62 2.02 0.41 9.67 6.98 
+3.67 3.57 2.17 0.31 9.71 6.03 
+3.48 3.12 1.40 0.32 8.32 6.23 
+2.73 1.26 0.87 0.13 4.99 5.11 
+1.38 1.27 0.62 0.14 3.41 6.60 
+0.89 0.46 0.26 0.05 1.65 4.46 
+5.88 2.50 1.78 0.22 10.38 3.57 
+3.44 1.56 1.16 0.12 6.28 3.54 
+8.66 2.06 2.31 0.15 13.18 1.96 
+0.16 0.06 0.06 0.05 0.33 3.61 
+45.07 34.58 19.11 4.45 103.20 4.51 
+26.94 28.31 13.62 3.90 72.77 6.33 
+18.13 6.27 5.49 0.55 30.44 2.67 
+0.97 1.36 0.70 0.44 3.47 6.48 
+1.41 1.17 0.51 0.18 3.27 5.29 
+1.25 1.27 0.50 0.15 3.17 5.94 
+0.60 1.35 0.44 0.17 2.56 7.40 
+2.22 2.87 1.20 0.43 6.72 6.89 
+0.67 1.51 0.55 0.26 3.01 7.54 
+0.94 0.70 0.42 0.15 2.21 6.97 
+1.10 1.09 0.49 0.20 2.89 6.95 
+2.57 2.91 1.43 0.37 7.28 6.84 
+2.63 4.39 1.98 0.47 9.47 6.86 
+3.55 3.47 2.08 0.32 9.43 5.85 
+3.80 3.32 1.49 0.38 8.98 6.76 
+2.77 1.21 0.88 0.14 5.00 5.08 
+1.35 1.20 0.60 0.12 3.26 6.34 
+0.94 0.45 0.28 0.06 1.72 4.59 
+6.08 2.57 1.89 0.25 10.79 3.72 
+3.45 1.57 1.16 0.12 6.30 3.56 
+8.60 2.12 2.44 0.17 13.34 1.98 
+0.16 0.06 0.06 0.05 0.33 3.61 
+;

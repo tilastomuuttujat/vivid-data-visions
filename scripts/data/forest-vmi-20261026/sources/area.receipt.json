@@ -1,0 +1,22 @@
+{
+  "key": "area",
+  "url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.01_Metsatalousmaa.px",
+  "files": {
+    "metadata.json": {
+      "sha256": "88f40688936f6d9db0390c6115034c26f608ee8846b26ae5106b8146296d3f8b",
+      "retrieved_at": "2026-10-26T17:42:18.550246+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.01_Metsatalousmaa.px"
+    },
+    "response.json": {
+      "sha256": "3696f4492eae7021c545ee32cffea1c7b8a9beb469b0b84b21bcbaeeb5c9c073",
+      "retrieved_at": "2026-10-26T17:42:23.262183+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.01_Metsatalousmaa.px"
+    },
+    "response.px": {
+      "sha256": "c423c5b30db359629647b0ea777b1f3c191ddbfa3c44b2ac409a08d011d826cd",
+      "retrieved_at": "2026-10-26T17:42:27.257948+00:00",
+      "resolved_url": "https://statdb.luke.fi/PxWeb/api/v1/fi/LUKE/met/zzz_lak/06%20Metsavarat/1.01_Metsatalousmaa.px"
+    }
+  },
+  "rows": 2002
+}
