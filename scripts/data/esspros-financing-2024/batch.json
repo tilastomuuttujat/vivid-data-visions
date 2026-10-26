@@ -1,0 +1,3666 @@
+{
+  "batch_id": "thl_esspros_financing_1980_2024_20261026_v1",
+  "source_sha256": "9407ee09cbe4cee342bbe1b45f5427106f9ebadd39e63beb6b70c31c95dd2fcb",
+  "source_url": "https://thl.fi/data-ja-tilastot/sote-talous/sosiaaliturvan-menot-ja-rahoitus",
+  "definitions": [
+    {
+      "key": "valtio",
+      "title": "Valtio",
+      "column": 4
+    },
+    {
+      "key": "kunnat",
+      "title": "Kunnat",
+      "column": 5
+    },
+    {
+      "key": "tyonantajat",
+      "title": "Työnantajat",
+      "column": 6
+    },
+    {
+      "key": "vakuutetut",
+      "title": "Vakuutetut",
+      "column": 7
+    },
+    {
+      "key": "paaomatulot",
+      "title": "Pääomatulot",
+      "column": 8
+    },
+    {
+      "key": "yhteensa",
+      "title": "Rahoitus yhteensä",
+      "column": 9
+    },
+    {
+      "key": "rahastosiirto",
+      "title": "Siirto rahastoihin tai rahastoista",
+      "column": 10
+    },
+    {
+      "key": "asiakasmaksut",
+      "title": "Asiakasmaksut",
+      "column": 11
+    }
+  ],
+  "source_discrepancies": [
+    {
+      "year": 2014,
+      "components_minus_total_million": -0.40806627411802765,
+      "total_minus_expense_minus_transfer_million": 0.0
+    },
+    {
+      "year": 2017,
+      "components_minus_total_million": -1.4272516185737913,
+      "total_minus_expense_minus_transfer_million": 0.964168867241824
+    },
+    {
+      "year": 2019,
+      "components_minus_total_million": 0.0,
+      "total_minus_expense_minus_transfer_million": 0.01966299999912735
+    }
+  ],
+  "rows": [
+    {
+      "key": "valtio",
+      "year": 1980,
+      "value": 1821.979807357549,
+      "source_cell": "D6",
+      "source_raw": 1821.979807357549,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1980,
+      "value": 954.8028585219981,
+      "source_cell": "E6",
+      "source_raw": 954.8028585219981,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1980,
+      "value": 3761.186599458771,
+      "source_cell": "F6",
+      "source_raw": 3761.186599458771,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1980,
+      "value": 581.0892859245206,
+      "source_cell": "G6",
+      "source_raw": 581.0892859245206,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1980,
+      "value": 460.0,
+      "source_cell": "H6",
+      "source_raw": 460.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1980,
+      "value": 7579.058551262839,
+      "source_cell": "I6",
+      "source_raw": 7579.058551262839,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1980,
+      "value": 1245.269428648795,
+      "source_cell": "J6",
+      "source_raw": 1245.269428648795,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1980,
+      "value": 297.524441910413,
+      "source_cell": "K6",
+      "source_raw": 297.524441910413,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1981,
+      "value": 2084.8575364168905,
+      "source_cell": "D6",
+      "source_raw": 2084.8575364168905,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1981,
+      "value": 1119.1224626748945,
+      "source_cell": "E6",
+      "source_raw": 1119.1224626748945,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1981,
+      "value": 4273.150647607611,
+      "source_cell": "F6",
+      "source_raw": 4273.150647607611,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1981,
+      "value": 706.5574790648078,
+      "source_cell": "G6",
+      "source_raw": 706.5574790648078,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1981,
+      "value": 579.0,
+      "source_cell": "H6",
+      "source_raw": 579.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1981,
+      "value": 8762.688125764204,
+      "source_cell": "I6",
+      "source_raw": 8762.688125764204,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1981,
+      "value": 1430.5354716746306,
+      "source_cell": "J6",
+      "source_raw": 1430.5354716746306,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1981,
+      "value": 337.3849804817911,
+      "source_cell": "K6",
+      "source_raw": 337.3849804817911,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1982,
+      "value": 2528.87366227528,
+      "source_cell": "D6",
+      "source_raw": 2528.87366227528,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1982,
+      "value": 1340.7941497511658,
+      "source_cell": "E6",
+      "source_raw": 1340.7941497511658,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1982,
+      "value": 4538.214819710952,
+      "source_cell": "F6",
+      "source_raw": 4538.214819710952,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1982,
+      "value": 766.0960050321827,
+      "source_cell": "G6",
+      "source_raw": 766.0960050321827,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1982,
+      "value": 677.0,
+      "source_cell": "H6",
+      "source_raw": 677.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1982,
+      "value": 9850.97863676958,
+      "source_cell": "I6",
+      "source_raw": 9850.97863676958,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1982,
+      "value": 1071.7370634051658,
+      "source_cell": "J6",
+      "source_raw": 1071.7370634051658,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1982,
+      "value": 394.56887547870485,
+      "source_cell": "K6",
+      "source_raw": 394.56887547870485,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1983,
+      "value": 3236.4402688988566,
+      "source_cell": "D6",
+      "source_raw": 3236.4402688988566,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1983,
+      "value": 1455.666503524378,
+      "source_cell": "E6",
+      "source_raw": 1455.666503524378,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1983,
+      "value": 5113.922091988705,
+      "source_cell": "F6",
+      "source_raw": 5113.922091988705,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1983,
+      "value": 813.6931882207904,
+      "source_cell": "G6",
+      "source_raw": 813.6931882207904,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1983,
+      "value": 815.0,
+      "source_cell": "H6",
+      "source_raw": 815.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1983,
+      "value": 11434.72205263273,
+      "source_cell": "I6",
+      "source_raw": 11434.72205263273,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1983,
+      "value": 1285.5898182393084,
+      "source_cell": "J6",
+      "source_raw": 1285.5898182393084,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1983,
+      "value": 472.27169750392295,
+      "source_cell": "K6",
+      "source_raw": 472.27169750392295,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1984,
+      "value": 3418.25141740375,
+      "source_cell": "D6",
+      "source_raw": 3418.25141740375,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1984,
+      "value": 1920.2015564110714,
+      "source_cell": "E6",
+      "source_raw": 1920.2015564110714,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1984,
+      "value": 5532.205465098482,
+      "source_cell": "F6",
+      "source_raw": 5532.205465098482,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1984,
+      "value": 1067.320581324749,
+      "source_cell": "G6",
+      "source_raw": 1067.320581324749,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1984,
+      "value": 950.0,
+      "source_cell": "H6",
+      "source_raw": 950.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1984,
+      "value": 12887.979020238052,
+      "source_cell": "I6",
+      "source_raw": 12887.979020238052,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1984,
+      "value": 1253.411019336565,
+      "source_cell": "J6",
+      "source_raw": 1253.411019336565,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1984,
+      "value": 510.28216888422446,
+      "source_cell": "K6",
+      "source_raw": 510.28216888422446,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1985,
+      "value": 3967.0486214476605,
+      "source_cell": "D6",
+      "source_raw": 3967.0486214476605,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1985,
+      "value": 2277.6009001417824,
+      "source_cell": "E6",
+      "source_raw": 2277.6009001417824,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1985,
+      "value": 6256.422676441749,
+      "source_cell": "F6",
+      "source_raw": 6256.422676441749,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1985,
+      "value": 1301.6063628856339,
+      "source_cell": "G6",
+      "source_raw": 1301.6063628856339,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1985,
+      "value": 1093.0,
+      "source_cell": "H6",
+      "source_raw": 1093.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1985,
+      "value": 14895.678560916826,
+      "source_cell": "I6",
+      "source_raw": 14895.678560916826,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1985,
+      "value": 1459.4814917596323,
+      "source_cell": "J6",
+      "source_raw": 1459.4814917596323,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1985,
+      "value": 594.2079441885185,
+      "source_cell": "K6",
+      "source_raw": 594.2079441885185,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1986,
+      "value": 4321.4205825020645,
+      "source_cell": "D6",
+      "source_raw": 4321.4205825020645,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1986,
+      "value": 2590.5986312866544,
+      "source_cell": "E6",
+      "source_raw": 2590.5986312866544,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1986,
+      "value": 6983.667270461322,
+      "source_cell": "F6",
+      "source_raw": 6983.667270461322,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1986,
+      "value": 1447.5934830542253,
+      "source_cell": "G6",
+      "source_raw": 1447.5934830542253,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1986,
+      "value": 1172.0,
+      "source_cell": "H6",
+      "source_raw": 1172.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1986,
+      "value": 16515.279967304265,
+      "source_cell": "I6",
+      "source_raw": 16515.279967304265,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1986,
+      "value": 1623.0800187697714,
+      "source_cell": "J6",
+      "source_raw": 1623.0800187697714,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1986,
+      "value": 642.9824428623567,
+      "source_cell": "K6",
+      "source_raw": 642.9824428623567,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1987,
+      "value": 4826.152549813059,
+      "source_cell": "D6",
+      "source_raw": 4826.152549813059,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1987,
+      "value": 2902.082671093373,
+      "source_cell": "E6",
+      "source_raw": 2902.082671093373,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1987,
+      "value": 7539.86474326954,
+      "source_cell": "F6",
+      "source_raw": 7539.86474326954,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1987,
+      "value": 1481.5674441994506,
+      "source_cell": "G6",
+      "source_raw": 1481.5674441994506,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1987,
+      "value": 1223.0,
+      "source_cell": "H6",
+      "source_raw": 1223.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1987,
+      "value": 17972.667408375422,
+      "source_cell": "I6",
+      "source_raw": 17972.667408375422,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1987,
+      "value": 1686.8623011808486,
+      "source_cell": "J6",
+      "source_raw": 1686.8623011808486,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1987,
+      "value": 700.8390895651164,
+      "source_cell": "K6",
+      "source_raw": 700.8390895651164,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1988,
+      "value": 5116.78128673855,
+      "source_cell": "D6",
+      "source_raw": 5116.78128673855,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1988,
+      "value": 3102.3944915090324,
+      "source_cell": "E6",
+      "source_raw": 3102.3944915090324,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1988,
+      "value": 8710.452711441656,
+      "source_cell": "F6",
+      "source_raw": 8710.452711441656,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1988,
+      "value": 1599.2989927225083,
+      "source_cell": "G6",
+      "source_raw": 1599.2989927225083,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1988,
+      "value": 1382.0,
+      "source_cell": "H6",
+      "source_raw": 1382.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1988,
+      "value": 19910.92748241175,
+      "source_cell": "I6",
+      "source_raw": 19910.92748241175,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1988,
+      "value": 2176.8561404571046,
+      "source_cell": "J6",
+      "source_raw": 2176.8561404571046,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1988,
+      "value": 761.5549310177219,
+      "source_cell": "K6",
+      "source_raw": 761.5549310177219,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1989,
+      "value": 5636.986543284003,
+      "source_cell": "D6",
+      "source_raw": 5636.986543284003,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1989,
+      "value": 3464.3349092542044,
+      "source_cell": "E6",
+      "source_raw": 3464.3349092542044,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1989,
+      "value": 9595.625768408589,
+      "source_cell": "F6",
+      "source_raw": 9595.625768408589,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1989,
+      "value": 1725.27174964218,
+      "source_cell": "G6",
+      "source_raw": 1725.27174964218,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1989,
+      "value": 1588.0,
+      "source_cell": "H6",
+      "source_raw": 1588.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1989,
+      "value": 22010.218970588976,
+      "source_cell": "I6",
+      "source_raw": 22010.218970588976,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1989,
+      "value": 2520.0974884496936,
+      "source_cell": "J6",
+      "source_raw": 2520.0974884496936,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1989,
+      "value": 856.5811094684756,
+      "source_cell": "K6",
+      "source_raw": 856.5811094684756,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1990,
+      "value": 6472.375974018329,
+      "source_cell": "D6",
+      "source_raw": 6472.375974018329,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1990,
+      "value": 4031.969161061804,
+      "source_cell": "E6",
+      "source_raw": 4031.969161061804,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1990,
+      "value": 11415.923696501522,
+      "source_cell": "F6",
+      "source_raw": 11415.923696501522,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1990,
+      "value": 2068.7114954765857,
+      "source_cell": "G6",
+      "source_raw": 2068.7114954765857,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1990,
+      "value": 1926.0,
+      "source_cell": "H6",
+      "source_raw": 1926.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1990,
+      "value": 25914.98032705824,
+      "source_cell": "I6",
+      "source_raw": 25914.98032705824,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1990,
+      "value": 3814.0776624569226,
+      "source_cell": "J6",
+      "source_raw": 3814.0776624569226,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1990,
+      "value": 949.7572207281529,
+      "source_cell": "K6",
+      "source_raw": 949.7572207281529,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1991,
+      "value": 8385.009073738633,
+      "source_cell": "D6",
+      "source_raw": 8385.009073738633,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1991,
+      "value": 4441.843137848507,
+      "source_cell": "E6",
+      "source_raw": 4441.843137848507,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1991,
+      "value": 11901.482240195905,
+      "source_cell": "F6",
+      "source_raw": 11901.482240195905,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1991,
+      "value": 2088.221294946121,
+      "source_cell": "G6",
+      "source_raw": 2088.221294946121,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1991,
+      "value": 2281.0,
+      "source_cell": "H6",
+      "source_raw": 2281.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1991,
+      "value": 29097.555746729162,
+      "source_cell": "I6",
+      "source_raw": 29097.555746729162,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1991,
+      "value": 4044.114033096019,
+      "source_cell": "J6",
+      "source_raw": 4044.114033096019,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1991,
+      "value": 1048.6517214875212,
+      "source_cell": "K6",
+      "source_raw": 1048.6517214875212,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1992,
+      "value": 8809.851775980409,
+      "source_cell": "D6",
+      "source_raw": 8809.851775980409,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1992,
+      "value": 4548.137907372181,
+      "source_cell": "E6",
+      "source_raw": 4548.137907372181,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1992,
+      "value": 10992.426497671438,
+      "source_cell": "F6",
+      "source_raw": 10992.426497671438,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1992,
+      "value": 3113.9994584348765,
+      "source_cell": "G6",
+      "source_raw": 3113.9994584348765,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1992,
+      "value": 2498.0,
+      "source_cell": "H6",
+      "source_raw": 2498.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1992,
+      "value": 29962.4156394589,
+      "source_cell": "I6",
+      "source_raw": 29962.4156394589,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1992,
+      "value": 2437.2841585473907,
+      "source_cell": "J6",
+      "source_raw": 2437.2841585473907,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1992,
+      "value": 1156.6283702758112,
+      "source_cell": "K6",
+      "source_raw": 1156.6283702758112,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1993,
+      "value": 9583.51623770336,
+      "source_cell": "D6",
+      "source_raw": 9583.51623770336,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1993,
+      "value": 4767.7913393309145,
+      "source_cell": "E6",
+      "source_raw": 4767.7913393309145,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1993,
+      "value": 10956.938845188059,
+      "source_cell": "F6",
+      "source_raw": 10956.938845188059,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1993,
+      "value": 3878.245396275983,
+      "source_cell": "G6",
+      "source_raw": 3878.245396275983,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1993,
+      "value": 2424.0,
+      "source_cell": "H6",
+      "source_raw": 2424.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1993,
+      "value": 31610.491818498314,
+      "source_cell": "I6",
+      "source_raw": 31610.491818498314,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1993,
+      "value": 2940.673310089758,
+      "source_cell": "J6",
+      "source_raw": 2940.673310089758,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1993,
+      "value": 1218.8579030665705,
+      "source_cell": "K6",
+      "source_raw": 1218.8579030665705,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1994,
+      "value": 10117.512904218658,
+      "source_cell": "D6",
+      "source_raw": 10117.512904218658,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1994,
+      "value": 5225.598875159148,
+      "source_cell": "E6",
+      "source_raw": 5225.598875159148,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1994,
+      "value": 10880.076962795149,
+      "source_cell": "F6",
+      "source_raw": 10880.076962795149,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1994,
+      "value": 4707.075497878309,
+      "source_cell": "G6",
+      "source_raw": 4707.075497878309,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1994,
+      "value": 2109.0,
+      "source_cell": "H6",
+      "source_raw": 2109.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1994,
+      "value": 33039.26424005126,
+      "source_cell": "I6",
+      "source_raw": 33039.26424005126,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1994,
+      "value": 3339.126494139491,
+      "source_cell": "J6",
+      "source_raw": 3339.126494139491,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1994,
+      "value": 1272.5098516077921,
+      "source_cell": "K6",
+      "source_raw": 1272.5098516077921,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1995,
+      "value": 9855.1397389387,
+      "source_cell": "D6",
+      "source_raw": 9855.1397389387,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1995,
+      "value": 5652.628020444924,
+      "source_cell": "E6",
+      "source_raw": 5652.628020444924,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1995,
+      "value": 11400.786783119987,
+      "source_cell": "F6",
+      "source_raw": 11400.786783119987,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1995,
+      "value": 4629.20448792663,
+      "source_cell": "G6",
+      "source_raw": 4629.20448792663,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1995,
+      "value": 2364.0,
+      "source_cell": "H6",
+      "source_raw": 2364.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1995,
+      "value": 33901.75903043024,
+      "source_cell": "I6",
+      "source_raw": 33901.75903043024,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1995,
+      "value": 3701.262203295475,
+      "source_cell": "J6",
+      "source_raw": 3701.262203295475,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1995,
+      "value": 1340.12139804532,
+      "source_cell": "K6",
+      "source_raw": 1340.12139804532,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1996,
+      "value": 9854.803363085777,
+      "source_cell": "D6",
+      "source_raw": 9854.803363085777,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1996,
+      "value": 5635.136476092927,
+      "source_cell": "E6",
+      "source_raw": 5635.136476092927,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1996,
+      "value": 12286.464403866305,
+      "source_cell": "F6",
+      "source_raw": 12286.464403866305,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1996,
+      "value": 4556.547303695257,
+      "source_cell": "G6",
+      "source_raw": 4556.547303695257,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1996,
+      "value": 2546.0,
+      "source_cell": "H6",
+      "source_raw": 2546.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1996,
+      "value": 34878.95154674027,
+      "source_cell": "I6",
+      "source_raw": 34878.95154674027,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1996,
+      "value": 3718.438035363197,
+      "source_cell": "J6",
+      "source_raw": 3718.438035363197,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1996,
+      "value": 1423.0380457908448,
+      "source_cell": "K6",
+      "source_raw": 1423.0380457908448,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1997,
+      "value": 9409.105357962773,
+      "source_cell": "D6",
+      "source_raw": 9409.105357962773,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1997,
+      "value": 6052.915285423321,
+      "source_cell": "E6",
+      "source_raw": 6052.915285423321,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1997,
+      "value": 12387.040783890287,
+      "source_cell": "F6",
+      "source_raw": 12387.040783890287,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1997,
+      "value": 4689.247577673389,
+      "source_cell": "G6",
+      "source_raw": 4689.247577673389,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1997,
+      "value": 2415.0,
+      "source_cell": "H6",
+      "source_raw": 2415.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1997,
+      "value": 34953.30900494977,
+      "source_cell": "I6",
+      "source_raw": 34953.30900494977,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1997,
+      "value": 3672.3729382262572,
+      "source_cell": "J6",
+      "source_raw": 3672.3729382262572,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1997,
+      "value": 1456.1710673037624,
+      "source_cell": "K6",
+      "source_raw": 1456.1710673037624,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1998,
+      "value": 9172.171617519245,
+      "source_cell": "D6",
+      "source_raw": 9172.171617519245,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1998,
+      "value": 6535.965767029448,
+      "source_cell": "E6",
+      "source_raw": 6535.965767029448,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1998,
+      "value": 13313.54329329013,
+      "source_cell": "F6",
+      "source_raw": 13313.54329329013,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1998,
+      "value": 4430.968757804572,
+      "source_cell": "G6",
+      "source_raw": 4430.968757804572,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1998,
+      "value": 2537.0,
+      "source_cell": "H6",
+      "source_raw": 2537.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1998,
+      "value": 35989.64943564339,
+      "source_cell": "I6",
+      "source_raw": 35989.64943564339,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1998,
+      "value": 4327.688374512123,
+      "source_cell": "J6",
+      "source_raw": 4327.688374512123,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1998,
+      "value": 1491.6723430091847,
+      "source_cell": "K6",
+      "source_raw": 1491.6723430091847,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 1999,
+      "value": 8951.630214802595,
+      "source_cell": "D6",
+      "source_raw": 8951.630214802595,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 1999,
+      "value": 6777.434999907496,
+      "source_cell": "E6",
+      "source_raw": 6777.434999907496,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 1999,
+      "value": 13567.209314376229,
+      "source_cell": "F6",
+      "source_raw": 13567.209314376229,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 1999,
+      "value": 4528.91806300864,
+      "source_cell": "G6",
+      "source_raw": 4528.91806300864,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 1999,
+      "value": 2435.0,
+      "source_cell": "H6",
+      "source_raw": 2435.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 1999,
+      "value": 36260.19259209496,
+      "source_cell": "I6",
+      "source_raw": 36260.19259209496,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 1999,
+      "value": 4060.6161562325833,
+      "source_cell": "J6",
+      "source_raw": 4060.6161562325833,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 1999,
+      "value": 1574.6217874003696,
+      "source_cell": "K6",
+      "source_raw": 1574.6217874003696,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2000,
+      "value": 8976.79,
+      "source_cell": "D6",
+      "source_raw": 8976.79,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2000,
+      "value": 7136.96,
+      "source_cell": "E6",
+      "source_raw": 7136.96,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2000,
+      "value": 14052.37,
+      "source_cell": "F6",
+      "source_raw": 14052.37,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2000,
+      "value": 4498.83,
+      "source_cell": "G6",
+      "source_raw": 4498.83,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2000,
+      "value": 2705.0,
+      "source_cell": "H6",
+      "source_raw": 2705.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2000,
+      "value": 37369.950000000004,
+      "source_cell": "I6",
+      "source_raw": 37369.950000000004,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2000,
+      "value": 4227.460000000006,
+      "source_cell": "J6",
+      "source_raw": 4227.460000000006,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2000,
+      "value": 1654.05,
+      "source_cell": "K6",
+      "source_raw": 1654.05,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2001,
+      "value": 9228.271666826597,
+      "source_cell": "D6",
+      "source_raw": 9228.271666826597,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2001,
+      "value": 7668.581528000001,
+      "source_cell": "E6",
+      "source_raw": 7668.581528000001,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2001,
+      "value": 15286.587916004475,
+      "source_cell": "F6",
+      "source_raw": 15286.587916004475,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2001,
+      "value": 4558.841176469859,
+      "source_cell": "G6",
+      "source_raw": 4558.841176469859,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2001,
+      "value": 2930.0,
+      "source_cell": "H6",
+      "source_raw": 2930.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2001,
+      "value": 39672.28228730093,
+      "source_cell": "I6",
+      "source_raw": 39672.28228730093,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2001,
+      "value": 4840.9638593009295,
+      "source_cell": "J6",
+      "source_raw": 4840.9638593009295,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2001,
+      "value": 1762.434,
+      "source_cell": "K6",
+      "source_raw": 1762.434,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2002,
+      "value": 9855.128941809278,
+      "source_cell": "D6",
+      "source_raw": 9855.128941809278,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2002,
+      "value": 8126.865399999999,
+      "source_cell": "E6",
+      "source_raw": 8126.865399999999,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2002,
+      "value": 16301.105938251692,
+      "source_cell": "F6",
+      "source_raw": 16301.105938251692,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2002,
+      "value": 4569.4794474861355,
+      "source_cell": "G6",
+      "source_raw": 4569.4794474861355,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2002,
+      "value": 2795.0,
+      "source_cell": "H6",
+      "source_raw": 2795.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2002,
+      "value": 41647.579727547105,
+      "source_cell": "I6",
+      "source_raw": 41647.579727547105,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2002,
+      "value": 4737.5223275471,
+      "source_cell": "J6",
+      "source_raw": 4737.5223275471,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2002,
+      "value": 1899.887704,
+      "source_cell": "K6",
+      "source_raw": 1899.887704,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2003,
+      "value": 10576.465291415569,
+      "source_cell": "D6",
+      "source_raw": 10576.465291415569,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2003,
+      "value": 8360.49266070341,
+      "source_cell": "E6",
+      "source_raw": 8360.49266070341,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2003,
+      "value": 16629.225386180486,
+      "source_cell": "F6",
+      "source_raw": 16629.225386180486,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2003,
+      "value": 4651.847863120602,
+      "source_cell": "G6",
+      "source_raw": 4651.847863120602,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2003,
+      "value": 2681.0,
+      "source_cell": "H6",
+      "source_raw": 2681.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2003,
+      "value": 42899.03120142007,
+      "source_cell": "I6",
+      "source_raw": 42899.03120142007,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2003,
+      "value": 4182.864786420068,
+      "source_cell": "J6",
+      "source_raw": 4182.864786420068,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2003,
+      "value": 2017.4030720000003,
+      "source_cell": "K6",
+      "source_raw": 2017.4030720000003,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2004,
+      "value": 11053.636995976716,
+      "source_cell": "D6",
+      "source_raw": 11053.636995976716,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2004,
+      "value": 8558.39543,
+      "source_cell": "E6",
+      "source_raw": 8558.39543,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2004,
+      "value": 17372.368604992458,
+      "source_cell": "F6",
+      "source_raw": 17372.368604992458,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2004,
+      "value": 4823.3005661310535,
+      "source_cell": "G6",
+      "source_raw": 4823.3005661310535,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2004,
+      "value": 3046.0,
+      "source_cell": "H6",
+      "source_raw": 3046.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2004,
+      "value": 44853.701597100226,
+      "source_cell": "I6",
+      "source_raw": 44853.701597100226,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2004,
+      "value": 4286.888167100224,
+      "source_cell": "J6",
+      "source_raw": 4286.888167100224,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2004,
+      "value": 2091.901428,
+      "source_cell": "K6",
+      "source_raw": 2091.901428,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2005,
+      "value": 11486.566349689667,
+      "source_cell": "D6",
+      "source_raw": 11486.566349689667,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2005,
+      "value": 8899.838050000002,
+      "source_cell": "E6",
+      "source_raw": 8899.838050000002,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2005,
+      "value": 17813.957957088358,
+      "source_cell": "F6",
+      "source_raw": 17813.957957088358,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2005,
+      "value": 5288.76086508984,
+      "source_cell": "G6",
+      "source_raw": 5288.76086508984,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2005,
+      "value": 3264.0,
+      "source_cell": "H6",
+      "source_raw": 3264.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2005,
+      "value": 46753.12322186787,
+      "source_cell": "I6",
+      "source_raw": 46753.12322186787,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2005,
+      "value": 4751.901171867874,
+      "source_cell": "J6",
+      "source_raw": 4751.901171867874,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2005,
+      "value": 2128.6760000000004,
+      "source_cell": "K6",
+      "source_raw": 2128.6760000000004,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2006,
+      "value": 12332.820210067806,
+      "source_cell": "D6",
+      "source_raw": 12332.820210067806,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2006,
+      "value": 9253.498664959448,
+      "source_cell": "E6",
+      "source_raw": 9253.498664959448,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2006,
+      "value": 18829.447048832422,
+      "source_cell": "F6",
+      "source_raw": 18829.447048832422,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2006,
+      "value": 5799.938069097283,
+      "source_cell": "G6",
+      "source_raw": 5799.938069097283,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2006,
+      "value": 3622.0,
+      "source_cell": "H6",
+      "source_raw": 3622.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2006,
+      "value": 49837.70399295696,
+      "source_cell": "I6",
+      "source_raw": 49837.70399295696,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2006,
+      "value": 6042.629682956962,
+      "source_cell": "J6",
+      "source_raw": 6042.629682956962,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2006,
+      "value": 2187.079,
+      "source_cell": "K6",
+      "source_raw": 2187.079,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2007,
+      "value": 12543.758222388042,
+      "source_cell": "D6",
+      "source_raw": 12543.758222388042,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2007,
+      "value": 9767.634,
+      "source_cell": "E6",
+      "source_raw": 9767.634,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2007,
+      "value": 19540.941965683018,
+      "source_cell": "F6",
+      "source_raw": 19540.941965683018,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2007,
+      "value": 6062.216991558997,
+      "source_cell": "G6",
+      "source_raw": 6062.216991558997,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2007,
+      "value": 4130.0,
+      "source_cell": "H6",
+      "source_raw": 4130.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2007,
+      "value": 52044.55117963006,
+      "source_cell": "I6",
+      "source_raw": 52044.55117963006,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2007,
+      "value": 6388.162179630068,
+      "source_cell": "J6",
+      "source_raw": 6388.162179630068,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2007,
+      "value": 2247.593,
+      "source_cell": "K6",
+      "source_raw": 2247.593,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2008,
+      "value": 13716.135188944409,
+      "source_cell": "D6",
+      "source_raw": 13716.135188944409,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2008,
+      "value": 10213.605,
+      "source_cell": "E6",
+      "source_raw": 10213.605,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2008,
+      "value": 20946.047360938348,
+      "source_cell": "F6",
+      "source_raw": 20946.047360938348,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2008,
+      "value": 6086.2963039999995,
+      "source_cell": "G6",
+      "source_raw": 6086.2963039999995,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2008,
+      "value": 4825.0,
+      "source_cell": "H6",
+      "source_raw": 4825.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2008,
+      "value": 55787.08385388275,
+      "source_cell": "I6",
+      "source_raw": 55787.08385388275,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2008,
+      "value": 7135.325353882756,
+      "source_cell": "J6",
+      "source_raw": 7135.325353882756,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2008,
+      "value": 2311.714,
+      "source_cell": "K6",
+      "source_raw": 2311.714,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2009,
+      "value": 15468.738224918417,
+      "source_cell": "D6",
+      "source_raw": 15468.738224918417,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2009,
+      "value": 10454.064999999999,
+      "source_cell": "E6",
+      "source_raw": 10454.064999999999,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2009,
+      "value": 21238.81501808236,
+      "source_cell": "F6",
+      "source_raw": 21238.81501808236,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2009,
+      "value": 6390.85425435294,
+      "source_cell": "G6",
+      "source_raw": 6390.85425435294,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2009,
+      "value": 3697.0,
+      "source_cell": "H6",
+      "source_raw": 3697.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2009,
+      "value": 57249.472497353716,
+      "source_cell": "I6",
+      "source_raw": 57249.472497353716,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2009,
+      "value": 4707.799497353713,
+      "source_cell": "J6",
+      "source_raw": 4707.799497353713,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2009,
+      "value": 2569.5969999999998,
+      "source_cell": "K6",
+      "source_raw": 2569.5969999999998,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2010,
+      "value": 16881.62740803787,
+      "source_cell": "D6",
+      "source_raw": 16881.62740803787,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2010,
+      "value": 10624.909377622931,
+      "source_cell": "E6",
+      "source_raw": 10624.909377622931,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2010,
+      "value": 21289.630004034883,
+      "source_cell": "F6",
+      "source_raw": 21289.630004034883,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2010,
+      "value": 7217.455416892886,
+      "source_cell": "G6",
+      "source_raw": 7217.455416892886,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2010,
+      "value": 3566.0,
+      "source_cell": "H6",
+      "source_raw": 3566.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2010,
+      "value": 59579.622206588574,
+      "source_cell": "I6",
+      "source_raw": 59579.622206588574,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2010,
+      "value": 4747.515706588565,
+      "source_cell": "J6",
+      "source_raw": 4747.515706588565,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2010,
+      "value": 2674.0959999999995,
+      "source_cell": "K6",
+      "source_raw": 2674.0959999999995,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2011,
+      "value": 16988.850502159246,
+      "source_cell": "D6",
+      "source_raw": 16988.850502159246,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2011,
+      "value": 11460.225497840755,
+      "source_cell": "E6",
+      "source_raw": 11460.225497840755,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2011,
+      "value": 21755.27848867033,
+      "source_cell": "F6",
+      "source_raw": 21755.27848867033,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2011,
+      "value": 7348.416413295554,
+      "source_cell": "G6",
+      "source_raw": 7348.416413295554,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2011,
+      "value": 4022.0,
+      "source_cell": "H6",
+      "source_raw": 4022.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2011,
+      "value": 61574.77090196589,
+      "source_cell": "I6",
+      "source_raw": 61574.77090196589,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2011,
+      "value": 4733.272901965895,
+      "source_cell": "J6",
+      "source_raw": 4733.272901965895,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2011,
+      "value": 2762.777,
+      "source_cell": "K6",
+      "source_raw": 2762.777,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2012,
+      "value": 17798.69687965356,
+      "source_cell": "D6",
+      "source_raw": 17798.69687965356,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2012,
+      "value": 12480.224060346442,
+      "source_cell": "E6",
+      "source_raw": 12480.224060346442,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2012,
+      "value": 22444.78314628761,
+      "source_cell": "F6",
+      "source_raw": 22444.78314628761,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2012,
+      "value": 8045.5594366298665,
+      "source_cell": "G6",
+      "source_raw": 8045.5594366298665,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2012,
+      "value": 3762.0,
+      "source_cell": "H6",
+      "source_raw": 3762.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2012,
+      "value": 64531.26352291748,
+      "source_cell": "I6",
+      "source_raw": 64531.26352291748,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2012,
+      "value": 4374.991982917476,
+      "source_cell": "J6",
+      "source_raw": 4374.991982917476,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2012,
+      "value": 2856.293,
+      "source_cell": "K6",
+      "source_raw": 2856.293,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2013,
+      "value": 18606.79507665002,
+      "source_cell": "D6",
+      "source_raw": 18606.79507665002,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2013,
+      "value": 12990.962423349982,
+      "source_cell": "E6",
+      "source_raw": 12990.962423349982,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2013,
+      "value": 22994.05250337346,
+      "source_cell": "F6",
+      "source_raw": 22994.05250337346,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2013,
+      "value": 8313.543439250836,
+      "source_cell": "G6",
+      "source_raw": 8313.543439250836,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2013,
+      "value": 3684.0,
+      "source_cell": "H6",
+      "source_raw": 3684.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2013,
+      "value": 66589.3534426243,
+      "source_cell": "I6",
+      "source_raw": 66589.3534426243,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2013,
+      "value": 3272.247040624301,
+      "source_cell": "J6",
+      "source_raw": 3272.247040624301,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2013,
+      "value": 3045.465,
+      "source_cell": "K6",
+      "source_raw": 3045.465,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2014,
+      "value": 18964.0,
+      "source_cell": "D6",
+      "source_raw": 18964.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2014,
+      "value": 13373.78016516729,
+      "source_cell": "E6",
+      "source_raw": 13373.78016516729,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2014,
+      "value": 23756.016718330517,
+      "source_cell": "F6",
+      "source_raw": 23756.016718330517,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2014,
+      "value": 8871.899798066364,
+      "source_cell": "G6",
+      "source_raw": 8871.899798066364,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2014,
+      "value": 3479.0,
+      "source_cell": "H6",
+      "source_raw": 3479.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2014,
+      "value": 68445.1047478383,
+      "source_cell": "I6",
+      "source_raw": 68445.1047478383,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2014,
+      "value": 2892.631949679737,
+      "source_cell": "J6",
+      "source_raw": 2892.631949679737,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2014,
+      "value": 3048.1310000000003,
+      "source_cell": "K6",
+      "source_raw": 3048.1310000000003,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2015,
+      "value": 17923.678455489455,
+      "source_cell": "D141",
+      "source_raw": 17923.678455489455,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2015,
+      "value": 15100.575250530641,
+      "source_cell": "E141",
+      "source_raw": 15100.575250530641,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2015,
+      "value": 23482.59826673695,
+      "source_cell": "F141",
+      "source_raw": 23482.59826673695,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2015,
+      "value": 9047.795322070991,
+      "source_cell": "G141",
+      "source_raw": 9047.795322070991,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2015,
+      "value": 3435.0,
+      "source_cell": "H141",
+      "source_raw": 3435.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2015,
+      "value": 68989.64729482804,
+      "source_cell": "I141",
+      "source_raw": 68989.64729482804,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2015,
+      "value": 1807.3744755681837,
+      "source_cell": "J141",
+      "source_raw": 1807.3744755681837,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2015,
+      "value": 3220.2837879999997,
+      "source_cell": "K141",
+      "source_raw": 3220.2837879999997,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2016,
+      "value": 18575.04508391707,
+      "source_cell": "D141",
+      "source_raw": 18575.04508391707,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2016,
+      "value": 15386.6918443,
+      "source_cell": "E141",
+      "source_raw": 15386.6918443,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2016,
+      "value": 24041.38947558139,
+      "source_cell": "F141",
+      "source_raw": 24041.38947558139,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2016,
+      "value": 9460.776693954891,
+      "source_cell": "G141",
+      "source_raw": 9460.776693954891,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2016,
+      "value": 3562.0,
+      "source_cell": "H141",
+      "source_raw": 3562.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2016,
+      "value": 71025.90309775335,
+      "source_cell": "I141",
+      "source_raw": 71025.90309775335,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2016,
+      "value": 2188.7868814269896,
+      "source_cell": "J141",
+      "source_raw": 2188.7868814269896,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2016,
+      "value": 2963.6426050000005,
+      "source_cell": "K141",
+      "source_raw": 2963.6426050000005,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ*",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2017,
+      "value": 19024,
+      "source_cell": "D141",
+      "source_raw": "19 024*",
+      "source_rounded": true,
+      "source_label": "YHTEENSÄ",
+      "period_note": "2017: korjattu palkattomien aikojen eläkerahoitus 13.6.2019; tähdellä merkityt arvot pyöristetty lähteessä."
+    },
+    {
+      "key": "kunnat",
+      "year": 2017,
+      "value": 15568.006256966064,
+      "source_cell": "E141",
+      "source_raw": 15568.006256966064,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "2017: korjattu palkattomien aikojen eläkerahoitus 13.6.2019; tähdellä merkityt arvot pyöristetty lähteessä."
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2017,
+      "value": 22470.226757637753,
+      "source_cell": "F141",
+      "source_raw": 22470.226757637753,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "2017: korjattu palkattomien aikojen eläkerahoitus 13.6.2019; tähdellä merkityt arvot pyöristetty lähteessä."
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2017,
+      "value": 9702.33973377761,
+      "source_cell": "G141",
+      "source_raw": 9702.33973377761,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "2017: korjattu palkattomien aikojen eläkerahoitus 13.6.2019; tähdellä merkityt arvot pyöristetty lähteessä."
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2017,
+      "value": 3678.0,
+      "source_cell": "H141",
+      "source_raw": 3678.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "2017: korjattu palkattomien aikojen eläkerahoitus 13.6.2019; tähdellä merkityt arvot pyöristetty lähteessä."
+    },
+    {
+      "key": "yhteensa",
+      "year": 2017,
+      "value": 70444,
+      "source_cell": "I141",
+      "source_raw": "70 444*",
+      "source_rounded": true,
+      "source_label": "YHTEENSÄ",
+      "period_note": "2017: korjattu palkattomien aikojen eläkerahoitus 13.6.2019; tähdellä merkityt arvot pyöristetty lähteessä."
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2017,
+      "value": 1354,
+      "source_cell": "J141",
+      "source_raw": "1 354*",
+      "source_rounded": true,
+      "source_label": "YHTEENSÄ",
+      "period_note": "2017: korjattu palkattomien aikojen eläkerahoitus 13.6.2019; tähdellä merkityt arvot pyöristetty lähteessä."
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2017,
+      "value": 2911.993605,
+      "source_cell": "K141",
+      "source_raw": 2911.993605,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "2017: korjattu palkattomien aikojen eläkerahoitus 13.6.2019; tähdellä merkityt arvot pyöristetty lähteessä."
+    },
+    {
+      "key": "valtio",
+      "year": 2018,
+      "value": 19327.202697847923,
+      "source_cell": "D141",
+      "source_raw": 19327.202697847923,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2018,
+      "value": 16107.935098999998,
+      "source_cell": "E141",
+      "source_raw": 16107.935098999998,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2018,
+      "value": 22296.66555582825,
+      "source_cell": "F141",
+      "source_raw": 22296.66555582825,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2018,
+      "value": 9992.584561996384,
+      "source_cell": "G141",
+      "source_raw": 9992.584561996384,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2018,
+      "value": 4315.0,
+      "source_cell": "H141",
+      "source_raw": 4315.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2018,
+      "value": 72039.38791467255,
+      "source_cell": "I141",
+      "source_raw": 72039.38791467255,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2018,
+      "value": 1810.4927330505598,
+      "source_cell": "J141",
+      "source_raw": 1810.4927330505598,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2018,
+      "value": 1453.0470000000003,
+      "source_cell": "K141",
+      "source_raw": 1453.0470000000003,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2019,
+      "value": 19618.886644114194,
+      "source_cell": "D165",
+      "source_raw": 19618.886644114194,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2019,
+      "value": 16875.162545599997,
+      "source_cell": "E165",
+      "source_raw": 16875.162545599997,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2019,
+      "value": 22697.597655717032,
+      "source_cell": "F165",
+      "source_raw": 22697.597655717032,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2019,
+      "value": 10653.135178420911,
+      "source_cell": "G165",
+      "source_raw": 10653.135178420911,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2019,
+      "value": 4276.0,
+      "source_cell": "H165",
+      "source_raw": 4276.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2019,
+      "value": 74120.78202385214,
+      "source_cell": "I165",
+      "source_raw": 74120.78202385214,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2019,
+      "value": 2003.864095496334,
+      "source_cell": "J165",
+      "source_raw": 2003.864095496334,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2019,
+      "value": 1777.155,
+      "source_cell": "K165",
+      "source_raw": 1777.155,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2020,
+      "value": 21357.40377520221,
+      "source_cell": "D165",
+      "source_raw": 21357.40377520221,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2020,
+      "value": 17270.47457226512,
+      "source_cell": "E165",
+      "source_raw": 17270.47457226512,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2020,
+      "value": 21837.49412284039,
+      "source_cell": "F165",
+      "source_raw": 21837.49412284039,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2020,
+      "value": 11456.362765977152,
+      "source_cell": "G165",
+      "source_raw": 11456.362765977152,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2020,
+      "value": 3466.0,
+      "source_cell": "H165",
+      "source_raw": 3466.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2020,
+      "value": 75387.73523628488,
+      "source_cell": "I165",
+      "source_raw": 75387.73523628488,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2020,
+      "value": -503.0345392081799,
+      "source_cell": "J165",
+      "source_raw": -503.0345392081799,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2020,
+      "value": 1651.736,
+      "source_cell": "K165",
+      "source_raw": 1651.736,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2021,
+      "value": 21731.973651153516,
+      "source_cell": "D165",
+      "source_raw": 21731.973651153516,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2021,
+      "value": 17415.883793266916,
+      "source_cell": "E165",
+      "source_raw": 17415.883793266916,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2021,
+      "value": 24340.756019210192,
+      "source_cell": "F165",
+      "source_raw": 24340.756019210192,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2021,
+      "value": 12107.224634700611,
+      "source_cell": "G165",
+      "source_raw": 12107.224634700611,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2021,
+      "value": 3977.0,
+      "source_cell": "H165",
+      "source_raw": 3977.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2021,
+      "value": 79572.83809833124,
+      "source_cell": "I165",
+      "source_raw": 79572.83809833124,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2021,
+      "value": 1736.4493639757857,
+      "source_cell": "J165",
+      "source_raw": 1736.4493639757857,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2021,
+      "value": 1727.9572480500003,
+      "source_cell": "K165",
+      "source_raw": 1727.9572480500003,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2022,
+      "value": 21550.20383438138,
+      "source_cell": "D165",
+      "source_raw": 21550.20383438138,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "kunnat",
+      "year": 2022,
+      "value": 18842.541898174306,
+      "source_cell": "E165",
+      "source_raw": 18842.541898174306,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2022,
+      "value": 25402.214995887367,
+      "source_cell": "F165",
+      "source_raw": 25402.214995887367,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2022,
+      "value": 12152.319018473563,
+      "source_cell": "G165",
+      "source_raw": 12152.319018473563,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2022,
+      "value": 4402.0,
+      "source_cell": "H165",
+      "source_raw": 4402.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "yhteensa",
+      "year": 2022,
+      "value": 82349.27974691661,
+      "source_cell": "I165",
+      "source_raw": 82349.27974691661,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2022,
+      "value": 2301.727826393675,
+      "source_cell": "J165",
+      "source_raw": 2301.727826393675,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2022,
+      "value": 1702.76882477,
+      "source_cell": "K165",
+      "source_raw": 1702.76882477,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": null
+    },
+    {
+      "key": "valtio",
+      "year": 2023,
+      "value": 40574.52880875,
+      "source_cell": "D167",
+      "source_raw": 40574.52880875,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ1",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "kunnat",
+      "year": 2023,
+      "value": 3797.5936534990005,
+      "source_cell": "E167",
+      "source_raw": 3797.5936534990005,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ1",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2023,
+      "value": 26862.329351591685,
+      "source_cell": "F167",
+      "source_raw": 26862.329351591685,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ1",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2023,
+      "value": 13047.470962748514,
+      "source_cell": "G167",
+      "source_raw": 13047.470962748514,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ1",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2023,
+      "value": 5029.0,
+      "source_cell": "H167",
+      "source_raw": 5029.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ1",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "yhteensa",
+      "year": 2023,
+      "value": 89310.9227765892,
+      "source_cell": "I167",
+      "source_raw": 89310.9227765892,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ1",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2023,
+      "value": 2628.9043435553904,
+      "source_cell": "J167",
+      "source_raw": 2628.9043435553904,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ1",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2023,
+      "value": 1752.492652,
+      "source_cell": "K167",
+      "source_raw": 1752.492652,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ1",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "valtio",
+      "year": 2024,
+      "value": 42010.01216887353,
+      "source_cell": "D167",
+      "source_raw": 42010.01216887353,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "kunnat",
+      "year": 2024,
+      "value": 3903.6706187332,
+      "source_cell": "E167",
+      "source_raw": 3903.6706187332,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "tyonantajat",
+      "year": 2024,
+      "value": 27243.820275826594,
+      "source_cell": "F167",
+      "source_raw": 27243.820275826594,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "vakuutetut",
+      "year": 2024,
+      "value": 13003.212803404682,
+      "source_cell": "G167",
+      "source_raw": 13003.212803404682,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "paaomatulot",
+      "year": 2024,
+      "value": 5972.0,
+      "source_cell": "H167",
+      "source_raw": 5972.0,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "yhteensa",
+      "year": 2024,
+      "value": 92132.715866838,
+      "source_cell": "I167",
+      "source_raw": 92132.715866838,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "rahastosiirto",
+      "year": 2024,
+      "value": 1259.6464656516328,
+      "source_cell": "J167",
+      "source_raw": 1259.6464656516328,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    },
+    {
+      "key": "asiakasmaksut",
+      "year": 2024,
+      "value": 1900.2846749999999,
+      "source_cell": "K167",
+      "source_raw": 1900.2846749999999,
+      "source_rounded": false,
+      "source_label": "YHTEENSÄ",
+      "period_note": "Hyvinvointialueuudistuksen vuoksi valtion ja kuntien luokkien aikasarjassa on rakenteellinen muutos."
+    }
+  ]
+}
