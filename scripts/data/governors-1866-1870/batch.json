@@ -1,0 +1,713 @@
+{
+  "batch_id": "governors_1866_1870_crisis_20261026_v1",
+  "source_url": "https://otos.stat.fi/server/api/core/bitstreams/9524d9c0-8d11-4727-80c9-ebd345dd268c/content",
+  "source_title": "Katsaus Suomen taloudelliseen tilaan vuosina 1866–1870 (1875)",
+  "source_sha256": "176f6606f666454812721088436148a4aa25b9b54ee40750e88af324f19f53cd",
+  "series": [
+    {
+      "key": "harvest",
+      "title": "Ilmoitettu viljasato viljalajeittain",
+      "unit": "tynnyriä",
+      "theme": "Maatalous",
+      "variable": 12,
+      "page": "painettu taulu B, PDF s.52",
+      "description": "Lähteen koko maan ilmoitetut sadot, historialliset aluerajat ja yksikkö. Ei satoalaa eikä satoa henkeä kohti.",
+      "rows": [
+        [
+          1866,
+          "FI_WHEAT",
+          "Vehnä",
+          12263
+        ],
+        [
+          1867,
+          "FI_WHEAT",
+          "Vehnä",
+          8849
+        ],
+        [
+          1868,
+          "FI_WHEAT",
+          "Vehnä",
+          13499
+        ],
+        [
+          1869,
+          "FI_WHEAT",
+          "Vehnä",
+          15173
+        ],
+        [
+          1870,
+          "FI_WHEAT",
+          "Vehnä",
+          18500
+        ],
+        [
+          1866,
+          "FI_RYE",
+          "Ruis",
+          1890188
+        ],
+        [
+          1867,
+          "FI_RYE",
+          "Ruis",
+          1112062
+        ],
+        [
+          1868,
+          "FI_RYE",
+          "Ruis",
+          1911718
+        ],
+        [
+          1869,
+          "FI_RYE",
+          "Ruis",
+          2333958
+        ],
+        [
+          1870,
+          "FI_RYE",
+          "Ruis",
+          2516402
+        ],
+        [
+          1866,
+          "FI_BARLEY",
+          "Ohra",
+          1150006
+        ],
+        [
+          1867,
+          "FI_BARLEY",
+          "Ohra",
+          611645
+        ],
+        [
+          1868,
+          "FI_BARLEY",
+          "Ohra",
+          1131163
+        ],
+        [
+          1869,
+          "FI_BARLEY",
+          "Ohra",
+          1306566
+        ],
+        [
+          1870,
+          "FI_BARLEY",
+          "Ohra",
+          1448726
+        ],
+        [
+          1866,
+          "FI_OATS",
+          "Kaura",
+          1111342
+        ],
+        [
+          1867,
+          "FI_OATS",
+          "Kaura",
+          663512
+        ],
+        [
+          1868,
+          "FI_OATS",
+          "Kaura",
+          844049
+        ],
+        [
+          1869,
+          "FI_OATS",
+          "Kaura",
+          1223075
+        ],
+        [
+          1870,
+          "FI_OATS",
+          "Kaura",
+          1165603
+        ],
+        [
+          1866,
+          "FI_PEAS",
+          "Herneet",
+          47035
+        ],
+        [
+          1867,
+          "FI_PEAS",
+          "Herneet",
+          30462
+        ],
+        [
+          1868,
+          "FI_PEAS",
+          "Herneet",
+          51145
+        ],
+        [
+          1869,
+          "FI_PEAS",
+          "Herneet",
+          75320
+        ],
+        [
+          1870,
+          "FI_PEAS",
+          "Herneet",
+          75283
+        ]
+      ],
+      "kind": "observed",
+      "published": true
+    },
+    {
+      "key": "grain_trade",
+      "title": "Jauhamattoman viljan tuonti ja vienti",
+      "unit": "tynnyriä",
+      "theme": "Ruokahuolto ja kauppa",
+      "variable": 12,
+      "page": "painettu taulu C, PDF s.53",
+      "description": "Vain jauhamaton vilja; jauhot puuttuvat. Yhteensä sisältää myös vehnän, herneet ja muut viljat: ryhmiä ei saa laskea päällekkäin. Viiva puuttuva/ei ilmoitettu, ei automaattisesti nolla.",
+      "rows": [
+        [
+          1866,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          86826
+        ],
+        [
+          1867,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          106716
+        ],
+        [
+          1868,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          172026
+        ],
+        [
+          1869,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          59849
+        ],
+        [
+          1870,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          18891
+        ],
+        [
+          1866,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          55299
+        ],
+        [
+          1867,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          60743
+        ],
+        [
+          1868,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          61579
+        ],
+        [
+          1869,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          25506
+        ],
+        [
+          1870,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          6058
+        ],
+        [
+          1866,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          12097
+        ],
+        [
+          1867,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          29289
+        ],
+        [
+          1868,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          67324
+        ],
+        [
+          1869,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          8189
+        ],
+        [
+          1870,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          3215
+        ],
+        [
+          1866,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          16555
+        ],
+        [
+          1867,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          11481
+        ],
+        [
+          1868,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          36736
+        ],
+        [
+          1869,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          22360
+        ],
+        [
+          1870,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          7297
+        ],
+        [
+          1866,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          34040
+        ],
+        [
+          1867,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          88565
+        ],
+        [
+          1868,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          30238
+        ],
+        [
+          1869,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          102523
+        ],
+        [
+          1870,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          214772
+        ],
+        [
+          1866,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          4700
+        ],
+        [
+          1867,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          22677
+        ],
+        [
+          1868,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          4514
+        ],
+        [
+          1869,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          22546
+        ],
+        [
+          1870,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          37371
+        ],
+        [
+          1867,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          1323
+        ],
+        [
+          1868,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          937
+        ],
+        [
+          1869,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          752
+        ],
+        [
+          1870,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          1552
+        ],
+        [
+          1866,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          29306
+        ],
+        [
+          1867,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          64562
+        ],
+        [
+          1868,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          24659
+        ],
+        [
+          1869,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          79188
+        ],
+        [
+          1870,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          175744
+        ]
+      ],
+      "kind": "observed",
+      "published": true
+    },
+    {
+      "key": "hospital_treated",
+      "title": "Yleisissä sairaanhoitolaitoksissa hoidetut",
+      "unit": "hoidettuja, lähteen laskentatapa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu taulu U, PDF s.78",
+      "description": "Lähteen laitostyyppien vuotuiset hoidetut; ei välttämättä yksilöllisiä henkilöitä, väestön sairastavuusastetta tai yhtenäisiä nykyluokkia. 1870 viiva jätetty puuttuvaksi.",
+      "rows": [
+        [
+          1866,
+          "DISTRICT",
+          "Lääninsairashuoneiden lasaretit",
+          6115
+        ],
+        [
+          1867,
+          "DISTRICT",
+          "Lääninsairashuoneiden lasaretit",
+          6366
+        ],
+        [
+          1868,
+          "DISTRICT",
+          "Lääninsairashuoneiden lasaretit",
+          7759
+        ],
+        [
+          1869,
+          "DISTRICT",
+          "Lääninsairashuoneiden lasaretit",
+          5188
+        ],
+        [
+          1870,
+          "DISTRICT",
+          "Lääninsairashuoneiden lasaretit",
+          4539
+        ],
+        [
+          1866,
+          "TEMPORARY",
+          "Väliaikaiset sairashuoneet",
+          1084
+        ],
+        [
+          1867,
+          "TEMPORARY",
+          "Väliaikaiset sairashuoneet",
+          205
+        ],
+        [
+          1868,
+          "TEMPORARY",
+          "Väliaikaiset sairashuoneet",
+          9772
+        ],
+        [
+          1869,
+          "TEMPORARY",
+          "Väliaikaiset sairashuoneet",
+          150
+        ],
+        [
+          1866,
+          "PRISON",
+          "Vanki-, oikaisu- ja kehruuhuoneiden lasaretit",
+          1215
+        ],
+        [
+          1867,
+          "PRISON",
+          "Vanki-, oikaisu- ja kehruuhuoneiden lasaretit",
+          1499
+        ],
+        [
+          1868,
+          "PRISON",
+          "Vanki-, oikaisu- ja kehruuhuoneiden lasaretit",
+          3891
+        ],
+        [
+          1869,
+          "PRISON",
+          "Vanki-, oikaisu- ja kehruuhuoneiden lasaretit",
+          1410
+        ],
+        [
+          1870,
+          "PRISON",
+          "Vanki-, oikaisu- ja kehruuhuoneiden lasaretit",
+          1111
+        ]
+      ],
+      "kind": "observed",
+      "published": true
+    },
+    {
+      "key": "vaccinations",
+      "title": "Rokonpanojen määrä",
+      "unit": "henkilöä vuodessa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.37, PDF s.40",
+      "description": "Lähteessä rokonistutuksen saaneet henkilöt; aiempi 1861–1865 lähde puhuu lapsista. Vertailun määritelmät tarkistettava.",
+      "rows": [
+        [
+          1866,
+          "FI",
+          "Koko maa",
+          48880
+        ],
+        [
+          1867,
+          "FI",
+          "Koko maa",
+          37763
+        ],
+        [
+          1868,
+          "FI",
+          "Koko maa",
+          29814
+        ],
+        [
+          1869,
+          "FI",
+          "Koko maa",
+          31798
+        ],
+        [
+          1870,
+          "FI",
+          "Koko maa",
+          44286
+        ]
+      ],
+      "kind": "observed",
+      "published": true
+    },
+    {
+      "key": "vaccinations_births_ratio",
+      "title": "Rokonpanojen suhde saman vuoden syntyneisiin",
+      "unit": "%",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.37, PDF s.40",
+      "description": "Lähteen ilmoittama suhde rokotettujen määrästä vuoden syntyneisiin; ei saman syntymäkohortin rokotuskattavuus.",
+      "rows": [
+        [
+          1866,
+          "FI",
+          "Koko maa",
+          81.1
+        ],
+        [
+          1867,
+          "FI",
+          "Koko maa",
+          62.3
+        ],
+        [
+          1868,
+          "FI",
+          "Koko maa",
+          66.7
+        ],
+        [
+          1869,
+          "FI",
+          "Koko maa",
+          54.5
+        ],
+        [
+          1870,
+          "FI",
+          "Koko maa",
+          69.5
+        ]
+      ],
+      "kind": "observed",
+      "published": true
+    },
+    {
+      "key": "forest_area_estimates",
+      "title": "Metsämaan ja kruununmetsien alat, ajanjakson arvio",
+      "unit": "tynnyrinalaa",
+      "theme": "Luonnonvarat",
+      "variable": 10,
+      "page": "painettu s.14, PDF s.17",
+      "description": "Lähteen noin-arvio metsää kasvavasta alasta ja erikseen kruununmetsien ilmoitettu ala. Vuosi 1870 on viisivuotisjakson pääteankkuri, ei todettu mittausvuosi. Alue ja määritelmät tarkistettava ennen vertailua 1865 arvoon. Kruununmetsät sisältyvät kokonaisalaan.",
+      "rows": [
+        [
+          1870,
+          "ALL",
+          "Metsää kasvava ala, noin",
+          46000000
+        ],
+        [
+          1870,
+          "CROWN",
+          "Kruununmetsät",
+          28450782
+        ]
+      ],
+      "kind": "estimate",
+      "published": false
+    },
+    {
+      "key": "tar_exports",
+      "title": "Tervan vientimäärä",
+      "unit": "tynnyriä",
+      "theme": "Luonnonvarat ja kauppa",
+      "variable": 10,
+      "page": "painettu s.15, PDF s.18",
+      "description": "Tullin ilmoittama tervan vientimäärä. Ei käypähintainen vientiarvo.",
+      "rows": [
+        [
+          1866,
+          "FI",
+          "Koko maa",
+          197246
+        ],
+        [
+          1867,
+          "FI",
+          "Koko maa",
+          173476
+        ],
+        [
+          1868,
+          "FI",
+          "Koko maa",
+          145070
+        ],
+        [
+          1869,
+          "FI",
+          "Koko maa",
+          145325
+        ],
+        [
+          1870,
+          "FI",
+          "Koko maa",
+          137377
+        ]
+      ],
+      "kind": "observed",
+      "published": true
+    },
+    {
+      "key": "board_exports",
+      "title": "Lankkujen ja lautojen vientimäärä",
+      "unit": "kuutiojalkaa, lähteen mitta",
+      "theme": "Luonnonvarat ja kauppa",
+      "variable": 10,
+      "page": "painettu s.15, PDF s.18",
+      "description": "Tullin ilmoittama lankkujen ja lautojen vientimäärä; alkuperäinen tilavuusyksikkö, ei verrata aiempiin markkamääräisiin vientiarvoihin.",
+      "rows": [
+        [
+          1866,
+          "FI",
+          "Koko maa",
+          16987235
+        ],
+        [
+          1867,
+          "FI",
+          "Koko maa",
+          14180598
+        ],
+        [
+          1868,
+          "FI",
+          "Koko maa",
+          17132742
+        ],
+        [
+          1869,
+          "FI",
+          "Koko maa",
+          17755665
+        ],
+        [
+          1870,
+          "FI",
+          "Koko maa",
+          15012432
+        ]
+      ],
+      "kind": "observed",
+      "published": true
+    }
+  ],
+  "content_sha256": "036eb9a836f8b0127875f5543d7abd2144ffcf566e0cbb00a5f0c42a7595fd08"
+}
