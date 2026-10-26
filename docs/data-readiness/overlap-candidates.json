@@ -1,0 +1,1001 @@
+[
+  {
+    "unit": "%",
+    "fingerprint": "3aa44c4e1c16d6a81aef32eac9ec38c1",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i01_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i01_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "9e453921c1dbf30f21dec5960747fc72",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i01_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i01_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "3b573c254d492f2c4465cc3d526d83fe",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i01_s13_eur_m",
+      "fi.regional.statfin12bd_b1gph_i03_s13_eur_m",
+      "fi.regional.statfin12bd_b1gph_i04_s13_eur_m",
+      "fi.regional.statfin12bd_b1gph_i05_s13_eur_m",
+      "fi.regional.statfin12bd_b1gph_i06_s13_eur_m",
+      "fi.regional.statfin12bd_b1gph_i07_s13_eur_m",
+      "fi.regional.statfin12bd_b1gph_i08_s13_eur_m",
+      "fi.regional.statfin12bd_b1gph_i09_s13_eur_m",
+      "fi.regional.statfin12bd_b1gph_i10_s13_eur_m",
+      "fi.regional.statfin12bd_b1gph_i11_s13_eur_m",
+      "fi.regional.statfin12bd_b1gph_i12_s13_eur_m",
+      "fi.regional.statfin12bd_b1gph_i13_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i01_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i03_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i04_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i05_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i06_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i07_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i08_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i09_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i10_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i11_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i12_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i13_s13_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "28d6f47edd9bc1bea14b460a79ffaa42",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i03_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i03_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "fdd2febc5f109ab7fe12022ca0aa430c",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i03_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i03_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "a00f95b63de53ed5bd615e8ace298fb7",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i04_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i04_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "91e4a09a9cbb9fd73ee307b76bc978ef",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i04_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i04_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "e793de809744e86841b416e8975dfa2e",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i05_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i05_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "89c1e8fcec86c52167018f62b76a608c",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i05_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i05_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "e23a8ebd3f60a9a370ee11c5b055187b",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i06_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i06_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "77fa14d7f4daa4464be89e373c8ee9ab",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i06_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i06_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "d0cda6fdc96d78cbb6927b87e1cfd92b",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i07_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i07_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "40ac57ab6a53a864863056f27844da9c",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i07_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i07_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "c4ef759f9e7725b99c0d426b420252d8",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i08_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i08_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "ae9c3577ff29ef7b380b0fa6405e365e",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i08_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i08_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "27b2e7f67bb1ac5a4508a01dcd187b2d",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i09_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i09_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "21d530d04b441c3a741ccb47989fe911",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i09_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i09_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "2d465a2f9d21eacadc71d431f8e31c9e",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i10_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i10_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "ad91b977c2cf7e818b2c02ef4d82ae42",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i10_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i10_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "8b27a82effc782e12e40bade0b5d3053",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i11_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i11_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "57ce623591775eaef05352633159fd12",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i11_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i11_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "ca1899ce21b28643aaa34a9510e51194",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i12_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i12_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "dc4d50f2ccc9790a22d2adbbcbf0e331",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i12_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i12_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "2aae84219d1d26566ba232e40165da71",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i13_s1_change_pct",
+      "fi.regional.statfin12bd_b1gph_i13_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "679785f936839f2fc8fbaaddabbeb4a2",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i13_s1_eur_m",
+      "fi.regional.statfin12bd_b1gph_i13_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "77ec5d510f532d7d56915656b559f124",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i14_s13_change_pct",
+      "fi.regional.statfin12bd_d1k_i14_s13_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "e1c33c633cd7b1860bd430b727215718",
+    "series_keys": [
+      "fi.regional.statfin12bd_b1gph_i14_s13_eur_m",
+      "fi.regional.statfin12bd_d1k_i14_s13_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "9262c7bf05b55a5182a162b3da00adb4",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i01_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i01_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "1c93924405ca0216cdf90bb6e8917eac",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i01_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i01_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "7b029b7642231c06d8495b6bcc177f8d",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i03_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i03_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "cbd7967d3115c26205368fd884d0f4bb",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i03_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i03_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "6e8e7bb33d2d618abc48f16d9e5f35c4",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i04_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i04_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "cab7f6444637aff50698fcc9f82ab9d0",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i04_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i04_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "2741127d6a67f69792415a767eb35bc8",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i05_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i05_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "0acdb9289aeec28d0ba076adda7f2094",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i05_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i05_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "ee6ef7473a6ff85c9debcdb4bfcdb3a3",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i06_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i06_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "8ad60824bc992ac03a3eea5c3db9f6e6",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i06_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i06_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "fcbe8b2a75613eb30a2b8b20b6c1396f",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i07_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i07_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "58014231f07eb43c48aae9e478d07b10",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i07_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i07_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "c597e3accadd8f201822d7ed2f35d4e0",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i08_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i08_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "96810062952a35ac3f11eb819c777bf9",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i08_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i08_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "ca962c96525ffc12f8881bc68cf9a2cf",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i09_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i09_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "0c9631104b57df0a47d7cc212175b65f",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i09_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i09_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "25e04ff8f51be029970686c66e26ceb1",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i10_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i10_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "0e1041a889c485ae54a644ed644a43e6",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i10_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i10_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "97907ef33b5877d5a1055b5fb1044b16",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i11_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i11_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "9f7b0047216fcad9dddcec3129d13904",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i11_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i11_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "3e580520de52deb99fac9e0424473616",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i12_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i12_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "c7ee9e96308bab23effc8747bb92ae8d",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i12_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i12_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "beb7907f42f6a311812cf55c6392c1ee",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i13_s1_change_pct",
+      "fi.regional.statfin12bd_d1k_i13_s1y_change_pct"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "2dccd275574b0988245cb1aa1af2a0ea",
+    "series_keys": [
+      "fi.regional.statfin12bd_d1k_i13_s1_eur_m",
+      "fi.regional.statfin12bd_d1k_i13_s1y_eur_m"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "f086052bdcf5a06d494b27f7c594ffb3",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i00_s1_n111",
+      "fi.regional.statfin12be_p51k_i22_s1_n111"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "6ab327cac5a8232f0e5a1ce28abf0a53",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i00_s13_n111",
+      "fi.regional.statfin12be_p51k_i22_s13_n111"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "0e5cccad986b000cb2bea2b4aedf84e5",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i00_s1y_n111",
+      "fi.regional.statfin12be_p51k_i22_s1y_n111"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "a325fbf9401ee2dd640e7d99c3297ccf",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i01_s1_n111",
+      "fi.regional.statfin12be_p51k_i01_s13_n111",
+      "fi.regional.statfin12be_p51k_i01_s13_n113",
+      "fi.regional.statfin12be_p51k_i01_s1y_n111",
+      "fi.regional.statfin12be_p51k_i02_s13_n0",
+      "fi.regional.statfin12be_p51k_i04_s1_n111",
+      "fi.regional.statfin12be_p51k_i04_s13_n111",
+      "fi.regional.statfin12be_p51k_i04_s1y_n111",
+      "fi.regional.statfin12be_p51k_i05_s13_n0",
+      "fi.regional.statfin12be_p51k_i06_s13_n0",
+      "fi.regional.statfin12be_p51k_i07_s13_n0",
+      "fi.regional.statfin12be_p51k_i08_s13_n0",
+      "fi.regional.statfin12be_p51k_i09_s13_n0",
+      "fi.regional.statfin12be_p51k_i10_s13_n0",
+      "fi.regional.statfin12be_p51k_i11_s13_n0",
+      "fi.regional.statfin12be_p51k_i12_s13_n0",
+      "fi.regional.statfin12be_p51k_i13_s13_n0",
+      "fi.regional.statfin12be_p51k_i14_s13_n0",
+      "fi.regional.statfin12be_p51k_i15_s13_n0",
+      "fi.regional.statfin12be_p51k_i16_s13_n0",
+      "fi.regional.statfin12be_p51k_i17_s13_n0",
+      "fi.regional.statfin12be_p51k_i18_s13_n0",
+      "fi.regional.statfin12be_p51k_i23_s13_n0",
+      "fi.regional.statfin12be_p51k_i27_s13_n0",
+      "fi.regional.statfin12be_p51k_i30_s13_n0",
+      "fi.regional.statfin12be_p51k_i37_s1_n0",
+      "fi.regional.statfin12be_p51k_i37_s13_n0",
+      "fi.regional.statfin12be_p51k_i37_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "6ade30c13fa2210efeb9c4c98229b28e",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i01_s1_n113",
+      "fi.regional.statfin12be_p51k_i01_s1y_n113"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "1da82f4a12513e987d1f452566316f07",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i01_s13_n0",
+      "fi.regional.statfin12be_p51k_i03_s13_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "a8cb2a10b354093583af93d00a8c9616",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i02_s1_n0",
+      "fi.regional.statfin12be_p51k_i02_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "214f635724f78a07e9f52804dc8d2af7",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i05_s1_n0",
+      "fi.regional.statfin12be_p51k_i05_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "08c22ec4dc64fe27037134bf221760fb",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i06_s1_n0",
+      "fi.regional.statfin12be_p51k_i06_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "a47d22aeb6ac4e1a6b30c0ce4885b924",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i07_s1_n0",
+      "fi.regional.statfin12be_p51k_i07_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "c3639e29a6e3f31e8be4696438293d72",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i08_s1_n0",
+      "fi.regional.statfin12be_p51k_i08_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "8ef50431285db91917b7dc89f8424590",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i09_s1_n0",
+      "fi.regional.statfin12be_p51k_i09_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "6a61ba173000acd050f3c6c6258dc999",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i10_s1_n0",
+      "fi.regional.statfin12be_p51k_i10_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "5f0f6efe12ffbe231c88b1ca48cd9863",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i11_s1_n0",
+      "fi.regional.statfin12be_p51k_i11_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "54017de5554403a22a76a8b9643636ad",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i12_s1_n0",
+      "fi.regional.statfin12be_p51k_i12_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "af8664512741c4ec42fcb59aad51081f",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i13_s1_n0",
+      "fi.regional.statfin12be_p51k_i13_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "9245f0589a218354b14c3d0a699e854c",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i14_s1_n0",
+      "fi.regional.statfin12be_p51k_i14_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "3acdff17f818da1ba97aa29b4eb15932",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i15_s1_n0",
+      "fi.regional.statfin12be_p51k_i15_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "ec921cf67a1f80882523073b9b1fff28",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i16_s1_n0",
+      "fi.regional.statfin12be_p51k_i16_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "b329cf5e8d11466fa463337455c70802",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i17_s1_n0",
+      "fi.regional.statfin12be_p51k_i17_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "c4de865487313bf43af101b00c79cde3",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i18_s1_n0",
+      "fi.regional.statfin12be_p51k_i18_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "861a0f24ca3dce4ba20995a059b490df",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i19_s13_n0",
+      "fi.regional.statfin12be_p51k_i20_s13_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "553ae88765f99d5022e09beddaf582e0",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i23_s1_n0",
+      "fi.regional.statfin12be_p51k_i23_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "ed4a79df160935c6ddcfb6b196e1abb6",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i27_s1_n0",
+      "fi.regional.statfin12be_p51k_i27_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa euroa, käyvät hinnat",
+    "fingerprint": "90b776a04bf1eb1d42b450cb1bf34bcb",
+    "series_keys": [
+      "fi.regional.statfin12be_p51k_i30_s1_n0",
+      "fi.regional.statfin12be_p51k_i30_s1y_n0"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "c675ce3c10e72a6cebcd45bc67cf7f12",
+    "series_keys": [
+      "fi.regional.statfin12bg_e1_i00_s13",
+      "fi.regional.statfin12bg_e12_i00_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "821de895d46be503bfd27e7a9a30c916",
+    "series_keys": [
+      "fi.regional.statfin12bg_e1_i01_s13",
+      "fi.regional.statfin12bg_e12_i01_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "467e1229f745e61081340f1aa001c463",
+    "series_keys": [
+      "fi.regional.statfin12bg_e1_i02_s13",
+      "fi.regional.statfin12bg_e12_i02_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "a229bf217dedc4739db6b90bfb2c08ba",
+    "series_keys": [
+      "fi.regional.statfin12bg_e1_i03_s13",
+      "fi.regional.statfin12bg_e12_i03_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "b83acda913959cc4dbd413e35aaa4f65",
+    "series_keys": [
+      "fi.regional.statfin12bg_e1_i04_s13",
+      "fi.regional.statfin12bg_e12_i04_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "106ee7e7fcee338df8b8d915ceaf5e42",
+    "series_keys": [
+      "fi.regional.statfin12bg_e11_i00_s1",
+      "fi.regional.statfin12bg_e11_i00_s1y"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "3b573c254d492f2c4465cc3d526d83fe",
+    "series_keys": [
+      "fi.regional.statfin12bg_e11_i00_s13",
+      "fi.regional.statfin12bg_e11_i01_s13",
+      "fi.regional.statfin12bg_e11_i02_s13",
+      "fi.regional.statfin12bg_e11_i03_s13",
+      "fi.regional.statfin12bg_e11_i04_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "10200bdcba1ecd34e4fd1af4c887a9f4",
+    "series_keys": [
+      "fi.regional.statfin12bg_e11_i01_s1",
+      "fi.regional.statfin12bg_e11_i01_s1y"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "efbd831f4a6abd2adc9c32aefd2e41e1",
+    "series_keys": [
+      "fi.regional.statfin12bg_e11_i02_s1",
+      "fi.regional.statfin12bg_e11_i02_s1y"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "e03d06d86ec74d763a55083760f80e3f",
+    "series_keys": [
+      "fi.regional.statfin12bg_e11_i03_s1",
+      "fi.regional.statfin12bg_e11_i03_s1y"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "33887b5baf9e7f14b378a72affb855d4",
+    "series_keys": [
+      "fi.regional.statfin12bg_e11_i04_s1",
+      "fi.regional.statfin12bg_e11_i04_s1y"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "9b23aff7ff069b3b2408575551d72640",
+    "series_keys": [
+      "fi.regional.statfin12bg_e2_i00_s13",
+      "fi.regional.statfin12bg_e22_i00_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "76d2b211319c7bccb246b6902260a97b",
+    "series_keys": [
+      "fi.regional.statfin12bg_e2_i01_s13",
+      "fi.regional.statfin12bg_e22_i01_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "f47ed0f3a1f11eda0f8f40584daf1d0f",
+    "series_keys": [
+      "fi.regional.statfin12bg_e2_i02_s13",
+      "fi.regional.statfin12bg_e22_i02_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "9b645ddd23ed9a6d63c45ca8abffd0da",
+    "series_keys": [
+      "fi.regional.statfin12bg_e2_i03_s13",
+      "fi.regional.statfin12bg_e22_i03_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "63e6dea86fe98c55f072e64b4e54bae1",
+    "series_keys": [
+      "fi.regional.statfin12bg_e2_i04_s13",
+      "fi.regional.statfin12bg_e22_i04_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "a8e6ac67caaf8d51d7571765e02c54aa",
+    "series_keys": [
+      "fi.regional.statfin12bg_e21_i00_s1",
+      "fi.regional.statfin12bg_e21_i00_s1y"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "3b573c254d492f2c4465cc3d526d83fe",
+    "series_keys": [
+      "fi.regional.statfin12bg_e21_i00_s13",
+      "fi.regional.statfin12bg_e21_i01_s13",
+      "fi.regional.statfin12bg_e21_i02_s13",
+      "fi.regional.statfin12bg_e21_i03_s13",
+      "fi.regional.statfin12bg_e21_i04_s13"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "3d4f07c70668c35aae1a8e43fe32516c",
+    "series_keys": [
+      "fi.regional.statfin12bg_e21_i01_s1",
+      "fi.regional.statfin12bg_e21_i01_s1y"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "64f6039bd2891bc32e93dba98db8c3bf",
+    "series_keys": [
+      "fi.regional.statfin12bg_e21_i02_s1",
+      "fi.regional.statfin12bg_e21_i02_s1y"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "9876d4ec4ecd5468499208404c223341",
+    "series_keys": [
+      "fi.regional.statfin12bg_e21_i03_s1",
+      "fi.regional.statfin12bg_e21_i03_s1y"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "a33a2702e4c45453ba0829da36b8c959",
+    "series_keys": [
+      "fi.regional.statfin12bg_e21_i04_s1",
+      "fi.regional.statfin12bg_e21_i04_s1y"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "8edbd0b1d329af1d15f4024b60a95bd8",
+    "series_keys": [
+      "fi.statfin15ab.e1.o",
+      "fi.statfin15ab.e12.o"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "d0d1dffeca0b1c01bc2fd8822b211f00",
+    "series_keys": [
+      "fi.statfin15ab.e1.t",
+      "fi.statfin15ab.e12.t"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "1000 henkilöä",
+    "fingerprint": "5687f7ba22f26d17ceeeb9d46af6df9d",
+    "series_keys": [
+      "fi.statfin15ab.e11.o",
+      "fi.statfin15ab.e11.t"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "c02e4bd289378f87bfd163869d1d9a14",
+    "series_keys": [
+      "fi.statfin15ab.e2.o",
+      "fi.statfin15ab.e22.o"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "0db22ce7ec4dec9e059f90db3b01a8a6",
+    "series_keys": [
+      "fi.statfin15ab.e2.t",
+      "fi.statfin15ab.e22.t"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "miljoonaa tuntia",
+    "fingerprint": "5687f7ba22f26d17ceeeb9d46af6df9d",
+    "series_keys": [
+      "fi.statfin15ab.e21.o",
+      "fi.statfin15ab.e21.t"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  },
+  {
+    "unit": "%",
+    "fingerprint": "df2a33a607b1953991fb9f07688bbf6d",
+    "series_keys": [
+      "indicator_import.alle35_vuokra_asumisrasitus_netto",
+      "indicator_import.asumisrasitus_vuokra_yh_alle35"
+    ],
+    "interpretation": "same stored cells, not proof of error; empty/suppressed/zero and sector aliases need review"
+  }
+]

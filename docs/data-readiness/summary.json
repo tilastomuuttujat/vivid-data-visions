@@ -1,0 +1,382 @@
+{
+  "audit_id": "calculation_readiness_20261026_v1",
+  "as_of": "2026-10-26",
+  "scope": "structural inventory; source labels not independently reverified; no causal approval; no composite weights",
+  "counts": {
+    "series": 1609,
+    "value_rows": 596464,
+    "items": 1112,
+    "cases": 419,
+    "mechanisms": 231,
+    "themes": 32,
+    "series_groups": 28491
+  },
+  "classes": {
+    "A_curve_candidate": 1073,
+    "B_sparse_or_frequency_review": 336,
+    "C_model_or_estimate_review": 112,
+    "D_provenance_review": 71,
+    "D_metadata_review": 17
+  },
+  "unmapped_series": 171,
+  "null_numeric_rows": 19774,
+  "exact_cell_extra_rows": 0,
+  "multirow_groupyears": 0,
+  "duplicate_fingerprint_sets": 105,
+  "duplicate_fingerprint_member_series": 264,
+  "blocks": [
+    {
+      "block": 1,
+      "name": "Tuotanto ja työ",
+      "series": 741,
+      "classes": {
+        "D_provenance_review": 32,
+        "C_model_or_estimate_review": 60,
+        "B_sparse_or_frequency_review": 65,
+        "A_curve_candidate": 581,
+        "D_metadata_review": 3
+      },
+      "period_dense_series": {
+        "1850–1917": 0,
+        "1918–1945": 0,
+        "1946–1975": 0,
+        "1976–1995": 256,
+        "1996–2025": 420
+      },
+      "examples": [
+        "fi.statfin15ai.a.b1gph.eb971a1c0a",
+        "fi.statfin15ai.a.e2.4b3ed4f2b3",
+        "fi.statfin15ai.b_e.b1gph.eb971a1c0a",
+        "fi.statfin15ai.b_e.e2.4b3ed4f2b3",
+        "fi.statfin15ai.f.b1gph.eb971a1c0a"
+      ]
+    },
+    {
+      "block": 2,
+      "name": "Toimeentulo ja jakautuminen",
+      "series": 117,
+      "classes": {
+        "B_sparse_or_frequency_review": 68,
+        "A_curve_candidate": 32,
+        "C_model_or_estimate_review": 13,
+        "D_provenance_review": 3,
+        "D_metadata_review": 1
+      },
+      "period_dense_series": {
+        "1850–1917": 0,
+        "1918–1945": 0,
+        "1946–1975": 0,
+        "1976–1995": 1,
+        "1996–2025": 20
+      },
+      "examples": [
+        "fi.atlas1960.cost_of_living_1951",
+        "fi.regional.statfin14ww_m02_a2025",
+        "fi.regional.statfin14ww_m03_a2025",
+        "fi.regional.statfin14ww_m04_a2025",
+        "fi.regional.statfin14ww_m05_a2025"
+      ]
+    },
+    {
+      "block": 3,
+      "name": "Julkinen talous ja palvelut",
+      "series": 81,
+      "classes": {
+        "D_provenance_review": 1,
+        "A_curve_candidate": 80
+      },
+      "period_dense_series": {
+        "1850–1917": 0,
+        "1918–1945": 0,
+        "1946–1975": 0,
+        "1976–1995": 0,
+        "1996–2025": 80
+      },
+      "examples": [
+        "indicator_import.valtionvelka_bktsta",
+        "nordics.debt_gdp_1995_2024",
+        "nordics.govexp_social_protection_gdp_1995_2024",
+        "nordics2.old_age_expenditure_gdp_1995_2024",
+        "indicator_import.julkiset_menot_bktsta"
+      ]
+    },
+    {
+      "block": 4,
+      "name": "Väestö ja toimintakyky",
+      "series": 305,
+      "classes": {
+        "B_sparse_or_frequency_review": 109,
+        "A_curve_candidate": 135,
+        "C_model_or_estimate_review": 27,
+        "D_provenance_review": 31,
+        "D_metadata_review": 3
+      },
+      "period_dense_series": {
+        "1850–1917": 0,
+        "1918–1945": 0,
+        "1946–1975": 0,
+        "1976–1995": 9,
+        "1996–2025": 105
+      },
+      "examples": [
+        "safe_corridor.fertility_rate_25_29",
+        "safe_corridor.fertility_rate_30_34",
+        "indicator_import.etk_elakevarat_hist",
+        "indicator_import.etk_palkkasumma_hist",
+        "fi.regional.demographic_dependency_observed_a2026"
+      ]
+    },
+    {
+      "block": 5,
+      "name": "Varallisuus ja rakennettu ympäristö",
+      "series": 82,
+      "classes": {
+        "A_curve_candidate": 48,
+        "D_provenance_review": 2,
+        "B_sparse_or_frequency_review": 30,
+        "D_metadata_review": 2
+      },
+      "period_dense_series": {
+        "1850–1917": 0,
+        "1918–1945": 0,
+        "1946–1975": 0,
+        "1976–1995": 1,
+        "1996–2025": 20
+      },
+      "examples": [
+        "housing.rents_archive1962",
+        "housing.homeless_single_1987_2025",
+        "housing.prices_13mz.ind00",
+        "housing.prices_13mz.rind00",
+        "housing.production_156f.stage1"
+      ]
+    },
+    {
+      "block": 6,
+      "name": "Ympäristö ja luonnonvarat",
+      "series": 48,
+      "classes": {
+        "B_sparse_or_frequency_review": 20,
+        "A_curve_candidate": 25,
+        "C_model_or_estimate_review": 3
+      },
+      "period_dense_series": {
+        "1850–1917": 0,
+        "1918–1945": 0,
+        "1946–1975": 0,
+        "1976–1995": 0,
+        "1996–2025": 32
+      },
+      "examples": [
+        "fi.regional.statfin12be_p51k_i15_s13_n0",
+        "fi.regional.statfin12be_p51k_i15_s1_n0",
+        "fi.regional.statfin12be_p51k_i15_s1y_n0",
+        "fi.regional.statfin12be_p51k_i20_s13_n0",
+        "fi.regional.statfin12be_p51k_i20_s1_n0"
+      ]
+    },
+    {
+      "block": 7,
+      "name": "Valta, demokratia ja oikeudet",
+      "series": 4,
+      "classes": {
+        "B_sparse_or_frequency_review": 3,
+        "D_metadata_review": 1
+      },
+      "period_dense_series": {
+        "1850–1917": 0,
+        "1918–1945": 0,
+        "1946–1975": 0,
+        "1976–1995": 0,
+        "1996–2025": 0
+      },
+      "examples": [
+        "fi.followup20261021.turnout_municipal",
+        "fi.followup20261021.turnout_parliament",
+        "power.satisfaction_democracy",
+        "vivid.municipal.voting_a2026"
+      ]
+    },
+    {
+      "block": 8,
+      "name": "Kansalaisyhteiskunta, yhteisöt ja kulttuuri",
+      "series": 6,
+      "classes": {
+        "D_metadata_review": 5,
+        "B_sparse_or_frequency_review": 1
+      },
+      "period_dense_series": {
+        "1850–1917": 0,
+        "1918–1945": 0,
+        "1946–1975": 0,
+        "1976–1995": 0,
+        "1996–2025": 0
+      },
+      "examples": [
+        "power.redistribution_support",
+        "power.trust_legal",
+        "power.trust_parliament",
+        "power.trust_politicians",
+        "social.trust_social"
+      ]
+    },
+    {
+      "block": 9,
+      "name": "Turvallisuus ja yhteiskuntarauha",
+      "series": 54,
+      "classes": {
+        "A_curve_candidate": 28,
+        "B_sparse_or_frequency_review": 26
+      },
+      "period_dense_series": {
+        "1850–1917": 13,
+        "1918–1945": 3,
+        "1946–1975": 9,
+        "1976–1995": 10,
+        "1996–2025": 9
+      },
+      "examples": [
+        "crime.hcs.fi.prison_all_dec31",
+        "crime.hcs.fi.prison_sentenced_dec31",
+        "crime.hcs.fi.prison_all_daily_average",
+        "crime.hcs.fi.police_assault",
+        "crime.hcs.fi.police_fraud"
+      ]
+    }
+  ],
+  "finance_totals": {
+    "series_count": 32661,
+    "empty_series": 561,
+    "value_rows": 970849,
+    "checked_rows": 5757,
+    "imported_rows": 959638,
+    "review_rows": 4079,
+    "estimate_rows": 1594,
+    "other_rows": 418,
+    "p1_dense": 0,
+    "p2_dense": 0,
+    "p3_dense": 0,
+    "p4_dense": 0,
+    "p5_dense": 0
+  },
+  "finance_source_groups": 348,
+  "model_coverage": [
+    {
+      "model_key": "age_structure",
+      "baseline_year": 1987,
+      "computed_points": 190,
+      "missing_points": 690,
+      "computed_first": 1987,
+      "computed_last": 2024
+    },
+    {
+      "model_key": "age_structure",
+      "baseline_year": 1995,
+      "computed_points": 150,
+      "missing_points": 730,
+      "computed_first": 1995,
+      "computed_last": 2024
+    },
+    {
+      "model_key": "age_structure",
+      "baseline_year": 2000,
+      "computed_points": 125,
+      "missing_points": 755,
+      "computed_first": 2000,
+      "computed_last": 2024
+    },
+    {
+      "model_key": "age_structure",
+      "baseline_year": 2010,
+      "computed_points": 75,
+      "missing_points": 805,
+      "computed_first": 2010,
+      "computed_last": 2024
+    },
+    {
+      "model_key": "production_components",
+      "baseline_year": 1975,
+      "computed_points": 153,
+      "missing_points": 375,
+      "computed_first": 1975,
+      "computed_last": 2025
+    },
+    {
+      "model_key": "production_components",
+      "baseline_year": 1990,
+      "computed_points": 108,
+      "missing_points": 420,
+      "computed_first": 1990,
+      "computed_last": 2025
+    },
+    {
+      "model_key": "production_components",
+      "baseline_year": 2007,
+      "computed_points": 57,
+      "missing_points": 471,
+      "computed_first": 2007,
+      "computed_last": 2025
+    },
+    {
+      "model_key": "real_income_components",
+      "baseline_year": 1975,
+      "computed_points": 153,
+      "missing_points": 375,
+      "computed_first": 1975,
+      "computed_last": 2025
+    },
+    {
+      "model_key": "real_income_components",
+      "baseline_year": 1990,
+      "computed_points": 108,
+      "missing_points": 420,
+      "computed_first": 1990,
+      "computed_last": 2025
+    },
+    {
+      "model_key": "real_income_components",
+      "baseline_year": 2007,
+      "computed_points": 57,
+      "missing_points": 471,
+      "computed_first": 2007,
+      "computed_last": 2025
+    }
+  ],
+  "case_evidence": [
+    {
+      "kind": "future",
+      "status": "hypothesis",
+      "n": 4,
+      "numeric_effects": 0,
+      "causal_effect_identified": 0,
+      "first_year": 2025,
+      "last_year": 2050
+    },
+    {
+      "kind": "history",
+      "status": "hypothesis",
+      "n": 415,
+      "numeric_effects": 0,
+      "causal_effect_identified": 0,
+      "first_year": 1850,
+      "last_year": 2026
+    }
+  ],
+  "computed_uncertainty": [
+    {
+      "value_status": "computed",
+      "n": 7113,
+      "uncertainty_rows": 0
+    },
+    {
+      "value_status": "not_computable",
+      "n": 11637,
+      "uncertainty_rows": 0
+    }
+  ],
+  "source_hashes": {
+    "source-series-snapshot.json": "adb9f98a1f520fb7ea89b5df7b9faf62c29e1383ee4cf32ebc2ca0967334acc8",
+    "support-snapshot.json": "9ef410958df2bcc9ad9c68618cd70fa2fe8622e990c174ba5ef6f71f2522242f",
+    "source-finance-summary.json": "6fd7dbc9fc8ca9a6c672fb8604341e2d962f607f9bc8ea209762173fb8e36694"
+  }
+}
