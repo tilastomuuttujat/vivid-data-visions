@@ -1,0 +1,753 @@
+{
+  "batch_id": "governors_1871_1875_recovery_20261026_v1",
+  "source_url": "https://otos.stat.fi/server/api/core/bitstreams/f391a505-9559-4464-bf71-80c6ae66b2cb/content",
+  "source_title": "Yleinen katsaus Suomen taloudelliseen tilaan vuosina 1871–1875 (1879)",
+  "source_sha256": "64d4d9f24b38141b4ca91ac2a55b61e2f595fa611eb13693e3ada8ef82abbb89",
+  "series": [
+    {
+      "key": "harvest",
+      "title": "Ilmoitettu sato viljalajeittain, julkaistut lähdesummat",
+      "unit": "tynnyriä",
+      "theme": "Maatalous",
+      "variable": 12,
+      "page": "painettu s.104–105; PDF s.104",
+      "description": "Taulukossa on maakunnittain ilmoittamatta jääneitä eriä, jotka näkyvät kysymysmerkkeinä tai viivoina. Koko maan lähdesummat eivät välttämättä kata puuttuvia eriä; pidetty julkaisemattomana vertailutarkistukseen asti.",
+      "published": false,
+      "rows": [
+        [
+          1871,
+          "FI_WHEAT",
+          "Vehnä",
+          15617
+        ],
+        [
+          1872,
+          "FI_WHEAT",
+          "Vehnä",
+          17905
+        ],
+        [
+          1873,
+          "FI_WHEAT",
+          "Vehnä",
+          20318
+        ],
+        [
+          1874,
+          "FI_WHEAT",
+          "Vehnä",
+          19373
+        ],
+        [
+          1875,
+          "FI_WHEAT",
+          "Vehnä",
+          17492
+        ],
+        [
+          1871,
+          "FI_RYE",
+          "Ruis",
+          2318139
+        ],
+        [
+          1872,
+          "FI_RYE",
+          "Ruis",
+          2279551
+        ],
+        [
+          1873,
+          "FI_RYE",
+          "Ruis",
+          2780908
+        ],
+        [
+          1874,
+          "FI_RYE",
+          "Ruis",
+          2519048
+        ],
+        [
+          1875,
+          "FI_RYE",
+          "Ruis",
+          2705221
+        ],
+        [
+          1871,
+          "FI_BARLEY",
+          "Ohra",
+          1389260
+        ],
+        [
+          1872,
+          "FI_BARLEY",
+          "Ohra",
+          1451093
+        ],
+        [
+          1873,
+          "FI_BARLEY",
+          "Ohra",
+          1465268
+        ],
+        [
+          1874,
+          "FI_BARLEY",
+          "Ohra",
+          1133449
+        ],
+        [
+          1875,
+          "FI_BARLEY",
+          "Ohra",
+          1173328
+        ],
+        [
+          1871,
+          "FI_OATS",
+          "Kaura",
+          1348451
+        ],
+        [
+          1872,
+          "FI_OATS",
+          "Kaura",
+          1312211
+        ],
+        [
+          1873,
+          "FI_OATS",
+          "Kaura",
+          1260817
+        ],
+        [
+          1874,
+          "FI_OATS",
+          "Kaura",
+          1220264
+        ],
+        [
+          1875,
+          "FI_OATS",
+          "Kaura",
+          1179740
+        ],
+        [
+          1871,
+          "FI_PEAS",
+          "Herneet",
+          52843
+        ],
+        [
+          1872,
+          "FI_PEAS",
+          "Herneet",
+          63691
+        ],
+        [
+          1873,
+          "FI_PEAS",
+          "Herneet",
+          60524
+        ],
+        [
+          1874,
+          "FI_PEAS",
+          "Herneet",
+          55346
+        ],
+        [
+          1875,
+          "FI_PEAS",
+          "Herneet",
+          60104
+        ]
+      ]
+    },
+    {
+      "key": "grain_trade",
+      "title": "Jauhamattoman viljan tuonti ja vienti",
+      "unit": "tynnyriä",
+      "theme": "Ruokahuolto ja kauppa",
+      "variable": 12,
+      "page": "painettu s.106–107; PDF s.105",
+      "description": "Vain jauhamaton vilja. Yhteensä sisältää myös muita kuin eriteltyjä viljalajeja: erät sisältyvät kokonaisuuteen eikä niitä lasketa yhteen. Jauhot erillisessä leiviskäsarjassa.",
+      "published": true,
+      "rows": [
+        [
+          1871,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          42001
+        ],
+        [
+          1872,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          60932
+        ],
+        [
+          1873,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          33237
+        ],
+        [
+          1874,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          129082
+        ],
+        [
+          1875,
+          "IMPORT_TOTAL",
+          "Tuonti yhteensä",
+          134375
+        ],
+        [
+          1871,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          20333
+        ],
+        [
+          1872,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          32845
+        ],
+        [
+          1873,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          9346
+        ],
+        [
+          1874,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          40855
+        ],
+        [
+          1875,
+          "IMPORT_RYE",
+          "Rukiin tuonti",
+          25330
+        ],
+        [
+          1871,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          4114
+        ],
+        [
+          1872,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          11182
+        ],
+        [
+          1873,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          5872
+        ],
+        [
+          1874,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          54181
+        ],
+        [
+          1875,
+          "IMPORT_BARLEY",
+          "Ohran tuonti",
+          57912
+        ],
+        [
+          1871,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          14964
+        ],
+        [
+          1872,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          14347
+        ],
+        [
+          1873,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          13848
+        ],
+        [
+          1874,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          26773
+        ],
+        [
+          1875,
+          "IMPORT_OATS",
+          "Kauran tuonti",
+          41534
+        ],
+        [
+          1871,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          341842
+        ],
+        [
+          1872,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          148241
+        ],
+        [
+          1873,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          157581
+        ],
+        [
+          1874,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          179838
+        ],
+        [
+          1875,
+          "EXPORT_TOTAL",
+          "Vienti yhteensä",
+          52856
+        ],
+        [
+          1871,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          99153
+        ],
+        [
+          1872,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          20236
+        ],
+        [
+          1873,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          38862
+        ],
+        [
+          1874,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          57316
+        ],
+        [
+          1875,
+          "EXPORT_RYE",
+          "Rukiin vienti",
+          16324
+        ],
+        [
+          1871,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          41428
+        ],
+        [
+          1872,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          1352
+        ],
+        [
+          1873,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          7904
+        ],
+        [
+          1874,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          3710
+        ],
+        [
+          1875,
+          "EXPORT_BARLEY",
+          "Ohran vienti",
+          368
+        ],
+        [
+          1871,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          201137
+        ],
+        [
+          1872,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          126644
+        ],
+        [
+          1873,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          110777
+        ],
+        [
+          1874,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          118765
+        ],
+        [
+          1875,
+          "EXPORT_OATS",
+          "Kauran vienti",
+          36141
+        ]
+      ]
+    },
+    {
+      "key": "flour_trade",
+      "title": "Jauhojen tuonti ja vienti",
+      "unit": "leiviskää",
+      "theme": "Ruokahuolto ja kauppa",
+      "variable": 12,
+      "page": "painettu s.106–107; PDF s.105",
+      "description": "Jauhot ovat painomitta; jauhamaton vilja tilavuusmitta. Lähteen laskennallista yhteismuuntoa ei ole tässä tehty.",
+      "published": true,
+      "rows": [
+        [
+          1871,
+          "IMPORT",
+          "Jauhojen tuonti",
+          4263203
+        ],
+        [
+          1872,
+          "IMPORT",
+          "Jauhojen tuonti",
+          6643743
+        ],
+        [
+          1873,
+          "IMPORT",
+          "Jauhojen tuonti",
+          5653377
+        ],
+        [
+          1874,
+          "IMPORT",
+          "Jauhojen tuonti",
+          8153513
+        ],
+        [
+          1875,
+          "IMPORT",
+          "Jauhojen tuonti",
+          10737649
+        ],
+        [
+          1871,
+          "EXPORT",
+          "Jauhojen vienti",
+          33581
+        ],
+        [
+          1872,
+          "EXPORT",
+          "Jauhojen vienti",
+          28457
+        ],
+        [
+          1873,
+          "EXPORT",
+          "Jauhojen vienti",
+          43207
+        ],
+        [
+          1874,
+          "EXPORT",
+          "Jauhojen vienti",
+          103036
+        ],
+        [
+          1875,
+          "EXPORT",
+          "Jauhojen vienti",
+          25695
+        ]
+      ]
+    },
+    {
+      "key": "physicians",
+      "title": "Laillisiksi julistetut lääkärit vuoden lopussa",
+      "unit": "henkilöä",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.81; PDF s.83",
+      "description": "Lähteen laillisiksi julistetut lääkärit; ei suoraan nykyinen työssä olevien lääkärien määritelmä.",
+      "published": true,
+      "rows": [
+        [
+          1871,
+          "FI",
+          "Koko maa",
+          121
+        ],
+        [
+          1872,
+          "FI",
+          "Koko maa",
+          126
+        ],
+        [
+          1873,
+          "FI",
+          "Koko maa",
+          133
+        ],
+        [
+          1874,
+          "FI",
+          "Koko maa",
+          133
+        ],
+        [
+          1875,
+          "FI",
+          "Koko maa",
+          137
+        ]
+      ]
+    },
+    {
+      "key": "pharmacies",
+      "title": "Apteekit ja apteekinlaatikot vuoden lopussa",
+      "unit": "kappaletta",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.81; PDF s.83",
+      "description": "Kaksi eri palveluluokkaa; apteekinlaatikot eivät ole apteekkeja.",
+      "published": true,
+      "rows": [
+        [
+          1871,
+          "PHARMACY",
+          "Apteekit yhteensä",
+          80
+        ],
+        [
+          1872,
+          "PHARMACY",
+          "Apteekit yhteensä",
+          80
+        ],
+        [
+          1873,
+          "PHARMACY",
+          "Apteekit yhteensä",
+          83
+        ],
+        [
+          1874,
+          "PHARMACY",
+          "Apteekit yhteensä",
+          86
+        ],
+        [
+          1875,
+          "PHARMACY",
+          "Apteekit yhteensä",
+          93
+        ],
+        [
+          1871,
+          "DEPOT",
+          "Apteekinlaatikot",
+          15
+        ],
+        [
+          1872,
+          "DEPOT",
+          "Apteekinlaatikot",
+          21
+        ],
+        [
+          1873,
+          "DEPOT",
+          "Apteekinlaatikot",
+          23
+        ],
+        [
+          1874,
+          "DEPOT",
+          "Apteekinlaatikot",
+          24
+        ],
+        [
+          1875,
+          "DEPOT",
+          "Apteekinlaatikot",
+          26
+        ]
+      ]
+    },
+    {
+      "key": "vaccinations",
+      "title": "Rokotettujen määrä",
+      "unit": "henkilöä vuodessa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.82; PDF s.84",
+      "description": "Rokonpanot lähteen mukaan. Ei kattavuusprosentti; aiemman 1861–1865 lähteen lapsirajaus ja tämän lähteen henkilörajaukset on tarkistettava.",
+      "published": true,
+      "rows": [
+        [
+          1871,
+          "FI",
+          "Koko maa",
+          46308
+        ],
+        [
+          1872,
+          "FI",
+          "Koko maa",
+          47657
+        ],
+        [
+          1873,
+          "FI",
+          "Koko maa",
+          70138
+        ],
+        [
+          1874,
+          "FI",
+          "Koko maa",
+          59594
+        ],
+        [
+          1875,
+          "FI",
+          "Koko maa",
+          47940
+        ]
+      ]
+    },
+    {
+      "key": "hospital_treated",
+      "title": "Yleisissä sairaanhoitolaitoksissa hoidetut",
+      "unit": "hoidettuja, lähteen laskentatapa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s.81; PDF s.83",
+      "description": "Laitostyyppien hoidettuja, ei välttämättä yksilöllisiä henkilöitä. Summa sisältää erittelyt; lähteiden laitosluokat voivat muuttua.",
+      "published": true,
+      "rows": [
+        [
+          1871,
+          "TOTAL",
+          "Kaikki laitokset yhteensä",
+          15328
+        ],
+        [
+          1872,
+          "TOTAL",
+          "Kaikki laitokset yhteensä",
+          15434
+        ],
+        [
+          1873,
+          "TOTAL",
+          "Kaikki laitokset yhteensä",
+          14952
+        ],
+        [
+          1874,
+          "TOTAL",
+          "Kaikki laitokset yhteensä",
+          14487
+        ],
+        [
+          1875,
+          "TOTAL",
+          "Kaikki laitokset yhteensä",
+          13972
+        ],
+        [
+          1871,
+          "GENERAL",
+          "Yleisten sairashuoneiden lasarettiosastot",
+          4779
+        ],
+        [
+          1872,
+          "GENERAL",
+          "Yleisten sairashuoneiden lasarettiosastot",
+          4900
+        ],
+        [
+          1873,
+          "GENERAL",
+          "Yleisten sairashuoneiden lasarettiosastot",
+          5116
+        ],
+        [
+          1874,
+          "GENERAL",
+          "Yleisten sairashuoneiden lasarettiosastot",
+          5297
+        ],
+        [
+          1875,
+          "GENERAL",
+          "Yleisten sairashuoneiden lasarettiosastot",
+          5433
+        ],
+        [
+          1871,
+          "PRISON",
+          "Vankeus-, ojennus- ja kehruuhuoneen lasaretit",
+          945
+        ],
+        [
+          1872,
+          "PRISON",
+          "Vankeus-, ojennus- ja kehruuhuoneen lasaretit",
+          1203
+        ],
+        [
+          1873,
+          "PRISON",
+          "Vankeus-, ojennus- ja kehruuhuoneen lasaretit",
+          1160
+        ],
+        [
+          1874,
+          "PRISON",
+          "Vankeus-, ojennus- ja kehruuhuoneen lasaretit",
+          1105
+        ],
+        [
+          1875,
+          "PRISON",
+          "Vankeus-, ojennus- ja kehruuhuoneen lasaretit",
+          1071
+        ]
+      ]
+    }
+  ],
+  "content_sha256": "3a12b64e581a8c4d1f2ed932644b3e69b99cc1c072022ba430d3071b4696d2d6"
+}
