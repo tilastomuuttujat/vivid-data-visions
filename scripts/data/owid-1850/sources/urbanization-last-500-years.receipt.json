@@ -1,0 +1,31 @@
+{
+  "slug": "urbanization-last-500-years",
+  "retrieved_at": "2026-10-26T17:07:29.045782+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/urbanization-last-500-years.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/long-term-urban-population-region.csv?country=%7EFIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:22 GMT",
+      "download_sha256": "8d46ac291c16332be853e157e0ec35c9a8501c9669d770a1bfa0fd6bd359fef4"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/urbanization-last-500-years.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/long-term-urban-population-region.metadata.json?country=%7EFIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "e32170580d57d20e8a2c9f87dde840d2c65a337e95f7190901a6696999c99799"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "51b857d902b97360d1bf5dd9737f99acdfd2f87e1d6b6f51051aa976a690e3ab",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 128
+    },
+    "metadata.json": {
+      "stored_sha256": "e32170580d57d20e8a2c9f87dde840d2c65a337e95f7190901a6696999c99799",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

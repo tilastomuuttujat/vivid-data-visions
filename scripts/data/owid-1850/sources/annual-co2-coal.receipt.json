@@ -1,0 +1,31 @@
+{
+  "slug": "annual-co2-coal",
+  "retrieved_at": "2026-10-26T17:07:53.031548+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/annual-co2-coal.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/annual-co2-coal.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:35 GMT",
+      "download_sha256": "24f84d9a62961c283618b3ec11e3a5345a1c6bef7d3f7d37455a126d1dd3ced4"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/annual-co2-coal.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/annual-co2-coal.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "d7d41b013b6ce18c7aa4d7d64737026a8e94a22290d7ec085fefd46a83a9751e"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "23c91c19e15e611e594c87a3fa485c263d9677dab9a80ee4fedd9c1bc1c8f5d5",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 165
+    },
+    "metadata.json": {
+      "stored_sha256": "d7d41b013b6ce18c7aa4d7d64737026a8e94a22290d7ec085fefd46a83a9751e",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

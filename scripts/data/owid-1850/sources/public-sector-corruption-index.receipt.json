@@ -1,0 +1,31 @@
+{
+  "slug": "public-sector-corruption-index",
+  "retrieved_at": "2026-10-26T17:07:53.579712+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/public-sector-corruption-index.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/public-sector-corruption-index.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:57:03 GMT",
+      "download_sha256": "021a93c4d5c8120bde63ec5298cc39955670bf1dbd5f5b32f6f3e3c1b61abd4b"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/public-sector-corruption-index.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/public-sector-corruption-index.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "90926a11c836c44a86432d29f5082d22da51d9b3ccfefb20668558803d1623d4"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "661ded4f3a04925a33f6c4be45a122f51e3f5d2914c7e25ddbf607b584fd1d33",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 217
+    },
+    "metadata.json": {
+      "stored_sha256": "90926a11c836c44a86432d29f5082d22da51d9b3ccfefb20668558803d1623d4",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

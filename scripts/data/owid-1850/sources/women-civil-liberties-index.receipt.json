@@ -1,0 +1,31 @@
+{
+  "slug": "women-civil-liberties-index",
+  "retrieved_at": "2026-10-26T17:07:41.029136+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/women-civil-liberties-index.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/women-civil-liberties-index.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:57:02 GMT",
+      "download_sha256": "e2b3c573481e83116cad4982f86dbe36149dd2e0d097da028aea51fdc2d8eeb5"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/women-civil-liberties-index.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/women-civil-liberties-index.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "6d2c850cb46b9dac5b8f40c31d8a743cff4831c314512b39d84a80958fcf5ba0"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "1cd3426c213eb3e3f2bd6f852f721f3eb24e8e6f09673cccd452ba44fcf23e14",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 237
+    },
+    "metadata.json": {
+      "stored_sha256": "6d2c850cb46b9dac5b8f40c31d8a743cff4831c314512b39d84a80958fcf5ba0",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

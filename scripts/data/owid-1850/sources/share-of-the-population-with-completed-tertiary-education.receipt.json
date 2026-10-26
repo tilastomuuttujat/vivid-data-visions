@@ -1,0 +1,31 @@
+{
+  "slug": "share-of-the-population-with-completed-tertiary-education",
+  "retrieved_at": "2026-10-26T17:07:04.341745+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/share-of-the-population-with-completed-tertiary-education.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/share-of-the-population-with-completed-tertiary-education.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:55 GMT",
+      "download_sha256": "a49d48c894cbd884efec37fe0b0474c6425d2b0d3dd35c799a46626b85f70bce"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/share-of-the-population-with-completed-tertiary-education.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/share-of-the-population-with-completed-tertiary-education.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "7c7d2eb5cc78f21d098f3c774569f8c89ef24886dc6dcb3a1d3a90992d9246ed"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "7552724e2c6f33229448f9b3dcbeacdede3785908fe2a74a464df35895e5c33e",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 31
+    },
+    "metadata.json": {
+      "stored_sha256": "7c7d2eb5cc78f21d098f3c774569f8c89ef24886dc6dcb3a1d3a90992d9246ed",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

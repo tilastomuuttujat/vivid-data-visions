@@ -1,0 +1,31 @@
+{
+  "slug": "population",
+  "retrieved_at": "2026-10-26T17:06:41.352314+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/population.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/population.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:53:00 GMT",
+      "download_sha256": "6e72d4ffe8f0e940df60c90b13c8ad6eda85043b995b244e8b3e20b1e833b541"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/population.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/population.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "98a4eb915fcb38301c9861a86319acdd57eb83527eee33973beb1eac586b6939"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "004c15e59ff840705b3ff80026467d0e9521b49e47832643d9cdd31454342d92",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 261
+    },
+    "metadata.json": {
+      "stored_sha256": "98a4eb915fcb38301c9861a86319acdd57eb83527eee33973beb1eac586b6939",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

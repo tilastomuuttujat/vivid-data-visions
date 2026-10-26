@@ -1,0 +1,31 @@
+{
+  "slug": "population-having-attained-at-least-basic-education",
+  "retrieved_at": "2026-10-26T17:07:04.406678+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/population-having-attained-at-least-basic-education.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/population-having-attained-at-least-basic-education.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:55 GMT",
+      "download_sha256": "f0b9335fd2c869f9b0b4bee58e2560914f6829ba2ee5055d64b6ca2e08b9b6be"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/population-having-attained-at-least-basic-education.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/population-having-attained-at-least-basic-education.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "747f45ecdc2c15860758d67454b3e7810bbf66711de314c362e83a0deb42f11f"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "e76dd2029dca0c03bebfc9db55f5c6fa357e3f5629ff35b588424e9673563cce",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 31
+    },
+    "metadata.json": {
+      "stored_sha256": "747f45ecdc2c15860758d67454b3e7810bbf66711de314c362e83a0deb42f11f",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "child-mortality",
+  "retrieved_at": "2026-10-26T17:06:40.974627+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/child-mortality.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/child-mortality.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:53:06 GMT",
+      "download_sha256": "ac87ef5c0c4ba409b95e8c85833ab51093476b2475e315cba5dd079154e175ff"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/child-mortality.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/child-mortality.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "8e3475bcf7451a9a9ebc331132268fe315ed2602a3df28e50289d1818dcf4411"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "3fc24c6cedf6768ca5870f6fddb348fddcbf5819b321a41704d8e1d50c4c4a7d",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 159
+    },
+    "metadata.json": {
+      "stored_sha256": "8e3475bcf7451a9a9ebc331132268fe315ed2602a3df28e50289d1818dcf4411",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

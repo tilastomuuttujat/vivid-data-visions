@@ -1,0 +1,31 @@
+{
+  "slug": "cumulative-co-emissions",
+  "retrieved_at": "2026-10-26T17:08:05.492448+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/cumulative-co-emissions.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/cumulative-co-emissions.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:41 GMT",
+      "download_sha256": "58151d4d7e77bfeb9695b40a0716f322cb20b09beafc41652a684c4f7d25e7bd"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/cumulative-co-emissions.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/cumulative-co-emissions.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "650709d72f4ce7fe23f101da4bd7446eebc394f7c8221bee0dc07deffd7e9e7c"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "240dc0ed9ce74a8c61ca67bbab0e39fe5008d5e550524de18a7c2cecfef8cef0",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 165
+    },
+    "metadata.json": {
+      "stored_sha256": "650709d72f4ce7fe23f101da4bd7446eebc394f7c8221bee0dc07deffd7e9e7c",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

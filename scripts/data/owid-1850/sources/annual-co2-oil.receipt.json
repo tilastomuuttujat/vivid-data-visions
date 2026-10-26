@@ -1,0 +1,31 @@
+{
+  "slug": "annual-co2-oil",
+  "retrieved_at": "2026-10-26T17:08:05.663237+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/annual-co2-oil.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/annual-co2-oil.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:35 GMT",
+      "download_sha256": "2f09cf3c9fedd68654de0459678f467a9b3b0a254f0cba8550f0bbce589f0448"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/annual-co2-oil.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/annual-co2-oil.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "e9a63ab8065577abc423cc112d39965833d754f95935c035d793b2e1a3d09a4b"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "28575e95c7dcffff75a080c6480441e54f95c3f3f43d390faa468fb6532fb6c9",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 165
+    },
+    "metadata.json": {
+      "stored_sha256": "e9a63ab8065577abc423cc112d39965833d754f95935c035d793b2e1a3d09a4b",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

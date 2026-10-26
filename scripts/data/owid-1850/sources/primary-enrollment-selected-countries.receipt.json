@@ -1,0 +1,31 @@
+{
+  "slug": "primary-enrollment-selected-countries",
+  "retrieved_at": "2026-10-26T17:07:04.387765+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/primary-enrollment-selected-countries.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/primary-enrollment-selected-countries.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:55 GMT",
+      "download_sha256": "5ade202c6a811e1550d320b8bd2b27be690b5157cda7ca29c4abb09d096d1a7e"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/primary-enrollment-selected-countries.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/primary-enrollment-selected-countries.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "dc3ddc57964b003c4503ef5726e9d9d2a284f4577eeb57b2dd92b2bf4e374e58"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "42a15560efa463c43566815b8a7165b18d6f14bc671a60174f6431aa64e478ba",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 57
+    },
+    "metadata.json": {
+      "stored_sha256": "dc3ddc57964b003c4503ef5726e9d9d2a284f4577eeb57b2dd92b2bf4e374e58",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

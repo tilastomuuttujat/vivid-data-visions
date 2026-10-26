@@ -1,0 +1,31 @@
+{
+  "slug": "maternal-mortality",
+  "retrieved_at": "2026-10-26T17:06:41.131474+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/maternal-mortality.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/maternal-mortality.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:29 GMT",
+      "download_sha256": "f66fa6a1f2c777f80a439e8634242a4ea196b9ebd12d152183e7cc7876215e2e"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/maternal-mortality.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/maternal-mortality.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "d4cfbd4dfdf2f6f4e36a3c00402528f0839d28022bd6c1f34117a4d33c4945ec"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "6584a9f1a78f242b23dbb762617cca31acc94d654d41087f2b1c020aef9a02c3",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 267
+    },
+    "metadata.json": {
+      "stored_sha256": "d4cfbd4dfdf2f6f4e36a3c00402528f0839d28022bd6c1f34117a4d33c4945ec",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "civil-liberties",
+  "retrieved_at": "2026-10-26T17:07:41.909719+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/civil-liberties.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/human-rights-index-vdem.csv?country=%7EFIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:17 GMT",
+      "download_sha256": "6303ce0a230c707b9e05e5248ee7c462494eda19ba71bbd2e3204ef25378cd97"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/civil-liberties.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/human-rights-index-vdem.metadata.json?country=%7EFIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "8f938e9d359313dfbd56224780449213e0ccd56583e82dd497bd0cfdb76d8c83"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "38d4ff10806129866522236943309d3596005a5f6a6b60c1f7dcfcf7823d818e",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 237
+    },
+    "metadata.json": {
+      "stored_sha256": "8f938e9d359313dfbd56224780449213e0ccd56583e82dd497bd0cfdb76d8c83",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

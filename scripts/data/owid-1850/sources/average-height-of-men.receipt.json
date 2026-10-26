@@ -1,0 +1,31 @@
+{
+  "slug": "average-height-of-men",
+  "retrieved_at": "2026-10-26T17:06:52.842922+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/average-height-of-men.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/average-height-of-men.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:53:12 GMT",
+      "download_sha256": "0fe7d4ff5be390c881d093fed70a5b18b61bfcba754d1d3fa5537e0c24fb09d8"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/average-height-of-men.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/average-height-of-men.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "7f6a699fca5826c971db68625f48f3910ab3ff08765a89ccc6d6d7614612af37"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "14ec429f3f9eaa0c307d81862d972becc4c070fe87a51ceffead6910ab17c891",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 101
+    },
+    "metadata.json": {
+      "stored_sha256": "7f6a699fca5826c971db68625f48f3910ab3ff08765a89ccc6d6d7614612af37",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

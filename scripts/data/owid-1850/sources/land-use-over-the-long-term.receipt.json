@@ -1,0 +1,31 @@
+{
+  "slug": "land-use-over-the-long-term",
+  "retrieved_at": "2026-10-26T17:07:17.187852+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/land-use-over-the-long-term.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/land-use-over-the-long-term.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:16 GMT",
+      "download_sha256": "a22c0b00027e6a3b6a6d7f0f1f8e8999cb0c7c43b75b26b3ab741af93aaf49d5"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/land-use-over-the-long-term.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/land-use-over-the-long-term.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "6edaa559840bf84ecf365eb29e6733c26a30317587f08d6a01a49a0e93513728"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "282532fa0e7054689ab06c8eb405e0c7243bceb675b77cef5b356b26b6f71c84",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 128
+    },
+    "metadata.json": {
+      "stored_sha256": "6edaa559840bf84ecf365eb29e6733c26a30317587f08d6a01a49a0e93513728",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

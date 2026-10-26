@@ -1,0 +1,31 @@
+{
+  "slug": "suffrage",
+  "retrieved_at": "2026-10-26T17:07:17.245060+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/suffrage.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/suffrage.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:10 GMT",
+      "download_sha256": "d097ced78e0547ad4a7c5e1895c3346b994769335a92f51a16cd98382a04712e"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/suffrage.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/suffrage.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "659d04e8ba0c78543cd8912977e66a4a86b9a84fb71f4f60d571e135533cb82c"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "9bcf3e8722c2c950608b2105f9815e0b1242d0c9272ef3c242e36b22ac0e69d3",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 237
+    },
+    "metadata.json": {
+      "stored_sha256": "659d04e8ba0c78543cd8912977e66a4a86b9a84fb71f4f60d571e135533cb82c",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

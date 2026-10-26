@@ -1,0 +1,31 @@
+{
+  "slug": "freedom-of-expression",
+  "retrieved_at": "2026-10-26T17:07:53.926352+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/freedom-of-expression.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/freedom-of-expression-index.csv?country=%7EFIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:16 GMT",
+      "download_sha256": "6965c73885922254bf44f6b57bc02eb27f9c162bb55af8d4dbb177adc8e64d6f"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/freedom-of-expression.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/freedom-of-expression-index.metadata.json?country=%7EFIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "58236d985c1eb3e090277baad94318b45da1f77b2222285aa2e0367804f5ecf9"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "1bc07e61163a47cc45f200f00f476857d183ef97155e4124e1b7af0e8cea7913",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 237
+    },
+    "metadata.json": {
+      "stored_sha256": "58236d985c1eb3e090277baad94318b45da1f77b2222285aa2e0367804f5ecf9",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

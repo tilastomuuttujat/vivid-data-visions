@@ -1,0 +1,31 @@
+{
+  "slug": "gdp-per-capita-maddison-project-database",
+  "retrieved_at": "2026-10-26T17:06:52.744797+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:29 GMT",
+      "download_sha256": "0545ad6ca37529206af49f9f964f17af927e8c154c1fe8d3813c523e0d2f43f8"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "b1ac769a55dcdd736e2b1c65b13f393225bd087a211685a4bdf6c987289e489d"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "b0998a3d30ee67024a5838d6320d9e11cd5e49d61cc132eac33016bc9f1bd6f6",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 170
+    },
+    "metadata.json": {
+      "stored_sha256": "b1ac769a55dcdd736e2b1c65b13f393225bd087a211685a4bdf6c987289e489d",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

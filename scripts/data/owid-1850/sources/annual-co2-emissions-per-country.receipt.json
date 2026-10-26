@@ -1,0 +1,31 @@
+{
+  "slug": "annual-co2-emissions-per-country",
+  "retrieved_at": "2026-10-26T17:07:52.967106+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:53:00 GMT",
+      "download_sha256": "3343aa2c0adddd1f9857b2b889057dcc377a61f1dc23bfcd5ab17963338bd9f8"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "d22549a40b46660e69bbeed72223119a128a1bafe4a23c0c3d38f3cdc72c937f"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "13af82493d986b4d022690544cceafffad241e35f672d6bb8ab982800d70cd07",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 165
+    },
+    "metadata.json": {
+      "stored_sha256": "d22549a40b46660e69bbeed72223119a128a1bafe4a23c0c3d38f3cdc72c937f",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

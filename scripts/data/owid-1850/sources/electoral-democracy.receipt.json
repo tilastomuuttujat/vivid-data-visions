@@ -1,0 +1,31 @@
+{
+  "slug": "electoral-democracy",
+  "retrieved_at": "2026-10-26T17:07:28.917091+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/electoral-democracy.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/electoral-democracy-index.csv?country=%7EFIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:17 GMT",
+      "download_sha256": "b10099af07ae1c4900edb9e7cd8d2d3876bbca5b3bb1bae69e70932fcdb4bd7e"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/electoral-democracy.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/electoral-democracy-index.metadata.json?country=%7EFIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "50f2e19882e4905338546d80541448f1007a51ba0f6ab73f226fd7aa304cdd4a"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "627447af50a200a93178ea60c8849485be4cb9940acedf66560625b6ac4b2784",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 183
+    },
+    "metadata.json": {
+      "stored_sha256": "50f2e19882e4905338546d80541448f1007a51ba0f6ab73f226fd7aa304cdd4a",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

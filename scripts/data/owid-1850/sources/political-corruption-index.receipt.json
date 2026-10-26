@@ -1,0 +1,31 @@
+{
+  "slug": "political-corruption-index",
+  "retrieved_at": "2026-10-26T17:07:41.307917+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/political-corruption-index.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/political-corruption-index.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:57:02 GMT",
+      "download_sha256": "fd1733e084221ec2a6e6a8b01b9f6b4baeedfa179c25d9e3d3d57348d2b4df8f"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/political-corruption-index.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/political-corruption-index.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "f47c9f6c78f756275fb2b61a5e355e327714d90d6a81fa060afd1b07a3f3903f"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "28b852da2ad3b42a93e86ba76a42b7594082b07b58e75f10ebd9f37093a93ef7",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 217
+    },
+    "metadata.json": {
+      "stored_sha256": "f47c9f6c78f756275fb2b61a5e355e327714d90d6a81fa060afd1b07a3f3903f",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

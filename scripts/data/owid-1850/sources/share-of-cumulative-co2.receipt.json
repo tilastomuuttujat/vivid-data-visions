@@ -1,0 +1,31 @@
+{
+  "slug": "share-of-cumulative-co2",
+  "retrieved_at": "2026-10-26T17:08:06.399803+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/share-of-cumulative-co2.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/share-of-cumulative-co2.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:41 GMT",
+      "download_sha256": "d077aa3f8bb7fe5359eed5d3cce9c5478a4dcbfcc9085cdfd994574a28755e14"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/share-of-cumulative-co2.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/share-of-cumulative-co2.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "b6de3961df77b6cf405d56c35642edaa1884187fcf74f4adf0e4d09c74c520e8"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "29d728b1ba6857f6f9ee0ed4a184a69225fed5de9d01fe9684c9049ee7eb7ea1",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 165
+    },
+    "metadata.json": {
+      "stored_sha256": "b6de3961df77b6cf405d56c35642edaa1884187fcf74f4adf0e4d09c74c520e8",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

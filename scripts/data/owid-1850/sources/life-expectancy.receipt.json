@@ -1,0 +1,31 @@
+{
+  "slug": "life-expectancy",
+  "retrieved_at": "2026-10-26T17:06:40.903600+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/life-expectancy.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/life-expectancy.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:53:00 GMT",
+      "download_sha256": "c304603fb8a7da263619a8ae43b7097f35b648c458855e23f1c4ef8f2ae75c01"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/life-expectancy.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/life-expectancy.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "114ccca1e1b33dc90a0621c2ef37b04a246806de2ff76866208aa8ab05c02be1"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "c353a7b9ef67c6bde411468198144c79ec843587adb005a395018214078e45a5",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 159
+    },
+    "metadata.json": {
+      "stored_sha256": "114ccca1e1b33dc90a0621c2ef37b04a246806de2ff76866208aa8ab05c02be1",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

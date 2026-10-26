@@ -1,0 +1,31 @@
+{
+  "slug": "historical-gov-spending-gdp",
+  "retrieved_at": "2026-10-26T17:07:04.648912+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/historical-gov-spending-gdp.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/historical-gov-spending-gdp.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:29 GMT",
+      "download_sha256": "e193ff5c97d33851cb71b8d7011cfc181c548e75e3f110db37ff94c8b272b7c2"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/historical-gov-spending-gdp.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/historical-gov-spending-gdp.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "017e948aa4381909b15d16e9200dda91c3538b426ea892dc1f9aa89a42dc51f0"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "1cc2a521f5eca0c2eea7a4e0038b8dbbb0c1a8b33242bed56b082431d2bae165",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 143
+    },
+    "metadata.json": {
+      "stored_sha256": "017e948aa4381909b15d16e9200dda91c3538b426ea892dc1f9aa89a42dc51f0",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

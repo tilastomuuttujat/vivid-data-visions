@@ -1,0 +1,31 @@
+{
+  "slug": "mean-years-of-schooling-long-run",
+  "retrieved_at": "2026-10-26T17:07:04.279554+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/mean-years-of-schooling-long-run.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/mean-years-of-schooling-long-run.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:22 GMT",
+      "download_sha256": "6104944de29cb135788b3924741fd91f2d959077049a2642719bd6b8ec670bf0"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/mean-years-of-schooling-long-run.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/mean-years-of-schooling-long-run.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "3c4fdb6b1ded08eac2b6d79c2de96b3b859800c5ad2943e61b90d5d4249c1dc3"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "d967dac1dcafda2686390d65d698844a97412851c53295a5c33cfa2a7cfc58d1",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 31
+    },
+    "metadata.json": {
+      "stored_sha256": "3c4fdb6b1ded08eac2b6d79c2de96b3b859800c5ad2943e61b90d5d4249c1dc3",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

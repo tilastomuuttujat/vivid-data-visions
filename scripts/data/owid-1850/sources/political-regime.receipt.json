@@ -1,0 +1,31 @@
+{
+  "slug": "political-regime",
+  "retrieved_at": "2026-10-26T17:07:29.299803+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/political-regime.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/political-regime.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:11 GMT",
+      "download_sha256": "1e0d045bc702591c95c9885a6dbe5e8bed13bcca9b2a236464caa7c6098851ff"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/political-regime.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/political-regime.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "6d14cc831bd8cc951b459d687be45e884c09c1feb5f0082b9caa4f2b0e7fed46"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "891b0e447fe84b6ea0e064cfd83ff260c8b69ecbd304751418e626644955e3a9",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 183
+    },
+    "metadata.json": {
+      "stored_sha256": "6d14cc831bd8cc951b459d687be45e884c09c1feb5f0082b9caa4f2b0e7fed46",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "average-height-of-women",
+  "retrieved_at": "2026-10-26T17:06:52.761157+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/average-height-of-women.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/average-height-of-women.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:41 GMT",
+      "download_sha256": "0ec27974f398e2684dea971d97ac8c0c754932e352a9673719c1565571be262b"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/average-height-of-women.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/average-height-of-women.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "97314745960eaf8e6cf90eab29419b3ea1387bb9388927d7bf9fa256f2412bbb"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "01286fed42f695bb6ce20487ef7aceaff7fd827046e64388673be782196206c3",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 101
+    },
+    "metadata.json": {
+      "stored_sha256": "97314745960eaf8e6cf90eab29419b3ea1387bb9388927d7bf9fa256f2412bbb",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

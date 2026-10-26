@@ -1,0 +1,31 @@
+{
+  "slug": "population-density",
+  "retrieved_at": "2026-10-26T17:06:41.296022+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/population-density.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/population-density.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:42 GMT",
+      "download_sha256": "6e1e582f040b26b148b8faae91b22e5eab84dbb3c9a64107568755b043f3b690"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/population-density.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/population-density.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "60a7b41c799a7186e6704b9130ad461b71cfef1bf62995d5dc2321ae0285e4fa"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "c471c26ae18d13a78e4103a522542512f81554a70750beff3b1fc5dc9083ce22",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 338
+    },
+    "metadata.json": {
+      "stored_sha256": "60a7b41c799a7186e6704b9130ad461b71cfef1bf62995d5dc2321ae0285e4fa",
+      "scope": "Full chart metadata response"
+    }
+  }
+}

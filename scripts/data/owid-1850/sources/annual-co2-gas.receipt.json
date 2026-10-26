@@ -1,0 +1,31 @@
+{
+  "slug": "annual-co2-gas",
+  "retrieved_at": "2026-10-26T17:08:05.685209+00:00",
+  "requests": {
+    "csv": {
+      "requested_url": "https://ourworldindata.org/grapher/annual-co2-gas.csv?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/annual-co2-gas.csv?country=~FIN",
+      "etag": null,
+      "last_modified": "Mon, 26 Oct 2026 16:56:35 GMT",
+      "download_sha256": "213b45ecaeda77ccf5f3c25ae97c1cd87496b4d32b0b8555c4eaf51481cee947"
+    },
+    "metadata.json": {
+      "requested_url": "https://ourworldindata.org/grapher/annual-co2-gas.metadata.json?country=~FIN",
+      "resolved_url": "https://ourworldindata.org/grapher/annual-co2-gas.metadata.json?country=~FIN",
+      "etag": null,
+      "last_modified": null,
+      "download_sha256": "e3fb814dd20997fbd6c31c083551447ffa52addb174c439c47ce1c1ae5801994"
+    }
+  },
+  "files": {
+    "csv": {
+      "stored_sha256": "6cea4e77cb73d07ff481dceb4e47ee61001ed2e4fbe9f991ada971f3792e4e26",
+      "scope": "Finland rows, all available source years, original numeric strings",
+      "rows": 165
+    },
+    "metadata.json": {
+      "stored_sha256": "e3fb814dd20997fbd6c31c083551447ffa52addb174c439c47ce1c1ae5801994",
+      "scope": "Full chart metadata response"
+    }
+  }
+}
