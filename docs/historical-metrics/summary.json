@@ -1,0 +1,59 @@
+{
+  "registry_id": "historical_metrics_1850_1899_20261026_v1",
+  "checked_on": "2026-10-26",
+  "scope": "All series with actual database observations dated 1850–1899, with existing extensions through 2025. Inclusion in the catalog does not approve numerical aggregation.",
+  "series": 536,
+  "indicator_series": 142,
+  "finance_series": 394,
+  "historical_indicator_rows": 3420,
+  "historical_finance_rows": 4006,
+  "calculation_statuses": {
+    "existing_checked_descriptive_cells": 313,
+    "estimate_or_derivation_review": 86,
+    "verified_current_numeric_snapshot": 85,
+    "provenance_or_publication_review": 52
+  },
+  "concept_groups": 475,
+  "verified_current_series": 85,
+  "verified_current_cells": 12012,
+  "numeric_changes_detected": 0,
+  "source_urls_checked": 27,
+  "reachable_urls": 27,
+  "unchanged_pdf_urls": 17,
+  "attachment_only_sources": [
+    "hist_cost_living_csv_ac69a19b5805",
+    "hist_macro_csv_3a7fea3f199a",
+    "hist_structure_csv_d36094d62df8",
+    "statfin_019_attachment",
+    "statfin15ai_attachment_20261018"
+  ],
+  "unverified_origin_csv_series": 49,
+  "old_main_registry": "main_metrics_20261026_v1",
+  "normalization": null,
+  "weights": null,
+  "policy": {
+    "all_historical_series_included": true,
+    "all_series_equal_weight": false,
+    "new_document_adds_weight": false,
+    "all_series_approved_for_composite": false,
+    "source_availability_is_not_numeric_verification": true,
+    "different_sources_not_automatically_chain_linked": true,
+    "source_values_unchanged": true,
+    "new_snapshot_required_on_source_value_change": true
+  },
+  "source_hashes": {
+    "export-provenance.json": "be6df849b8d2523a2f91b3aedb08ecfa8ded17410d22809f14471e619cc255c2",
+    "export-queries.json": "07b65df33921aab884382bb9f70e5024743decaf027ddff085aa7cf65297744c",
+    "finance-copy-comparison.json": "c73fc79253701dca3c9ff207b14c0780103d5a34739b735e9cbf2202f42324e4",
+    "finance.json": "e48e9928b98429cce3acd3ea0e9e2b5b72ed105662a7424e03338e5a3b49d7f5",
+    "finance_values.json": "2f05fbb7d3b84a2f8a9b42066bc5d3cdf8021ae172c5262a59d188ff654da9b9",
+    "indicators.json": "d701717c1f75841a6b7969476edde5254a3829a3c52a1bb1bdf7db146434836f",
+    "live-comparison.json": "54a01b07015f7777594b3fdcf6e14cb92594c6ed43bcd0467ddae58e26af788d",
+    "source-checks.json": "0712a56b6be383f766f3c37a95035af18790865a435f2e4a3ea97c975f889ee3",
+    "sources.json": "1fba90609386cfe28bc3d44a5e9524874846f6f4426c5f02fb831acc1e43f149",
+    "statfin15ai-current-metadata.json": "243f152d48aae0cc0b6d6be552f33afcf7b9d9b0306664683faad30512a2ca72",
+    "statfin15ai-request.json": "e39b5884d12c1a755dae288c0e415a191ca67d72805f4b885e0db6669798f53a",
+    "statfin15ai-response.json": "28e976aba58b0e6a6d62ad9f4b919a11381b79155bfc1aa189e4e522479155cc",
+    "values.json": "6e3f607a2ca50322315be6bc3bbe8e8e2494414b534655996204300876a85eea"
+  }
+}
