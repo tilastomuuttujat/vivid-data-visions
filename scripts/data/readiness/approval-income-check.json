@@ -1,0 +1,12 @@
+{
+  "checked": 51,
+  "max_absolute_error": 0.0,
+  "tolerance_eur_per_person": 1e-06,
+  "passed": true,
+  "binding_resolution": {
+    "nominal": "fi.atlas1960.household_disposable_nominal",
+    "population": "fi.statfin15ai.total.ep.fe4e7bf6af",
+    "price": "fi.atlas1960.cost_of_living_1951"
+  },
+  "note": "Recomputed using existing stored source copies. Legacy parent_series aliases were not present as series keys; resolved by named national measure and unit. This does not independently reverify their source copies."
+}

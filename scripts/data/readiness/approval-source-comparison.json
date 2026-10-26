@@ -1,0 +1,20 @@
+[
+  {
+    "series_key": "statfin.12am.v20261019.eodote_0.sex1",
+    "checked": 80,
+    "mismatches": [],
+    "matches": 80
+  },
+  {
+    "series_key": "statfin.12am.v20261019.eodote_0.sex2",
+    "checked": 80,
+    "mismatches": [],
+    "matches": 80
+  },
+  {
+    "series_key": "statfin.12aq.v20261019.imr.sexSSS",
+    "checked": 275,
+    "mismatches": [],
+    "matches": 275
+  }
+]
