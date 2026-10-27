@@ -1,0 +1,1136 @@
+{
+  "batch_id": "governors_1896_1900_selected_20261027_v1",
+  "source_title": "Katsaus Suomen taloudelliseen tilaan 1896–1900 (1904)",
+  "source_url": "https://otos.stat.fi/items/b3314e89-09b9-48b5-9df8-6e20c38daffc",
+  "source_sha256": "95c3496323bcbf8df53a8df70b68657f5f0a404a8e729dbce5e945ccaab290fc",
+  "series": [
+    {
+      "key": "granary_stock",
+      "title": "Pitäjänmakasiinien varastot vuoden lopussa",
+      "unit": "hehtolitraa",
+      "theme": "Ruokahuolto ja kriisivarautuminen",
+      "variable": 12,
+      "page": "liitetaulu s. 116–117 / PDF s. 489–490",
+      "description": "Kirjanpidollinen varasto ja siitä makasiineissa ollut määrä ovat päällekkäisiä eikä niitä summata; alue on aikakauden Suomi.",
+      "rows": [
+        [
+          1896,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          375465
+        ],
+        [
+          1897,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          367566
+        ],
+        [
+          1898,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          363639
+        ],
+        [
+          1899,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          353955
+        ],
+        [
+          1900,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          353735
+        ],
+        [
+          1896,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          226298
+        ],
+        [
+          1897,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          221840
+        ],
+        [
+          1898,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          224849
+        ],
+        [
+          1899,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          219711
+        ],
+        [
+          1900,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          222053
+        ],
+        [
+          1896,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          82163
+        ],
+        [
+          1897,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          84428
+        ],
+        [
+          1898,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          86022
+        ],
+        [
+          1899,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          91037
+        ],
+        [
+          1900,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          94646
+        ],
+        [
+          1896,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          275962
+        ],
+        [
+          1897,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          272471
+        ],
+        [
+          1898,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          254331
+        ],
+        [
+          1899,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          190675
+        ],
+        [
+          1900,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          182602
+        ],
+        [
+          1896,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          161877
+        ],
+        [
+          1897,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          165941
+        ],
+        [
+          1898,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          157325
+        ],
+        [
+          1899,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          124594
+        ],
+        [
+          1900,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          108077
+        ],
+        [
+          1896,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          63727
+        ],
+        [
+          1897,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          61063
+        ],
+        [
+          1898,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          62117
+        ],
+        [
+          1899,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          51549
+        ],
+        [
+          1900,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          58762
+        ]
+      ]
+    },
+    {
+      "key": "vaccinations",
+      "title": "Rokotukset ja niiden tarkastus",
+      "unit": "henkilöä vuodessa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "teksti s. 383 / PDF s. 390",
+      "description": "Rokotusvelvolliset ja rokotetut sekä rokotettujen osajoukkoja. Rokotusvelvollisten määrä ei ole aikaisemmissa julkaisuissa käytetty edellisen vuoden syntyneiden vertailuluku.",
+      "rows": [
+        [
+          1896,
+          "ELIGIBLE",
+          "Rokotusvelvollisia",
+          95203
+        ],
+        [
+          1897,
+          "ELIGIBLE",
+          "Rokotusvelvollisia",
+          94048
+        ],
+        [
+          1898,
+          "ELIGIBLE",
+          "Rokotusvelvollisia",
+          94032
+        ],
+        [
+          1899,
+          "ELIGIBLE",
+          "Rokotusvelvollisia",
+          97793
+        ],
+        [
+          1900,
+          "ELIGIBLE",
+          "Rokotusvelvollisia",
+          101438
+        ],
+        [
+          1896,
+          "TOTAL",
+          "Rokotettuja",
+          67361
+        ],
+        [
+          1897,
+          "TOTAL",
+          "Rokotettuja",
+          68806
+        ],
+        [
+          1898,
+          "TOTAL",
+          "Rokotettuja",
+          70263
+        ],
+        [
+          1899,
+          "TOTAL",
+          "Rokotettuja",
+          71107
+        ],
+        [
+          1900,
+          "TOTAL",
+          "Rokotettuja",
+          74060
+        ],
+        [
+          1896,
+          "SUCCESS",
+          "Täydellisellä menestyksellä",
+          57191
+        ],
+        [
+          1897,
+          "SUCCESS",
+          "Täydellisellä menestyksellä",
+          61598
+        ],
+        [
+          1898,
+          "SUCCESS",
+          "Täydellisellä menestyksellä",
+          62208
+        ],
+        [
+          1899,
+          "SUCCESS",
+          "Täydellisellä menestyksellä",
+          66456
+        ],
+        [
+          1900,
+          "SUCCESS",
+          "Täydellisellä menestyksellä",
+          69748
+        ],
+        [
+          1896,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          3929
+        ],
+        [
+          1897,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          3334
+        ],
+        [
+          1898,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          3001
+        ],
+        [
+          1899,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          2530
+        ],
+        [
+          1900,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          2184
+        ]
+      ]
+    },
+    {
+      "key": "poorrelief_forms",
+      "title": "Köyhäinhoidon avunsaajat avun muodon ja iän mukaan",
+      "unit": "henkilöä",
+      "theme": "Köyhyys ja sosiaaliturva",
+      "variable": 7,
+      "page": "teksti s. 330 / PDF s. 337",
+      "description": "Avun muodon ja iän mukaiset luokat ovat 31.12. läsnä olleet avunsaajat. YEAR_TOTAL on lähteen vuoden lopun summa plus vuoden aikana kuolleet avunsaajat; se ei välttämättä kata kaikkia vuoden aikana apua saaneita. Yli ja alle 15 vuotta ovat lähteen sanamuoto; tasan 15-vuotiaiden käsittely tarkistettava. Avunsaajat eivät kuvaa kaikkia köyhiä.",
+      "rows": [
+        [
+          1896,
+          "INSTITUTION_OVER15",
+          "Laitos, yli 15 v",
+          4875
+        ],
+        [
+          1897,
+          "INSTITUTION_OVER15",
+          "Laitos, yli 15 v",
+          5121
+        ],
+        [
+          1898,
+          "INSTITUTION_OVER15",
+          "Laitos, yli 15 v",
+          5179
+        ],
+        [
+          1899,
+          "INSTITUTION_OVER15",
+          "Laitos, yli 15 v",
+          5575
+        ],
+        [
+          1900,
+          "INSTITUTION_OVER15",
+          "Laitos, yli 15 v",
+          5666
+        ],
+        [
+          1896,
+          "INSTITUTION_UNDER15",
+          "Laitos, alle 15 v",
+          1385
+        ],
+        [
+          1897,
+          "INSTITUTION_UNDER15",
+          "Laitos, alle 15 v",
+          1348
+        ],
+        [
+          1898,
+          "INSTITUTION_UNDER15",
+          "Laitos, alle 15 v",
+          1147
+        ],
+        [
+          1899,
+          "INSTITUTION_UNDER15",
+          "Laitos, alle 15 v",
+          1316
+        ],
+        [
+          1900,
+          "INSTITUTION_UNDER15",
+          "Laitos, alle 15 v",
+          1233
+        ],
+        [
+          1896,
+          "BOARD_OVER15",
+          "Elätteellä, yli 15 v",
+          11669
+        ],
+        [
+          1897,
+          "BOARD_OVER15",
+          "Elätteellä, yli 15 v",
+          11278
+        ],
+        [
+          1898,
+          "BOARD_OVER15",
+          "Elätteellä, yli 15 v",
+          11049
+        ],
+        [
+          1899,
+          "BOARD_OVER15",
+          "Elätteellä, yli 15 v",
+          10900
+        ],
+        [
+          1900,
+          "BOARD_OVER15",
+          "Elätteellä, yli 15 v",
+          11350
+        ],
+        [
+          1896,
+          "BOARD_UNDER15",
+          "Elätteellä, alle 15 v",
+          11041
+        ],
+        [
+          1897,
+          "BOARD_UNDER15",
+          "Elätteellä, alle 15 v",
+          10399
+        ],
+        [
+          1898,
+          "BOARD_UNDER15",
+          "Elätteellä, alle 15 v",
+          9673
+        ],
+        [
+          1899,
+          "BOARD_UNDER15",
+          "Elätteellä, alle 15 v",
+          9138
+        ],
+        [
+          1900,
+          "BOARD_UNDER15",
+          "Elätteellä, alle 15 v",
+          9570
+        ],
+        [
+          1896,
+          "ROTATION_OVER15",
+          "Ruotuhoito, yli 15 v",
+          2172
+        ],
+        [
+          1897,
+          "ROTATION_OVER15",
+          "Ruotuhoito, yli 15 v",
+          1931
+        ],
+        [
+          1898,
+          "ROTATION_OVER15",
+          "Ruotuhoito, yli 15 v",
+          1576
+        ],
+        [
+          1899,
+          "ROTATION_OVER15",
+          "Ruotuhoito, yli 15 v",
+          1449
+        ],
+        [
+          1900,
+          "ROTATION_OVER15",
+          "Ruotuhoito, yli 15 v",
+          1239
+        ],
+        [
+          1896,
+          "ROTATION_UNDER15",
+          "Ruotuhoito, alle 15 v",
+          898
+        ],
+        [
+          1897,
+          "ROTATION_UNDER15",
+          "Ruotuhoito, alle 15 v",
+          659
+        ],
+        [
+          1898,
+          "ROTATION_UNDER15",
+          "Ruotuhoito, alle 15 v",
+          712
+        ],
+        [
+          1899,
+          "ROTATION_UNDER15",
+          "Ruotuhoito, alle 15 v",
+          751
+        ],
+        [
+          1900,
+          "ROTATION_UNDER15",
+          "Ruotuhoito, alle 15 v",
+          694
+        ],
+        [
+          1896,
+          "REGULAR_OVER15",
+          "Säännöllinen apu, yli 15 v",
+          15626
+        ],
+        [
+          1897,
+          "REGULAR_OVER15",
+          "Säännöllinen apu, yli 15 v",
+          14762
+        ],
+        [
+          1898,
+          "REGULAR_OVER15",
+          "Säännöllinen apu, yli 15 v",
+          14111
+        ],
+        [
+          1899,
+          "REGULAR_OVER15",
+          "Säännöllinen apu, yli 15 v",
+          13824
+        ],
+        [
+          1900,
+          "REGULAR_OVER15",
+          "Säännöllinen apu, yli 15 v",
+          13991
+        ],
+        [
+          1896,
+          "REGULAR_UNDER15",
+          "Säännöllinen apu, alle 15 v",
+          602
+        ],
+        [
+          1897,
+          "REGULAR_UNDER15",
+          "Säännöllinen apu, alle 15 v",
+          418
+        ],
+        [
+          1898,
+          "REGULAR_UNDER15",
+          "Säännöllinen apu, alle 15 v",
+          284
+        ],
+        [
+          1899,
+          "REGULAR_UNDER15",
+          "Säännöllinen apu, alle 15 v",
+          303
+        ],
+        [
+          1900,
+          "REGULAR_UNDER15",
+          "Säännöllinen apu, alle 15 v",
+          224
+        ],
+        [
+          1896,
+          "OCCASIONAL_OVER15",
+          "Satunnainen apu, yli 15 v",
+          12901
+        ],
+        [
+          1897,
+          "OCCASIONAL_OVER15",
+          "Satunnainen apu, yli 15 v",
+          12000
+        ],
+        [
+          1898,
+          "OCCASIONAL_OVER15",
+          "Satunnainen apu, yli 15 v",
+          10771
+        ],
+        [
+          1899,
+          "OCCASIONAL_OVER15",
+          "Satunnainen apu, yli 15 v",
+          11467
+        ],
+        [
+          1900,
+          "OCCASIONAL_OVER15",
+          "Satunnainen apu, yli 15 v",
+          12723
+        ],
+        [
+          1896,
+          "OCCASIONAL_UNDER15",
+          "Satunnainen apu, alle 15 v",
+          354
+        ],
+        [
+          1897,
+          "OCCASIONAL_UNDER15",
+          "Satunnainen apu, alle 15 v",
+          398
+        ],
+        [
+          1898,
+          "OCCASIONAL_UNDER15",
+          "Satunnainen apu, alle 15 v",
+          298
+        ],
+        [
+          1899,
+          "OCCASIONAL_UNDER15",
+          "Satunnainen apu, alle 15 v",
+          289
+        ],
+        [
+          1900,
+          "OCCASIONAL_UNDER15",
+          "Satunnainen apu, alle 15 v",
+          302
+        ],
+        [
+          1896,
+          "YEAR_END_TOTAL",
+          "Vuoden lopussa yhteensä",
+          61523
+        ],
+        [
+          1897,
+          "YEAR_END_TOTAL",
+          "Vuoden lopussa yhteensä",
+          58314
+        ],
+        [
+          1898,
+          "YEAR_END_TOTAL",
+          "Vuoden lopussa yhteensä",
+          54800
+        ],
+        [
+          1899,
+          "YEAR_END_TOTAL",
+          "Vuoden lopussa yhteensä",
+          55012
+        ],
+        [
+          1900,
+          "YEAR_END_TOTAL",
+          "Vuoden lopussa yhteensä",
+          56992
+        ],
+        [
+          1896,
+          "YEAR_TOTAL",
+          "Lähteen vuosisumma",
+          65700
+        ],
+        [
+          1897,
+          "YEAR_TOTAL",
+          "Lähteen vuosisumma",
+          62316
+        ],
+        [
+          1898,
+          "YEAR_TOTAL",
+          "Lähteen vuosisumma",
+          58535
+        ],
+        [
+          1899,
+          "YEAR_TOTAL",
+          "Lähteen vuosisumma",
+          59283
+        ],
+        [
+          1900,
+          "YEAR_TOTAL",
+          "Lähteen vuosisumma",
+          61647
+        ]
+      ]
+    },
+    {
+      "key": "poorrelief_regional_percent",
+      "title": "Köyhäinhoidon avunsaajien osuus väestöstä lääneittäin",
+      "unit": "prosenttia väestöstä",
+      "theme": "Köyhyys ja sosiaaliturva",
+      "variable": 7,
+      "page": "teksti s. 333 / PDF s. 340",
+      "description": "Lähteen avunsaajien vuosisummaan perustuva osuus, ei kaikkien köyhien osuus. Historialliset läänirajat eivät vastaa nykyisiä alueita.",
+      "rows": [
+        [
+          1896,
+          "UUSIMAA",
+          "Uudenmaan lääni",
+          2.22
+        ],
+        [
+          1897,
+          "UUSIMAA",
+          "Uudenmaan lääni",
+          2.12
+        ],
+        [
+          1898,
+          "UUSIMAA",
+          "Uudenmaan lääni",
+          1.88
+        ],
+        [
+          1899,
+          "UUSIMAA",
+          "Uudenmaan lääni",
+          1.84
+        ],
+        [
+          1900,
+          "UUSIMAA",
+          "Uudenmaan lääni",
+          1.86
+        ],
+        [
+          1896,
+          "TURKU_PORI",
+          "Turun ja Porin lääni",
+          2.41
+        ],
+        [
+          1897,
+          "TURKU_PORI",
+          "Turun ja Porin lääni",
+          2.35
+        ],
+        [
+          1898,
+          "TURKU_PORI",
+          "Turun ja Porin lääni",
+          2.18
+        ],
+        [
+          1899,
+          "TURKU_PORI",
+          "Turun ja Porin lääni",
+          2.19
+        ],
+        [
+          1900,
+          "TURKU_PORI",
+          "Turun ja Porin lääni",
+          2.23
+        ],
+        [
+          1896,
+          "HAME",
+          "Hämeen lääni",
+          2.49
+        ],
+        [
+          1897,
+          "HAME",
+          "Hämeen lääni",
+          2.31
+        ],
+        [
+          1898,
+          "HAME",
+          "Hämeen lääni",
+          2.16
+        ],
+        [
+          1899,
+          "HAME",
+          "Hämeen lääni",
+          2.14
+        ],
+        [
+          1900,
+          "HAME",
+          "Hämeen lääni",
+          2.11
+        ],
+        [
+          1896,
+          "VIIPURI",
+          "Viipurin lääni",
+          1.6
+        ],
+        [
+          1897,
+          "VIIPURI",
+          "Viipurin lääni",
+          1.52
+        ],
+        [
+          1898,
+          "VIIPURI",
+          "Viipurin lääni",
+          1.41
+        ],
+        [
+          1899,
+          "VIIPURI",
+          "Viipurin lääni",
+          1.35
+        ],
+        [
+          1900,
+          "VIIPURI",
+          "Viipurin lääni",
+          1.35
+        ],
+        [
+          1896,
+          "MIKKELI",
+          "Mikkelin lääni",
+          3.16
+        ],
+        [
+          1897,
+          "MIKKELI",
+          "Mikkelin lääni",
+          2.89
+        ],
+        [
+          1898,
+          "MIKKELI",
+          "Mikkelin lääni",
+          2.81
+        ],
+        [
+          1899,
+          "MIKKELI",
+          "Mikkelin lääni",
+          2.81
+        ],
+        [
+          1900,
+          "MIKKELI",
+          "Mikkelin lääni",
+          2.99
+        ],
+        [
+          1896,
+          "KUOPIO",
+          "Kuopion lääni",
+          3.58
+        ],
+        [
+          1897,
+          "KUOPIO",
+          "Kuopion lääni",
+          3.25
+        ],
+        [
+          1898,
+          "KUOPIO",
+          "Kuopion lääni",
+          2.94
+        ],
+        [
+          1899,
+          "KUOPIO",
+          "Kuopion lääni",
+          2.91
+        ],
+        [
+          1900,
+          "KUOPIO",
+          "Kuopion lääni",
+          3.14
+        ],
+        [
+          1896,
+          "VAASA",
+          "Vaasan lääni",
+          2.12
+        ],
+        [
+          1897,
+          "VAASA",
+          "Vaasan lääni",
+          2.05
+        ],
+        [
+          1898,
+          "VAASA",
+          "Vaasan lääni",
+          1.93
+        ],
+        [
+          1899,
+          "VAASA",
+          "Vaasan lääni",
+          2.0
+        ],
+        [
+          1900,
+          "VAASA",
+          "Vaasan lääni",
+          2.07
+        ],
+        [
+          1896,
+          "OULU",
+          "Oulun lääni",
+          3.88
+        ],
+        [
+          1897,
+          "OULU",
+          "Oulun lääni",
+          3.46
+        ],
+        [
+          1898,
+          "OULU",
+          "Oulun lääni",
+          3.16
+        ],
+        [
+          1899,
+          "OULU",
+          "Oulun lääni",
+          3.22
+        ],
+        [
+          1900,
+          "OULU",
+          "Oulun lääni",
+          3.23
+        ],
+        [
+          1896,
+          "FI",
+          "Koko maa",
+          2.57
+        ],
+        [
+          1897,
+          "FI",
+          "Koko maa",
+          2.4
+        ],
+        [
+          1898,
+          "FI",
+          "Koko maa",
+          2.22
+        ],
+        [
+          1899,
+          "FI",
+          "Koko maa",
+          2.22
+        ],
+        [
+          1900,
+          "FI",
+          "Koko maa",
+          2.27
+        ]
+      ]
+    },
+    {
+      "key": "poorrelief_finances",
+      "title": "Köyhäinhoidon tulot ja menot",
+      "unit": "nimellistä Suomen markkaa vuodessa",
+      "theme": "Köyhyys ja sosiaaliturva",
+      "variable": 7,
+      "page": "teksti s. 334 / PDF s. 341",
+      "description": "Tulopuolella ei edellisvuoden säästöä, vuoden lainoja eikä kuntien keskinäisiä saamisia; menoista poistettu vanhoja velkoja ja kuntien väliset korvaukset. Vertailu aiemman sarjan kokonaiskustannuksiin edellyttää tarkistusta; nimellisarvo.",
+      "rows": [
+        [
+          1896,
+          "INCOME",
+          "Tulot",
+          4250499
+        ],
+        [
+          1897,
+          "INCOME",
+          "Tulot",
+          4206200
+        ],
+        [
+          1898,
+          "INCOME",
+          "Tulot",
+          4296718
+        ],
+        [
+          1899,
+          "INCOME",
+          "Tulot",
+          4386590
+        ],
+        [
+          1900,
+          "INCOME",
+          "Tulot",
+          4551797
+        ],
+        [
+          1896,
+          "EXPENSE",
+          "Menot",
+          4062067
+        ],
+        [
+          1897,
+          "EXPENSE",
+          "Menot",
+          3986787
+        ],
+        [
+          1898,
+          "EXPENSE",
+          "Menot",
+          4077545
+        ],
+        [
+          1899,
+          "EXPENSE",
+          "Menot",
+          4259066
+        ],
+        [
+          1900,
+          "EXPENSE",
+          "Menot",
+          4578807
+        ]
+      ]
+    },
+    {
+      "key": "hospital_general",
+      "title": "Yleisten sairaaloiden lasarettiosastoilla hoidetut",
+      "unit": "hoidettuja, lähteen laskentatapa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "teksti s. 382 / PDF s. 389",
+      "description": "Lähteen hoidetut eivät välttämättä ole yksilöllisiä henkilöitä; tarkista laitosrajaukset ennen yhdistämistä muihin sarjoihin.",
+      "rows": [
+        [
+          1896,
+          "FI",
+          "Koko maa",
+          8997
+        ],
+        [
+          1897,
+          "FI",
+          "Koko maa",
+          9435
+        ],
+        [
+          1898,
+          "FI",
+          "Koko maa",
+          9662
+        ],
+        [
+          1899,
+          "FI",
+          "Koko maa",
+          9828
+        ],
+        [
+          1900,
+          "FI",
+          "Koko maa",
+          9917
+        ]
+      ]
+    },
+    {
+      "key": "hospital_general_days",
+      "title": "Yleisten sairaaloiden lasarettiosastojen hoitopäivät",
+      "unit": "hoitopäivää",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "teksti s. 382 / PDF s. 389",
+      "description": "Hoitopäivä ei ole henkilö eikä hoitojakso; laitosrajaukset on tarkistettava ennen vertailua.",
+      "rows": [
+        [
+          1896,
+          "FI",
+          "Koko maa",
+          290590
+        ],
+        [
+          1897,
+          "FI",
+          "Koko maa",
+          296689
+        ],
+        [
+          1898,
+          "FI",
+          "Koko maa",
+          293983
+        ],
+        [
+          1899,
+          "FI",
+          "Koko maa",
+          296940
+        ],
+        [
+          1900,
+          "FI",
+          "Koko maa",
+          305639
+        ]
+      ]
+    }
+  ],
+  "content_sha256": "eb959dc0acee5377750b836fcf95c8cb167e6bd55dd080118e675df350f57c0b"
+}
