@@ -1,0 +1,195 @@
+{
+  "batch_id": "yearbook_1904_savings_school_20261027_v1",
+  "source_title": "Suomen tilastollinen vuosikirja 1904",
+  "source_url": "https://otos.stat.fi/items/d86060fc-afde-4d0d-a7c1-423a10a31731",
+  "source_sha256": "f5970c2f72d65ec1270ac6a4744158e227c2a2261965a0e8d9b94cd7e24c6a12",
+  "series": [
+    {
+      "key": "savings_banks",
+      "title": "Säästöpankkien määrä kaupungeissa ja maaseudulla",
+      "unit": "säästöpankkia",
+      "theme": "Rahoitus ja säästäminen",
+      "variable": 18,
+      "page": "taulu 144, s. 227 / PDF s. 197",
+      "description": "Kaupunki ja maaseutu sisältyvät koko maan määrään. Pankkien määrä ei kuvaa säästäjien lukumäärää. Historiallinen aluerajaus.",
+      "rows": [
+        [
+          1850,
+          "FI",
+          "Koko maa",
+          11
+        ],
+        [
+          1860,
+          "FI",
+          "Koko maa",
+          24
+        ],
+        [
+          1870,
+          "FI",
+          "Koko maa",
+          35
+        ],
+        [
+          1880,
+          "FI",
+          "Koko maa",
+          107
+        ],
+        [
+          1890,
+          "FI",
+          "Koko maa",
+          138
+        ],
+        [
+          1900,
+          "FI",
+          "Koko maa",
+          193
+        ],
+        [
+          1901,
+          "FI",
+          "Koko maa",
+          212
+        ],
+        [
+          1901,
+          "CITY",
+          "Kaupungit",
+          34
+        ],
+        [
+          1901,
+          "RURAL",
+          "Maaseutu",
+          178
+        ],
+        [
+          1902,
+          "FI",
+          "Koko maa",
+          242
+        ],
+        [
+          1902,
+          "CITY",
+          "Kaupungit",
+          36
+        ],
+        [
+          1902,
+          "RURAL",
+          "Maaseutu",
+          206
+        ]
+      ],
+      "school": false
+    },
+    {
+      "key": "savings_passbooks",
+      "title": "Säästöpankkikirjojen lukumäärä",
+      "unit": "pankkikirjaa",
+      "theme": "Rahoitus ja säästäminen",
+      "variable": 18,
+      "page": "taulu 144, s. 227 / PDF s. 197",
+      "description": "Pankkikirjojen lukumäärä ei välttämättä vastaa yksittäisten säästäjien lukumäärää; alueet sisältyvät kokonaisuuteen.",
+      "rows": [
+        [
+          1901,
+          "FI",
+          "Koko maa",
+          148909
+        ],
+        [
+          1901,
+          "CITY",
+          "Kaupungit",
+          99723
+        ],
+        [
+          1901,
+          "RURAL",
+          "Maaseutu",
+          49186
+        ],
+        [
+          1902,
+          "FI",
+          "Koko maa",
+          157410
+        ],
+        [
+          1902,
+          "CITY",
+          "Kaupungit",
+          103302
+        ],
+        [
+          1902,
+          "RURAL",
+          "Maaseutu",
+          54108
+        ]
+      ],
+      "school": false
+    },
+    {
+      "key": "rural_primary_schools",
+      "title": "Ylemmät kansakoulut maalaiskunnissa 1901–1902",
+      "unit": "koulua",
+      "theme": "Koulutus",
+      "variable": 4,
+      "page": "taulu 187, s. 292 / PDF s. 242",
+      "description": "Lukuvuosi 1901–1902, ei kalenterivuosihavainto. Vuosi 1902 on pääteankkuri; odottaa lukuvuosien esitystavan tarkistusta.",
+      "rows": [
+        [
+          1902,
+          "FI",
+          "Koko maan maalaiskunnat",
+          1998
+        ]
+      ],
+      "school": true
+    },
+    {
+      "key": "rural_primary_teachers",
+      "title": "Ylempien kansakoulujen opettajat maalaiskunnissa 1901–1902",
+      "unit": "opettajaa",
+      "theme": "Koulutus",
+      "variable": 4,
+      "page": "taulu 187, s. 292 / PDF s. 242",
+      "description": "Lukuvuosi 1901–1902; vuosi 1902 on pääteankkuri. Ei kaikkien kouluasteiden opettajamäärä.",
+      "rows": [
+        [
+          1902,
+          "FI",
+          "Koko maan maalaiskunnat",
+          2346
+        ]
+      ],
+      "school": true
+    },
+    {
+      "key": "rural_primary_pupils",
+      "title": "Ylempien kansakoulujen oppilaat maalaiskunnissa 1901–1902",
+      "unit": "oppilasta",
+      "theme": "Koulutus",
+      "variable": 4,
+      "page": "taulu 187, s. 292 / PDF s. 242",
+      "description": "Lukuvuosi 1901–1902; vuosi 1902 on pääteankkuri. Ei koko ikäluokan eikä kaikkien koulumuotojen oppilasmäärä.",
+      "rows": [
+        [
+          1902,
+          "FI",
+          "Koko maan maalaiskunnat",
+          88963
+        ]
+      ],
+      "school": true
+    }
+  ],
+  "content_sha256": "03cf57760e60a8e614703c73f2b832688562fbd229a5fceaf5047ddff09a3503"
+}
