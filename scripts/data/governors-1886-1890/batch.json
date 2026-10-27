@@ -1,0 +1,410 @@
+{
+  "batch_id": "governors_1886_1890_selected_20261027_v1",
+  "source_title": "Katsaus Suomen taloudelliseen tilaan 1886–1890 (1894)",
+  "source_url": "https://otos.stat.fi/server/api/core/bitstreams/c7f58eed-d91a-4f69-b91b-cbf3360d2557/content",
+  "source_sha256": "28789b33b397f3bedd417bb9b8068766de6c691bad6f5071ca757ad2f42102b6",
+  "series": [
+    {
+      "key": "vaccinations",
+      "title": "Rokotukset ja niiden tarkastus",
+      "unit": "henkilöä vuodessa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s. 179 / PDF s. 183",
+      "description": "Rokotukset yhteensä ja tarkastuksessa todetut sekä tarkastuksesta pois jääneet. Osajoukot sisältyvät kokonaismäärään. Vuoden 1888 lähteen prosentit eivät vastaa lukumääriä; koko vuoden luvut pidetään tarkistettavina.",
+      "rows": [
+        [
+          1886,
+          "TOTAL",
+          "Rokotettuja yhteensä",
+          61497
+        ],
+        [
+          1887,
+          "TOTAL",
+          "Rokotettuja yhteensä",
+          65508
+        ],
+        [
+          1888,
+          "TOTAL",
+          "Rokotettuja yhteensä",
+          78336
+        ],
+        [
+          1889,
+          "TOTAL",
+          "Rokotettuja yhteensä",
+          77665
+        ],
+        [
+          1890,
+          "TOTAL",
+          "Rokotettuja yhteensä",
+          70177
+        ],
+        [
+          1886,
+          "SUCCESS",
+          "Todellisella vaksiiinirokolla",
+          51904
+        ],
+        [
+          1887,
+          "SUCCESS",
+          "Todellisella vaksiiinirokolla",
+          56030
+        ],
+        [
+          1888,
+          "SUCCESS",
+          "Todellisella vaksiiinirokolla",
+          61845
+        ],
+        [
+          1889,
+          "SUCCESS",
+          "Todellisella vaksiiinirokolla",
+          57720
+        ],
+        [
+          1890,
+          "SUCCESS",
+          "Todellisella vaksiiinirokolla",
+          54157
+        ],
+        [
+          1886,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          8064
+        ],
+        [
+          1887,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          7371
+        ],
+        [
+          1888,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          7422
+        ],
+        [
+          1889,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          6796
+        ],
+        [
+          1890,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          5419
+        ]
+      ]
+    },
+    {
+      "key": "granary_stock",
+      "title": "Pitäjänmakasiinien varastot vuoden lopussa",
+      "unit": "hehtolitraa",
+      "theme": "Ruokahuolto ja kriisivarautuminen",
+      "variable": 12,
+      "page": "liitetaulu s. 138–139 / PDF s. 303–304",
+      "description": "Kirjanpidollinen säästö ja siitä makasiineissa ollut määrä ovat päällekkäisiä, eikä niitä summata. Aiempien havaintojen tynnyriyksikkö on muutettava ennen vertailua.",
+      "rows": [
+        [
+          1886,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          349709
+        ],
+        [
+          1887,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          355803
+        ],
+        [
+          1888,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          357483
+        ],
+        [
+          1889,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          354669
+        ],
+        [
+          1890,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          347189
+        ],
+        [
+          1886,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          201393
+        ],
+        [
+          1887,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          204646
+        ],
+        [
+          1888,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          206300
+        ],
+        [
+          1889,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          208335
+        ],
+        [
+          1890,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          208624
+        ],
+        [
+          1886,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          45315
+        ],
+        [
+          1887,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          47043
+        ],
+        [
+          1888,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          49149
+        ],
+        [
+          1889,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          50791
+        ],
+        [
+          1890,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          57619
+        ],
+        [
+          1886,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          227976
+        ],
+        [
+          1887,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          247414
+        ],
+        [
+          1888,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          239619
+        ],
+        [
+          1889,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          235635
+        ],
+        [
+          1890,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          226493
+        ],
+        [
+          1886,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          126412
+        ],
+        [
+          1887,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          135942
+        ],
+        [
+          1888,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          135572
+        ],
+        [
+          1889,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          130977
+        ],
+        [
+          1890,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          133369
+        ],
+        [
+          1886,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          35756
+        ],
+        [
+          1887,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          38297
+        ],
+        [
+          1888,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          37149
+        ],
+        [
+          1889,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          34956
+        ],
+        [
+          1890,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          38208
+        ]
+      ]
+    },
+    {
+      "key": "hospital_general",
+      "title": "Yleisten sairashuoneiden lasarettiosastoissa hoidettuja",
+      "unit": "hoidettuja, lähteen laskentatapa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s. 180 / PDF s. 184",
+      "description": "Hoidetut eivät välttämättä ole yksilöllisiä henkilöitä; vertailu edellyttää laitosrajausten ja määritelmien tarkistusta.",
+      "rows": [
+        [
+          1886,
+          "FI",
+          "Koko maa",
+          5986
+        ],
+        [
+          1887,
+          "FI",
+          "Koko maa",
+          5696
+        ],
+        [
+          1888,
+          "FI",
+          "Koko maa",
+          6055
+        ],
+        [
+          1889,
+          "FI",
+          "Koko maa",
+          6759
+        ],
+        [
+          1890,
+          "FI",
+          "Koko maa",
+          7121
+        ]
+      ]
+    },
+    {
+      "key": "doctors_qualified",
+      "title": "Laillistettuja lääkäreitä 1890",
+      "unit": "henkilöä",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s. 178 / PDF s. 182",
+      "description": "Laillistettujen määrä ei ole sama määritelmä kuin aiemmassa lähteessä mainitut työskentelevät lääkärit.",
+      "rows": [
+        [
+          1890,
+          "FI",
+          "Koko maa",
+          236
+        ]
+      ]
+    },
+    {
+      "key": "midwives",
+      "title": "Kätilöitä 1890",
+      "unit": "henkilöä",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s. 178 / PDF s. 182",
+      "description": "Vuoden 1885 vertailuluvussa on ero aikaisempaan julkaisuun; määritelmä tulee tarkistaa ennen sarjojen yhdistämistä.",
+      "rows": [
+        [
+          1890,
+          "FI",
+          "Koko maa",
+          495
+        ]
+      ]
+    },
+    {
+      "key": "pharmacies",
+      "title": "Apteekkeja 1890",
+      "unit": "apteekkia",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s. 178 / PDF s. 182",
+      "description": "Apteekkien lukumäärä, ei henkilöstön määrä.",
+      "rows": [
+        [
+          1890,
+          "FI",
+          "Koko maa",
+          119
+        ]
+      ]
+    },
+    {
+      "key": "municipal_doctor_subsidies",
+      "title": "Kunnat, jotka saivat valtionapua lääkärin palkkaukseen 1890",
+      "unit": "kuntaa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "painettu s. 178 / PDF s. 182",
+      "description": "Valtionapua saaneiden kuntien määrä; ei kaikkien kunnallisten lääkärien määrä.",
+      "rows": [
+        [
+          1890,
+          "FI",
+          "Koko maa",
+          23
+        ]
+      ]
+    }
+  ],
+  "content_sha256": "eb592fdeb36129860fd4ad9a4d2ba63009f38a951941727aba540e8e26ecc25a"
+}
