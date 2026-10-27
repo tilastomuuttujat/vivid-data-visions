@@ -1,0 +1,738 @@
+{
+  "batch_id": "governors_1891_1895_selected_20261027_v1",
+  "source_title": "Katsaus Suomen taloudelliseen tilaan 1891–1895 (1899)",
+  "source_url": "https://otos.stat.fi/server/api/core/bitstreams/0ec35e33-c947-48e6-9683-06b2ad4a8bab/content",
+  "source_sha256": "82afe7dec8efa9fb1c0ec254731f40d7391f4bceaa5eff1384e36b8c1da2c71f",
+  "series": [
+    {
+      "key": "granary_stock",
+      "title": "Pitäjänmakasiinien varastot vuoden lopussa",
+      "unit": "hehtolitraa",
+      "theme": "Ruokahuolto ja kriisivarautuminen",
+      "variable": 12,
+      "page": "liitetaulu s. 128–129 / PDF s. 316",
+      "description": "Kirjanpidolliset säästöt ja niistä sisällä olleet varastot ovat päällekkäisiä, ei summata; alue on aikakauden Suomi.",
+      "rows": [
+        [
+          1891,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          344156
+        ],
+        [
+          1892,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          350970
+        ],
+        [
+          1893,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          359344
+        ],
+        [
+          1894,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          370481
+        ],
+        [
+          1895,
+          "BOOK_RYE",
+          "Kirjanpidon ruis",
+          374418
+        ],
+        [
+          1891,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          204796
+        ],
+        [
+          1892,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          201420
+        ],
+        [
+          1893,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          212310
+        ],
+        [
+          1894,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          221960
+        ],
+        [
+          1895,
+          "BOOK_BARLEY",
+          "Kirjanpidon ohra",
+          221507
+        ],
+        [
+          1891,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          53918
+        ],
+        [
+          1892,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          58621
+        ],
+        [
+          1893,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          62997
+        ],
+        [
+          1894,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          74460
+        ],
+        [
+          1895,
+          "BOOK_OATS",
+          "Kirjanpidon kaura",
+          77361
+        ],
+        [
+          1891,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          193449
+        ],
+        [
+          1892,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          122032
+        ],
+        [
+          1893,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          159418
+        ],
+        [
+          1894,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          207930
+        ],
+        [
+          1895,
+          "PHYSICAL_RYE",
+          "Makasiineissa ruis",
+          249552
+        ],
+        [
+          1891,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          117514
+        ],
+        [
+          1892,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          57422
+        ],
+        [
+          1893,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          80723
+        ],
+        [
+          1894,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          115018
+        ],
+        [
+          1895,
+          "PHYSICAL_BARLEY",
+          "Makasiineissa ohra",
+          144720
+        ],
+        [
+          1891,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          31451
+        ],
+        [
+          1892,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          35260
+        ],
+        [
+          1893,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          39663
+        ],
+        [
+          1894,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          51239
+        ],
+        [
+          1895,
+          "PHYSICAL_OATS",
+          "Makasiineissa kaura",
+          59283
+        ]
+      ]
+    },
+    {
+      "key": "vaccinations",
+      "title": "Rokotukset ja niiden tarkastus",
+      "unit": "henkilöä vuodessa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "teksti s. 199 / PDF s. 204",
+      "description": "Rokotetut, rokotusvelvolliset ja niiden osaryhmät. Vuoden 1895 tarkastuksesta pois jääneiden lukumäärä ja lähdeprosentti ristiriidassa: arvo odottaa tarkistusta. Rokotusvelvollisten suhde eroaa aiemman lähteen elävänä syntyneiden suhteesta.",
+      "rows": [
+        [
+          1891,
+          "ELIGIBLE",
+          "Rokotusvelvollisia",
+          94941
+        ],
+        [
+          1892,
+          "ELIGIBLE",
+          "Rokotusvelvollisia",
+          100536
+        ],
+        [
+          1893,
+          "ELIGIBLE",
+          "Rokotusvelvollisia",
+          94280
+        ],
+        [
+          1894,
+          "ELIGIBLE",
+          "Rokotusvelvollisia",
+          89415
+        ],
+        [
+          1895,
+          "ELIGIBLE",
+          "Rokotusvelvollisia",
+          88507
+        ],
+        [
+          1891,
+          "TOTAL",
+          "Rokotettuja",
+          67897
+        ],
+        [
+          1892,
+          "TOTAL",
+          "Rokotettuja",
+          72061
+        ],
+        [
+          1893,
+          "TOTAL",
+          "Rokotettuja",
+          67797
+        ],
+        [
+          1894,
+          "TOTAL",
+          "Rokotettuja",
+          59558
+        ],
+        [
+          1895,
+          "TOTAL",
+          "Rokotettuja",
+          66759
+        ],
+        [
+          1891,
+          "SUCCESS",
+          "Täydellisellä menestyksellä",
+          53725
+        ],
+        [
+          1892,
+          "SUCCESS",
+          "Täydellisellä menestyksellä",
+          57334
+        ],
+        [
+          1893,
+          "SUCCESS",
+          "Täydellisellä menestyksellä",
+          54930
+        ],
+        [
+          1894,
+          "SUCCESS",
+          "Täydellisellä menestyksellä",
+          49850
+        ],
+        [
+          1895,
+          "SUCCESS",
+          "Täydellisellä menestyksellä",
+          56205
+        ],
+        [
+          1891,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          4854
+        ],
+        [
+          1892,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          5197
+        ],
+        [
+          1893,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          4319
+        ],
+        [
+          1894,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          3854
+        ],
+        [
+          1895,
+          "ABSENT",
+          "Pois tarkastuksesta",
+          6887
+        ]
+      ]
+    },
+    {
+      "key": "landowner_size",
+      "title": "Maanomistajat viljellyn maan kokoluokan ja läänin mukaan 1895",
+      "unit": "kuntailmoitusten maanomistajalukumäärä",
+      "theme": "Maanomistus ja maatalous",
+      "variable": 12,
+      "page": "liitetaulu s. 48 / PDF s. 260",
+      "description": "Kuntien arvioihin perustuvassa yhteenvedossa sama maanomistaja voi esiintyä useamman kerran, jos hänellä on tiloja eri kunnissa. Luokka kuvaa viljeltyä alaa, ei tilan kokonaisalaa; luokkarajat lähteen mukaiset.",
+      "rows": [
+        [
+          1895,
+          "UUSIMAA_TOTAL",
+          "Uudenmaan lääni – yhteensä",
+          5968
+        ],
+        [
+          1895,
+          "UUSIMAA_GE100",
+          "Uudenmaan lääni – 100 ha tai enemmän",
+          216
+        ],
+        [
+          1895,
+          "UUSIMAA_25_100",
+          "Uudenmaan lääni – 25–100 ha",
+          1129
+        ],
+        [
+          1895,
+          "UUSIMAA_5_25",
+          "Uudenmaan lääni – 5–25 ha",
+          4098
+        ],
+        [
+          1895,
+          "UUSIMAA_LT5",
+          "Uudenmaan lääni – alle 5 ha",
+          525
+        ],
+        [
+          1895,
+          "TURKU_PORI_TOTAL",
+          "Turun ja Porin lääni – yhteensä",
+          11163
+        ],
+        [
+          1895,
+          "TURKU_PORI_GE100",
+          "Turun ja Porin lääni – 100 ha tai enemmän",
+          349
+        ],
+        [
+          1895,
+          "TURKU_PORI_25_100",
+          "Turun ja Porin lääni – 25–100 ha",
+          3149
+        ],
+        [
+          1895,
+          "TURKU_PORI_5_25",
+          "Turun ja Porin lääni – 5–25 ha",
+          6080
+        ],
+        [
+          1895,
+          "TURKU_PORI_LT5",
+          "Turun ja Porin lääni – alle 5 ha",
+          1585
+        ],
+        [
+          1895,
+          "HAME_TOTAL",
+          "Hämeen lääni – yhteensä",
+          7157
+        ],
+        [
+          1895,
+          "HAME_GE100",
+          "Hämeen lääni – 100 ha tai enemmän",
+          492
+        ],
+        [
+          1895,
+          "HAME_25_100",
+          "Hämeen lääni – 25–100 ha",
+          1961
+        ],
+        [
+          1895,
+          "HAME_5_25",
+          "Hämeen lääni – 5–25 ha",
+          4257
+        ],
+        [
+          1895,
+          "HAME_LT5",
+          "Hämeen lääni – alle 5 ha",
+          447
+        ],
+        [
+          1895,
+          "VIIPURI_TOTAL",
+          "Viipurin lääni – yhteensä",
+          30838
+        ],
+        [
+          1895,
+          "VIIPURI_GE100",
+          "Viipurin lääni – 100 ha tai enemmän",
+          381
+        ],
+        [
+          1895,
+          "VIIPURI_25_100",
+          "Viipurin lääni – 25–100 ha",
+          6759
+        ],
+        [
+          1895,
+          "VIIPURI_5_25",
+          "Viipurin lääni – 5–25 ha",
+          13945
+        ],
+        [
+          1895,
+          "VIIPURI_LT5",
+          "Viipurin lääni – alle 5 ha",
+          9753
+        ],
+        [
+          1895,
+          "MIKKELI_TOTAL",
+          "Mikkelin lääni – yhteensä",
+          9385
+        ],
+        [
+          1895,
+          "MIKKELI_GE100",
+          "Mikkelin lääni – 100 ha tai enemmän",
+          628
+        ],
+        [
+          1895,
+          "MIKKELI_25_100",
+          "Mikkelin lääni – 25–100 ha",
+          1526
+        ],
+        [
+          1895,
+          "MIKKELI_5_25",
+          "Mikkelin lääni – 5–25 ha",
+          4983
+        ],
+        [
+          1895,
+          "MIKKELI_LT5",
+          "Mikkelin lääni – alle 5 ha",
+          2248
+        ],
+        [
+          1895,
+          "KUOPIO_TOTAL",
+          "Kuopion lääni – yhteensä",
+          15056
+        ],
+        [
+          1895,
+          "KUOPIO_GE100",
+          "Kuopion lääni – 100 ha tai enemmän",
+          308
+        ],
+        [
+          1895,
+          "KUOPIO_25_100",
+          "Kuopion lääni – 25–100 ha",
+          2773
+        ],
+        [
+          1895,
+          "KUOPIO_5_25",
+          "Kuopion lääni – 5–25 ha",
+          7595
+        ],
+        [
+          1895,
+          "KUOPIO_LT5",
+          "Kuopion lääni – alle 5 ha",
+          4380
+        ],
+        [
+          1895,
+          "VAASA_TOTAL",
+          "Vaasan lääni – yhteensä",
+          22680
+        ],
+        [
+          1895,
+          "VAASA_GE100",
+          "Vaasan lääni – 100 ha tai enemmän",
+          441
+        ],
+        [
+          1895,
+          "VAASA_25_100",
+          "Vaasan lääni – 25–100 ha",
+          4314
+        ],
+        [
+          1895,
+          "VAASA_5_25",
+          "Vaasan lääni – 5–25 ha",
+          13066
+        ],
+        [
+          1895,
+          "VAASA_LT5",
+          "Vaasan lääni – alle 5 ha",
+          4859
+        ],
+        [
+          1895,
+          "OULU_TOTAL",
+          "Oulun lääni – yhteensä",
+          15543
+        ],
+        [
+          1895,
+          "OULU_GE100",
+          "Oulun lääni – 100 ha tai enemmän",
+          8
+        ],
+        [
+          1895,
+          "OULU_25_100",
+          "Oulun lääni – 25–100 ha",
+          524
+        ],
+        [
+          1895,
+          "OULU_5_25",
+          "Oulun lääni – 5–25 ha",
+          6097
+        ],
+        [
+          1895,
+          "OULU_LT5",
+          "Oulun lääni – alle 5 ha",
+          8914
+        ],
+        [
+          1895,
+          "FI_TOTAL",
+          "Koko maa – yhteensä",
+          117790
+        ],
+        [
+          1895,
+          "FI_GE100",
+          "Koko maa – 100 ha tai enemmän",
+          2823
+        ],
+        [
+          1895,
+          "FI_25_100",
+          "Koko maa – 25–100 ha",
+          22135
+        ],
+        [
+          1895,
+          "FI_5_25",
+          "Koko maa – 5–25 ha",
+          60121
+        ],
+        [
+          1895,
+          "FI_LT5",
+          "Koko maa – alle 5 ha",
+          32711
+        ]
+      ]
+    },
+    {
+      "key": "poorrelief_total_new",
+      "title": "Köyhäinhoidon kustannukset uuden tilastointitavan mukaan",
+      "unit": "nimellistä Suomen markkaa vuodessa",
+      "theme": "Köyhyys ja sosiaaliturva",
+      "variable": 7,
+      "page": "teksti s. 207 / PDF s. 212",
+      "description": "Lähteen mukaan vuoden 1891 kaavojen mukainen laaja köyhäinhoidon kokonaiskustannus; kuvernöörien suppeampi sarja kattaa suoranaiset köyhäinhoitolaisten kulut. Ei suoraan yhtenäinen sarja. Nimellisarvoja ei inflaatiokorjattu.",
+      "rows": [
+        [
+          1893,
+          "FI",
+          "Koko maa",
+          4866190
+        ],
+        [
+          1894,
+          "FI",
+          "Koko maa",
+          4892620
+        ],
+        [
+          1895,
+          "FI",
+          "Koko maa",
+          4720446
+        ]
+      ]
+    },
+    {
+      "key": "doctors_qualified",
+      "title": "Laillistettuja lääkäreitä 1895",
+      "unit": "henkilöä",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "teksti s. 198 / PDF s. 203",
+      "description": "Oikeutettujen lääkärien määrä, ei välttämättä sama kuin työssä olevat.",
+      "rows": [
+        [
+          1895,
+          "FI",
+          "Koko maa",
+          281
+        ]
+      ]
+    },
+    {
+      "key": "midwives",
+      "title": "Kätilöt 1895 kaupungeissa ja maaseudulla",
+      "unit": "henkilöä",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "teksti s. 198 / PDF s. 203",
+      "description": "Kaupunki ja maaseutu sisältyvät koko maan määrään.",
+      "rows": [
+        [
+          1895,
+          "FI",
+          "Koko maa",
+          610
+        ],
+        [
+          1895,
+          "CITY",
+          "Kaupungit",
+          260
+        ],
+        [
+          1895,
+          "RURAL",
+          "Maaseutu",
+          350
+        ]
+      ]
+    },
+    {
+      "key": "pharmacies",
+      "title": "Apteekkeja 1895",
+      "unit": "apteekkia",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "teksti s. 198 / PDF s. 203",
+      "description": "Apteekkien lukumäärä.",
+      "rows": [
+        [
+          1895,
+          "FI",
+          "Koko maa",
+          140
+        ]
+      ]
+    },
+    {
+      "key": "municipal_doctor_districts",
+      "title": "Kunnallislääkäripiirit 1895",
+      "unit": "piiriä",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "teksti s. 198 / PDF s. 203",
+      "description": "Piirit kattoivat 82 kuntaa. Lääkäri- ja kuntamäärät eivät ole sama mittari.",
+      "rows": [
+        [
+          1895,
+          "FI",
+          "Koko maa",
+          55
+        ]
+      ]
+    },
+    {
+      "key": "municipal_doctor_municipalities",
+      "title": "Kunnallislääkäripiireihin kuuluneet kunnat 1895",
+      "unit": "kuntaa",
+      "theme": "Terveydenhuolto",
+      "variable": 7,
+      "page": "teksti s. 198 / PDF s. 203",
+      "description": "55 kunnallislääkäripiiriin kuuluneet 82 kuntaa.",
+      "rows": [
+        [
+          1895,
+          "FI",
+          "Koko maa",
+          82
+        ]
+      ]
+    }
+  ],
+  "content_sha256": "ac1cf3e0f09b66c9ff3c07a44bccf2460bb3fbf79cedfc4078b56326a8c57c6c"
+}
