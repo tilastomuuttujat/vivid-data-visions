@@ -1,0 +1,67 @@
+{
+  "batch_id": "poor_relief_1901_excerpt_20261027_v1",
+  "source_title": "Köyhäinhoito Suomessa vuonna 1901 (1905)",
+  "source_url": "https://otos.stat.fi/bitstreams/e8bb4326-7d2e-40ee-a666-afd737d7245f/download",
+  "source_sha256": null,
+  "series": [
+    {
+      "key": "municipal_institutions",
+      "title": "Kunnalliset vaivaishoitolaitokset 1901",
+      "unit": "laitosta",
+      "theme": "Köyhyys ja sosiaaliturva",
+      "variable": 7,
+      "page": "teksti s. 1; hakukoneen indeksoima tekstikatkelma",
+      "description": "Kunnalliset vaivaishoitolaitokset lähteen myöhemmän tarkistuksen mukaan: Sortavalan yksityinen diakonialaitos ei ole kunnallinen vaivaistalo. Maaseudun luvussa on yksi lastenkoti. Kaupunki- ja maaseutuluvut sisältyvät koko maan lukuun. Alkuperäinen sivukuva on vielä tarkistettava.",
+      "rows": [
+        [
+          1901,
+          "CITY",
+          "Kaupungit",
+          24
+        ],
+        [
+          1901,
+          "RURAL",
+          "Maaseutu",
+          90
+        ],
+        [
+          1901,
+          "FI",
+          "Koko maa",
+          114
+        ]
+      ]
+    },
+    {
+      "key": "poor_relief_districts",
+      "title": "Vaivaishoitoyhdyskunnat 1901",
+      "unit": "yhdyskuntaa",
+      "theme": "Köyhyys ja sosiaaliturva",
+      "variable": 7,
+      "page": "teksti s. 1; hakukoneen indeksoima tekstikatkelma",
+      "description": "Vaivaishoitoyhdyskunnat, ei avunsaajien tai laitosten lukumäärä. Kaupunki ja maaseutu sisältyvät koko maan lukuun. Alkuperäinen sivukuva on vielä tarkistettava.",
+      "rows": [
+        [
+          1901,
+          "CITY",
+          "Kaupungit",
+          37
+        ],
+        [
+          1901,
+          "RURAL",
+          "Maaseutu",
+          476
+        ],
+        [
+          1901,
+          "FI",
+          "Koko maa",
+          513
+        ]
+      ]
+    }
+  ],
+  "content_sha256": "9973d76f5ad66cfa0dbfb349ce112cd05750e22c7a820c23dc948cb9b1a9d796"
+}
