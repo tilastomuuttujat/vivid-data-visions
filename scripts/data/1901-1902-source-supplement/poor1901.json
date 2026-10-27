@@ -1,0 +1,197 @@
+{
+  "batch_id": "source_supplement_poor1901_20261027_v1",
+  "source_title": "Köyhäinhoito Suomessa vuonna 1901 (1905)",
+  "source_url": "https://otos.stat.fi/bitstreams/e8bb4326-7d2e-40ee-a666-afd737d7245f/download",
+  "source_sha256": "98b686931261decedbf1337e48ba621dad27a6c0ef856305cebc9e727fb03f4e",
+  "series": [
+    {
+      "key": "regional_recipients",
+      "title": "Köyhäinhoidon suorat avunsaajat lääneittäin 1901",
+      "unit": "henkilöä",
+      "theme": "Köyhyys ja sosiaaliturva",
+      "variable": 7,
+      "page": "teksti s. 4–5 / PDF s. 9–10",
+      "description": "Vuoden avunsaajamäärä on lähteen mukaan likimääräinen: vuoden lopun luokkiin lisättiin vuoden aikana kuolleet, mutta osa laitoksesta aiemmin poistuneista voi puuttua. Vain nimeltä ilmoitetut suorat avunsaajat; ei kaikkia köyhiä. Historialliset läänit.",
+      "rows": [
+        [
+          1901,
+          "UUSIMAA",
+          "Uudenmaan lääni",
+          5712
+        ],
+        [
+          1901,
+          "TURKU_PORI",
+          "Turun ja Porin lääni",
+          10239
+        ],
+        [
+          1901,
+          "HAME",
+          "Hämeen lääni",
+          6499
+        ],
+        [
+          1901,
+          "VIIPURI",
+          "Viipurin lääni",
+          5983
+        ],
+        [
+          1901,
+          "MIKKELI",
+          "Mikkelin lääni",
+          5730
+        ],
+        [
+          1901,
+          "KUOPIO",
+          "Kuopion lääni",
+          9586
+        ],
+        [
+          1901,
+          "VAASA",
+          "Vaasan lääni",
+          9254
+        ],
+        [
+          1901,
+          "OULU",
+          "Oulun lääni",
+          8766
+        ],
+        [
+          1901,
+          "FI",
+          "Koko maa",
+          61769
+        ]
+      ]
+    },
+    {
+      "key": "regional_recipients_percent",
+      "title": "Köyhäinhoidon suorien avunsaajien osuus väestöstä lääneittäin 1901",
+      "unit": "prosenttia väestöstä",
+      "theme": "Köyhyys ja sosiaaliturva",
+      "variable": 7,
+      "page": "teksti s. 5 / PDF s. 10",
+      "description": "Lähteen avunsaajamäärään perustuva osuus on likimääräinen, ei yleinen köyhyysaste. Historialliset lääni- ja valtiorajat.",
+      "rows": [
+        [
+          1901,
+          "UUSIMAA",
+          "Uudenmaan lääni",
+          1.88
+        ],
+        [
+          1901,
+          "TURKU_PORI",
+          "Turun ja Porin lääni",
+          2.26
+        ],
+        [
+          1901,
+          "HAME",
+          "Hämeen lääni",
+          2.13
+        ],
+        [
+          1901,
+          "VIIPURI",
+          "Viipurin lääni",
+          1.39
+        ],
+        [
+          1901,
+          "MIKKELI",
+          "Mikkelin lääni",
+          3.02
+        ],
+        [
+          1901,
+          "KUOPIO",
+          "Kuopion lääni",
+          3.04
+        ],
+        [
+          1901,
+          "VAASA",
+          "Vaasan lääni",
+          1.99
+        ],
+        [
+          1901,
+          "OULU",
+          "Oulun lääni",
+          3.09
+        ],
+        [
+          1901,
+          "FI",
+          "Koko maa",
+          2.25
+        ]
+      ]
+    },
+    {
+      "key": "institution_residents",
+      "title": "Vaivaishoitolaitosten hoidokit vuoden lopussa 1901",
+      "unit": "henkilöä",
+      "theme": "Köyhyys ja sosiaaliturva",
+      "variable": 7,
+      "page": "teksti s. 2–3 / PDF s. 7–8",
+      "description": "Sisältää Sortavalan yksityiseen diakonialaitokseen sijoitetut, vaikka laitos itse ei ole kunnallinen. Lähde varoittaa, että joitain ennen vuoden loppua poistuneita saattoi olla mukana.",
+      "rows": [
+        [
+          1901,
+          "CITY",
+          "Kaupungit",
+          2211
+        ],
+        [
+          1901,
+          "RURAL",
+          "Maaseutu",
+          5143
+        ],
+        [
+          1901,
+          "FI",
+          "Koko maa",
+          7354
+        ]
+      ]
+    },
+    {
+      "key": "recipient_settlement",
+      "title": "Köyhäinhoidon suorat avunsaajat kaupungin ja maaseudun mukaan 1901",
+      "unit": "henkilöä",
+      "theme": "Köyhyys ja sosiaaliturva",
+      "variable": 7,
+      "page": "teksti s. 4 / PDF s. 9",
+      "description": "Likimääräinen vuosisumma: vuoden lopun avunsaajat ja vuoden aikana kuolleet; osa vuoden aikana laitoksista poistuneista voi puuttua. Alaryhmät sisältyvät koko maan lukuun.",
+      "rows": [
+        [
+          1901,
+          "CITY",
+          "Kaupungit",
+          8044
+        ],
+        [
+          1901,
+          "RURAL",
+          "Maaseutu",
+          53725
+        ],
+        [
+          1901,
+          "FI",
+          "Koko maa",
+          61769
+        ]
+      ]
+    }
+  ],
+  "content_sha256": "cf5ebf3cbf03d39a838d6968da77b664a05ddeebb183cc815300f795d2661b69"
+}

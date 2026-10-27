@@ -1,0 +1,12 @@
+BEGIN;
+DO $verify$
+DECLARE b text:='poor_relief_1901_excerpt_20261027_v1'; h text:='98b686931261decedbf1337e48ba621dad27a6c0ef856305cebc9e727fb03f4e'; n int;
+BEGIN
+ PERFORM pg_advisory_xact_lock(hashtext(b));
+ SELECT count(*) INTO n FROM public.indicator_values v JOIN (VALUES ('fi.poorrelief1901.municipal_institutions','CITY',24),('fi.poorrelief1901.municipal_institutions','RURAL',90),('fi.poorrelief1901.municipal_institutions','FI',114),('fi.poorrelief1901.poor_relief_districts','CITY',37),('fi.poorrelief1901.poor_relief_districts','RURAL',476),('fi.poorrelief1901.poor_relief_districts','FI',513)) e(series_key,group_key,val) ON v.series_key=e.series_key AND v.group_key=e.group_key AND v.value=e.val WHERE v.year=1901 AND v.meta->>'batch_id'=b;
+ IF n<>6 OR (SELECT count(*) FROM public.indicator_values WHERE meta->>'batch_id'=b)<>6 OR (SELECT count(*) FROM public.indicator_series WHERE metadata->>'batch_id'=b)<>2 THEN RAISE EXCEPTION 'unexpected previous batch contents'; END IF;
+ UPDATE public.indicator_series SET published=true,description=replace(description,'Alkuperäinen sivukuva on vielä tarkistettava.','Alkuperäinen sivukuva tarkistettu: painettu s. 1, PDF s. 6.'),interpretation=replace(interpretation,'Alkuperäinen sivukuva on vielä tarkistettava.','Alkuperäinen sivukuva tarkistettu: painettu s. 1, PDF s. 6.'),quality=quality||jsonb_build_object('source_page_checked',true),metadata=metadata||jsonb_build_object('source_sha256',h,'source_page','painettu s. 1 / PDF s. 6','verified_by_batch','source_supplement_poor1901_20261027_v1') WHERE metadata->>'batch_id'=b;
+ UPDATE public.indicator_values SET is_published=true,validation_status='source_snapshot_checked',validation_note=replace(validation_note,'Alkuperäinen sivukuva on vielä tarkistettava.','Alkuperäinen sivukuva tarkistettu: painettu s. 1, PDF s. 6.'),meta=meta||jsonb_build_object('source_sha256',h,'source_page','painettu s. 1 / PDF s. 6','verified_by_batch','source_supplement_poor1901_20261027_v1') WHERE meta->>'batch_id'=b;
+ UPDATE public.dataset_meta SET data=data||jsonb_build_object('source_sha256',h,'published_values',6,'held_values',0,'verified_by_batch','source_supplement_poor1901_20261027_v1','caveats',jsonb_build_array('Alkuperäinen PDF:n sivukuva tarkistettu.','Sortavalan yksityinen diakonialaitos ei kuulu kunnallisten laitosten yhteissummaan.','Alaryhmät sisältyvät koko maan lukuihin.')) WHERE id=b;
+END $verify$;
+COMMIT;
