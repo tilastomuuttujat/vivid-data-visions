@@ -57,14 +57,14 @@ class TransferTests(unittest.TestCase):
     def test_decimal_and_composite_keys(self):
         cfg = migration.CONFIG["indicator_values"]
         row = dict.fromkeys(cfg["columns"])
-        row.update(series_key='a"ä', year=1900, group_key="", value="0.123456789012345678901", meta={"x": Decimal("0.100000000000000000001")})
+        row.update(series_key='a"ä', year=1900, group_key="", value=Decimal("0.123456789012345678901"), meta={"x": Decimal("0.100000000000000000001")})
         db = migration.Turso()
         db.execute([migration.stmt(migration.create("indicator_values"))], close=True)
         encoded, added = migration.copy_page(db, "indicator_values", [row])
         self.assertEqual(added, 1)
         self.assertEqual(migration.copy_page(db, "indicator_values", [row])[1], 0)
         self.assertIn("0.100000000000000000001", encoded[0][-2])
-        self.assertEqual(self.db.execute("select value from public__indicator_values").fetchone()[0], row["value"])
+        self.assertEqual(self.db.execute("select value from public__indicator_values").fetchone()[0], str(row["value"]))
         row["value"] = "2"
         with self.assertRaises(ValueError):
             migration.copy_page(db, "indicator_values", [row])
