@@ -7,6 +7,7 @@ import os
 import sys
 import urllib.parse
 import urllib.request
+import urllib.error
 from turso_pilot import SOURCE, Turso, stmt
 
 CONFIG = {
@@ -36,16 +37,20 @@ def canonical(value):
 
 def source_page(table, offset, size, expected):
     cfg = CONFIG[table]
-    # PostgreSQL numeric is copied as exact decimal text, never SQLite REAL.
-    projection = ",".join(c + "::text" if c == "value" else c for c in cfg["columns"])
+    # Decode native JSON numbers with Decimal; no server-side casts required.
+    projection = ",".join(cfg["columns"])
     params = urllib.parse.urlencode({"select": projection, "order": ",".join(cfg["pk"]),
                                     "offset": offset, "limit": size})
     key = os.environ["SUPABASE_READ_KEY"]
     req = urllib.request.Request(SOURCE + "/rest/v1/" + table + "?" + params,
         headers={"apikey": key, "Authorization": "Bearer " + key, "Prefer": "count=exact"})
-    with urllib.request.urlopen(req, timeout=60) as response:
-        total = response.headers.get("Content-Range", "").split("/")[-1]
-        rows = json.load(response, parse_float=Decimal)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as response:
+            total = response.headers.get("Content-Range", "").split("/")[-1]
+            rows = json.load(response, parse_float=Decimal)
+    except urllib.error.HTTPError as error:
+        # Status and service name are safe; response bodies can contain source data.
+        raise ValueError("Supabase source HTTP " + str(error.code)) from None
     if total != str(expected):
         raise ValueError("Source count differs from approved count; review RLS or source changes")
     if len(rows) != min(size, expected - offset):
@@ -65,6 +70,15 @@ def transform(table, row):
         if value is not None:
             if column in cfg["json"]:
                 value = canonical(value)
+            elif column == "value" and table == "indicator_values":
+                if isinstance(value, Decimal):
+                    if not value.is_finite():
+                        raise ValueError("Non-finite source value")
+                    value = str(value)
+                elif type(value) is int:
+                    value = str(value)
+                elif not isinstance(value, str):
+                    raise ValueError("Unexpected numeric value")
             elif column in cfg["integers"]:
                 if type(value) not in (int, bool):
                     raise ValueError("Unexpected integer")
@@ -217,6 +231,6 @@ if __name__ == "__main__":
         main()
     except Exception as error:
         # Never print raw API exceptions, payloads, tokens, or URLs.
-        message = str(error) if isinstance(error, ValueError) else type(error).__name__
+        message = ("Turso HTTP " + str(error.code)) if isinstance(error, urllib.error.HTTPError) else str(error) if isinstance(error, ValueError) else type(error).__name__
         print("FAILED:", message, file=sys.stderr)
         sys.exit(1)
