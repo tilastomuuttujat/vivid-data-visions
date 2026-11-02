@@ -1,0 +1,44 @@
+name: Turso indicator transfer
+on:
+  workflow_dispatch:
+    inputs:
+      table:
+        description: "Transfer series first, then values"
+        type: choice
+        options:
+          - indicator_series
+          - indicator_values
+      apply:
+        description: "Write and verify in Turso"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: turso-indicator-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check transfer logic
+        run: python -m unittest discover -s scripts/migration -p 'test_turso_indicators.py'
+      - name: Transfer or validate source
+        env:
+          SUPABASE_READ_KEY: ${{ secrets.SUPABASE_READ_KEY }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          TABLE: ${{ inputs.table }}
+          APPLY: ${{ inputs.apply }}
+        run: |
+          if [ "$APPLY" = "true" ]; then
+            python scripts/migration/turso_indicators.py --table "$TABLE" --apply
+          else
+            python scripts/migration/turso_indicators.py --table "$TABLE" --max-pages 1
+          fi
