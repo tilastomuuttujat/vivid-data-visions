@@ -42,7 +42,7 @@ class TransferTests(unittest.TestCase):
 
     def test_resume_and_conflict(self):
         rows = [self.row("a"), self.row("b"), self.row("c")]
-        def page(table, offset, size, expected):
+        def page(table, offset, size, expected, after=None):
             return rows[offset:offset+size]
         with patch.object(migration, "source_page", page):
             self.assertFalse(migration.run("indicator_series", True, 1, 2, 3))
@@ -53,6 +53,24 @@ class TransferTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 migration.run("indicator_series", True, 2, 2, 3)
         self.assertEqual(self.db.execute("select title from public__indicator_series where series_key='c'").fetchone()[0], "Ääkköset")
+
+    def test_keyset_and_no_count_request(self):
+        seen = []
+        class Response:
+            def __enter__(self): return self
+            def __exit__(self, *args): pass
+            def read(self): return b'[{}]'
+        def capture(req, timeout):
+            seen.append(req)
+            return Response()
+        with patch.dict(os.environ, {"SUPABASE_READ_KEY": "test-only"}), patch.object(migration.urllib.request, "urlopen", side_effect=capture):
+            migration.source_page("indicator_values", 500, 1, 501, after=['a,"b', 1900, ""])
+        from urllib.parse import urlsplit, parse_qs
+        query = parse_qs(urlsplit(seen[0].full_url).query)
+        self.assertNotIn("offset", query)
+        self.assertNotIn("Prefer", seen[0].headers)
+        self.assertIn("or", query)
+        self.assertIn("series_key", query)
 
     def test_decimal_and_composite_keys(self):
         cfg = migration.CONFIG["indicator_values"]
