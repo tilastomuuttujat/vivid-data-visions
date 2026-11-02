@@ -35,24 +35,31 @@ def canonical(value):
         return "[" + ",".join(canonical(v) for v in value) + "]"
     return json.dumps(value, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
 
-def source_page(table, offset, size, expected):
+def source_page(table, offset, size, expected, after=None):
     cfg = CONFIG[table]
     # Decode native JSON numbers with Decimal; no server-side casts required.
     projection = ",".join(cfg["columns"])
-    params = urllib.parse.urlencode({"select": projection, "order": ",".join(cfg["pk"]),
-                                    "offset": offset, "limit": size})
+    parameters = {"select": projection, "order": ",".join(cfg["pk"]), "limit": size}
+    if table == "indicator_values":
+        if offset and after is None:
+            raise ValueError("Missing keyset cursor")
+        if after is not None:
+            quoted = [json.dumps(v, ensure_ascii=False) if isinstance(v, str) else str(v) for v in after]
+            a, b, c = quoted
+            parameters["series_key"] = "gte." + a
+            parameters["or"] = "(series_key.gt." + a + ",and(series_key.eq." + a + ",year.gt." + b + "),and(series_key.eq." + a + ",year.eq." + b + ",group_key.gt." + c + "))"
+    else:
+        parameters["offset"] = offset
+    params = urllib.parse.urlencode(parameters)
     key = os.environ["SUPABASE_READ_KEY"]
     req = urllib.request.Request(SOURCE + "/rest/v1/" + table + "?" + params,
-        headers={"apikey": key, "Authorization": "Bearer " + key, "Prefer": "count=exact"})
+        headers={"apikey": key, "Authorization": "Bearer " + key})
     try:
         with urllib.request.urlopen(req, timeout=60) as response:
-            total = response.headers.get("Content-Range", "").split("/")[-1]
             rows = json.load(response, parse_float=Decimal)
     except urllib.error.HTTPError as error:
         # Status and service name are safe; response bodies can contain source data.
         raise ValueError("Supabase source HTTP " + str(error.code)) from None
-    if total != str(expected):
-        raise ValueError("Source count differs from approved count; review RLS or source changes")
     if len(rows) != min(size, expected - offset):
         raise ValueError("Source page truncated or changed")
     return rows
@@ -157,9 +164,10 @@ def run(table, apply, max_pages, page_size, expected):
     if db:
         db.execute([stmt(create(table))], close=True)
     digest = hashlib.sha256()
-    start, inserted = 0, 0
+    start, inserted, after = 0, 0, None
     if db:
         db.execute([stmt("CREATE TABLE IF NOT EXISTS _indicator_transfer_pages (table_name TEXT NOT NULL, page_offset INTEGER NOT NULL, page_size INTEGER NOT NULL, expected_rows INTEGER NOT NULL, row_count INTEGER NOT NULL, sha256 TEXT NOT NULL, PRIMARY KEY(table_name,page_offset))")], close=True)
+        db.execute([stmt("CREATE TABLE IF NOT EXISTS _indicator_transfer_cursors (table_name TEXT NOT NULL, page_offset INTEGER NOT NULL, cursor_json TEXT, PRIMARY KEY(table_name,page_offset))")], close=True)
         checkpoints = decode(db.execute([stmt("SELECT page_offset,page_size,expected_rows,row_count,sha256 FROM _indicator_transfer_pages WHERE table_name=? ORDER BY page_offset", [arg(table)])], close=True)[0])
         for offset, saved_size, saved_total, count, saved_hash in checkpoints:
             if offset != start or saved_size != page_size or saved_total != expected:
@@ -167,10 +175,16 @@ def run(table, apply, max_pages, page_size, expected):
             start += count
         if checkpoints:
             last = checkpoints[-1]
-            previous = source_page(table, last[0], page_size, expected)
+            cursor_rows = decode(db.execute([stmt("SELECT cursor_json FROM _indicator_transfer_cursors WHERE table_name=? AND page_offset=?", [arg(table), arg(last[0])])], close=True)[0])
+            if table == "indicator_values":
+                if not cursor_rows:
+                    raise ValueError("Missing saved keyset cursor")
+                after = json.loads(cursor_rows[0][0]) if cursor_rows[0][0] else None
+            previous = source_page(table, last[0], page_size, expected, after=after)
             encoded, _ = copy_page(db, table, previous)
             if page_hash(encoded) != last[4]:
                 raise ValueError("Source changed at resume boundary")
+            after = [previous[-1][c] for c in cfg["pk"]]
         if table == "indicator_values":
             parent_count = decode(db.execute([stmt("SELECT count(*) FROM public__indicator_series")], close=True)[0])[0][0]
             if parent_count != CONFIG["indicator_series"]["expected"]:
@@ -180,7 +194,7 @@ def run(table, apply, max_pages, page_size, expected):
         if (offset - start) // page_size >= max_pages:
             print("PARTIAL:", table, seen, "rows checked. Run again; matching rows are reused.")
             return False
-        rows = source_page(table, offset, page_size, expected)
+        rows = source_page(table, offset, page_size, expected, after=after)
         if db:
             encoded, added = copy_page(db, table, rows)
             inserted += added
@@ -189,11 +203,16 @@ def run(table, apply, max_pages, page_size, expected):
         for row in encoded:
             digest.update(canonical(row).encode() + b"\n")
         if db:
+            db.execute([stmt("INSERT INTO _indicator_transfer_cursors VALUES (?,?,?) ON CONFLICT DO NOTHING",
+                [arg(table),arg(offset),arg(canonical(after) if after is not None else None)])], close=True)
             db.execute([stmt("INSERT INTO _indicator_transfer_pages VALUES (?,?,?,?,?,?) ON CONFLICT DO NOTHING",
                 [arg(table),arg(offset),arg(page_size),arg(expected),arg(len(rows)),arg(page_hash(encoded))])], close=True)
+        after = [rows[-1][c] for c in cfg["pk"]]
         seen += len(rows)
         if offset // page_size % 20 == 0:
             print(table, seen, "/", expected, "checked;", inserted, "inserted", flush=True)
+    # Probe past the approved total without COUNT(*); detects extra visible rows.
+    source_page(table, expected, 1, expected, after=after)
     if db:
         total = decode(db.execute([stmt("SELECT count(*) FROM public__" + table)], close=True)[0])[0][0]
         if total != expected:
