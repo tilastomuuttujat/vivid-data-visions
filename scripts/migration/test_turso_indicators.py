@@ -120,7 +120,7 @@ class TransferTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "pagination repeated"):
                 migration.run("indicator_series", True, 10, 2, 4)
         self.assertEqual(self.db.execute("SELECT count(*) FROM public__indicator_series").fetchone()[0], 2)
-        self.assertEqual(self.db.execute("SELECT count(*) FROM _indicator_transfer_pages_v3").fetchone()[0], 1)
+        self.assertEqual(self.db.execute("SELECT count(*) FROM _indicator_transfer_pages_v4").fetchone()[0], 1)
 
     def test_overlapping_shifted_page_stops(self):
         rows = [self.row("a"),self.row("b"),self.row("c")]
@@ -128,6 +128,18 @@ class TransferTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "pagination repeated"):
                 migration.run("indicator_series", True, 10, 2, 4)
         self.assertEqual(self.db.execute("SELECT count(*) FROM public__indicator_series").fetchone()[0], 2)
+
+    def test_restricted_source_key_is_rejected(self):
+        with patch.object(migration, "source_request", return_value=[]):
+            with self.assertRaisesRegex(ValueError, "cannot read unpublished"):
+                migration.ensure_full_source_access("indicator_values")
+        with patch.object(migration, "source_request", return_value=[{"series_key":"unpublished"}]):
+            migration.ensure_full_source_access("indicator_values")
+
+    def test_partial_visibility_is_not_treated_as_completion(self):
+        with patch.object(migration, "source_request", side_effect=[[],[],[{}]*192]):
+            with self.assertRaisesRegex(ValueError, "got 192, expected 500"):
+                migration.source_page("indicator_values",604500,500,629741,after=["a",2020,"g"])
 
     def test_transient_retry(self):
         import urllib.error
