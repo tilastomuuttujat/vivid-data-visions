@@ -98,11 +98,36 @@ class TransferTests(unittest.TestCase):
         with patch.object(migration, "source_request", side_effect=request):
             rows = migration.source_page("indicator_values", 500, 3, 503, after=["a", 1900, "g"])
         self.assertEqual(len(rows), 3)
-        self.assertEqual(calls[0]["group_key"], 'gt."g"')
+        self.assertEqual(calls[0]["group_key"], 'gt.g')
         self.assertEqual(calls[1]["year"], "gt.1900")
-        self.assertEqual(calls[2]["series_key"], 'gt."a"')
+        self.assertEqual(calls[2]["series_key"], 'gt.a')
         self.assertEqual([c["limit"] for c in calls], [3,2,1])
         self.assertTrue(all("or" not in c and "offset" not in c for c in calls))
+
+    def test_query_values_are_not_json_quoted(self):
+        calls = []
+        def request(table, parameters):
+            calls.append(parameters)
+            return [{"n": 1}]
+        with patch.object(migration, "source_request", side_effect=request):
+            migration.source_page("indicator_values", 500, 1, 501, after=['a,"b',1900,""])
+        self.assertEqual(calls[0]["series_key"], 'eq.a,"b')
+        self.assertEqual(calls[0]["group_key"], "gt.")
+
+    def test_repeated_page_stops_before_writes(self):
+        rows = [self.row("a"), self.row("b")]
+        with patch.object(migration, "source_page", return_value=rows):
+            with self.assertRaisesRegex(ValueError, "pagination repeated"):
+                migration.run("indicator_series", True, 10, 2, 4)
+        self.assertEqual(self.db.execute("SELECT count(*) FROM public__indicator_series").fetchone()[0], 2)
+        self.assertEqual(self.db.execute("SELECT count(*) FROM _indicator_transfer_pages_v3").fetchone()[0], 1)
+
+    def test_overlapping_shifted_page_stops(self):
+        rows = [self.row("a"),self.row("b"),self.row("c")]
+        with patch.object(migration, "source_page", side_effect=[rows[:2],rows[1:]]):
+            with self.assertRaisesRegex(ValueError, "pagination repeated"):
+                migration.run("indicator_series", True, 10, 2, 4)
+        self.assertEqual(self.db.execute("SELECT count(*) FROM public__indicator_series").fetchone()[0], 2)
 
     def test_transient_retry(self):
         import urllib.error
