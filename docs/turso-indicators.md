@@ -41,3 +41,10 @@ Odotus: sarjat 2461, havainnot 629741, puuttuvia_sarjoja 0.
 `python -m unittest discover -s scripts/migration -p 'test_turso_indicators.py'`
 
 Testit käyttävät paikallista SQLite-tietokantaa ja simuloitua HTTP-kuljetusta. Ne tarkistavat keskeytyksestä jatkamisen, toistoajon, sisältöristiriidan, yhdistelmäavaimet, desimaalien ja JSON-lukujen tarkkuuden sekä katkenneen lähdesivun hylkäämisen. Oikean Turson ajot on käynnistettävä Actionsissa.
+
+## Korjattu etenemisen tarkistus (v3)
+Aiemmat v1/v2-eräkirjanpidot eivät ole luotettava etenemismittari: yksinkertaisten PostgREST-suodattimien JSON-lainaus aiheutti ensimmäisten sivujen toistumisen. v3 käyttää URL-koodattuja raaka-arvoja eq/gt-suodattimissa ja uutta eräkirjanpitoa. Vanhoja kohderivejä tai kirjanpitoja ei poisteta. Ensimmäinen v3-ajo tarkistaa lähteen alusta ja käyttää vastaavat kohderivit uudelleen.
+
+Toistuva erätarkistussumma, saman ajon päällekkäiset avaimet tai paikalleen jäävä jatkoavain pysäyttävät ajon ennen erän kirjoitusta. Vanhoja v2-laskureita ei käytetä jatkamiseen. Viimeisen v3-erän tarkistussumma ja sisältö tarkistetaan edelleen jatkettaessa. Lopullinen kohderivimäärä ja viittaukset tarkistetaan ennen PASS-merkintää.
+
+Korjauksen lukutestissä neljä peräkkäistä 500 rivin lähdesivua sisälsi 2000 eri avainta. Lisäksi aiemman 40500 rivin rajan jälkeisen sivun kaikki 500 avainta verrattiin PostgreSQL:n järjestettyyn tulokseen. Paikalliset testit hylkäävät sekä täsmälleen toistuvan että osittain päällekkäisen sivun.
