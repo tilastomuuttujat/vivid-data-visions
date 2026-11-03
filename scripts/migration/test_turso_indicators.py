@@ -40,6 +40,23 @@ class TransferTests(unittest.TestCase):
                    lenses=["A", "B"])
         return row
 
+    def test_legacy_checkpoints_are_revalidated_without_overwrite(self):
+        rows = [self.row("a"), self.row("b"), self.row("c")]
+        db = migration.Turso()
+        db.execute([migration.stmt(migration.create("indicator_series"))], close=True)
+        migration.copy_page(db, "indicator_series", rows[:2])
+        self.db.execute("CREATE TABLE _indicator_transfer_pages (marker TEXT)")
+        self.db.execute("INSERT INTO _indicator_transfer_pages VALUES ('old-boundary')")
+        calls = []
+        def page(table, offset, size, expected, after=None):
+            calls.append(offset)
+            return rows[offset:offset+size]
+        with patch.object(migration, "source_page", side_effect=page):
+            self.assertTrue(migration.run("indicator_series", True, 10, 2, 3))
+        self.assertEqual(calls[0], 0)
+        self.assertEqual(self.db.execute("SELECT count(*) FROM public__indicator_series").fetchone()[0], 3)
+        self.assertEqual(self.db.execute("SELECT marker FROM _indicator_transfer_pages").fetchone()[0], "old-boundary")
+
     def test_resume_and_conflict(self):
         rows = [self.row("a"), self.row("b"), self.row("c")]
         def page(table, offset, size, expected, after=None):
