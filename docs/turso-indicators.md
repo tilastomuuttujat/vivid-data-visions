@@ -48,3 +48,14 @@ Aiemmat v1/v2-eräkirjanpidot eivät ole luotettava etenemismittari: yksinkertai
 Toistuva erätarkistussumma, saman ajon päällekkäiset avaimet tai paikalleen jäävä jatkoavain pysäyttävät ajon ennen erän kirjoitusta. Vanhoja v2-laskureita ei käytetä jatkamiseen. Viimeisen v3-erän tarkistussumma ja sisältö tarkistetaan edelleen jatkettaessa. Lopullinen kohderivimäärä ja viittaukset tarkistetaan ennen PASS-merkintää.
 
 Korjauksen lukutestissä neljä peräkkäistä 500 rivin lähdesivua sisälsi 2000 eri avainta. Lisäksi aiemman 40500 rivin rajan jälkeisen sivun kaikki 500 avainta verrattiin PostgreSQL:n järjestettyyn tulokseen. Paikalliset testit hylkäävät sekä täsmälleen toistuvan että osittain päällekkäisen sivun.
+
+## Koko aineiston näkyvyys (v4)
+3.11.2026 ylläpitokysely vahvisti 629741 lähderiviä. Julkinen RLS-sääntö sallii vain havainnot, joissa sekä is_published että sarjan published ovat tosia: niitä on 604692. Siksi julkisella avaimella ei voi saada täyttä aineistoa. 604500 rivin jälkeen näkyviä rivejä on vain 192, vaikka kokosiirto odottaa 500 rivin erää.
+
+Korvaa GitHub Settings → Secrets and variables → Actions → SUPABASE_READ_KEY → Update secret -kohdassa arvoksi Supabasen tämän projektin server-side secret/service_role-avain. Älä muuta salaisuuden nimeä, liitä arvoa keskusteluun, lähdekoodiin tai selaimen frontend-muuttujiin. Kyseessä on laaja palvelinavain; poista Actions-salaisuus siirron päätyttyä, jos sitä ei enää tarvita. Älä avaa julkaisemattomia rivejä julkisella RLS-muutoksella.
+
+Ennen kohdekirjoituksia CLI tekee julkaisemattoman havaintorivin lukukokeen. Jos avain ei näe sitä, ajo pysähtyy heti selkeään ohjeeseen. Hyväksytty tavoite pysyy 629741 rivissä: sitä ei pienennetä julkisen näkymän kokoiseksi.
+
+Kun avain vaihtuu julkisesta koko aineistoon, lähteen sivurajat muuttuvat. v4 aloittaa siksi uuden eräkirjanpidon ja tarkistaa kaikki kohteessa jo vastaavat rivit uudelleen, lisää vain puuttuvat ja säilyttää aiemmat kopiot sekä v3-kirjanpidon. Lähteen muuttumattomuusvaatimus, poikkeavien kohderivien esto ja lopputarkistukset pysyvät voimassa.
+
+Käynnistä korjauksen ja salaisuuden vaihdon jälkeen uusi Run workflow → main → indicator_values → Write and verify in Turso. Vanhan ajon Re-run käyttää vanhaa koodia.
