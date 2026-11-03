@@ -52,6 +52,15 @@ def source_request(table, parameters):
                 continue
             raise ValueError("Supabase source HTTP " + str(error.code)) from None
 
+def ensure_full_source_access(table):
+    if table != "indicator_values":
+        return
+    # Full migration includes unpublished rows. This is a read-only RLS probe.
+    rows = source_request(table, {"select": "series_key,year,group_key",
+                                  "is_published": "eq.false", "limit": 1})
+    if not rows:
+        raise ValueError("Source key cannot read unpublished observations. Full migration requires a server-side Supabase secret/service_role key in the GitHub SUPABASE_READ_KEY secret. Do not change public RLS policies.")
+
 def source_page(table, offset, size, expected, after=None):
     cfg = CONFIG[table]
     base = {"select": ",".join(cfg["columns"]), "order": ",".join(cfg["pk"])}
@@ -78,7 +87,7 @@ def source_page(table, offset, size, expected, after=None):
                 break
             rows.extend(source_request(table, dict(base, **bounds, limit=remaining)))
     if len(rows) != min(size, expected - offset):
-        raise ValueError("Source page truncated or changed")
+        raise ValueError("Source page short or changed at offset " + str(offset) + ": got " + str(len(rows)) + ", expected " + str(min(size, expected - offset)) + ". Check source visibility and source changes.")
     return rows
 
 def transform(table, row):
@@ -184,16 +193,16 @@ def run(table, apply, max_pages, page_size, expected):
     start, inserted, after = 0, 0, None
     checkpoints = []
     if db:
-        db.execute([stmt("CREATE TABLE IF NOT EXISTS _indicator_transfer_pages_v3 (table_name TEXT NOT NULL, page_offset INTEGER NOT NULL, page_size INTEGER NOT NULL, expected_rows INTEGER NOT NULL, row_count INTEGER NOT NULL, sha256 TEXT NOT NULL, PRIMARY KEY(table_name,page_offset))")], close=True)
-        db.execute([stmt("CREATE TABLE IF NOT EXISTS _indicator_transfer_cursors_v3 (table_name TEXT NOT NULL, page_offset INTEGER NOT NULL, cursor_json TEXT, PRIMARY KEY(table_name,page_offset))")], close=True)
-        checkpoints = decode(db.execute([stmt("SELECT page_offset,page_size,expected_rows,row_count,sha256 FROM _indicator_transfer_pages_v3 WHERE table_name=? ORDER BY page_offset", [arg(table)])], close=True)[0])
+        db.execute([stmt("CREATE TABLE IF NOT EXISTS _indicator_transfer_pages_v4 (table_name TEXT NOT NULL, page_offset INTEGER NOT NULL, page_size INTEGER NOT NULL, expected_rows INTEGER NOT NULL, row_count INTEGER NOT NULL, sha256 TEXT NOT NULL, PRIMARY KEY(table_name,page_offset))")], close=True)
+        db.execute([stmt("CREATE TABLE IF NOT EXISTS _indicator_transfer_cursors_v4 (table_name TEXT NOT NULL, page_offset INTEGER NOT NULL, cursor_json TEXT, PRIMARY KEY(table_name,page_offset))")], close=True)
+        checkpoints = decode(db.execute([stmt("SELECT page_offset,page_size,expected_rows,row_count,sha256 FROM _indicator_transfer_pages_v4 WHERE table_name=? ORDER BY page_offset", [arg(table)])], close=True)[0])
         for offset, saved_size, saved_total, count, saved_hash in checkpoints:
             if offset != start or saved_size != page_size or saved_total != expected:
                 raise ValueError("Checkpoint settings differ or contain gaps")
             start += count
         if checkpoints:
             last = checkpoints[-1]
-            cursor_rows = decode(db.execute([stmt("SELECT cursor_json FROM _indicator_transfer_cursors_v3 WHERE table_name=? AND page_offset=?", [arg(table), arg(last[0])])], close=True)[0])
+            cursor_rows = decode(db.execute([stmt("SELECT cursor_json FROM _indicator_transfer_cursors_v4 WHERE table_name=? AND page_offset=?", [arg(table), arg(last[0])])], close=True)[0])
             if table == "indicator_values":
                 if not cursor_rows:
                     raise ValueError("Missing saved keyset cursor")
@@ -235,9 +244,9 @@ def run(table, apply, max_pages, page_size, expected):
         for row in encoded:
             digest.update(canonical(row).encode() + b"\n")
         if db:
-            db.execute([stmt("INSERT INTO _indicator_transfer_cursors_v3 VALUES (?,?,?) ON CONFLICT DO NOTHING",
+            db.execute([stmt("INSERT INTO _indicator_transfer_cursors_v4 VALUES (?,?,?) ON CONFLICT DO NOTHING",
                 [arg(table),arg(offset),arg(canonical(after) if after is not None else None)])], close=True)
-            db.execute([stmt("INSERT INTO _indicator_transfer_pages_v3 VALUES (?,?,?,?,?,?) ON CONFLICT DO NOTHING",
+            db.execute([stmt("INSERT INTO _indicator_transfer_pages_v4 VALUES (?,?,?,?,?,?) ON CONFLICT DO NOTHING",
                 [arg(table),arg(offset),arg(page_size),arg(expected),arg(len(rows)),arg(page_hash(encoded))])], close=True)
         after = [rows[-1][c] for c in cfg["pk"]]
         seen += len(rows)
@@ -254,7 +263,7 @@ def run(table, apply, max_pages, page_size, expected):
             orphans = decode(db.execute([stmt("SELECT count(*) FROM public__indicator_values v LEFT JOIN public__indicator_series s ON s.series_key=v.series_key WHERE s.series_key IS NULL")], close=True)[0])[0][0]
             if orphans:
                 raise ValueError("Values contain missing parent series")
-        manifest = decode(db.execute([stmt("SELECT page_offset,row_count,sha256 FROM _indicator_transfer_pages_v3 WHERE table_name=? ORDER BY page_offset", [arg(table)])], close=True)[0])
+        manifest = decode(db.execute([stmt("SELECT page_offset,row_count,sha256 FROM _indicator_transfer_pages_v4 WHERE table_name=? ORDER BY page_offset", [arg(table)])], close=True)[0])
         digest = hashlib.sha256(canonical(manifest).encode())
     print("PASS:", table, seen, "rows; manifest SHA256", digest.hexdigest(), flush=True)
     print("Source must remain unchanged during transfer; this is not a transactional source snapshot.")
@@ -273,6 +282,7 @@ def main():
     expected = args.expected_rows if args.expected_rows is not None else CONFIG[args.table]["expected"]
     if expected <= 0:
         raise ValueError("Expected rows must be positive")
+    ensure_full_source_access(args.table)
     complete = run(args.table, args.apply, args.max_pages, args.page_size, expected)
     if not complete and args.apply:
         sys.exit(2)
