@@ -69,8 +69,34 @@ class TransferTests(unittest.TestCase):
         query = parse_qs(urlsplit(seen[0].full_url).query)
         self.assertNotIn("offset", query)
         self.assertNotIn("Prefer", seen[0].headers)
-        self.assertIn("or", query)
+        self.assertNotIn("or", query)
+        self.assertIn("group_key", query)
         self.assertIn("series_key", query)
+
+    def test_keyset_ranges_fill_page(self):
+        calls = []
+        def request(table, parameters):
+            calls.append(parameters)
+            return [{"n": len(calls)}]
+        with patch.object(migration, "source_request", side_effect=request):
+            rows = migration.source_page("indicator_values", 500, 3, 503, after=["a", 1900, "g"])
+        self.assertEqual(len(rows), 3)
+        self.assertEqual(calls[0]["group_key"], 'gt."g"')
+        self.assertEqual(calls[1]["year"], "gt.1900")
+        self.assertEqual(calls[2]["series_key"], 'gt."a"')
+        self.assertEqual([c["limit"] for c in calls], [3,2,1])
+        self.assertTrue(all("or" not in c and "offset" not in c for c in calls))
+
+    def test_transient_retry(self):
+        import urllib.error
+        class Response:
+            def __enter__(self): return self
+            def __exit__(self, *args): pass
+            def read(self): return b"[]"
+        failure = urllib.error.HTTPError("https://example.invalid", 500, "test", {}, None)
+        with patch.dict(os.environ, {"SUPABASE_READ_KEY": "test-only"}), patch.object(migration.time, "sleep"), patch.object(migration.urllib.request, "urlopen", side_effect=[failure, Response()]) as get:
+            self.assertEqual(migration.source_request("indicator_values", {"limit":1}), [])
+            self.assertEqual(get.call_count, 2)
 
     def test_decimal_and_composite_keys(self):
         cfg = migration.CONFIG["indicator_values"]
