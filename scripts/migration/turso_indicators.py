@@ -63,7 +63,9 @@ def source_page(table, offset, size, expected, after=None):
         rows = source_request(table, dict(base, limit=size))
     else:
         # Three disjoint index ranges avoid the expensive cross-column OR plan.
-        a, b, c = [json.dumps(v, ensure_ascii=False) if isinstance(v, str) else str(v) for v in after]
+        # Simple eq/gt query values are free-form and URL-encoded by source_request.
+        # JSON quotes here become literal data, unlike values inside an or/in expression.
+        a, b, c = map(str, after)
         ranges = [
             {"series_key": "eq." + a, "year": "eq." + b, "group_key": "gt." + c},
             {"series_key": "eq." + a, "year": "gt." + b},
@@ -180,17 +182,18 @@ def run(table, apply, max_pages, page_size, expected):
         db.execute([stmt(create(table))], close=True)
     digest = hashlib.sha256()
     start, inserted, after = 0, 0, None
+    checkpoints = []
     if db:
-        db.execute([stmt("CREATE TABLE IF NOT EXISTS _indicator_transfer_pages_v2 (table_name TEXT NOT NULL, page_offset INTEGER NOT NULL, page_size INTEGER NOT NULL, expected_rows INTEGER NOT NULL, row_count INTEGER NOT NULL, sha256 TEXT NOT NULL, PRIMARY KEY(table_name,page_offset))")], close=True)
-        db.execute([stmt("CREATE TABLE IF NOT EXISTS _indicator_transfer_cursors_v2 (table_name TEXT NOT NULL, page_offset INTEGER NOT NULL, cursor_json TEXT, PRIMARY KEY(table_name,page_offset))")], close=True)
-        checkpoints = decode(db.execute([stmt("SELECT page_offset,page_size,expected_rows,row_count,sha256 FROM _indicator_transfer_pages_v2 WHERE table_name=? ORDER BY page_offset", [arg(table)])], close=True)[0])
+        db.execute([stmt("CREATE TABLE IF NOT EXISTS _indicator_transfer_pages_v3 (table_name TEXT NOT NULL, page_offset INTEGER NOT NULL, page_size INTEGER NOT NULL, expected_rows INTEGER NOT NULL, row_count INTEGER NOT NULL, sha256 TEXT NOT NULL, PRIMARY KEY(table_name,page_offset))")], close=True)
+        db.execute([stmt("CREATE TABLE IF NOT EXISTS _indicator_transfer_cursors_v3 (table_name TEXT NOT NULL, page_offset INTEGER NOT NULL, cursor_json TEXT, PRIMARY KEY(table_name,page_offset))")], close=True)
+        checkpoints = decode(db.execute([stmt("SELECT page_offset,page_size,expected_rows,row_count,sha256 FROM _indicator_transfer_pages_v3 WHERE table_name=? ORDER BY page_offset", [arg(table)])], close=True)[0])
         for offset, saved_size, saved_total, count, saved_hash in checkpoints:
             if offset != start or saved_size != page_size or saved_total != expected:
                 raise ValueError("Checkpoint settings differ or contain gaps")
             start += count
         if checkpoints:
             last = checkpoints[-1]
-            cursor_rows = decode(db.execute([stmt("SELECT cursor_json FROM _indicator_transfer_cursors_v2 WHERE table_name=? AND page_offset=?", [arg(table), arg(last[0])])], close=True)[0])
+            cursor_rows = decode(db.execute([stmt("SELECT cursor_json FROM _indicator_transfer_cursors_v3 WHERE table_name=? AND page_offset=?", [arg(table), arg(last[0])])], close=True)[0])
             if table == "indicator_values":
                 if not cursor_rows:
                     raise ValueError("Missing saved keyset cursor")
@@ -206,11 +209,24 @@ def run(table, apply, max_pages, page_size, expected):
             if parent_count != CONFIG["indicator_series"]["expected"]:
                 raise ValueError("Complete indicator_series transfer first")
     seen = start
+    seen_keys = {transform(table, row)[0] for row in previous} if db and checkpoints else set()
+    seen_hashes = {checkpoint[4] for checkpoint in checkpoints} if db else set()
+    if db and len(seen_hashes) != len(checkpoints):
+        raise ValueError("Duplicate saved pages; checkpoint ledger is invalid")
     for offset in range(start, expected, page_size):
         if (offset - start) // page_size >= max_pages:
             print("PARTIAL:", table, seen, "rows checked. Run again; matching rows are reused.")
             return False
         rows = source_page(table, offset, page_size, expected, after=after)
+        candidate = [transform(table, row) for row in rows]
+        keys = [row[0] for row in candidate]
+        fingerprint = page_hash(candidate)
+        next_cursor = [rows[-1][c] for c in cfg["pk"]] if rows else after
+        if (len(set(keys)) != len(keys) or seen_keys.intersection(keys)
+                or fingerprint in seen_hashes or (rows and next_cursor == after)):
+            raise ValueError("Source pagination repeated rows or stopped advancing; no page written")
+        seen_keys.update(keys)
+        seen_hashes.add(fingerprint)
         if db:
             encoded, added = copy_page(db, table, rows)
             inserted += added
@@ -219,9 +235,9 @@ def run(table, apply, max_pages, page_size, expected):
         for row in encoded:
             digest.update(canonical(row).encode() + b"\n")
         if db:
-            db.execute([stmt("INSERT INTO _indicator_transfer_cursors_v2 VALUES (?,?,?) ON CONFLICT DO NOTHING",
+            db.execute([stmt("INSERT INTO _indicator_transfer_cursors_v3 VALUES (?,?,?) ON CONFLICT DO NOTHING",
                 [arg(table),arg(offset),arg(canonical(after) if after is not None else None)])], close=True)
-            db.execute([stmt("INSERT INTO _indicator_transfer_pages_v2 VALUES (?,?,?,?,?,?) ON CONFLICT DO NOTHING",
+            db.execute([stmt("INSERT INTO _indicator_transfer_pages_v3 VALUES (?,?,?,?,?,?) ON CONFLICT DO NOTHING",
                 [arg(table),arg(offset),arg(page_size),arg(expected),arg(len(rows)),arg(page_hash(encoded))])], close=True)
         after = [rows[-1][c] for c in cfg["pk"]]
         seen += len(rows)
@@ -238,7 +254,7 @@ def run(table, apply, max_pages, page_size, expected):
             orphans = decode(db.execute([stmt("SELECT count(*) FROM public__indicator_values v LEFT JOIN public__indicator_series s ON s.series_key=v.series_key WHERE s.series_key IS NULL")], close=True)[0])[0][0]
             if orphans:
                 raise ValueError("Values contain missing parent series")
-        manifest = decode(db.execute([stmt("SELECT page_offset,row_count,sha256 FROM _indicator_transfer_pages_v2 WHERE table_name=? ORDER BY page_offset", [arg(table)])], close=True)[0])
+        manifest = decode(db.execute([stmt("SELECT page_offset,row_count,sha256 FROM _indicator_transfer_pages_v3 WHERE table_name=? ORDER BY page_offset", [arg(table)])], close=True)[0])
         digest = hashlib.sha256(canonical(manifest).encode())
     print("PASS:", table, seen, "rows; manifest SHA256", digest.hexdigest(), flush=True)
     print("Source must remain unchanged during transfer; this is not a transactional source snapshot.")
