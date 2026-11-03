@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 import sys
+import time
 import urllib.parse
 import urllib.request
 import urllib.error
@@ -35,31 +36,45 @@ def canonical(value):
         return "[" + ",".join(canonical(v) for v in value) + "]"
     return json.dumps(value, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
 
-def source_page(table, offset, size, expected, after=None):
-    cfg = CONFIG[table]
-    # Decode native JSON numbers with Decimal; no server-side casts required.
-    projection = ",".join(cfg["columns"])
-    parameters = {"select": projection, "order": ",".join(cfg["pk"]), "limit": size}
-    if table == "indicator_values":
-        if offset and after is None:
-            raise ValueError("Missing keyset cursor")
-        if after is not None:
-            quoted = [json.dumps(v, ensure_ascii=False) if isinstance(v, str) else str(v) for v in after]
-            a, b, c = quoted
-            parameters["series_key"] = "gte." + a
-            parameters["or"] = "(series_key.gt." + a + ",and(series_key.eq." + a + ",year.gt." + b + "),and(series_key.eq." + a + ",year.eq." + b + ",group_key.gt." + c + "))"
-    else:
-        parameters["offset"] = offset
+def source_request(table, parameters):
     params = urllib.parse.urlencode(parameters)
     key = os.environ["SUPABASE_READ_KEY"]
     req = urllib.request.Request(SOURCE + "/rest/v1/" + table + "?" + params,
         headers={"apikey": key, "Authorization": "Bearer " + key})
-    try:
-        with urllib.request.urlopen(req, timeout=60) as response:
-            rows = json.load(response, parse_float=Decimal)
-    except urllib.error.HTTPError as error:
-        # Status and service name are safe; response bodies can contain source data.
-        raise ValueError("Supabase source HTTP " + str(error.code)) from None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as response:
+                return json.load(response, parse_float=Decimal)
+        except urllib.error.HTTPError as error:
+            if error.code in (429, 500, 502, 503, 504) and attempt < 2:
+                print("Source HTTP", error.code, "- retry", attempt + 1, flush=True)
+                time.sleep(2 ** attempt)
+                continue
+            raise ValueError("Supabase source HTTP " + str(error.code)) from None
+
+def source_page(table, offset, size, expected, after=None):
+    cfg = CONFIG[table]
+    base = {"select": ",".join(cfg["columns"]), "order": ",".join(cfg["pk"])}
+    if table != "indicator_values":
+        rows = source_request(table, dict(base, offset=offset, limit=size))
+    elif after is None:
+        if offset:
+            raise ValueError("Missing keyset cursor")
+        rows = source_request(table, dict(base, limit=size))
+    else:
+        # Three disjoint index ranges avoid the expensive cross-column OR plan.
+        a, b, c = [json.dumps(v, ensure_ascii=False) if isinstance(v, str) else str(v) for v in after]
+        ranges = [
+            {"series_key": "eq." + a, "year": "eq." + b, "group_key": "gt." + c},
+            {"series_key": "eq." + a, "year": "gt." + b},
+            {"series_key": "gt." + a},
+        ]
+        rows = []
+        for bounds in ranges:
+            remaining = size - len(rows)
+            if not remaining:
+                break
+            rows.extend(source_request(table, dict(base, **bounds, limit=remaining)))
     if len(rows) != min(size, expected - offset):
         raise ValueError("Source page truncated or changed")
     return rows
