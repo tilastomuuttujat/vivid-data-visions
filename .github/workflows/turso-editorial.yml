@@ -2,7 +2,7 @@ name: Turso article library
 on:
   push:
     branches: [main]
-    paths: ['scripts/editorial/bootstrap.json']
+    paths: ['scripts/editorial/**', '.github/workflows/turso-editorial.yml']
   workflow_dispatch:
     inputs:
       operation:
@@ -28,7 +28,7 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s scripts/editorial -p 'test_*.py'
       - name: Import private source and verify original revisions
-        if: github.event_name == 'push' || inputs.operation == 'import-staged'
+        if: github.event_name == 'workflow_dispatch' && inputs.operation == 'import-staged'
         env:
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
           SUPABASE_READ_KEY: ${{ secrets.SUPABASE_READ_KEY }}
@@ -37,3 +37,7 @@ jobs:
         env:
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
         run: python scripts/editorial/articles.py verify
+      - name: Verify editor access to the private article library
+        env:
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+        run: python scripts/editorial/editor_server.py --check
