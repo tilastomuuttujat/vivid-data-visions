@@ -38,3 +38,8 @@ Siivouksen jälkeen uusi ajo vaatii lukijan uuden valmistelun.
 Kaikki 55 paikallista migraatiotestiä läpäisivät, mukaan lukien kokonaisajon uudelleenkäynnistys, omistajatunniste, desimaalitarkkuus, lähteen muuttuminen, kohderistiriita ja yhdistelmäviittaus.
 Palvelinroolilla kaikki viisi ensimmäistä sivua vastasivat odotettua.
 SECURITY DEFINER=false, anon/authenticated EXECUTE=false, service_role EXECUTE=true.
+
+## Varmennettu valmistuminen 4.11.2026
+Ajo https://github.com/tilastomuuttujat/vivid-data-visions/actions/runs/41884635156 valmistui: 5 taulua, 2176 riviä ja kaikki neljä sisäistä viittausta PASS. Ensimmäinen ajo pysähtyi lähdeluvun väärään RPC-nimeen ennen kohdekirjoituksia; korjaus ja endpoint-testi ovat päähaarassa.
+Siirtokohtainen RPC on poistettu ja kaikki viisi SELECT-oikeutta sekä skeeman USAGE palautettu aiempaan tilaan. Jälkitarkistukset: reader_removed=true, schema_restored=true, table_grants_restored=true.
+Omistajatunnisteet säilyivät, mutta Auth-käyttöönotto ja käyttäjäkohtainen valtuutus ovat edelleen erillinen tehtävä. Uusi lähdetarkistus vaatii palvelinlukijan uuden valmistelun.
