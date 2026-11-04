@@ -94,10 +94,10 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | lakikartta | statutes_core | 54 | Siirtämättä / arvioitava |
 | lakikartta | successors | 0 | Tyhjä lähteessä |
 | lakikartta | tae_texts | 0 | Tyhjä lähteessä |
-| public | article_dataset_meta | 1 | Seuraava ajo |
-| public | article_links | 436 | Seuraava ajo |
-| public | article_relation_types | 5 | Seuraava ajo |
-| public | articles | 314 | Seuraava ajo |
+| public | article_dataset_meta | 1 | Valmis |
+| public | article_links | 436 | Valmis |
+| public | article_relation_types | 5 | Valmis |
+| public | articles | 314 | Valmis |
 | public | association | 1 | Siirtämättä / arvioitava |
 | public | association_board_members | 6 | Siirtämättä / arvioitava |
 | public | association_contacts | 1 | Siirtämättä / arvioitava |
@@ -122,11 +122,11 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | public | atlas_themes | 32 | Valmis |
 | public | atlas_variable_indicators | 2986 | Valmis |
 | public | atlas_variables | 33 | Valmis |
-| public | attachments | 221 | Seuraava ajo |
-| public | dataset_meta | 285 | Seuraava ajo |
+| public | attachments | 221 | Valmis |
+| public | dataset_meta | 285 | Valmis |
 | public | donations | 0 | Tyhjä lähteessä |
 | public | entitlements | 0 | Tyhjä lähteessä |
-| public | indicator_aliases | 12 | Seuraava ajo |
+| public | indicator_aliases | 12 | Valmis |
 | public | indicator_series | 2461 | Valmis |
 | public | indicator_values | 629741 | Valmis |
 | public | infographics | 288 | Siirtämättä / arvioitava |
@@ -141,18 +141,18 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | public | payment_events | 9 | Siirtämättä / arvioitava |
 | public | payments | 16 | Siirtämättä / arvioitava |
 | public | products | 4 | Siirtämättä / arvioitava |
-| public | public_finance_item_links | 24 | Siirtämättä / arvioitava |
-| public | public_finance_observations | 970849 | Siirtämättä / arvioitava |
-| public | public_finance_series | 32661 | Siirtämättä / arvioitava |
-| public | public_finance_sources | 139 | Siirtämättä / arvioitava |
+| public | public_finance_item_links | 24 | Valmisteltu automaattinen ajo |
+| public | public_finance_observations | 970849 | Valmisteltu automaattinen ajo |
+| public | public_finance_series | 32661 | Valmisteltu automaattinen ajo |
+| public | public_finance_sources | 139 | Valmisteltu automaattinen ajo |
 | public | relations | 595 | Valmis |
 | public | selitysatlas_links | 323 | Siirtämättä / arvioitava |
 | public | simulation_indicator_baselines | 312 | Siirtämättä / arvioitava |
 | public | simulation_normalization_params | 12 | Siirtämättä / arvioitava |
 | public | simulation_statute_effects | 46 | Siirtämättä / arvioitava |
 | public | simulation_statute_levers | 12 | Siirtämättä / arvioitava |
-| public | statistic_series | 12 | Seuraava ajo |
-| public | statistic_values | 36 | Seuraava ajo |
+| public | statistic_series | 12 | Valmis |
+| public | statistic_values | 36 | Valmis |
 | research | area | 736 | Siirtämättä / arvioitava |
 | research | area_classification | 8 | Siirtämättä / arvioitava |
 | research | area_mapping | 656 | Siirtämättä / arvioitava |
@@ -222,10 +222,12 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 
 ## Jatkojärjestys
 1. Korttien suhteet ja Painekartta (varmennettu ajossa 41776080358).
-2. Sisältö ja metatiedot: 9 taulua, 1322 riviä (valmisteltu; ei vielä siirretty).
+2. Sisältö ja metatiedot: 9 taulua, 1322 riviä (varmennettu ajossa 41777195542; attachments-metatiedot, ei tiedostoja).
 3. Muut public-tutkimusaineistot ja metatiedot, mukaan lukien public_finance (970849 havaintoa ja 32661 sarjaa).
 4. lakikartta, selitysatlas ja arviointi riippuvuuksineen.
 5. research-taulut, alkuperäiset havainnot ja johdetut laskennat sekä niiden lähdeketjut.
 6. Sovellusyhteydet, ajantasaiset päivitykset, käyttöoikeudet ja palautustesti.
 
 Yksityisiä skeemoja ei avata julkiseksi siirron vuoksi. Niille tarvitaan palvelinpuolen vienti tai rajattu tietokantayhteys. Supabasea ei voi vielä poistaa.
+
+Julkisen talouden jatkettava siirto on toteutettu: [turso-finance.md](turso-finance.md). Valmistumista ei ole vielä vahvistettu; se edellyttää koko ajon PASS-tulosta.
