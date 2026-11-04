@@ -129,7 +129,7 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | public | indicator_aliases | 12 | Valmis |
 | public | indicator_series | 2461 | Valmis |
 | public | indicator_values | 629741 | Valmis |
-| public | infographics | 288 | Valmisteltu automaattinen ajo |
+| public | infographics | 288 | Valmis |
 | public | item_execution_depth | 22 | Siirtämättä / arvioitava |
 | public | item_institutional_weight | 22 | Siirtämättä / arvioitava |
 | public | item_statute_candidates | 123 | Siirtämättä / arvioitava |
@@ -146,7 +146,7 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | public | public_finance_series | 32661 | Valmis |
 | public | public_finance_sources | 139 | Valmis |
 | public | relations | 595 | Valmis |
-| public | selitysatlas_links | 323 | Valmisteltu automaattinen ajo |
+| public | selitysatlas_links | 323 | Valmis |
 | public | simulation_indicator_baselines | 312 | Siirtämättä / arvioitava |
 | public | simulation_normalization_params | 12 | Siirtämättä / arvioitava |
 | public | simulation_statute_effects | 46 | Siirtämättä / arvioitava |
@@ -201,24 +201,24 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | research | source | 32 | Siirtämättä / arvioitava |
 | research | source_locator | 3 | Siirtämättä / arvioitava |
 | research | source_type | 3 | Siirtämättä / arvioitava |
-| selitysatlas | categories | 5 | Valmisteltu automaattinen ajo |
-| selitysatlas | contested_explanations | 1 | Valmisteltu automaattinen ajo |
-| selitysatlas | decisions | 4 | Valmisteltu automaattinen ajo |
-| selitysatlas | dictionary | 6 | Valmisteltu automaattinen ajo |
-| selitysatlas | evidence_levels | 4 | Valmisteltu automaattinen ajo |
-| selitysatlas | exogenous_events | 2 | Valmisteltu automaattinen ajo |
-| selitysatlas | explanation_components | 10 | Valmisteltu automaattinen ajo |
-| selitysatlas | generations | 13 | Valmisteltu automaattinen ajo |
-| selitysatlas | hypotheses | 16 | Valmisteltu automaattinen ajo |
-| selitysatlas | mechanisms | 14 | Valmisteltu automaattinen ajo |
-| selitysatlas | meta | 1 | Valmisteltu automaattinen ajo |
-| selitysatlas | models | 48 | Valmisteltu automaattinen ajo |
-| selitysatlas | open_issues | 7 | Valmisteltu automaattinen ajo |
-| selitysatlas | questions | 10 | Valmisteltu automaattinen ajo |
-| selitysatlas | relations | 206 | Valmisteltu automaattinen ajo |
-| selitysatlas | sources | 30 | Valmisteltu automaattinen ajo |
-| selitysatlas | stories | 4 | Valmisteltu automaattinen ajo |
-| selitysatlas | themes | 87 | Valmisteltu automaattinen ajo |
+| selitysatlas | categories | 5 | Valmis |
+| selitysatlas | contested_explanations | 1 | Valmis |
+| selitysatlas | decisions | 4 | Valmis |
+| selitysatlas | dictionary | 6 | Valmis |
+| selitysatlas | evidence_levels | 4 | Valmis |
+| selitysatlas | exogenous_events | 2 | Valmis |
+| selitysatlas | explanation_components | 10 | Valmis |
+| selitysatlas | generations | 13 | Valmis |
+| selitysatlas | hypotheses | 16 | Valmis |
+| selitysatlas | mechanisms | 14 | Valmis |
+| selitysatlas | meta | 1 | Valmis |
+| selitysatlas | models | 48 | Valmis |
+| selitysatlas | open_issues | 7 | Valmis |
+| selitysatlas | questions | 10 | Valmis |
+| selitysatlas | relations | 206 | Valmis |
+| selitysatlas | sources | 30 | Valmis |
+| selitysatlas | stories | 4 | Valmis |
+| selitysatlas | themes | 87 | Valmis |
 
 ## Jatkojärjestys
 1. Korttien suhteet ja Painekartta (varmennettu ajossa 41776080358).
@@ -232,4 +232,4 @@ Yksityisiä skeemoja ei avata julkiseksi siirron vuoksi. Niille tarvitaan palvel
 
 Julkisen talouden jatkettava siirto on toteutettu: [turso-finance.md](turso-finance.md). Valmistuminen varmennettu ajon 41778233117 toisesta yrityksestä: 1003673 riviä ja kaikki viittaukset PASS.
 
-Selitysatlas ja infografiikkojen metatiedot: 20 taulua, 1079 riviä, valmisteltu automaattinen ajo; [turso-selitysatlas.md](turso-selitysatlas.md). Ei vielä vahvistettua PASS-tulosta. Kuva- ja liitetiedostot ovat edelleen erillinen tehtävä.
+Selitysatlas ja infografiikkojen metatiedot: 20 taulua, 1079 riviä, varmennettu ajossa 41853068179; [turso-selitysatlas.md](turso-selitysatlas.md). PASS vahvistettu; siirtokohtainen RPC poistettu ja lisätyt lukuoikeudet palautettu. Kuva- ja liitetiedostot ovat edelleen erillinen tehtävä.
