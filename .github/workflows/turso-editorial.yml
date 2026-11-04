@@ -1,0 +1,39 @@
+name: Turso article library
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/editorial/bootstrap.json']
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: Verify the article library; initial import requires a private staged bundle
+        type: choice
+        options: [verify, import-staged]
+        default: verify
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: turso-editorial
+  cancel-in-progress: false
+jobs:
+  articles:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s scripts/editorial -p 'test_*.py'
+      - name: Import private source and verify original revisions
+        if: github.event_name == 'push' || inputs.operation == 'import-staged'
+        env:
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          SUPABASE_READ_KEY: ${{ secrets.SUPABASE_READ_KEY }}
+        run: python scripts/editorial/articles.py import-staged
+      - name: Verify article records and revision history
+        env:
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+        run: python scripts/editorial/articles.py verify
