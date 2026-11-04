@@ -146,7 +146,7 @@ def read_page(db, table, keys):
     sql += " WHERE _migration_key IN (SELECT value FROM json_each(?))"
     return decode(db.execute([stmt(sql, [arg(canonical(keys))])], close=True)[0])
 
-def copy_page(db, table, rows):
+def copy_page(db, table, rows, *, max_row_bytes=512 * 1024):
     wanted = [transform(table, r) for r in rows]
     keys = [r[0] for r in wanted]
     if len(set(keys)) != len(keys):
@@ -158,12 +158,19 @@ def copy_page(db, table, rows):
             raise ValueError("Existing target row differs; no replacement permitted")
     present = {r[0] for r in existing}
     missing = [r for r in wanted if r[0] not in present]
-    # A single INSERT statement is atomic. Limit each request to ~512 KiB.
+    # Ordinary batches stay small; explicitly allowed large rows travel alone.
+    # Measure escaped JSON arguments, matching the HTTP transport serialization.
     chunks, chunk, byte_count = [], [], 0
     for row in missing:
-        size = len(canonical(row).encode())
+        size = len(json.dumps([arg(v) for v in row]).encode())
+        if size > max_row_bytes:
+            raise ValueError("Row exceeds configured transfer limit")
         if size > 512 * 1024:
-            raise ValueError("Row exceeds pilot transfer limit")
+            if chunk:
+                chunks.append(chunk)
+                chunk, byte_count = [], 0
+            chunks.append([row])
+            continue
         if chunk and (byte_count + size > 512 * 1024 or len(chunk) >= 40):
             chunks.append(chunk)
             chunk, byte_count = [], 0
