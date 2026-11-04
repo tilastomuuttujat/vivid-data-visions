@@ -51,6 +51,7 @@ class ArviointiTests(unittest.TestCase):
         after=["00000000-0000-0000-0000-000000000001",'a,"b',"lens"]
         with patch.dict(os.environ,{"SUPABASE_READ_KEY":"test-only"}),patch.object(migration.urllib.request,"urlopen",return_value=Response()) as call:
             migration.source_page("arviointi__overrides",after,1)
+        self.assertTrue(call.call_args.args[0].full_url.endswith("/rest/v1/rpc/migration_arviointi_page_v1"))
         body=json.loads(call.call_args.args[0].data)
         self.assertEqual(body["p_after"],after)
         self.assertEqual(body["p_table"],"arviointi.overrides")
