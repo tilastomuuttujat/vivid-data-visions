@@ -22,6 +22,11 @@ Päällekkäisyydet on merkitty `review_flags_json`-kenttään tarkistamista var
 mitään ei yhdistetä automaattisesti. Lähteen hakasulkeissa olevat keskeneräiset
 viitteet ja muut toimitukselliset merkinnät säilyvät tekstissä.
 
+## Selainpohjainen artikkelieditori
+
+Katso [artikkelieditorin käyttöönotto](article-editor.md). Se tarjoaa hakemiston,
+muokkauslomakkeen, versiohistorian ja palautuksen Turson taulueditorin rinnalle.
+
 ## Muokkaaminen iPadilla
 
 1. Avaa Turson murrosmatriisi-tietokanta ja **Edit Data**.

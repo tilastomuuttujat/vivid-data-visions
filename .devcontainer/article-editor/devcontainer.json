@@ -1,0 +1,14 @@
+{
+  "name": "Atlas article editor",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+  "forwardPorts": [
+    8765
+  ],
+  "portsAttributes": {
+    "8765": {
+      "label": "Artikkelieditori",
+      "onAutoForward": "notify"
+    }
+  },
+  "postAttachCommand": "echo Käynnistä-editori-komennolla: python scripts/editorial/editor_server.py --host 0.0.0.0"
+}
