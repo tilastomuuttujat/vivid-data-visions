@@ -38,3 +38,6 @@ __pycache__/
 public/downloads/data/
 public/downloads/atlas-2d.zip
 public/downloads/atlas-3d.zip
+
+# Public snapshot generated from Turso in trusted CI
+public/data/turso/

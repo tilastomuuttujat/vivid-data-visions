@@ -19,6 +19,10 @@ class ReleasePackageTests(unittest.TestCase):
             build = root / 'build'
             build.mkdir()
             (build / 'index.html').write_text('<html><head></head><body>current-app</body></html>')
+            snapshot = root / 'public/data/turso'
+            (snapshot / 'images').mkdir(parents=True)
+            (snapshot / 'catalog.json').write_text('{"version":1}')
+            (snapshot / 'images/public.webp').write_bytes(b'public-image')
             original_root = package.__globals__['ROOT']
             try:
                 package.__globals__['ROOT'] = root
@@ -29,10 +33,15 @@ class ReleasePackageTests(unittest.TestCase):
                 with zipfile.ZipFile(root / f'site/downloads/atlas-{mode}.zip') as archive:
                     self.assertIn(f'__ATLAS_INITIAL_MODE__="{mode}"', archive.read('index.html').decode())
                     self.assertIn('LUEMINUT.txt', archive.namelist())
+                    self.assertEqual(archive.read('data/turso/images/public.webp'), b'public-image')
                     for name in ('atlas.json', 'anchors.json', 'maakunnat.json'):
                         self.assertEqual(archive.read(f'data/{name}'), (data / name).read_bytes())
             self.assertTrue((root / 'site/downloads/minka-varaan-suomi.zip').exists())
             self.assertTrue((root / 'site/.nojekyll').exists())
+            self.assertEqual((root / 'site/data/turso/images/public.webp').read_bytes(), b'public-image')
+            self.assertEqual((root / 'site/downloads/data/turso/catalog.json').read_bytes(), (snapshot / 'catalog.json').read_bytes())
+            with zipfile.ZipFile(root / 'site/downloads/minka-varaan-suomi.zip') as archive:
+                self.assertEqual(archive.read('data/turso/images/public.webp'), b'public-image')
 
 
 if __name__ == '__main__':

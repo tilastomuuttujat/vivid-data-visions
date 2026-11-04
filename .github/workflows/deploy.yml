@@ -29,6 +29,12 @@ jobs:
       - run: bun run typecheck
       - run: bun run test
       - run: bun run test:data
+      - run: python -m unittest discover -s scripts/publish -p "test_*.py"
+      - name: Export published data and verified images from Turso
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+        run: python scripts/publish/export_turso.py
       - run: bun run build:site
       - uses: actions/upload-artifact@v4
         with:

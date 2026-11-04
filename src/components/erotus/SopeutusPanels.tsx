@@ -6,7 +6,7 @@ type S = { year: number; delta: number };
 const fmt = (n: number) => `${n >= 0 ? "+" : "−"}${Math.abs(n).toFixed(0)}`;
 
 /** Stock view: cumulative areas of the net shadow, overall and per period. */
-export function CumulativeMeter({ net, year }: { net: S[]; year?: number }) {
+export function CumulativeMeter({ net, year }: { net: S[]; year?: number | undefined }) {
   const upTo = year ?? NOW;
   const all = cumulativeNet(net, upTo);
   const max = Math.max(all.gain, all.cost, 1);
@@ -47,7 +47,7 @@ function line(vals: { year: number; v: number | null }[], lo: number, hi: number
 }
 
 /** Measured background on the fixed 1850–2050 axis. */
-export function MeasuredSopeutus({ year }: { year?: number }) {
+export function MeasuredSopeutus({ year }: { year?: number | undefined }) {
   const row = year ? pts.find((p) => p.year === year) : undefined;
   const g = year ? prodGrowth.find((p) => p.year === year)?.v : undefined;
   return (

@@ -24,6 +24,8 @@ import { AdminBar } from "@/components/editor/AdminBar";
 
 import { Selityspolku } from "@/components/selityspolku/Selityspolku";
 
+import { Aineisto } from "@/components/aineisto/Aineisto";
+
 const rootRoute = createRootRoute({
   component: () => (
     <>
@@ -33,6 +35,7 @@ const rootRoute = createRootRoute({
   ),
 });
 const routes = [
+  createRoute({ getParentRoute: () => rootRoute, path: "/aineisto", component: Aineisto }),
   createRoute({ getParentRoute: () => rootRoute, path: "/selityspolku", component: Selityspolku }),
   createRoute({ getParentRoute: () => rootRoute, path: "/kokonaiskuva", component: Kokonaiskuva }),
   createRoute({ getParentRoute: () => rootRoute, path: "/erotus-tulot", component: ErotusTulot }),
