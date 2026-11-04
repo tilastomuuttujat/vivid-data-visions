@@ -12,88 +12,88 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | arviointi | lens_baselines | 1080 | Siirtämättä / arvioitava |
 | arviointi | matrices | 1 | Siirtämättä / arvioitava |
 | arviointi | overrides | 13 | Siirtämättä / arvioitava |
-| lakikartta | amendment_parents | 0 | Tyhjä lähteessä |
-| lakikartta | asetus_authority | 0 | Tyhjä lähteessä |
-| lakikartta | assessment_cases | 9 | Siirtämättä / arvioitava |
-| lakikartta | assessment_frameworks | 1 | Siirtämättä / arvioitava |
-| lakikartta | assessment_sections | 72 | Siirtämättä / arvioitava |
-| lakikartta | assessment_sources | 28 | Siirtämättä / arvioitava |
-| lakikartta | claim_statute_link | 0 | Tyhjä lähteessä |
-| lakikartta | co_amendments | 0 | Tyhjä lähteessä |
-| lakikartta | cofog | 69 | Siirtämättä / arvioitava |
-| lakikartta | cofog_mapping | 0 | Tyhjä lähteessä |
-| lakikartta | committee_he_link | 0 | Tyhjä lähteessä |
-| lakikartta | committee_scrutiny | 16 | Siirtämättä / arvioitava |
-| lakikartta | core_amendment_parents | 157 | Siirtämättä / arvioitava |
-| lakikartta | core_change_intensity | 54 | Siirtämättä / arvioitava |
-| lakikartta | core_co_amendments | 1025 | Siirtämättä / arvioitava |
-| lakikartta | core_co_amendments_sync_stage | 75 | Siirtämättä / arvioitava |
-| lakikartta | core_coupling_summary | 54 | Siirtämättä / arvioitava |
-| lakikartta | core_delegation_depth | 54 | Siirtämättä / arvioitava |
-| lakikartta | core_he_statute_link | 180 | Siirtämättä / arvioitava |
-| lakikartta | core_successors | 61 | Siirtämättä / arvioitava |
-| lakikartta | dataset_inventory | 38 | Siirtämättä / arvioitava |
-| lakikartta | delegation_drift_scale | 0 | Tyhjä lähteessä |
-| lakikartta | delegations | 0 | Tyhjä lähteessä |
-| lakikartta | edges | 0 | Tyhjä lähteessä |
-| lakikartta | editorial_notes | 0 | Tyhjä lähteessä |
-| lakikartta | expert_org_he_link | 0 | Tyhjä lähteessä |
-| lakikartta | expert_org_scrutiny | 0 | Tyhjä lähteessä |
-| lakikartta | expert_person | 0 | Tyhjä lähteessä |
-| lakikartta | expert_person_he_link | 0 | Tyhjä lähteessä |
-| lakikartta | he_capital_coverage | 0 | Tyhjä lähteessä |
-| lakikartta | he_claims | 0 | Tyhjä lähteessä |
-| lakikartta | he_he_refs | 0 | Tyhjä lähteessä |
-| lakikartta | he_nodes | 0 | Tyhjä lähteessä |
-| lakikartta | he_scrutiny | 0 | Tyhjä lähteessä |
-| lakikartta | he_signatories | 0 | Tyhjä lähteessä |
-| lakikartta | he_statute_link | 0 | Tyhjä lähteessä |
-| lakikartta | historical_card_reviews | 316 | Siirtämättä / arvioitava |
-| lakikartta | historical_legal_events | 101 | Siirtämättä / arvioitava |
-| lakikartta | historical_office_people | 200 | Siirtämättä / arvioitava |
-| lakikartta | historical_office_reviews | 3 | Siirtämättä / arvioitava |
-| lakikartta | historical_office_terms | 381 | Siirtämättä / arvioitava |
-| lakikartta | historical_statute_snapshots | 2335 | Siirtämättä / arvioitava |
-| lakikartta | import_jobs | 1 | Siirtämättä / arvioitava |
-| lakikartta | institution_statute_edges | 54 | Siirtämättä / arvioitava |
-| lakikartta | institutions | 22 | Siirtämättä / arvioitava |
-| lakikartta | item_statute_evidence | 287 | Siirtämättä / arvioitava |
-| lakikartta | item_statute_reviews | 108 | Siirtämättä / arvioitava |
-| lakikartta | mapping | 0 | Tyhjä lähteessä |
-| lakikartta | ministerial_appointments | 1682 | Siirtämättä / arvioitava |
-| lakikartta | ministerial_governments | 77 | Siirtämättä / arvioitava |
-| lakikartta | ministerial_import_reviews | 45 | Siirtämättä / arvioitava |
-| lakikartta | ministerial_import_sources | 4 | Siirtämättä / arvioitava |
-| lakikartta | ministerial_people | 634 | Siirtämättä / arvioitava |
-| lakikartta | ministry_he_profile | 13 | Siirtämättä / arvioitava |
-| lakikartta | momentit | 0 | Tyhjä lähteessä |
-| lakikartta | procurement | 13 | Siirtämättä / arvioitava |
-| lakikartta | signatory_profile | 0 | Tyhjä lähteessä |
-| lakikartta | societal_concept_coverage | 1817 | Siirtämättä / arvioitava |
-| lakikartta | societal_concept_series | 6028 | Siirtämättä / arvioitava |
-| lakikartta | societal_concepts | 42 | Siirtämättä / arvioitava |
-| lakikartta | societal_mapping_runs | 12 | Siirtämättä / arvioitava |
-| lakikartta | societal_series_inventory | 67843 | Siirtämättä / arvioitava |
-| lakikartta | source_meta | 13 | Siirtämättä / arvioitava |
-| lakikartta | state_enterprise_events | 137 | Siirtämättä / arvioitava |
-| lakikartta | state_enterprise_ownership | 133 | Siirtämättä / arvioitava |
-| lakikartta | state_enterprise_reviews | 11 | Siirtämättä / arvioitava |
-| lakikartta | state_enterprise_sources | 23 | Siirtämättä / arvioitava |
-| lakikartta | state_enterprises | 134 | Siirtämättä / arvioitava |
-| lakikartta | statute_arc_links | 14 | Siirtämättä / arvioitava |
-| lakikartta | statute_catalog | 2551 | Siirtämättä / arvioitava |
-| lakikartta | statute_documents | 453 | Siirtämättä / arvioitava |
-| lakikartta | statute_first_degree | 1768 | Siirtämättä / arvioitava |
-| lakikartta | statute_funding_rules | 52 | Siirtämättä / arvioitava |
-| lakikartta | statute_network_summary | 54 | Siirtämättä / arvioitava |
-| lakikartta | statute_provisions | 5937 | Siirtämättä / arvioitava |
-| lakikartta | statute_research_metrics | 490 | Siirtämättä / arvioitava |
-| lakikartta | statute_retrieval_attempts | 106 | Siirtämättä / arvioitava |
-| lakikartta | statute_system_weight | 50 | Siirtämättä / arvioitava |
-| lakikartta | statutes | 0 | Tyhjä lähteessä |
-| lakikartta | statutes_core | 54 | Siirtämättä / arvioitava |
-| lakikartta | successors | 0 | Tyhjä lähteessä |
-| lakikartta | tae_texts | 0 | Tyhjä lähteessä |
+| lakikartta | amendment_parents | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | asetus_authority | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | assessment_cases | 9 | Valmisteltu Lakikartta-ajo |
+| lakikartta | assessment_frameworks | 1 | Valmisteltu Lakikartta-ajo |
+| lakikartta | assessment_sections | 72 | Valmisteltu Lakikartta-ajo |
+| lakikartta | assessment_sources | 28 | Valmisteltu Lakikartta-ajo |
+| lakikartta | claim_statute_link | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | co_amendments | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | cofog | 69 | Valmisteltu Lakikartta-ajo |
+| lakikartta | cofog_mapping | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | committee_he_link | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | committee_scrutiny | 16 | Valmisteltu Lakikartta-ajo |
+| lakikartta | core_amendment_parents | 157 | Valmisteltu Lakikartta-ajo |
+| lakikartta | core_change_intensity | 54 | Valmisteltu Lakikartta-ajo |
+| lakikartta | core_co_amendments | 1025 | Valmisteltu Lakikartta-ajo |
+| lakikartta | core_co_amendments_sync_stage | 75 | Valmisteltu Lakikartta-ajo |
+| lakikartta | core_coupling_summary | 54 | Valmisteltu Lakikartta-ajo |
+| lakikartta | core_delegation_depth | 54 | Valmisteltu Lakikartta-ajo |
+| lakikartta | core_he_statute_link | 180 | Valmisteltu Lakikartta-ajo |
+| lakikartta | core_successors | 61 | Valmisteltu Lakikartta-ajo |
+| lakikartta | dataset_inventory | 38 | Valmisteltu Lakikartta-ajo |
+| lakikartta | delegation_drift_scale | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | delegations | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | edges | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | editorial_notes | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | expert_org_he_link | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | expert_org_scrutiny | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | expert_person | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | expert_person_he_link | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | he_capital_coverage | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | he_claims | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | he_he_refs | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | he_nodes | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | he_scrutiny | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | he_signatories | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | he_statute_link | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | historical_card_reviews | 316 | Valmisteltu Lakikartta-ajo |
+| lakikartta | historical_legal_events | 101 | Valmisteltu Lakikartta-ajo |
+| lakikartta | historical_office_people | 200 | Valmisteltu Lakikartta-ajo |
+| lakikartta | historical_office_reviews | 3 | Valmisteltu Lakikartta-ajo |
+| lakikartta | historical_office_terms | 381 | Valmisteltu Lakikartta-ajo |
+| lakikartta | historical_statute_snapshots | 2335 | Valmisteltu Lakikartta-ajo |
+| lakikartta | import_jobs | 1 | Valmisteltu Lakikartta-ajo |
+| lakikartta | institution_statute_edges | 54 | Valmisteltu Lakikartta-ajo |
+| lakikartta | institutions | 22 | Valmisteltu Lakikartta-ajo |
+| lakikartta | item_statute_evidence | 287 | Valmisteltu Lakikartta-ajo |
+| lakikartta | item_statute_reviews | 108 | Valmisteltu Lakikartta-ajo |
+| lakikartta | mapping | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | ministerial_appointments | 1682 | Valmisteltu Lakikartta-ajo |
+| lakikartta | ministerial_governments | 77 | Valmisteltu Lakikartta-ajo |
+| lakikartta | ministerial_import_reviews | 45 | Valmisteltu Lakikartta-ajo |
+| lakikartta | ministerial_import_sources | 4 | Valmisteltu Lakikartta-ajo |
+| lakikartta | ministerial_people | 634 | Valmisteltu Lakikartta-ajo |
+| lakikartta | ministry_he_profile | 13 | Valmisteltu Lakikartta-ajo |
+| lakikartta | momentit | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | procurement | 13 | Valmisteltu Lakikartta-ajo |
+| lakikartta | signatory_profile | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | societal_concept_coverage | 1817 | Valmisteltu Lakikartta-ajo |
+| lakikartta | societal_concept_series | 6028 | Valmisteltu Lakikartta-ajo |
+| lakikartta | societal_concepts | 42 | Valmisteltu Lakikartta-ajo |
+| lakikartta | societal_mapping_runs | 12 | Valmisteltu Lakikartta-ajo |
+| lakikartta | societal_series_inventory | 67843 | Valmisteltu Lakikartta-ajo |
+| lakikartta | source_meta | 13 | Valmisteltu Lakikartta-ajo |
+| lakikartta | state_enterprise_events | 137 | Valmisteltu Lakikartta-ajo |
+| lakikartta | state_enterprise_ownership | 133 | Valmisteltu Lakikartta-ajo |
+| lakikartta | state_enterprise_reviews | 11 | Valmisteltu Lakikartta-ajo |
+| lakikartta | state_enterprise_sources | 23 | Valmisteltu Lakikartta-ajo |
+| lakikartta | state_enterprises | 134 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statute_arc_links | 14 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statute_catalog | 2551 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statute_documents | 453 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statute_first_degree | 1768 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statute_funding_rules | 52 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statute_network_summary | 54 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statute_provisions | 5937 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statute_research_metrics | 490 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statute_retrieval_attempts | 106 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statute_system_weight | 50 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statutes | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | statutes_core | 54 | Valmisteltu Lakikartta-ajo |
+| lakikartta | successors | 0 | Valmisteltu Lakikartta-ajo |
+| lakikartta | tae_texts | 0 | Valmisteltu Lakikartta-ajo |
 | public | article_dataset_meta | 1 | Valmis |
 | public | article_links | 436 | Valmis |
 | public | article_relation_types | 5 | Valmis |
@@ -130,11 +130,11 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | public | indicator_series | 2461 | Valmis |
 | public | indicator_values | 629741 | Valmis |
 | public | infographics | 288 | Valmis |
-| public | item_execution_depth | 22 | Siirtämättä / arvioitava |
-| public | item_institutional_weight | 22 | Siirtämättä / arvioitava |
-| public | item_statute_candidates | 123 | Siirtämättä / arvioitava |
-| public | item_statute_links | 292 | Siirtämättä / arvioitava |
-| public | item_structural_risk | 22 | Siirtämättä / arvioitava |
+| public | item_execution_depth | 22 | Valmisteltu Lakikartta-ajo |
+| public | item_institutional_weight | 22 | Valmisteltu Lakikartta-ajo |
+| public | item_statute_candidates | 123 | Valmisteltu Lakikartta-ajo |
+| public | item_statute_links | 292 | Valmisteltu Lakikartta-ajo |
+| public | item_structural_risk | 22 | Valmisteltu Lakikartta-ajo |
 | public | items | 1112 | Valmis |
 | public | painekartta_edges | 595 | Valmis |
 | public | painekartta_nodes | 313 | Valmis |
@@ -147,10 +147,10 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | public | public_finance_sources | 139 | Valmis |
 | public | relations | 595 | Valmis |
 | public | selitysatlas_links | 323 | Valmis |
-| public | simulation_indicator_baselines | 312 | Siirtämättä / arvioitava |
-| public | simulation_normalization_params | 12 | Siirtämättä / arvioitava |
-| public | simulation_statute_effects | 46 | Siirtämättä / arvioitava |
-| public | simulation_statute_levers | 12 | Siirtämättä / arvioitava |
+| public | simulation_indicator_baselines | 312 | Valmisteltu Lakikartta-ajo |
+| public | simulation_normalization_params | 12 | Valmisteltu Lakikartta-ajo |
+| public | simulation_statute_effects | 46 | Valmisteltu Lakikartta-ajo |
+| public | simulation_statute_levers | 12 | Valmisteltu Lakikartta-ajo |
 | public | statistic_series | 12 | Valmis |
 | public | statistic_values | 36 | Valmis |
 | research | area | 736 | Siirtämättä / arvioitava |
@@ -233,3 +233,5 @@ Yksityisiä skeemoja ei avata julkiseksi siirron vuoksi. Niille tarvitaan palvel
 Julkisen talouden jatkettava siirto on toteutettu: [turso-finance.md](turso-finance.md). Valmistuminen varmennettu ajon 41778233117 toisesta yrityksestä: 1003673 riviä ja kaikki viittaukset PASS.
 
 Selitysatlas ja infografiikkojen metatiedot: 20 taulua, 1079 riviä, varmennettu ajossa 41853068179; [turso-selitysatlas.md](turso-selitysatlas.md). PASS vahvistettu; siirtokohtainen RPC poistettu ja lisätyt lukuoikeudet palautettu. Kuva- ja liitetiedostot ovat edelleen erillinen tehtävä.
+
+Lakikartta ja siihen liittyvät public-kortti-/simulaattoritaulut: [turso-lakikartta.md](turso-lakikartta.md). 91 taulua, 96754 riviä; valmisteltu automaattinen ajo, ei vielä varmennettua PASS-tulosta. Mukana myös tyhjät taulurakenteet. Research, arviointi, kuvabinaarit ja käyttöönotto ovat edelleen kesken.
