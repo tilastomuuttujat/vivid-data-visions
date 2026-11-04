@@ -58,3 +58,8 @@ Siivouksen jälkeen automaattinen uudelleenajo edellyttää lukutoiminnon uutta 
 ## Testit
 python -m unittest discover -s scripts/migration -p 'test_turso*.py'
 Live SQL-testissä kaikki 20 taulua palauttivat palvelinroolilla odotetun määrän. Tarkistettu, ettei funktio ole SECURITY DEFINER eikä anon/authenticated voi suorittaa sitä.
+
+## Vahvistettu valmistuminen 4.11.2026
+Ajo https://github.com/tilastomuuttujat/vivid-data-visions/actions/runs/41853068179 valmistui onnistuneesti. Lokissa PASS: Selitysatlas and infographic metadata; 1079 rows, all contents and references verified.
+Cleanup-SQL on suoritettu: migration_selity_page_v1 poistettu, service_role-skeemakäyttöoikeus ja kaikkien 18 taulun lisätyt SELECT-oikeudet palautettu aiempaan tilaan. Kaikki kolme jälkitarkistusta palauttivat true (reader_removed, schema_restored, table_grants_restored).
+Älä käynnistä siirtoa uudelleen ilman palvelinlukijan uutta valmistelua. Kuvien varsinaiset tiedostot eivät sisälly tähän varmennukseen.
