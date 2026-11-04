@@ -7,11 +7,11 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 
 | Skeema | Taulu | Rivejä | Tilanne |
 |---|---|---:|---|
-| arviointi | excluded | 2 | Siirtämättä / arvioitava |
-| arviointi | lens_aggregate | 1080 | Siirtämättä / arvioitava |
-| arviointi | lens_baselines | 1080 | Siirtämättä / arvioitava |
-| arviointi | matrices | 1 | Siirtämättä / arvioitava |
-| arviointi | overrides | 13 | Siirtämättä / arvioitava |
+| arviointi | excluded | 2 | Valmisteltu Arviointi-ajo |
+| arviointi | lens_aggregate | 1080 | Valmisteltu Arviointi-ajo |
+| arviointi | lens_baselines | 1080 | Valmisteltu Arviointi-ajo |
+| arviointi | matrices | 1 | Valmisteltu Arviointi-ajo |
+| arviointi | overrides | 13 | Valmisteltu Arviointi-ajo |
 | lakikartta | amendment_parents | 0 | Valmis |
 | lakikartta | asetus_authority | 0 | Valmis |
 | lakikartta | assessment_cases | 9 | Valmis |
@@ -153,54 +153,54 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | public | simulation_statute_levers | 12 | Valmis |
 | public | statistic_series | 12 | Valmis |
 | public | statistic_values | 36 | Valmis |
-| research | area | 736 | Valmisteltu research-ajo |
-| research | area_classification | 8 | Valmisteltu research-ajo |
-| research | area_mapping | 656 | Valmisteltu research-ajo |
-| research | audit_log | 1742 | Valmisteltu research-ajo |
-| research | card_citation | 0 | Valmisteltu research-ajo |
-| research | card_evidence_assessment | 36 | Valmisteltu research-ajo |
-| research | card_section | 91 | Valmisteltu research-ajo |
-| research | card_version | 9 | Valmisteltu research-ajo |
-| research | claim | 12 | Valmisteltu research-ajo |
-| research | claim_version | 13 | Valmisteltu research-ajo |
-| research | computation | 13 | Valmisteltu research-ajo |
-| research | computation_input | 62 | Valmisteltu research-ajo |
-| research | computation_run | 30 | Valmisteltu research-ajo |
-| research | coverage_assessment | 0 | Valmisteltu research-ajo |
-| research | coverage_cell | 0 | Valmisteltu research-ajo |
-| research | coverage_evidence | 0 | Valmisteltu research-ajo |
-| research | dataset | 29 | Valmisteltu research-ajo |
-| research | dataset_version | 30 | Valmisteltu research-ajo |
-| research | derived_value | 18750 | Valmisteltu research-ajo |
-| research | evidence_kind_exception | 0 | Valmisteltu research-ajo |
-| research | evidence_link | 15 | Valmisteltu research-ajo |
-| research | hypothesis | 0 | Valmisteltu research-ajo |
-| research | hypothesis_test | 0 | Valmisteltu research-ajo |
-| research | hypothesis_version | 0 | Valmisteltu research-ajo |
-| research | impact_channel | 515 | Valmisteltu research-ajo |
-| research | impact_external_revision | 1 | Valmisteltu research-ajo |
-| research | impact_input_binding | 8 | Valmisteltu research-ajo |
-| research | impact_model | 3 | Valmisteltu research-ajo |
-| research | impact_model_run | 20 | Valmisteltu research-ajo |
-| research | impact_model_theme | 96 | Valmisteltu research-ajo |
-| research | impact_point | 13376 | Valmisteltu research-ajo |
-| research | impact_release | 2 | Valmisteltu research-ajo |
-| research | impact_run_check | 20 | Valmisteltu research-ajo |
-| research | impact_snapshot | 2 | Valmisteltu research-ajo |
-| research | impact_theme_year | 11264 | Valmisteltu research-ajo |
-| research | indicator | 25 | Valmisteltu research-ajo |
-| research | indicator_definition | 25 | Valmisteltu research-ajo |
-| research | observation | 52119 | Valmisteltu research-ajo |
-| research | open_question | 16 | Valmisteltu research-ajo |
-| research | period | 0 | Valmisteltu research-ajo |
-| research | plot | 0 | Valmisteltu research-ajo |
-| research | research_case | 3 | Valmisteltu research-ajo |
-| research | research_task | 21 | Valmisteltu research-ajo |
-| research | retrieval | 30 | Valmisteltu research-ajo |
-| research | revision_basis | 1 | Valmisteltu research-ajo |
-| research | source | 32 | Valmisteltu research-ajo |
-| research | source_locator | 3 | Valmisteltu research-ajo |
-| research | source_type | 3 | Valmisteltu research-ajo |
+| research | area | 736 | Valmis |
+| research | area_classification | 8 | Valmis |
+| research | area_mapping | 656 | Valmis |
+| research | audit_log | 1742 | Valmis |
+| research | card_citation | 0 | Valmis |
+| research | card_evidence_assessment | 36 | Valmis |
+| research | card_section | 91 | Valmis |
+| research | card_version | 9 | Valmis |
+| research | claim | 12 | Valmis |
+| research | claim_version | 13 | Valmis |
+| research | computation | 13 | Valmis |
+| research | computation_input | 62 | Valmis |
+| research | computation_run | 30 | Valmis |
+| research | coverage_assessment | 0 | Valmis |
+| research | coverage_cell | 0 | Valmis |
+| research | coverage_evidence | 0 | Valmis |
+| research | dataset | 29 | Valmis |
+| research | dataset_version | 30 | Valmis |
+| research | derived_value | 18750 | Valmis |
+| research | evidence_kind_exception | 0 | Valmis |
+| research | evidence_link | 15 | Valmis |
+| research | hypothesis | 0 | Valmis |
+| research | hypothesis_test | 0 | Valmis |
+| research | hypothesis_version | 0 | Valmis |
+| research | impact_channel | 515 | Valmis |
+| research | impact_external_revision | 1 | Valmis |
+| research | impact_input_binding | 8 | Valmis |
+| research | impact_model | 3 | Valmis |
+| research | impact_model_run | 20 | Valmis |
+| research | impact_model_theme | 96 | Valmis |
+| research | impact_point | 13376 | Valmis |
+| research | impact_release | 2 | Valmis |
+| research | impact_run_check | 20 | Valmis |
+| research | impact_snapshot | 2 | Valmis |
+| research | impact_theme_year | 11264 | Valmis |
+| research | indicator | 25 | Valmis |
+| research | indicator_definition | 25 | Valmis |
+| research | observation | 52119 | Valmis |
+| research | open_question | 16 | Valmis |
+| research | period | 0 | Valmis |
+| research | plot | 0 | Valmis |
+| research | research_case | 3 | Valmis |
+| research | research_task | 21 | Valmis |
+| research | retrieval | 30 | Valmis |
+| research | revision_basis | 1 | Valmis |
+| research | source | 32 | Valmis |
+| research | source_locator | 3 | Valmis |
+| research | source_type | 3 | Valmis |
 | selitysatlas | categories | 5 | Valmis |
 | selitysatlas | contested_explanations | 1 | Valmis |
 | selitysatlas | decisions | 4 | Valmis |
@@ -236,4 +236,6 @@ Selitysatlas ja infografiikkojen metatiedot: 20 taulua, 1079 riviä, varmennettu
 
 Lakikartta ja siihen liittyvät public-kortti-/simulaattoritaulut: [turso-lakikartta.md](turso-lakikartta.md). 91 taulua, 96754 riviä; PASS varmennettu ajossa 41856001578. Siirtokohtainen lukija poistettu ja lisätyt oikeudet palautettu. Mukana myös tyhjät taulurakenteet. Research, arviointi, kuvabinaarit ja käyttöönotto ovat edelleen kesken.
 
-Research-siirto: [turso-research.md](turso-research.md), 48 taulua, 99817 riviä, 98 vierasavainta. Valmisteltu automaattinen ajo; ei vielä vahvistettua PASS-tulosta. Arviointi, kuvabinaarit ja käyttöönotto ovat edelleen kesken.
+Research-siirto: [turso-research.md](turso-research.md), 48 taulua, 99817 riviä, 98 vierasavainta. PASS varmennettu ajossa 41874752281; siirtokohtainen lukija poistettu ja aiemmat oikeudet palautettu. Arviointi, kuvabinaarit ja käyttöönotto ovat edelleen kesken.
+
+Arviointikartta: [turso-arviointi.md](turso-arviointi.md), 5 taulua, 2176 riviä. Valmisteltu ajo, ei vielä PASS-tulosta. Matriisien omistajatunniste säilyy; Auth-käyttöönotto ja käyttäjäkohtaiset oikeudet ovat erillinen tehtävä.
