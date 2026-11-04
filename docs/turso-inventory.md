@@ -239,3 +239,5 @@ Lakikartta ja siihen liittyvät public-kortti-/simulaattoritaulut: [turso-lakika
 Research-siirto: [turso-research.md](turso-research.md), 48 taulua, 99817 riviä, 98 vierasavainta. PASS varmennettu ajossa 41874752281; siirtokohtainen lukija poistettu ja aiemmat oikeudet palautettu. Arviointi, kuvabinaarit ja käyttöönotto ovat edelleen kesken.
 
 Arviointikartta: [turso-arviointi.md](turso-arviointi.md), 5 taulua, 2176 riviä. PASS varmennettu ajossa 41884635156; lukija poistettu ja lisätyt oikeudet palautettu. Matriisien omistajatunniste säilyy; Auth-käyttöönotto ja käyttäjäkohtaiset oikeudet ovat erillinen tehtävä.
+
+Kuvatiedostojen Turso-arkisto on valmisteltu: [turso-images.md](turso-images.md), 288 WebP-tiedostoa, 70468014 tavua. Ei vielä varmennettua PASS-tulosta. Lähteessä on viisi puuttuvaa metatietojen tiedostopolkua; arkistointi ei korjaa niitä automaattisesti eikä vaihda sovelluksen kuvajakeluja.
