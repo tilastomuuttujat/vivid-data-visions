@@ -30,6 +30,12 @@ def package(build, output, downloads_only=False):
         shutil.copyfile(ROOT / 'src/data' / name, downloads / 'data' / name)
     if snapshot_files:
         shutil.copytree(snapshot, downloads / 'data/turso', dirs_exist_ok=True)
+    editor = ROOT / 'public/article-editor/index.html'
+    if editor.exists():
+        shutil.copyfile(editor, downloads / 'artikkelieditori.html')
+        if not downloads_only:
+            (output / 'article-editor').mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(editor, output / 'article-editor/index.html')
     for mode in ('2d', '3d'):
         variant = html.replace('<head>', f'<head><script>window.__ATLAS_INITIAL_MODE__="{mode}";</script>', 1)
         if variant == html:

@@ -23,6 +23,9 @@ class ReleasePackageTests(unittest.TestCase):
             (snapshot / 'images').mkdir(parents=True)
             (snapshot / 'catalog.json').write_text('{"version":1}')
             (snapshot / 'images/public.webp').write_bytes(b'public-image')
+            editor = root / 'public/article-editor/index.html'
+            editor.parent.mkdir(parents=True)
+            editor.write_text('standalone-editor')
             original_root = package.__globals__['ROOT']
             try:
                 package.__globals__['ROOT'] = root
@@ -38,6 +41,8 @@ class ReleasePackageTests(unittest.TestCase):
                         self.assertEqual(archive.read(f'data/{name}'), (data / name).read_bytes())
             self.assertTrue((root / 'site/downloads/minka-varaan-suomi.zip').exists())
             self.assertTrue((root / 'site/.nojekyll').exists())
+            self.assertEqual((root / 'site/article-editor/index.html').read_text(), 'standalone-editor')
+            self.assertEqual((root / 'site/downloads/artikkelieditori.html').read_text(), 'standalone-editor')
             self.assertEqual((root / 'site/data/turso/images/public.webp').read_bytes(), b'public-image')
             self.assertEqual((root / 'site/downloads/data/turso/catalog.json').read_bytes(), (snapshot / 'catalog.json').read_bytes())
             with zipfile.ZipFile(root / 'site/downloads/minka-varaan-suomi.zip') as archive:

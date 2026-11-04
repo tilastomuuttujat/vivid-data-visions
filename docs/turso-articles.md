@@ -24,7 +24,7 @@ viitteet ja muut toimitukselliset merkinnät säilyvät tekstissä.
 
 ## Selainpohjainen artikkelieditori
 
-Katso [artikkelieditorin käyttöönotto](article-editor.md). Se tarjoaa hakemiston,
+Katso [artikkelieditorin käyttöönotto](article-editor.md). Ensisijainen versio on yksi HTML+JS-tiedosto. Se tarjoaa hakemiston,
 muokkauslomakkeen, versiohistorian ja palautuksen Turson taulueditorin rinnalle.
 
 ## Muokkaaminen iPadilla

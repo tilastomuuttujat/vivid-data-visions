@@ -6,6 +6,7 @@ function notice(message, error = false) { $("notice").hidden = false; $("notice"
 function mark(value) { dirty = value; $("save").disabled = !value || busy; $("dirty").textContent = value ? "Tallentamattomia muutoksia" : "Tallennettu"; }
 function canLeave() { return !dirty || confirm("Tekstissä on tallentamattomia muutoksia. Haluatko hylätä ne? Voit peruuttaa ja ladata ensin oman tekstisi."); }
 async function api(path, data) {
+  if (window.articleEditorTransport) return window.articleEditorTransport(path, data);
   const options = { credentials: "same-origin", headers: {} };
   if (data !== undefined) { options.method = "POST"; options.headers = { "Content-Type": "application/json", "X-Editor-CSRF": csrf }; options.body = JSON.stringify(data); }
   const response = await fetch(path, options);
@@ -64,7 +65,7 @@ async function loadHistory(id, own = sequence) {
 }
 $("login-form").onsubmit = async event => {
   event.preventDefault(); $("login-error").textContent = "";
-  try { csrf = (await api("/api/login", { password: $("password").value })).csrf; $("password").value = ""; await enter(); }
+  try { csrf = (await api("/api/login", { password: $("password").value, url: $("database-url")?.value })).csrf; $("password").value = ""; await enter(); }
   catch (error) { $("login-error").textContent = error.message; }
 };
 async function enter() { await refreshCatalog(); $("login").hidden = true; $("workspace").hidden = false; $("logout").hidden = false; }
