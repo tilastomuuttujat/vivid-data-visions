@@ -7,11 +7,11 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 
 | Skeema | Taulu | Rivejä | Tilanne |
 |---|---|---:|---|
-| arviointi | excluded | 2 | Valmisteltu Arviointi-ajo |
-| arviointi | lens_aggregate | 1080 | Valmisteltu Arviointi-ajo |
-| arviointi | lens_baselines | 1080 | Valmisteltu Arviointi-ajo |
-| arviointi | matrices | 1 | Valmisteltu Arviointi-ajo |
-| arviointi | overrides | 13 | Valmisteltu Arviointi-ajo |
+| arviointi | excluded | 2 | Valmis |
+| arviointi | lens_aggregate | 1080 | Valmis |
+| arviointi | lens_baselines | 1080 | Valmis |
+| arviointi | matrices | 1 | Valmis |
+| arviointi | overrides | 13 | Valmis |
 | lakikartta | amendment_parents | 0 | Valmis |
 | lakikartta | asetus_authority | 0 | Valmis |
 | lakikartta | assessment_cases | 9 | Valmis |
@@ -238,4 +238,4 @@ Lakikartta ja siihen liittyvät public-kortti-/simulaattoritaulut: [turso-lakika
 
 Research-siirto: [turso-research.md](turso-research.md), 48 taulua, 99817 riviä, 98 vierasavainta. PASS varmennettu ajossa 41874752281; siirtokohtainen lukija poistettu ja aiemmat oikeudet palautettu. Arviointi, kuvabinaarit ja käyttöönotto ovat edelleen kesken.
 
-Arviointikartta: [turso-arviointi.md](turso-arviointi.md), 5 taulua, 2176 riviä. Valmisteltu ajo, ei vielä PASS-tulosta. Matriisien omistajatunniste säilyy; Auth-käyttöönotto ja käyttäjäkohtaiset oikeudet ovat erillinen tehtävä.
+Arviointikartta: [turso-arviointi.md](turso-arviointi.md), 5 taulua, 2176 riviä. PASS varmennettu ajossa 41884635156; lukija poistettu ja lisätyt oikeudet palautettu. Matriisien omistajatunniste säilyy; Auth-käyttöönotto ja käyttäjäkohtaiset oikeudet ovat erillinen tehtävä.
