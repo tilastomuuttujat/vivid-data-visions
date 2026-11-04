@@ -40,3 +40,9 @@ Inventaario: [turso-inventory.md](turso-inventory.md).
 
 ## Testaus
 python -m unittest discover -s scripts/migration -p 'test_turso*.py'
+
+## Suurten metatietorivien korjaus 4.11.2026
+Lähteen dataset_meta-taulussa on kolme yli 512 KiB:n JSON-riviä; suurin data::text on 1131139 tavua. Alkuperäinen ajo pysähtyi ennen niiden kirjoittamista siirtokoodin kokorajaan.
+Sisältösiirto sallii nyt enintään 4 MiB:n rivikohtaiset JSON-koodatut argumentit. Yli 512 KiB:n rivit lähetetään kukin omalla atomisella INSERT-lauseellaan, tavalliset rivit edelleen pienissä erissä. Kokoa mitataan HTTP-kuljetuksen JSON-escapet huomioiden. Sisältöä ei pilkota, typistetä tai korvata tiivisteellä. Liian suuri rivi hylätään ennen kyseisen sivun kirjoituksia.
+Muiden siirtojen oletusraja pysyy 512 KiB:ssa. Sisältö- ja ristiriitavertailut ovat ennallaan.
+Käynnistä korjauksen jälkeen **uusi Run workflow → main**; vanhan ajon Re-run käyttää vanhaa koodia. Aiemmin varmennetut 314 artikkelia, viisi suhdetyyppiä ja yksi artikkelimetarivi käytetään uudelleen.
