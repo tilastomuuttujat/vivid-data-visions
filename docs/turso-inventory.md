@@ -94,10 +94,10 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | lakikartta | statutes_core | 54 | Siirtämättä / arvioitava |
 | lakikartta | successors | 0 | Tyhjä lähteessä |
 | lakikartta | tae_texts | 0 | Tyhjä lähteessä |
-| public | article_dataset_meta | 1 | Siirtämättä / arvioitava |
-| public | article_links | 436 | Siirtämättä / arvioitava |
-| public | article_relation_types | 5 | Siirtämättä / arvioitava |
-| public | articles | 314 | Siirtämättä / arvioitava |
+| public | article_dataset_meta | 1 | Seuraava ajo |
+| public | article_links | 436 | Seuraava ajo |
+| public | article_relation_types | 5 | Seuraava ajo |
+| public | articles | 314 | Seuraava ajo |
 | public | association | 1 | Siirtämättä / arvioitava |
 | public | association_board_members | 6 | Siirtämättä / arvioitava |
 | public | association_contacts | 1 | Siirtämättä / arvioitava |
@@ -122,11 +122,11 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | public | atlas_themes | 32 | Valmis |
 | public | atlas_variable_indicators | 2986 | Valmis |
 | public | atlas_variables | 33 | Valmis |
-| public | attachments | 221 | Siirtämättä / arvioitava |
-| public | dataset_meta | 285 | Siirtämättä / arvioitava |
+| public | attachments | 221 | Seuraava ajo |
+| public | dataset_meta | 285 | Seuraava ajo |
 | public | donations | 0 | Tyhjä lähteessä |
 | public | entitlements | 0 | Tyhjä lähteessä |
-| public | indicator_aliases | 12 | Siirtämättä / arvioitava |
+| public | indicator_aliases | 12 | Seuraava ajo |
 | public | indicator_series | 2461 | Valmis |
 | public | indicator_values | 629741 | Valmis |
 | public | infographics | 288 | Siirtämättä / arvioitava |
@@ -136,8 +136,8 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | public | item_statute_links | 292 | Siirtämättä / arvioitava |
 | public | item_structural_risk | 22 | Siirtämättä / arvioitava |
 | public | items | 1112 | Valmis |
-| public | painekartta_edges | 595 | Seuraava ajo |
-| public | painekartta_nodes | 313 | Seuraava ajo |
+| public | painekartta_edges | 595 | Valmis |
+| public | painekartta_nodes | 313 | Valmis |
 | public | payment_events | 9 | Siirtämättä / arvioitava |
 | public | payments | 16 | Siirtämättä / arvioitava |
 | public | products | 4 | Siirtämättä / arvioitava |
@@ -145,14 +145,14 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | public | public_finance_observations | 970849 | Siirtämättä / arvioitava |
 | public | public_finance_series | 32661 | Siirtämättä / arvioitava |
 | public | public_finance_sources | 139 | Siirtämättä / arvioitava |
-| public | relations | 595 | Seuraava ajo |
+| public | relations | 595 | Valmis |
 | public | selitysatlas_links | 323 | Siirtämättä / arvioitava |
 | public | simulation_indicator_baselines | 312 | Siirtämättä / arvioitava |
 | public | simulation_normalization_params | 12 | Siirtämättä / arvioitava |
 | public | simulation_statute_effects | 46 | Siirtämättä / arvioitava |
 | public | simulation_statute_levers | 12 | Siirtämättä / arvioitava |
-| public | statistic_series | 12 | Siirtämättä / arvioitava |
-| public | statistic_values | 36 | Siirtämättä / arvioitava |
+| public | statistic_series | 12 | Seuraava ajo |
+| public | statistic_values | 36 | Seuraava ajo |
 | research | area | 736 | Siirtämättä / arvioitava |
 | research | area_classification | 8 | Siirtämättä / arvioitava |
 | research | area_mapping | 656 | Siirtämättä / arvioitava |
@@ -221,10 +221,11 @@ Yhdistys-, maksu- ja käyttäjähallinnan tauluja ei oteta automaattisesti tutki
 | selitysatlas | themes | 87 | Siirtämättä / arvioitava |
 
 ## Jatkojärjestys
-1. Korttien suhteet ja Painekartta (valmisteltu).
-2. Muut public-tutkimusaineistot ja metatiedot, mukaan lukien public_finance (970849 havaintoa ja 32661 sarjaa).
-3. lakikartta, selitysatlas ja arviointi riippuvuuksineen.
-4. research-taulut, alkuperäiset havainnot ja johdetut laskennat sekä niiden lähdeketjut.
-5. Sovellusyhteydet, ajantasaiset päivitykset, käyttöoikeudet ja palautustesti.
+1. Korttien suhteet ja Painekartta (varmennettu ajossa 41776080358).
+2. Sisältö ja metatiedot: 9 taulua, 1322 riviä (valmisteltu; ei vielä siirretty).
+3. Muut public-tutkimusaineistot ja metatiedot, mukaan lukien public_finance (970849 havaintoa ja 32661 sarjaa).
+4. lakikartta, selitysatlas ja arviointi riippuvuuksineen.
+5. research-taulut, alkuperäiset havainnot ja johdetut laskennat sekä niiden lähdeketjut.
+6. Sovellusyhteydet, ajantasaiset päivitykset, käyttöoikeudet ja palautustesti.
 
 Yksityisiä skeemoja ei avata julkiseksi siirron vuoksi. Niille tarvitaan palvelinpuolen vienti tai rajattu tietokantayhteys. Supabasea ei voi vielä poistaa.
