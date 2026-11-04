@@ -1,0 +1,200 @@
+<!doctype html><html lang="fi"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-T6FnPmKkEk87+bFu7+QFqz3zHbc8q+q9fQeFRmXpBPk=' 'sha256-TjNod9hBD76H9G5IGRncr3RGOv0+pa8bxeUu4M9MXTg='; style-src 'unsafe-inline'; connect-src https://*.turso.io; img-src data:; base-uri 'none'; form-action 'none'"><meta charset="utf-8"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Atlas · Artikkelieditori</title><style>
+:root{font:16px/1.5 system-ui,sans-serif;color:#193138;background:#f4f5ef}*{box-sizing:border-box}body{margin:0}header{padding:20px 28px;background:#193138;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:16px}h1{font:500 1.6rem Georgia,serif;margin:0}h2{font:500 1.6rem Georgia,serif}button,input,textarea,select{font:inherit}button{border:1px solid #8a9b99;border-radius:6px;background:#fff;padding:9px 15px;cursor:pointer;color:inherit}button.primary{background:#1c645e;color:white;border-color:#1c645e}button:disabled{opacity:.5;cursor:default}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #c98123;outline-offset:2px}input,textarea,select{width:100%;padding:10px;border:1px solid #a4b2ac;border-radius:5px;color:#193138;background:#fff}textarea{resize:vertical;line-height:1.7}label{display:grid;gap:5px;margin-bottom:14px;font-size:.9rem}#body{min-height:65vh;font-family:Georgia,serif;font-size:1.1rem}#login{max-width:460px;margin:60px auto;padding:28px}#workspace{display:grid;grid-template-columns:300px minmax(0,1fr);min-height:90vh}aside{padding:22px;border-right:1px solid #c6cdc5}#article-list{display:grid;gap:8px;max-height:75vh;overflow:auto}#article-list button{text-align:left;display:grid;gap:5px}#article-list button[aria-pressed=true]{border:2px solid #1c645e;background:#e3eeea}small,.muted{font-size:.8rem;opacity:.75}main{padding:26px;max-width:1100px;width:100%}.row{display:flex;gap:14px;align-items:end;flex-wrap:wrap}.row>label{flex:1;min-width:180px}.toolbar{position:sticky;bottom:0;padding:14px 0;background:#f4f5ef;display:flex;gap:10px;align-items:center;flex-wrap:wrap}#notice{margin:0;padding:14px 28px;background:#e4ede5;white-space:pre-wrap}#notice.error{background:#f7dfd6}#history-list{display:grid;gap:8px}#history{margin-top:30px;border-top:1px solid #a4b2ac}#revision-preview{white-space:pre-wrap;max-height:60vh;overflow:auto;padding:20px;background:#fff;border:1px solid #c6cdc5}#reading{white-space:pre-wrap;font:1.1rem/1.8 Georgia,serif;background:white;padding:24px;min-height:60vh}#login-error{color:#963f29}[hidden]{display:none!important}@media(max-width:760px){header{padding:16px}#workspace{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid #c6cdc5}#article-list{max-height:220px}main{padding:18px}.toolbar button{flex:1}#login{margin:24px auto}#body{min-height:60vh}}
+</style></head><body>
+<header><div><small>SUOMEN RAKENNEMUUTOSTEN ATLAS</small><h1>Artikkelieditori</h1></div><button id="logout" hidden>Katkaise yhteys</button></header>
+<p id="notice" role="status" aria-live="polite" hidden></p>
+<section id="login"><h2>Avaa artikkelikirjasto</h2><p>Anna Turso-kannan osoite ja kirjoittamiseen oikeuttava tunniste. Tunniste säilyy vain tämän välilehden muistissa. Sivun sulkeminen tai päivittäminen katkaisee yhteyden.</p><form id="login-form"><label>Tietokannan osoite<input id="database-url" value="libsql://murrosmatriisi-tilastomuuttujat.aws-eu-north-1.turso.io" autocomplete="off" spellcheck="false" required></label><label>Turso-tunniste<input id="password" type="password" autocomplete="off" spellcheck="false" required></label><button class="primary">Avaa tietokanta</button></form><p id="login-error" role="alert"></p></section>
+<div id="workspace" hidden><aside><label>Hae artikkeleista<input id="search" type="search" placeholder="Otsikko tai tila"></label><p id="count" class="muted"></p><div id="article-list"></div></aside>
+<main><p id="empty">Valitse artikkeli vasemmalta.</p><section id="editor" hidden><p id="meta" class="muted"></p><form id="article-form"><label>Otsikko<input id="title" maxlength="500" required></label><label>Tiivistelmä<textarea id="summary" rows="2"></textarea></label><div class="row"><label>Tila<select id="status"><option value="draft">Luonnos</option><option value="review">Tarkistettavana</option><option value="published">Julkaistu (toimituksellinen tila)</option><option value="archived">Arkistoitu</option></select></label><label>Tunnisteet, pilkuilla erotettuina<input id="tags"></label></div><p class="muted">Tilan muuttaminen ei julkaise artikkelia verkkosivulle.</p><label>Artikkeliteksti<textarea id="body" required spellcheck="true" lang="fi"></textarea></label><div id="reading" hidden></div><label>Toimituksellinen huomautus<textarea id="editorial-note" rows="2"></textarea></label><label>Mitä muutit?<input id="change-note" placeholder="Esim. täsmennetty johtopäätöstä"></label><div class="toolbar"><button id="save" type="submit" class="primary">Tallenna uusi versio</button><button id="preview" type="button">Lukunäkymä</button><button id="download" type="button">Lataa oma teksti</button><button id="reload" type="button">Avaa uusin</button><span id="dirty" class="muted"></span></div></form><section id="history"><h2>Versiohistoria</h2><div id="history-list"></div><section id="revision" hidden><h3 id="revision-title"></h3><div id="revision-preview"></div><button id="restore">Tuo tämä versio muokattavaksi</button><p class="muted">Palautus tulee voimaan vasta tallennuksesta ja muodostaa uuden version.</p></section></section></section></main></div><script>/* Turso transport for the standalone editor. Credentials live only in this closure. */
+(() => {
+  const fields = ["title", "summary", "body_text", "tags_json", "status", "editorial_note", "review_flags_json", "change_note"];
+  function createTransport(fetcher = window.fetch.bind(window)) {
+    let endpoint = "", token = "";
+    const argument = value => value === null ? { type: "null" } : typeof value === "number" ? { type: "integer", value: String(value) } : { type: "text", value: String(value) };
+    const statement = (sql, args = []) => ({ sql, args: args.map(argument) });
+    const rows = result => result.rows.map(row => Object.fromEntries(row.map((cell, i) => [result.cols[i].name, cell.type === "null" ? null : cell.type === "integer" ? Number(cell.value) : cell.value])));
+    async function pipeline(statements, connection, close = true) {
+      if (!token) throw new Error("Anna Turso-tunniste avataksesi tietokannan.");
+      const controller = new AbortController(), timeout = setTimeout(() => controller.abort(), 30000);
+      try {
+        const requests = statements.map(stmt => ({ type: "execute", stmt }));
+        if (close) requests.push({ type: "close" });
+        const response = await fetcher(endpoint, { method: "POST", cache: "no-store", credentials: "omit", redirect: "error", referrerPolicy: "no-referrer", signal: controller.signal,
+          headers: { "Authorization": "Bearer " + token, "Content-Type": "application/json" }, body: JSON.stringify({ baton: connection.baton, requests }) });
+        if (!response.ok) throw new Error(response.status === 401 || response.status === 403 ? "Turso-tunniste ei kelpaa tai sen oikeudet eivät riitä." : "Tietokantayhteys epäonnistui.");
+        const result = await response.json(); connection.baton = result.baton || null;
+        if (!Array.isArray(result.results) || result.results.length !== requests.length || result.results.some(r => r.type !== "ok")) throw new Error("Tietokantapyyntöä ei hyväksytty. Tarkista tunnisteen oikeudet ja tietokannan rakenne.");
+        return result.results.filter(r => r.response.type === "execute").map(r => rows(r.response.result));
+      } finally { clearTimeout(timeout); }
+    }
+    const query = async (sql, args = []) => (await pipeline([statement(sql, args)], { baton: null }))[0];
+    async function save(id, expected, changes) {
+      if (!Number.isInteger(expected) || expected < 1 || !changes || Object.keys(changes).some(k => !fields.includes(k))) throw new Error("Virheelliset tallennustiedot.");
+      const keys = Object.keys(changes);
+      if (!keys.length || keys.some(k => typeof changes[k] !== "string")) throw new Error("Virheelliset muokattavat kentät.");
+      for (const k of ["title", "body_text"]) if (k in changes && !changes[k].trim()) throw new Error("Otsikko ja teksti eivät saa olla tyhjiä.");
+      const connection = { baton: null };
+      try {
+        await pipeline([statement("PRAGMA foreign_keys=ON"), statement("BEGIN IMMEDIATE")], connection, false);
+        if (!connection.baton) throw new Error("Transaction connection missing");
+        const before = (await pipeline([statement("SELECT " + fields.join(",") + " FROM editorial__articles WHERE id=?", [id])], connection, false))[0][0];
+        if (!before || !connection.baton) throw new Error("Transaction read failed");
+        const result = await pipeline([
+          statement("UPDATE editorial__articles SET " + keys.map(k => k + "=?").join(",") + " WHERE id=? AND (SELECT max(revision_no) FROM editorial__article_revisions WHERE article_id=?)=?", [...keys.map(k => changes[k]), id, id, expected]),
+          statement("SELECT changes() AS affected"),
+          statement("SELECT " + fields.join(",") + ",(SELECT max(revision_no) FROM editorial__article_revisions WHERE article_id=?) AS revision FROM editorial__articles WHERE id=?", [id, id])
+        ], connection, false);
+        if (result[1][0]?.affected !== 1) {
+          const error = new Error("Artikkeli muuttui muualla. Oma tekstisi säilyy editorissa. Lataa tarvittaessa tekstisi ja avaa uusin versio."); error.conflict = true; throw error;
+        }
+        const after = result[2][0];
+        const changed = keys.some(k => before[k] !== changes[k]);
+        if (!after || after.revision !== expected + Number(changed) || keys.some(k => after[k] !== changes[k])) throw new Error("Tallennetun tekstin tai version tarkistus epäonnistui.");
+        await pipeline([statement("COMMIT")], connection, true);
+        return { revision: after.revision };
+      } catch (error) {
+        if (connection.baton) { try { await pipeline([statement("ROLLBACK")], connection, true); } catch { /* No automatic write retry. */ } }
+        if (error.conflict) throw error;
+        throw new Error("Tallennusta ei voitu vahvistaa. Säilytä oma tekstisi ja tarkista uusin versio ennen uutta yritystä.");
+      }
+    }
+    return async (path, data) => {
+      if (path === "/api/login") {
+        const url = new URL(data.url.trim().replace(/^libsql:\/\//, "https://"));
+        if (url.protocol !== "https:" || !url.hostname.endsWith(".turso.io") || url.port || url.username || url.password || url.search || url.hash || !["", "/"].includes(url.pathname)) throw new Error("Anna Turson libsql://- tai https://-tietokantaosoite.");
+        endpoint = url.origin + "/v2/pipeline"; token = data.password.trim();
+        try { await query("SELECT count(*) AS count FROM editorial__articles"); } catch (error) { token = ""; endpoint = ""; throw error; }
+        return { csrf: "browser-memory-session" };
+      }
+      if (path === "/api/session") throw new Error("Tunnistetta ei säilytetä sivun sulkemisen yli.");
+      if (path === "/api/logout") { token = ""; endpoint = ""; return { ok: true }; }
+      if (!token) throw new Error("Avaa ensin tietokanta.");
+      if (path === "/api/articles") return { articles: await query("SELECT id,source_position,title,summary,status,revision,updated_at FROM editorial__article_catalog ORDER BY source_id,source_position") };
+      const parts = path.split("/"); const id = decodeURIComponent(parts[3] || "");
+      if (parts[1] !== "api" || parts[2] !== "articles" || !id) throw new Error("Tuntematon pyyntö.");
+      if (data !== undefined && parts.length === 4) return save(id, data.expected_revision, data.changes);
+      if (parts.length === 4) {
+        const result = await query("SELECT id," + fields.join(",") + ",page_start,page_end,updated_at,(SELECT max(revision_no) FROM editorial__article_revisions WHERE article_id=editorial__articles.id) AS revision FROM editorial__articles WHERE id=?", [id]);
+        if (!result.length) throw new Error("Artikkelia ei löydy."); return result[0];
+      }
+      if (parts[4] === "history" && parts.length === 5) return query("SELECT revision_no,title,status,change_note,saved_at FROM editorial__article_revisions WHERE article_id=? ORDER BY revision_no DESC", [id]);
+      if (parts[4] === "history" && parts.length === 6) {
+        const result = await query("SELECT revision_no," + fields.join(",") + ",saved_at FROM editorial__article_revisions WHERE article_id=? AND revision_no=?", [id, Number(parts[5])]);
+        if (!result.length) throw new Error("Versiota ei löydy."); return result[0];
+      }
+      throw new Error("Tuntematon pyyntö.");
+    };
+  }
+  window.createTursoArticleTransport = createTransport;
+  window.articleEditorTransport = createTransport();
+})();
+</script><script>"use strict";
+const $ = id => document.getElementById(id);
+const labels = { draft: "Luonnos", review: "Tarkistettavana", published: "Julkaistu", archived: "Arkistoitu" };
+let csrf = "", catalog = [], article = null, dirty = false, busy = false, revision = null, sequence = 0;
+function notice(message, error = false) { $("notice").hidden = false; $("notice").textContent = message; $("notice").classList.toggle("error", error); }
+function mark(value) { dirty = value; $("save").disabled = !value || busy; $("dirty").textContent = value ? "Tallentamattomia muutoksia" : "Tallennettu"; }
+function canLeave() { return !dirty || confirm("Tekstissä on tallentamattomia muutoksia. Haluatko hylätä ne? Voit peruuttaa ja ladata ensin oman tekstisi."); }
+async function api(path, data) {
+  if (window.articleEditorTransport) return window.articleEditorTransport(path, data);
+  const options = { credentials: "same-origin", headers: {} };
+  if (data !== undefined) { options.method = "POST"; options.headers = { "Content-Type": "application/json", "X-Editor-CSRF": csrf }; options.body = JSON.stringify(data); }
+  const response = await fetch(path, options);
+  const result = await response.json();
+  if (!response.ok) throw new Error(result.error || "Pyyntö epäonnistui.");
+  return result;
+}
+function renderCatalog() {
+  const query = $("search").value.toLocaleLowerCase("fi-FI");
+  const filtered = catalog.filter(a => `${a.title} ${a.status} ${labels[a.status]}`.toLocaleLowerCase("fi-FI").includes(query));
+  $("count").textContent = `${filtered.length} / ${catalog.length} artikkelia`;
+  $("article-list").replaceChildren(...filtered.map(a => {
+    const button = document.createElement("button"); button.type = "button"; button.disabled = busy;
+    button.setAttribute("aria-pressed", String(article?.id === a.id));
+    const title = document.createElement("strong"); title.textContent = a.title;
+    const meta = document.createElement("small"); meta.textContent = `${a.source_position}. · ${labels[a.status]} · versio ${a.revision}`;
+    button.append(title, meta); button.onclick = () => { if (canLeave()) openArticle(a.id); }; return button;
+  }));
+}
+async function refreshCatalog() { catalog = (await api("/api/articles")).articles; renderCatalog(); }
+function setBusy(value) { busy = value; for (const element of $("article-form").elements) element.disabled = value; $("logout").disabled = value; $("restore").disabled = value; $("save").disabled = value || !dirty; renderCatalog(); }
+function populate(data) {
+  $("title").value = data.title; $("summary").value = data.summary; $("body").value = data.body_text;
+  $("status").value = data.status; $("tags").value = JSON.parse(data.tags_json).join(", ");
+  $("editorial-note").value = data.editorial_note; $("change-note").value = "";
+  $("reading").hidden = true; $("body").hidden = false; $("preview").textContent = "Lukunäkymä";
+}
+async function openArticle(id) {
+  if (busy) return;
+  const own = ++sequence; setBusy(true);
+  try {
+    const data = await api(`/api/articles/${encodeURIComponent(id)}`);
+    if (own !== sequence) return;
+    article = data; populate(data); mark(false);
+    $("meta").textContent = `Versio ${data.revision} · lähdesivut ${data.page_start}–${data.page_end}`;
+    $("empty").hidden = true; $("editor").hidden = false; $("revision").hidden = true;
+    $("notice").hidden = true; renderCatalog(); await loadHistory(id, own);
+  } catch (error) { if (own === sequence) notice(error.message, true); }
+  finally { if (own === sequence) setBusy(false); }
+}
+async function loadHistory(id, own = sequence) {
+  const history = await api(`/api/articles/${encodeURIComponent(id)}/history`);
+  if (own !== sequence || article?.id !== id) return;
+  $("history-list").replaceChildren(...history.map(r => {
+    const button = document.createElement("button"); button.type = "button";
+    button.textContent = `Versio ${r.revision_no} · ${r.saved_at} · ${labels[r.status]}${r.change_note ? ` · ${r.change_note}` : ""}`;
+    button.onclick = async () => {
+      try {
+        const selected = await api(`/api/articles/${encodeURIComponent(id)}/history/${r.revision_no}`);
+        if (own !== sequence || article?.id !== id) return;
+        revision = selected; $("revision-title").textContent = `Versio ${r.revision_no}: ${selected.title}`;
+        $("revision-preview").textContent = selected.body_text; $("revision").hidden = false;
+      } catch (error) { notice(error.message, true); }
+    }; return button;
+  }));
+}
+$("login-form").onsubmit = async event => {
+  event.preventDefault(); $("login-error").textContent = "";
+  try { csrf = (await api("/api/login", { password: $("password").value, url: $("database-url")?.value })).csrf; $("password").value = ""; await enter(); }
+  catch (error) { $("login-error").textContent = error.message; }
+};
+async function enter() { await refreshCatalog(); $("login").hidden = true; $("workspace").hidden = false; $("logout").hidden = false; }
+$("search").oninput = renderCatalog;
+$("article-form").oninput = () => mark(true);
+$("article-form").onsubmit = async event => {
+  event.preventDefault(); if (!article || busy) return;
+  const id = article.id, expected = article.revision;
+  const changes = { title: $("title").value, summary: $("summary").value, body_text: $("body").value,
+    tags_json: JSON.stringify($("tags").value.split(",").map(t => t.trim()).filter(Boolean)), status: $("status").value,
+    editorial_note: $("editorial-note").value, change_note: $("change-note").value };
+  setBusy(true); notice("Tallennetaan ja tarkistetaan uutta versiota…");
+  try {
+    const result = await api(`/api/articles/${encodeURIComponent(id)}`, { expected_revision: expected, changes });
+    article = { ...article, ...changes, revision: result.revision }; mark(false);
+    $("meta").textContent = `Versio ${result.revision} · lähdesivut ${article.page_start}–${article.page_end}`;
+    notice(`Tallennettu. Nykyinen versio on ${result.revision}.`);
+    try { await refreshCatalog(); await loadHistory(id); } catch { notice(`Versio ${result.revision} tallennettiin, mutta luetteloa ei saatu päivitettyä.`, true); }
+  } catch (error) { notice(error.message, true); mark(true); }
+  finally { setBusy(false); }
+};
+$("preview").onclick = () => {
+  const show = $("reading").hidden; $("reading").textContent = $("body").value;
+  $("reading").hidden = !show; $("body").hidden = show; $("preview").textContent = show ? "Takaisin muokkaukseen" : "Lukunäkymä";
+};
+$("reload").onclick = () => { if (article && canLeave()) openArticle(article.id); };
+$("restore").onclick = () => {
+  if (busy || !revision || !canLeave()) return;
+  populate(revision); $("change-note").value = `Palautettu versio ${revision.revision_no}`; mark(true);
+  notice(`Version ${revision.revision_no} teksti tuotiin editoriin. Tallenna se uudeksi versioksi.`);
+};
+$("download").onclick = () => {
+  const blob = new Blob([$("title").value + "\n\n" + $("body").value], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob), link = document.createElement("a"); link.href = url; link.download = `artikkeli-${article.id}.txt`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+};
+$("logout").onclick = async () => {
+  if (busy || !canLeave()) return;
+  try { await api("/api/logout", {}); location.reload(); } catch (error) { notice(error.message, true); }
+};
+window.addEventListener("beforeunload", event => { if (dirty) { event.preventDefault(); event.returnValue = ""; } });
+(async () => { try { csrf = (await api("/api/session")).csrf; await enter(); } catch { /* Login form is already visible. */ } })();
+</script></body></html>

@@ -1,4 +1,4 @@
-# Artikkelieditori selaimessa
+# Artikkelieditori HTML- ja JavaScript-tiedostona
 
 Editorilla voi hakea ja avata Turson artikkelit, muokata otsikkoa, tiivistelmää,
 tekstiä, tilaa, tunnisteita ja huomautuksia sekä tarkastella ja palauttaa aiempia
@@ -6,7 +6,45 @@ versioita. Palautus tuodaan ensin muokattavaksi ja tallennetaan uudeksi versioks
 Versiohistoria säilyy. Editorin julkaisutila ei automaattisesti julkaise artikkelia
 verkkosivulle.
 
-## Aloitus GitHub Codespacesissa (myös iPadin selaimella)
+## Suora HTML-versio — ensisijainen käyttötapa
+
+[Avaa editori](https://tilastomuuttujat.github.io/vivid-data-visions/article-editor/)
+tai [avaa ladattava HTML-tiedosto](https://tilastomuuttujat.github.io/vivid-data-visions/downloads/artikkelieditori.html).
+Koko editori on yhdessä tiedostossa `public/article-editor/index.html`: erillistä
+palvelinta, Pythonia tai Codespacesia ei tarvita. Internet-yhteys tarvitaan Tursoon.
+
+1. Avaa HTML-editori selaimeen. Murrosmatriisi-kannan osoite on valmiina.
+2. Syötä Turson kirjoitukseen oikeuttava tunniste ja valitse **Avaa tietokanta**.
+3. Valitse artikkeli, muokkaa ja tallenna. Versiohistoria toimii kuten palvelinversiossa.
+4. **Katkaise yhteys** tyhjentää tunnisteen muistista. Myös sivun sulkeminen tai
+   päivittäminen vaatii tunnisteen syöttämisen uudelleen.
+
+Samaa tunnisteen arvoa voi käyttää kuin GitHub Actionsissa, jos alkuperäinen arvo
+on tallessa. **GitHubin Actions-salaisuutta ei voi hakea takaisin selaimeen.**
+HTML-versio ei lue GitHub-avaimia tai salaisuuksia. Tunnistetta ei sisällytetä
+koodiin eikä talleteta evästeisiin, localStorageen tai sessionStorageen. Se kulkee
+suoraan selaimesta HTTPS-yhteydellä kyseiseen Turso-kantaan. Tämä on ylläpitäjän
+editori: tunnisteen haltijalla ovat tunnisteen myöntämät tietokantaoikeudet.
+Turso ei käytä tässä Supabasen julkista anon-avainta vastaavaa pääsyrajaa.
+
+Ulkoisia JavaScript-kirjastoja tai analytiikkaa ei ladata. Kohdeosoite rajataan
+HTTPS-yhteydellä Turson `*.turso.io`-osoitteisiin, uudelleenohjauksia ei seurata,
+ja sivulla on sisältöturvapolitiikka. Jos laitteen tiedostokatselin ei suorita
+paikallisen HTML:n JavaScriptiä, käytä yllä olevaa editorin verkkolinkkiä.
+
+Suora versio käyttää samaa muokkauslomaketta kuin alla kuvattu valinnainen
+palvelinversio. Tallennus käyttää Turson transaktiota, versionumeron tarkistusta,
+tekstin lukuvertailua ja vasta tämän jälkeen COMMIT-vahvistusta. Muutoksia ei
+lähetetä automaattisesti uudelleen verkkovirheen jälkeen.
+
+Generointi lähteistä:
+
+```sh
+python scripts/editorial/build_browser.py
+```
+
+## Valinnainen palvelinversio GitHub Codespacesissa
+
 
 1. Lisää GitHubin **Settings → Codespaces → Secrets** -kohtaan salaisuus
    `TURSO_AUTH_TOKEN` ja salli sen käyttö repositoriolle
@@ -69,7 +107,7 @@ staattiseen sivustoon toimimattomana tallennuslomakkeena.
 - Kahdeksan tunnin istunnon päätyttyä säilytä oma teksti tiedostona ennen
   uudelleenkirjautumista tai sivun päivittämistä.
 
-## Yksityisyys
+## Palvelinversion yksityisyys
 
 Turso-avain on vain Python-palvelimen ympäristössä. Selaimeen tulee kirjautumisen
 jälkeen artikkeliteksti sekä lyhytikäisen istunnon CSRF-tunniste; tietokanta-avain
@@ -91,6 +129,7 @@ Private-rajaus; älä muuta sitä julkiseksi.
 python -m unittest discover -s scripts/editorial -p 'test_*.py'
 bun run test src/test/article-editor.test.ts
 node --check scripts/editorial/editor.js
+bun run test src/test/turso-browser.test.ts
 ```
 
 Testit kattavat kirjautumisrajan, väärän alkuperän, CSRF-tarkistuksen, oikean

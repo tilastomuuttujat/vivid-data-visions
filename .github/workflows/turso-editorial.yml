@@ -41,3 +41,7 @@ jobs:
         env:
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
         run: python scripts/editorial/editor_server.py --check
+      - name: Verify standalone HTML transport against Turso
+        env:
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+        run: node scripts/editorial/check_browser.mjs
