@@ -27,7 +27,7 @@ def source_page(table, after=None, limit=200):
     if table not in CONFIG or not 1 <= limit <= 500:
         raise ValueError("Invalid source request")
     key = os.environ["SUPABASE_READ_KEY"]
-    req = urllib.request.Request(SOURCE + "/rest/v1/rpc/migration_selity_page_v1",
+    req = urllib.request.Request(SOURCE + "/rest/v1/rpc/migration_arviointi_page_v1",
         data=json.dumps({"p_table":CONFIG[table]["source"],"p_after":after,"p_limit":limit}).encode(),
         headers={"apikey":key,"Authorization":"Bearer "+key,"Content-Type":"application/json"})
     for attempt in range(3):
