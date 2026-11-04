@@ -1,0 +1,42 @@
+name: Turso Selitysatlas transfer
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/migration/turso_selitysatlas.py
+      - .github/workflows/turso-selitysatlas.yml
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Write and verify Selitysatlas in Turso"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: turso-indicator-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check migration logic
+        run: python -m unittest discover -s scripts/migration -p 'test_turso*.py'
+      - name: Transfer Selitysatlas
+        env:
+          SUPABASE_READ_KEY: ${{ secrets.SUPABASE_READ_KEY }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          APPLY: ${{ github.event_name == 'push' || inputs.apply }}
+        run: |
+          if [ "$APPLY" = "true" ]; then
+            python scripts/migration/turso_selitysatlas.py --apply
+          else
+            python scripts/migration/turso_selitysatlas.py
+          fi
