@@ -21,11 +21,15 @@ Ylläpitoeditorin julkaisu tarvitsee verkkoyhteyden ja GitHub-kirjoitusoikeuden.
 
 def package(build, output, downloads_only=False):
     html = (build / 'index.html').read_text()
+    snapshot = ROOT / 'public/data/turso'
+    snapshot_files = sorted(p for p in snapshot.rglob('*') if p.is_file()) if snapshot.exists() else []
     downloads = output if downloads_only else output / 'downloads'
     downloads.mkdir(parents=True, exist_ok=True)
     (downloads / 'data').mkdir(exist_ok=True)
     for name in DATA_FILES:
         shutil.copyfile(ROOT / 'src/data' / name, downloads / 'data' / name)
+    if snapshot_files:
+        shutil.copytree(snapshot, downloads / 'data/turso', dirs_exist_ok=True)
     for mode in ('2d', '3d'):
         variant = html.replace('<head>', f'<head><script>window.__ATLAS_INITIAL_MODE__="{mode}";</script>', 1)
         if variant == html:
@@ -34,11 +38,15 @@ def package(build, output, downloads_only=False):
         with zipfile.ZipFile(downloads / f'atlas-{mode}.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
             archive.writestr('index.html', variant)
             archive.writestr('LUEMINUT.txt', README)
+            for file in snapshot_files:
+                archive.write(file, 'data/turso/'+file.relative_to(snapshot).as_posix())
             for name in DATA_FILES:
                 archive.write(ROOT / 'src/data' / name, f'data/{name}')
     with zipfile.ZipFile(downloads / 'minka-varaan-suomi.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
         archive.writestr('index.html', html)
         archive.writestr('LUEMINUT.txt', README)
+        for file in snapshot_files:
+            archive.write(file, 'data/turso/'+file.relative_to(snapshot).as_posix())
         for name in DATA_FILES:
             archive.write(ROOT / 'src/data' / name, f'data/{name}')
     shutil.copyfile(ROOT / 'src/data/atlas.json', downloads / 'suomen_rakennemuutosten_atlas.json')
@@ -48,6 +56,8 @@ def package(build, output, downloads_only=False):
         (output / 'data').mkdir(exist_ok=True)
         for name in DATA_FILES:
             shutil.copyfile(ROOT / 'src/data' / name, output / 'data' / name)
+        if snapshot_files:
+            shutil.copytree(snapshot, output / 'data/turso', dirs_exist_ok=True)
         (output / '.nojekyll').touch()
 
 
