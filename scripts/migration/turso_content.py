@@ -69,7 +69,7 @@ def migrate(apply=False):
         db.execute([stmt(core.create(table))], close=True)
         added = 0
         for start in range(0, len(rows), 200):
-            _, n = core.copy_page(db, table, rows[start:start+200])
+            _, n = core.copy_page(db, table, rows[start:start+200], max_row_bytes=4 * 1024 * 1024)
             added += n
         total = core.decode(db.execute([stmt("SELECT count(*) FROM public__" + table)], close=True)[0])[0][0]
         if total != len(rows):
