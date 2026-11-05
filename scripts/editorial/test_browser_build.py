@@ -9,7 +9,8 @@ class BrowserBuildTests(unittest.TestCase):
         self.assertNotIn('src="/editor.js"',html)
         self.assertIn('Content-Security-Policy',html)
         self.assertIn('id="database-url"',html)
-        self.assertNotIn('localStorage',html)
+        self.assertIn('Muista minut tällä laitteella',html)
+        self.assertIn('window.localStorage.setItem(rememberedKey,token)',html)
         self.assertIn("sessionStorage.getItem('atlas-admin-v1')",html)
         self.assertNotIn('sessionStorage.setItem',html)
 

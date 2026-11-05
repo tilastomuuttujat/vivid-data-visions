@@ -145,3 +145,9 @@ Avaus ja tallennus käynnistävät `article-editor-actions.yml`-työn. Odota vas
 Tekstit ja tallennuspyynnöt salataan RSA-OAEP/AES-GCM-menetelmällä. Julkisen `article-editor-responses`-haaran vastaukset sisältävät vain salattua aineistoa. Selaimen yksityinen avain ja GitHub-tunniste pysyvät muistissa. Actionsin yksityinen istuntoavain palautetaan vain Turso-salaisuudesta johdetulla avaimella salattuna, tunnin määräajalla. Workflow hyväksyy vain `tilastomuuttujat`-käyttäjän päähaaraan lähettämät pyynnöt. Salaisuuden vaihtaminen mitätöi avoimet istunnot.
 
 Jos vastaus aikakatkaistaan, työ saattaa vielä valmistua: ota oma luonnos talteen ja avaa uusin versio ennen uutta tallennusta. Yli 60 kilotavun salattu pyyntö tarvitsee suoran Turso-yhteyden. Suora yhteystapa on edelleen valittavissa.
+
+### Muista minut tällä laitteella
+
+Valitse GitHub-kirjautumisessa **Muista minut tällä laitteella**, jos haluat automaattisen yhteyden myös seuraavalla käyttökerralla. Vain onnistuneesti käytetty GitHub-tunniste tallennetaan tämän selaimen localStorageen. Turso-tunnistetta, artikkelitekstejä tai salauksen yksityisiä avaimia ei tallenneta sinne. Valinta on oletuksena pois päältä. Selain ei välttämättä salli muistamista yksityisessä tilassa.
+
+**Katkaise yhteys** sulkee nykyisen yhteyden ja säilyttää muistamisen. **Unohda tämä laite** poistaa editorin tallentaman GitHub-tunnisteen ja sulkee yhteyden; tallentamattomista muutoksista kysytään ensin. Toiminto ei poista erillistä Atlas-ylläpidon istuntoa. Myös tunnisteen vanhentuminen tai peruuttaminen GitHubissa katkaisee automaattisen yhteyden. Tallennettu tunniste on saman sivusto-osoitteen JavaScriptin käytettävissä, joten muista se vain omassa luotetussa selaimessasi.

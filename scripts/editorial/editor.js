@@ -103,14 +103,16 @@ $("download").onclick = () => {
   const blob = new Blob([$("title").value + "\n\n" + $("body").value], { type: "text/plain;charset=utf-8" });
   const url = URL.createObjectURL(blob), link = document.createElement("a"); link.href = url; link.download = `artikkeli-${article.id}.txt`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
 };
-$("logout").onclick = async () => {
+async function disconnect(forget = false) {
   if (busy || !canLeave()) return;
   try {
-    await api("/api/logout", {}); csrf = ""; catalog = []; article = null; revision = null; dirty = false;
+    await api("/api/logout", forget ? { forget: true } : {}); csrf = ""; catalog = []; article = null; revision = null; dirty = false;
     $("article-form").reset(); $("article-list").replaceChildren(); $("history-list").replaceChildren();
     $("reading").textContent = ""; $("revision-preview").textContent = ""; $("revision-title").textContent = "";
-    $("workspace").hidden = true; $("logout").hidden = true; $("login").hidden = false; $("login-error").textContent = "Yhteys katkaistu.";
+    $("workspace").hidden = true; $("logout").hidden = true; $("login").hidden = false; $("login-error").textContent = forget ? "Laite unohdettu. Kirjaudu seuraavalla kerralla uudelleen." : "Yhteys katkaistu.";
   } catch (error) { notice(error.message, true); }
 };
+$("logout").onclick = () => disconnect();
+if ($("forget-device")) $("forget-device").onclick = () => disconnect(true);
 window.addEventListener("beforeunload", event => { if (dirty) { event.preventDefault(); event.returnValue = ""; } });
 (async () => { const button = $("login-form").querySelector("button"); button.disabled = true; try { csrf = (await api("/api/session")).csrf; await enter(); } catch (error) { if ($("login-error").textContent) $("login-error").textContent = error.message; } finally { button.disabled = false; } })();

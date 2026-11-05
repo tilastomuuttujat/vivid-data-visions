@@ -14,8 +14,10 @@ test('browser opens and saves through encrypted Actions protocol',async()=>{
  const {readFileSync}=await import('node:fs');const {webcrypto}=await import('node:crypto');
  const oldCrypto=globalThis.crypto;Object.defineProperty(globalThis,'crypto',{value:webcrypto,configurable:true});
  const server=await pair(),replies=new Map();let saved=false;
- const window={articleEditorTransport:async()=>{throw Error('direct not expected');},addEventListener(){},dispatchEvent(){}};
- const document={getElementById:id=>id==='connection-mode'?{value:'github'}:{hidden:true}};
+ const memory=new Map();const storage={getItem:k=>memory.get(k)||null,setItem:(k,v)=>memory.set(k,v),removeItem:k=>memory.delete(k)};
+ const window={localStorage:storage,articleEditorTransport:async(path)=>{if(path==='/api/logout')return {};throw Error('direct not expected');},addEventListener(){},dispatchEvent(){}};
+ let remember=false;
+ const document={getElementById:id=>id==='connection-mode'?{value:'github'}:id==='remember-device'?{checked:remember}:{hidden:true}};
  const fetcher=async(url,options)=>{
   let result={};if(url.endsWith('/user'))result={login:'tilastomuuttujat'};
   else if(url.endsWith('/repos/tilastomuuttujat/vivid-data-visions'))result={permissions:{push:true}};
@@ -31,5 +33,12 @@ test('browser opens and saves through encrypted Actions protocol',async()=>{
  await window.articleEditorTransport('/api/login',{password:'test'});
  assert.deepEqual(await window.articleEditorTransport('/api/articles'),{articles:[]});
  await window.articleEditorTransport('/api/articles/00000000-0000-0000-0000-000000000000',{expected_revision:1,changes:{body_text:'Ääni'}});assert.ok(saved);
+ assert.equal(memory.size,0,'no credential storage without explicit opt-in');
+ remember=true;await window.articleEditorTransport('/api/login',{password:'remembered-test'});
+ assert.equal(memory.get('atlas-article-editor-github-v1'),'remembered-test');
+ await window.articleEditorTransport('/api/logout',{});assert.equal(memory.size,1,'disconnect preserves opt-in');
+ run(window,document,fetcher,fn=>fn(),class{constructor(type,options){this.detail=options.detail;}});
+ await window.articleEditorTransport('/api/session');assert.deepEqual(await window.articleEditorTransport('/api/articles'),{articles:[]});
+ await window.articleEditorTransport('/api/logout',{forget:true});assert.equal(memory.size,0,'forget deletes saved credential');
  Object.defineProperty(globalThis,'crypto',{value:oldCrypto,configurable:true});
 });
