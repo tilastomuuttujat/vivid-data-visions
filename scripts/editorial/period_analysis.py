@@ -1,6 +1,12 @@
 """Versioned interpretive period annotations; original articles remain immutable inputs."""
 import json,re,sys,hashlib,sqlite3
-from articles import Remote,canonical,digest
+from articles import Remote,canonical,digest,stmt,arg,decode
+
+class RecordRemote(Remote):
+    def execute(self,sql,params=()):
+        result=self.db.execute([stmt(sql,[arg(v) for v in params])])[0]
+        names=[c["name"] for c in result["cols"]]
+        return [dict(zip(names,row)) for row in decode(result)]
 SCHEMA='''CREATE TABLE IF NOT EXISTS editorial__period_analyses (
  id INTEGER PRIMARY KEY,article_id TEXT NOT NULL REFERENCES editorial__articles(id),
  article_revision INTEGER NOT NULL,body_sha256 TEXT NOT NULL,method_version TEXT NOT NULL,
@@ -51,6 +57,14 @@ def save(db,bundle):
     except:db.execute('ROLLBACK');raise
     print('PASS period analyses stored and verified:',len(records),'articles;',sum(len(a['periods']) for a in records),'periods; originals unchanged.')
 if __name__=='__main__':
-    db=Remote()
-    try:save(db,json.load(sys.stdin))
+    bundle=json.load(sys.stdin);db=RecordRemote()
+    try:save(db,bundle)
+    finally:db.close()
+    db=RecordRemote()
+    try:
+        rows=db.execute('SELECT article_id,periods_json FROM editorial__period_analyses WHERE method_version=?',[bundle['method_version']])
+        actual={r['article_id']:json.loads(r['periods_json']) for r in rows}
+        expected={a['id']:a['periods'] for a in bundle['articles']}
+        if actual!=expected:raise ValueError('Fresh-connection verification failed')
+        print('PASS fresh connection:',len(rows),'analyses verified.')
     finally:db.close()
