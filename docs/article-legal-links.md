@@ -157,3 +157,26 @@ Oikeusapulain 257/2002 puuttuva luetteloidentiteetti täydennetään erillisest�
 aiemman kuuden säädöksen täydennyksen provenienssin muuttumattomana.
 `legal-map-complete`-tehtävän `catalog: justice` valitsee tämän rajatun erän;
 ulkopuolista tiedostopolkua ei voi antaa tehtävän kautta.
+
+## Viides ketju: kuluttaja, kilpailu ja omistuksen päätösvalta
+
+Neljä ankkuria, 13 kytkentää viiteen artikkeliin. Kuluttajansuojalain
+38/1978 sopimussuojan perusta erotetaan muutoslain 561/2008 tiedonantoa
+ja menettelyjä koskevista säännöistä. Alkuperäistä lakia ei tulkita vuoden
+2025 digipalvelujen täydelliseksi oikeusperustaksi. Muutoslaki on oma
+säädösidentiteettinsä eikä 38/1978:n vaihtoehtoinen tunniste.
+
+Kilpailulain 948/2011 valitut alkuperäiset kohdat erottavat yrityksen koon,
+määräävän aseman ja sen väärinkäytön. Yrityskaupan kilpailuvaikutus ei ole
+sama kuin yksittäisen yrityksen menestys. Myöhempiä liikevaihtorajoja,
+päivittäistavarakaupan erityissääntöjä tai EU:n digimarkkinasäädöksen
+portinvartijavelvoitteita ei lueta alkuperäiseen lakiin.
+
+Osakeyhtiölain 624/2006 mukaan yhtiö on erillinen oikeushenkilö; sen
+johdon tehtävä, omistajan tavoite ja yhteiskunnallinen hyöty ovat eri
+arviointikohteita. Voitontuottamistarkoituksen yhtiöjärjestyspoikkeus
+säilytetään näkyvissä. Laki ei koske kaikkia yritysmuotoja eikä kaikkia
+ulkomaisten konsernien yhtiöitä. Voimaantulo tarkistetaan 625/2006:n 1 §:stä.
+
+Kaikki suhteet ovat perusteltuja kontekstikytkentöjä (`proposed`), eivät
+lainvastaisuuden toteamuksia tai osoitettuja kausaalivaikutuksia.

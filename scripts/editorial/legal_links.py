@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 from articles import canonical,digest
 from period_analysis import RecordRemote,norm
 ROOT=Path(__file__).resolve().parent
-CATALOGS={'income-security':'legal-anchors.json','education-work':'legal-anchors-education-work.json','civic':'legal-anchors-civic.json','justice':'legal-anchors-justice.json'}
+CATALOGS={'income-security':'legal-anchors.json','education-work':'legal-anchors-education-work.json','civic':'legal-anchors-civic.json','justice':'legal-anchors-justice.json','market':'legal-anchors-market.json'}
 def load_catalog(name='income-security'):
     if name not in CATALOGS:raise ValueError('Unknown legal anchor catalog')
     return json.loads((ROOT/CATALOGS[name]).read_text())

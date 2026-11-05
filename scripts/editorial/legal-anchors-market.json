@@ -1,0 +1,126 @@
+{
+  "chain_id": "consumer-competition-ownership",
+  "anchors": [
+    {
+      "id": "kuluttajasuoja-1978",
+      "act_id": "38/1978",
+      "title": "Kuluttajan sopimusehdot ja sovittelun historiallinen perusta",
+      "enactment_date": "1978-01-20",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "1978-09-01",
+      "implementation_date": "1978-09-01",
+      "implementation_date_basis": "Valittujen sääntöjen oikeudellinen aloitus; ei väite käytännön toteutumisesta samalla hetkellä.",
+      "provisions": [
+        "1 luku 1 §",
+        "3 luku 1 §",
+        "4 luku 1 §"
+      ],
+      "objective": "Jäsentää elinkeinonharjoittajan ja kuluttajan välisen suhteen suojaa.",
+      "objective_basis": "editorial_summary_of_legal_change",
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1978/38",
+      "legal_change": "Kohtuuttomien sopimusehtojen sääntely ja sopimuksen sovittelu tarjoavat suojaa ilman oletusta tasavahvoista neuvottelijoista.",
+      "implementation": "Alkuperäiset säännöt ovat historiallinen oikeudellinen ankkuri; myöhempi soveltaminen edellyttää tapahtuma-ajan versiota.",
+      "limits": "Ei yleinen laki yritysten välisistä sopimuksista tai kaikista julkisista palveluista. Digipalvelujen nykyisiä yksityiskohtia ei lueta vuoden 1978 lakiin.",
+      "atlas_decision_id": "d053",
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1978/38",
+      "additional_sources": [],
+      "impact_findings": [],
+      "impact_status": "not_assessed",
+      "version_scope": "Alkuperäisen säädöksen valitut historialliset kohdat; myöhempiä muutoksia ei lueta alkuperäiseen lakiin.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked"
+    },
+    {
+      "id": "kuluttajatieto-2008",
+      "act_id": "561/2008",
+      "title": "Olennaiset tiedot ja sopimattomat menettelyt kuluttajasuhteessa",
+      "enactment_date": "2008-08-29",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "2008-10-01",
+      "implementation_date": "2008-10-01",
+      "implementation_date_basis": "Valittujen sääntöjen oikeudellinen aloitus; ei väite käytännön toteutumisesta samalla hetkellä.",
+      "provisions": [
+        "Kuluttajansuojalain 2 luvun 1 §",
+        "2 luvun 6–9 §",
+        "voimaantulosäännös"
+      ],
+      "objective": "Täsmentää markkinoinnin ja asiakassuhteen menettelyjen kuluttajansuojaa.",
+      "objective_basis": "editorial_summary_of_legal_change",
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2008/561",
+      "legal_change": "Harhaanjohtava tieto, olennaisten tietojen puuttuminen ja aggressiiviset menettelyt erotetaan hyväksyttävästä markkinoinnista.",
+      "implementation": "Muutoslaki uudistaa vuoden 1978 lain 2 luvun. Tietojen selkeys, ymmärrettävyys ja oikea-aikaisuus ovat osa arviointia.",
+      "limits": "Ei takaa ostovoimaa tai kilpailijan olemassaoloa. Kaikki epäedullinen valinta ei ole lainvastainen. Myöhempiä digialustojen erityissääntöjä ei siirretä vuoteen 2008.",
+      "atlas_decision_id": null,
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2008/561",
+      "additional_sources": [],
+      "impact_findings": [],
+      "impact_status": "not_assessed",
+      "version_scope": "Alkuperäisen säädöksen valitut historialliset kohdat; myöhempiä muutoksia ei lueta alkuperäiseen lakiin.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked"
+    },
+    {
+      "id": "kilpailu-2011",
+      "act_id": "948/2011",
+      "title": "Markkinavoima, kilpailunrajoitukset ja yrityskauppavalvonta",
+      "enactment_date": "2011-08-12",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "2011-11-01",
+      "implementation_date": "2011-11-01",
+      "implementation_date_basis": "Valittujen sääntöjen oikeudellinen aloitus; ei väite käytännön toteutumisesta samalla hetkellä.",
+      "provisions": [
+        "1–5 §",
+        "7 §",
+        "25 §",
+        "50 §"
+      ],
+      "objective": "Turvata tervettä ja toimivaa taloudellista kilpailua vahingollisilta kilpailunrajoituksilta.",
+      "objective_basis": "enacted_purpose_clause",
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2011/948",
+      "legal_change": "Määräävän aseman väärinkäyttö ja kielletyt kilpailunrajoitukset erotetaan yrityksen pelkästä koosta. Yrityskaupan vaikutusta arvioidaan tehokkaan kilpailun kautta.",
+      "implementation": "Vuoden 2011 alkuperäisen sääntelyn valitut kohdat; ennen voimaantuloa tapahtuneilla toimilla on siirtymäsäännöt.",
+      "limits": "Ei suora laki työmarkkinajärjestelyistä eikä tuotannon huoltovarmuuden takuu. Liikevaihtorajojen myöhempiä muutoksia tai vuoden 2013 päivittäistavarakaupan erityissääntöä ei sisällytetä alkuperäiseen lakiin.",
+      "atlas_decision_id": null,
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2011/948",
+      "additional_sources": [],
+      "impact_findings": [],
+      "impact_status": "not_assessed",
+      "version_scope": "Alkuperäisen säädöksen valitut historialliset kohdat; myöhempiä muutoksia ei lueta alkuperäiseen lakiin.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked"
+    },
+    {
+      "id": "osakeyhtio-2006",
+      "act_id": "624/2006",
+      "title": "Yhtiön tarkoitus, omistajan päätösvalta ja johdon tehtävä",
+      "enactment_date": "2006-07-21",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "2006-09-01",
+      "implementation_date": "2006-09-01",
+      "implementation_date_basis": "Valittujen sääntöjen oikeudellinen aloitus; ei väite käytännön toteutumisesta samalla hetkellä.",
+      "provisions": [
+        "1 luku 1–2 §",
+        "1 luku 5–8 §"
+      ],
+      "objective": "Jäsentää osakeyhtiön toiminnan tarkoitusta ja sisäistä päätösvaltaa.",
+      "objective_basis": "editorial_summary_of_legal_change",
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2006/624",
+      "legal_change": "Yhtiö on omistajistaan erillinen oikeushenkilö. Voitontuottamistarkoituksessa on yhtiöjärjestystä koskeva poikkeus, ja johdon tulee huolellisesti edistää yhtiön etua.",
+      "implementation": "Voimaantulo ja vanhojen yhtiöiden siirtymä perustuvat lakiin 625/2006.",
+      "limits": "Ei laki kaikista yritysmuodoista tai kaikkien ulkomaisten konsernien toiminnasta. Laki ei osoita lyhytnäköisyyttä eikä kiellä yhteiskunnallisia hyötyjä. Yhtiön etua ei samasteta yhden omistajan etuun.",
+      "atlas_decision_id": null,
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2006/624",
+      "additional_sources": [
+        {
+          "url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2006/625",
+          "locator": "1 §: voimaantulo ja soveltaminen aiemmin perustettuihin yhtiöihin"
+        }
+      ],
+      "impact_findings": [],
+      "impact_status": "not_assessed",
+      "version_scope": "Alkuperäisen säädöksen valitut historialliset kohdat; myöhempiä muutoksia ei lueta alkuperäiseen lakiin.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked"
+    }
+  ]
+}
