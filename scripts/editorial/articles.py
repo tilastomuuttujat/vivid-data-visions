@@ -63,6 +63,7 @@ def validate(bundle):
             type(a['title_lines']) is not int or not 1<=a['title_lines']<=4 or not body_for(bundle,a)):
             raise ValueError('Invalid article boundaries')
         heading=' '.join(pages[a['page_start']-1].lstrip().splitlines()[:a['title_lines']])
+        heading=re.sub(r'^#{1,6}\s+','',heading)
         if re.sub(r'\s+',' ',heading).strip()!=(a['source_number']+' '+a['title']).strip():
             raise ValueError('Extracted heading does not match original page')
         expected_page=a['page_end']+1
