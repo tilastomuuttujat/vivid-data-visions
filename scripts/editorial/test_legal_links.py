@@ -1,6 +1,6 @@
 import copy,json,unittest
 from pathlib import Path
-from legal_links import import_links,digest,ROOT
+from legal_links import import_links,digest,ROOT,load_catalog
 from test_period_analysis import Local
 class Tests(unittest.TestCase):
  def data(self):
@@ -20,3 +20,12 @@ class Tests(unittest.TestCase):
  def test_primary_source_required(self):
   db=Local();anchors,b=self.data();anchors['anchors'][0]['primary_url']='https://example.org/law'
   with self.assertRaises(ValueError):import_links(db,b,anchors)
+
+class CatalogTests(unittest.TestCase):
+ def test_independent_chain_does_not_replace_prior_links(self):
+  db=Local();anchors,b=Tests().data();import_links(db,b,anchors)
+  new=load_catalog('education-work');new['anchors']=new['anchors'][:1]
+  second=copy.deepcopy(b);second['method_version']='next-chain';second['links'][0]['anchor_id']=new['anchors'][0]['id']
+  import_links(db,second,new)
+  self.assertEqual(len(db.execute('SELECT * FROM editorial__narrative_decisions')),2)
+  with self.assertRaises(ValueError):load_catalog('../other-file')

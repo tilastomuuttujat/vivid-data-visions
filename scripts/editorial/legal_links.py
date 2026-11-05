@@ -5,6 +5,10 @@ from urllib.parse import urlparse
 from articles import canonical,digest
 from period_analysis import RecordRemote,norm
 ROOT=Path(__file__).resolve().parent
+CATALOGS={'income-security':'legal-anchors.json','education-work':'legal-anchors-education-work.json'}
+def load_catalog(name='income-security'):
+    if name not in CATALOGS:raise ValueError('Unknown legal anchor catalog')
+    return json.loads((ROOT/CATALOGS[name]).read_text())
 SCHEMAS=[
 '''CREATE TABLE IF NOT EXISTS editorial__legal_anchors (
  anchor_set TEXT NOT NULL,id TEXT NOT NULL,payload_json TEXT NOT NULL CHECK(json_valid(payload_json)),
@@ -86,7 +90,8 @@ def verify(db,bundle):
     expected=sorted(bundle['links'],key=lambda r:(r['article_id'],r['anchor_id']))
     if actual!=expected:raise ValueError('Readback mismatch')
 if __name__=='__main__':
-    bundle=json.load(sys.stdin);anchors=json.loads((ROOT/'legal-anchors.json').read_text());db=RecordRemote()
+    bundle=json.load(sys.stdin)
+    anchors=load_catalog(bundle.get('anchor_catalog','income-security'));db=RecordRemote()
     try:import_links(db,bundle,anchors)
     finally:db.close()
     db=RecordRemote()

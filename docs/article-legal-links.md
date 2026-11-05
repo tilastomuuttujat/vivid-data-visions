@@ -29,3 +29,13 @@ ORDER BY entry_into_force,title;
 ```
 
 Kytkennät vanhoihin Atlas-päätöksiin tehdään vain sisällöltään vastaaviin pysyviin `d...`-tunnisteisiin. Puuttuvaa vastaavuutta ei korvata lähimmällä vuosiluvulla. Tämän ketjun ulkopuoliset artikkelit ja ennen vuotta 1984 tapahtuneet muutokset jäävät jatkotyöhön; kattavuutta ei väitetä koko sarjalle.
+
+## Toinen ketju: koulutus, työ ja osallistumisen ehdot
+
+`legal-anchors-education-work.json` sisältää vuosina 1987–2021 voimaan tulleita valittuja säädöskohtia. Mukana ovat tasa-arvolaki 609/1986, perusopetuslaki 628/1998, perustuslain 16 §, työsopimuslaki 55/2001, työterveyshuoltolaki 1383/2001, työturvallisuuslaki 738/2002, yhdenvertaisuuslaki 1325/2014 ja oppivelvollisuuslaki 1214/2020. Kyse on kahdeksasta ankkurista, joista yksi täydentää jo mukana olevan perustuslain muita pykäliä. Uusia eri säädöksiä on seitsemän.
+
+Kytkennöissä arvioidaan velvollisuuksien rinnalla myös järjestäjän ja työnantajan vastuuta: opintososiaalisia etuja, työssä suoriutumisen tukemista muutostilanteissa, työn suunnittelua ja kuormitusta sekä kohtuullisia mukautuksia. Työsuhteeseen kuuluvat oikeudet erotetaan työttömien palveluista ja yleisestä oikeudesta toimeentuloon. Työn muokkaus, vammaisuuden perusteella tehtävä kohtuullinen mukautus ja tehtävän olennaisten vaatimusten poistaminen ovat eri asioita.
+
+Tässä erässä ei ole riippumattomia vaikutusarvioita: `impact_status=not_assessed`. Oikeudellinen velvoite ei yksin osoita työolojen, koulutustulosten tai yhdenvertaisuuden parantuneen. Perusopetuslaki 628/1998 ei ole vuosien 1972–1977 uudistuksen alkuperäinen säädös, eikä työterveyshuoltolaki 1383/2001 aloittanut työterveyshuoltoa Suomessa. Näitä myöhempiä lakeja käytetään vanhempaa kehitystä käsittelevissä artikkeleissa vain nimenomaisesti rajattuina vertailuankkureina. Vuosien 1921 ja 1968 alkuperäissäädösten täsmällinen pykäläkytkentä jää erilliseksi täydennykseksi.
+
+Toisen ketjun tuontipaketin `anchor_catalog=education-work` valitsee kiinteästä sallittujen tiedostojen listasta oman ankkuriaineistonsa. Tuonti lisää uuden erän poistamatta ensimmäisen ketjun kytkentöjä. Alkuperäiset artikkelitekstit, tiivistelmät ja aikakausianalyysit säilyvät ennallaan.
