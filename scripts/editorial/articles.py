@@ -146,6 +146,25 @@ def update_article(db,article_id,expected_revision,changes):
         db.execute('ROLLBACK')
         raise
 
+def update_from_bundle(db,bundle):
+    validate(bundle)
+    if len(bundle['articles'])!=1 or type(bundle.get('expected_revision')) is not int or bundle['expected_revision']<1:
+        raise ValueError('A text update requires one article and an expected revision')
+    identity=bundle.get('target_article_id')
+    if not isinstance(identity,str) or not identity:raise ValueError('Missing permanent article identity')
+    article=bundle['articles'][0];source=bundle['source']
+    current=db.execute('SELECT title,body_text,change_note FROM editorial__articles WHERE id=?',[identity])
+    if not current or current[0][0]!=article['title']:raise ValueError('Existing article title does not match the update')
+    note='Uudistettu käyttäjän toimittamasta tekstistä; lähde: '+source['library_file_id']+'; SHA-256: '+source['sha256']
+    changes={'title':article['title'],'body_text':body_for(bundle,article),'change_note':note}
+    wanted=[changes['title'],changes['body_text'],note]
+    if current[0]==wanted:
+        revision=db.execute('SELECT max(revision_no) FROM editorial__article_revisions WHERE article_id=?',[identity])[0][0]
+    else:
+        revision=update_article(db,identity,bundle['expected_revision'],changes)
+    if db.execute('SELECT title,body_text,change_note FROM editorial__articles WHERE id=?',[identity])!=[wanted]:raise ValueError('Updated text readback differs')
+    return {'articles_updated':1,'revision':revision}
+
 def staged_bundle(manifest):
     key=os.environ['SUPABASE_READ_KEY']
     chunks,_=request(SOURCE+'/rest/v1/rpc/codex_editorial_handoff_v1',
@@ -172,7 +191,7 @@ def main():
     try:
         if args.operation.startswith('import'):
             bundle=staged_bundle(manifest) if args.operation=='import-staged' else json.loads(args.file.read_text())
-            result=import_bundle(db,bundle)
+            result=update_from_bundle(db,bundle) if bundle.get('operation')=='update' else import_bundle(db,bundle)
         elif args.operation=='verify':result=verify(db,args.source_id or manifest['batch_id'])
         else:
             changes={}
