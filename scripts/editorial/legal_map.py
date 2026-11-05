@@ -128,13 +128,13 @@ if __name__=='__main__':
         sys.exit(0)
     if '--complete' in sys.argv:
         from catalog_completion import complete,load,verify as verify_completion
-        bundle=load();db=RecordRemote()
+        bundle=load('justice' if '--justice' in sys.argv else 'base');db=RecordRemote()
         try:added=complete(db,bundle)
         finally:db.close()
         db=RecordRemote()
         try:verify_completion(db,bundle)
         finally:db.close()
-        print('PASS source-checked catalog completion:',added,'new statutes; 6 identities verified; originals unchanged; metrics not synthesized.')
+        print('PASS source-checked catalog completion:',added,'new statutes;',len(bundle['statutes']),'identities verified; originals unchanged; metrics not synthesized.')
     db=RecordRemote()
     try:expected=sync(db)
     finally:db.close()

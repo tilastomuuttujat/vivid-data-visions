@@ -151,3 +151,9 @@ eikä uusia empiirisiä vaikutustuloksia ole lisätty.
 
 `legal-import` päivittää nyt myös suoran lakikarttaliitoksen ja varmentaa sen
 uudella yhteydellä. Artikkelien alkuperäiset tekstit ja tiivistelmät säilyvät.
+
+Oikeusapulain 257/2002 puuttuva luetteloidentiteetti täydennetään erillisestä
+`lakikartta-justice-additions.json`-lähde-erästä. Sen oma lähdeversio säilyttää
+aiemman kuuden säädöksen täydennyksen provenienssin muuttumattomana.
+`legal-map-complete`-tehtävän `catalog: justice` valitsee tämän rajatun erän;
+ulkopuolista tiedostopolkua ei voi antaa tehtävän kautta.

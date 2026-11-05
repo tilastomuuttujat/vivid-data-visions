@@ -9,7 +9,10 @@ PROVENANCE='''CREATE TABLE IF NOT EXISTS editorial__catalog_additions (
  statute_id TEXT PRIMARY KEY REFERENCES lakikartta__statute_catalog(id),
  source_version TEXT NOT NULL,payload_json TEXT NOT NULL CHECK(json_valid(payload_json)),
  created_at TEXT NOT NULL DEFAULT(strftime('%Y-%m-%dT%H:%M:%fZ','now')))'''
-def load():return json.loads((ROOT/'lakikartta-catalog-additions.json').read_text())
+def load(catalog='base'):
+    files={'base':'lakikartta-catalog-additions.json','justice':'lakikartta-justice-additions.json'}
+    if catalog not in files:raise ValueError('Unknown catalog addition set')
+    return json.loads((ROOT/files[catalog]).read_text())
 def validate(bundle):
     seen=set()
     for r in bundle['statutes']:

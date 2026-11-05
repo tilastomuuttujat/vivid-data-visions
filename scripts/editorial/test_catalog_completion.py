@@ -30,3 +30,11 @@ class CompletionTests(unittest.TestCase):
   db.execute('INSERT INTO lakikartta__statute_catalog(_migration_key,id,number,year,title,systemic_risk_score) VALUES(?,?,?,?,?,?)',[canonical(['1995/969']),'1995/969','969',1995,r['title'],7.25])
   self.assertEqual(complete(db,b),5)
   self.assertEqual(db.execute("SELECT systemic_risk_score FROM lakikartta__statute_catalog WHERE id='1995/969'"),[{'systemic_risk_score':7.25}])
+
+ def test_independent_addition_set_keeps_prior_provenance(self):
+  db=self.db();first=load();complete(db,first)
+  before=db.execute('SELECT * FROM editorial__catalog_additions ORDER BY statute_id')
+  self.assertEqual(complete(db,load('justice')),1)
+  verify(db,first);verify(db,load('justice'))
+  self.assertEqual([r for r in db.execute('SELECT * FROM editorial__catalog_additions ORDER BY statute_id') if r['statute_id']!='2002/257'],before)
+  with self.assertRaises(ValueError):load('../file')

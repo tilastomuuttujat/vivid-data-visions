@@ -1,0 +1,5 @@
+{
+  "version":"editorial-justice-catalog-2026-11-05-v1",
+  "scope":"One source-checked statute identity; no status or graph metrics are inferred.",
+  "statutes":[{"act_id":"257/2002","title":"Oikeusapulaki","kind":"principal_act","parent_act_id":null,"enactment_date":"2002-04-05","date_precision":"day","primary_url":"https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2002/257","source_locator":"Alkuperäisen säädöksen otsikko ja antopäivä; vihko 41/2002, s. 729","checked_on":"2026-11-05"}]
+}
