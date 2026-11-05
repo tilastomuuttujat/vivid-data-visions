@@ -39,3 +39,26 @@ Kytkennöissä arvioidaan velvollisuuksien rinnalla myös järjestäjän ja työ
 Tässä erässä ei ole riippumattomia vaikutusarvioita: `impact_status=not_assessed`. Oikeudellinen velvoite ei yksin osoita työolojen, koulutustulosten tai yhdenvertaisuuden parantuneen. Perusopetuslaki 628/1998 ei ole vuosien 1972–1977 uudistuksen alkuperäinen säädös, eikä työterveyshuoltolaki 1383/2001 aloittanut työterveyshuoltoa Suomessa. Näitä myöhempiä lakeja käytetään vanhempaa kehitystä käsittelevissä artikkeleissa vain nimenomaisesti rajattuina vertailuankkureina. Vuosien 1921 ja 1968 alkuperäissäädösten täsmällinen pykäläkytkentä jää erilliseksi täydennykseksi.
 
 Toisen ketjun tuontipaketin `anchor_catalog=education-work` valitsee kiinteästä sallittujen tiedostojen listasta oman ankkuriaineistonsa. Tuonti lisää uuden erän poistamatta ensimmäisen ketjun kytkentöjä. Alkuperäiset artikkelitekstit, tiivistelmät ja aikakausianalyysit säilyvät ennallaan.
+
+
+## Kolmas ketju: kansalaistoiminta ja julkinen vastuu
+
+Viisi säädösankkuria, 18 kytkentää kuuteen artikkeliin. Yhdistyslaki
+503/1989 (tarkoitus, jäsenten päätösvalta ja hallituksen vastuu), perustuslain
+731/1999 alkuperäiset osallistumis- ja yhdistymissäännökset, kuntalaki
+410/2015, valtionavustuslaki 688/2001 sekä sote-järjestämislaki 612/2021.
+
+Kuntalain yleinen voimaantulo 2015 erotetaan 5 luvun soveltamisen alusta
+2017. Perustuslain alkuperäisen 14 §:n osallistumistehtävän momentti on 3,
+nykyisessä rakenteessa 4. Valtionavustuslain alkuperäinen 3 § sulki
+raha-automaatti-, kasino- ja totopelituottojen avustukset ulkopuolelle: tätä
+yleislakia ei käytetä kaikkien historiallisten järjestöavustusten selityksenä.
+Sote-järjestämislain voimaantulopykälä on 62 §, ja ajankohta määräytyy
+voimaanpanolain 616/2021 perusteella.
+
+Tavoite, oikeudellinen vastuu ja toteutunut vaikutus pidetään erillään.
+Yhdistyksen jäsenvalta ei osoita koko väestöryhmän edustavuutta;
+kuuleminen ei takaa ehdotuksen hyväksymistä. Vapaaehtoisavun ja
+lakisääteisten palvelujen suhde on soveltamisalaltaan rajattu tutkimuskysymys.
+Kaikki kytkennät ovat ehdotuksia (`proposed`); vaikutusnäyttöä ei ole lisätty.
+Alkuperäiset artikkelit ja aikaisempien ketjujen tiedot säilytetään.
