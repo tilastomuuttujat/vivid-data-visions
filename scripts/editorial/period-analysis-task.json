@@ -1,4 +1,4 @@
 {
-  "operation": "evidence-audit",
-  "audit_version": "education-evidence-reuse-2026-11-05-v2"
+  "operation": "evidence-quality",
+  "version": "education-evidence-quality-2026-11-05-v1"
 }

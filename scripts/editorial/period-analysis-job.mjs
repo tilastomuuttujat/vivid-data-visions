@@ -12,6 +12,9 @@ async function main(){if(process.env.GITHUB_REF!=='refs/heads/main'||process.env
   const value={articles,legalLinks,publicKey:keys.publicKey,session:seal({privateKey:keys.privateKey,expires:Date.now()+86400000},process.env.TURSO_AUTH_TOKEN)};
   const content=Buffer.from(JSON.stringify(await encrypt(value,task.publicKey))).toString('base64');
   const r=await fetch('https://api.github.com/repos/'+repo+'/contents/responses/'+task.id+'.json',{method:'PUT',headers:{Authorization:'Bearer '+process.env.GITHUB_TOKEN,Accept:'application/vnd.github+json'},body:JSON.stringify({branch:'article-editor-responses',message:'Encrypted private analysis transfer',content})});if(!r.ok)throw Error('Encrypted export failed');console.log('PASS encrypted current-article export:',articles.length);
+  }else if(task.operation==='evidence-quality'){
+  const checks=spawnSync('python',['-m','unittest','discover','-s','scripts/editorial','-p','test_evidence_quality.py'],{encoding:'utf8',env:process.env});if(checks.status!==0)throw Error('Evidence quality checks failed');console.log('PASS evidence quality fixture checks');
+  const result=spawnSync('python',['scripts/editorial/evidence_quality.py'],{encoding:'utf8',env:process.env,maxBuffer:1000000});if(result.status!==0)throw Error('Evidence quality review failed');console.log(result.stdout.trim());
  }else if(task.operation==='evidence-audit'){
   const checks=spawnSync('python',['-m','unittest','discover','-s','scripts/editorial','-p','test_evidence_reuse.py'],{encoding:'utf8',env:process.env});if(checks.status!==0)throw Error('Evidence audit checks failed');console.log('PASS evidence audit fixture checks');
   const result=spawnSync('python',['scripts/editorial/evidence_reuse.py'],{encoding:'utf8',env:process.env,maxBuffer:1000000});if(result.status!==0)throw Error('Evidence audit failed');console.log(result.stdout.trim());
