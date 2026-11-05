@@ -29,3 +29,14 @@ class CatalogTests(unittest.TestCase):
   import_links(db,second,new)
   self.assertEqual(len(db.execute('SELECT * FROM editorial__narrative_decisions')),2)
   with self.assertRaises(ValueError):load_catalog('../other-file')
+
+class ResearchScopeTests(unittest.TestCase):
+ def test_untraceable_impact_reference_rejected(self):
+  db=Local();anchors,b=Tests().data();b['links'][0]['impact_finding_ids']=['missing'];b['links'][0]['impact_scope']='Selected outcomes only'
+  with self.assertRaises(ValueError):import_links(db,b,anchors)
+  self.assertEqual(db.execute('SELECT * FROM editorial__article_legal_links'),[])
+ def test_research_population_and_method_required(self):
+  db=Local();anchors,b=Tests().data();anchors['anchors'][0]['impact_status']='selected_outcomes_assessed'
+  anchors['anchors'][0]['impact_findings']=[{'id':'r','kind':'quasi_experimental_study','source_url':'https://example.org/research','limits':'Limited sample','finding':'Test finding','outcome':'Test score','source_locator':'Table 1'}]
+  with self.assertRaises(ValueError):import_links(db,b,anchors)
+  self.assertEqual(db.execute('SELECT * FROM editorial__article_legal_links'),[])

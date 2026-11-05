@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 from articles import canonical,digest
 from period_analysis import RecordRemote,norm
 ROOT=Path(__file__).resolve().parent
-CATALOGS={'income-security':'legal-anchors.json','education-work':'legal-anchors-education-work.json','civic':'legal-anchors-civic.json','justice':'legal-anchors-justice.json','market':'legal-anchors-market.json','environment':'legal-anchors-environment.json','finance':'legal-anchors-finance.json','remaining':'legal-anchors-remaining.json'}
+CATALOGS={'income-security':'legal-anchors.json','education-work':'legal-anchors-education-work.json','civic':'legal-anchors-civic.json','justice':'legal-anchors-justice.json','market':'legal-anchors-market.json','environment':'legal-anchors-environment.json','finance':'legal-anchors-finance.json','remaining':'legal-anchors-remaining.json','history-education':'legal-anchors-history-education.json'}
 def load_catalog(name='income-security'):
     if name not in CATALOGS:raise ValueError('Unknown legal anchor catalog')
     return json.loads((ROOT/CATALOGS[name]).read_text())
@@ -50,13 +50,23 @@ def validate(db,bundle,anchors):
         if not a['provisions'] or not a['version_scope'] or not a['limits']:raise ValueError('Missing legal scope')
         if a['atlas_decision_id'] and a['atlas_decision_id'] not in atlas:raise ValueError('Unknown Atlas decision')
         if a['impact_findings'] and a['impact_status']=='not_assessed':raise ValueError('Impact status mismatch')
+        finding_ids=[f['id'] for f in a['impact_findings'] if 'id' in f]
+        if len(finding_ids)!=len(set(finding_ids)):raise ValueError('Duplicate impact finding identity')
         for f in a['impact_findings']:
             if not f['source_url'] or not f['limits']:raise ValueError('Impact finding must have its own source and scope')
+            if f.get('kind')=='quasi_experimental_study':
+                if any(not f.get(k) for k in ('id','finding','outcome','population','method','source_locator')):raise ValueError('Research finding lacks method or scope')
+                if urlparse(f['source_url']).scheme!='https':raise ValueError('Research source must use HTTPS')
     rows={x['id']:x for x in db.execute('SELECT id,body_text FROM editorial__articles')}
     seen=set()
     for l in bundle['links']:
         key=(l['article_id'],l['anchor_id'])
         if key in seen or l['anchor_id'] not in ids:raise ValueError('Duplicate or unknown link')
+        if 'impact_finding_ids' in l:
+            anchor=next(a for a in anchors['anchors'] if a['id']==l['anchor_id'])
+            known={f.get('id') for f in anchor['impact_findings'] if f.get('id')}
+            refs=l['impact_finding_ids']
+            if not refs or len(refs)!=len(set(refs)) or not set(refs)<=known or not l.get('impact_scope'):raise ValueError('Invalid impact finding reference or scope')
         seen.add(key);a=rows.get(l['article_id'])
         if not a or digest(a['body_text'])!=l['body_sha256']:raise ValueError('Article changed')
         rev=db.execute('SELECT max(revision_no) AS n FROM editorial__article_revisions WHERE article_id=?',[l['article_id']])[0]['n']

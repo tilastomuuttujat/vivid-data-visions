@@ -1,0 +1,88 @@
+{
+  "chain_id": "historical-comprehensive-school-evidence",
+  "anchors": [
+    {
+      "id": "peruskoulu-lakiperusta-1968",
+      "act_id": "467/1968",
+      "title": "Peruskoulun lakiperusta ja vaiheittainen toimeenpano",
+      "enactment_date": "1968-07-26",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "1970-08-01",
+      "implementation_date": "1972–1977",
+      "implementation_date_basis": "Tutkimuksessa kuvattu alueittainen käyttöönotto, ei lain yleinen voimaantulo tai kaikkien vuosiluokkien yhtäaikainen siirtymä.",
+      "provisions": [
+        "1–5 §",
+        "14–17 §",
+        "33 §"
+      ],
+      "objective": "Kehittää koulujärjestelmää yhtenäiskouluperiaatteen mukaiseksi.",
+      "objective_basis": "enacted_purpose_clause",
+      "objective_source": "https://www.datocms-assets.com/153613/1749804299-suomen-asetuskokoelma-467-1968.pdf",
+      "legal_change": "Kunnan järjestämisvastuu ja yhdeksänvuotisen peruskoulun rakenne säädetään laissa.",
+      "implementation": "Lain voimaantulo 1.8.1970 ei ole sama kuin alueittainen käyttöönotto 1972–1977; kuntien ja vuosiluokkien siirtymät erotetaan.",
+      "limits": "Tutkimukset arvioivat uudistuspakettia, eivät yhden pykälän erillistä vaikutusta. Alkuperäinen 5 § salli yläasteella erilaajuisia oppimääriä. Yhteinen koulumuoto ei tarkoittanut kaikkien sisäisten erojen poistamista. Tulokset eivät koske kaikkia sukupuolia, ikäluokkia tai nykyistä koulua.",
+      "atlas_decision_id": "d045",
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/1968/467",
+      "additional_sources": [
+        {
+          "url": "https://www.datocms-assets.com/153613/1749804299-suomen-asetuskokoelma-467-1968.pdf",
+          "locator": "Suomen asetuskokoelma 59/1968, säädös 467, sivut 1163–1171; erityisesti 1–5, 14–17 ja 33 §"
+        },
+        {
+          "url": "https://www.ifau.se/globalassets/pdf/se/2006/wp06-13.pdf",
+          "locator": "Luvut 2.1–2.3; toteutus ja tutkimusasetelma"
+        },
+        {
+          "url": "https://docs.iza.org/dp4058.pdf",
+          "locator": "Luvut 2–3; koulujärjestelmä ja aineisto"
+        }
+      ],
+      "impact_findings": [
+        {
+          "id": "school-income-mobility-2006",
+          "year": 2006,
+          "kind": "quasi_experimental_study",
+          "source_url": "https://www.ifau.se/globalassets/pdf/se/2006/wp06-13.pdf",
+          "source_locator": "IFAU Working Paper 2006:13, abstract; luvut 3–5, taulukko 4; työpaperiversio",
+          "finding": "Tutkimuksessa uudistus pienensi isän ja pojan tulojen välistä joustoa noin 0,07 yksikköä. Tulos viittaa tuloliikkuvuuden lisääntymiseen, ei seitsemän prosentin tulonnousuun.",
+          "outcome": "Isän ja pojan tulojen välinen jousto",
+          "population": "Suomessa 1960–1966 syntyneiden miesten edustava otos; poikien tulot vuonna 2000, isien tulomittaus 1970–1990.",
+          "method": "Difference-in-differences: syntymäkohorttien ja alueittaisen 1972–1977 käyttöönoton vertailu.",
+          "estimate": {
+            "value": -0.069,
+            "unit": "elasticity_units",
+            "locator": "Taulukko 4, sarake 3",
+            "is_author_estimate": true
+          },
+          "limits": "Havaintoaineiston kvasikokeellinen arvio; edellyttää, etteivät muut alueittain ja kohorteittain vaihtelevat muutokset selitä vaikutusta. Koskee uudistuspakettia ja tutkittuja miehiä, ei poliittisiin eliitteihin pääsyä, naisia tai kaikkia myöhempiä ikäluokkia. Työpaperin tulosta ei merkitä erilliseksi riippumattomaksi toisinnukseksi myöhemmästä lehtijulkaisusta.",
+          "publication_family": "Pekkarinen-Pekkala-Uusitalo comprehensive-school income mobility",
+          "later_publication_doi": "10.1016/j.jpubeco.2009.04.006"
+        },
+        {
+          "id": "school-cognitive-skills-2009",
+          "year": 2009,
+          "kind": "quasi_experimental_study",
+          "source_url": "https://docs.iza.org/dp4058.pdf",
+          "source_locator": "IZA Discussion Paper 4058, abstract; luvut 3–5; työpaperiversio",
+          "finding": "Kielellisen testin keskiarvo parani hieman. Laskennallisen ja loogisen päättelyn keskiarvoille ei havaittu merkitsevää vaikutusta. Vain perusasteen suorittaneiden vanhempien pojat hyötyivät kaikissa kolmessa testissä.",
+          "outcome": "Puolustusvoimien peruskokeen kielellinen, laskennallinen ja looginen osatesti",
+          "population": "1962–1966 syntyneet miehet, jotka löytyivät vuoden 1982 jälkeen aloittaneiden varusmiesten rekisteristä; aineisto kattoi noin 85,3 % vastaavista mieskohorteista.",
+          "method": "Difference-in-differences: alueittain vaiheistetun koulu-uudistuksen ja kohorttien vertailu.",
+          "limits": "Valikoitunut mies- ja varusmiesaineisto; testit eivät mittaa kaikkea osaamista tai hyvinvointia. Merkitsevän keskimääräisen vaikutuksen puuttuminen ei todista täsmälleen nollavaikutusta. Tutkimusasetelman tunnistamisoletukset ja uudistuspaketin muut osat rajoittavat tulkintaa. Työpaperi ja myöhempi lehtiversio eivät ole riippumattomia toistoja.",
+          "publication_family": "Pekkarinen-Uusitalo-Kerr comprehensive-school cognitive skills",
+          "later_publication": "Journal of Labor Economics 2013, 31(3), 577–603"
+        }
+      ],
+      "impact_status": "selected_outcomes_assessed",
+      "version_scope": "Alkuperäisen säädöksen valitut historialliset kohdat; myöhempiä muutoksia ei lueta alkuperäiseen lakiin.",
+      "checked_on": "2026-11-05",
+      "verification": "statute_reproduction_and_research_sources_checked",
+      "legal_text_source": {
+        "url": "https://www.datocms-assets.com/153613/1749804299-suomen-asetuskokoelma-467-1968.pdf",
+        "locator": "Suomen asetuskokoelma 59/1968, säädös 467, sivut 1163–1171; erityisesti 1–5, 14–17 ja 33 §",
+        "source_kind": "reproduction_of_original_statute",
+        "hosting_note": "Alkuperäisen säädöksen jäljennös ulkopuolisessa arkistossa. Finlexin tunnistesivu varmistettu; alkuperäisteksti ei palautunut Finlexin säädöskokoelmareitistä tarkistushetkellä."
+      }
+    }
+  ]
+}
