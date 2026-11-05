@@ -3,7 +3,7 @@ import json,hashlib,re
 from datetime import datetime,timezone
 from period_analysis import RecordRemote
 from articles import canonical,digest
-VERSION='education-evidence-reuse-2026-11-05-v1'
+VERSION='education-evidence-reuse-2026-11-05-v2'
 SERIES='public__indicator_series'
 VALUES='public__indicator_values'
 ITEMS='public__items'
@@ -24,7 +24,7 @@ def run(db):
         # Publication flag is necessary but not sufficient to validate any statistic.
         candidates=[s for s in all_series if s['published']==1 and any(k in (s['title'] or '').casefold() for k in ('koul','educat','oppil','tutkinto'))]
         candidates.sort(key=lambda s:(0 if 'peruskou' in (s['title'] or '').casefold() else 1,s['series_key']))
-        chosen=candidates[:40]
+        chosen=candidates
         coverage={}
         if chosen:
             marks=','.join('?' for _ in chosen)
@@ -45,7 +45,7 @@ def run(db):
             try:return bool(json.loads(v)) if isinstance(v,str) else bool(v)
             except (ValueError,TypeError):return bool(str(v).strip())
         report=dict(version=VERSION,created_at=datetime.now(timezone.utc).isoformat(),source_totals=totals,article_count=len(articles),
-          matched_published_series=len(candidates),audited_series=len(chosen),series_limit=40,selection='Published series with education terms in title; priority to comprehensive school; deterministic cap 40. Not a corpus-wide completeness audit.',
+          matched_published_series=len(candidates),audited_series=len(chosen),series_limit=None,selection='All published series with education terms in title; no candidate cap. Not a corpus-wide completeness audit.',
           series=chosen,events=events,period_rows=period_rows,
           series_without_catalogue_source_url=sum(not str(s['source_url'] or '').strip() for s in chosen),
           events_without_sources=sum(not has_sources(i['sources']) for i in events),
@@ -80,14 +80,18 @@ def run(db):
             for table,rows,key in [(SERIES,chosen,'series_key'),(ITEMS,events,'id')]:
                 for r in rows:
                     vals=[VERSION,a['id'],a['revision'],digest(a['body_text']),table,str(r[key]),digest(canonical(r)),'candidate','context_only','Education title match attached to current reform article for source review; no causal or claim-support assertion.']
-                    db.execute('INSERT INTO editorial__evidence_candidates VALUES(?,?,?,?,?,?,?,?,?,?) ON CONFLICT DO NOTHING',vals);expected.append(vals)
+                    expected.append(vals)
+        for offset in range(0,len(expected),30):
+            batch=expected[offset:offset+30]
+            marks=','.join('('+','.join('?' for _ in range(10))+')' for _ in batch)
+            db.execute('INSERT INTO editorial__evidence_candidates VALUES '+marks+' ON CONFLICT DO NOTHING',[v for row in batch for v in row])
         for task in tasks:
             db.execute('INSERT INTO editorial__evidence_research_tasks VALUES(?,?,?) ON CONFLICT DO NOTHING',[VERSION,task['id'],canonical(task)])
-            if db.execute('SELECT payload_json FROM editorial__evidence_research_tasks WHERE version=? AND id=?',[VERSION,task['id']])[0]['payload_json']!=canonical(task):raise ValueError('Research task mismatch')
-        if db.execute('SELECT count(*) AS n FROM editorial__evidence_candidates WHERE version=?',[VERSION])[0]['n']!=len(expected):raise ValueError('Candidate count mismatch')
-        for v in expected:
-            r=db.execute('SELECT * FROM editorial__evidence_candidates WHERE version=? AND article_id=? AND source_table=? AND source_key=?',[v[0],v[1],v[4],v[5]])[0]
-            if list(r.values())!=v:raise ValueError('Candidate readback mismatch')
+        actual_tasks=db.execute('SELECT id,payload_json FROM editorial__evidence_research_tasks WHERE version=? ORDER BY id',[VERSION])
+        if actual_tasks!=sorted([dict(id=t['id'],payload_json=canonical(t)) for t in tasks],key=lambda r:r['id']):raise ValueError('Research task mismatch')
+        actual=db.execute('SELECT * FROM editorial__evidence_candidates WHERE version=? ORDER BY article_id,source_table,source_key',[VERSION])
+        expected.sort(key=lambda v:(v[1],v[4],v[5]))
+        if [list(r.values()) for r in actual]!=expected:raise ValueError('Candidate readback mismatch')
         after=db.execute("""SELECT DISTINCT a.id,a.title,a.body_text,
           (SELECT max(revision_no) FROM editorial__article_revisions WHERE article_id=a.id) AS revision
           FROM editorial__articles a JOIN editorial__narrative_decisions d ON d.article_id=a.id
