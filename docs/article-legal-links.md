@@ -130,3 +130,24 @@ Luotettu Actions-tehtävä `operation: legal-map-complete` tarkistaa ja
 tallentaa luettelolisäykset, varmentaa ne uudella yhteydellä ja päivittää
 sen jälkeen kaksisuuntaiset artikkeliliitokset. Tämä täydentää nykyisen
 artikkelikytkentäerän, ei kaikkia lakikartan puuttuvia historiallisiä säädöksiä.
+
+## Neljäs ketju: oikeusturva, tiedonsaanti ja perustelut
+
+`legal-anchors-justice.json`: neljä säädösankkuria ja 16 kytkentää seitsemään
+artikkeliin. Perustuslain 2, 12, 21 ja 22 §:n oikeudellinen kehys erotetaan
+hallintomenettelyn, asiakirjatiedonsaannin ja oikeusavun konkreettisista ehdoista.
+Hallintolain alkuperäinen versio 434/2003 tulee voimaan 1.1.2004;
+julkisuuslaki 621/1999 1.12.1999 ja oikeusapulaki 257/2002 1.6.2002.
+Voimaantuloa ei tulkita oikeusturvan, julkisuuden tai oikeusavun syntyhetkeksi.
+
+Hallintolaki ei ole yleinen laki kaikesta lainvalmistelusta tai poliittisesta
+keskustelusta eikä tuomioistuinten lainkäytöstä. Asianosaisen kuuleminen,
+muiden vaikuttamismahdollisuus ja yleinen poliittinen osallistuminen erotetaan.
+Julkisuuslain 3 §:n alkuperäistä tiedonhallintatapaa ei sekoiteta vuoden 2019
+sanamuotoon. Asiakirjan saatavuus ei tarkoita sen sisällön oikeellisuuden
+varmistamista. Oikeusavun tarveharkinta ja kustannusrajoitukset eivät katoa
+pelkällä lain olemassaololla. Kaikki kytkennät ovat edelleen `proposed`,
+eikä uusia empiirisiä vaikutustuloksia ole lisätty.
+
+`legal-import` päivittää nyt myös suoran lakikarttaliitoksen ja varmentaa sen
+uudella yhteydellä. Artikkelien alkuperäiset tekstit ja tiivistelmät säilyvät.

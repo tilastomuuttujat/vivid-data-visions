@@ -17,6 +17,7 @@ async function main(){if(process.env.GITHUB_REF!=='refs/heads/main'||process.env
  }else if(['import','legal-import'].includes(task.operation)){
   const session=unseal(task.session,process.env.TURSO_AUTH_TOKEN);if(session.expires<Date.now())throw Error('Expired analysis transfer');const bundle=await decrypt(task.payload,session.privateKey);
   const result=spawnSync('python',[task.operation==='legal-import'?'scripts/editorial/legal_links.py':'scripts/editorial/period_analysis.py','import'],{input:JSON.stringify(bundle),encoding:'utf8',env:process.env,maxBuffer:1000000});if(result.status!==0){const last=(result.stderr||'').trim().split('\n').at(-1)||'Python failed';console.error(last.replace(/Bearer\s+\S+/g,'Bearer [redacted]'));throw Error('Analysis validation or import failed');}console.log(result.stdout.trim());
+  if(task.operation==='legal-import'){const mapping=spawnSync('python',['scripts/editorial/legal_map.py'],{encoding:'utf8',env:process.env,maxBuffer:1000000});if(mapping.status!==0)throw Error('Post-import Lakikartta mapping failed');console.log(mapping.stdout.trim());}
  }else throw Error('Unknown task');
 }
 main().catch(()=>{console.error('Private period analysis job failed; texts and credentials omitted.');process.exitCode=1;});
