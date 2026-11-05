@@ -187,3 +187,26 @@ Kuluttajansuojalain 38/1978, sen 2 luvun muutoslain 561/2008 ja kilpailulain
 Tämä ei muuta aiempien lisäysten provenienssia eikä laske uusille riveille
 verkostomittareita. Muutoslain suhde 38/1978:aan kirjataan lähdemetadataan,
 eikä siitä päätellä automaattisesti kausaalista verkostoyhteyttä.
+
+## Kuudes ketju: ympäristö, metsä ja energia
+
+Neljä ankkuria, 10 kytkentää viiteen artikkeliin. Perustuslain 20 § koskee
+luontoa, monimuotoisuutta, ympäristöä ja kulttuuriperintöä; se ei määrää
+hakkuumäärää, yhtä energiavalintaa tai yhtä kansallista kertomusta.
+Metsälain 1093/1996 alkuperäinen tavoite sekä 10–11 §:n elinympäristö- ja
+poikkeussäännöt erotetaan myöhemmistä muutoksista, luonnonsuojelusta ja
+kansallisen hiilinielun seurannasta.
+
+Ilmastolain 423/2022 päästö- ja poistumatavoitteita sekä maankäyttösektorin
+suunnittelu- ja seurantatehtäviä ei tulkita osoitetuiksi tuloksiksi. Laki ei ole
+yksittäisen hakkuun tai energiahankkeen lupapäätös. Ilmastotase ja luonnon
+monimuotoisuus tarvitsevat omat mittarinsa.
+
+Sähkömarkkinalain 588/2013 alkuperäisten 51–52 §:n jakeluverkon laatua ja
+kehittämissuunnitelmaa koskevat vaatimukset erotetaan tuotannon tehotaseesta,
+vuosituotannosta ja sähkön hinnasta. 119 §:n siirtymäjärjestelyt huomioidaan:
+kaikkien laatuvaatimusten toteutumista ei ajoiteta yleiseen voimaantuloon.
+Säännöksiä ei sovelleta analogiana kaikkiin digitaalisiin tai liikenneverkkoihin.
+
+Kytkennät ovat rajattuja kontekstisuhteita ja ehdotuksia (`proposed`). Ne
+eivät varmista artikkelien inventaariolukuja eivätkä osoita lakien vaikutuksia.
