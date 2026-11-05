@@ -65,8 +65,10 @@ async function loadHistory(id, own = sequence) {
 }
 $("login-form").onsubmit = async event => {
   event.preventDefault(); $("login-error").textContent = "";
+  const submit = $("login-form").querySelector("button"); submit.disabled = true;
   try { csrf = (await api("/api/login", { password: $("password").value, url: $("database-url")?.value })).csrf; $("password").value = ""; await enter(); }
   catch (error) { $("login-error").textContent = error.message; }
+  finally { submit.disabled = false; }
 };
 async function enter() { await refreshCatalog(); $("login").hidden = true; $("workspace").hidden = false; $("logout").hidden = false; }
 $("search").oninput = renderCatalog;
@@ -106,4 +108,4 @@ $("logout").onclick = async () => {
   try { await api("/api/logout", {}); location.reload(); } catch (error) { notice(error.message, true); }
 };
 window.addEventListener("beforeunload", event => { if (dirty) { event.preventDefault(); event.returnValue = ""; } });
-(async () => { try { csrf = (await api("/api/session")).csrf; await enter(); } catch { /* Login form is already visible. */ } })();
+(async () => { const button = $("login-form").querySelector("button"); button.disabled = true; try { csrf = (await api("/api/session")).csrf; await enter(); } catch (error) { if ($("login-error").textContent) $("login-error").textContent = error.message; } finally { button.disabled = false; } })();

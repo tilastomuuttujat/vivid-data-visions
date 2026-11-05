@@ -1,0 +1,35 @@
+name: Article editor bridge
+on:
+  workflow_dispatch:
+    inputs:
+      request:
+        description: Encrypted editor request
+        required: true
+        type: string
+  push:
+    branches: [main]
+    paths:
+      - scripts/editorial/actions-bridge.mjs
+      - scripts/editorial/bridge-crypto.mjs
+      - .github/workflows/article-editor-actions.yml
+permissions:
+  contents: write
+jobs:
+  editor:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.actor == 'tilastomuuttujat')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Test encrypted protocol
+        run: node --test scripts/editorial/bridge-crypto.test.mjs
+      - name: Handle encrypted request
+        run: node scripts/editorial/actions-bridge.mjs
+        env:
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
