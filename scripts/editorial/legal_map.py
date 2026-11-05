@@ -108,7 +108,7 @@ if __name__=='__main__':
             print('Catalog identifier samples:',json.dumps(catalog[:5],ensure_ascii=False))
             for act in sorted({r['act_id'] for r in pending}):
                 n,y=act.split('/')
-                candidates=[r for r in catalog if str(r['number']).strip()==n or r['id'] in [act,y+'/'+n,y+'-'+n,y+n.zfill(4)] or any(term in r['title'].lower() for term in {'609/1986':['tasa-arvo'],'503/1989':['yhdistyslaki'],'410/2015':['kuntalaki'],'612/2021':['sosiaali- ja terveydenhuollon järjestämisestä'],'1412/1997':['toimeentulotuesta'],'1214/2020':['oppivelvollisuus'],'1325/2014':['yhdenvertaisuus']}.get(act,[]))]
+                candidates=[r for r in catalog if str(r['number']).strip()==n or r['id'] in [act,y+'/'+n,y+'-'+n,y+n.zfill(4)] or any(term in (r['title'] or '').lower() for term in {'609/1986':['tasa-arvo'],'503/1989':['yhdistyslaki'],'410/2015':['kuntalaki'],'612/2021':['sosiaali- ja terveydenhuollon järjestämisestä'],'1412/1997':['toimeentulotuesta'],'1214/2020':['oppivelvollisuus'],'1325/2014':['yhdenvertaisuus']}.get(act,[]))]
                 print('Catalog candidates',act,json.dumps(candidates[:12],ensure_ascii=False))
         finally:db.close()
         sys.exit(0)
