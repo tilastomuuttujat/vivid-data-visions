@@ -25,7 +25,7 @@ def validate(db,b):
         if len(ids)!=len(s['sources']):raise ValueError('Duplicate source')
         for x in s['sources']:
             u=urlparse(x['url'])
-            if u.scheme!='https' or u.hostname not in ('kansalaisareena.fi','valtioneuvosto.fi','www.stea.fi','www.finlex.fi','www.kela.fi','www.tyollisyysrahasto.fi','stat.fi','labore.fi','academic.oup.com','tem.fi','tietotarjotin.fi','www.aeaweb.org','www.sjweh.fi','www.sttinfo.fi','link.springer.com','pubmed.ncbi.nlm.nih.gov','www.julkari.fi','www.varke.fi','www.lu.se','www.etk.fi','talouspolitiikanarviointineuvosto.fi','www.traficom.fi','vtv.fi','digital-markets-act.ec.europa.eu','www.hel.fi','paatokset.hel.fi','www.metsatieteenaikakauskirja.fi'):raise ValueError('Unreviewed source domain')
+            if u.scheme!='https' or u.hostname not in ('kansalaisareena.fi','valtioneuvosto.fi','www.stea.fi','www.finlex.fi','www.kela.fi','www.tyollisyysrahasto.fi','stat.fi','labore.fi','academic.oup.com','tem.fi','tietotarjotin.fi','www.aeaweb.org','www.sjweh.fi','www.sttinfo.fi','link.springer.com','pubmed.ncbi.nlm.nih.gov','www.julkari.fi','www.varke.fi','www.lu.se','www.etk.fi','talouspolitiikanarviointineuvosto.fi','www.traficom.fi','vtv.fi','digital-markets-act.ec.europa.eu','www.hel.fi','paatokset.hel.fi','www.metsatieteenaikakauskirja.fi','portti.kansallisarkisto.fi','publications.bof.fi'):raise ValueError('Unreviewed source domain')
             if any(not x.get(k) for k in ('publisher','title','locator','checked_on','kind')):raise ValueError('Source scope missing')
         for e in s['evidence']:
             if e['source_id'] not in ids or not e['finding'] or not e['supports'] or not e['does_not_establish']:raise ValueError('Unscoped evidence')
