@@ -46,3 +46,12 @@ class CompletionTests(unittest.TestCase):
   self.assertEqual(complete(db,load('market')),0)
   verify(db,base);verify(db,load('market'))
   self.assertEqual([r for r in db.execute('SELECT * FROM editorial__catalog_additions ORDER BY statute_id') if r['source_version']==base['version']],before)
+
+ def test_finance_batch_is_independent_and_idempotent(self):
+  db=self.db();prior=load('market');complete(db,prior)
+  before=db.execute('SELECT * FROM editorial__catalog_additions ORDER BY statute_id')
+  self.assertEqual(complete(db,load('finance')),2)
+  self.assertEqual(complete(db,load('finance')),0)
+  verify(db,prior);verify(db,load('finance'))
+  self.assertEqual([r for r in db.execute('SELECT * FROM editorial__catalog_additions ORDER BY statute_id') if r['source_version']==prior['version']],before)
+  self.assertTrue(all(r['systemic_risk_score'] is None and r['in_force'] is None for r in db.execute('SELECT * FROM lakikartta__statute_catalog')))

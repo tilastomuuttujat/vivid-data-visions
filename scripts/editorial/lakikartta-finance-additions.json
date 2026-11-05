@@ -1,0 +1,28 @@
+{
+  "version": "editorial-finance-catalog-2026-11-05-v1",
+  "scope": "Two source-checked historical statute identities; status and computed metrics remain unknown.",
+  "statutes": [
+    {
+      "act_id": "676/2000",
+      "title": "Laki valtiontalouden tarkastusvirastosta",
+      "kind": "principal_act",
+      "parent_act_id": null,
+      "enactment_date": "2000-07-14",
+      "date_precision": "day",
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2000/676",
+      "source_locator": "Alkuperäisen säädöksen otsikko, tunniste ja antopäivä",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "act_id": "1368/2007",
+      "title": "Laki valtion yhtiöomistuksesta ja omistajaohjauksesta",
+      "kind": "principal_act",
+      "parent_act_id": null,
+      "enactment_date": "2007-12-21",
+      "date_precision": "day",
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2007/1368",
+      "source_locator": "Alkuperäisen säädöksen otsikko, tunniste ja antopäivä",
+      "checked_on": "2026-11-05"
+    }
+  ]
+}
