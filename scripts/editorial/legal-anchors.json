@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "chain_id": "toimeentuloturva-1984-2023",
+  "anchors": [
+    {
+      "id": "shl-1984",
+      "act_id": "710/1982",
+      "title": "Sosiaalihuoltolaki: toimeentulotuen oikeusperusta",
+      "enactment_date": "1982-09-17",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "1984-01-01",
+      "implementation_date": "1984-01-01",
+      "implementation_date_basis": "Institutionaalinen oikeudellinen aloitus; käytännön toteutumiselle ei oleteta yhtä valmistumispäivää.",
+      "provisions": [
+        "30 §",
+        "61 §"
+      ],
+      "objective": "Turvata viimesijaista toimeentuloa laissa säädetyin edellytyksin.",
+      "legal_change": "Laki määrittelee oikeuden toimeentulotukeen, kun tarpeenmukaista toimeentuloa ei saa työstä, tuloista, varoista tai muulla laissa tarkoitetulla tavalla.",
+      "implementation": "Kunnallisen sosiaalihuollon järjestelmä; oikeuden käyttäminen edellyttää toimeenpanoa.",
+      "limits": "Säännös ei yksin osoita tuen riittävyyttä, paikallista yhdenvertaisuutta tai asiakkaan kokemaa asemaa.",
+      "atlas_decision_id": "d057",
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1982/710",
+      "additional_sources": [],
+      "impact_findings": [],
+      "impact_status": "not_assessed",
+      "version_scope": "Alkuperäisen säädöksen historiallinen sisältö valituin osin; ei nykyisen etuusoikeuden kokonaisesitys.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked",
+      "objective_basis": "editorial_summary_of_legal_change",
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1982/710"
+    },
+    {
+      "id": "hm-1995",
+      "act_id": "969/1995",
+      "title": "Perusoikeusuudistus: välttämätön toimeentulo ja huolenpito",
+      "enactment_date": "1995",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "1995-08-01",
+      "implementation_date": "1995-08-01",
+      "implementation_date_basis": "Institutionaalinen oikeudellinen aloitus; käytännön toteutumiselle ei oleteta yhtä valmistumispäivää.",
+      "provisions": [
+        "Hallitusmuodon 15 a §"
+      ],
+      "objective": "Vahvistaa sosiaalisten perusoikeuksien oikeudellista asemaa.",
+      "legal_change": "Perustuslaillinen turva ulottuu välttämättömään toimeentuloon ja huolenpitoon silloin, kun henkilö ei kykene hankkimaan ihmisarvoisen elämän edellyttämää turvaa.",
+      "implementation": "Julkinen valta ja tavallinen lainsäädäntö toteuttavat perusoikeuksia.",
+      "limits": "Antovuosi on varmennettu; eduskunnan hyväksymispäivää ei ole tässä yksilöity. Uudistus ei määrää jokaisen etuuden euromäärää.",
+      "atlas_decision_id": "d074",
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1995/969",
+      "additional_sources": [
+        {
+          "url": "https://finlex.fi/fi/hallituksen-esitykset/1997/66",
+          "locator": "Viittaus hallitusmuodon 15 a §:ään"
+        },
+        {
+          "url": "https://finlex.fi/fi/hallituksen-esitykset/2017/47",
+          "locator": "2.1.1; uudistuksen voimaantulo"
+        }
+      ],
+      "impact_findings": [],
+      "impact_status": "not_assessed",
+      "version_scope": "Alkuperäisen säädöksen historiallinen sisältö valituin osin; ei nykyisen etuusoikeuden kokonaisesitys.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked",
+      "objective_basis": "editorial_summary_of_legal_change",
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1995/969"
+    },
+    {
+      "id": "ttt-1998",
+      "act_id": "1412/1997",
+      "title": "Toimeentulotukilaki: oikeus, omavastuu ja alentamisen rajat",
+      "enactment_date": "1997-12-30",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "1998-03-01",
+      "implementation_date": "1998-03-01",
+      "implementation_date_basis": "Institutionaalinen oikeudellinen aloitus; käytännön toteutumiselle ei oleteta yhtä valmistumispäivää.",
+      "provisions": [
+        "1 §",
+        "2 §",
+        "10 §",
+        "29 §"
+      ],
+      "objective": "Turvata viimesijaista toimeentuloa ja tukea itsenäistä selviytymistä.",
+      "legal_change": "Laissa yhdistyvät oikeus tukeen, omasta elatuksesta huolehtiminen kyvyn mukaan sekä rajatut perusosan alentamistilanteet.",
+      "implementation": "Kunnan toimielin tekee hakemukseen ja yksilölliseen tilanteeseen perustuvan päätöksen.",
+      "limits": "Alkuperäisen 10 §:n alentaminen ei saa vaarantaa välttämätöntä toimeentuloa eikä olla kohtuutonta. Myöhempiä muutoksia ei lueta alkuperäiseen lakiin.",
+      "atlas_decision_id": "d076",
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1997/1412",
+      "additional_sources": [],
+      "impact_findings": [],
+      "impact_status": "not_assessed",
+      "version_scope": "Alkuperäisen säädöksen historiallinen sisältö valituin osin; ei nykyisen etuusoikeuden kokonaisesitys.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked",
+      "objective_basis": "enacted_purpose_clause",
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1997/1412"
+    },
+    {
+      "id": "pl-2000",
+      "act_id": "731/1999",
+      "title": "Perustuslaki: sosiaaliturva ja julkisen vallan turvaamisvelvollisuus",
+      "enactment_date": "1999",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "2000-03-01",
+      "implementation_date": "2000-03-01",
+      "implementation_date_basis": "Institutionaalinen oikeudellinen aloitus; käytännön toteutumiselle ei oleteta yhtä valmistumispäivää.",
+      "provisions": [
+        "19 §",
+        "22 §",
+        "130 §"
+      ],
+      "objective": "Turvata sosiaalisia perusoikeuksia ja niiden toteutumista.",
+      "legal_change": "19 § erottaa välttämättömän toimeentulon ja huolenpidon, lailla järjestettävän perustoimeentulon turvan sekä julkisen vallan palvelutehtäviä. 22 § koskee oikeuksien toteutumisen turvaamista.",
+      "implementation": "Julkisen vallan tehtävä jatkuu etuuksien ja palvelujen järjestelytapojen muuttuessa.",
+      "limits": "Kyse ei ole vuoden 2000 uudesta alkupisteestä kaikille sosiaalisille oikeuksille: vuoden 1995 uudistus kuuluu samaan jatkumoon.",
+      "atlas_decision_id": "d078",
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1999/731",
+      "additional_sources": [],
+      "impact_findings": [],
+      "impact_status": "not_assessed",
+      "version_scope": "Alkuperäisen säädöksen historiallinen sisältö valituin osin; ei nykyisen etuusoikeuden kokonaisesitys.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked",
+      "objective_basis": "editorial_summary_of_legal_change",
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1999/731"
+    },
+    {
+      "id": "aktivointi-2001",
+      "act_id": "189/2001",
+      "title": "Kuntouttavan työtoiminnan aktivointisuunnitelma",
+      "enactment_date": "2001-03-02",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "2001-09-01",
+      "implementation_date": "2001-09-01",
+      "implementation_date_basis": "Institutionaalinen oikeudellinen aloitus; käytännön toteutumiselle ei oleteta yhtä valmistumispäivää.",
+      "provisions": [
+        "1 §",
+        "2 §",
+        "3 §",
+        "5 §",
+        "31–32 §"
+      ],
+      "objective": "Parantaa laissa määritellyn pitkään työttömänä olleen kohderyhmän työllistymisedellytyksiä ja elämänhallintaa.",
+      "legal_change": "Työvoimatoimisto, kunta ja henkilö kytketään yhteiseen aktivointisuunnitelmaan laissa rajatuin edellytyksin.",
+      "implementation": "Suunnitelman ja toiminnan järjestäminen vaiheittain alkuperäisten soveltamis- ja siirtymäsäännösten mukaan.",
+      "limits": "Alkuperäiset ikäryhmäkohtaiset ehdot eivät olleet samat. Aktivointisuunnitelma ei yksin osoita työllistymistä; toimeentulotuen sanktioiden täydellinen arvio edellyttää myös muutoslakia 191/2001 ja myöhempiä muutoksia.",
+      "atlas_decision_id": null,
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2001/189",
+      "additional_sources": [],
+      "impact_findings": [],
+      "impact_status": "not_assessed",
+      "version_scope": "Alkuperäisen säädöksen historiallinen sisältö valituin osin; ei nykyisen etuusoikeuden kokonaisesitys.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked",
+      "objective_basis": "enacted_purpose_clause",
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2001/189"
+    },
+    {
+      "id": "shl-2015",
+      "act_id": "1301/2014",
+      "title": "Sosiaalihuoltolaki: palvelutarve ja monialainen yhteistyö",
+      "enactment_date": "2014-12-30",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "2015-04-01",
+      "implementation_date": "2015-04-01",
+      "implementation_date_basis": "Institutionaalinen oikeudellinen aloitus; käytännön toteutumiselle ei oleteta yhtä valmistumispäivää.",
+      "provisions": [
+        "36 §",
+        "39 §",
+        "41 §",
+        "61 §"
+      ],
+      "objective": "Vahvistaa tarpeenmukaista tukea ja eri toimijoiden yhteistyötä.",
+      "legal_change": "Palvelutarpeen arviointi, asiakassuunnitelma ja monialaisen yhteistyön velvoitteet muodostavat palvelukokonaisuuden oikeudellisen perustan.",
+      "implementation": "Valitut säännökset pääosin voimaan 1.4.2015; laissa oli myös muita voimaantuloajankohtia.",
+      "limits": "Yhteistyövelvoite ei yksin osoita palvelukapasiteettia tai asiakkaan kokonaisuuden toteutumista. Alkuperäinen järjestäjä oli kunta.",
+      "atlas_decision_id": "d092",
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2014/1301",
+      "additional_sources": [],
+      "impact_findings": [],
+      "impact_status": "not_assessed",
+      "version_scope": "Alkuperäisen säädöksen historiallinen sisältö valituin osin; ei nykyisen etuusoikeuden kokonaisesitys.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked",
+      "objective_basis": "enacted_purpose_clause",
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2014/1301"
+    },
+    {
+      "id": "kela-2017",
+      "act_id": "815/2015",
+      "title": "Perustoimeentulotuen siirto Kelan toimeenpantavaksi",
+      "enactment_date": "2015-06-26",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "2017-01-01",
+      "implementation_date": "2017-01-01",
+      "implementation_date_basis": "Institutionaalinen oikeudellinen aloitus; käytännön toteutumiselle ei oleteta yhtä valmistumispäivää.",
+      "provisions": [
+        "4 §",
+        "14–14 e §"
+      ],
+      "objective": "HE 358/2014: yhdenvertaisuus, hallinnollinen yksinkertaistaminen ja tukeen oikeutettujen pääsy tuen piiriin.",
+      "legal_change": "Perustoimeentulotuen hakeminen, myöntäminen ja maksaminen siirtyvät Kelalle; täydentävä ja ehkäisevä tuki jäävät tuolloin kunnille.",
+      "implementation": "Uusi työnjako edellyttää Kelan ja kunnallisen sosiaalityön yhteyttä; toteutusta muutettiin myös vuoden 2016 laeilla.",
+      "limits": "815/2015 on alkuperäinen siirtopäätös, ei muuttumattomana koko vuonna 2017 sovellettu sääntely. Auditointihavainnot eivät osoita kaikkien asiakkaiden kokemuksia tai yhtä nettovaikutusta.",
+      "atlas_decision_id": null,
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2015/815",
+      "additional_sources": [
+        {
+          "url": "https://finlex.fi/fi/hallituksen-esitykset/2014/358",
+          "locator": "Tavoitteet ja perustelut"
+        },
+        {
+          "url": "https://vtv.fi/raportti/perustoimeentulotuen-siirto-kelalle-toimeenpanon-vaikutusten-arvioinnin-merkitys-lainvalmistelussa/",
+          "locator": "Tarkastuskertomuksen 1/2020 yhteenveto"
+        }
+      ],
+      "impact_findings": [
+        {
+          "year": 2020,
+          "kind": "implementation_audit",
+          "source_url": "https://vtv.fi/raportti/perustoimeentulotuen-siirto-kelalle-toimeenpanon-vaikutusten-arvioinnin-merkitys-lainvalmistelussa/",
+          "finding": "VTV kuvasi yhdenvertaisuuden ja tuen hakemisen parantumista mutta arvioitua suurempia toimeenpanokustannuksia sekä heikentynyttä taloudellisen tuen ja sosiaalityön yhteyttä.",
+          "limits": "Tarkastuksen rajattu ajanjakso ja viranomaisnäkökulma; ei kaikkia vaikutuksia eristävä koeasetelma."
+        }
+      ],
+      "impact_status": "audit_findings",
+      "version_scope": "Alkuperäisen säädöksen historiallinen sisältö valituin osin; ei nykyisen etuusoikeuden kokonaisesitys.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked",
+      "objective_basis": "government_proposal",
+      "objective_source": "https://finlex.fi/fi/hallituksen-esitykset/2014/358"
+    },
+    {
+      "id": "yhteistyo-2023",
+      "act_id": "1023/2022",
+      "title": "Toimeentulotuen yhteistyö Kelan ja hyvinvointialueiden välillä",
+      "enactment_date": "2022-12-09",
+      "parliamentary_adoption_date": null,
+      "entry_into_force": "2023-01-01",
+      "implementation_date": "2023-01-01",
+      "implementation_date_basis": "Institutionaalinen oikeudellinen aloitus; käytännön toteutumiselle ei oleteta yhtä valmistumispäivää.",
+      "provisions": [
+        "4 §",
+        "14 c–14 e §",
+        "27 a–27 f §"
+      ],
+      "objective": "Selkeyttää toimeenpanon työnjakoa ja tiivistää etuuden ja sosiaalihuollon yhteistyötä.",
+      "legal_change": "Toimeentulotuen toimeenpano järjestetään Kelan ja hyvinvointialueiden välillä, ja lakiin sisältyy yhteistyötä sekä asiakkaan palvelua koskevia menettelyjä.",
+      "implementation": "Laki tulee voimaan hyvinvointialueiden aloittaessa 1.1.2023.",
+      "limits": "Tämä muutoslaki ei yksin perustanut hyvinvointialueita. Tarkastellaan vuoden 2023 sääntelyä, ei nykyisen lain kaikkia myöhempiä muutoksia.",
+      "atlas_decision_id": null,
+      "primary_url": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2022/1023",
+      "additional_sources": [
+        {
+          "url": "https://finlex.fi/fi/hallituksen-esitykset/2022/127",
+          "locator": "Esityksen tavoitteet"
+        },
+        {
+          "url": "https://vtv.fi/raportti/jalkiseurantaraportti-perustoimeentulotuen-siirto-kelalle-toimeenpanon-vaikutusten-arvioinnin-merkitys-lainvalmistelussa/",
+          "locator": "Jälkiseuranta 14.9.2023"
+        }
+      ],
+      "impact_findings": [
+        {
+          "year": 2023,
+          "kind": "audit_followup",
+          "source_url": "https://vtv.fi/raportti/jalkiseurantaraportti-perustoimeentulotuen-siirto-kelalle-toimeenpanon-vaikutusten-arvioinnin-merkitys-lainvalmistelussa/",
+          "finding": "VTV tunnisti yhteistyötä tukevia muutoksia mutta arvioi, ettei toimeenpanon jakautumisen perusongelma ratkennut. Tavoitteiden saavuttaminen vaatii erillistä arviointia.",
+          "limits": "Jälkiseuranta arvioi suositusten johdosta tehtyjä toimia, ei osoita uudistuksen kaikkia asiakasvaikutuksia."
+        }
+      ],
+      "impact_status": "audit_findings",
+      "version_scope": "Alkuperäisen säädöksen historiallinen sisältö valituin osin; ei nykyisen etuusoikeuden kokonaisesitys.",
+      "checked_on": "2026-11-05",
+      "verification": "primary_source_checked",
+      "objective_basis": "editorial_summary_of_legal_change",
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2022/1023"
+    }
+  ]
+}

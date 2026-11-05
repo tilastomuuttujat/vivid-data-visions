@@ -11,9 +11,9 @@ async function main(){if(process.env.GITHUB_REF!=='refs/heads/main'||process.env
   const value={articles,publicKey:keys.publicKey,session:seal({privateKey:keys.privateKey,expires:Date.now()+86400000},process.env.TURSO_AUTH_TOKEN)};
   const content=Buffer.from(JSON.stringify(await encrypt(value,task.publicKey))).toString('base64');
   const r=await fetch('https://api.github.com/repos/'+repo+'/contents/responses/'+task.id+'.json',{method:'PUT',headers:{Authorization:'Bearer '+process.env.GITHUB_TOKEN,Accept:'application/vnd.github+json'},body:JSON.stringify({branch:'article-editor-responses',message:'Encrypted private analysis transfer',content})});if(!r.ok)throw Error('Encrypted export failed');console.log('PASS encrypted current-article export:',articles.length);
- }else if(task.operation==='import'){
+ }else if(['import','legal-import'].includes(task.operation)){
   const session=unseal(task.session,process.env.TURSO_AUTH_TOKEN);if(session.expires<Date.now())throw Error('Expired analysis transfer');const bundle=await decrypt(task.payload,session.privateKey);
-  const result=spawnSync('python',['scripts/editorial/period_analysis.py','import'],{input:JSON.stringify(bundle),encoding:'utf8',env:process.env,maxBuffer:1000000});if(result.status!==0){const last=(result.stderr||'').trim().split('\n').at(-1)||'Python failed';console.error(last.replace(/Bearer\s+\S+/g,'Bearer [redacted]'));throw Error('Analysis validation or import failed');}console.log(result.stdout.trim());
+  const result=spawnSync('python',[task.operation==='legal-import'?'scripts/editorial/legal_links.py':'scripts/editorial/period_analysis.py','import'],{input:JSON.stringify(bundle),encoding:'utf8',env:process.env,maxBuffer:1000000});if(result.status!==0){const last=(result.stderr||'').trim().split('\n').at(-1)||'Python failed';console.error(last.replace(/Bearer\s+\S+/g,'Bearer [redacted]'));throw Error('Analysis validation or import failed');}console.log(result.stdout.trim());
  }else throw Error('Unknown task');
 }
 main().catch(()=>{console.error('Private period analysis job failed; texts and credentials omitted.');process.exitCode=1;});
