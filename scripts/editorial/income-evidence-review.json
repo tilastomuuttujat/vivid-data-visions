@@ -1,0 +1,275 @@
+{
+  "version": "education-income-source-review-2026-11-05-v1",
+  "base_quality_version": "education-evidence-quality-2026-11-05-v1",
+  "retrieved_on": "2026-11-05",
+  "sources": [
+    {
+      "name": "income",
+      "file": "sources/education-income-2026-11-05.json",
+      "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tjt/14k5.px",
+      "request": {
+        "query": [
+          {
+            "code": "timeperiod_y",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "2010",
+                "2011",
+                "2012",
+                "2013",
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2021",
+                "2022",
+                "2023",
+                "2024"
+              ]
+            }
+          },
+          {
+            "code": "tuloluokka_46_19951231",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS"
+              ]
+            }
+          },
+          {
+            "code": "ikaryhma_22_20191201",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "18-64",
+                "25-34",
+                "35-49",
+                "50-64"
+              ]
+            }
+          },
+          {
+            "code": "sukupuoli_9_20180101",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS",
+                "1",
+                "2"
+              ]
+            }
+          },
+          {
+            "code": "koulutusaste_21_20231110",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS",
+                "3",
+                "456",
+                "78",
+                "9"
+              ]
+            }
+          },
+          {
+            "code": "contentscode",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "tjt-henkiloita",
+                "tjt-ekvikturaha_med",
+                "hkturaha_med",
+                "htuotektu_med"
+              ]
+            }
+          }
+        ],
+        "response": {
+          "format": "json-stat2"
+        }
+      },
+      "sha256": "aa9916519a54d94bd305c21171d2cf992479d257aba5852418f38a6b2247bcf4",
+      "updated": "2025-12-16T06:00:00Z",
+      "expected_cells": 3600,
+      "expected_null_cells": 0
+    },
+    {
+      "name": "wages2024",
+      "file": "sources/education-wages2024-2026-11-05.json",
+      "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/pra/15aw.px",
+      "request": {
+        "query": [
+          {
+            "code": "timeperiod_y",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "2024"
+              ]
+            }
+          },
+          {
+            "code": "palk_muo_1_20250101",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS"
+              ]
+            }
+          },
+          {
+            "code": "koulutusaste_17_20180101",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9_X"
+              ]
+            }
+          },
+          {
+            "code": "koulutusala_3_20180101",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS",
+                "07",
+                "09"
+              ]
+            }
+          },
+          {
+            "code": "ikaryhma_10_20180101",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS",
+                "25-29",
+                "30-34",
+                "35-39",
+                "40-44",
+                "45-49",
+                "50-54",
+                "55-59",
+                "60-64"
+              ]
+            }
+          },
+          {
+            "code": "sukupuoli_9_20180101",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS",
+                "1",
+                "2"
+              ]
+            }
+          },
+          {
+            "code": "contentscode",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "koko_psaaja_lkm",
+                "koko_psaaja_kans_ka",
+                "koko_psaaja_kans_med"
+              ]
+            }
+          }
+        ],
+        "response": {
+          "format": "json-stat2"
+        }
+      },
+      "sha256": "704866a55be3f448134d33663544d754c3aae7e90906ad4161d4867c970a32ba",
+      "updated": "2026-06-08T05:00:00Z",
+      "expected_cells": 1944,
+      "expected_null_cells": 256
+    }
+  ],
+  "series": [
+    {
+      "series_key": "education.income.v20261025.factor_income_median",
+      "family": "income",
+      "measure": "htuotektu_med",
+      "expected_metadata_sha256": "ab5614ccb8860b37c9cbf3f0cd87058ec95b4dd0be50b32591d90f3bd41fd872",
+      "expected_rows_sha256": "3c157fb6b512b49c49daeb1fc1e3a2228b40f3bf588e0b776e19f83b6da44e21",
+      "expected_rows": 900,
+      "unit": "euroa/vuosi, vuoden 2024 rahassa",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tjt/14k5.px"
+    },
+    {
+      "series_key": "education.income.v20261025.fulltime_count",
+      "family": "wages2024",
+      "measure": "koko_psaaja_lkm",
+      "expected_metadata_sha256": "5d4027d50516d89253d6f23567098e0c356ebcdc9ff92295790d8eacbd16eaa3",
+      "expected_rows_sha256": "04ce5b061f4df92146347eedbe701af71e7eea61f4f8a9616018057b49cec447",
+      "expected_rows": 594,
+      "unit": "henkilöä",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/pra/15aw.px"
+    },
+    {
+      "series_key": "education.income.v20261025.household_median",
+      "family": "income",
+      "measure": "tjt-ekvikturaha_med",
+      "expected_metadata_sha256": "6b635b44666b4bbc069108395d10f0839332dc7ff17a19d6be601e0db3698008",
+      "expected_rows_sha256": "61748727d0899d91535000dae66efe502e137887cf5e9b82fc875c6625aad5e3",
+      "expected_rows": 900,
+      "unit": "euroa/vuosi, vuoden 2024 rahassa",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tjt/14k5.px"
+    },
+    {
+      "series_key": "education.income.v20261025.personal_disposable_median",
+      "family": "income",
+      "measure": "hkturaha_med",
+      "expected_metadata_sha256": "4a6cdd221a576ded6b4e5ede6059205f6233b3383a8aa331d097ef2ca828f0ea",
+      "expected_rows_sha256": "ac304485a55bc9fdbebd4a32bc1e83e60a2100a8101354ea405460902573227f",
+      "expected_rows": 900,
+      "unit": "euroa/vuosi, vuoden 2024 rahassa",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tjt/14k5.px"
+    },
+    {
+      "series_key": "education.income.v20261025.population",
+      "family": "income",
+      "measure": "tjt-henkiloita",
+      "expected_metadata_sha256": "e2b0b4a4711a58e30d809579cdf130e71d63cff102c6f5c0cd581886ff659faa",
+      "expected_rows_sha256": "85f80518c5d281782f0b35de3dab0ae85e4cd1980102015b3caad9c1941b510e",
+      "expected_rows": 900,
+      "unit": "henkilöä",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tjt/14k5.px"
+    },
+    {
+      "series_key": "education.income.v20261025.wage_mean",
+      "family": "wages2024",
+      "measure": "koko_psaaja_kans_ka",
+      "expected_metadata_sha256": "8629e15cd544fc3532102387405c250d76e0a855cd332c8faabb85f163ad2b7b",
+      "expected_rows_sha256": "7e1bd80f9562e138ff5da11ae053d7f7a9700e0f336bdf45efb7b4bea5c22702",
+      "expected_rows": 547,
+      "unit": "euroa/kuukausi",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/pra/15aw.px"
+    },
+    {
+      "series_key": "education.income.v20261025.wage_median",
+      "family": "wages2024",
+      "measure": "koko_psaaja_kans_med",
+      "expected_metadata_sha256": "3171c9f86d74fe558cee2c05927bc12eadf154492ce4f5fa92f0c1f413455b34",
+      "expected_rows_sha256": "eddff7dbe2dd9ede0129d40694aa4767a354ba8e312679fa0f50470549526804",
+      "expected_rows": 547,
+      "unit": "euroa/kuukausi",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/pra/15aw.px"
+    }
+  ]
+}
