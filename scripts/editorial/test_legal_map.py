@@ -1,5 +1,5 @@
 import json,unittest
-from legal_map import resolve,sync,verify
+from legal_map import resolve,sync,verify,catalog_key
 from legal_links import import_links,load_catalog
 from test_period_analysis import Local
 from test_legal_links import Tests
@@ -36,3 +36,18 @@ class MappingTests(unittest.TestCase):
   for k in ['a','b']:db.execute('INSERT INTO lakikartta__statute_catalog VALUES(?,?,?,?,?)',[k,num,int(year),'x','v'])
   with self.assertRaises(ValueError):sync(db)
   self.assertEqual(db.execute("SELECT name FROM sqlite_master WHERE name='editorial__lakikartta_links'"),[])
+
+class NativeIdentifiers(unittest.TestCase):
+ def test_missing_number_uses_exact_native_id(self):
+  a=[{'anchor_set':'v','id':'a','payload_json':json.dumps({'act_id':'609/1986'})}]
+  r=resolve(a,[{'id':'1986/609','number':None,'year':1986}])
+  self.assertEqual(r[0]['statute_id'],'1986/609')
+  self.assertEqual(r[0]['status'],'exact')
+ def test_conflicting_fields_fail_closed(self):
+  for row in [{'id':'1986/609','number':610,'year':1986},{'id':'1986/609','number':None,'year':1987}]:
+   with self.assertRaises(ValueError):catalog_key(row)
+ def test_nonstatutory_id_does_not_invent_a_number(self):
+  self.assertIsNone(catalog_key({'id':'1850/historical-event','number':None,'year':1850}))
+ def test_duplicate_native_id_and_number_match_rejected(self):
+  a=[{'anchor_set':'v','id':'a','payload_json':json.dumps({'act_id':'609/1986'})}]
+  with self.assertRaises(ValueError):resolve(a,[{'id':'1986/609','number':None,'year':1986},{'id':'legacy','number':609,'year':1986}])

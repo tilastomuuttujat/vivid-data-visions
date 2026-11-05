@@ -97,3 +97,14 @@ Se käyttää olemassa olevaa Turso-salaisuutta, tarkistaa lähteiden säilymise
 ja varmistaa liitokset uudella tietokantayhteydellä. Uusien artikkelien
 lakikytkentöjen tai säädösluettelon muutosten jälkeen tämä ajo uusitaan.
 Näkymät ovat tietokantakerros; käyttöliittymä ei vielä avaa niiden sisältöä.
+
+
+### Tunnisteiden täydennys, menetelmä v2
+
+Luettelon erillinen `number`-kenttä voi puuttua, vaikka natiivi `id` on
+täsmällinen `vuosi/numero` (esim. `1986/609`). Menetelmä v2 tunnistaa
+myös tämän muodon, vertaa sitä olemassa oleviin numero- ja vuosikenttiin
+ja hylkää ristiriidat. Ei-numeerisia historiallisia tapahtumatunnisteita
+ei muunnettaisi säädösnumeroiksi. `identity_basis` kertoo näkymässä,
+perustuuko osuma numero–vuosi-kenttiin vai natiiviin tunnisteeseen.
+Tämä ei lisää säädösluettelon rivejä tai muuta niiden alkuperäisiä kenttiä.

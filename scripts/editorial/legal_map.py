@@ -4,7 +4,7 @@ Exact statute number/year only. No title similarity or implied causal edges.
 import json,re,sys
 from articles import canonical,digest
 from period_analysis import RecordRemote
-VERSION='lakikartta-exact-2026-11-05-v1'
+VERSION='lakikartta-exact-2026-11-05-v2'
 def number(value):
     s=str(value).strip()
     if not re.fullmatch(r'\d+',s):return None
@@ -12,11 +12,23 @@ def number(value):
 def key(act):
     m=re.fullmatch(r'(\d+)/(\d{4})',act.strip())
     return (int(m[1]),int(m[2])) if m else None
+def catalog_key(row):
+    n,y=number(row['number']),number(row['year'])
+    # Native catalog IDs use year/number, unlike an act citation number/year.
+    m=re.fullmatch(r'(\d{4})/(\d+)',str(row['id']).strip())
+    from_id=(int(m[2]),int(m[1])) if m else None
+    if from_id:
+        if y is not None and y!=from_id[1]:raise ValueError('Conflicting catalog year')
+        if n is not None and n!=from_id[0]:raise ValueError('Conflicting catalog number')
+        # Missing fields can be recovered only from an exact native identifier.
+        if row['number'] not in (None,'') and n is None:raise ValueError('Unsupported catalog number')
+        return from_id
+    return (n,y) if n is not None and y is not None else None
 def resolve(anchors,catalog):
     index={}
     for r in catalog:
-        k=(number(r['number']),number(r['year']))
-        if None not in k:index.setdefault(k,[]).append(r)
+        k=catalog_key(r)
+        if k is not None:index.setdefault(k,[]).append(r)
     result=[]
     for a in anchors:
         act=json.loads(a['payload_json'])['act_id'];k=key(act)
@@ -35,7 +47,8 @@ SCHEMA='''CREATE TABLE IF NOT EXISTS editorial__lakikartta_links (
  FOREIGN KEY(anchor_set,anchor_id) REFERENCES editorial__legal_anchors(anchor_set,id))'''
 VIEW='''CREATE VIEW editorial__article_lakikartta AS
  SELECT n.*,m.statute_id AS lakikartta_statute_id,m.status AS lakikartta_match_status,
- m.method_version AS mapping_method,c.title AS lakikartta_title,c.source_version AS lakikartta_source_version,
+ m.method_version AS mapping_method,
+ CASE WHEN c.id IS NULL THEN NULL WHEN c.number IS NULL OR c.number='' THEN 'catalog_id' ELSE 'number_year' END AS identity_basis,c.title AS lakikartta_title,c.source_version AS lakikartta_source_version,
  json_extract(l.payload_json,'$.interpretation_status') AS interpretation_status,
  CASE WHEN m.statute_id IS NULL THEN 0 ELSE
  (SELECT count(*) FROM lakikartta__assessment_cases x WHERE x.statute_id=m.statute_id) END AS assessment_case_count,
