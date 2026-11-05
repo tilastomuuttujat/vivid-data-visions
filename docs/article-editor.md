@@ -135,3 +135,13 @@ bun run test src/test/turso-browser.test.ts
 Testit kattavat kirjautumisrajan, väärän alkuperän, CSRF-tarkistuksen, oikean
 SQL-tallennuksen, versionvaihdon, historiahaun, vanhentuneen tallennuksen
 hylkäyksen, luonnoksen säilymisen sekä palautuksen ilman automaattista tallennusta.
+
+### GitHub Actions -yhteys
+
+Editorin oletusyhteys käyttää repositorion nykyistä `TURSO_AUTH_TOKEN`-salaisuutta Actionsissa. Turso-tunnistetta ei palauteta selaimeen. Atlas-ylläpidon `atlas-admin-v1`-istunnon GitHub-tunnistetta käytetään samassa välilehdessä automaattisesti, jos sen käyttäjä on `tilastomuuttujat` ja repositorio on oikea. Muussa tapauksessa anna editoriin GitHub-tunniste: hienojakoisen tunnisteen oikeudet tähän repositorioon ovat **Actions: write** ja **Contents: read**. Pelkkä github.com-sivulle kirjautuminen ei siirry GitHub Pages -sivulle.
+
+Avaus ja tallennus käynnistävät `article-editor-actions.yml`-työn. Odota vastausta ennen sivun sulkemista. Selaaminen ja versiohistorian lukeminen käyttävät avauksessa ladattua kopiota. Uusi yhteys hakee tuoreimman aineiston. Istunto on voimassa tunnin; vanha versio ei voi korvata uudempaa tallennusta.
+
+Tekstit ja tallennuspyynnöt salataan RSA-OAEP/AES-GCM-menetelmällä. Julkisen `article-editor-responses`-haaran vastaukset sisältävät vain salattua aineistoa. Selaimen yksityinen avain ja GitHub-tunniste pysyvät muistissa. Actionsin yksityinen istuntoavain palautetaan vain Turso-salaisuudesta johdetulla avaimella salattuna, tunnin määräajalla. Workflow hyväksyy vain `tilastomuuttujat`-käyttäjän päähaaraan lähettämät pyynnöt. Salaisuuden vaihtaminen mitätöi avoimet istunnot.
+
+Jos vastaus aikakatkaistaan, työ saattaa vielä valmistua: ota oma luonnos talteen ja avaa uusin versio ennen uutta tallennusta. Yli 60 kilotavun salattu pyyntö tarvitsee suoran Turso-yhteyden. Suora yhteystapa on edelleen valittavissa.

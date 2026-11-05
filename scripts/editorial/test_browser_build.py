@@ -10,6 +10,7 @@ class BrowserBuildTests(unittest.TestCase):
         self.assertIn('Content-Security-Policy',html)
         self.assertIn('id="database-url"',html)
         self.assertNotIn('localStorage',html)
-        self.assertNotIn('sessionStorage',html)
+        self.assertIn("sessionStorage.getItem('atlas-admin-v1')",html)
+        self.assertNotIn('sessionStorage.setItem',html)
 
 if __name__=='__main__':unittest.main()
