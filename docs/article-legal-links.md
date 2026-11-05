@@ -210,3 +210,9 @@ Säännöksiä ei sovelleta analogiana kaikkiin digitaalisiin tai liikenneverkko
 
 Kytkennät ovat rajattuja kontekstisuhteita ja ehdotuksia (`proposed`). Ne
 eivät varmista artikkelien inventaariolukuja eivätkä osoita lakien vaikutuksia.
+
+## Public finance, debt and state ownership (2026-11-05)
+
+The independent finance catalogue adds four historical anchors: Constitution 731/1999 sections 81–84 and 92, State Audit Office Act 676/2000, and state ownership Act 1368/2007. Sixteen proposed links reference eight independently revision-checked article records. Two records contain the same source text; record counts are not distinct-text counts. Original article text and summaries remain unchanged.
+
+The budget framework concerns the state budget, not all general-government accounting. It does not establish a safe debt ratio or demonstrate the effects of a spending cut. The audit and ownership anchors use original historical provisions; later scope changes, ownership thresholds and the separate 2024 ownership policy decision must be verified separately. Audit reporting is not proof of corrective action. Method: `legal-links-finance-2026-11-05-v1`.
