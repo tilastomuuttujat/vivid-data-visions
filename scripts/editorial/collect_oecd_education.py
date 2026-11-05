@@ -11,20 +11,17 @@ def get(url,accept):
         if len(body)>=16000000:raise ValueError('Source response too large')
         return body,dict(url=url,final_url=r.url,retrieved_at=datetime.now(timezone.utc).isoformat(),sha256=hashlib.sha256(body).hexdigest(),bytes=len(body),content_type=r.headers.get('Content-Type'))
 def main():
-    url=BASE+'dataflow/OECD.EDU.IMEP/DSD_EAG_LSO_EA@DF_LSO_NEAC_DISTR_EA/1.0?references=all'
-    body,meta=get(url,'application/vnd.sdmx.structure+xml;version=2.1')
-    root=ET.fromstring(body);ns={'s':'http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure'}
-    lists=root.findall('.//s:DataStructureComponents/s:DimensionList',ns)
-    if len(lists)!=1:raise ValueError('Ambiguous OECD data structure')
-    dims=sorted([d for d in lists[0] if d.tag.endswith('}Dimension')],key=lambda d:int(d.attrib['position']))
-    ids=[d.attrib['id'] for d in dims]
-    selectors={'REF_AREA':'FIN','SEX':'_T','AGE':'Y25T34','ATTAINMENT_LEV':'ISCED11A_0T2+ISCED11A_5T8','MEASURE':'OBS','FREQ':'A'}
-    if not {'REF_AREA','SEX','AGE','ATTAINMENT_LEV'}<=set(ids):raise ValueError('Unexpected education dimensions')
-    key='.'.join(selectors.get(k,'') for k in ids)
+    selectors={'REF_AREA':'FIN','SEX':'_T','AGE':'Y25T34','ATTAINMENT_LEV':'ISCED11A_0T2+ISCED11A_5T8','EDUCATION_FIELD':'_T','MEASURE':'POP','INCOME':'_Z','BIRTH_PLACE':'_T','MIGRATION_AGE':'_Z','EDU_STATUS':'ED_NED','LABOUR_FORCE_STATUS':'POP','DURATION_UNEMP':'_Z','UNIT_MEASURE':'PT_POP_SEX_AGE','STATISTICAL_OPERATION':'OBS','WORK_TIME_ARNGMNT':'_Z','QUESTIONNAIRE':'NEAC','FREQ':'A'}
+    # Column identities come from the original official CSV, not guessed positions.
+    ids=list(selectors);key='.'.join(selectors[k] for k in ids)
     url=BASE+'data/'+FLOW+'/'+key+'?startPeriod=2000&endPeriod=2025&format=csvfile'
     body,data=get(url,'text/csv')
-    text=body.decode('utf-8-sig');reader=csv.DictReader(io.StringIO(text));rows=list(reader)
-    if not rows or not {'REF_AREA','SEX','AGE','ATTAINMENT_LEV','TIME_PERIOD','OBS_VALUE'}<=set(reader.fieldnames or []):raise ValueError('Unexpected OECD CSV structure')
-    if any(r['REF_AREA']!='FIN' or r['SEX']!='_T' or r['AGE']!='Y25T34' or r['ATTAINMENT_LEV'] not in ('ISCED11A_0T2','ISCED11A_5T8') for r in rows):raise ValueError('OECD selection mismatch')
+    reader=csv.DictReader(io.StringIO(body.decode('utf-8-sig')));rows=list(reader)
+    if not rows or not set(ids+['TIME_PERIOD','OBS_VALUE','OBS_STATUS','UNIT_MULT'])<=set(reader.fieldnames or []):raise ValueError('Unexpected OECD CSV structure')
+    expected_flow='OECD.EDU.IMEP:DSD_EAG_LSO_EA@DF_LSO_NEAC_DISTR_EA(1.0)'
+    for r in rows:
+        if r.get('DATAFLOW')!=expected_flow or r['UNIT_MULT']!='0':raise ValueError('OECD flow or unit multiplier mismatch')
+        if any(r[k] not in selectors[k].split('+') for k in ids):raise ValueError('OECD selection mismatch')
+    meta={'schema_basis':'Official CSV dimensions and population/unit/measure filters checked; XML metadata endpoint not used.'}
     print(json.dumps(dict(source='OECD official SDMX',structure_receipt=meta,data_receipt=data,dimensions=ids,selectors=selectors,columns=reader.fieldnames,rows=rows),ensure_ascii=False))
 if __name__=='__main__':main()

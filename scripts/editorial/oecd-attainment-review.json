@@ -1,0 +1,30 @@
+{
+  "version": "education-oecd-direct-2026-11-05-v1",
+  "base_quality_version": "education-evidence-quality-2026-11-05-v1",
+  "series": [
+    {
+      "series_key": "oecd.education_below_upper_secondary_25_34",
+      "attainment_level": "ISCED11A_0T2",
+      "expected_metadata_sha256": "64b369c0355c9ec6b89e351df08bfa54ea7a6c9599fa73c982cc0cced63be084",
+      "expected_rows_sha256": "a6b73a93ba1e4d4e007d5342a1b884a355ddef7b0bc128253da55dca935ba460",
+      "expected_rows": 24,
+      "group_key": "FI",
+      "target_years": [
+        2000,
+        2025
+      ]
+    },
+    {
+      "series_key": "oecd.tertiary_attainment_25_34",
+      "attainment_level": "ISCED11A_5T8",
+      "expected_metadata_sha256": "93d22a8f0ca0da584a234b936f83db4d2739ca7bb51da29f71700ed6babbf1d5",
+      "expected_rows_sha256": "cb7a224c591c691f96309efcc7d871f98c0e0cbd7071ad73707e1d8b5f0ded7e",
+      "expected_rows": 24,
+      "group_key": "FI",
+      "target_years": [
+        2000,
+        2025
+      ]
+    }
+  ]
+}
