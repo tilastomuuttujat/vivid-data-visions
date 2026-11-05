@@ -48,6 +48,14 @@ class ArticleTests(unittest.TestCase):
         self.assertEqual(row[0],'Original paragraph.')
         self.assertIn('user-supplied text',row[1])
 
+    def test_markdown_heading_import_keeps_original_markdown_body(self):
+        bundle=fixture();bundle['source']['filename']='source.md'
+        bundle['articles'][0]['source_number']=''
+        body='*Subtitle*\n\n## Heading\n\nParagraph with [1].'
+        bundle['pages'][0]='# First title\n\n'+body
+        db=Local();import_bundle(db,bundle)
+        self.assertEqual(db.execute("SELECT title,body_text FROM editorial__articles WHERE id='one'"),[['First title',body]])
+
     def test_invalid_status_or_empty_body_leaves_latest_revision_intact(self):
         for change in [{'status':'wrong'},{'body_text':''},{'tags_json':'{}'}]:
             with self.assertRaises(sqlite3.IntegrityError):update_article(self.db,'one',1,change)
