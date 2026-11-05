@@ -1,0 +1,145 @@
+{
+  "version": "education-evidence-editorial-review-2026-11-05-v1",
+  "base_quality_version": "education-evidence-quality-2026-11-05-v1",
+  "reviews": [
+    {
+      "series_key": "oecd.education_below_upper_secondary_25_34",
+      "expected_metadata_sha256": "64b369c0355c9ec6b89e351df08bfa54ea7a6c9599fa73c982cc0cced63be084",
+      "expected_rows_sha256": "a6b73a93ba1e4d4e007d5342a1b884a355ddef7b0bc128253da55dca935ba460",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "restricted_descriptive_context",
+      "decision": "OECD-lähde paikannettu; kaksi vuotta tarkistettu maaraportin pyöristettyihin lukuihin.",
+      "limits": "Lähteen paikannus ei varmista kaikkia 24 vuosiarvoa. Ei peruskoulu-uudistuksen vaikutusarvio. Alkuperäisten lähdeosoitteiden tyhjät arvot säilyvät siirtokopiossa.",
+      "source_resolution_status": "source_located_partial_value_check",
+      "source_url": "https://www.oecd.org/en/publications/education-at-a-glance-2025_1a3543e2-en/finland_d8f44a5b-en.html",
+      "source_locator": "Education at a Glance 2025: Finland; key findings ja output-osio, 25–34-vuotiaat 2021 ja 2024",
+      "dataset_url": "https://data-explorer.oecd.org/vis?df[ag]=OECD.EDU.IMEP&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_EAG_LSO_EA%40DF_LSO_NEAC_DISTR_EA&df[vs]=1.0&dq=FIN._T.Y25T34.ISCED11A_0T2..........OBS...A",
+      "definition_url": "https://www.oecd.org/en/publications/education-at-a-glance-2025_1a3543e2-en/finland_d8f44a5b-en.html",
+      "rounded_checks": [
+        {
+          "year": 2021,
+          "rounded_percent": 9
+        },
+        {
+          "year": 2024,
+          "rounded_percent": 10
+        }
+      ],
+      "group_key": "FI",
+      "requires_derivation_review": false,
+      "derivation_limit": null,
+      "interpolation_allowed": false
+    },
+    {
+      "series_key": "oecd.tertiary_attainment_25_34",
+      "expected_metadata_sha256": "93d22a8f0ca0da584a234b936f83db4d2739ca7bb51da29f71700ed6babbf1d5",
+      "expected_rows_sha256": "cb7a224c591c691f96309efcc7d871f98c0e0cbd7071ad73707e1d8b5f0ded7e",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "restricted_descriptive_context",
+      "decision": "OECD-lähde paikannettu; kaksi vuotta tarkistettu maaraportin pyöristettyihin lukuihin.",
+      "limits": "Lähteen paikannus ei varmista kaikkia 24 vuosiarvoa. Ei peruskoulu-uudistuksen vaikutusarvio. Alkuperäisten lähdeosoitteiden tyhjät arvot säilyvät siirtokopiossa.",
+      "source_resolution_status": "source_located_partial_value_check",
+      "source_url": "https://www.oecd.org/en/publications/education-at-a-glance-2025_1a3543e2-en/finland_d8f44a5b-en.html",
+      "source_locator": "Education at a Glance 2025: Finland; key findings ja output-osio, 25–34-vuotiaat 2021 ja 2024",
+      "dataset_url": "https://data-explorer.oecd.org/vis?df[ag]=OECD.EDU.IMEP&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_EAG_LSO_EA%40DF_LSO_NEAC_DISTR_EA&df[vs]=1.0&dq=FIN._T.Y25T34.ISCED11A_5T8..........OBS...A",
+      "definition_url": "https://www.oecd.org/en/data/indicators/population-with-tertiary-education.html",
+      "rounded_checks": [
+        {
+          "year": 2021,
+          "rounded_percent": 40
+        },
+        {
+          "year": 2024,
+          "rounded_percent": 39
+        }
+      ],
+      "group_key": "FI",
+      "requires_derivation_review": true,
+      "derivation_limit": "25–29- ja 30–34-vuotiaiden prosenttiosuuksia ei saa summata; koko ikäryhmän osuus tarvitsee oikean väestöpainotuksen tai suoran OECD-havainnon.",
+      "interpolation_allowed": false
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "expected_metadata_sha256": "54ea9b9aea10dd294015d8f4d35528e825872a72d24576dcd224cae875e9937c",
+      "expected_rows_sha256": "d019edea8c3f5ac4ae28b5bc0a13c64059bfc050642866239ecf792683a11bd4",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "historical_context_needs_page_check",
+      "decision": "Toimituksellinen määritelmä täydennetty olemassa olevista metatiedoista.",
+      "limits": "Alkuperäisen vuosikirjan sivu, aluerajaus ja koulumuodot on tarkistettava ennen yhdistämistä myöhempiin sarjoihin.",
+      "definition_supplement": "Vähintään kansakoulun oppimäärän suorittaneiden osuus 15 vuotta täyttäneistä lähteen historiallisella rajauksella; yksikkö promillea, ei prosenttia.",
+      "definition_status": "metadata_summary_needs_page_verification"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.primary_pupils_total",
+      "expected_metadata_sha256": "80a3ed884b2a4e48b864c4cc61a315fdf389c093a819486fce056ebac990a435",
+      "expected_rows_sha256": "ab6b3e1afe7002c9d85423dc64cb7db78c81efef3cbd5b8f4b7944163cad8063",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "historical_context_needs_page_check",
+      "decision": "Toimituksellinen määritelmä täydennetty olemassa olevista metatiedoista.",
+      "limits": "Alkuperäisen vuosikirjan sivu, aluerajaus ja koulumuodot on tarkistettava ennen yhdistämistä myöhempiin sarjoihin.",
+      "definition_supplement": "Kansanopetuksen oppilaiden kokonaismäärä vuosikirjan oppilaitos- ja aluerajauksella; lukuvuosia ei tulkita automaattisesti kalenterivuosiksi.",
+      "definition_status": "metadata_summary_needs_page_verification"
+    },
+    {
+      "series_key": "fi.regional.estat_nama_10r_3empers_employed_s13",
+      "expected_metadata_sha256": "0034d7d36cb3542c575c2b58ddd6617f815a5d99159136199ecb5e50c2f484f5",
+      "expected_rows_sha256": "251608f486fe8c1b9e8d542ba5cb08bb8201c47679bdee05782368c4b3b1193e",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "exclude_from_attainment_evidence",
+      "decision": "Laaja toimialaryhmä: julkishallinto, puolustus, koulutus sekä terveys- ja sosiaalipalvelut.",
+      "limits": "Ei koulutusalan erillinen sarja eikä koulutustason, oppimistulosten tai koulutusmenojen mittari.",
+      "definition_supplement": "Alueellinen yhdistettyjen toimialojen talous- tai työllisyysmittari. Käyttö laajan palvelurakenteen taustatietona, ei koulutusvaikutuksen näyttönä.",
+      "definition_status": "metadata_scope_clarified"
+    },
+    {
+      "series_key": "fi.regional.estat_nama_10r_3gva_current_s13",
+      "expected_metadata_sha256": "523e3b2cd67fd9fb55a24245e2d32af63675ba84308d1eeacd2db1d96d605300",
+      "expected_rows_sha256": "45dd449dfe040a51ffb02f578a73237a88efd82da3f7d493802939453e8e5c03",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "exclude_from_attainment_evidence",
+      "decision": "Laaja toimialaryhmä: julkishallinto, puolustus, koulutus sekä terveys- ja sosiaalipalvelut.",
+      "limits": "Ei koulutusalan erillinen sarja eikä koulutustason, oppimistulosten tai koulutusmenojen mittari.",
+      "definition_supplement": "Alueellinen yhdistettyjen toimialojen talous- tai työllisyysmittari. Käyttö laajan palvelurakenteen taustatietona, ei koulutusvaikutuksen näyttönä.",
+      "definition_status": "metadata_scope_clarified"
+    },
+    {
+      "series_key": "owid.finland.mean-years-of-schooling-long-run.v20261026",
+      "expected_metadata_sha256": "00301b0164f68964b62b692314654bb36c7258b4758e0e06770c221620ed7d66",
+      "expected_rows_sha256": "3c7d0580a8dd461dbcface6fc12190e21c140ba48990123df13b4ef7ccee2d43",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "modelled_context_only",
+      "decision": "Sarjassa on estimate- ja projection-rivejä; niitä ei käsitellä toteutuneina tilastohavaintoina.",
+      "limits": "Arvioiden ja projektioiden ajallinen sijainti sekä mallin lähde on tarkistettava. Ei automaattista ketjutusta havaittuihin sarjoihin.",
+      "exclude_from_observed_only": true
+    },
+    {
+      "series_key": "owid.finland.population-having-attained-at-least-basic-education.v20261026",
+      "expected_metadata_sha256": "c8e2568515f4a3cd05d8acc54a9d3cf51e85ecb1ac2d00e381cdc999c405f043",
+      "expected_rows_sha256": "5495d3bf0b1ee73936e66fbfb2756b1b1afe766532bbc839ca12e8e215e1c375",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "modelled_context_only",
+      "decision": "Sarjassa on estimate- ja projection-rivejä; niitä ei käsitellä toteutuneina tilastohavaintoina.",
+      "limits": "Arvioiden ja projektioiden ajallinen sijainti sekä mallin lähde on tarkistettava. Ei automaattista ketjutusta havaittuihin sarjoihin.",
+      "exclude_from_observed_only": true
+    },
+    {
+      "series_key": "education.expansion.adult.participants",
+      "expected_metadata_sha256": "fc2496d514c8378df4121b152fabcdf1762f15a2a636a199b5a30db008716425",
+      "expected_rows_sha256": "2d273ea24950434f4a13c2e1b1f1297e9737738a9b901ac84878f82032377a15",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "participation_count_context",
+      "decision": "Osallistumiskertoja, ei yksilöityjen osallistujien määrä.",
+      "limits": "Sama ihminen voi sisältyä useaan osallistumiseen. Ei summata henkilömääräksi eikä rinnasteta opiskelijoiden lukumäärään."
+    },
+    {
+      "series_key": "education.expansion.adult.hours",
+      "expected_metadata_sha256": "2af50bc365c773aecec48712b43748833f672ae29bd2033629f7a859f9755f88",
+      "expected_rows_sha256": "cd451dda37a9adb67bf273222d29704e4af3ef648a36fee61ada5d461bedb4e6",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "teaching_input_context",
+      "decision": "Opetustunteja, ei osallistujia tai oppimistuloksia.",
+      "limits": "Tuntimäärä kuvaa koulutuksen panosta; sen kasvu ei yksin osoita oppimisen tai osallistujamäärän kasvua."
+    }
+  ],
+  "global_limits": "Rajatut käyttöpäätökset ja lähdekorjauksen provenienssi; ei kaikkien 110 sarjan semanttinen hyväksyntä eikä kausaalitodiste."
+}
