@@ -15,6 +15,13 @@ async function main(){if(process.env.GITHUB_REF!=='refs/heads/main'||process.env
   }else if(task.operation==='evidence-quality-review'){
   const checks=spawnSync('python',['-m','unittest','discover','-s','scripts/editorial','-p','test_evidence_review.py'],{encoding:'utf8',env:process.env});if(checks.status!==0)throw Error('Evidence review checks failed');console.log('PASS evidence review fixture checks');
   const result=spawnSync('python',['scripts/editorial/evidence_review.py'],{encoding:'utf8',env:process.env,maxBuffer:1000000});if(result.status!==0)throw Error('Scoped evidence review failed');console.log(result.stdout.trim());
+ }else if(task.operation==='evidence-oecd-collect'){
+  if(!/^[0-9a-f-]{36}$/.test(task.id))throw Error('Invalid transfer ID');
+  const checks=spawnSync('python',['-m','unittest','discover','-s','scripts/editorial','-p','test_collect_oecd_education.py'],{encoding:'utf8',env:process.env});if(checks.status!==0)throw Error('OECD collector checks failed');console.log('PASS OECD collector fixture checks');
+  const result=spawnSync('python',['scripts/editorial/collect_oecd_education.py'],{encoding:'utf8',env:process.env,maxBuffer:20000000});
+  if(result.status!==0){console.log('OECD collection failure class:',(result.stderr.match(/HTTP Error \d+/)||result.stderr.match(/[A-Za-z]+Error/)||['unknown'])[0]);throw Error('OECD source collection failed');}
+  const value=JSON.parse(result.stdout),content=Buffer.from(JSON.stringify(await encrypt(value,task.publicKey))).toString('base64');
+  const r=await fetch('https://api.github.com/repos/'+repo+'/contents/responses/'+task.id+'.json',{method:'PUT',headers:{Authorization:'Bearer '+process.env.GITHUB_TOKEN,Accept:'application/vnd.github+json'},body:JSON.stringify({branch:'article-editor-responses',message:'Encrypted OECD source collection',content})});if(!r.ok)throw Error('Encrypted export failed');console.log('PASS encrypted original OECD collection:',value.rows.length);
  }else if(task.operation==='evidence-quality-export'){
   if(!/^[0-9a-f-]{36}$/.test(task.id))throw Error('Invalid transfer ID');
   const audit=await query("SELECT payload_json FROM editorial__evidence_audits WHERE version='education-evidence-reuse-2026-11-05-v2'");

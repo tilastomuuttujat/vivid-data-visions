@@ -1,1 +1,14 @@
-{"operation":"evidence-quality-review","version":"education-evidence-editorial-review-2026-11-05-v1"}
+{
+  "operation": "evidence-oecd-collect",
+  "id": "97c72dae-d27f-494d-be0a-e0e5260c8cef",
+  "publicKey": {
+    "key_ops": [
+      "encrypt"
+    ],
+    "ext": true,
+    "alg": "RSA-OAEP-256",
+    "kty": "RSA",
+    "n": "tIqrsp11F8C2Dl1WUfbo36Co4_5r7ZGUOSu-CruJCFB_tzY7lpNKyojabfDB-uy2ysI_eGg0vzOduMgoPEDQxaqh3AEsKOvOYf-xsq5cGpP_2jn-15GbdCWtSM5jn1dCgM3RDezr5_nO7FtCulHfWu4hfrKaXrLDGJfcpeeCK32X2R7qd1hUzuDL0SyvCEW90DJL_A1nr5Zh1h2Af8ZAR64YD0UvQmdYEczyH7_vTE5xn6MMW_HniqS4B6PYw5dIUoCUUlXF5wFNuGDAl0TuePMr03YooNzcZSlMNYPerMw56yqlng6AE9l3YpvLdpVmAVeYqDdJ9Lwty33wAPOkMw",
+    "e": "AQAB"
+  }
+}
