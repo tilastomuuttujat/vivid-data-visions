@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { randomUUID } from 'node:crypto';
 import { encrypt,decrypt,pair,seal,unseal } from './bridge-crypto.mjs';
 const repo='tilastomuuttujat/vivid-data-visions',branch='article-editor-responses';
 const secret=process.env.TURSO_AUTH_TOKEN;
@@ -19,7 +20,7 @@ async function main(){
  const event=JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH,'utf8'));
  if(process.env.GITHUB_REF!=='refs/heads/main'||process.env.GITHUB_REPOSITORY!==repo)throw Error('Untrusted ref');
  await api('/api/login',{url:'libsql://murrosmatriisi-tilastomuuttujat.aws-eu-north-1.turso.io',password:secret});
- if(process.env.GITHUB_EVENT_NAME==='push'){const keys=await pair();const data=await snapshot();const box=await encrypt(data,keys.publicKey);const decoded=await decrypt(box,keys.privateKey);if(decoded.catalog.articles.length!==data.catalog.articles.length)throw Error('Roundtrip failed');console.log('PASS encrypted article snapshot:',data.catalog.articles.length);return;}
+ if(process.env.GITHUB_EVENT_NAME==='push'){const keys=await pair();const data=await snapshot();const box=await encrypt(data,keys.publicKey);const decoded=await decrypt(box,keys.privateKey);if(decoded.catalog.articles.length!==data.catalog.articles.length)throw Error('Roundtrip failed');await publish(randomUUID(),box);console.log('PASS encrypted article snapshot and response delivery:',data.catalog.articles.length);return;}
  if(event.sender?.login!=='tilastomuuttujat')throw Error('Unauthorized actor');
  const raw=event.inputs?.request;if(typeof raw!=='string'||Buffer.byteLength(raw)>60000)throw Error('Invalid request');
  const request=JSON.parse(raw);if(!/^[a-f0-9-]{36}$/.test(request.id))throw Error('Invalid request id');
