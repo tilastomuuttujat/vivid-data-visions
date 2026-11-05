@@ -1,0 +1,261 @@
+{
+  "version": "historical-school-source-review-2026-11-05-v1",
+  "base_quality_version": "education-evidence-quality-2026-11-05-v1",
+  "source": {
+    "url": "https://otos.stat.fi/bitstreams/b580db7b-372f-414b-9014-855673ee846f/download",
+    "sha256": "0e1ef22c3fd6ef824c0d6c0a7af7dddc4308f41e220a8e4ca7c409b92a5ac17a",
+    "bytes": 40328303,
+    "title": "Suomen tilastollinen vuosikirja 1939",
+    "pdf_pages": [
+      64,
+      178
+    ],
+    "printed_pages": [
+      "48–49",
+      "208–209"
+    ],
+    "verification": "Original page images inspected; cell transcription checked against migrated rows; OCR used only as a navigation aid.",
+    "checked_on": "2026-11-05"
+  },
+  "reviews": [
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "expected_metadata_sha256": "54ea9b9aea10dd294015d8f4d35528e825872a72d24576dcd224cae875e9937c",
+      "expected_rows_sha256": "d019edea8c3f5ac4ae28b5bc0a13c64059bfc050642866239ecf792683a11bd4",
+      "base_quality_version": "education-evidence-quality-2026-11-05-v1",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "historical_descriptive_source_checked",
+      "decision": "Lähdetaulukon sarakeotsikko, yksikkö, kohdejoukko, soluarvot ja alaviitteet tarkistettu sivukuvasta.",
+      "limits": "Ei vähintään kansakoulun suorittaneiden osuus, ei yleinen lukutaitoprosentti eikä nykyinen korkea-asteen koulutusluokka. Ryhmät koko maa, miehet, naiset, kaupungit ja maaseutu ovat päällekkäisiä tarkasteluja eikä niitä summata.",
+      "source_url": "https://otos.stat.fi/bitstreams/b580db7b-372f-414b-9014-855673ee846f/download",
+      "source_document_status": "original_page_and_cells_checked",
+      "definition_supplement": "Lähteen historiallinen sivistyskantaluokka: kansakoulukurssia korkeampi sivistys. Osuus läsnäolevasta 15 vuotta täyttäneestä väestöstä promilleina vuosina 1920 ja 1930.",
+      "definition_status": "original_source_scope_checked",
+      "effective_title": "Kansakoulukurssia korkeamman sivistyksen saaneet, 15 vuotta täyttäneet",
+      "interpolation_allowed": false,
+      "causal_effect_identified": false,
+      "title_correction_required": true,
+      "original_title_rejected": true,
+      "source_locator": "Taulukko 20, painetut sivut 48–49, PDF-sivu 64; kansakoulukurssia korkeamman sivistyksen sarakkeet, promilleluvut.",
+      "source_pdf_page": 64,
+      "unit": "‰ 15 vuotta täyttäneestä läsnäolevasta väestöstä",
+      "denominator": "15 vuotta täyttäneet; ryhmän oma läsnäoleva väestö",
+      "source_column": "Henkilöitä, joilla on kansakoulukurssia korkeampi sivistys"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.primary_pupils_total",
+      "expected_metadata_sha256": "80a3ed884b2a4e48b864c4cc61a315fdf389c093a819486fce056ebac990a435",
+      "expected_rows_sha256": "ab6b3e1afe7002c9d85423dc64cb7db78c81efef3cbd5b8f4b7944163cad8063",
+      "base_quality_version": "education-evidence-quality-2026-11-05-v1",
+      "reviewed_on": "2026-11-05",
+      "evidence_role": "historical_descriptive_source_checked",
+      "decision": "Lähdetaulukon sarakeotsikko, yksikkö, kohdejoukko, soluarvot ja alaviitteet tarkistettu sivukuvasta.",
+      "limits": "Ei osallistumisaste tai koko ikäluokan koulutustaso. Ennen lukuvuotta 1930–1931 kokonaisluvusta puuttuvat kaupunkien jatko-, ilta- ja apukoulut sekä kasvatuslaitokset. Katkoksen yli ei päätellä puhdasta oppilasmäärän kasvua. Historiallisia alue- ja koulumuotorajauksia ei oleteta nykyisiksi.",
+      "source_url": "https://otos.stat.fi/bitstreams/b580db7b-372f-414b-9014-855673ee846f/download",
+      "source_document_status": "original_page_and_cells_checked",
+      "definition_supplement": "Taulukon 176 oppilaiden yhteensä-sarake. Lukuvuosihavainto; tallennettu year tarkoittaa lukuvuoden alkamisvuotta. Kirkollisten kiertokoulujen oppilaat ovat erillisessä sarakkeessa.",
+      "definition_status": "original_source_scope_checked",
+      "effective_title": "Kansanopetuksen oppilaat yhteensä, valitut lukuvuodet",
+      "interpolation_allowed": false,
+      "causal_effect_identified": false,
+      "title_correction_required": false,
+      "original_title_rejected": false,
+      "source_locator": "Taulukko 176, painetut sivut 208–209, PDF-sivu 178; oppilaita yhteensä, alaviitteet 1 ja 5.",
+      "source_pdf_page": 178,
+      "unit": "oppilasta",
+      "year_semantics": "school_year_start",
+      "comparability_break_school_year": "1930–1931",
+      "reference_date_note": "Lähteen alaviite 1: yleensä 20. lokakuuta, lukuvuoteen 1930–1931 asti 1. helmikuuta.",
+      "no_calendar_annual_interpretation": true
+    }
+  ],
+  "cells": [
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "year": 1920,
+      "group_key": "FI",
+      "value": "53",
+      "period": "1920",
+      "pdf_page": 64,
+      "table": "20",
+      "unit": "permille",
+      "locator": "Taulukko 20, promilleluvut 1920, ryhmä FI, kansakoulukurssia korkeampi sivistys"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "year": 1920,
+      "group_key": "FI_M",
+      "value": "55",
+      "period": "1920",
+      "pdf_page": 64,
+      "table": "20",
+      "unit": "permille",
+      "locator": "Taulukko 20, promilleluvut 1920, ryhmä FI_M, kansakoulukurssia korkeampi sivistys"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "year": 1920,
+      "group_key": "FI_F",
+      "value": "52",
+      "period": "1920",
+      "pdf_page": 64,
+      "table": "20",
+      "unit": "permille",
+      "locator": "Taulukko 20, promilleluvut 1920, ryhmä FI_F, kansakoulukurssia korkeampi sivistys"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "year": 1920,
+      "group_key": "FI_URBAN",
+      "value": "164",
+      "period": "1920",
+      "pdf_page": 64,
+      "table": "20",
+      "unit": "permille",
+      "locator": "Taulukko 20, promilleluvut 1920, ryhmä FI_URBAN, kansakoulukurssia korkeampi sivistys"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "year": 1920,
+      "group_key": "FI_RURAL",
+      "value": "29",
+      "period": "1920",
+      "pdf_page": 64,
+      "table": "20",
+      "unit": "permille",
+      "locator": "Taulukko 20, promilleluvut 1920, ryhmä FI_RURAL, kansakoulukurssia korkeampi sivistys"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "year": 1930,
+      "group_key": "FI",
+      "value": "66",
+      "period": "1930",
+      "pdf_page": 64,
+      "table": "20",
+      "unit": "permille",
+      "locator": "Taulukko 20, promilleluvut 1930, ryhmä FI, kansakoulukurssia korkeampi sivistys"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "year": 1930,
+      "group_key": "FI_M",
+      "value": "64",
+      "period": "1930",
+      "pdf_page": 64,
+      "table": "20",
+      "unit": "permille",
+      "locator": "Taulukko 20, promilleluvut 1930, ryhmä FI_M, kansakoulukurssia korkeampi sivistys"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "year": 1930,
+      "group_key": "FI_F",
+      "value": "68",
+      "period": "1930",
+      "pdf_page": 64,
+      "table": "20",
+      "unit": "permille",
+      "locator": "Taulukko 20, promilleluvut 1930, ryhmä FI_F, kansakoulukurssia korkeampi sivistys"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "year": 1930,
+      "group_key": "FI_URBAN",
+      "value": "175",
+      "period": "1930",
+      "pdf_page": 64,
+      "table": "20",
+      "unit": "permille",
+      "locator": "Taulukko 20, promilleluvut 1930, ryhmä FI_URBAN, kansakoulukurssia korkeampi sivistys"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.literacy_school",
+      "year": 1930,
+      "group_key": "FI_RURAL",
+      "value": "37",
+      "period": "1930",
+      "pdf_page": 64,
+      "table": "20",
+      "unit": "permille",
+      "locator": "Taulukko 20, promilleluvut 1930, ryhmä FI_RURAL, kansakoulukurssia korkeampi sivistys"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.primary_pupils_total",
+      "year": 1880,
+      "group_key": "FI",
+      "value": "28702",
+      "period": "1880–1881",
+      "pdf_page": 178,
+      "table": "176",
+      "unit": "pupils",
+      "locator": "Taulukko 176, lukuvuosi 1880–1881, oppilaita yhteensä"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.primary_pupils_total",
+      "year": 1900,
+      "group_key": "FI",
+      "value": "111765",
+      "period": "1900–1901",
+      "pdf_page": 178,
+      "table": "176",
+      "unit": "pupils",
+      "locator": "Taulukko 176, lukuvuosi 1900–1901, oppilaita yhteensä"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.primary_pupils_total",
+      "year": 1925,
+      "group_key": "FI",
+      "value": "345793",
+      "period": "1925–1926",
+      "pdf_page": 178,
+      "table": "176",
+      "unit": "pupils",
+      "locator": "Taulukko 176, lukuvuosi 1925–1926, oppilaita yhteensä"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.primary_pupils_total",
+      "year": 1930,
+      "group_key": "FI",
+      "value": "422709",
+      "period": "1930–1931",
+      "pdf_page": 178,
+      "table": "176",
+      "unit": "pupils",
+      "locator": "Taulukko 176, lukuvuosi 1930–1931, oppilaita yhteensä"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.primary_pupils_total",
+      "year": 1935,
+      "group_key": "FI",
+      "value": "476806",
+      "period": "1935–1936",
+      "pdf_page": 178,
+      "table": "176",
+      "unit": "pupils",
+      "locator": "Taulukko 176, lukuvuosi 1935–1936, oppilaita yhteensä"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.primary_pupils_total",
+      "year": 1936,
+      "group_key": "FI",
+      "value": "480413",
+      "period": "1936–1937",
+      "pdf_page": 178,
+      "table": "176",
+      "unit": "pupils",
+      "locator": "Taulukko 176, lukuvuosi 1936–1937, oppilaita yhteensä"
+    },
+    {
+      "series_key": "fi.histwellbeing20261021.primary_pupils_total",
+      "year": 1937,
+      "group_key": "FI",
+      "value": "491989",
+      "period": "1937–1938",
+      "pdf_page": 178,
+      "table": "176",
+      "unit": "pupils",
+      "locator": "Taulukko 176, lukuvuosi 1937–1938, oppilaita yhteensä"
+    }
+  ]
+}
