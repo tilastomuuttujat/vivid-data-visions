@@ -115,6 +115,7 @@ if __name__=='__main__':
     if '--audit' in sys.argv:
         db=RecordRemote()
         try:
+            print('Catalog schema:',json.dumps(db.execute("SELECT type,sql FROM sqlite_master WHERE name='lakikartta__statute_catalog'"),ensure_ascii=False))
             anchors=current_anchors(db)
             catalog=db.execute('SELECT id,number,year,title FROM lakikartta__statute_catalog ORDER BY id')
             pending=[r for r in resolve(anchors,catalog) if r['status']=='unmatched']
