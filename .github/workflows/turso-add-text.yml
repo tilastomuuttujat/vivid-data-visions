@@ -1,0 +1,33 @@
+name: Add private article text to Turso
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/editorial/text-import.json']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: turso-editorial
+  cancel-in-progress: false
+jobs:
+  add-text:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s scripts/editorial -p 'test_*.py'
+      - name: Import private text and verify exact readback
+        env:
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          SUPABASE_READ_KEY: ${{ secrets.SUPABASE_READ_KEY }}
+        run: python scripts/editorial/articles.py import-staged --manifest scripts/editorial/text-import.json
+      - name: Confirm original collection and editor catalogue
+        env:
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+        run: |
+          python scripts/editorial/articles.py verify
+          node scripts/editorial/check_browser.mjs
