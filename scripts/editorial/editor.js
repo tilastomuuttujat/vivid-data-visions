@@ -105,7 +105,12 @@ $("download").onclick = () => {
 };
 $("logout").onclick = async () => {
   if (busy || !canLeave()) return;
-  try { await api("/api/logout", {}); location.reload(); } catch (error) { notice(error.message, true); }
+  try {
+    await api("/api/logout", {}); csrf = ""; catalog = []; article = null; revision = null; dirty = false;
+    $("article-form").reset(); $("article-list").replaceChildren(); $("history-list").replaceChildren();
+    $("reading").textContent = ""; $("revision-preview").textContent = ""; $("revision-title").textContent = "";
+    $("workspace").hidden = true; $("logout").hidden = true; $("login").hidden = false; $("login-error").textContent = "Yhteys katkaistu.";
+  } catch (error) { notice(error.message, true); }
 };
 window.addEventListener("beforeunload", event => { if (dirty) { event.preventDefault(); event.returnValue = ""; } });
 (async () => { const button = $("login-form").querySelector("button"); button.disabled = true; try { csrf = (await api("/api/session")).csrf; await enter(); } catch (error) { if ($("login-error").textContent) $("login-error").textContent = error.message; } finally { button.disabled = false; } })();

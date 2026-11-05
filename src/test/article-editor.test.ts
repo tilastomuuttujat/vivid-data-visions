@@ -28,6 +28,14 @@ async function setup(conflict = false) {
   return fetcher;
 }
 describe("Browser article editor", () => {
+  it("disconnects without reopening the Atlas session and clears private text", async () => {
+    const fetcher = await setup();
+    fireEvent.click(screen.getByRole("button", { name: "Kirjaudu ulos" }));
+    await screen.findByText("Yhteys katkaistu.");
+    expect(document.getElementById("workspace")).not.toBeVisible();
+    expect((document.getElementById("body") as HTMLTextAreaElement).value).toBe("");
+    expect(fetcher.mock.calls.filter(c => c[0] === "/api/session")).toHaveLength(1);
+  });
   it("saves edited text with a revision guard and a CSRF token", async () => {
     const fetcher = await setup();
     expect(screen.getByRole("button", { name: "Tallenna uusi versio" })).toBeDisabled();
