@@ -1,0 +1,111 @@
+"""Connect existing narrative links to the actual Turso Lakikartta catalog.
+Exact statute number/year only. No title similarity or implied causal edges.
+"""
+import json,re,sys
+from articles import canonical,digest
+from period_analysis import RecordRemote
+VERSION='lakikartta-exact-2026-11-05-v1'
+def number(value):
+    s=str(value).strip()
+    if not re.fullmatch(r'\d+',s):return None
+    return int(s)
+def key(act):
+    m=re.fullmatch(r'(\d+)/(\d{4})',act.strip())
+    return (int(m[1]),int(m[2])) if m else None
+def resolve(anchors,catalog):
+    index={}
+    for r in catalog:
+        k=(number(r['number']),number(r['year']))
+        if None not in k:index.setdefault(k,[]).append(r)
+    result=[]
+    for a in anchors:
+        act=json.loads(a['payload_json'])['act_id'];k=key(act)
+        if k is None:raise ValueError('Unrecognized anchor act identifier')
+        matches=index.get(k,[])
+        if len(matches)>1:raise ValueError('Ambiguous catalog statute number/year')
+        result.append(dict(anchor_set=a['anchor_set'],anchor_id=a['id'],act_id=act,statute_id=matches[0]['id'] if matches else None,status='exact' if matches else 'unmatched'))
+    return result
+SCHEMA='''CREATE TABLE IF NOT EXISTS editorial__lakikartta_links (
+ anchor_set TEXT NOT NULL,anchor_id TEXT NOT NULL,act_id TEXT NOT NULL,
+ statute_id TEXT REFERENCES lakikartta__statute_catalog(id),
+ status TEXT NOT NULL CHECK(status IN ('exact','unmatched')),
+ method_version TEXT NOT NULL,
+ CHECK((status='exact' AND statute_id IS NOT NULL) OR (status='unmatched' AND statute_id IS NULL)),
+ PRIMARY KEY(anchor_set,anchor_id),
+ FOREIGN KEY(anchor_set,anchor_id) REFERENCES editorial__legal_anchors(anchor_set,id))'''
+VIEW='''CREATE VIEW editorial__article_lakikartta AS
+ SELECT n.*,m.statute_id AS lakikartta_statute_id,m.status AS lakikartta_match_status,
+ m.method_version AS mapping_method,c.title AS lakikartta_title,c.source_version AS lakikartta_source_version,
+ json_extract(l.payload_json,'$.interpretation_status') AS interpretation_status,
+ CASE WHEN m.statute_id IS NULL THEN 0 ELSE
+ (SELECT count(*) FROM lakikartta__assessment_cases x WHERE x.statute_id=m.statute_id) END AS assessment_case_count,
+ CASE WHEN m.statute_id IS NULL THEN 0 ELSE
+ (SELECT count(*) FROM lakikartta__historical_legal_events x WHERE x.statute_id=m.statute_id) END AS historical_event_count
+ FROM editorial__narrative_decisions n
+ JOIN editorial__article_legal_links l ON l.article_id=n.article_id AND l.anchor_id=n.anchor_id AND l.method_version=n.method_version
+ LEFT JOIN editorial__lakikartta_links m ON m.anchor_set=l.anchor_set AND m.anchor_id=l.anchor_id
+ LEFT JOIN lakikartta__statute_catalog c ON c.id=m.statute_id'''
+REVERSE='''CREATE VIEW lakikartta__article_connections AS
+ SELECT * FROM editorial__article_lakikartta
+ WHERE lakikartta_match_status='exact' AND is_current=1'''
+UNMATCHED='''CREATE VIEW editorial__lakikartta_unmatched AS
+ SELECT * FROM editorial__article_lakikartta
+ WHERE lakikartta_match_status IS NULL OR lakikartta_match_status='unmatched' '''
+def source_state(db):
+    # No source bodies or private passages are emitted to logs.
+    return [digest(canonical(db.execute(sql))) for sql in [
+      'SELECT id,title,summary,body_text FROM editorial__articles ORDER BY id',
+      'SELECT * FROM editorial__article_legal_links ORDER BY id',
+      'SELECT * FROM editorial__legal_anchors ORDER BY anchor_set,id',
+      'SELECT * FROM lakikartta__statute_catalog ORDER BY id']]
+def current_anchors(db):
+    return db.execute('''SELECT DISTINCT a.anchor_set,a.id,a.payload_json
+    FROM editorial__legal_anchors a JOIN editorial__article_legal_links l
+    ON l.anchor_set=a.anchor_set AND l.anchor_id=a.id
+    JOIN editorial__narrative_decisions n ON n.article_id=l.article_id
+    AND n.anchor_id=l.anchor_id AND n.method_version=l.method_version
+    ORDER BY a.anchor_set,a.id''')
+def verify(db,expected):
+    actual=db.execute('SELECT anchor_set,anchor_id,act_id,statute_id,status FROM editorial__lakikartta_links WHERE method_version=? ORDER BY anchor_set,anchor_id',[VERSION])
+    if actual!=sorted(expected,key=lambda x:(x['anchor_set'],x['anchor_id'])):raise ValueError('Mapping readback mismatch')
+    catalog=db.execute('SELECT id,number,year FROM lakikartta__statute_catalog')
+    if resolve(current_anchors(db),catalog)!=expected:raise ValueError('Mapping source changed')
+    # Compare actual joins and cardinality, including unmatched anchors.
+    rows=db.execute('SELECT article_id,anchor_id,method_version,lakikartta_statute_id,lakikartta_match_status FROM editorial__article_lakikartta')
+    if len(rows)!=len(db.execute('SELECT * FROM editorial__narrative_decisions')):raise ValueError('Narrative cardinality changed')
+    lookup={(r['anchor_set'],r['anchor_id']):r for r in expected}
+    for r in rows:
+        m=lookup[(r['method_version'],r['anchor_id'])]
+        if r['lakikartta_statute_id']!=m['statute_id'] or r['lakikartta_match_status']!=m['status']:raise ValueError('Joined mapping mismatch')
+    return rows
+
+def sync(db):
+    db.execute('PRAGMA foreign_keys=ON');db.execute('BEGIN IMMEDIATE')
+    try:
+        before=source_state(db)
+        expected=resolve(current_anchors(db),db.execute('SELECT id,number,year FROM lakikartta__statute_catalog'))
+        db.execute(SCHEMA)
+        for r in expected:
+            db.execute('''INSERT INTO editorial__lakikartta_links(anchor_set,anchor_id,act_id,statute_id,status,method_version)
+            VALUES(?,?,?,?,?,?) ON CONFLICT(anchor_set,anchor_id) DO UPDATE SET
+            act_id=excluded.act_id,statute_id=excluded.statute_id,status=excluded.status,method_version=excluded.method_version''',
+            [r['anchor_set'],r['anchor_id'],r['act_id'],r['statute_id'],r['status'],VERSION])
+        for name in ['lakikartta__article_connections','editorial__lakikartta_unmatched','editorial__article_lakikartta']:
+            db.execute('DROP VIEW IF EXISTS '+name)
+        for sql in [VIEW,REVERSE,UNMATCHED]:db.execute(sql)
+        verify(db,expected)
+        if source_state(db)!=before:raise ValueError('Source content changed')
+        db.execute('COMMIT')
+    except:db.execute('ROLLBACK');raise
+    return expected
+if __name__=='__main__':
+    db=RecordRemote()
+    try:expected=sync(db)
+    finally:db.close()
+    db=RecordRemote()
+    try:
+        rows=verify(db,expected)
+        exact=[r for r in rows if r['lakikartta_match_status']=='exact']
+        print('PASS fresh-connection Lakikartta mapping:',len(expected),'anchors;',len(exact),'exact article links;',len(rows)-len(exact),'unmatched article links;',len({r['article_id'] for r in exact}),'articles; sources unchanged.')
+        print('Unmatched statute identifiers:',','.join(sorted({r['act_id'] for r in expected if r['status']=='unmatched'})) or 'none')
+    finally:db.close()

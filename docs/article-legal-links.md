@@ -62,3 +62,38 @@ kuuleminen ei takaa ehdotuksen hyväksymistä. Vapaaehtoisavun ja
 lakisääteisten palvelujen suhde on soveltamisalaltaan rajattu tutkimuskysymys.
 Kaikki kytkennät ovat ehdotuksia (`proposed`); vaikutusnäyttöä ei ole lisätty.
 Alkuperäiset artikkelit ja aikaisempien ketjujen tiedot säilytetään.
+
+## Suora yhteys Turson lakikarttaan
+
+`legal_map.py` yhdistää Turson `lakikartta__statute_catalog`-luettelon
+säädösnumeron ja vuoden artikkelien voimassa oleviin säädösankkureihin.
+Atlas-tunniste `d...` on eri tunnisteavaruus eikä sitä käytetä Turson säädösavaimena.
+Otsikkosamankaltaisuus, sama aihe tai seuraajasäädös eivät muodosta täsmäosumaa.
+Päällekkäinen numero/vuosi luettelossa keskeyttää tallennuksen.
+
+- `editorial__lakikartta_links`: täsmäosuma tai `unmatched`, luettelon oma avain.
+- `editorial__article_lakikartta`: kaikki artikkelikytkennät ja karttavastineet,
+  myös puuttuvat ja vanhentuneet artikkeliversiot näkyvällä `is_current`-lipulla.
+- `lakikartta__article_connections`: käänteinen haku säädöksestä nykyisten
+  artikkelien täsmällisiin säädöskytkentöihin.
+- `editorial__lakikartta_unmatched`: luettelosta puuttuvat vastineet, joita ei
+  korvata arvatulla taustayhteydellä eikä keksityllä päätöstietueella.
+
+```sql
+SELECT title,provisions_json,article_evidence,mechanism,research_question
+FROM lakikartta__article_connections WHERE lakikartta_statute_id = ?;
+
+SELECT act_id,lakikartta_statute_id,lakikartta_match_status,is_current
+FROM editorial__article_lakikartta WHERE article_id = ?;
+```
+
+Arviointitapausten ja historiallisten tapahtumien lukumäärät osoittavat vain
+samaan säädöstietueeseen liittyvän aineiston olemassaolon, eivät vaikutusnäyttöä.
+Artikkelikohtaisen suhteen tulkintatyyppi ja ehdotusstatus säilyvät näkyvissä.
+Tavoitteita, lähdeaineistoja tai alkuperäisiä artikkelikytkentöjä ei muuteta.
+
+Päivitys tehdään luotetussa Actions-ajossa tehtävällä `operation: legal-map`.
+Se käyttää olemassa olevaa Turso-salaisuutta, tarkistaa lähteiden säilymisen
+ja varmistaa liitokset uudella tietokantayhteydellä. Uusien artikkelien
+lakikytkentöjen tai säädösluettelon muutosten jälkeen tämä ajo uusitaan.
+Näkymät ovat tietokantakerros; käyttöliittymä ei vielä avaa niiden sisältöä.
