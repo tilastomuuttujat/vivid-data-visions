@@ -79,7 +79,7 @@
         "1 §",
         "2 §",
         "10 §",
-        "29 §"
+        "28 §"
       ],
       "objective": "Turvata viimesijaista toimeentuloa ja tukea itsenäistä selviytymistä.",
       "legal_change": "Laissa yhdistyvät oikeus tukeen, omasta elatuksesta huolehtiminen kyvyn mukaan sekä rajatut perusosan alentamistilanteet.",
@@ -94,7 +94,8 @@
       "checked_on": "2026-11-05",
       "verification": "primary_source_checked",
       "objective_basis": "enacted_purpose_clause",
-      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1997/1412"
+      "objective_source": "https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/1997/1412",
+      "correction_note": "Voimaantulosäännöksen viite on 28 §; aiemman analyysiversion 29 § -viite on korjattu."
     },
     {
       "id": "pl-2000",
