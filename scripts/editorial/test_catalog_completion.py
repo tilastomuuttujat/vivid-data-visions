@@ -1,9 +1,12 @@
 import copy,unittest
 from catalog_completion import load,complete,verify,validate
 from test_legal_map import MappingTests
+from articles import canonical
 class CompletionTests(unittest.TestCase):
  def db(self):
   db,_=MappingTests().setup_db()
+  db.execute('ALTER TABLE lakikartta__statute_catalog ADD COLUMN _migration_key TEXT NOT NULL')
+  db.execute('CREATE UNIQUE INDEX migration_identity ON lakikartta__statute_catalog(_migration_key)')
   db.execute('ALTER TABLE lakikartta__statute_catalog ADD COLUMN systemic_risk_score REAL')
   db.execute('ALTER TABLE lakikartta__statute_catalog ADD COLUMN in_force INTEGER')
   return db
@@ -14,7 +17,7 @@ class CompletionTests(unittest.TestCase):
   self.assertTrue(all(r['systemic_risk_score'] is None and r['in_force'] is None for r in db.execute('SELECT * FROM lakikartta__statute_catalog')))
   self.assertEqual(sum(r['kind']=='amendment' for r in b['statutes']),3)
  def test_title_conflict_rolls_back_all_additions(self):
-  db=self.db();b=load();db.execute('INSERT INTO lakikartta__statute_catalog(id,number,year,title) VALUES(?,?,?,?)',['1997/1412','1412',1997,'Different title'])
+  db=self.db();b=load();db.execute('INSERT INTO lakikartta__statute_catalog(_migration_key,id,number,year,title) VALUES(?,?,?,?,?)',[canonical(['1997/1412']),'1997/1412','1412',1997,'Different title'])
   before=db.execute('SELECT * FROM lakikartta__statute_catalog')
   with self.assertRaises(ValueError):complete(db,b)
   self.assertEqual(db.execute('SELECT * FROM lakikartta__statute_catalog'),before)
@@ -24,6 +27,6 @@ class CompletionTests(unittest.TestCase):
    with self.assertRaises(ValueError):validate(b)
  def test_existing_catalog_metric_is_not_overwritten(self):
   db=self.db();b=load();r=b['statutes'][0]
-  db.execute('INSERT INTO lakikartta__statute_catalog(id,number,year,title,systemic_risk_score) VALUES(?,?,?,?,?)',['1995/969','969',1995,r['title'],7.25])
+  db.execute('INSERT INTO lakikartta__statute_catalog(_migration_key,id,number,year,title,systemic_risk_score) VALUES(?,?,?,?,?,?)',[canonical(['1995/969']),'1995/969','969',1995,r['title'],7.25])
   self.assertEqual(complete(db,b),5)
   self.assertEqual(db.execute("SELECT systemic_risk_score FROM lakikartta__statute_catalog WHERE id='1995/969'"),[{'systemic_risk_score':7.25}])

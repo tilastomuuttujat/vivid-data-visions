@@ -29,6 +29,7 @@ def verify(db,bundle):
         rows=db.execute('SELECT * FROM lakikartta__statute_catalog WHERE id=?',[id])
         if len(rows)!=1 or catalog_key(rows[0])!=(n,y) or rows[0]['title']!=r['title']:raise ValueError('Catalog completion readback mismatch')
         if rows[0]['source_version']==bundle['version']:
+            if rows[0].get('_migration_key')!=canonical([id]):raise ValueError('Catalog migration key mismatch')
             fields=['in_force','in_degree','out_degree','total_degree','systemic_risk_score','budget_combined_eur','budget_katz_eur','bowtie_zone','clustering_in','debtrank_eur','delegation_total','he_attention','amendment_count','graph_cites_in','graph_cites_out']
             if any(rows[0].get(f) is not None for f in fields):raise ValueError('New identity must not invent status or metrics')
         p=db.execute('SELECT source_version,payload_json FROM editorial__catalog_additions WHERE statute_id=?',[id])
@@ -49,7 +50,7 @@ def complete(db,bundle):
             if matches:
                 if matches[0]['title']!=r['title']:raise ValueError('Existing title differs; no overwrite allowed')
             else:
-                db.execute('INSERT INTO lakikartta__statute_catalog(id,title,number,year,source_version) VALUES(?,?,?,?,?)',[id,r['title'],str(n),y,bundle['version']]);added.append(id)
+                db.execute('INSERT INTO lakikartta__statute_catalog(_migration_key,id,title,number,year,source_version) VALUES(?,?,?,?,?,?)',[canonical([id]),id,r['title'],str(n),y,bundle['version']]);added.append(id)
             db.execute('INSERT INTO editorial__catalog_additions(statute_id,source_version,payload_json) VALUES(?,?,?) ON CONFLICT(statute_id) DO NOTHING',[id,bundle['version'],canonical(r)])
         verify(db,bundle)
         after=db.execute('SELECT * FROM lakikartta__statute_catalog ORDER BY id')

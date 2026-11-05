@@ -120,7 +120,7 @@ Muutoslain ja pääsäädöksen ero sekä muutettavan säädöksen viitetunniste
 tallennetaan lähdemetadatassa `editorial__catalog_additions`-tauluun.
 Tämä vanhempaa lakia koskeva viite ei luo automaattista verkoston kaarta.
 
-Uusiin luetteloriveihin tallennetaan vain avain, otsikko, säädösnumero, vuosi
+Uusiin luetteloriveihin tallennetaan vain avain, olemassa olevan siirtomuodon mukainen `_migration_key`, otsikko, säädösnumero, vuosi
 ja lähdeversio. Voimassaolotila ja verkostomittarit jäävät NULL-arvoiksi.
 Alkuperäinen täysi lähdeaineisto ja artikkelitekstit säilyvät ennallaan.
 Uudelleenajo ei tee kaksoiskappaleita; ristiriitainen olemassa oleva nimi
