@@ -1,7 +1,7 @@
 import copy
 import sqlite3
 import unittest
-from articles import import_bundle,update_article,verify,digest
+from articles import import_bundle,update_article,verify,digest,update_from_bundle
 
 class Local:
     def __init__(self):self.db=sqlite3.connect(':memory:',isolation_level=None)
@@ -55,6 +55,20 @@ class ArticleTests(unittest.TestCase):
         bundle['pages'][0]='# First title\n\n'+body
         db=Local();import_bundle(db,bundle)
         self.assertEqual(db.execute("SELECT title,body_text FROM editorial__articles WHERE id='one'"),[['First title',body]])
+
+    def test_revised_text_updates_existing_identity_and_retains_original_history(self):
+        bundle=fixture();bundle['pages']=['# First title\n\n## Revised\n\nNew body [1].']
+        bundle['articles']=bundle['articles'][:1];bundle['articles'][0]['source_number']=''
+        bundle['source']['page_count']=1;bundle['source']['filename']='revision.md'
+        bundle['source']['library_file_id']='test-source-reference'
+        bundle['target_article_id']='one';bundle['expected_revision']=1
+        self.assertEqual(update_from_bundle(self.db,bundle),{'articles_updated':1,'revision':2})
+        self.assertEqual(update_from_bundle(self.db,bundle),{'articles_updated':1,'revision':2})
+        self.assertEqual(self.db.execute('SELECT count(*) FROM editorial__articles'),[[2]])
+        self.assertEqual(self.db.execute("SELECT body_text FROM editorial__article_revisions WHERE article_id='one' AND revision_no=1"),[['Original paragraph.']])
+        update_article(self.db,'one',2,{'body_text':'Concurrent edit'})
+        with self.assertRaisesRegex(ValueError,'Revision conflict'):update_from_bundle(self.db,bundle)
+        self.assertEqual(self.db.execute("SELECT body_text FROM editorial__articles WHERE id='one'"),[['Concurrent edit']])
 
     def test_invalid_status_or_empty_body_leaves_latest_revision_intact(self):
         for change in [{'status':'wrong'},{'body_text':''},{'tags_json':'{}'}]:
