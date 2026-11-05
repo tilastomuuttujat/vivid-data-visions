@@ -63,13 +63,14 @@ def validate(bundle):
             type(a['title_lines']) is not int or not 1<=a['title_lines']<=4 or not body_for(bundle,a)):
             raise ValueError('Invalid article boundaries')
         heading=' '.join(pages[a['page_start']-1].lstrip().splitlines()[:a['title_lines']])
-        if re.sub(r'\s+',' ',heading).strip()!=a['source_number']+' '+a['title']:
+        if re.sub(r'\s+',' ',heading).strip()!=(a['source_number']+' '+a['title']).strip():
             raise ValueError('Extracted heading does not match original page')
         expected_page=a['page_end']+1
     if expected_page!=len(pages)+1:raise ValueError('Unassigned source pages')
 
 def initial_fields(bundle,a):
-    return [a['title'],'',body_for(bundle,a),'[]','draft','',canonical(a['review_flags']),'Imported from source PDF; text extraction, not fact-checking']
+    note=('Imported from source PDF; text extraction, not fact-checking' if bundle['source']['filename'].lower().endswith('.pdf') else 'Imported from user-supplied text; preserved without editorial changes')
+    return [a['title'],'',body_for(bundle,a),'[]','draft','',canonical(a['review_flags']),note]
 
 def import_bundle(db,bundle):
     validate(bundle)
@@ -161,11 +162,11 @@ def staged_bundle(manifest):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     sub=parser.add_subparsers(dest='operation',required=True)
-    sub.add_parser('import-staged')
+    p=sub.add_parser('import-staged');p.add_argument('--manifest',type=Path)
     p=sub.add_parser('import-json');p.add_argument('file',type=Path)
     p=sub.add_parser('verify');p.add_argument('--source-id')
     p=sub.add_parser('update');p.add_argument('--id',required=True);p.add_argument('--expected-revision',required=True,type=int);p.add_argument('--body-file',type=Path);p.add_argument('--title');p.add_argument('--status',choices=['draft','review','published','archived']);p.add_argument('--note',default='')
-    args=parser.parse_args();manifest=json.loads((ROOT/'bootstrap.json').read_text())
+    args=parser.parse_args();manifest=json.loads((getattr(args,'manifest',None) or ROOT/'bootstrap.json').read_text())
     db=Remote()
     try:
         if args.operation.startswith('import'):

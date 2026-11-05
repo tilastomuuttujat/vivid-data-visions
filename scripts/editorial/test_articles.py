@@ -37,6 +37,17 @@ class ArticleTests(unittest.TestCase):
         bad=copy.deepcopy(self.bundle);bad['pages'][0]='1 First title\n\nCONFLICT'
         with self.assertRaises(ValueError):import_bundle(self.db,bad)
         self.assertEqual(verify(self.db,'test-source')['revisions'],3)
+    def test_unnumbered_text_import_preserves_body_and_records_the_text_origin(self):
+        bundle=fixture()
+        bundle['source']['filename']='article.txt'
+        bundle['source']['library_file_id']=''
+        bundle['articles'][0]['source_number']=''
+        bundle['pages'][0]='First title\n\nOriginal paragraph.'
+        db=Local();import_bundle(db,bundle)
+        row=db.execute("SELECT body_text,change_note FROM editorial__articles WHERE id='one'")[0]
+        self.assertEqual(row[0],'Original paragraph.')
+        self.assertIn('user-supplied text',row[1])
+
     def test_invalid_status_or_empty_body_leaves_latest_revision_intact(self):
         for change in [{'status':'wrong'},{'body_text':''},{'tags_json':'{}'}]:
             with self.assertRaises(sqlite3.IntegrityError):update_article(self.db,'one',1,change)
