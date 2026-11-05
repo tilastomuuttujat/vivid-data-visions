@@ -125,6 +125,15 @@ if __name__=='__main__':
                 print('Catalog candidates',act,json.dumps(candidates[:12],ensure_ascii=False))
         finally:db.close()
         sys.exit(0)
+    if '--complete' in sys.argv:
+        from catalog_completion import complete,load,verify as verify_completion
+        bundle=load();db=RecordRemote()
+        try:added=complete(db,bundle)
+        finally:db.close()
+        db=RecordRemote()
+        try:verify_completion(db,bundle)
+        finally:db.close()
+        print('PASS source-checked catalog completion:',added,'new statutes; 6 identities verified; originals unchanged; metrics not synthesized.')
     db=RecordRemote()
     try:expected=sync(db)
     finally:db.close()

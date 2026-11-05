@@ -108,3 +108,25 @@ ja hylkää ristiriidat. Ei-numeerisia historiallisia tapahtumatunnisteita
 ei muunnettaisi säädösnumeroiksi. `identity_basis` kertoo näkymässä,
 perustuuko osuma numero–vuosi-kenttiin vai natiiviin tunnisteeseen.
 Tämä ei lisää säädösluettelon rivejä tai muuta niiden alkuperäisiä kenttiä.
+
+
+### Kuuden puuttuvan säädösidentiteetin täydentäminen
+
+`lakikartta-catalog-additions.json` sisältää Finlexistä tarkistetut otsikot ja
+tunnisteet: 969/1995, 1412/1997, 189/2001, 738/2002, 815/2015 ja 1023/2022.
+`catalog_completion.py` lisää puuttuvat identiteetit Turson säädösluetteloon
+ylikirjoittamatta olemassa olevia rivejä tai laskettuja mittareita.
+Muutoslain ja pääsäädöksen ero sekä muutettavan säädöksen viitetunniste
+tallennetaan lähdemetadatassa `editorial__catalog_additions`-tauluun.
+Tämä vanhempaa lakia koskeva viite ei luo automaattista verkoston kaarta.
+
+Uusiin luetteloriveihin tallennetaan vain avain, otsikko, säädösnumero, vuosi
+ja lähdeversio. Voimassaolotila ja verkostomittarit jäävät NULL-arvoiksi.
+Alkuperäinen täysi lähdeaineisto ja artikkelitekstit säilyvät ennallaan.
+Uudelleenajo ei tee kaksoiskappaleita; ristiriitainen olemassa oleva nimi
+tai tunniste keskeyttää täydennyksen ja peruuttaa lisäykset.
+
+Luotettu Actions-tehtävä `operation: legal-map-complete` tarkistaa ja
+tallentaa luettelolisäykset, varmentaa ne uudella yhteydellä ja päivittää
+sen jälkeen kaksisuuntaiset artikkeliliitokset. Tämä täydentää nykyisen
+artikkelikytkentäerän, ei kaikkia lakikartan puuttuvia historiallisiä säädöksiä.
