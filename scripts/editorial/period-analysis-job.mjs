@@ -15,6 +15,9 @@ async function main(){if(process.env.GITHUB_REF!=='refs/heads/main'||process.env
   }else if(task.operation==='evidence-quality-review'){
   const checks=spawnSync('python',['-m','unittest','discover','-s','scripts/editorial','-p','test_evidence_review.py'],{encoding:'utf8',env:process.env});if(checks.status!==0)throw Error('Evidence review checks failed');console.log('PASS evidence review fixture checks');
   const result=spawnSync('python',['scripts/editorial/evidence_review.py'],{encoding:'utf8',env:process.env,maxBuffer:1000000});if(result.status!==0)throw Error('Scoped evidence review failed');console.log(result.stdout.trim());
+ }else if(task.operation==='evidence-employment-review'){
+  const checks=spawnSync('python',['-m','unittest','discover','-s','scripts/editorial','-p','test_employment_evidence_review.py'],{encoding:'utf8',env:process.env});if(checks.status!==0)throw Error('Employment evidence checks failed');console.log('PASS employment evidence fixture checks');
+  const result=spawnSync('python',['scripts/editorial/employment_evidence_review.py'],{encoding:'utf8',env:process.env,maxBuffer:1000000});if(result.status!==0)throw Error('Employment source review failed');console.log(result.stdout.trim());
  }else if(task.operation==='evidence-income-review'){
   const checks=spawnSync('python',['-m','unittest','discover','-s','scripts/editorial','-p','test_income_evidence_review.py'],{encoding:'utf8',env:process.env});if(checks.status!==0)throw Error('Income evidence checks failed');console.log('PASS income evidence fixture checks');
   const result=spawnSync('python',['scripts/editorial/income_evidence_review.py'],{encoding:'utf8',env:process.env,maxBuffer:1000000});if(result.status!==0)throw Error('Income source review failed');console.log(result.stdout.trim());

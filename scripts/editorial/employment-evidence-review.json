@@ -1,0 +1,191 @@
+{
+  "version": "education-employment-source-review-2026-11-05-v1",
+  "base_quality_version": "education-evidence-quality-2026-11-05-v1",
+  "retrieved_on": "2026-11-05",
+  "sources": [
+    {
+      "name": "employment",
+      "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tyokay/115d.px",
+      "file": "sources/statfin-employment-115d-2026-11-05.json",
+      "sha256": "ed2892286e9357a701ed2d093d66c86fe532d532f9a8d57e7d36f11e4eaf65f2",
+      "request": {
+        "query": [
+          {
+            "code": "alue_28_20250101",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS",
+                "MK01",
+                "MK02",
+                "MK05",
+                "MK07",
+                "MK08",
+                "MK09",
+                "MK04",
+                "MK06",
+                "MK13",
+                "MK14",
+                "MK15",
+                "MK10",
+                "MK11",
+                "MK12",
+                "MK16",
+                "MK17",
+                "MK18",
+                "MK19",
+                "MK21"
+              ]
+            }
+          },
+          {
+            "code": "paaasial_toimin_3_20180101",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS",
+                "11",
+                "12",
+                "21-99",
+                "22"
+              ]
+            }
+          },
+          {
+            "code": "koulutusaste_17_20180101",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS",
+                "3_4",
+                "5_6",
+                "7_8",
+                "9_X"
+              ]
+            }
+          },
+          {
+            "code": "sukupuoli_9_20180101",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "SSS"
+              ]
+            }
+          },
+          {
+            "code": "ikaryhma_10_20180101",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "18-64"
+              ]
+            }
+          },
+          {
+            "code": "timeperiod_y",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "1987",
+                "1988",
+                "1989",
+                "1990",
+                "1991",
+                "1992",
+                "1993",
+                "1994",
+                "1995",
+                "1996",
+                "1997",
+                "1998",
+                "1999",
+                "2000",
+                "2001",
+                "2002",
+                "2003",
+                "2004",
+                "2005",
+                "2006",
+                "2007",
+                "2008",
+                "2009",
+                "2010",
+                "2011",
+                "2012",
+                "2013",
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2021",
+                "2022",
+                "2023",
+                "2024"
+              ]
+            }
+          },
+          {
+            "code": "contentscode",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "tyokay-vaesto"
+              ]
+            }
+          }
+        ],
+        "response": {
+          "format": "json-stat2"
+        }
+      },
+      "expected_cells": 19000,
+      "expected_null_cells": 0
+    }
+  ],
+  "series": [
+    {
+      "series_key": "vivid.groups.education.employed",
+      "expected_metadata_sha256": "931d70e4477b57c0468e3faee3c8bea7f111a94f8daddadefb5f6b2fa2a8b050",
+      "expected_rows_sha256": "bbed385ef5647ae8e619c54301e36c5b089e3e16b0dfbfc618eeafa290265e6a",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tyokay/115d.px",
+      "expected_rows": 3800,
+      "activity": "11"
+    },
+    {
+      "series_key": "vivid.groups.education.outside",
+      "expected_metadata_sha256": "8f46b2ffa749a14b25d9248cca0bb916b609a966ada08832fae2bcef2031b6ba",
+      "expected_rows_sha256": "dc8f33890fa45352bd147858c42d472ba2530f269f9ac545c92198397926b248",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tyokay/115d.px",
+      "expected_rows": 3800,
+      "activity": "21-99"
+    },
+    {
+      "series_key": "vivid.groups.education.population",
+      "expected_metadata_sha256": "ac1cb4445f122b582507516305bb743064d3752a7298075e7006edfa542e327d",
+      "expected_rows_sha256": "343acc50019f826dd40ac7d41bccba3bd80ca76c89c04b7161c29c566c571f9c",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tyokay/115d.px",
+      "expected_rows": 3800,
+      "activity": "SSS"
+    },
+    {
+      "series_key": "vivid.groups.education.students",
+      "expected_metadata_sha256": "84c12cc435cde6f5d3949103349abb4994962ebdcc5a91c753e5d02d5ed98fca",
+      "expected_rows_sha256": "0e218ba135dcc0b45a61f972845e4b7d4721cb2b59f5a462555b340931522901",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tyokay/115d.px",
+      "expected_rows": 3800,
+      "activity": "22"
+    },
+    {
+      "series_key": "vivid.groups.education.unemployed",
+      "expected_metadata_sha256": "62cbd3c2c0ea87a756893cf19faac11975dd5b21efd3e2dbcf30219c49bc9033",
+      "expected_rows_sha256": "537ff01561268f09038b937ceae28ad3269c1f72022e72c9f800390940a54fa4",
+      "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tyokay/115d.px",
+      "expected_rows": 3800,
+      "activity": "12"
+    }
+  ]
+}
