@@ -1,0 +1,26 @@
+name: Article period analysis
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/editorial/period-analysis-task.json']
+permissions:
+  contents: write
+jobs:
+  analysis:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Transfer or store private article analyses
+        run: node scripts/editorial/period-analysis-job.mjs
+        env:
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
