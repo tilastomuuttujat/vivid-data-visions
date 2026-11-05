@@ -180,3 +180,10 @@ ulkomaisten konsernien yhtiöitä. Voimaantulo tarkistetaan 625/2006:n 1 §:stä
 
 Kaikki suhteet ovat perusteltuja kontekstikytkentöjä (`proposed`), eivät
 lainvastaisuuden toteamuksia tai osoitettuja kausaalivaikutuksia.
+
+Kuluttajansuojalain 38/1978, sen 2 luvun muutoslain 561/2008 ja kilpailulain
+948/2011 puuttuvat luetteloidentiteetit lisätään erillisellä `catalog: market`
+-täydennyksellä. Lähdetiedot ovat `lakikartta-market-additions.json`-tiedostossa.
+Tämä ei muuta aiempien lisäysten provenienssia eikä laske uusille riveille
+verkostomittareita. Muutoslain suhde 38/1978:aan kirjataan lähdemetadataan,
+eikä siitä päätellä automaattisesti kausaalista verkostoyhteyttä.

@@ -10,7 +10,7 @@ PROVENANCE='''CREATE TABLE IF NOT EXISTS editorial__catalog_additions (
  source_version TEXT NOT NULL,payload_json TEXT NOT NULL CHECK(json_valid(payload_json)),
  created_at TEXT NOT NULL DEFAULT(strftime('%Y-%m-%dT%H:%M:%fZ','now')))'''
 def load(catalog='base'):
-    files={'base':'lakikartta-catalog-additions.json','justice':'lakikartta-justice-additions.json'}
+    files={'base':'lakikartta-catalog-additions.json','justice':'lakikartta-justice-additions.json','market':'lakikartta-market-additions.json'}
     if catalog not in files:raise ValueError('Unknown catalog addition set')
     return json.loads((ROOT/files[catalog]).read_text())
 def validate(bundle):

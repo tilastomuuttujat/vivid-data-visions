@@ -128,7 +128,7 @@ if __name__=='__main__':
         sys.exit(0)
     if '--complete' in sys.argv:
         from catalog_completion import complete,load,verify as verify_completion
-        bundle=load('justice' if '--justice' in sys.argv else 'base');db=RecordRemote()
+        bundle=load('justice' if '--justice' in sys.argv else 'market' if '--market' in sys.argv else 'base');db=RecordRemote()
         try:added=complete(db,bundle)
         finally:db.close()
         db=RecordRemote()

@@ -38,3 +38,11 @@ class CompletionTests(unittest.TestCase):
   verify(db,first);verify(db,load('justice'))
   self.assertEqual([r for r in db.execute('SELECT * FROM editorial__catalog_additions ORDER BY statute_id') if r['statute_id']!='2002/257'],before)
   with self.assertRaises(ValueError):load('../file')
+
+ def test_market_batch_is_independent_and_idempotent(self):
+  db=self.db();base=load();complete(db,base)
+  before=db.execute('SELECT * FROM editorial__catalog_additions ORDER BY statute_id')
+  self.assertEqual(complete(db,load('market')),3)
+  self.assertEqual(complete(db,load('market')),0)
+  verify(db,base);verify(db,load('market'))
+  self.assertEqual([r for r in db.execute('SELECT * FROM editorial__catalog_additions ORDER BY statute_id') if r['source_version']==base['version']],before)
