@@ -8,7 +8,8 @@ async function query(sql){const r=await fetch('https://murrosmatriisi-tilastomuu
 async function main(){if(process.env.GITHUB_REF!=='refs/heads/main'||process.env.GITHUB_REPOSITORY!==repo)throw Error('Untrusted ref');
  if(task.operation==='export'){
   const keys=await pair(),articles=await query('SELECT a.id,a.title,a.summary,a.body_text,(SELECT max(revision_no) FROM editorial__article_revisions WHERE article_id=a.id) AS revision FROM editorial__articles a ORDER BY a.source_id,a.source_position');
-  const value={articles,publicKey:keys.publicKey,session:seal({privateKey:keys.privateKey,expires:Date.now()+86400000},process.env.TURSO_AUTH_TOKEN)};
+  const legalLinks=await query('SELECT article_id,anchor_id,act_id,lakikartta_match_status,is_current FROM editorial__article_lakikartta');
+  const value={articles,legalLinks,publicKey:keys.publicKey,session:seal({privateKey:keys.privateKey,expires:Date.now()+86400000},process.env.TURSO_AUTH_TOKEN)};
   const content=Buffer.from(JSON.stringify(await encrypt(value,task.publicKey))).toString('base64');
   const r=await fetch('https://api.github.com/repos/'+repo+'/contents/responses/'+task.id+'.json',{method:'PUT',headers:{Authorization:'Bearer '+process.env.GITHUB_TOKEN,Accept:'application/vnd.github+json'},body:JSON.stringify({branch:'article-editor-responses',message:'Encrypted private analysis transfer',content})});if(!r.ok)throw Error('Encrypted export failed');console.log('PASS encrypted current-article export:',articles.length);
  }else if(['legal-map','legal-map-audit','legal-map-complete'].includes(task.operation)){

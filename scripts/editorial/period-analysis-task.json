@@ -1,1 +1,14 @@
-{"operation":"legal-map-complete","catalog_version":"editorial-catalog-completion-2026-11-05-v1","attempt":3}
+{
+  "operation": "export",
+  "id": "0190fd2f-1388-45ec-9d9e-cf46b9e49e9c",
+  "publicKey": {
+    "key_ops": [
+      "encrypt"
+    ],
+    "ext": true,
+    "alg": "RSA-OAEP-256",
+    "kty": "RSA",
+    "n": "sa3LJjFWSD3Lzs5blIfhra2lokJSdq6YwzIR8aRw_O0-3iiAjL3U9_6SpyAYoIR2U82GBnhL3nAm4r_KllKRTUdFe_1apuVIR7Ddq1btACfBy0gsaTHkKKMKcKmQe9is9DgsQZJf2eTPehH5gymzUU3tRHVHgLfsh3KmpwpONa6hBV6Rl7F54YoRSatIDf5qjW-brEb9dcFClbVEzcW-ETBCLM7QofKPrGAsS0zUGSjYJHs7xX2mbdC7GcYgn1EzL7ASNhkwldKUWBDmh9iuBbf1WG6m3QbHsOhLRglhAo4UTOg8i4kZSS7_k_xhgE0CPq0uSCJdwt9JF2H7Hk6kMw",
+    "e": "AQAB"
+  }
+}
