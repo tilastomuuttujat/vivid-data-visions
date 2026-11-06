@@ -108,6 +108,7 @@ async function disconnect(forget = false) {
   try {
     await api("/api/logout", forget ? { forget: true } : {}); csrf = ""; catalog = []; article = null; revision = null; dirty = false;
     $("article-form").reset(); $("article-list").replaceChildren(); $("history-list").replaceChildren();
+    $("analysis-view").replaceChildren(); $("analysis-state").textContent = ""; $("analysis").open = false;
     $("reading").textContent = ""; $("revision-preview").textContent = ""; $("revision-title").textContent = "";
     $("workspace").hidden = true; $("logout").hidden = true; $("login").hidden = false; $("login-error").textContent = forget ? "Laite unohdettu. Kirjaudu seuraavalla kerralla uudelleen." : "Yhteys katkaistu.";
   } catch (error) { notice(error.message, true); }
@@ -121,7 +122,12 @@ $("load-analysis").onclick = async () => {
  const button=$("load-analysis"); button.disabled=true;
  const target=$("analysis-view");target.replaceChildren();
  const node=(tag,text)=>{const e=document.createElement(tag);e.textContent=text;return e;};
- const text=v=>typeof v==='string'?v:JSON.stringify(v,null,2);
+ const fieldNames={kind:'Tyyppi',description:'Kuvaus',actor:'Toimijat',event:'Valinta tai toimi',implementation_status:'Toteutuksen rajaus',scope:'Kohderyhmä ja kattavuus',source_id:'Lähdetunniste',finding:'Havainto',supports:'Mitä tukee',does_not_establish:'Mitä ei osoita'};
+ const renderValue=value=>{
+  if(Array.isArray(value)){const list=document.createElement('ul');for(const v of value){const li=document.createElement('li');li.append(renderValue(v));list.append(li);}return list;}
+  if(value&&typeof value==='object'){const dl=document.createElement('dl');for(const [k,v] of Object.entries(value)){dl.append(node('dt',fieldNames[k]||k));const dd=document.createElement('dd');dd.append(renderValue(v));dl.append(dd);}return dl;}
+  return node('p',value==null?'Ei kirjattu':String(value));
+ };
  try {
   const data=await api('/api/analysis'), rows=articleAnalysisModel.project(catalog,data);
   $("analysis-state").textContent='Lukumäärät: A = artikkelin aikakausimerkintöjä, L = ajallisesti osuvia lähdetarkistettuja tulkintoja. L ei osoita vuosittaista tilastokattavuutta eikä vahvista koko väitettä. 0 = ei merkintää tässä kerroksessa; ei todiste ilmiön puuttumisesta.'+(data.missing?.length?' Osa analyysitauluista puuttuu.':'');
@@ -132,7 +138,7 @@ $("load-analysis").onclick = async () => {
   target.append(node('p','Rekisteri näyttää tallennettujen täydennysten väiteankkurit, ei vielä kaikkia artikkelien väitteitä. Luokka: mekanismihypoteesi / lähdetarkistettu tulkinta. Mekanismien yhteinen luokitus ja väitteiden hyväksyntä odottavat toimituksellista tarkistusta.'));
   for(const row of rows){const group=document.createElement('details');group.append(node('summary',`${row.article.title} · ${row.claims.length} täydennystä`));if(!row.claims.length)group.append(node('p','Ei täydennyksiä tässä kerroksessa.'));
    for(const c of row.claims){const card=document.createElement('section');card.append(node('h4',c.id),node('p',`${c.current?'Nykyinen revisio':'VANHENTUNUT revisio – ei matriisissa'} · ${c.period?.join('–')||'Ajoittamatta'} · ${c.key}`),node('blockquote',c.article_passage));
-    for(const [label,value] of [['Tulkinta',c.addition_text],['Muutospaine',c.pressure],['Valinta ja toteutus',c.choice_and_implementation],['Näyttö',c.evidence],['Rajoitukset',c.limits],['Vaihtoehtoinen selitys',c.alternative_explanation],['Tutkimusaukko',c.research_gap]])card.append(node('h5',label),node('p',text(value)));
+    for(const [label,value] of [['Tulkinta',c.addition_text],['Muutospaine',c.pressure],['Valinta ja toteutus',c.choice_and_implementation],['Näyttö',c.evidence],['Rajoitukset',c.limits],['Vaihtoehtoinen selitys',c.alternative_explanation],['Tutkimusaukko',c.research_gap]])card.append(node('h5',label),renderValue(value));
     for(const source of c.sources||[]){const u=new URL(source.url);if(u.protocol!=='https:')continue;const a=node('a',source.title);a.href=u.href;a.target='_blank';a.rel='noopener noreferrer';card.append(a,node('p',`${source.publisher} · ${source.locator} · tarkistettu ${source.checked_on}`));}group.append(card);
    }target.append(group);
   }
