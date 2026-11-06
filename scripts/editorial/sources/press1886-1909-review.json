@@ -1,0 +1,84 @@
+{
+  "version": "press1886-1909-original-review-2026-11-06-v1",
+  "title": "Suomen Tilastollinen Vuosikirja 1910, taulukko 303",
+  "publisher": "Tilastollinen päätoimisto",
+  "publication_year": 1910,
+  "url": "https://otos.stat.fi/server/api/core/bitstreams/0bdf1ec1-cc3b-4e2b-a45e-a26f533238f9/content",
+  "pdf_sha256": "62c573b9f54613209ccfd9009d90982d599ffafe5c74752ef2415ce4008d846e",
+  "item_url": "https://otos.stat.fi/items/a9fed6cb-73eb-4099-81e7-dee4c47236df",
+  "locator": "Painetut sivut 532–533; PDF-sivu 399. Taulukko 303: Sanomalehtiä ja aikakauskirjoja vuosina 1886–1909.",
+  "checked_on": "2026-11-06",
+  "method": "Visually transcribed selected year snapshots and November 1909 category A; original language columns are mutually exclusive. Source dashes in extracted language counts transcribed as zero.",
+  "rows": [
+    {
+      "year": 1886,
+      "scope": "all_newspapers_and_periodicals",
+      "total": 94,
+      "finnish": 53,
+      "swedish": 41,
+      "finnish_swedish": 0,
+      "german": 0,
+      "russian": 0
+    },
+    {
+      "year": 1895,
+      "scope": "all_newspapers_and_periodicals",
+      "total": 163,
+      "finnish": 94,
+      "swedish": 66,
+      "finnish_swedish": 3,
+      "german": 0,
+      "russian": 0
+    },
+    {
+      "year": 1900,
+      "scope": "all_newspapers_and_periodicals",
+      "total": 229,
+      "finnish": 145,
+      "swedish": 77,
+      "finnish_swedish": 6,
+      "german": 0,
+      "russian": 1
+    },
+    {
+      "year": 1905,
+      "scope": "all_newspapers_and_periodicals",
+      "total": 246,
+      "finnish": 153,
+      "swedish": 80,
+      "finnish_swedish": 9,
+      "german": 2,
+      "russian": 2
+    },
+    {
+      "year": 1909,
+      "scope": "all_newspapers_and_periodicals",
+      "total": 352,
+      "finnish": 239,
+      "swedish": 101,
+      "finnish_swedish": 8,
+      "german": 2,
+      "russian": 2
+    },
+    {
+      "year": 1909,
+      "scope": "historical_political_newspapers",
+      "total": 125,
+      "finnish": 95,
+      "swedish": 29,
+      "finnish_swedish": 0,
+      "german": 0,
+      "russian": 1
+    }
+  ],
+  "unit": "publication_titles_at_source_snapshot",
+  "annual_total_series": false,
+  "source_quality": {
+    "newspapers_and_periodicals_combined": true,
+    "scientific_society_serial_publications_excluded": true,
+    "snapshot_dates_vary": true,
+    "source_1905_values_marked_corrected": true,
+    "source_language_categories_not_modern_reclassification": true,
+    "readership_or_circulation_available": false
+  }
+}
