@@ -67,3 +67,7 @@ Kuudes jatkokytkentä käsittelee [julkisyhteisöjen tehtävämenoja ja väestö
 | Julkinen talous | Sulautetut tehtävämenot ja niiden jakauma | Hinnat ja määrät, etuustaso, tulot ja vaikutukset |
 
 Tämä on ensimmäinen yhteinen evidenssikerros. Se ei tarkoita kaikkien ryhmiin kuuluvien artikkelien tai ajanjaksojen valmistumista. Pienet lähdetäydennykset eivät sulje laajoja tutkimusaukkoja eivätkä muuta mekanismihypoteeseja kausaalisiksi tuloksiksi.
+
+## Yhteinen vertailunäkymä
+
+[Vertailusynteesi](population-comparison.md) kokoaa kuusi ryhmää artikkelieditoriin: mitä näyttö tukee, mitä se ei ratkaise ja mikä on seuraava lähdetyö. Ajantasaisuus tarkistetaan artikkelin revisiosta ja tarkistetusta lähdeversiosta. Kytkentöjen määrä ei ole valmiusaste. Näkymä on lukutoiminto eikä muuta artikkeleita tai tietokannan arviointitilaa.

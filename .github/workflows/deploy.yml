@@ -30,6 +30,7 @@ jobs:
       - run: bun run test
       - run: bun run test:data
       - run: python -m unittest discover -s scripts/editorial -p "test_*.py"
+      - run: node --test scripts/editorial/analysis-model.test.mjs scripts/editorial/population-synthesis-dom.test.mjs
       - run: python -m unittest discover -s scripts/publish -p "test_*.py"
       - name: Export published data and verified images from Turso
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

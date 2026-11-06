@@ -49,5 +49,30 @@
   }
   return gaps.sort((a,b)=>a.priority.localeCompare(b.priority)||a.title.localeCompare(b.title,'fi')||a.kind.localeCompare(b.kind));
  }
- globalThis.articleAnalysisModel={periods,typeLabels,overlaps,project,audit};
+ // Reviewed cross-cutting scopes; never infer membership from article keywords.
+ const populationScopes=[
+  {id:'work',label:'Työ',field:'population_work',version:'population-work-2026-11-06-v1',ids:['2372b417-dc83-5067-be5a-7bfef51a7fa7','dac526d7-e658-593e-8512-1c52e5838cb4'],claimIds:['population-work-work','population-work-public_finance'],support:'Työllisten määrä, koko väestön työllisten osuus ja vuotuinen työpanos kuvaavat eri asioita.',boundary:'Ikävakiointi on laskennallinen vertailu. Se ei tunnista ikääntymisen, politiikan tai työkyvyn vaikutusta.',next:'Erittele työajan, työkyvyn ja toimialojen muutos; säilytä rekisterin ja tilinpidon eri käsitteet.'},
+  {id:'education',label:'Koulutus',field:'population_education',version:'population-education-2026-11-06-v1',ids:['804b66e5-1816-5761-ad2a-ab5662a21f61','db7169c2-6da5-5a11-94b6-116601424a7b'],claimIds:['school-age-and-actual-pupils','school-age-and-actual-pupils'],support:'Kouluikäisten alueellinen jakauma ja vuosiluokkien oppilasmäärät tarkentavat järjestelmän mittakaavaa.',boundary:'Vuosiluokat ja asukasikäryhmät eroavat. Määristä ei päätellä osallistumisastetta, kapasiteettia tai oppimistulosta.',next:'Kytke oppilaitosverkko, matkat, henkilöstö ja tuen tarve samoihin alueisiin ja vuosiin.'},
+  {id:'care',label:'Hoiva',field:'population_care',version:'population-care-2026-11-06-v1',ids:['be9ee685-6d5f-52c3-9d3a-d36c9b13918c','3134a926-f6af-5b71-afae-94f0ab4f18b0'],claimIds:['oldest-population-and-realised-homecare','oldest-population-and-realised-homecare'],support:'Vanhimpien ikäryhmien mittakaava ja toteutunut kotihoito on erotettu toisistaan.',boundary:'Palvelukäyttö ei mittaa kaikkea tarvetta tai läheisten työtä. Raportoinnin kattavuus rajoittaa vertailua; ennuste on ehdollinen.',next:'Kytke toimintakyky, palvelutarpeen arvio, viiveet ja läheisapu samoihin alueisiin ja vuosiin.'},
+  {id:'security',label:'Sosiaaliturva',field:'population_security',version:'population-security-2026-11-06-v1',ids:['33e4e43f-901c-573b-bbbc-b7e0ea177b60','36c65edb-0893-5c7a-8ba6-6cffda47a40f'],claimIds:['basic-assistance-age-and-household','basic-assistance-age-and-household'],support:'Perustoimeentulotuen ikä- ja kotitalousjakauma antaa etuuskohtaisen kuvauksen käytöstä.',boundary:'Raakasaajamäärä ei ole saamisriski, etuusoikeus tai alikäyttö. Vuositilasto ei osoita poistumisen syytä.',next:'Varmenna maantieteeltään ja iältään yhteensopiva nimittäjä ennen ryhmäkohtaisia osuuksia; sen jälkeen tutki siirtymiä ja oikeutettuja.'},
+  {id:'regions',label:'Alueet',field:'population_regions',version:'population-regions-2026-11-06-v1',ids:['855bfd25-c957-5425-9858-c18685e49c27','2372b417-dc83-5067-be5a-7bfef51a7fa7'],claimIds:['regional-demographic-components','regional-demographic-components'],support:'Syntyneet, kuolleet, kotimainen nettomuutto, nettomaahanmuutto ja korjaukset muodostavat erilliset komponentit.',boundary:'Väestötase ei tunnista muuttamisen motiiveja, työvaikutuksia tai kuulumisen kokemusta. Aluejako on kiinteä vuoden 2026 jako.',next:'Kytke ikä- ja koulutuskohtainen muuttoliike työpaikkoihin, asumiseen ja palveluihin.'},
+  {id:'fiscal',label:'Julkinen talous',field:'population_fiscal',version:'population-fiscal-2026-11-06-v1',ids:['dac526d7-e658-593e-8512-1c52e5838cb4','3f654773-8325-5bcf-b078-4dc45b2423e7'],claimIds:['public-expenditure-functions-and-population','public-expenditure-functions-and-population'],support:'Sulautettujen tehtävämenojen rakenne ja väestömäärä on erotettu; nimelliseurot ja BKT-osuudet säilyvät eri mittareina.',boundary:'COFOG-tehtävä ei ole ikäryhmä. Aineisto ei tunnista reaalikustannusta, demografista menovaikutusta tai kestävyysvajetta.',next:'Kytke tehtäviin sopivat hinta- ja volyymi-indeksit, saajat, etuustasot ja tulot.'}
+ ];
+ function populationSynthesis(rows){
+  const groups=populationScopes.map(scope=>{
+   const basis=scope.ids.map((id,i)=>{
+    const row=rows.find(r=>r.article.id===id),claim=row?.claims.find(c=>c.id===scope.claimIds[i]);
+    let status='missing';
+    if(claim){status=!claim.current?'stale':claim.version!==scope.version||!claim.classification||claim.type!=='mechanism_hypothesis'||!claim[scope.field]||claim.causal_effect_identified!==false?'needs_review':'current';}
+    return {article_id:id,title:row?.article.title||'Artikkeli puuttuu otoksesta',key:claim?.key||null,status,claim:status==='current'?claim:null};
+   });
+   const n=basis.filter(b=>b.status==='current').length;
+   return {id:scope.id,label:scope.label,status:n===basis.length?'current':n?'partial':'unavailable',current:n,expected:basis.length,support:n?scope.support:'Ajantasainen tarkistettu lähdekytkentä puuttuu tästä kirjaston otoksesta.',boundary:scope.boundary,next:n?scope.next:'Tarkista artikkelin revisio ja lähdekytkentä ennen tulkintaa.',basis};
+  });
+  return {version:'population-comparison-2026-11-06-v1',groups,ready:groups.filter(g=>g.status==='current').length,total:groups.length,causal_effect_identified:false,scope:'Kuuden ryhmän ensimmäinen väestökerros; ei kaikkien artikkelien tai aikakausien kattavuusarvio.'};
+ }
+ function populationExport(synthesis){
+  return {...synthesis,groups:synthesis.groups.map(g=>({...g,basis:g.basis.map(b=>({...b,claim:b.claim?{key:b.claim.key,article_id:b.claim.article_id,article_revision:b.claim.article_revision,body_sha256:b.claim.body_sha256,source_version:b.claim.version,article_passage:b.claim.article_passage,period:b.claim.period,classification:b.claim.classification,evidence:b.claim.evidence,sources:b.claim.sources,limits:b.claim.limits,research_gap:b.claim.research_gap}:null}))}))};
+ }
+ globalThis.articleAnalysisModel={periods,typeLabels,overlaps,project,audit,populationSynthesis,populationScopes,populationExport};
 })();

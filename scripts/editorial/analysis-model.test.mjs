@@ -55,3 +55,37 @@ test('verified implementation events cover exact dated claims without inventing 
  data.periods[0].periods_json=JSON.stringify([{start:1964,end:1975,dating:'explicit',evidence:passage}]);assert.ok(globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data)).some(g=>g.kind==='historical_observation_scope'));
  s.implementation_evidence.events[0].source_id='unknown';data.supplements[0].payload_json=JSON.stringify(s);assert.ok(globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data)).some(g=>g.kind==='observation_years'));
 });
+const synthModel=globalThis.articleAnalysisModel;
+function populationFixture(){
+ const catalog=[],supplements=[];
+ for(const g of synthModel.populationScopes)for(let i=0;i<g.ids.length;i++){
+  const id=g.ids[i];if(!catalog.some(a=>a.id===id))catalog.push({id,title:'Test article '+id,revision:1});
+  const s={article_id:id,id:g.claimIds[i],article_revision:1,body_sha256:'fixture',article_passage:'A reviewed synthetic passage about population and institutions.',period:[1990,2024],causal_effect_identified:false,[g.field]:{findings:{test:'Source observation'}},claim_classification:{article_revision:1,body_sha256:'fixture',source_version:g.version,claim_type:'mechanism_hypothesis',observation_periods:[[1990,2024]]}};
+  supplements.push({article_id:id,version:g.version,payload_json:JSON.stringify(s)});
+ }
+ return {catalog,data:{supplements}};
+}
+test('population synthesis uses six explicit groups and twelve current links',()=>{
+ const f=populationFixture(),s=synthModel.populationSynthesis(project(f.catalog,f.data));assert.equal(s.ready,6);assert.equal(s.groups.length,6);assert.equal(s.groups.flatMap(g=>g.basis).length,12);assert.equal(s.causal_effect_identified,false);assert.ok(s.groups.every(g=>g.support&&g.boundary&&g.next));
+});
+test('missing population data remains unavailable, never zero evidence',()=>{
+ const s=synthModel.populationSynthesis([]);assert.equal(s.ready,0);assert.ok(s.groups.every(g=>g.status==='unavailable'&&g.current===0));
+});
+test('changed article revision and incompatible source are not treated as supported',()=>{
+ const f=populationFixture();f.catalog.find(a=>a.id===f.data.supplements[0].article_id).revision=2;
+ let s=synthModel.populationSynthesis(project(f.catalog,f.data));assert.equal(s.groups[0].status,'partial');assert.equal(s.groups[0].basis[0].status,'stale');assert.equal(s.groups[0].basis[0].claim,null);
+ const fresh=populationFixture();fresh.data.supplements[0].version='unknown-version';s=synthModel.populationSynthesis(project(fresh.catalog,fresh.data));assert.equal(s.groups[0].basis[0].status,'needs_review');assert.equal(s.groups[0].basis[0].claim,null);
+});
+test('an unrelated demographic card cannot replace the reviewed article-specific link',()=>{
+ const f=populationFixture();const s=JSON.parse(f.data.supplements[0].payload_json);s.id='different-card';f.data.supplements[0].payload_json=JSON.stringify(s);
+ assert.equal(synthModel.populationSynthesis(project(f.catalog,f.data)).groups[0].basis[0].status,'missing');
+});
+test('a conflicting causal assertion never enters the population comparison',()=>{
+ const f=populationFixture();const s=JSON.parse(f.data.supplements[0].payload_json);s.causal_effect_identified=true;f.data.supplements[0].payload_json=JSON.stringify(s);
+ assert.equal(synthModel.populationSynthesis(project(f.catalog,f.data)).groups[0].basis[0].status,'needs_review');
+});
+test('population export preserves evidence references without duplicating source datasets',()=>{
+ const f=populationFixture(),rows=project(f.catalog,f.data);const c=rows[0].claims[0];c.population_work={large_private_snapshot:'not copied'};c.evidence=[{source_id:'s',finding:'Observation',supports:'Limited support',does_not_establish:'Causality'}];c.sources=[{id:'s',url:'https://stat.fi/'}];
+ const result=synthModel.populationExport(synthModel.populationSynthesis(rows)),claim=result.groups[0].basis[0].claim;
+ assert.equal(claim.evidence[0].finding,'Observation');assert.equal(claim.source_version,synthModel.populationScopes[0].version);assert.equal(claim.population_work,undefined);assert.equal(claim.body_text,undefined);assert.ok(!JSON.stringify(result).includes('not copied'));
+});
