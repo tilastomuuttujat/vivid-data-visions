@@ -26,3 +26,8 @@ test('audit highlights historical gaps and undated future without inventing obse
  const gaps=globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data));
  assert.ok(gaps.some(g=>g.kind==='historical_gap'&&g.priority==='P1'));assert.ok(gaps.some(g=>g.kind==='future_basis'));assert.ok(gaps.every(g=>g.article_id==='a'));
 });
+test('partial measured coverage never clears a broader historical claim gap',()=>{
+ const s={id:'x',article_id:'a',article_revision:1,body_sha256:'h',period:[1960,1974],claim_classification:{article_revision:1,body_sha256:'h',source_version:'v1',claim_type:'description',observation_periods:[[1960,1974]]}};
+ const rows=project([{id:'a',title:'A',revision:1}],{supplements:[{article_id:'a',version:'v1',payload_json:JSON.stringify(s)}],periods:[{article_id:'a',article_revision:1,periods_json:JSON.stringify([{start:1950,end:1980,dating:'explicit',evidence:'Broad historical claim'}])}]});
+ assert.equal(rows[0].claims[0].type,'description');assert.ok(globalThis.articleAnalysisModel.audit(rows).some(g=>g.kind==='historical_observation_scope'));
+});

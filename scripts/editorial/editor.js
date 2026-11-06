@@ -156,6 +156,7 @@ $("load-analysis").onclick = async () => {
    for(const c of row.claims){const card=document.createElement('section');card.append(node('h4',c.id),node('p',`${c.current?'Nykyinen revisio':'VANHENTUNUT revisio – ei matriisissa'} · ${c.period?.join('–')||'Ajoittamatta'} · ${c.key}`),node('blockquote',c.article_passage));
     card.append(node('p',`Väitelaji: ${articleAnalysisModel.typeLabels[c.type]||c.type} · toimituksellinen ehdotus`),node('p',c.classification?.rationale||'Luokitus tarkistamatta'),node('p',c.classification?.observation_note||'Lähteen havaintovuodet tarkistamatta.'),node('p','Kohderyhmä ja alue: '+(c.scope||'Tarkistamatta')));
     for(const [label,value] of [['Tulkinta',c.addition_text],['Muutospaine',c.pressure],['Valinta ja toteutus',c.choice_and_implementation],['Näyttö',c.evidence],['Rajoitukset',c.limits],['Vaihtoehtoinen selitys',c.alternative_explanation],['Tutkimusaukko',c.research_gap]])card.append(node('h5',label),renderValue(value));
+    if(c.data_links)card.append(node('h5','Varmennetut aineistokytkennät'),renderValue(c.data_links));
     for(const source of c.sources||[]){const u=new URL(source.url);if(u.protocol!=='https:')continue;const a=node('a',source.title);a.href=u.href;a.target='_blank';a.rel='noopener noreferrer';card.append(a,node('p',`${source.publisher} · ${source.locator} · tarkistettu ${source.checked_on}`));}group.append(card);
    }target.append(group);
   }

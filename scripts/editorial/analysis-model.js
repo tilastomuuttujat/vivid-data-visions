@@ -8,7 +8,7 @@
    const annotations=(data.periods||[]).filter(p=>p.article_id===a.id&&p.article_revision===a.revision).flatMap(p=>JSON.parse(p.periods_json));
    const claims=(data.supplements||[]).filter(s=>s.article_id===a.id).map(row=>{
     const s=JSON.parse(row.payload_json),candidate=(data.reviews||[]).find(r=>r.article_id===a.id&&r.supplement_id===s.id);
-    const r=candidate?JSON.parse(candidate.payload_json):null;
+    const r=candidate?JSON.parse(candidate.payload_json):(s.claim_classification||null);
     const review=r&&r.article_revision===s.article_revision&&r.body_sha256===s.body_sha256&&r.source_version===row.version?r:null;
     return {...s,key:a.id+'/'+s.id,version:row.version,current:s.article_revision===a.revision,type:review?.claim_type||'unclassified',classification:review,scope:review?.population_scope||s.choice_and_implementation?.scope||null,observationPeriods:review?.observation_periods||null,review:'source_checked_interpretation'};
    });
@@ -23,7 +23,7 @@
     const range=[p.start,p.end],linked=r.claims.filter(c=>c.current&&overlaps(c.period,range));
     if(p.dating==='future_scenario')add(r,'P1','future_basis',p.evidence,range,'Skenaarion oletuksia ja virallista ennustepohjaa ei ole hyväksytty väitekohtaisesti.','Kytke väestö-, talous- tai ilmastoskenaario; kirjaa perusvuosi, oletukset ja epävarmuus.');
     else if(Number.isInteger(p.start)&&p.start<=1975&&linked.length===0)add(r,'P1','historical_gap',p.evidence,range,'Aikakausimerkintään ei osu nykyistä lähdetäydennystä. Tämä ei osoita kaiken lähdeaineiston puuttumista.','Tarkista historiallinen tilasto tai alkuperäisasiakirja; kirjaa käsitemuutokset ja ketjutuksen rajat.');
-    else if(Number.isInteger(p.start)&&p.start<=1975&&!linked.some(c=>c.observationPeriods?.some(r=>overlaps(r,range))))add(r,'P1','historical_observation_scope',p.evidence,range,'Ajallinen lähdeosuma on olemassa, mutta lähteen havaintovuosia ei ole varmennettu tämän historiallisen väitteen tueksi.','Varmenna lähdekohtaiset vuodet ja se, kattaako näyttö väitteen ajallisen ja alueellisen laajuuden.');
+    else if(Number.isInteger(p.start)&&p.start<=1975&&!linked.some(c=>c.observationPeriods?.some(r=>overlaps(r,range)&&r[0]<=range[0]&&r[1]>=range[1])))add(r,'P1','historical_observation_scope',p.evidence,range,'Lähdeosuma on olemassa, mutta varmennettu havaintojakso ei kata koko väitteen aikaväliä tai sen kattavuus on vielä tarkistamatta.','Varmenna lähdekohtaiset vuodet ja se, kattaako näyttö väitteen ajallisen ja alueellisen laajuuden.');
     else if(linked.length===0)add(r,'P2','unlinked_period',p.evidence,range,'Ei ajallisesti osuvaa nykyistä täydennystä; väitekohtainen lähdeyhteys tarkistamatta.','Tarkista väitteen lähde ja sen kohderyhmä.');
    }
    for(const c of r.claims){
