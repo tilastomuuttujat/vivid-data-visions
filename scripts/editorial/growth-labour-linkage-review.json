@@ -1,0 +1,20 @@
+{
+  "version": "growth-labour-linkage-review-2026-11-06-v1",
+  "article_id": "0d689042-4f74-56bd-8f0e-bd4802e3534d",
+  "supplement_id": "growth-labour-structure-1860-1959",
+  "matrix_reference": "labour-years-1860-1959",
+  "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/ntp/15ai.px",
+  "reference_sha256": "ae38bc4abedce069f142a75f570aa02ef187de87cb9c27ab68a19740482df32b",
+  "cells": 500,
+  "series": 5,
+  "period": [
+    1860,
+    1959
+  ],
+  "source_unit": "thousand reconstructed person-years",
+  "finding": "Alkutuotannon osuus rekonstruoiduista henkilötyövuosista oli 79,2 % vuonna 1860, 66,0 % vuonna 1913 ja 32,4 % vuonna 1959. Teollisuuden osuus muuttui vuoden 1860 5,9 prosentista vuoden 1959 22,7 prosenttiin ja palvelujen 7,3 prosentista 34,7 prosenttiin. Henkilötyövuosi ei ole työllisten henkilöiden määrä tai työtuntien määrä.",
+  "interpretation_limits": "Osuudet lasketaan rekonstruoiduista henkilötyövuosista, eivät työllisten henkilömäärästä tai toteutuneista työtunneista. Historiallinen työpanossarja ei mittaa tuotannon määrää, työn tuottavuutta, palkkoja, kotitalouksien tuloja eikä kasvun hyötyjen jakautumista. Rakentaminen on oma toimialansa eikä sisälly tässä teollisuuteen B–E. Toimialojen erot ja yhtäaikaiset muutokset eivät tunnista siirtymisen syitä tai sen vaikutusta hyvinvointiin. Vuosia 1850–1859 ei ole tässä poiminnassa.",
+  "checked_on": "2026-11-06",
+  "existing_archive_reused": true,
+  "causal_effect_identified": false
+}
