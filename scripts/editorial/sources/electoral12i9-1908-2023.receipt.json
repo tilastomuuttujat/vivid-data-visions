@@ -1,0 +1,202 @@
+{
+  "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/evaa/12i9.px",
+  "sha256": "3fa9a4fa6e5bb5022f94ff68c4ba71d3ee170c1943def8af7adac1d7a161fdd1",
+  "query": {
+    "query": [
+      {
+        "code": "timeperiod_y",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "1908",
+            "1909",
+            "1910",
+            "1911",
+            "1913",
+            "1916",
+            "1917",
+            "1919",
+            "1922",
+            "1924",
+            "1927",
+            "1929",
+            "1930",
+            "1933",
+            "1936",
+            "1939",
+            "1945",
+            "1948",
+            "1951",
+            "1954",
+            "1958",
+            "1962",
+            "1966",
+            "1970",
+            "1972",
+            "1975",
+            "1979",
+            "1983",
+            "1987",
+            "1991",
+            "1995",
+            "1999",
+            "2003",
+            "2007",
+            "2011",
+            "2015",
+            "2019",
+            "2023"
+          ]
+        }
+      },
+      {
+        "code": "sukupuoli_9_20180101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS",
+            "1",
+            "2"
+          ]
+        }
+      },
+      {
+        "code": "contentscode",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "evaa_ao_suom_as_skans",
+            "evaa_aanest_suom_as_skans",
+            "evaa_aanpros_suom_as_skans"
+          ]
+        }
+      }
+    ],
+    "response": {
+      "format": "json"
+    }
+  },
+  "metadata": {
+    "title": "Suomessa asuvien Suomen kansalaisten äänestysaktiivisuus eduskuntavaaleissa muuttujina Vuosi, Sukupuoli ja Tiedot",
+    "variables": [
+      {
+        "code": "timeperiod_y",
+        "text": "Vuosi",
+        "values": [
+          "1908",
+          "1909",
+          "1910",
+          "1911",
+          "1913",
+          "1916",
+          "1917",
+          "1919",
+          "1922",
+          "1924",
+          "1927",
+          "1929",
+          "1930",
+          "1933",
+          "1936",
+          "1939",
+          "1945",
+          "1948",
+          "1951",
+          "1954",
+          "1958",
+          "1962",
+          "1966",
+          "1970",
+          "1972",
+          "1975",
+          "1979",
+          "1983",
+          "1987",
+          "1991",
+          "1995",
+          "1999",
+          "2003",
+          "2007",
+          "2011",
+          "2015",
+          "2019",
+          "2023"
+        ],
+        "valueTexts": [
+          "1908",
+          "1909",
+          "1910",
+          "1911",
+          "1913",
+          "1916",
+          "1917",
+          "1919",
+          "1922",
+          "1924",
+          "1927",
+          "1929",
+          "1930",
+          "1933",
+          "1936",
+          "1939",
+          "1945",
+          "1948",
+          "1951",
+          "1954",
+          "1958",
+          "1962",
+          "1966",
+          "1970",
+          "1972",
+          "1975",
+          "1979",
+          "1983",
+          "1987",
+          "1991",
+          "1995",
+          "1999",
+          "2003",
+          "2007",
+          "2011",
+          "2015",
+          "2019",
+          "2023"
+        ]
+      },
+      {
+        "code": "sukupuoli_9_20180101",
+        "text": "Sukupuoli",
+        "values": [
+          "SSS",
+          "1",
+          "2"
+        ],
+        "valueTexts": [
+          "Yhteensä",
+          "Miehet",
+          "Naiset"
+        ],
+        "elimination": true
+      },
+      {
+        "code": "contentscode",
+        "text": "Tiedot",
+        "values": [
+          "evaa_ao_suom_as_skans",
+          "evaa_aanest_suom_as_skans",
+          "evaa_aanpros_suom_as_skans",
+          "evaa_hylatyt",
+          "evaa_hyl_pros"
+        ],
+        "valueTexts": [
+          "Äänioikeutetut, Suomessa asuvat Suomen kansalaiset (lkm.)",
+          "Äänestäneet, Suomessa asuvat Suomen kansalaiset (lkm.)",
+          "Äänestysprosentti, Suomessa asuvat Suomen kansalaiset (%)",
+          "Hylätyt äänet (lkm.)",
+          "Hylättyjen äänten osuus (%)"
+        ]
+      }
+    ]
+  },
+  "retrieved_on": "2026-11-06"
+}
