@@ -50,3 +50,5 @@ Toinen jatkokytkentä käsittelee [koulutuksen väestöpohjaa ja toteutuneita op
 Kolmas jatkokytkentä koskee [hoivan väestöpohjaa ja toteutunutta kotihoitoa](population-care.md): 75–84- ja 85 vuotta täyttäneiden kehitys, erillinen vuoden 2024 ennuste ja vuoden 2025 kotihoitoraportin lähdetarkistus. Väestömäärä, palvelukäyttö, hoivan tarve ja läheisten työ säilyvät eri käsitteinä.
 
 Neljäs jatkokytkentä käsittelee [sosiaaliturvan väestöpohjaa perustoimeentulotuen kautta](population-security.md): vuosien 2024–2025 ikä-, sukupuoli- ja kotitalousluvut kytketään kahteen artikkeliin. Käyttöä ei samasteta tarpeeseen tai etuusoikeuteen, eikä koko Suomen väestöpohjasta lasketa tarkistamattomia saamisasteita.
+
+Viides jatkokytkentä käsittelee [alueiden väestötaseita](population-regions.md): syntyneet, kuolleet, kotimainen nettomuutto, nettomaahanmuutto ja korjauserä erotellaan 19 maakunnalle vuosina 1990–2025 virallisella vuoden 2026 luokitusavaimella. Väestötase ei yksin selitä muuttamisen motiiveja tai koettua kuulumista.
