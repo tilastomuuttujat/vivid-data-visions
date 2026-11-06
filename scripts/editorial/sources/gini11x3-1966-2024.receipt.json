@@ -1,0 +1,239 @@
+{
+  "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tjt/11x3.px",
+  "sha256": "2412fb7f6c633b0ce0e048cb28a7e7677c5fceddf7b57ff21b5c9b371d661914",
+  "query": {
+    "query": [
+      {
+        "code": "tulolaji_12_20190417",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SL1TJKT",
+            "4L1TJKT",
+            "6L1TJKT",
+            "SL1",
+            "4L1",
+            "6L1"
+          ]
+        }
+      },
+      {
+        "code": "contentscode",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "Gini"
+          ]
+        }
+      },
+      {
+        "code": "timeperiod_y",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "1966",
+            "1971",
+            "1976",
+            "1981",
+            "1986",
+            "1987",
+            "1988",
+            "1989",
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ]
+        }
+      }
+    ],
+    "response": {
+      "format": "json"
+    }
+  },
+  "metadata": {
+    "title": "Gini-kertoimet ja muita tulonjakoindikaattoreita muuttujina Tulokäsite, Tiedot ja Vuosi",
+    "variables": [
+      {
+        "code": "tulolaji_12_20190417",
+        "text": "Tulokäsite",
+        "values": [
+          "SL1TJKT",
+          "4L1TJKT",
+          "6L1TJKT",
+          "8otos",
+          "SL1",
+          "SL2",
+          "4L1",
+          "6L1"
+        ],
+        "valueTexts": [
+          "Käytettävissä olevat rahatulot (ml. myyntivoitot)",
+          "Tuotannontekijätulot (ml. myyntivoitot)",
+          "Bruttorahatulot (ml. myyntivoitot)",
+          "Käytettävissä olevat rahatulot (pl. myyntivoitot, kv-vertailukelpoinen käsite, otosaineisto)",
+          "Käytettävissä olevat rahatulot (ml. myyntivoitot, otosaineisto)",
+          "Käytettävissä olevat tulot (ml. asuntotulo ja myyntivoitot, otosaineisto)",
+          "Tuotannontekijätulot (ml. myyntivoitot pl. asuntotulo, otosaineisto)",
+          "Bruttorahatulot (ml. myyntivoitot, otosaineisto)"
+        ]
+      },
+      {
+        "code": "contentscode",
+        "text": "Tiedot",
+        "values": [
+          "Gini",
+          "Theil",
+          "MLD",
+          "S80S20",
+          "S90S10",
+          "Palma",
+          "absGini",
+          "tjt-Keskiarvo",
+          "P10",
+          "P50",
+          "tjt-p90"
+        ],
+        "valueTexts": [
+          "Gini-kerroin (%)",
+          "Theil-indeksi",
+          "Logaritminen keskipoikkeama (MLD)",
+          "Tulo-osuuksien suhde, suuri- ja pienituloisin viidennes (S80/S20)",
+          "Tulo-osuuksien suhde, suuri- ja pienituloisin kymmenys (S90/S10)",
+          "Palma-kerroin (S90/S40-suhde)",
+          "Absoluuttinen Gini",
+          "Keskiarvo",
+          "1. desiili",
+          "Mediaani",
+          "9. desiili"
+        ]
+      },
+      {
+        "code": "timeperiod_y",
+        "text": "Vuosi",
+        "values": [
+          "1966",
+          "1971",
+          "1976",
+          "1981",
+          "1986",
+          "1987",
+          "1988",
+          "1989",
+          "1990",
+          "1991",
+          "1992",
+          "1993",
+          "1994",
+          "1995",
+          "1996",
+          "1997",
+          "1998",
+          "1999",
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024"
+        ],
+        "valueTexts": [
+          "1966",
+          "1971",
+          "1976",
+          "1981",
+          "1986",
+          "1987",
+          "1988",
+          "1989",
+          "1990",
+          "1991",
+          "1992",
+          "1993",
+          "1994",
+          "1995",
+          "1996",
+          "1997",
+          "1998",
+          "1999",
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024"
+        ]
+      }
+    ]
+  },
+  "retrieved_on": "2026-11-06"
+}

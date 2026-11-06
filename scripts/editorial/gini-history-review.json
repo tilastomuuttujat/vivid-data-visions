@@ -1,0 +1,49 @@
+{
+  "version": "gini-history-review-2026-11-06-v1",
+  "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tjt/11x3.px",
+  "reference_sha256": "2412fb7f6c633b0ce0e048cb28a7e7677c5fceddf7b57ff21b5c9b371d661914",
+  "source_cells": 258,
+  "numeric_cells": 243,
+  "not_obtained_cells": 12,
+  "confidential_cells": 3,
+  "early_observation_years": [
+    1966,
+    1971,
+    1976,
+    1981
+  ],
+  "observation_periods": [
+    [
+      1966,
+      1966
+    ],
+    [
+      1971,
+      1971
+    ],
+    [
+      1976,
+      1976
+    ],
+    [
+      1981,
+      1981
+    ],
+    [
+      1986,
+      2024
+    ]
+  ],
+  "separate_concepts": [
+    "SL1TJKT",
+    "4L1TJKT",
+    "6L1TJKT",
+    "SL1",
+    "4L1",
+    "6L1"
+  ],
+  "finding": "Kulutustutkimukseen perustuvassa otossarjassa käytettävissä olevien rahatulojen Gini-kerroin oli 31,1 vuonna 1966 ja 20,9 vuonna 1981. Pitkän tarkastelun myöhemmässä ensisijaisessa sarjassa kerroin oli 22,2 vuonna 1995, 29,5 vuonna 2007 ja 28,4 vuonna 2024; vuosien 1995–2024 ero on 6,2 prosenttiyksikköä. Vuonna 2024 tuotannontekijätulojen Gini oli 52,3, bruttorahatulojen 33,4 ja käytettävissä olevien rahatulojen 28,4. Tulokäsitteet sisältävät myyntivoitot.",
+  "limits": "Gini kuvaa suhteellisia vuosituloeroja, ei tulojen riittävyyttä, varallisuutta, köyhyyden kasautumista tai tuloliikkuvuutta. Henkilöille kohdistetaan talouden kulutusyksikköä kohti laskettu tulo; kyse ei ole vain henkilökohtaisista palkoista. Kulutusyksikköasteikko on 1–0,5–0,3. Ennen vuotta 1986 havaintovuodet ovat vain 1966, 1971, 1976 ja 1981. Vuosien 1986–1994 tiedot ovat tulonjakotilaston otoksesta; vuodesta 1995 lähtien ensisijainen käsite perustuu kokonaisaineistoon. Otos- ja kokonaisaineiston tulokäsitteet ja tulonkäyttöyksiköt eroavat, joten sarjat säilytetään erillisinä. Puuttuvat ja salassapidetyt solut eivät ole nollia. Tuotannontekijä-, brutto- ja nettotulojen Gini-lukujen erot eivät ole verotuksen tai etuuksien kausaalisia vaikutusarvioita: ne eivät huomioi käyttäytymisvaikutuksia tai vaihtoehtoista kehitystä.",
+  "checked_on": "2026-11-06",
+  "causal_effect_identified": false
+}
