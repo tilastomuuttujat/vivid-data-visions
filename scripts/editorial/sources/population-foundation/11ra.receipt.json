@@ -1,0 +1,104 @@
+{
+  "table": "11ra",
+  "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/vaerak/11ra.px",
+  "query": {
+    "query": [
+      {
+        "code": "alue_23_20260101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS",
+            "MK01",
+            "MK02",
+            "MK04",
+            "MK05",
+            "MK06",
+            "MK07",
+            "MK08",
+            "MK09",
+            "MK10",
+            "MK11",
+            "MK12",
+            "MK13",
+            "MK14",
+            "MK15",
+            "MK16",
+            "MK17",
+            "MK18",
+            "MK19",
+            "MK21"
+          ]
+        }
+      },
+      {
+        "code": "contentscode",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "vaerak-vaesto",
+            "vaesto_alle15_p",
+            "vaesto_15_64_p",
+            "vaesto_yli64_p",
+            "vaerak-dem_huoltos",
+            "vaesto_svaltio_ulk",
+            "vaesto_svaltio_ulk_p"
+          ]
+        }
+      },
+      {
+        "code": "timeperiod_y",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025"
+          ]
+        }
+      }
+    ],
+    "response": {
+      "format": "json"
+    }
+  },
+  "kind": "observed",
+  "projection_vintage": null,
+  "retrieved_at": "2026-11-06T19:31:10.598025+00:00",
+  "sha256": "673b036fabc4cf6f21d47c8e464f0b283b4ce85c04822cb031e3bb646b5b84ad",
+  "metadata_sha256": "0564ea6170a51959f745689d1bd1424d4c896df8c18d64aeaae0e1e460771bc4",
+  "cells": 5040
+}

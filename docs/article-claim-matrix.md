@@ -22,3 +22,8 @@ Havaintovuodet ovat aluksi NULL: olemassa oleva period-väli on täydennyksen aj
 Editorin deterministinen puutelista kattaa kaikki kirjaston tietueet ja sisältää väitekatkelman, ajanjakson, puutteen ja seuraavan lähdetyön. P1 nostaa esiin vuosien 1850–1975 puuttuvan lähdeosuman tai havaintovuosivarmennuksen, tulevaisuusskenaarioiden erillisen perustarkistuksen ja vanhentuneet revisiot. P2 koskee puuttuvia luokituksia, havaintovuosia, kohderyhmiä ja aikakausikytkentöjä; P3 sisältää jo kirjatut tutkimusaukot. Säännöt ovat työjärjestys, eivät automaattinen väitteiden totuus- tai merkittävyysluokitus. Ajallinen osuma ei varmista väitteen sisältöä. Tulevaisuus- ja historiatarkistuksia ei poisteta vain lähdemäärän perusteella.
 
 Puutelistan voi suodattaa prioriteetilla ja ladata yksityisenä JSON-tiedostona omalle laitteelle. Raportti muodostetaan nykyisestä avatusta kirjastosta; se ei kata artikkelien kaikkia vielä poimimattomia väitteitä. Kirjaston kaksoiskappaleet pidetään erillisinä tietueina. Toiminnon käyttö ei käynnistä ulkoista tiedonkeruuta tai muokkaa tietokantaa.
+
+
+## Yhteinen väestöperusta
+
+Kuuden artikkeliryhmän ensimmäinen väestökytkentä käyttää yhteistä versioitua lähdeaineistoa. Toteumat 1850–2025 ja vuoden 2024 ehdollinen väestöennuste vuosille 2026–2050 on erotettu; ikärakenne alkaa 1865 ja maakuntavertailu 1990. Katso [aineisto, rajaukset ja jatkotyö](population-foundation.md). Lähdekuvat tallennetaan erikseen, artikkelikohtaiset tulkinnat nykyiseen täydennystaulukkoon.

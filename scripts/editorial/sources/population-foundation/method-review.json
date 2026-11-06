@@ -1,0 +1,15 @@
+{
+  "checked_on": "2026-11-06",
+  "publisher": "Tilastokeskus",
+  "projection_documentation": "https://stat.fi/fi/dokumentaatio/tilastojen-dokumentaatio/vaenn",
+  "projection_release": "https://stat.fi/fi/julkaisu/cln1i9lg94af80bw1rxn0njfg",
+  "projection_vintage": 2024,
+  "assumptions": {"total_fertility_rate": "1.26", "net_migration_2024": 52000, "net_migration_2025": 45000, "annual_net_migration_from_2026": 40000, "mortality": "Declining age-specific mortality under the published 2024 method; not a constant mortality-rate assumption."},
+  "territory_and_history": "Source series retain their historical definitions. No claim of constant territorial borders across 1850–2025. Source 12dx notes that 1891–1939 figures use the resident-population correction made in 1949. No independent historical-border harmonisation is performed.",
+  "regional_geography": "11ra uses the 1 January 2026 regional classification throughout the retrieved 1990–2025 series. This is not a history of contemporary administrative borders.",
+  "historic_shocks": [{"years":[1866,1868],"label":"Nälkävuodet"},{"years":[1918,1918],"label":"Sisällissota"},{"years":[1940,1944],"label":"Toinen maailmansota"},{"years":[1969,1970],"label":"Siirtolaisuus Ruotsiin"}],
+  "shock_interpretation": "Source table annotations are contextual labels, not estimates of attributable mortality, migration or causal effect.",
+  "not_measured": ["health or care needs from age alone", "labour supply or employment from working-age population alone", "fiscal sustainability from demographic dependency ratio", "migration causes from regional age distributions", "ethnicity or indigenous identity from language or birthplace"],
+  "historical_table_url": "https://statfin.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__synt/12dx.px/",
+  "age_table_url": "https://pxweb2.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaerak/11rc.px/"
+}
