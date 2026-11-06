@@ -9,6 +9,11 @@
   return c.current&&c.classification&&['description','assessment_rule'].includes(c.type)&&d?.kind==='retrospective_qualitative'&&d.review_status==='source_checked'&&d.role==='method_and_scope_verification'&&d.annual_series===false&&d.population_prevalence_estimate===false&&overlaps(d.historical_scope,d.historical_scope)&&/^\d{4}-(0[1-9]|1[0-2])$/.test(d.fieldwork_start||'')&&/^\d{4}-(0[1-9]|1[0-2])$/.test(d.fieldwork_end||'')&&d.fieldwork_start<=d.fieldwork_end;
  };
  const qualitativeCovers=(c,p,range)=>checkedQualitative(c)&&c.evidence_design.historical_scope[0]<=range[0]&&c.evidence_design.historical_scope[1]>=range[1]&&normalized(c.article_passage).length>=30&&normalized(p.evidence).includes(normalized(c.article_passage));
+ const checkedImplementation=c=>{
+  const d=c.implementation_evidence;
+  return c.current&&c.classification&&c.type==='description'&&c.period_linkage==='exact_passage_only'&&d?.kind==='documented_implementation_timeline'&&d.review_status==='source_checked'&&d.annual_series===false&&d.causal_effect_identified===false&&Array.isArray(d.events)&&d.events.length>0&&d.events.every(e=>Number.isInteger(e.year)&&overlaps(c.period,[e.year,e.year])&&e.description&&c.sources?.some(s=>s.id===e.source_id));
+ };
+ const implementationCovers=(c,p,range)=>checkedImplementation(c)&&range[0]===range[1]&&c.implementation_evidence.events.some(e=>e.year===range[0])&&normalized(c.article_passage).length>=30&&normalized(p.evidence).includes(normalized(c.article_passage));
  function project(catalog,data){
   return catalog.map(a=>{
    const annotations=(data.periods||[]).filter(p=>p.article_id===a.id&&p.article_revision===a.revision).flatMap(p=>JSON.parse(p.periods_json));
@@ -29,13 +34,13 @@
     const range=[p.start,p.end],linked=r.claims.filter(c=>c.current&&overlaps(c.period,range)&&(c.period_linkage!=='exact_passage_only'||(normalized(c.article_passage).length>=30&&normalized(p.evidence).includes(normalized(c.article_passage)))));
     if(p.dating==='future_scenario')add(r,'P1','future_basis',p.evidence,range,'Skenaarion oletuksia ja virallista ennustepohjaa ei ole hyväksytty väitekohtaisesti.','Kytke väestö-, talous- tai ilmastoskenaario; kirjaa perusvuosi, oletukset ja epävarmuus.');
     else if(Number.isInteger(p.start)&&p.start<=1975&&linked.length===0)add(r,'P1','historical_gap',p.evidence,range,'Aikakausimerkintään ei osu nykyistä lähdetäydennystä. Tämä ei osoita kaiken lähdeaineiston puuttumista.','Tarkista historiallinen tilasto tai alkuperäisasiakirja; kirjaa käsitemuutokset ja ketjutuksen rajat.');
-    else if(Number.isInteger(p.start)&&p.start<=1975&&!linked.some(c=>c.observationPeriods?.some(r=>overlaps(r,range)&&r[0]<=range[0]&&r[1]>=range[1])||qualitativeCovers(c,p,range)))add(r,'P1','historical_observation_scope',p.evidence,range,'Lähdeosuma on olemassa, mutta varmennettu havaintojakso ei kata koko väitteen aikaväliä tai sen kattavuus on vielä tarkistamatta.','Varmenna lähdekohtaiset vuodet ja se, kattaako näyttö väitteen ajallisen ja alueellisen laajuuden.');
+    else if(Number.isInteger(p.start)&&p.start<=1975&&!linked.some(c=>c.observationPeriods?.some(r=>overlaps(r,range)&&r[0]<=range[0]&&r[1]>=range[1])||qualitativeCovers(c,p,range)||implementationCovers(c,p,range)))add(r,'P1','historical_observation_scope',p.evidence,range,'Lähdeosuma on olemassa, mutta varmennettu havaintojakso ei kata koko väitteen aikaväliä tai sen kattavuus on vielä tarkistamatta.','Varmenna lähdekohtaiset vuodet ja se, kattaako näyttö väitteen ajallisen ja alueellisen laajuuden.');
     else if(linked.length===0)add(r,'P2','unlinked_period',p.evidence,range,'Ei ajallisesti osuvaa nykyistä täydennystä; väitekohtainen lähdeyhteys tarkistamatta.','Tarkista väitteen lähde ja sen kohderyhmä.');
    }
    for(const c of r.claims){
     if(!c.current){add(r,'P1','stale_revision',c.article_passage,c.period,'Täydennys koskee aiempaa artikkelirevisiota.','Tarkista katkelma uudesta tekstistä ja arvioi kytkentä uudelleen.');continue;}
     if(c.type==='unclassified')add(r,'P2','classification',c.article_passage,c.period,'Ajantasainen toimituksellinen luokitus puuttuu.','Luokittele väite katkelman sisällön perusteella.');
-    if(!c.observationPeriods&&!checkedQualitative(c))add(r,'P2','observation_years',c.article_passage,c.period,'Lähdekohtaisia havaintovuosia ei ole varmennettu rakenteiseen kenttään. Sijoitusvuodet eivät korvaa niitä.','Tarkista jokaisen lähteen aineiston vuodet; erittele kuvaus, seuranta ja julkaisuvuosi.');
+    if(!c.observationPeriods&&!checkedQualitative(c)&&!checkedImplementation(c))add(r,'P2','observation_years',c.article_passage,c.period,'Lähdekohtaisia havaintovuosia ei ole varmennettu rakenteiseen kenttään. Sijoitusvuodet eivät korvaa niitä.','Tarkista jokaisen lähteen aineiston vuodet; erittele kuvaus, seuranta ja julkaisuvuosi.');
     if(!c.scope)add(r,'P2','population_scope',c.article_passage,c.period,'Kohderyhmä ja alue puuttuvat rakenteisesta rajauksesta.','Kirjaa väestöryhmä, alue ja yleistämisen rajat.');
     if(c.research_gap)add(r,'P3','research_gap',c.article_passage,c.period,c.research_gap,'Täydennä vain väitteen kannalta ratkaiseva puuttuva näyttö.');
    }

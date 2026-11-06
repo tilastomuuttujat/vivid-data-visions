@@ -1,0 +1,34 @@
+{
+  "version": "sickness-insurance-implementation-review-2026-11-06-v1",
+  "source": {
+    "id": "kela-history",
+    "url": "https://www.kela.fi/historia",
+    "publisher": "Kansaneläkelaitos",
+    "title": "Kelan historia",
+    "updated_on": "2025-11-04",
+    "retrieved_on": "2026-11-06",
+    "sha256": "1b9561a1e035a4e7a6297701960d60a8fde3756343d578eec2d3b4534213f4d2",
+    "locator": "Kelan tärkeät vuosiluvut: 1960-luku ja 1970-luku",
+    "source_type": "retrospective_institutional_history"
+  },
+  "events": [
+    {
+      "year": 1964,
+      "source_id": "kela-history",
+      "description": "Sairausvakuutus siirtyi Kelan hoidettavaksi. Asiakaskunta laajeni kaikkiin Suomessa asuviin, ja toimeenpanoon perustettiin 204 sairausvakuutuspiiriä."
+    },
+    {
+      "year": 1967,
+      "source_id": "kela-history",
+      "description": "Korvattaviin kustannuksiin lisättiin lääkärinpalkkiot ja sairauspäivärahan omavastuuaika lyheni 14 päivästä seitsemään."
+    },
+    {
+      "year": 1975,
+      "source_id": "kela-history",
+      "description": "Eläke- ja sairausvakuutuksen erilliset kenttäorganisaatiot yhdistettiin yhteiseksi alue- ja paikallishallinnoksi."
+    }
+  ],
+  "annual_series": false,
+  "causal_effect_identified": false,
+  "limitations": "Institutional rollout chronology; no recipient counts, expenditure series, regional delivery evaluation or identified health/income effect. Unopened contemporary Bulletin not used as evidence."
+}

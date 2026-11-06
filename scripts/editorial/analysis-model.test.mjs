@@ -47,3 +47,11 @@ test('passage-bound statistical context never clears a different historical clai
  assert.ok(globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data)).some(g=>g.kind==='historical_gap'));
  data.periods[0].periods_json=JSON.stringify([{start:1851,end:1970,dating:'explicit',evidence:passage}]);assert.ok(!globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data)).some(g=>g.kind==='historical_gap'));
 });
+test('verified implementation events cover exact dated claims without inventing annual coverage',()=>{
+ const passage='The insurance administration was assigned to a national institution in 1964.';
+ const s={id:'event',article_id:'a',article_revision:1,body_sha256:'h',article_passage:passage,period:[1964,1975],period_linkage:'exact_passage_only',sources:[{id:'official'}],implementation_evidence:{kind:'documented_implementation_timeline',review_status:'source_checked',annual_series:false,causal_effect_identified:false,events:[{year:1964,source_id:'official',description:'Administration began.'}]},claim_classification:{article_revision:1,body_sha256:'h',source_version:'v1',claim_type:'description',observation_periods:null}};
+ const data={supplements:[{article_id:'a',version:'v1',payload_json:JSON.stringify(s)}],periods:[{article_id:'a',article_revision:1,periods_json:JSON.stringify([{start:1964,end:1964,dating:'explicit',evidence:passage}])}]};
+ let rows=project([{id:'a',title:'A',revision:1}],data);assert.equal(rows[0].claims[0].observationPeriods,null);assert.ok(!globalThis.articleAnalysisModel.audit(rows).some(g=>['observation_years','historical_observation_scope'].includes(g.kind)));
+ data.periods[0].periods_json=JSON.stringify([{start:1964,end:1975,dating:'explicit',evidence:passage}]);assert.ok(globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data)).some(g=>g.kind==='historical_observation_scope'));
+ s.implementation_evidence.events[0].source_id='unknown';data.supplements[0].payload_json=JSON.stringify(s);assert.ok(globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data)).some(g=>g.kind==='observation_years'));
+});

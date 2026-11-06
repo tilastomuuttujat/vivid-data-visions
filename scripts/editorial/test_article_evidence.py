@@ -27,4 +27,17 @@ class Tests(unittest.TestCase):
    with self.assertRaises(ValueError):apply(Local(),bad)
   bad=self.qualitative();bad['supplements'][0]['claim_classification']['observation_periods']=[[1937,1983]]
   with self.assertRaises(ValueError):apply(Local(),bad)
+ def implementation(self):
+  b=self.bundle();s=b['supplements'][0];s['period']=[1993,1995];s['period_linkage']='exact_passage_only';s['claim_classification']={'claim_type':'description','observation_periods':None};s['implementation_evidence']=dict(kind='documented_implementation_timeline',review_status='source_checked',annual_series=False,causal_effect_identified=False,events=[dict(year=1993,source_id='s',description='Documented implementation event')]);return b
+ def test_implementation_timeline_preserves_original_and_event_years(self):
+  b=self.implementation();db=Local();before=db.execute('SELECT * FROM editorial__articles');apply(db,b);apply(db,b);verify(db,b);self.assertEqual(before,db.execute('SELECT * FROM editorial__articles'))
+ def test_implementation_unknown_source_and_false_annual_scope_rejected(self):
+  for k,v in [('source_id','unknown'),('year',1996),('year',True)]:
+   b=self.implementation();b['supplements'][0]['implementation_evidence']['events'][0][k]=v
+   with self.assertRaises(ValueError):apply(Local(),b)
+  for k,v in [('annual_series',True),('causal_effect_identified',True),('review_status','proposed')]:
+   b=self.implementation();b['supplements'][0]['implementation_evidence'][k]=v
+   with self.assertRaises(ValueError):apply(Local(),b)
+  b=self.implementation();b['supplements'][0]['claim_classification']['observation_periods']=[[1993,1995]]
+  with self.assertRaises(ValueError):apply(Local(),b)
 if __name__=='__main__':unittest.main()
