@@ -1,0 +1,130 @@
+{
+  "version": "poor-relief1881-1887-original-review-2026-11-06-v1",
+  "title": "Köyhäinhoito Suomessa vv. 1881, 1883, 1885 ja 1887",
+  "publisher": "Tilastollinen päätoimisto, Suomenmaan virallinen tilasto XXI:1",
+  "publication_year": 1891,
+  "url": "https://otos.stat.fi/server/api/core/bitstreams/1ff6a36e-e0bb-45da-9254-b1c3e1fcbb80/content",
+  "item_url": "https://otos.stat.fi/items/680a3cdc-55a8-434c-ba02-1629f5a013f3",
+  "pdf_sha256": "945cc93a794108d0cce07e1089e7243ca7b36f1852127e87bda0ca331aa3c7c8",
+  "locator": "Tekstin painetut sivut 1–4, PDF-sivut 4–7; numeeriset luvut painetulla sivulla 2, PDF-sivulla 5.",
+  "checked_on": "2026-11-06",
+  "method": "Printed pages 1 and 2 visually inspected; official report transcription, original reported rates preserved rather than recalculated with modern population counts.",
+  "cells": [
+    {
+      "year": 1881,
+      "group_key": "FI",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "3.53"
+    },
+    {
+      "year": 1883,
+      "group_key": "FI",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "3.44"
+    },
+    {
+      "year": 1885,
+      "group_key": "FI",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "3.52"
+    },
+    {
+      "year": 1887,
+      "group_key": "FI",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "3.56"
+    },
+    {
+      "year": 1881,
+      "group_key": "historical_urban",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "3.83"
+    },
+    {
+      "year": 1883,
+      "group_key": "historical_urban",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "3.58"
+    },
+    {
+      "year": 1885,
+      "group_key": "historical_urban",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "3.75"
+    },
+    {
+      "year": 1887,
+      "group_key": "historical_urban",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "4.09"
+    },
+    {
+      "year": 1881,
+      "group_key": "historical_rural",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "3.52"
+    },
+    {
+      "year": 1883,
+      "group_key": "historical_rural",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "3.42"
+    },
+    {
+      "year": 1885,
+      "group_key": "historical_rural",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "3.50"
+    },
+    {
+      "year": 1887,
+      "group_key": "historical_rural",
+      "measure": "reported_recipients_pct_of_population",
+      "value": "3.50"
+    },
+    {
+      "year": 1881,
+      "group_key": "FI",
+      "measure": "reported_recipients_count",
+      "value": "73501"
+    },
+    {
+      "year": 1881,
+      "group_key": "historical_urban",
+      "measure": "reported_recipients_count",
+      "value": "6834"
+    },
+    {
+      "year": 1881,
+      "group_key": "historical_rural",
+      "measure": "reported_recipients_count",
+      "value": "66667"
+    },
+    {
+      "year": 1887,
+      "group_key": "FI",
+      "measure": "reported_recipients_count",
+      "value": "80806"
+    },
+    {
+      "year": 1887,
+      "group_key": "historical_urban",
+      "measure": "reported_recipients_count",
+      "value": "8646"
+    },
+    {
+      "year": 1887,
+      "group_key": "historical_rural",
+      "measure": "reported_recipients_count",
+      "value": "72160"
+    }
+  ],
+  "source_quality": {
+    "missing_municipal_reports": true,
+    "some_reports_questioned_by_original_publisher": true,
+    "sex_breakdown_unavailable": true,
+    "recipient_share_is_poverty_rate": false,
+    "nominal_costs_not_extracted": true
+  },
+  "annual_series": false
+}
