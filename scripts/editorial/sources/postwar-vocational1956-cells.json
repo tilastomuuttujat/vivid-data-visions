@@ -1,0 +1,395 @@
+{
+  "title": "Suomen tilastollinen vuosikirja 1956 (1957), taulukko 314",
+  "url": "https://otos.stat.fi/bitstreams/aa94b25f-ec2e-4dfb-8722-d15f71bb3c8b/download",
+  "pdf_sha256": "c9574b6bcdeab2125d959d6d3b2f6a83947974c20beaccce2a1759bc56000a21",
+  "pdf_page": 280,
+  "printed_pages": "292–293",
+  "method": "48 oppilasmäärää tarkistettu renderöidystä alkuperäistaulukosta; tallennettu vuosi on lukuvuoden päättymisvuosi.",
+  "checked_on": "2026-11-06",
+  "rows": [
+    {
+      "year": 1951,
+      "source_period": "1950–1951",
+      "group_key": "CENTRAL",
+      "group_label": "Keskusammattikoulut",
+      "value": "995",
+      "migrated_value_at_review": "995"
+    },
+    {
+      "year": 1952,
+      "source_period": "1951–1952",
+      "group_key": "CENTRAL",
+      "group_label": "Keskusammattikoulut",
+      "value": "1031",
+      "migrated_value_at_review": "1031"
+    },
+    {
+      "year": 1953,
+      "source_period": "1952–1953",
+      "group_key": "CENTRAL",
+      "group_label": "Keskusammattikoulut",
+      "value": "1190",
+      "migrated_value_at_review": "1190"
+    },
+    {
+      "year": 1954,
+      "source_period": "1953–1954",
+      "group_key": "CENTRAL",
+      "group_label": "Keskusammattikoulut",
+      "value": "1352",
+      "migrated_value_at_review": "1352"
+    },
+    {
+      "year": 1955,
+      "source_period": "1954–1955",
+      "group_key": "CENTRAL",
+      "group_label": "Keskusammattikoulut",
+      "value": "1369",
+      "migrated_value_at_review": "1369"
+    },
+    {
+      "year": 1956,
+      "source_period": "1955–1956",
+      "group_key": "CENTRAL",
+      "group_label": "Keskusammattikoulut",
+      "value": "1821",
+      "migrated_value_at_review": "1821"
+    },
+    {
+      "year": 1951,
+      "source_period": "1950–1951",
+      "group_key": "DOMESTIC",
+      "group_label": "Kotitalousoppilaitokset",
+      "value": "2590",
+      "migrated_value_at_review": "2590"
+    },
+    {
+      "year": 1952,
+      "source_period": "1951–1952",
+      "group_key": "DOMESTIC",
+      "group_label": "Kotitalousoppilaitokset",
+      "value": "2456",
+      "migrated_value_at_review": "2456"
+    },
+    {
+      "year": 1953,
+      "source_period": "1952–1953",
+      "group_key": "DOMESTIC",
+      "group_label": "Kotitalousoppilaitokset",
+      "value": "2473",
+      "migrated_value_at_review": "2473"
+    },
+    {
+      "year": 1954,
+      "source_period": "1953–1954",
+      "group_key": "DOMESTIC",
+      "group_label": "Kotitalousoppilaitokset",
+      "value": "2575",
+      "migrated_value_at_review": "2575"
+    },
+    {
+      "year": 1955,
+      "source_period": "1954–1955",
+      "group_key": "DOMESTIC",
+      "group_label": "Kotitalousoppilaitokset",
+      "value": "2572",
+      "migrated_value_at_review": "2572"
+    },
+    {
+      "year": 1956,
+      "source_period": "1955–1956",
+      "group_key": "DOMESTIC",
+      "group_label": "Kotitalousoppilaitokset",
+      "value": "2759",
+      "migrated_value_at_review": "2759"
+    },
+    {
+      "year": 1951,
+      "source_period": "1950–1951",
+      "group_key": "GENERAL",
+      "group_label": "Yleiset ammattikoulut",
+      "value": "1019",
+      "migrated_value_at_review": "1230"
+    },
+    {
+      "year": 1952,
+      "source_period": "1951–1952",
+      "group_key": "GENERAL",
+      "group_label": "Yleiset ammattikoulut",
+      "value": "1244",
+      "migrated_value_at_review": "1244"
+    },
+    {
+      "year": 1953,
+      "source_period": "1952–1953",
+      "group_key": "GENERAL",
+      "group_label": "Yleiset ammattikoulut",
+      "value": "1263",
+      "migrated_value_at_review": "1263"
+    },
+    {
+      "year": 1954,
+      "source_period": "1953–1954",
+      "group_key": "GENERAL",
+      "group_label": "Yleiset ammattikoulut",
+      "value": "1322",
+      "migrated_value_at_review": "1322"
+    },
+    {
+      "year": 1955,
+      "source_period": "1954–1955",
+      "group_key": "GENERAL",
+      "group_label": "Yleiset ammattikoulut",
+      "value": "987",
+      "migrated_value_at_review": "987"
+    },
+    {
+      "year": 1956,
+      "source_period": "1955–1956",
+      "group_key": "GENERAL",
+      "group_label": "Yleiset ammattikoulut",
+      "value": "1386",
+      "migrated_value_at_review": "1386"
+    },
+    {
+      "year": 1951,
+      "source_period": "1950–1951",
+      "group_key": "MARITIME",
+      "group_label": "Merenkulkuoppilaitokset",
+      "value": "203",
+      "migrated_value_at_review": "203"
+    },
+    {
+      "year": 1952,
+      "source_period": "1951–1952",
+      "group_key": "MARITIME",
+      "group_label": "Merenkulkuoppilaitokset",
+      "value": "268",
+      "migrated_value_at_review": "268"
+    },
+    {
+      "year": 1953,
+      "source_period": "1952–1953",
+      "group_key": "MARITIME",
+      "group_label": "Merenkulkuoppilaitokset",
+      "value": "286",
+      "migrated_value_at_review": "286"
+    },
+    {
+      "year": 1954,
+      "source_period": "1953–1954",
+      "group_key": "MARITIME",
+      "group_label": "Merenkulkuoppilaitokset",
+      "value": "277",
+      "migrated_value_at_review": "277"
+    },
+    {
+      "year": 1955,
+      "source_period": "1954–1955",
+      "group_key": "MARITIME",
+      "group_label": "Merenkulkuoppilaitokset",
+      "value": "259",
+      "migrated_value_at_review": "259"
+    },
+    {
+      "year": 1956,
+      "source_period": "1955–1956",
+      "group_key": "MARITIME",
+      "group_label": "Merenkulkuoppilaitokset",
+      "value": "257",
+      "migrated_value_at_review": "257"
+    },
+    {
+      "year": 1951,
+      "source_period": "1950–1951",
+      "group_key": "PREPARATORY",
+      "group_label": "Valmistavat tyttöjen ammattikoulut",
+      "value": "2558",
+      "migrated_value_at_review": "2558"
+    },
+    {
+      "year": 1952,
+      "source_period": "1951–1952",
+      "group_key": "PREPARATORY",
+      "group_label": "Valmistavat tyttöjen ammattikoulut",
+      "value": "2555",
+      "migrated_value_at_review": "2555"
+    },
+    {
+      "year": 1953,
+      "source_period": "1952–1953",
+      "group_key": "PREPARATORY",
+      "group_label": "Valmistavat tyttöjen ammattikoulut",
+      "value": "2555",
+      "migrated_value_at_review": "2692"
+    },
+    {
+      "year": 1954,
+      "source_period": "1953–1954",
+      "group_key": "PREPARATORY",
+      "group_label": "Valmistavat tyttöjen ammattikoulut",
+      "value": "2692",
+      "migrated_value_at_review": "2581"
+    },
+    {
+      "year": 1955,
+      "source_period": "1954–1955",
+      "group_key": "PREPARATORY",
+      "group_label": "Valmistavat tyttöjen ammattikoulut",
+      "value": "2581",
+      "migrated_value_at_review": "2599"
+    },
+    {
+      "year": 1956,
+      "source_period": "1955–1956",
+      "group_key": "PREPARATORY",
+      "group_label": "Valmistavat tyttöjen ammattikoulut",
+      "value": "2509",
+      "migrated_value_at_review": "2509"
+    },
+    {
+      "year": 1951,
+      "source_period": "1950–1951",
+      "group_key": "PREP_TECHNICAL",
+      "group_label": "Valmistavat teknilliset ammattikoulut",
+      "value": "3722",
+      "migrated_value_at_review": "3722"
+    },
+    {
+      "year": 1952,
+      "source_period": "1951–1952",
+      "group_key": "PREP_TECHNICAL",
+      "group_label": "Valmistavat teknilliset ammattikoulut",
+      "value": "3959",
+      "migrated_value_at_review": "3959"
+    },
+    {
+      "year": 1953,
+      "source_period": "1952–1953",
+      "group_key": "PREP_TECHNICAL",
+      "group_label": "Valmistavat teknilliset ammattikoulut",
+      "value": "3954",
+      "migrated_value_at_review": "3954"
+    },
+    {
+      "year": 1954,
+      "source_period": "1953–1954",
+      "group_key": "PREP_TECHNICAL",
+      "group_label": "Valmistavat teknilliset ammattikoulut",
+      "value": "5015",
+      "migrated_value_at_review": "5015"
+    },
+    {
+      "year": 1955,
+      "source_period": "1954–1955",
+      "group_key": "PREP_TECHNICAL",
+      "group_label": "Valmistavat teknilliset ammattikoulut",
+      "value": "4975",
+      "migrated_value_at_review": "4275"
+    },
+    {
+      "year": 1956,
+      "source_period": "1955–1956",
+      "group_key": "PREP_TECHNICAL",
+      "group_label": "Valmistavat teknilliset ammattikoulut",
+      "value": "6638",
+      "migrated_value_at_review": "6688"
+    },
+    {
+      "year": 1951,
+      "source_period": "1950–1951",
+      "group_key": "TECHNICAL_COLLEGE",
+      "group_label": "Teknilliset opistot",
+      "value": "1068",
+      "migrated_value_at_review": "1068"
+    },
+    {
+      "year": 1952,
+      "source_period": "1951–1952",
+      "group_key": "TECHNICAL_COLLEGE",
+      "group_label": "Teknilliset opistot",
+      "value": "1074",
+      "migrated_value_at_review": "1074"
+    },
+    {
+      "year": 1953,
+      "source_period": "1952–1953",
+      "group_key": "TECHNICAL_COLLEGE",
+      "group_label": "Teknilliset opistot",
+      "value": "1073",
+      "migrated_value_at_review": "1073"
+    },
+    {
+      "year": 1954,
+      "source_period": "1953–1954",
+      "group_key": "TECHNICAL_COLLEGE",
+      "group_label": "Teknilliset opistot",
+      "value": "1063",
+      "migrated_value_at_review": "1063"
+    },
+    {
+      "year": 1955,
+      "source_period": "1954–1955",
+      "group_key": "TECHNICAL_COLLEGE",
+      "group_label": "Teknilliset opistot",
+      "value": "1056",
+      "migrated_value_at_review": "1056"
+    },
+    {
+      "year": 1956,
+      "source_period": "1955–1956",
+      "group_key": "TECHNICAL_COLLEGE",
+      "group_label": "Teknilliset opistot",
+      "value": "1137",
+      "migrated_value_at_review": "1137"
+    },
+    {
+      "year": 1951,
+      "source_period": "1950–1951",
+      "group_key": "TECHNICAL_SCHOOL",
+      "group_label": "Teknilliset koulut",
+      "value": "2911",
+      "migrated_value_at_review": "2911"
+    },
+    {
+      "year": 1952,
+      "source_period": "1951–1952",
+      "group_key": "TECHNICAL_SCHOOL",
+      "group_label": "Teknilliset koulut",
+      "value": "2920",
+      "migrated_value_at_review": "2920"
+    },
+    {
+      "year": 1953,
+      "source_period": "1952–1953",
+      "group_key": "TECHNICAL_SCHOOL",
+      "group_label": "Teknilliset koulut",
+      "value": "2896",
+      "migrated_value_at_review": "2896"
+    },
+    {
+      "year": 1954,
+      "source_period": "1953–1954",
+      "group_key": "TECHNICAL_SCHOOL",
+      "group_label": "Teknilliset koulut",
+      "value": "3059",
+      "migrated_value_at_review": "3059"
+    },
+    {
+      "year": 1955,
+      "source_period": "1954–1955",
+      "group_key": "TECHNICAL_SCHOOL",
+      "group_label": "Teknilliset koulut",
+      "value": "3173",
+      "migrated_value_at_review": "3173"
+    },
+    {
+      "year": 1956,
+      "source_period": "1955–1956",
+      "group_key": "TECHNICAL_SCHOOL",
+      "group_label": "Teknilliset koulut",
+      "value": "3281",
+      "migrated_value_at_review": "3281"
+    }
+  ]
+}

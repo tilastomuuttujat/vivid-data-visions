@@ -1,0 +1,29 @@
+{
+  "title": "Suomen tilastollinen vuosikirja 2025, taulukko 1.3",
+  "url": "https://otos.stat.fi/server/api/core/bitstreams/fb1297b1-1607-4ea2-b303-8f993b9c5daa/content",
+  "pdf_sha256": "6d2f82b7c2725bc6eb2725b0b97be22bbe6165cad404880a674650f06149f14f",
+  "pdf_page": 18,
+  "printed_page": 17,
+  "checked_on": "2026-11-06",
+  "method": "Asuntokannan sekä vesijohdolla ja WC:llä varustettujen asuntojen määrät tarkistettu visuaalisesti taulukosta. Varusteet ovat päällekkäisiä, eivät summattavia luokkia.",
+  "rows": [
+    {
+      "year": 1950,
+      "total": "998839",
+      "running_water": "251463",
+      "flush_toilet": "173507"
+    },
+    {
+      "year": 1960,
+      "total": "1211200",
+      "running_water": "569946",
+      "flush_toilet": "428323"
+    },
+    {
+      "year": 1970,
+      "total": "1463221",
+      "running_water": "1054301",
+      "flush_toilet": "897768"
+    }
+  ]
+}
