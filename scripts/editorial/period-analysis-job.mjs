@@ -9,7 +9,8 @@ async function main(){if(process.env.GITHUB_REF!=='refs/heads/main'||process.env
  if(task.operation==='export'){
   const keys=await pair(),articles=await query('SELECT a.id,a.title,a.summary,a.body_text,(SELECT max(revision_no) FROM editorial__article_revisions WHERE article_id=a.id) AS revision FROM editorial__articles a ORDER BY a.source_id,a.source_position');
   const legalLinks=await query('SELECT article_id,anchor_id,act_id,lakikartta_match_status,is_current FROM editorial__article_lakikartta');
-  const value={articles,legalLinks,publicKey:keys.publicKey,session:seal({privateKey:keys.privateKey,expires:Date.now()+86400000},process.env.TURSO_AUTH_TOKEN)};
+  const supplements=await query('SELECT s.article_id,s.supplement_id,s.version,s.payload_json FROM editorial__article_evidence_supplements s WHERE s.rowid=(SELECT max(n.rowid) FROM editorial__article_evidence_supplements n WHERE n.article_id=s.article_id AND n.supplement_id=s.supplement_id)'),periods=await query('SELECT p.article_id,p.article_revision,p.periods_json FROM editorial__period_analyses p WHERE p.id=(SELECT max(n.id) FROM editorial__period_analyses n WHERE n.article_id=p.article_id)');
+  const value={articles,legalLinks,supplements,periods,publicKey:keys.publicKey,session:seal({privateKey:keys.privateKey,expires:Date.now()+86400000},process.env.TURSO_AUTH_TOKEN)};
   const content=Buffer.from(JSON.stringify(await encrypt(value,task.publicKey))).toString('base64');
   const r=await fetch('https://api.github.com/repos/'+repo+'/contents/responses/'+task.id+'.json',{method:'PUT',headers:{Authorization:'Bearer '+process.env.GITHUB_TOKEN,Accept:'application/vnd.github+json'},body:JSON.stringify({branch:'article-editor-responses',message:'Encrypted private analysis transfer',content})});if(!r.ok)throw Error('Encrypted export failed');console.log('PASS encrypted current-article export:',articles.length);
   }else if(task.operation==='evidence-quality-review'){
