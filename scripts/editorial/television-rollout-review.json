@@ -1,0 +1,45 @@
+{
+  "version": "television-rollout-review-2026-11-06-v1",
+  "sources": [
+    {
+      "id": "yle-tv-2017",
+      "url": "https://yle.fi/a/20-189207",
+      "sha256": "12dff1cdb9bf79ba71db4bce47e4fbd377b561ab3e71d828200170fe973a6997",
+      "bytes": 256837,
+      "checked_on": "2026-11-06",
+      "published_on": "2017-03-14",
+      "source_type": "retrospective_history_by_broadcaster"
+    },
+    {
+      "id": "yle-news-history-2009",
+      "url": "https://yle.fi/a/3-5863780",
+      "sha256": "be3d28a7d212183e382fb434270585973f2c6a0665e2826cf673c185423957c4",
+      "bytes": 234216,
+      "checked_on": "2026-11-06",
+      "published_on": "2009-08-17",
+      "source_type": "retrospective_history_by_broadcaster"
+    }
+  ],
+  "events": [
+    {
+      "year": 1958,
+      "source_id": "yle-tv-2017",
+      "description": "Ylen säännöllinen tv-ohjelmatoiminta käynnistyi tammikuussa; vuoden lopussa tv-lupia oli Ylen historiatiedotteen mukaan noin 7 800."
+    },
+    {
+      "year": 1959,
+      "source_id": "yle-news-history-2009",
+      "description": "Televisiouutiset aloittivat 1.9.1959. Lupia oli tuolloin vajaat 30 000, eikä näkyvyysalue vielä ulottunut Pohjois- tai Itä-Suomeen."
+    },
+    {
+      "year": 1968,
+      "source_id": "yle-tv-2017",
+      "description": "Ylen historiatiedote kuvaa jakeluverkon saavuttaneen lähes täydellisen peiton vuonna 1968. Tästä ei muodosteta tarkkaa väestö- tai kotitalousosuutta, koska tiedote ei määrittele peiton nimittäjää."
+    }
+  ],
+  "scope": "Finland; television distribution and licence milestones, not public opinion",
+  "annual_series": false,
+  "causal_effect_identified": false,
+  "independent_sources": false,
+  "limitations": "Both sources are by Yle. Licence counts, technical distribution, actual viewing and shared opinions are distinct. No exact coverage denominator, annual interpolation or causal media-effect estimate."
+}
