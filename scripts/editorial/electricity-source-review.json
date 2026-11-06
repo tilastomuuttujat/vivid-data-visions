@@ -1,0 +1,23 @@
+{
+  "version": "electricity-source-review-2026-11-06-v1",
+  "reference_sha256": "61ea2a9126992ea7df715da982c1f0949de9dfe9287e60f12a5c5037d85825e4",
+  "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/ehk/12sv.px",
+  "article_id": "fd926ccb-640f-50d6-8360-dfb9d41f95d4",
+  "period": [
+    1960,
+    1990
+  ],
+  "source_cells": 155,
+  "unit": "GWh",
+  "share_denominator": "total_electricity_consumption",
+  "zero_symbol": "-",
+  "missing_symbols": [
+    ".",
+    ".."
+  ],
+  "balance": "domestic_generation_plus_net_imports_equals_total_consumption_within_1_GWh_rounding",
+  "finding": "Sähkön kokonaiskulutus nousi vuoden 1960 8,8 TWh:sta vuoden 1990 62,3 TWh:iin eli 7,1-kertaiseksi. Vesivoiman osuus kokonaiskulutuksesta muuttui 59,3 prosentista 17,2 prosenttiin. Vuonna 1990 ydinvoiman osuus kokonaiskulutuksesta oli 29,1 % ja sähkön nettotuonnin 17,2 %. Vesivoiman tuotanto silti kasvoi 5,2 TWh:sta 10,8 TWh:iin: pienempi osuus ei tässä tarkoita pienempää tuotantomäärää.",
+  "limits": "Luvut koskevat sähköä, eivät kaikkea energiaa. Kaikkien esitettyjen tuotanto- ja nettotuontiosuuksien nimittäjä on sähkön kokonaiskulutus, ei kotimainen tuotanto. Nettotuonti on tuonnin ja viennin erotus, ei bruttotuonti eikä koko energiatalouden tuontiriippuvuus. GWh ja TWh mittaavat vuosienergiaa, eivät tehoa (MW), huipputunnin riittävyyttä, verkon peittävyyttä tai käyttäjien kustannuksia. Historiatiedot 1960–1969 perustuvat KTM:n julkaisuun Energiatilastot 1960–1975. Taulukon pien-CHP:n rajaus voi erottaa tiedot Energiateollisuus ry:n luvuista. Lähteen merkki ”-” tarkoittaa ei yhtään; puuttuvaa tietoa ei muuteta nollaksi. Vuosia ennen 1960 ei täydennetä tai interpoloida.",
+  "checked_on": "2026-11-06",
+  "causal_effect_identified": false
+}
