@@ -26,7 +26,7 @@
   const add=(r,priority,kind,claim,period,missing,action)=>gaps.push({article_id:r.article.id,title:r.article.title,priority,kind,claim,period,missing,action});
   for(const r of rows){
    for(const p of r.annotations){
-    const range=[p.start,p.end],linked=r.claims.filter(c=>c.current&&overlaps(c.period,range));
+    const range=[p.start,p.end],linked=r.claims.filter(c=>c.current&&overlaps(c.period,range)&&(c.period_linkage!=='exact_passage_only'||(normalized(c.article_passage).length>=30&&normalized(p.evidence).includes(normalized(c.article_passage)))));
     if(p.dating==='future_scenario')add(r,'P1','future_basis',p.evidence,range,'Skenaarion oletuksia ja virallista ennustepohjaa ei ole hyväksytty väitekohtaisesti.','Kytke väestö-, talous- tai ilmastoskenaario; kirjaa perusvuosi, oletukset ja epävarmuus.');
     else if(Number.isInteger(p.start)&&p.start<=1975&&linked.length===0)add(r,'P1','historical_gap',p.evidence,range,'Aikakausimerkintään ei osu nykyistä lähdetäydennystä. Tämä ei osoita kaiken lähdeaineiston puuttumista.','Tarkista historiallinen tilasto tai alkuperäisasiakirja; kirjaa käsitemuutokset ja ketjutuksen rajat.');
     else if(Number.isInteger(p.start)&&p.start<=1975&&!linked.some(c=>c.observationPeriods?.some(r=>overlaps(r,range)&&r[0]<=range[0]&&r[1]>=range[1])||qualitativeCovers(c,p,range)))add(r,'P1','historical_observation_scope',p.evidence,range,'Lähdeosuma on olemassa, mutta varmennettu havaintojakso ei kata koko väitteen aikaväliä tai sen kattavuus on vielä tarkistamatta.','Varmenna lähdekohtaiset vuodet ja se, kattaako näyttö väitteen ajallisen ja alueellisen laajuuden.');

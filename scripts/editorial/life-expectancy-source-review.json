@@ -1,0 +1,91 @@
+{
+  "version": "life-expectancy-period-review-2026-11-06-v1",
+  "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/kuol/12am.px",
+  "sha256": "245784a1ac1900ff5843965d904f428bd62d63b39a91034770eb0f8869bdc2ee",
+  "unit": "years",
+  "population": "Finland, men and women, period life expectancy at birth",
+  "periods": {
+    "1851": [
+      1851,
+      1860
+    ],
+    "1861": [
+      1861,
+      1870
+    ],
+    "1871": [
+      1871,
+      1880
+    ],
+    "1881": [
+      1881,
+      1890
+    ],
+    "1891": [
+      1891,
+      1900
+    ],
+    "1901": [
+      1901,
+      1910
+    ],
+    "1911": [
+      1911,
+      1920
+    ],
+    "1921": [
+      1921,
+      1930
+    ],
+    "1931": [
+      1931,
+      1940
+    ],
+    "1941": [
+      1941,
+      1945
+    ],
+    "1946": [
+      1946,
+      1950
+    ],
+    "1951": [
+      1951,
+      1955
+    ],
+    "1956": [
+      1956,
+      1960
+    ],
+    "1961": [
+      1961,
+      1965
+    ],
+    "1966": [
+      1966,
+      1970
+    ]
+  },
+  "annual_series": false,
+  "coverage_change_notes": {
+    "1911-1920": "Includes deaths due to war operations",
+    "1931-1940": "Excludes deaths due to war operations",
+    "1941-1945": "Excludes deaths due to war operations"
+  },
+  "benchmark_values": {
+    "1851:1": "33.39",
+    "1851:2": "36.83",
+    "1861:1": "30.70",
+    "1861:2": "33.49",
+    "1901:1": "45.31",
+    "1901:2": "48.18",
+    "1946:1": "58.42",
+    "1946:2": "65.84",
+    "1966:1": "65.90",
+    "1966:2": "73.66"
+  },
+  "finding": "Vastasyntyneen elinajanodote oli kaudella 1851–1860 miehillä 33,39 ja naisilla 36,83 vuotta. Kaudella 1861–1870 se laski 30,70 ja 33,49 vuoteen, joten pitkän aikavälin paraneminen ei ollut suoraviivaista. Kaudella 1901–1910 luvut olivat 45,31 ja 48,18 vuotta, vuosina 1946–1950 jo 58,42 ja 65,84 vuotta sekä vuosina 1966–1970 65,90 ja 73,66 vuotta. Naisten ja miesten ero kasvoi näiden päätejaksojen välillä 3,44 vuodesta 7,76 vuoteen. Luvut kuvaavat koko maan kausittaista kuolleisuutta, eivät toteutuneen syntymäkohortin elinikää.",
+  "limits": "Lähde käyttää vuoteen 1940 asti kymmenvuotiskausia ja vuosina 1941–1970 viisivuotiskausia. Jakson alkukoodi ei ole yksittäisen vuoden havainto; kausiarvoja ei monisteta vuosiarvoiksi. Vuosien 1911–1920 tiedot sisältävät sodassa kuolleet, mutta 1931–1940 ja 1941–1945 eivät; näitä jaksoja ei ketjuteta kattavuudeltaan samanlaisiksi. Elinajanodote on ikävakioitu kuolleisuuden tunnusluku, ei terveen elinajan, toimintakyvyn, hoivan laadun tai palvelujen kattavuuden mittari.",
+  "checked_on": "2026-11-06",
+  "source_notes_url": "https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__kuol/12am.px/"
+}

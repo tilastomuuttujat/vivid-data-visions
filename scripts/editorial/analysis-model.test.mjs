@@ -40,3 +40,10 @@ test('reviewed qualitative scope applies only to the exact report claim and neve
  data.periods[0].periods_json=JSON.stringify([{start:1937,end:1983,dating:'explicit',evidence:'A different claim about an intervention effect.'}]);gaps=globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data));assert.ok(gaps.some(g=>g.kind==='historical_observation_scope'));
  s.evidence_design.review_status='proposed';data.supplements[0].payload_json=JSON.stringify(s);gaps=globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data));assert.ok(gaps.some(g=>g.kind==='observation_years'));
 });
+test('passage-bound statistical context never clears a different historical claim',()=>{
+ const passage='Life expectancy describes period mortality rather than the quality of care.';
+ const s={id:'life',article_id:'a',article_revision:1,body_sha256:'h',article_passage:passage,period:[1851,1970],period_linkage:'exact_passage_only',claim_classification:{article_revision:1,body_sha256:'h',source_version:'v1',claim_type:'description',observation_periods:[[1851,1970]]}};
+ const data={supplements:[{article_id:'a',version:'v1',payload_json:JSON.stringify(s)}],periods:[{article_id:'a',article_revision:1,periods_json:JSON.stringify([{start:1964,end:1964,dating:'explicit',evidence:'Sickness insurance expanded economic protection.'}])}]};
+ assert.ok(globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data)).some(g=>g.kind==='historical_gap'));
+ data.periods[0].periods_json=JSON.stringify([{start:1851,end:1970,dating:'explicit',evidence:passage}]);assert.ok(!globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data)).some(g=>g.kind==='historical_gap'));
+});
