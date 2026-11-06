@@ -1,5 +1,5 @@
 import unittest,copy
-from population_foundation import references,facts,age,select,check_bundle,TABLES,VERSION,GROUPS
+from population_foundation import references,facts,age,select,check_bundle,TABLES,VERSION,BUNDLE_VERSION,GROUPS
 class PopulationTests(unittest.TestCase):
  @classmethod
  def setUpClass(cls):cls.r=references();cls.f=facts(cls.r)
@@ -27,7 +27,7 @@ class PopulationTests(unittest.TestCase):
    self.assertEqual(sum(select(self.r,'11ra',y,'vaerak-vaesto',**{key:c}) for c in codes),select(self.r,'12dx',y,'synt-vaesto'))
  def bundle(self):
   shared={'version':VERSION,'source_keys':TABLES,'source_digests':{t:self.r[t]['receipt']['sha256'] for t in TABLES},'facts':self.f}
-  return {'version':VERSION,'supplements':[dict(article_group=g,population_foundation=copy.deepcopy(shared),period_linkage='exact_passage_only',claim_classification={'observation_periods':[[1850,2025]],'claim_type':'mechanism_hypothesis'},forecast_period=[2026,2050],forecast_vintage=2024,causal_effect_identified=False) for g in GROUPS]}
+  return {'version':BUNDLE_VERSION,'supplements':[dict(article_revision=1,body_sha256='fixture',article_group=g,population_foundation=copy.deepcopy(shared),period_linkage='exact_passage_only',claim_classification={'observation_periods':[[1850,2025]],'claim_type':'mechanism_hypothesis','article_revision':1,'body_sha256':'fixture','source_version':BUNDLE_VERSION},forecast_period=[2026,2050],forecast_vintage=2024,causal_effect_identified=False) for g in GROUPS]}
  def test_reject_forecast_as_observation_and_changed_fact(self):
   b=self.bundle();check_bundle(b);b['supplements'][0]['claim_classification']['observation_periods']=[[1850,2050]]
   with self.assertRaises(ValueError):check_bundle(b)

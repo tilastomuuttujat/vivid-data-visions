@@ -7,6 +7,7 @@ from period_analysis import RecordRemote
 from article_evidence import apply,validate,verify
 ROOT=Path(__file__).with_name('sources')/'population-foundation'
 VERSION='population-foundation-2026-11-06-v1'
+BUNDLE_VERSION='article-population-links-2026-11-06-v2'
 TABLES=['12dx','12dt','11rc','11ra','128t']
 SCHEMA='''CREATE TABLE IF NOT EXISTS editorial__population_foundation(version TEXT NOT NULL,source_key TEXT NOT NULL,payload_json TEXT NOT NULL CHECK(json_valid(payload_json)),PRIMARY KEY(version,source_key))'''
 def source(tab):
@@ -58,10 +59,11 @@ def facts(refs=None):
 GROUPS={'work','education','care','social_security','regions','public_finance'}
 def check_bundle(b):
  r=references();f=facts(r)
- if b['version']!=VERSION or len(b['supplements'])!=6 or {s.get('article_group') for s in b['supplements']}!=GROUPS:raise ValueError('Six population article groups required')
+ if b['version']!=BUNDLE_VERSION or len(b['supplements'])!=6 or {s.get('article_group') for s in b['supplements']}!=GROUPS:raise ValueError('Six population article groups required')
  for s in b['supplements']:
   if s.get('population_foundation')!={'version':VERSION,'source_keys':TABLES,'source_digests':{t:r[t]['receipt']['sha256'] for t in TABLES},'facts':f}:raise ValueError('Shared population reference differs')
   c=s['claim_classification']
+  if any(c.get(k)!=v for k,v in [('article_revision',s['article_revision']),('body_sha256',s['body_sha256']),('source_version',b['version'])]):raise ValueError('Population classification source differs')
   if s.get('period_linkage')!='exact_passage_only' or c.get('observation_periods')!=[[1850,2025]] or s.get('forecast_period')!=[2026,2050] or s.get('forecast_vintage')!=2024:raise ValueError('Observation and forecast separation required')
   if c.get('claim_type')!='mechanism_hypothesis' or s.get('causal_effect_identified') is not False:raise ValueError('Demographic context is not causal identification')
 def apply_foundation(db,b):
