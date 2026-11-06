@@ -116,3 +116,25 @@ $("logout").onclick = () => disconnect();
 if ($("forget-device")) $("forget-device").onclick = () => disconnect(true);
 window.addEventListener("beforeunload", event => { if (dirty) { event.preventDefault(); event.returnValue = ""; } });
 (async () => { const button = $("login-form").querySelector("button"); button.disabled = true; try { csrf = (await api("/api/session")).csrf; await enter(); } catch (error) { if ($("login-error").textContent) $("login-error").textContent = error.message; } finally { button.disabled = false; } })();
+
+$("load-analysis").onclick = async () => {
+ const button=$("load-analysis"); button.disabled=true;
+ const target=$("analysis-view");target.replaceChildren();
+ const node=(tag,text)=>{const e=document.createElement(tag);e.textContent=text;return e;};
+ const text=v=>typeof v==='string'?v:JSON.stringify(v,null,2);
+ try {
+  const data=await api('/api/analysis'), rows=articleAnalysisModel.project(catalog,data);
+  $("analysis-state").textContent='Lukumäärät: A = artikkelin aikakausimerkintöjä, L = ajallisesti osuvia lähdetarkistettuja tulkintoja. L ei osoita vuosittaista tilastokattavuutta eikä vahvista koko väitettä. 0 = ei merkintää tässä kerroksessa; ei todiste ilmiön puuttumisesta.'+(data.missing?.length?' Osa analyysitauluista puuttuu.':'');
+  const table=document.createElement('table'),head=document.createElement('tr');head.append(node('th','Artikkeli'));
+  for(const p of articleAnalysisModel.periods)head.append(node('th',p.join('–')));head.append(node('th','Ajoittamatta'));const thead=document.createElement('thead');thead.append(head);table.append(thead);const tbody=document.createElement('tbody');
+  for(const row of rows){const tr=document.createElement('tr');tr.append(node('th',row.article.title));for(const c of row.cells)tr.append(node('td',`A ${c.mentions} · L ${c.supplements}`));tr.append(node('td',String(row.undated)));tbody.append(tr);}table.append(tbody);target.append(table);
+  target.append(node('h3','Väiterekisterin ensimmäinen kerros'));
+  target.append(node('p','Rekisteri näyttää tallennettujen täydennysten väiteankkurit, ei vielä kaikkia artikkelien väitteitä. Luokka: mekanismihypoteesi / lähdetarkistettu tulkinta. Mekanismien yhteinen luokitus ja väitteiden hyväksyntä odottavat toimituksellista tarkistusta.'));
+  for(const row of rows){const group=document.createElement('details');group.append(node('summary',`${row.article.title} · ${row.claims.length} täydennystä`));if(!row.claims.length)group.append(node('p','Ei täydennyksiä tässä kerroksessa.'));
+   for(const c of row.claims){const card=document.createElement('section');card.append(node('h4',c.id),node('p',`${c.current?'Nykyinen revisio':'VANHENTUNUT revisio – ei matriisissa'} · ${c.period?.join('–')||'Ajoittamatta'} · ${c.key}`),node('blockquote',c.article_passage));
+    for(const [label,value] of [['Tulkinta',c.addition_text],['Muutospaine',c.pressure],['Valinta ja toteutus',c.choice_and_implementation],['Näyttö',c.evidence],['Rajoitukset',c.limits],['Vaihtoehtoinen selitys',c.alternative_explanation],['Tutkimusaukko',c.research_gap]])card.append(node('h5',label),node('p',text(value)));
+    for(const source of c.sources||[]){const u=new URL(source.url);if(u.protocol!=='https:')continue;const a=node('a',source.title);a.href=u.href;a.target='_blank';a.rel='noopener noreferrer';card.append(a,node('p',`${source.publisher} · ${source.locator} · tarkistettu ${source.checked_on}`));}group.append(card);
+   }target.append(group);
+  }
+ }catch(error){$("analysis-state").textContent=error.message;}finally{button.disabled=false;}
+};

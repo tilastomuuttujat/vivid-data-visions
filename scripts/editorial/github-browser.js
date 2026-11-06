@@ -27,6 +27,7 @@
   if(path==='/api/logout'){if(data?.forget)forget();token='';keys=null;state=null;cache=null;return direct(path,data);}
   if(!token)return direct(path,data);
   if(!state||state.expires<Date.now())throw Error('GitHub-editori-istunto vanheni. Lataa oma tekstisi talteen ja avaa yhteys uudelleen.');
+  if(path==='/api/analysis'){if(!cache.analysis)throw Error('Avaa yhteys uudelleen ladataksesi analyysit.');return cache.analysis;}
   if(path==='/api/articles')return cache.catalog;
   const parts=path.split('/'),id=decodeURIComponent(parts[3]||'');
   if(parts.length===4&&data!==undefined){const reply=await request({operation:'save',path,data});cache=reply;return reply.saved;}

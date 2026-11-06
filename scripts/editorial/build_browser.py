@@ -14,7 +14,7 @@ def build():
     html=html.replace('<button id="logout"', '<button id="forget-device" type="button" hidden>Unohda tämä laite</button><button id="logout"')
     html=html.replace('>Kirjaudu</button>','>Avaa tietokanta</button>').replace('>Kirjaudu ulos</button>','>Katkaise yhteys</button>')
     html=html.replace('<meta name="viewport"', '<meta name="referrer" content="no-referrer"><meta name="viewport"')
-    scripts=[(ROOT/name).read_text().replace('</script','<\\/script') for name in ('turso-browser.js','github-browser.js','editor.js')]
+    scripts=[(ROOT/name).read_text().replace('</script','<\\/script') for name in ('turso-browser.js','github-browser.js','analysis-model.js','editor.js')]
     hashes=['\'sha256-'+base64.b64encode(hashlib.sha256(code.encode()).digest()).decode()+'\'' for code in scripts]
     policy="default-src 'none'; script-src "+' '.join(hashes)+"; style-src 'unsafe-inline'; connect-src https://*.turso.io https://api.github.com; img-src data:; base-uri 'none'; form-action 'none'"
     html=html.replace('<head>','<head><meta http-equiv="Content-Security-Policy" content="'+policy+'">',1)

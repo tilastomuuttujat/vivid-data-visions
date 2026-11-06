@@ -62,6 +62,13 @@
       if (path === "/api/session") throw new Error("Tunnistetta ei säilytetä sivun sulkemisen yli.");
       if (path === "/api/logout") { token = ""; endpoint = ""; return { ok: true }; }
       if (!token) throw new Error("Avaa ensin tietokanta.");
+      if (path === "/api/analysis") {
+        const tables = await query("SELECT name FROM sqlite_master WHERE type='table' AND name IN ('editorial__article_evidence_supplements','editorial__period_analyses')");
+        const names = tables.map(t => t.name);
+        const supplements = names.includes('editorial__article_evidence_supplements') ? await query("SELECT s.article_id,s.version,s.payload_json FROM editorial__article_evidence_supplements s WHERE s.rowid=(SELECT max(n.rowid) FROM editorial__article_evidence_supplements n WHERE n.article_id=s.article_id AND n.supplement_id=s.supplement_id)") : [];
+        const periods = names.includes('editorial__period_analyses') ? await query("SELECT p.article_id,p.article_revision,p.periods_json FROM editorial__period_analyses p WHERE p.id=(SELECT max(n.id) FROM editorial__period_analyses n WHERE n.article_id=p.article_id)") : [];
+        return {supplements,periods,missing: ['editorial__article_evidence_supplements','editorial__period_analyses'].filter(n=>!names.includes(n))};
+      }
       if (path === "/api/articles") return { articles: await query("SELECT id,source_position,title,summary,status,revision,updated_at FROM editorial__article_catalog ORDER BY source_id,source_position") };
       const parts = path.split("/"); const id = decodeURIComponent(parts[3] || "");
       if (parts[1] !== "api" || parts[2] !== "articles" || !id) throw new Error("Tuntematon pyyntö.");

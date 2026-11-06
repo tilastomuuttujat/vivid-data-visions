@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: '24'
       - name: Test encrypted protocol
-        run: node --test scripts/editorial/bridge-crypto.test.mjs
+        run: node --test scripts/editorial/bridge-crypto.test.mjs scripts/editorial/analysis-model.test.mjs
       - name: Handle encrypted request
         run: node scripts/editorial/actions-bridge.mjs
         env:

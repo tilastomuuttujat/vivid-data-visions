@@ -13,6 +13,9 @@ try {
   const article = await context.articleEditorTransport('/api/articles/' + articles[0].id);
   const history = await context.articleEditorTransport('/api/articles/' + articles[0].id + '/history');
   if (!article.body_text || article.revision !== history[0]?.revision_no) throw new Error();
+  const analysis = await context.articleEditorTransport('/api/analysis');
+  if (!Array.isArray(analysis.supplements) || !Array.isArray(analysis.periods) || analysis.missing.length) throw new Error();
+  console.log('PASS: Private analysis read:', analysis.supplements.length, 'supplements;', analysis.periods.length, 'period analyses; no writes.');
   await context.articleEditorTransport('/api/logout', {});
   console.log('PASS: Standalone HTML transport verified:', articles.length, 'articles; no writes.');
 } catch {

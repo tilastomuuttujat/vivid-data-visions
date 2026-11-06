@@ -44,6 +44,16 @@ class Library:
     def catalog(self):
         fields='id source_position title summary status revision updated_at'.split()
         return self.run(lambda db:[serialize(row,fields) for row in db.execute('SELECT '+','.join(fields)+' FROM editorial__article_catalog ORDER BY source_id,source_position')])
+    def analysis(self):
+        def read(db):
+            names={r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+            tables={'supplements':('editorial__article_evidence_supplements',['article_id','version','payload_json'],"s.rowid=(SELECT max(n.rowid) FROM editorial__article_evidence_supplements n WHERE n.article_id=s.article_id AND n.supplement_id=s.supplement_id)"),'periods':('editorial__period_analyses',['article_id','article_revision','periods_json'],"s.id=(SELECT max(n.id) FROM editorial__period_analyses n WHERE n.article_id=s.article_id)")}
+            result={'missing':[]}
+            for key,(table,fields,where) in tables.items():
+                result[key]=[serialize(r,fields) for r in db.execute('SELECT '+','.join('s.'+f for f in fields)+' FROM '+table+' s WHERE '+where)] if table in names else []
+                if table not in names:result['missing'].append(table)
+            return result
+        return self.run(read)
     def article(self,identity):
         def read(db):
             fields=['id']+FIELDS+['page_start','page_end','updated_at','revision']
@@ -113,7 +123,7 @@ class Handler(BaseHTTPRequestHandler):
         path=urlsplit(self.path).path
         if path=='/':return self.send(200,HTML.read_text(),html=True)
         if path=='/editor.js':
-            body=HTML.with_name('editor.js').read_bytes()
+            body=HTML.with_name('analysis-model.js').read_bytes()+b'\n'+HTML.with_name('editor.js').read_bytes()
             self.send_response(200)
             self.send_header('Content-Type','text/javascript; charset=utf-8')
             self.send_header('Content-Length',str(len(body)))
@@ -124,6 +134,7 @@ class Handler(BaseHTTPRequestHandler):
         if not session:return self.send(401,{'error':'Kirjaudu editoriin.'})
         try:
             if path=='/api/session':return self.send(200,{'csrf':session['csrf']})
+            if path=='/api/analysis':return self.send(200,self.server.library.analysis())
             if path=='/api/articles':return self.send(200,{'articles':self.server.library.catalog()})
             parts=path.strip('/').split('/')
             if len(parts)>=3 and parts[:2]==['api','articles']:
