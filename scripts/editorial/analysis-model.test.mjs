@@ -31,3 +31,12 @@ test('partial measured coverage never clears a broader historical claim gap',()=
  const rows=project([{id:'a',title:'A',revision:1}],{supplements:[{article_id:'a',version:'v1',payload_json:JSON.stringify(s)}],periods:[{article_id:'a',article_revision:1,periods_json:JSON.stringify([{start:1950,end:1980,dating:'explicit',evidence:'Broad historical claim'}])}]});
  assert.equal(rows[0].claims[0].type,'description');assert.ok(globalThis.articleAnalysisModel.audit(rows).some(g=>g.kind==='historical_observation_scope'));
 });
+test('reviewed qualitative scope applies only to the exact report claim and never invents annual observations',()=>{
+ const passage='The historical report concerns experiences of care over this interval.';
+ const s={id:'q',article_id:'a',article_revision:1,body_sha256:'h',article_passage:passage,period:[1937,1983],evidence_design:{kind:'retrospective_qualitative',review_status:'source_checked',role:'method_and_scope_verification',annual_series:false,population_prevalence_estimate:false,historical_scope:[1937,1983],fieldwork_start:'2014-08',fieldwork_end:'2016-02'},claim_classification:{article_revision:1,body_sha256:'h',source_version:'v1',claim_type:'description',observation_periods:null}};
+ const data={supplements:[{article_id:'a',version:'v1',payload_json:JSON.stringify(s)}],periods:[{article_id:'a',article_revision:1,periods_json:JSON.stringify([{start:1937,end:1983,dating:'explicit',evidence:passage}])}]};
+ let rows=project([{id:'a',title:'A',revision:1}],data),gaps=globalThis.articleAnalysisModel.audit(rows);
+ assert.equal(rows[0].claims[0].observationPeriods,null);assert.ok(!gaps.some(g=>g.kind==='observation_years'||g.kind==='historical_observation_scope'));
+ data.periods[0].periods_json=JSON.stringify([{start:1937,end:1983,dating:'explicit',evidence:'A different claim about an intervention effect.'}]);gaps=globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data));assert.ok(gaps.some(g=>g.kind==='historical_observation_scope'));
+ s.evidence_design.review_status='proposed';data.supplements[0].payload_json=JSON.stringify(s);gaps=globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data));assert.ok(gaps.some(g=>g.kind==='observation_years'));
+});

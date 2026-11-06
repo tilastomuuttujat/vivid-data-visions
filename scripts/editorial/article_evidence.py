@@ -1,5 +1,5 @@
 """Versioned article-specific pressure, implementation and evidence supplements."""
-import json,sys
+import json,sys,re
 from urllib.parse import urlparse
 from articles import canonical,digest
 from period_analysis import RecordRemote,norm
@@ -21,6 +21,15 @@ def validate(db,b):
         if any(not s.get(k) for k in ('pressure','choice_and_implementation','evidence','limits','addition_text','research_gap','alternative_explanation')):raise ValueError('Incomplete explanation chain')
         if s.get('causal_effect_identified') is not False:raise ValueError('Causal identification not established')
         if s.get('status')!='source_checked_interpretation':raise ValueError('Unsupported review status')
+        if 'evidence_design' in s:
+            d=s['evidence_design']
+            if not isinstance(d,dict):raise ValueError('Invalid qualitative design')
+            if type(d.get('reported_participants')) is not int or d['reported_participants']<1 or not d.get('sampling'):raise ValueError('Participant scope required')
+            months=[d.get('fieldwork_start',''),d.get('fieldwork_end','')];scope=d.get('historical_scope')
+            if d.get('kind')!='retrospective_qualitative' or d.get('review_status')!='source_checked' or d.get('role')!='method_and_scope_verification' or d.get('annual_series') is not False or d.get('population_prevalence_estimate') is not False:raise ValueError('Invalid qualitative design')
+            if not isinstance(scope,list) or len(scope)!=2 or any(type(y) is not int for y in scope) or scope[0]>scope[1] or s['period']!=scope:raise ValueError('Invalid historical scope')
+            if not all(isinstance(m,str) and re.fullmatch(r'\d{4}-(0[1-9]|1[0-2])',m) for m in months) or months[0]>months[1]:raise ValueError('Fieldwork period required')
+            if s.get('claim_classification',{}).get('observation_periods') is not None:raise ValueError('Qualitative scope is not an annual observation interval')
         ids={x['id'] for x in s['sources']}
         if len(ids)!=len(s['sources']):raise ValueError('Duplicate source')
         for x in s['sources']:

@@ -18,4 +18,13 @@ class Tests(unittest.TestCase):
  def test_unknown_source_rejected(self):
   b=self.bundle();b['supplements'][0]['evidence'][0]['source_id']='absent'
   with self.assertRaises(ValueError):apply(Local(),b)
+ def qualitative(self):
+  b=self.bundle();s=b['supplements'][0];s['period']=[1937,1983];s['claim_classification']={'observation_periods':None};s['evidence_design']=dict(kind='retrospective_qualitative',review_status='source_checked',role='method_and_scope_verification',annual_series=False,population_prevalence_estimate=False,historical_scope=[1937,1983],fieldwork_start='2014-08',fieldwork_end='2016-02',reported_participants=299,sampling='voluntary_self_recruited');return b
+ def test_qualitative_scope_separates_fieldwork_from_historical_period(self):
+  b=self.qualitative();db=Local();apply(db,b);verify(db,b)
+  for k,v in [('annual_series',True),('fieldwork_start','1937'),('historical_scope',[1983,1937]),('reported_participants',0)]:
+   bad=self.qualitative();bad['supplements'][0]['evidence_design'][k]=v
+   with self.assertRaises(ValueError):apply(Local(),bad)
+  bad=self.qualitative();bad['supplements'][0]['claim_classification']['observation_periods']=[[1937,1983]]
+  with self.assertRaises(ValueError):apply(Local(),bad)
 if __name__=='__main__':unittest.main()

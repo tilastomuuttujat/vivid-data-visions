@@ -1,0 +1,37 @@
+{
+  "review_version": "childcare-history-method-review-2026-11-06-v1",
+  "report": {
+    "title": "STM 2016:22 – sijaishuollon historiaselvitys",
+    "url": "https://julkaisut.valtioneuvosto.fi/bitstream/handle/10024/74821/Rap_2016_22.pdf",
+    "sha256": "7ef62a6077ce43fb05907c0ceff818442495de1652b25012810939ffc28a1418",
+    "bytes": 2286666,
+    "reviewed_pages": [
+      17,
+      23,
+      174,
+      175
+    ],
+    "checked_on": "2026-11-06"
+  },
+  "design": {
+    "kind": "retrospective_qualitative",
+    "review_status": "source_checked",
+    "role": "method_and_scope_verification",
+    "historical_scope": [
+      1937,
+      1983
+    ],
+    "fieldwork_start": "2014-08",
+    "fieldwork_end": "2016-02",
+    "reported_participants": 299,
+    "sampling": "voluntary_self_recruited",
+    "annual_series": false,
+    "population_prevalence_estimate": false
+  },
+  "follow_up": {
+    "date": "2016-11-20",
+    "event": "Valtiollinen anteeksipyyntö",
+    "url": "https://valtioneuvosto.fi/-/1271139/lastensuojelun-sijaishuollossa-kaltoin-kohdelluilta-pyydettiin-anteeksi",
+    "verification": "Ministeriön tiedote vahvistaa anteeksipyynnön; se ei ole toimien vaikuttavuusarvio."
+  }
+}
