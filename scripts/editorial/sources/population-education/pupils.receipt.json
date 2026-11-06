@@ -1,0 +1,90 @@
+{
+  "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/opiskt/133w.px",
+  "query": {
+    "query": [
+      {
+        "code": "alue_23_20250101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS"
+          ]
+        }
+      },
+      {
+        "code": "kieli_15_20180102",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS"
+          ]
+        }
+      },
+      {
+        "code": "vluokka_2_20180101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09"
+          ]
+        }
+      },
+      {
+        "code": "sukupuoli_9_20180101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS"
+          ]
+        }
+      },
+      {
+        "code": "oppilaittostyyp_6_20180101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS"
+          ]
+        }
+      },
+      {
+        "code": "timeperiod_y",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025"
+          ]
+        }
+      },
+      {
+        "code": "contentscode",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "oppil_lkm1"
+          ]
+        }
+      }
+    ],
+    "response": {
+      "format": "json"
+    }
+  },
+  "retrieved_at": "2026-11-06T19:53:22.696908+00:00",
+  "sha256": "765975450a0ba4a26f225e006e21d844d41ca9d802fde61e2172889d9cd4f836",
+  "metadata_sha256": "c1688fe0a4df5bd82196c6779b6836f2404d4b3e7c62beb9dc2e32b169f0afe4",
+  "cells": 54
+}

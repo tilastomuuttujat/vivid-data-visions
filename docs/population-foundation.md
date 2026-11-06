@@ -44,3 +44,5 @@ Väestöpohja ei vielä ole väestönmuutoksen syiden analyysi tai valmis skenaa
 Tarkistukset: `python -m unittest discover -s scripts/editorial -p 'test_population_foundation.py'`. Tuonnin jälkeen avataan uusi tietokantayhteys ja verrataan sekä viittä lähdekuvaa että kuutta täydennystä; artikkelien revisiot ja tekstitiivisteet tarkistetaan.
 
 Ensimmäinen jatkokytkentä on [väestöstä työllisyyteen ja tehtyyn työpanokseen](population-work.md): kaksi jo Atlasissa olevaa aineistoa tarkistetaan alkuperäislähteistä ja liitetään työn sekä julkisen talouden artikkeleihin. Se erottaa rekisterityöllisyyden, ikärakennevertailun ja vuotuiset työtunnit.
+
+Toinen jatkokytkentä käsittelee [koulutuksen väestöpohjaa ja toteutuneita oppilasmääriä](population-education.md): kansallinen 7–15-vuotiaiden sarja, kaikkien kuntien päätevertailu sekä vuosiluokkien 1–9 oppilaat erotetaan koulutuksen osallistumisesta, kapasiteetista ja vaikutuksista.
