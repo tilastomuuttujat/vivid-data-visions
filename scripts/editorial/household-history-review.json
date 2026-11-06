@@ -1,0 +1,18 @@
+{
+  "version": "household-history-review-2026-11-06-v1",
+  "reference_sha256": "a7fcae070164f89182db0ec9125605ba25da3972defe7730fe1ec6c1e9e3367e",
+  "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin_Passiivi/asas/statfinpas_asas_pxt_116a_2024.px",
+  "period": [
+    1985,
+    2024
+  ],
+  "source_cells": 320,
+  "unit": "household_dwelling_units",
+  "share_denominator": "total_household_dwelling_units",
+  "last_size_group": "7_or_more_persons",
+  "validation": "seven exclusive size groups sum exactly to the published total in every year",
+  "finding": "Yhden henkilön asuntokuntia oli vuonna 1985 532 094, vuonna 2000 856 746 ja vuonna 2024 1 336 181. Niiden osuus kaikista asuntokunnista nousi vastaavasti 28,2 prosentista 37,3 prosenttiin ja 46,7 prosenttiin. Vähintään kolmen henkilön asuntokuntien osuus pieneni vuoden 1985 44,5 prosentista vuoden 2024 21,4 prosenttiin. Nimittäjä on asuntokuntien lukumäärä, ei henkilöiden määrä.",
+  "limits": "Asuntokunta tarkoittaa samaan asuntoon vakinaisesti rekisteröityjä henkilöitä. Luokat ovat asuntokuntia, eivät perheitä tai kaikkia kotitalouksia, ja nimittäjänä on asuntokuntien määrä. Yhden henkilön asuntokunnan lukumäärä vastaa siinä asuvan yhden henkilön määrää, mutta osuus kaikista asuntokunnista ei ole osuus väestöstä. Laitoksissa vakinaisesti asuvat ja asunnottomat jäävät asuntokuntamääritelmän ulkopuolelle. Yksinasuminen ei mittaa yksinäisyyttä, kuulumista, tuen saatavuutta tai muuton vaikutusta. Aikasarja ei seuraa samoja ihmisiä. Vähintään seitsemän henkilön luokasta ei voi laskea täsmällistä henkilömäärää tai asuntokuntien keskikokoa. Tässä käytetään koko maan ja kaikkien talotyyppien yhteismäärää; alue- ja talotyyppijakaumia ei päätellä siitä. Arkistosarja päättyy vuoteen 2024 eikä sitä ketjuteta automaattisesti uudemman tilaston lukuihin.",
+  "checked_on": "2026-11-06",
+  "causal_effect_identified": false
+}
