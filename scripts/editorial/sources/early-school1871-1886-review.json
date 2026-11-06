@@ -1,0 +1,76 @@
+{
+  "version": "early-school1871-1886-original-review-2026-11-06-v1",
+  "title": "Alamainen kertomus Suomen kansakoulu-toimen kehittymisestä lukuvuosina 1865–1886",
+  "publisher": "Koulutoimen Ylihallitus",
+  "publication_year": 1887,
+  "url": "https://otos.stat.fi/server/api/core/bitstreams/f3018f06-ee99-4ce2-b211-562030770aad/content",
+  "pdf_sha256": "66a304d4680c70d17cb08c4ab8a194ead25d097dfa65a86b2f924d9a0ebc6b4d",
+  "item_url": "https://otos.stat.fi/items/adb0da39-83d0-4277-9883-4e459eb652da",
+  "checked_on": "2026-11-06",
+  "method": "Transcribed selected school-year rows, visually verified on PDF pages 13 and 21 (printed pages 14 and 24); source scope notes printed pp.14–15 and 20; model courses pp.55 and 65.",
+  "rows": [
+    {
+      "period": "1871-1872",
+      "start": 1871,
+      "end": 1872,
+      "group_key": "historical_urban",
+      "boys": 958,
+      "girls": 1040,
+      "total": 1998
+    },
+    {
+      "period": "1871-1872",
+      "start": 1871,
+      "end": 1872,
+      "group_key": "historical_rural",
+      "boys": 3751,
+      "girls": 2380,
+      "total": 6131
+    },
+    {
+      "period": "1875-1876",
+      "start": 1875,
+      "end": 1876,
+      "group_key": "historical_urban",
+      "boys": 3297,
+      "girls": 3186,
+      "total": 6483
+    },
+    {
+      "period": "1875-1876",
+      "start": 1875,
+      "end": 1876,
+      "group_key": "historical_rural",
+      "boys": 6667,
+      "girls": 4754,
+      "total": 11421
+    },
+    {
+      "period": "1885-1886",
+      "start": 1885,
+      "end": 1886,
+      "group_key": "historical_urban",
+      "boys": 7250,
+      "girls": 7001,
+      "total": 14251
+    },
+    {
+      "period": "1885-1886",
+      "start": 1885,
+      "end": 1886,
+      "group_key": "historical_rural",
+      "boys": 14136,
+      "girls": 10169,
+      "total": 24305
+    }
+  ],
+  "unit": "reported_pupils_by_school_year",
+  "annual_calendar_series": false,
+  "source_quality": {
+    "urban_seminary_model_schools_excluded": true,
+    "urban_vyborg_russian_parish_schools_not_reported": true,
+    "some_early_rural_schools_without_state_aid_missing": true,
+    "population_school_age_denominator_available": false
+  },
+  "curriculum_scope": "Model-course expectations documented in the report; not evidence of actual classroom delivery or effects."
+}
