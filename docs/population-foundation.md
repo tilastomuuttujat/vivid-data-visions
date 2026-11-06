@@ -52,3 +52,18 @@ Kolmas jatkokytkentä koskee [hoivan väestöpohjaa ja toteutunutta kotihoitoa](
 Neljäs jatkokytkentä käsittelee [sosiaaliturvan väestöpohjaa perustoimeentulotuen kautta](population-security.md): vuosien 2024–2025 ikä-, sukupuoli- ja kotitalousluvut kytketään kahteen artikkeliin. Käyttöä ei samasteta tarpeeseen tai etuusoikeuteen, eikä koko Suomen väestöpohjasta lasketa tarkistamattomia saamisasteita.
 
 Viides jatkokytkentä käsittelee [alueiden väestötaseita](population-regions.md): syntyneet, kuolleet, kotimainen nettomuutto, nettomaahanmuutto ja korjauserä erotellaan 19 maakunnalle vuosina 1990–2025 virallisella vuoden 2026 luokitusavaimella. Väestötase ei yksin selitä muuttamisen motiiveja tai koettua kuulumista.
+
+Kuudes jatkokytkentä käsittelee [julkisyhteisöjen tehtävämenoja ja väestöpohjaa](population-fiscal.md): nimellismenot, saman lähdeversion BKT-osuudet ja ikärakenne erotetaan. Tarkat tehtävät alkavat 2001, vuosi 2024 on ennakkotieto; reaalisia kustannuksia, demografista vaikutusta tai kestävyysvajetta ei arvioida tästä yksin.
+
+## Kuuden artikkeliryhmän ensimmäisen väestökierroksen yhteenveto
+
+| Ryhmä | Nyt kytketty määrällinen perusta | Keskeinen avoin kysymys |
+|---|---|---|
+| Työ | Rekisterityöllisyys, ikärakennevertailu ja vuotuiset työtunnit | Työkyky, työajan ja toimialojen vaikutukset |
+| Koulutus | Kouluikäiset, kuntien jakauma ja toteutuneet vuosiluokat | Saavutettavuus, henkilöstö, kapasiteetti ja oppimistulokset |
+| Hoiva | Vanhimmat ikäryhmät, erillinen ennuste ja kotihoidon käyttö | Toimintakyky, riittävyys ja läheisten työ |
+| Sosiaaliturva | Perustoimeentulotuen ikä- ja kotitalousjakauma | Yhteensopivat nimittäjät, oikeutetut, siirtymät ja alikäyttö |
+| Alueet | Luonnollinen muutos, kotimainen ja kansainvälinen muuttoliike | Muuttamisen motiivit ja alueiden ikä-/osaamisrakenne |
+| Julkinen talous | Sulautetut tehtävämenot ja niiden jakauma | Hinnat ja määrät, etuustaso, tulot ja vaikutukset |
+
+Tämä on ensimmäinen yhteinen evidenssikerros. Se ei tarkoita kaikkien ryhmiin kuuluvien artikkelien tai ajanjaksojen valmistumista. Pienet lähdetäydennykset eivät sulje laajoja tutkimusaukkoja eivätkä muuta mekanismihypoteeseja kausaalisiksi tuloksiksi.

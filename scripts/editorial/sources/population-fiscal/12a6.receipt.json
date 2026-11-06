@@ -1,0 +1,120 @@
+{
+  "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/jmete/12a6.px",
+  "query": {
+    "query": [
+      {
+        "code": "sektoriluokitus_7_20230101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "S13"
+          ]
+        }
+      },
+      {
+        "code": "taloustoimi_1_20180101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "OTES"
+          ]
+        }
+      },
+      {
+        "code": "julkisyht_teht_3_20010101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS",
+            "G01",
+            "G02",
+            "G03",
+            "G04",
+            "G05",
+            "G06",
+            "G07",
+            "G08",
+            "G09",
+            "G10",
+            "G1001",
+            "G1002",
+            "G1003",
+            "G1004",
+            "G1005",
+            "G1006",
+            "G1007",
+            "G1008",
+            "G1009"
+          ]
+        }
+      },
+      {
+        "code": "timeperiod_y",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ]
+        }
+      },
+      {
+        "code": "contentscode",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "jmete-cp",
+            "jmete-bkt_suhde",
+            "percapita"
+          ]
+        }
+      }
+    ],
+    "response": {
+      "format": "json"
+    }
+  },
+  "retrieved_at": "2026-11-06T20:21:51.974666+00:00",
+  "sha256": "c01faf291da06321f83f6c3e5add9cec48d2e80f220222cf1da6099578802877",
+  "metadata_sha256": "66e426d4d6c014a5010202700fb4cb12e05cbaf77f866033fc36f2e9f4e8bbb6",
+  "cells": 2100,
+  "provisional_years": [
+    2024
+  ],
+  "detailed_functions_start": 2001,
+  "sector": "S13",
+  "transaction": "OTES"
+}
