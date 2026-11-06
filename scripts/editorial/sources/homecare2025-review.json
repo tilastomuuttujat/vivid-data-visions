@@ -1,0 +1,38 @@
+{
+  "url": "https://www.julkari.fi/server/api/core/bitstreams/d4be92c3-6048-48ca-a65d-48c7ce99c941/content",
+  "sha256": "3babd94d1868787ac1fe042745f4a0a3e7a30416bf4461391378e8db4e69d8e1",
+  "year": 2025,
+  "publication_date": "2026-09-30",
+  "publisher": "THL",
+  "title": "Kotihoidon käynnit ja asiakkaat 2025",
+  "publication": "Tilastoraportti 31/2026",
+  "checked_on": "2026-11-06",
+  "fulltext_checked": true,
+  "visually_checked_pages": [
+    1,
+    2,
+    20
+  ],
+  "all_clients": 163055,
+  "regular_clients": 110479,
+  "regular_clients_75plus_rounded": 88000,
+  "coverage_75plus_published_percent": 13,
+  "coverage_85plus_published_percent": 29,
+  "regular_clients_change_from_2024_same_report": 2253,
+  "inspection_scope": "Pages 1–2: counts, age-specific coverage, definitions. Page 20: reporting completeness limitations. Not a digitisation of annual chart values or all regional tables.",
+  "definition": "Annual client: at least one home visit during the year. Regular client: home visits on at least six days within 60 days during the year.",
+  "scope": "Publicly organised homecare, home nursing and included home-service records; excludes privately organised homecare.",
+  "quality_limits": [
+    "More comprehensive purchased-service reporting contributes to the observed increase. Purchased-service visits remain incompletely reported in almost all wellbeing-services counties.",
+    "Åland data are partly incomplete due to an information-system change.",
+    "Two simultaneous nurses at a visit now count as one visit; visit counts are not staff working hours."
+  ],
+  "internal_published_share_discrepancy": "Regular share of all clients is 67% on page 1 and 68% on page 2. Neither share is used in this supplement; use exact counts and the separately published age-specific coverage.",
+  "historical_comparison": "No direct comparison to the unrevised 2024 report; any change uses the 2025 report own comparison.",
+  "not_estimated": [
+    "Unmet need",
+    "Unpaid care hours",
+    "Causal policy effect",
+    "Future client counts"
+  ]
+}

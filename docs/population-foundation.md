@@ -46,3 +46,5 @@ Tarkistukset: `python -m unittest discover -s scripts/editorial -p 'test_populat
 Ensimmäinen jatkokytkentä on [väestöstä työllisyyteen ja tehtyyn työpanokseen](population-work.md): kaksi jo Atlasissa olevaa aineistoa tarkistetaan alkuperäislähteistä ja liitetään työn sekä julkisen talouden artikkeleihin. Se erottaa rekisterityöllisyyden, ikärakennevertailun ja vuotuiset työtunnit.
 
 Toinen jatkokytkentä käsittelee [koulutuksen väestöpohjaa ja toteutuneita oppilasmääriä](population-education.md): kansallinen 7–15-vuotiaiden sarja, kaikkien kuntien päätevertailu sekä vuosiluokkien 1–9 oppilaat erotetaan koulutuksen osallistumisesta, kapasiteetista ja vaikutuksista.
+
+Kolmas jatkokytkentä koskee [hoivan väestöpohjaa ja toteutunutta kotihoitoa](population-care.md): 75–84- ja 85 vuotta täyttäneiden kehitys, erillinen vuoden 2024 ennuste ja vuoden 2025 kotihoitoraportin lähdetarkistus. Väestömäärä, palvelukäyttö, hoivan tarve ja läheisten työ säilyvät eri käsitteinä.
