@@ -1,0 +1,208 @@
+{
+  "year": 2025,
+  "url": "https://tilastojulkaisut.tietotarjotin.fi/perustoimeentulotuki/2025/",
+  "retrieved_at": "2026-11-06T20:07:54.399477+00:00",
+  "original_html_sha256": "b8a200653c08a30005d6df915654c8f77bc2d818893eb088ce7c861803f1de88",
+  "locators": [
+    "Katsaus 3.4, sukupuolen ja iän mukainen kuvion taulukko",
+    "Taulukko 2, saajakotitaloudet kotitaloustyypeittäin, Koko maa"
+  ],
+  "age_by_sex": [
+    {
+      "sex": "Miehet",
+      "age": "0–4",
+      "recipients": 11007
+    },
+    {
+      "sex": "Naiset",
+      "age": "0–4",
+      "recipients": 10627
+    },
+    {
+      "sex": "Miehet",
+      "age": "5–9",
+      "recipients": 12588
+    },
+    {
+      "sex": "Naiset",
+      "age": "5–9",
+      "recipients": 11891
+    },
+    {
+      "sex": "Miehet",
+      "age": "10–14",
+      "recipients": 12804
+    },
+    {
+      "sex": "Naiset",
+      "age": "10–14",
+      "recipients": 12335
+    },
+    {
+      "sex": "Miehet",
+      "age": "15–19",
+      "recipients": 15714
+    },
+    {
+      "sex": "Naiset",
+      "age": "15–19",
+      "recipients": 15410
+    },
+    {
+      "sex": "Miehet",
+      "age": "20–24",
+      "recipients": 22125
+    },
+    {
+      "sex": "Naiset",
+      "age": "20–24",
+      "recipients": 20466
+    },
+    {
+      "sex": "Miehet",
+      "age": "25–29",
+      "recipients": 20378
+    },
+    {
+      "sex": "Naiset",
+      "age": "25–29",
+      "recipients": 16712
+    },
+    {
+      "sex": "Miehet",
+      "age": "30–34",
+      "recipients": 18847
+    },
+    {
+      "sex": "Naiset",
+      "age": "30–34",
+      "recipients": 15845
+    },
+    {
+      "sex": "Miehet",
+      "age": "35–39",
+      "recipients": 16686
+    },
+    {
+      "sex": "Naiset",
+      "age": "35–39",
+      "recipients": 14796
+    },
+    {
+      "sex": "Miehet",
+      "age": "40–44",
+      "recipients": 14787
+    },
+    {
+      "sex": "Naiset",
+      "age": "40–44",
+      "recipients": 13133
+    },
+    {
+      "sex": "Miehet",
+      "age": "45–49",
+      "recipients": 12192
+    },
+    {
+      "sex": "Naiset",
+      "age": "45–49",
+      "recipients": 10281
+    },
+    {
+      "sex": "Miehet",
+      "age": "50–54",
+      "recipients": 10225
+    },
+    {
+      "sex": "Naiset",
+      "age": "50–54",
+      "recipients": 8292
+    },
+    {
+      "sex": "Miehet",
+      "age": "55–59",
+      "recipients": 10311
+    },
+    {
+      "sex": "Naiset",
+      "age": "55–59",
+      "recipients": 8012
+    },
+    {
+      "sex": "Miehet",
+      "age": "60–64",
+      "recipients": 8160
+    },
+    {
+      "sex": "Naiset",
+      "age": "60–64",
+      "recipients": 6896
+    },
+    {
+      "sex": "Miehet",
+      "age": "65–69",
+      "recipients": 2934
+    },
+    {
+      "sex": "Naiset",
+      "age": "65–69",
+      "recipients": 2889
+    },
+    {
+      "sex": "Miehet",
+      "age": "70–74",
+      "recipients": 1590
+    },
+    {
+      "sex": "Naiset",
+      "age": "70–74",
+      "recipients": 2150
+    },
+    {
+      "sex": "Miehet",
+      "age": "75–79",
+      "recipients": 1112
+    },
+    {
+      "sex": "Naiset",
+      "age": "75–79",
+      "recipients": 1579
+    },
+    {
+      "sex": "Miehet",
+      "age": "80–84",
+      "recipients": 398
+    },
+    {
+      "sex": "Naiset",
+      "age": "80–84",
+      "recipients": 741
+    },
+    {
+      "sex": "Miehet",
+      "age": "85–",
+      "recipients": 272
+    },
+    {
+      "sex": "Naiset",
+      "age": "85–",
+      "recipients": 844
+    }
+  ],
+  "household_columns": [
+    "Kaikki saajakotitaloudet",
+    "Yksin asuvat",
+    "Muut yhden hengen kotitaloudet",
+    "Lapsettomat parit",
+    "Kahden huoltajan perheet",
+    "Yksinhuoltajaperheet"
+  ],
+  "household_national": [
+    256916,
+    159324,
+    38793,
+    12379,
+    18125,
+    28295
+  ]
+}

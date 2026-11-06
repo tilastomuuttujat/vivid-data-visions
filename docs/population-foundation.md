@@ -48,3 +48,5 @@ Ensimmäinen jatkokytkentä on [väestöstä työllisyyteen ja tehtyyn työpanok
 Toinen jatkokytkentä käsittelee [koulutuksen väestöpohjaa ja toteutuneita oppilasmääriä](population-education.md): kansallinen 7–15-vuotiaiden sarja, kaikkien kuntien päätevertailu sekä vuosiluokkien 1–9 oppilaat erotetaan koulutuksen osallistumisesta, kapasiteetista ja vaikutuksista.
 
 Kolmas jatkokytkentä koskee [hoivan väestöpohjaa ja toteutunutta kotihoitoa](population-care.md): 75–84- ja 85 vuotta täyttäneiden kehitys, erillinen vuoden 2024 ennuste ja vuoden 2025 kotihoitoraportin lähdetarkistus. Väestömäärä, palvelukäyttö, hoivan tarve ja läheisten työ säilyvät eri käsitteinä.
+
+Neljäs jatkokytkentä käsittelee [sosiaaliturvan väestöpohjaa perustoimeentulotuen kautta](population-security.md): vuosien 2024–2025 ikä-, sukupuoli- ja kotitalousluvut kytketään kahteen artikkeliin. Käyttöä ei samasteta tarpeeseen tai etuusoikeuteen, eikä koko Suomen väestöpohjasta lasketa tarkistamattomia saamisasteita.
