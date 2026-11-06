@@ -1,0 +1,120 @@
+{
+  "url": "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tyokay/115w.px",
+  "query": {
+    "query": [
+      {
+        "code": "alue_28_20250101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS"
+          ]
+        }
+      },
+      {
+        "code": "paaasial_toimin_3_20180101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS",
+            "11"
+          ]
+        }
+      },
+      {
+        "code": "ikaryhma_10_20180101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS",
+            "0-17",
+            "18-24",
+            "25-29",
+            "30-34",
+            "35-39",
+            "40-44",
+            "45-49",
+            "50-54",
+            "55-59",
+            "60-64",
+            "65-69",
+            "70-74",
+            "75-"
+          ]
+        }
+      },
+      {
+        "code": "sukupuoli_9_20180101",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "SSS"
+          ]
+        }
+      },
+      {
+        "code": "timeperiod_y",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "1987",
+            "1988",
+            "1989",
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ]
+        }
+      },
+      {
+        "code": "contentscode",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "tyokay-vaesto"
+          ]
+        }
+      }
+    ],
+    "response": {
+      "format": "json-stat2"
+    }
+  },
+  "retrieved_at": "2026-11-06T19:47:02.552397+00:00",
+  "sha256": "5c39ef019b69c27f2cf3fd26b25b2a87d0953e4980ccd58e912f6bdcd8872e60",
+  "existing_atlas_path": "src/components/kokonaiskuva/employment-age-data.json",
+  "existing_atlas_sha256": "de20bd35544c0a70969259a2e38b090041f18c558e9cd6944d889284d3ea495e",
+  "original_query_response_sha256": "5c39ef019b69c27f2cf3fd26b25b2a87d0953e4980ccd58e912f6bdcd8872e60"
+}

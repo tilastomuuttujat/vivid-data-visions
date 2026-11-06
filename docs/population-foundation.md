@@ -42,3 +42,5 @@ Menetelmä: [Tilastokeskus, väestöennusteen dokumentaatio](https://stat.fi/fi/
 Väestöpohja ei vielä ole väestönmuutoksen syiden analyysi tai valmis skenaarioperhe. Seuraavat liitokset vaativat omat lähteensä: työkyky ja tehdyt tunnit; kouluikäiset ja koulutuspaikat; 75-/85-vuotiaiden toimintakyky ja palvelut; etuuksien alikäyttö; ikä- ja koulutuskohtainen alueellinen muuttoliike; ikäryhmittäiset verot ja menot. Historiallisia aluerajoja ei ole harmonisoitu nyky-Suomeen. Kansallinen 1850–2050 akseli ei tarkoita jokaisen muuttujan yhtä pitkää vertailukelpoista sarjaa.
 
 Tarkistukset: `python -m unittest discover -s scripts/editorial -p 'test_population_foundation.py'`. Tuonnin jälkeen avataan uusi tietokantayhteys ja verrataan sekä viittä lähdekuvaa että kuutta täydennystä; artikkelien revisiot ja tekstitiivisteet tarkistetaan.
+
+Ensimmäinen jatkokytkentä on [väestöstä työllisyyteen ja tehtyyn työpanokseen](population-work.md): kaksi jo Atlasissa olevaa aineistoa tarkistetaan alkuperäislähteistä ja liitetään työn sekä julkisen talouden artikkeleihin. Se erottaa rekisterityöllisyyden, ikärakennevertailun ja vuotuiset työtunnit.
