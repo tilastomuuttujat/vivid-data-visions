@@ -1,4 +1,4 @@
-<!doctype html><html lang="fi"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-HFqQYnCcJvhYZc8T8sar4M8vnoSPp/gzx6lPYfeJT+U=' 'sha256-KFG0Sc7d/4+Hjn3jQJIDmxR2ZjeXEfURHC4DGZ7MeZI=' 'sha256-wslC3C0LrH8JrDuNnlptueCu9Z07NK0iMjr9RyqmBc0=' 'sha256-9mHE3txCpOKoHqr3h+lomY1Uop4qtfUPtJCLWSYKUm8='; style-src 'unsafe-inline'; connect-src https://*.turso.io https://api.github.com; img-src data:; base-uri 'none'; form-action 'none'"><meta charset="utf-8"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Atlas · Artikkelieditori</title><style>
+<!doctype html><html lang="fi"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-O7j2t8EidR8oXTCmh1xQkV6EBx8ciWFqNqmfwQW0QdU=' 'sha256-KFG0Sc7d/4+Hjn3jQJIDmxR2ZjeXEfURHC4DGZ7MeZI=' 'sha256-t7xQmjcF2yggaEfeIUH1WMA6LsUN6jrEuwRMrh1vz/0=' 'sha256-XvYMIhmbB7hcArQ/RKnOxSudO33bwspTqQM+0R+cLtA='; style-src 'unsafe-inline'; connect-src https://*.turso.io https://api.github.com; img-src data:; base-uri 'none'; form-action 'none'"><meta charset="utf-8"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Atlas · Artikkelieditori</title><style>
 :root{font:16px/1.5 system-ui,sans-serif;color:#193138;background:#f4f5ef}*{box-sizing:border-box}body{margin:0}header{padding:20px 28px;background:#193138;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:16px}h1{font:500 1.6rem Georgia,serif;margin:0}h2{font:500 1.6rem Georgia,serif}button,input,textarea,select{font:inherit}button{border:1px solid #8a9b99;border-radius:6px;background:#fff;padding:9px 15px;cursor:pointer;color:inherit}button.primary{background:#1c645e;color:white;border-color:#1c645e}button:disabled{opacity:.5;cursor:default}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #c98123;outline-offset:2px}input,textarea,select{width:100%;padding:10px;border:1px solid #a4b2ac;border-radius:5px;color:#193138;background:#fff}textarea{resize:vertical;line-height:1.7}label{display:grid;gap:5px;margin-bottom:14px;font-size:.9rem}#body{min-height:65vh;font-family:Georgia,serif;font-size:1.1rem}#login{max-width:460px;margin:60px auto;padding:28px}#workspace{display:grid;grid-template-columns:300px minmax(0,1fr);min-height:90vh}aside{padding:22px;border-right:1px solid #c6cdc5}#article-list{display:grid;gap:8px;max-height:75vh;overflow:auto}#article-list button{text-align:left;display:grid;gap:5px}#article-list button[aria-pressed=true]{border:2px solid #1c645e;background:#e3eeea}small,.muted{font-size:.8rem;opacity:.75}main{padding:26px;max-width:1100px;width:100%}.row{display:flex;gap:14px;align-items:end;flex-wrap:wrap}.row>label{flex:1;min-width:180px}.toolbar{position:sticky;bottom:0;padding:14px 0;background:#f4f5ef;display:flex;gap:10px;align-items:center;flex-wrap:wrap}#notice{margin:0;padding:14px 28px;background:#e4ede5;white-space:pre-wrap}#notice.error{background:#f7dfd6}#history-list{display:grid;gap:8px}#history{margin-top:30px;border-top:1px solid #a4b2ac}#revision-preview{white-space:pre-wrap;max-height:60vh;overflow:auto;padding:20px;background:#fff;border:1px solid #c6cdc5}#reading{white-space:pre-wrap;font:1.1rem/1.8 Georgia,serif;background:white;padding:24px;min-height:60vh}#login-error{color:#963f29}[hidden]{display:none!important}@media(max-width:760px){header{padding:16px}#workspace{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid #c6cdc5}#article-list{max-height:220px}main{padding:18px}.toolbar button{flex:1}#login{margin:24px auto}#body{min-height:60vh}}
 #analysis{margin-bottom:28px}#analysis-view{overflow:auto}#analysis table{border-collapse:collapse;font-size:.85rem}#analysis th,#analysis td{border:1px solid #a4b2ac;padding:8px;vertical-align:top}#analysis th{white-space:nowrap}#analysis details{padding:10px;background:white;margin:8px 0}#analysis blockquote{margin:12px;border-left:3px solid #1c645e;padding-left:12px}#analysis a{color:#1c645e}#remember-label{display:flex;align-items:center;gap:10px}#remember-device{width:auto}header{flex-wrap:wrap}header button{color:#193138}</style></head><body>
 <header><div><small>SUOMEN RAKENNEMUUTOSTEN ATLAS</small><h1>Artikkelieditori</h1></div><button id="forget-device" type="button" hidden>Unohda tämä laite</button><button id="logout" hidden>Katkaise yhteys</button></header>
@@ -70,11 +70,12 @@
       if (path === "/api/logout") { token = ""; endpoint = ""; return { ok: true }; }
       if (!token) throw new Error("Avaa ensin tietokanta.");
       if (path === "/api/analysis") {
-        const tables = await query("SELECT name FROM sqlite_master WHERE type='table' AND name IN ('editorial__article_evidence_supplements','editorial__period_analyses')");
+        const tables = await query("SELECT name FROM sqlite_master WHERE type='table' AND name IN ('editorial__article_evidence_supplements','editorial__period_analyses','editorial__claim_reviews')");
         const names = tables.map(t => t.name);
         const supplements = names.includes('editorial__article_evidence_supplements') ? await query("SELECT s.article_id,s.version,s.payload_json FROM editorial__article_evidence_supplements s WHERE s.rowid=(SELECT max(n.rowid) FROM editorial__article_evidence_supplements n WHERE n.article_id=s.article_id AND n.supplement_id=s.supplement_id)") : [];
         const periods = names.includes('editorial__period_analyses') ? await query("SELECT p.article_id,p.article_revision,p.periods_json FROM editorial__period_analyses p WHERE p.id=(SELECT max(n.id) FROM editorial__period_analyses n WHERE n.article_id=p.article_id)") : [];
-        return {supplements,periods,missing: ['editorial__article_evidence_supplements','editorial__period_analyses'].filter(n=>!names.includes(n))};
+        const reviews = names.includes('editorial__claim_reviews') ? await query("SELECT r.article_id,r.supplement_id,r.payload_json FROM editorial__claim_reviews r WHERE r.rowid=(SELECT max(n.rowid) FROM editorial__claim_reviews n WHERE n.article_id=r.article_id AND n.supplement_id=r.supplement_id)") : [];
+        return {supplements,periods,reviews,missing: ['editorial__article_evidence_supplements','editorial__period_analyses'].filter(n=>!names.includes(n))};
       }
       if (path === "/api/articles") return { articles: await query("SELECT id,source_position,title,summary,status,revision,updated_at FROM editorial__article_catalog ORDER BY source_id,source_position") };
       const parts = path.split("/"); const id = decodeURIComponent(parts[3] || "");
@@ -134,21 +135,47 @@
  };
  window.addEventListener('editor-progress',event=>{const e=document.getElementById('login-error');if(!document.getElementById('login').hidden)e.textContent=event.detail;else{const n=document.getElementById('notice');n.hidden=false;n.textContent=event.detail;}});
 })();
-</script><script>/* Shared, conservative projection: no inferred causal edges or source coverage. */
+</script><script>/* Claim types are editorial proposals, never inferred from words or publication years. */
 (() => {
  const periods=[[1850,1899],[1900,1917],[1918,1945],[1946,1975],[1976,1994],[1995,2009],[2010,2025],[2026,2050]];
+ const typeLabels={description:'Kuvaus',association:'Havaittu yhteys',mechanism_hypothesis:'Mekanismihypoteesi',causal_estimate:'Kausaalinen arvio',scenario:'Skenaario',assessment_rule:'Arviointisääntö',normative_proposal:'Normatiivinen ehdotus',unclassified:'Luokittelematta'};
  const overlaps=(range,p)=>Array.isArray(range)&&Number.isInteger(range[0])&&Number.isInteger(range[1])&&range[0]<=range[1]&&range[0]<=p[1]&&range[1]>=p[0];
  function project(catalog,data){
   return catalog.map(a=>{
    const annotations=(data.periods||[]).filter(p=>p.article_id===a.id&&p.article_revision===a.revision).flatMap(p=>JSON.parse(p.periods_json));
    const claims=(data.supplements||[]).filter(s=>s.article_id===a.id).map(row=>{
-    const s=JSON.parse(row.payload_json);
-    return {...s,key:a.id+'/'+s.id,version:row.version,current:s.article_revision===a.revision,type:'mechanism_hypothesis',scope:s.choice_and_implementation?.scope||'Kohderyhmä tarkistettava',review:'source_checked_interpretation'};
+    const s=JSON.parse(row.payload_json),candidate=(data.reviews||[]).find(r=>r.article_id===a.id&&r.supplement_id===s.id);
+    const r=candidate?JSON.parse(candidate.payload_json):null;
+    const review=r&&r.article_revision===s.article_revision&&r.body_sha256===s.body_sha256&&r.source_version===row.version?r:null;
+    return {...s,key:a.id+'/'+s.id,version:row.version,current:s.article_revision===a.revision,type:review?.claim_type||'unclassified',classification:review,scope:review?.population_scope||s.choice_and_implementation?.scope||null,observationPeriods:review?.observation_periods||null,review:'source_checked_interpretation'};
    });
-   return {article:a,claims,cells:periods.map(p=>({period:p,mentions:annotations.filter(x=>overlaps([x.start,x.end],p)).length,supplements:claims.filter(x=>x.current&&overlaps(x.period,p)).length})),undated:annotations.filter(x=>!Number.isInteger(x.start)||!Number.isInteger(x.end)).length};
+   return {article:a,annotations,claims,cells:periods.map(p=>({period:p,mentions:annotations.filter(x=>overlaps([x.start,x.end],p)).length,supplements:claims.filter(x=>x.current&&overlaps(x.period,p)).length})),undated:annotations.filter(x=>!Number.isInteger(x.start)||!Number.isInteger(x.end)).length};
   });
  }
- globalThis.articleAnalysisModel={periods,overlaps,project};
+ function audit(rows){
+  const gaps=[];
+  const add=(r,priority,kind,claim,period,missing,action)=>gaps.push({article_id:r.article.id,title:r.article.title,priority,kind,claim,period,missing,action});
+  for(const r of rows){
+   for(const p of r.annotations){
+    const range=[p.start,p.end],linked=r.claims.filter(c=>c.current&&overlaps(c.period,range));
+    if(p.dating==='future_scenario')add(r,'P1','future_basis',p.evidence,range,'Skenaarion oletuksia ja virallista ennustepohjaa ei ole hyväksytty väitekohtaisesti.','Kytke väestö-, talous- tai ilmastoskenaario; kirjaa perusvuosi, oletukset ja epävarmuus.');
+    else if(Number.isInteger(p.start)&&p.start<=1975&&linked.length===0)add(r,'P1','historical_gap',p.evidence,range,'Aikakausimerkintään ei osu nykyistä lähdetäydennystä. Tämä ei osoita kaiken lähdeaineiston puuttumista.','Tarkista historiallinen tilasto tai alkuperäisasiakirja; kirjaa käsitemuutokset ja ketjutuksen rajat.');
+    else if(Number.isInteger(p.start)&&p.start<=1975&&!linked.some(c=>c.observationPeriods?.some(r=>overlaps(r,range))))add(r,'P1','historical_observation_scope',p.evidence,range,'Ajallinen lähdeosuma on olemassa, mutta lähteen havaintovuosia ei ole varmennettu tämän historiallisen väitteen tueksi.','Varmenna lähdekohtaiset vuodet ja se, kattaako näyttö väitteen ajallisen ja alueellisen laajuuden.');
+    else if(linked.length===0)add(r,'P2','unlinked_period',p.evidence,range,'Ei ajallisesti osuvaa nykyistä täydennystä; väitekohtainen lähdeyhteys tarkistamatta.','Tarkista väitteen lähde ja sen kohderyhmä.');
+   }
+   for(const c of r.claims){
+    if(!c.current){add(r,'P1','stale_revision',c.article_passage,c.period,'Täydennys koskee aiempaa artikkelirevisiota.','Tarkista katkelma uudesta tekstistä ja arvioi kytkentä uudelleen.');continue;}
+    if(c.type==='unclassified')add(r,'P2','classification',c.article_passage,c.period,'Ajantasainen toimituksellinen luokitus puuttuu.','Luokittele väite katkelman sisällön perusteella.');
+    if(!c.observationPeriods)add(r,'P2','observation_years',c.article_passage,c.period,'Lähdekohtaisia havaintovuosia ei ole varmennettu rakenteiseen kenttään. Sijoitusvuodet eivät korvaa niitä.','Tarkista jokaisen lähteen aineiston vuodet; erittele kuvaus, seuranta ja julkaisuvuosi.');
+    if(!c.scope)add(r,'P2','population_scope',c.article_passage,c.period,'Kohderyhmä ja alue puuttuvat rakenteisesta rajauksesta.','Kirjaa väestöryhmä, alue ja yleistämisen rajat.');
+    if(c.research_gap)add(r,'P3','research_gap',c.article_passage,c.period,c.research_gap,'Täydennä vain väitteen kannalta ratkaiseva puuttuva näyttö.');
+   }
+   if(!r.annotations.length)add(r,'P2','period_analysis',null,null,'Nykyisen revision aikakausianalyysi puuttuu.','Tarkista analyysi nykyisestä tekstistä.');
+   if(!r.claims.length)add(r,'P1','no_supplements',null,null,'Artikkelilta puuttuvat lähdetäydennykset tästä kerroksesta.','Poimi keskeiset väitteet ja liitä niiden näyttö.');
+  }
+  return gaps.sort((a,b)=>a.priority.localeCompare(b.priority)||a.title.localeCompare(b.title,'fi')||a.kind.localeCompare(b.kind));
+ }
+ globalThis.articleAnalysisModel={periods,typeLabels,overlaps,project,audit};
 })();
 </script><script>"use strict";
 const $ = id => document.getElementById(id);
@@ -286,10 +313,21 @@ $("load-analysis").onclick = async () => {
   const table=document.createElement('table'),head=document.createElement('tr');head.append(node('th','Artikkeli'));
   for(const p of articleAnalysisModel.periods)head.append(node('th',p.join('–')));head.append(node('th','Ajoittamatta'));const thead=document.createElement('thead');thead.append(head);table.append(thead);const tbody=document.createElement('tbody');
   for(const row of rows){const tr=document.createElement('tr');tr.append(node('th',row.article.title));for(const c of row.cells)tr.append(node('td',`A ${c.mentions} · L ${c.supplements}`));tr.append(node('td',String(row.undated)));tbody.append(tr);}table.append(tbody);target.append(table);
+  const gaps=articleAnalysisModel.audit(rows);
+  target.append(node('h3','Priorisoitu puutelista'),node('p','P1: historiallisen tai tulevaisuusväitteen lähdekytkentä tai revision tarkistus. P2: luokitus, havaintovuodet tai kohderyhmä. P3: kirjattu jatkotutkimus. Prioriteetti on toimituksellinen työjärjestys, ei väitteen totuusarvio. Ajallinen osuma ei poista väitekohtaisen tarkistuksen tarvetta.'));
+  const controls=document.createElement('div'),filter=document.createElement('select');filter.setAttribute('aria-label','Puutelistan prioriteetti');
+  for(const [v,l] of [['all','Kaikki puutteet'],['P1','P1 – ensin'],['P2','P2 – rajaukset'],['P3','P3 – jatkotutkimus']]){const o=node('option',l);o.value=v;filter.append(o);}
+  const gapList=document.createElement('div'),download=node('button','Lataa puutelista JSON');download.type='button';
+  download.onclick=()=>{const blob=new Blob([JSON.stringify({method:'claim-audit-v1',generated_at:new Date().toISOString(),scope:'Tallennetut väiteankkurit ja nykyiset aikakausianalyysit, ei kaikkien väitteiden inventaario',gaps},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='atlas-artikkelien-puutelista.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+  const showGaps=()=>{gapList.replaceChildren();const selected=gaps.filter(g=>filter.value==='all'||g.priority===filter.value);gapList.append(node('p',`${selected.length} työkohtaa · ${new Set(selected.map(g=>g.article_id)).size} artikkelia`));for(const g of selected){const d=document.createElement('details');d.append(node('summary',`${g.priority} · ${g.title} · ${g.period?.join('–')||'Ajoittamatta'}`));if(g.claim)d.append(node('blockquote',g.claim));d.append(node('p',g.missing),node('p','Seuraava työ: '+g.action));gapList.append(d);}};
+  filter.onchange=showGaps;controls.append(filter,download);target.append(controls,gapList);showGaps();
+  const totals={};for(const c of rows.flatMap(r=>r.claims).filter(c=>c.current))totals[c.type]=(totals[c.type]||0)+1;
+  target.append(node('h3','Väitteiden toimituksellinen luokitus'),node('p',Object.entries(totals).map(([t,n])=>`${articleAnalysisModel.typeLabels[t]||t}: ${n}`).join(' · ')));
   target.append(node('h3','Väiterekisterin ensimmäinen kerros'));
-  target.append(node('p','Rekisteri näyttää tallennettujen täydennysten väiteankkurit, ei vielä kaikkia artikkelien väitteitä. Luokka: mekanismihypoteesi / lähdetarkistettu tulkinta. Mekanismien yhteinen luokitus ja väitteiden hyväksyntä odottavat toimituksellista tarkistusta.'));
+  target.append(node('p','Rekisteri näyttää tallennettujen täydennysten väiteankkurit, ei vielä kaikkia artikkelien väitteitä. Luokitukset ovat katkelmakohtaisia toimituksellisia ehdotuksia. Ne eivät hyväksy kausaalista vaikutusta tai koko artikkelin kaikkia väitteitä. Yhteiset mekanismitunnisteet odottavat erillistä tarkistusta.'));
   for(const row of rows){const group=document.createElement('details');group.append(node('summary',`${row.article.title} · ${row.claims.length} täydennystä`));if(!row.claims.length)group.append(node('p','Ei täydennyksiä tässä kerroksessa.'));
    for(const c of row.claims){const card=document.createElement('section');card.append(node('h4',c.id),node('p',`${c.current?'Nykyinen revisio':'VANHENTUNUT revisio – ei matriisissa'} · ${c.period?.join('–')||'Ajoittamatta'} · ${c.key}`),node('blockquote',c.article_passage));
+    card.append(node('p',`Väitelaji: ${articleAnalysisModel.typeLabels[c.type]||c.type} · toimituksellinen ehdotus`),node('p',c.classification?.rationale||'Luokitus tarkistamatta'),node('p',c.classification?.observation_note||'Lähteen havaintovuodet tarkistamatta.'),node('p','Kohderyhmä ja alue: '+(c.scope||'Tarkistamatta')));
     for(const [label,value] of [['Tulkinta',c.addition_text],['Muutospaine',c.pressure],['Valinta ja toteutus',c.choice_and_implementation],['Näyttö',c.evidence],['Rajoitukset',c.limits],['Vaihtoehtoinen selitys',c.alternative_explanation],['Tutkimusaukko',c.research_gap]])card.append(node('h5',label),renderValue(value));
     for(const source of c.sources||[]){const u=new URL(source.url);if(u.protocol!=='https:')continue;const a=node('a',source.title);a.href=u.href;a.target='_blank';a.rel='noopener noreferrer';card.append(a,node('p',`${source.publisher} · ${source.locator} · tarkistettu ${source.checked_on}`));}group.append(card);
    }target.append(group);

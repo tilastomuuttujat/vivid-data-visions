@@ -13,5 +13,16 @@ test('stale supplements visible as stale but excluded from matrix; article IDs r
  const s={id:'x',article_id:'a',article_revision:1,period:[2010,2025],causal_effect_identified:false};
  const [a,b]=project([{id:'a',revision:2},{id:'b',revision:1}],{supplements:[{article_id:'a',version:'v1',payload_json:JSON.stringify(s)}]});
  assert.equal(a.claims[0].current,false);assert.equal(a.cells[6].supplements,0);assert.equal(b.claims.length,0);
- assert.equal(a.claims[0].type,'mechanism_hypothesis');
+ assert.equal(a.claims[0].type,'unclassified');
+});
+test('review classification is bound to source version and revision',()=>{
+ const s={id:'x',article_id:'a',article_revision:1,body_sha256:'h',period:[2010,2025]};
+ const r={article_revision:1,body_sha256:'h',source_version:'v1',claim_type:'assessment_rule',observation_periods:null};
+ const data={supplements:[{article_id:'a',version:'v1',payload_json:JSON.stringify(s)}],reviews:[{article_id:'a',supplement_id:'x',payload_json:JSON.stringify(r)}]};
+ assert.equal(project([{id:'a',revision:1}],data)[0].claims[0].type,'assessment_rule');data.supplements[0].version='v2';assert.equal(project([{id:'a',revision:1}],data)[0].claims[0].type,'unclassified');
+});
+test('audit highlights historical gaps and undated future without inventing observation coverage',()=>{
+ const data={periods:[{article_id:'a',article_revision:1,periods_json:JSON.stringify([{start:1946,end:1975,evidence:'historical',dating:'explicit'},{start:null,end:null,evidence:'future',dating:'future_scenario'}])}]};
+ const gaps=globalThis.articleAnalysisModel.audit(project([{id:'a',title:'A',revision:1}],data));
+ assert.ok(gaps.some(g=>g.kind==='historical_gap'&&g.priority==='P1'));assert.ok(gaps.some(g=>g.kind==='future_basis'));assert.ok(gaps.every(g=>g.article_id==='a'));
 });

@@ -63,11 +63,12 @@
       if (path === "/api/logout") { token = ""; endpoint = ""; return { ok: true }; }
       if (!token) throw new Error("Avaa ensin tietokanta.");
       if (path === "/api/analysis") {
-        const tables = await query("SELECT name FROM sqlite_master WHERE type='table' AND name IN ('editorial__article_evidence_supplements','editorial__period_analyses')");
+        const tables = await query("SELECT name FROM sqlite_master WHERE type='table' AND name IN ('editorial__article_evidence_supplements','editorial__period_analyses','editorial__claim_reviews')");
         const names = tables.map(t => t.name);
         const supplements = names.includes('editorial__article_evidence_supplements') ? await query("SELECT s.article_id,s.version,s.payload_json FROM editorial__article_evidence_supplements s WHERE s.rowid=(SELECT max(n.rowid) FROM editorial__article_evidence_supplements n WHERE n.article_id=s.article_id AND n.supplement_id=s.supplement_id)") : [];
         const periods = names.includes('editorial__period_analyses') ? await query("SELECT p.article_id,p.article_revision,p.periods_json FROM editorial__period_analyses p WHERE p.id=(SELECT max(n.id) FROM editorial__period_analyses n WHERE n.article_id=p.article_id)") : [];
-        return {supplements,periods,missing: ['editorial__article_evidence_supplements','editorial__period_analyses'].filter(n=>!names.includes(n))};
+        const reviews = names.includes('editorial__claim_reviews') ? await query("SELECT r.article_id,r.supplement_id,r.payload_json FROM editorial__claim_reviews r WHERE r.rowid=(SELECT max(n.rowid) FROM editorial__claim_reviews n WHERE n.article_id=r.article_id AND n.supplement_id=r.supplement_id)") : [];
+        return {supplements,periods,reviews,missing: ['editorial__article_evidence_supplements','editorial__period_analyses'].filter(n=>!names.includes(n))};
       }
       if (path === "/api/articles") return { articles: await query("SELECT id,source_position,title,summary,status,revision,updated_at FROM editorial__article_catalog ORDER BY source_id,source_position") };
       const parts = path.split("/"); const id = decodeURIComponent(parts[3] || "");
