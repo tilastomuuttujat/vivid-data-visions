@@ -54,10 +54,10 @@ async function main(){if(process.env.GITHUB_REF!=='refs/heads/main'||process.env
  }else if(task.operation==='postwar-source-export'){
   const all=await query('SELECT series_key,title,description,unit,geography,frequency,source,source_url,published FROM public__indicator_series ORDER BY series_key');
   const fixed=['fi.followup20261021.dwelling_total','education.postwar.vocational_students1951_1956','fi.statfin15ai.total.p51ks13.304b0eb25b','fi.statfin15ai.total.p51k.304b0eb25b'];
-  const series=all.filter(s=>s.published===1&&(fixed.includes(s.series_key)||/kaupunk|taajam|muuttoliik|urban|migration/i.test(s.title||'')));
+  const series=all.filter(s=>s.published===1&&(task.scope==='elections'?/äänestysaktiiv|äänestysprosent|turnout/i.test(s.title||''):(fixed.includes(s.series_key)||/kaupunk|taajam|muuttoliik|urban|migration/i.test(s.title||''))));
   if(series.some(s=>!/^[-a-zA-Z0-9_.]+$/.test(s.series_key)))throw Error('Invalid source key');
   const sqlKeys=series.map(s=>"'"+s.series_key+"'").join(',');
-  const rows=await query('SELECT series_key,year,group_key,group_label,value,value_kind,validation_status,source_url,source_version FROM public__indicator_values WHERE is_published=1 AND year BETWEEN 1946 AND 1975 AND series_key IN ('+sqlKeys+') ORDER BY series_key,year,group_key');
+  const rows=await query('SELECT series_key,year,group_key,group_label,value,value_kind,validation_status,source_url,source_version FROM public__indicator_values WHERE is_published=1 AND year BETWEEN '+(task.scope==='elections'?'1908 AND 2023':'1946 AND 1975')+' AND series_key IN ('+sqlKeys+') ORDER BY series_key,year,group_key');
   const value={series,rows},content=Buffer.from(JSON.stringify(await encrypt(value,task.publicKey))).toString('base64');
   const r=await fetch('https://api.github.com/repos/'+repo+'/contents/responses/'+task.id+'.json',{method:'PUT',headers:{Authorization:'Bearer '+process.env.GITHUB_TOKEN,Accept:'application/vnd.github+json'},body:JSON.stringify({branch:'article-editor-responses',message:'Encrypted postwar source selection',content})});if(!r.ok)throw Error('Postwar delivery failed');console.log('PASS encrypted postwar sources:',series.length,'series;',rows.length,'historical rows; no writes.');
  }else if(task.operation==='article-data-discovery'){
