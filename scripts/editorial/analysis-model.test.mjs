@@ -109,3 +109,10 @@ test('explanation comparison requires both article cards and current version-bou
  const make=id=>({article_id:id,key:id+'/comparison',version:v,current:true,causal_effect_identified:false,classification:{claim_type:'assessment_rule'},explanation_comparison:g});
  const rows=[{claims:[input,make('a'),make('b')]}];assert.equal(globalThis.articleAnalysisModel.explanationComparison(rows)[0].status,'current');input.version='new';assert.equal(globalThis.articleAnalysisModel.explanationComparison(rows)[0].status,'requires_review');input.version='prior';rows[0].claims.pop();assert.equal(globalThis.articleAnalysisModel.explanationComparison(rows)[0].status,'requires_review');
 });
+
+test('renewal profile is distinct, source-bound and rejects unknown versions',()=>{
+ const v='renewal-comparison-2026-11-07-v1',input={id:'source',origin_article_id:'a',article_id:'a',version:'prior',article_revision:1,body_sha256:'h',current:true,key:'a/source'},g={id:'renewal-education',version:v,articles:['a','b'],inputs:[{article_id:'a',supplement_id:'source',version:'prior',article_revision:1,body_sha256:'h'}],cells:[]};
+ const make=id=>({article_id:id,key:id+'/renewal',version:v,current:true,causal_effect_identified:false,classification:{claim_type:'assessment_rule'},explanation_comparison:g});
+ const rows=[{claims:[input,make('a'),make('b')]}];let result=globalThis.articleAnalysisModel.explanationComparison(rows);assert.equal(result[0].status,'current');assert.equal(result[0].id,'renewal-education');input.current=false;assert.equal(globalThis.articleAnalysisModel.explanationComparison(rows)[0].status,'requires_review');
+ for(const c of rows[0].claims.slice(1))c.version='unreviewed';assert.equal(globalThis.articleAnalysisModel.explanationComparison(rows).length,0);
+});

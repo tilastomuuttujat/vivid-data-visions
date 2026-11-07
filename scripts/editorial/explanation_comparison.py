@@ -6,16 +6,20 @@ from article_evidence import validate,apply,verify
 from period_analysis import RecordRemote
 RULES=Path(__file__).with_name('explanation-comparison-rules.json')
 SCHEMA='CREATE TABLE IF NOT EXISTS editorial__explanation_comparisons(version TEXT NOT NULL,group_id TEXT NOT NULL,payload_json TEXT NOT NULL CHECK(json_valid(payload_json)),PRIMARY KEY(version,group_id))'
-def rules():return json.loads(RULES.read_text())
+DEFAULT_VERSION='explanation-comparison-2026-11-07-v1'
+PROFILES={DEFAULT_VERSION:RULES,'renewal-comparison-2026-11-07-v1':RULES.with_name('renewal-comparison-rules.json')}
+def rules(version=DEFAULT_VERSION):
+ if version not in PROFILES:raise ValueError('Unknown comparison profile')
+ return json.loads(PROFILES[version].read_text())
 def group_inputs(g):return sorted(set(g['historical_inputs']+g['counter_inputs']+[k for c in g['cells'] for k in c['input_keys']]))
-def group_record(g,inputs):return dict(g,version=rules()['version'],inputs=[inputs[k] for k in group_inputs(g)],method=rules()['method'],causal_effect_identified=False)
+def group_record(g,inputs,version=DEFAULT_VERSION):return dict(g,version=rules(version)['version'],inputs=[inputs[k] for k in group_inputs(g)],method=rules(version)['method'],causal_effect_identified=False)
 def check_bundle(b):
- r=rules();inputs=b.get('inputs',{})
+ r=rules(b.get('version'));inputs=b.get('inputs',{})
  if b.get('version')!=r['version'] or set(inputs)!=set(r['references']):raise ValueError('Comparison reference scope differs')
  for key,selector in r['references'].items():
   q=inputs[key]
   if any(q.get(k)!=v for k,v in selector.items()) or q.get('key')!=key or any(not q.get(k) for k in ['payload_sha256','body_sha256','article_revision','evidence','sources']):raise ValueError('Comparison reference incomplete')
- expected={g['id']:group_record(g,inputs) for g in r['groups']}
+ expected={g['id']:group_record(g,inputs,b['version']) for g in r['groups']}
  if b.get('groups')!=expected or len(b.get('supplements',[]))!=6:raise ValueError('Comparison groups differ')
  seen=set()
  for s in b['supplements']:
@@ -47,5 +51,5 @@ def main():
  db=RecordRemote()
  try:validate(db,b);verify_inputs(db,b);verify(db,b);verify_groups(db,b);check_bundle(b)
  finally:db.close()
- print('PASS explanation comparison: 3 domains; 12 alternatives; 6 article links; 18 version-bound prior evidence references; no causal ranking or new primary observations; fresh connection; originals unchanged.')
+ print(f"PASS explanation comparison: {b['version']}; {len(b['groups'])} domains; 12 alternatives; 6 article links; {len(b['inputs'])} version-bound prior evidence references; no causal ranking or new primary observations; fresh connection; originals unchanged.")
 if __name__=='__main__':main()

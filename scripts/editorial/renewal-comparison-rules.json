@@ -1,0 +1,340 @@
+{
+  "version": "renewal-comparison-2026-11-07-v1",
+  "references": {
+    "Eduration": {
+      "article_id": "db7169c2-6da5-5a11-94b6-116601424a7b",
+      "supplement_id": "adult-learning-participation-versus-duration-2017-2022",
+      "version": "article-explanation-education-purpose-adult-learning-2026-11-06-v1"
+    },
+    "Eaccess": {
+      "article_id": "db7169c2-6da5-5a11-94b6-116601424a7b",
+      "supplement_id": "adult-learning-access-groups-2022",
+      "version": "article-explanation-education-purpose-adult-learning-2026-11-06-v1"
+    },
+    "Efund": {
+      "article_id": "804b66e5-1816-5761-ad2a-ab5662a21f61",
+      "supplement_id": "education-adult-support-2024-implementation",
+      "version": "article-explanation-education-2026-11-05-v1"
+    },
+    "Ereturns": {
+      "article_id": "804b66e5-1816-5761-ad2a-ab5662a21f61",
+      "supplement_id": "education-amk-expansion-and-returns",
+      "version": "article-explanation-education-2026-11-05-v1"
+    },
+    "Ehistory": {
+      "article_id": "db7169c2-6da5-5a11-94b6-116601424a7b",
+      "supplement_id": "early-school-rollout-and-curriculum-1871-1886",
+      "version": "article-explanation-early-school1871-1886-2026-11-06-v1"
+    },
+    "Cfinger": {
+      "article_id": "be9ee685-6d5f-52c3-9d3a-d36c9b13918c",
+      "supplement_id": "care-finger-efficacy-and-delivery",
+      "version": "article-explanation-care-2026-11-05-v1"
+    },
+    "Cdelivery": {
+      "article_id": "be9ee685-6d5f-52c3-9d3a-d36c9b13918c",
+      "supplement_id": "care-home-services-policy-and-realisation",
+      "version": "article-explanation-care-2026-11-05-v1"
+    },
+    "Cfamily": {
+      "article_id": "3134a926-f6af-5b71-afae-94f0ab4f18b0",
+      "supplement_id": "public-support-and-family-care-regions-2024-2026",
+      "version": "article-explanation-care-responsibility-access-2026-11-06-v1"
+    },
+    "Caccess": {
+      "article_id": "3134a926-f6af-5b71-afae-94f0ab4f18b0",
+      "supplement_id": "practical-access-and-digital-support-2022-2023",
+      "version": "article-explanation-care-responsibility-access-2026-11-06-v1"
+    },
+    "Chistory": {
+      "article_id": "be9ee685-6d5f-52c3-9d3a-d36c9b13918c",
+      "supplement_id": "sickness-insurance-implementation-1964-1975",
+      "version": "article-explanation-sickness-insurance-rollout-2026-11-06-v1"
+    },
+    "Vwork": {
+      "article_id": "633300cf-fcfd-5e63-932e-a6182c42bb96",
+      "supplement_id": "volunteering-responsibility-population-2020-2021",
+      "version": "article-explanation-common-work-groups-2026-11-06-v1"
+    },
+    "Vcapacity": {
+      "article_id": "512b9c22-8c4f-51e9-ba3b-3512fa033180",
+      "supplement_id": "civic-2023-capacity-monitoring",
+      "version": "article-explanation-civic-2026-11-05-v1"
+    },
+    "Vfund": {
+      "article_id": "512b9c22-8c4f-51e9-ba3b-3512fa033180",
+      "supplement_id": "civic-2024-2025-policy-resource",
+      "version": "article-explanation-civic-2026-11-05-v1"
+    },
+    "Vhistory": {
+      "article_id": "512b9c22-8c4f-51e9-ba3b-3512fa033180",
+      "supplement_id": "civic-1993-response",
+      "version": "article-explanation-civic-2026-11-05-v1"
+    }
+  },
+  "groups": [
+    {
+      "id": "renewal-education",
+      "label": "Koulutus: osaamisen ylläpito ja uudistuminen",
+      "articles": [
+        "804b66e5-1816-5761-ad2a-ab5662a21f61",
+        "db7169c2-6da5-5a11-94b6-116601424a7b"
+      ],
+      "passages": [
+        4,
+        3
+      ],
+      "period": [
+        1871,
+        2025
+      ],
+      "outcome": "Tarkastellaan erikseen koulutukseen osallistumista, oppimista ja mahdollisuutta käyttää osaamista. Nykyisen koulutustoiminnan määrä ei yksin kuvaa tulevaa oppimiskykyä.",
+      "historical_check": "Kansakoulun alkuvaiheen tarjonta ja opetussisällöt havainnollistavat edellytysten rakentamista. Koulun olemassaolo ei vielä kuvaa osallistumista tai myöhempää oppimista. Historiallista havaintoa ei ketjuteta nykyiseksi osallistumissarjaksi.",
+      "historical_inputs": [
+        "Ehistory"
+      ],
+      "counterevidence": "AMK-tutkimuksen myönteiset koulutustuotot ja henkilöstökoulutuksen keston erilainen kehitys estävät tulkitsemasta kaikkea koulutusta yleiseksi heikkenemiseksi.",
+      "counter_inputs": [
+        "Ereturns",
+        "Eduration"
+      ],
+      "cells": [
+        {
+          "id": "maintenance",
+          "label": "Nykyinen toiminta",
+          "hypothesis": "Osallistuminen voi jatkua, vaikka osallistumisen sisältö muuttuu.",
+          "prediction": "Osallistujien osuus ja koulutukseen käytetty aika voivat kehittyä eri tavoin.",
+          "observed": "Aiempi lähdekortti erottaa osallistumisasteen, väestökohtaiset koulutuspäivät ja palkansaajien henkilöstökoulutuksen.",
+          "limits": "Vuoden 2022 koulutusrajaus eroaa aiemmasta. Päivämäärää ei tulkita oppimistulokseksi eikä määritelmäkatkosta aidoksi laskuksi.",
+          "discriminating_test": "Seurataan samalla määritelmällä osallistumista, kestoa, sisältöä ja oppimistuloksia koulutus- ja työmarkkina-aseman mukaan.",
+          "input_keys": [
+            "Eduration"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        },
+        {
+          "id": "renewal",
+          "label": "Uusien valmiuksien rakentaminen",
+          "hypothesis": "Oppimiseen pääsy voi eriyttää mahdollisuutta vaihtaa tehtävää tai alaa.",
+          "prediction": "Saman tarpeen omaavien osallistuminen ja myöhempi siirtyminen eroaisivat koulutustaustan ja työaseman mukaan.",
+          "observed": "Aikuiskoulutukseen pääsyä kuvaava kortti osoittaa ryhmäeroja; AMK-kortti sisältää myönteistä näyttöä koulutuksen tuotoista.",
+          "limits": "Osallistumiserot eivät osoita oppimisen puutetta tai koulutuksen aiheuttamaa siirtymää. Eri tutkimusjoukkoja ei yhdistetä.",
+          "discriminating_test": "Yhdistetään koulutustarve, osallistuminen, opitut taidot ja työsiirtymät samaan seurantaan; erotetaan valikoituminen vaikutuksesta.",
+          "input_keys": [
+            "Eaccess",
+            "Ereturns"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        },
+        {
+          "id": "continuity",
+          "label": "Jatkuvuus ja muutettavuus",
+          "hypothesis": "Rahoituksen ennakoitavuus voi vaikuttaa mahdollisuuteen suunnitella oppimista.",
+          "prediction": "Tukikelpoisuuden muutos näkyisi osallistumisessa vasta siirtymäsääntöjen ja vaihtoehtoisen rahoituksen huomioimisen jälkeen.",
+          "observed": "Aikuiskoulutustuen päättymistä koskeva kortti kuvaa vuoden 2024 päätöksen ja siirtymäajan.",
+          "limits": "Sääntömuutos ei osoita opintojen tai työsiirtymien toteutunutta vaikutusta.",
+          "discriminating_test": "Seurataan tukioikeuden eri puolille jääviä vertailukelpoisia ryhmiä ja korvaavia rahoitusreittejä; huomioidaan suhdanne.",
+          "input_keys": [
+            "Efund"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        },
+        {
+          "id": "burden",
+          "label": "Vastuun ja ajan jakautuminen",
+          "hypothesis": "Oppimisen kustannuksia voi siirtyä työnantajalta tai julkiselta vallalta yksilölle.",
+          "prediction": "Oma aika, omarahoitus ja keskeytykset eriytyisivät myös saman koulutustarpeen sisällä.",
+          "observed": "Osallistumisen ryhmäerot ja henkilöstökoulutuksen erillinen kehitys tekevät vastuunjaosta tutkimuskysymyksen.",
+          "limits": "Nykyiset kortit eivät mittaa kotitalouksien lisäkustannuksia tai vastuun siirron määrää.",
+          "discriminating_test": "Kerätään maksaja, palkallinen ja palkaton opiskeluaika, hoivavastuut ja keskeytykset samoista osallistujista.",
+          "input_keys": [
+            "Eaccess",
+            "Eduration",
+            "Efund"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        }
+      ],
+      "conclusion": "Nykyinen näyttö perustelee neljän asian erottamisen. Se ei osoita koulutuskyvyn yleistä kulumista tai sitä, että ylläpito syrjäyttäisi uudistumisen."
+    },
+    {
+      "id": "renewal-care",
+      "label": "Hoiva: arjen jatkuvuus ja toimintakyvyn tukeminen",
+      "articles": [
+        "be9ee685-6d5f-52c3-9d3a-d36c9b13918c",
+        "3134a926-f6af-5b71-afae-94f0ab4f18b0"
+      ],
+      "passages": [
+        4,
+        2
+      ],
+      "period": [
+        1964,
+        2026
+      ],
+      "outcome": "Arvioidaan erikseen toteutunutta apua, ehkäisevän toiminnan vaikutusta, palvelun jatkuvuutta ja läheisille jäävää vastuuta.",
+      "historical_check": "Sairausvakuutuksen toimeenpanokortti erottaa oikeuden laajenemisen käytännön toteutuksesta. Historialliset etuusluvut eivät ole nykyisen hoivan laatumittareita.",
+      "historical_inputs": [
+        "Chistory"
+      ],
+      "counterevidence": "FINGER-tutkimus tarjoaa rajattua myönteistä kokeellista näyttöä kognitiivisten testitulosten tukemisesta. Se ei osoita ehkäisyn kattavuutta tai nettosäästöä koko palvelujärjestelmässä.",
+      "counter_inputs": [
+        "Cfinger"
+      ],
+      "cells": [
+        {
+          "id": "maintenance",
+          "label": "Nykyinen toiminta",
+          "hypothesis": "Suunnitellun avun toteutuminen ja asiakkaan saama riittävä apu ovat eri asioita.",
+          "prediction": "Toteutuneet tunnit voivat poiketa suunnitelmasta, mutta riittävyyden arvio vaatii myös tarvetiedon.",
+          "observed": "Kotihoitokortti erottaa vuoden 2023 tavoitteet ja lokakuun 2025 yksikkötason toteumat.",
+          "limits": "52 prosentin yksikköosuus ei tarkoita, että 48 prosenttia asiakkaista jäisi hoidotta; syytä ei tunnisteta.",
+          "discriminating_test": "Yhdistetään asiakkaan tarve, suunniteltu ja toteutunut apu sekä katkokset samoilta viikoilta ja alueilta.",
+          "input_keys": [
+            "Cdelivery"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        },
+        {
+          "id": "renewal",
+          "label": "Toimintakyvyn rakentaminen",
+          "hypothesis": "Ehkäisevä toiminta voi tukea toimintakykyä, jos vaikuttava toteutus tavoittaa kohderyhmän.",
+          "prediction": "Tutkimuksessa osoitetun vaikutuksen lisäksi tarvitaan näyttöä käytännön kattavuudesta ja toteutuksen laadusta.",
+          "observed": "FINGER-kortti erottaa koeasetelman tuloksen ja käytännön toimeenpanon.",
+          "limits": "Kognitiivinen testitulos ei ole dementian ehkäisyn, kaikkien asiakkaiden toimintakyvyn tai säästöjen mitta.",
+          "discriminating_test": "Seurataan kohderyhmää, osallistumista, toteutususkollisuutta, toimintakykyä ja kustannuksia; säilytetään tutkimusasetelmien ero.",
+          "input_keys": [
+            "Cfinger"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        },
+        {
+          "id": "continuity",
+          "label": "Jatkuvuus ja muutettavuus",
+          "hypothesis": "Palvelun käyttökelpoisuus voi riippua jatkuvuudesta ja asioinnin tuesta.",
+          "prediction": "Katkokset, yhteyshenkilöiden vaihtuvuus ja avun saanti asiointiin liittyisivät toteutuneeseen pääsyyn.",
+          "observed": "Asioinnin kortti kuvaa käytännön pääsyä ja digituen tarvetta; kotihoitokortti palvelun toteutusta.",
+          "limits": "Eri lähteiden havaintoja ei ole yhdistetty samoihin asiakkaisiin eikä jatkuvuuden vaikutusta tunnistettu.",
+          "discriminating_test": "Seurataan samoilla asiakkailla palvelukatkoksia, työntekijävaihtuvuutta, asiointitukea ja ratkaisemattomia tarpeita.",
+          "input_keys": [
+            "Caccess",
+            "Cdelivery"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        },
+        {
+          "id": "burden",
+          "label": "Läheisille jäävä vastuu",
+          "hypothesis": "Julkisen tuen rajat voivat muuttaa läheisten vastuuta, mutta muutos ei ole automaattisesti säästö.",
+          "prediction": "Palvelujen, vapaan ja maksujen erot näkyisivät läheisten ajankäytössä, kuormituksessa ja työssäkäynnissä.",
+          "observed": "Omaishoidon kortti dokumentoi alueiden ehtojen ja tuen eroja.",
+          "limits": "Erot eivät yksin osoita julkisen vastuun vähenemistä tai kotitalouksien nettokustannuksia.",
+          "discriminating_test": "Yhdistetään alueiden säännöt toteutuneisiin vapaisiin, hoivatunteihin, työstä poissaoloon ja hoitajan hyvinvointiin.",
+          "input_keys": [
+            "Cfamily"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        }
+      ],
+      "conclusion": "Hoivan ylläpidon ja ehkäisyn välinen syrjäytyminen jää avoimeksi. Kokeellinen vaikutus, palvelun kattavuus ja läheisten työ on mitattava erikseen."
+    },
+    {
+      "id": "renewal-civic",
+      "label": "Kansalaisyhteiskunta: auttaminen ja osallistumisen uusiutuminen",
+      "articles": [
+        "633300cf-fcfd-5e63-932e-a6182c42bb96",
+        "512b9c22-8c4f-51e9-ba3b-3512fa033180"
+      ],
+      "passages": [
+        3,
+        4
+      ],
+      "period": [
+        1993,
+        2025
+      ],
+      "outcome": "Erotetaan tuotettu apu, osallistujien pääsy mukaan, vastuun uusiutuminen ja rahoituksen aikajänne. STEA-aineisto koskee sote-järjestöjä, ei koko kansalaisyhteiskuntaa.",
+      "historical_check": "Vuoden 1993 kansalaisareenakortti kuvaa yhden organisaation historiallista vastausta. Se ei ajoita koko kansalaisyhteiskunnan suunnanmuutosta.",
+      "historical_inputs": [
+        "Vhistory"
+      ],
+      "counterevidence": "Vuoden 2023 raporteissa tuki, koulutus ja nimetyt yhteyshenkilöt mahdollistavat osallistumista. Organisointi voi siis vahvistaa uusiutumista; ammattimaisuus tai yleisavustus ei ole sen vastakohta.",
+      "counter_inputs": [
+        "Vcapacity"
+      ],
+      "cells": [
+        {
+          "id": "maintenance",
+          "label": "Nykyinen toiminta",
+          "hypothesis": "Avun määrä ja toiminnan mahdollistava työ voivat muuttua eri tahtiin.",
+          "prediction": "Sama avun määrä voidaan saavuttaa erilaisella työnjaolla ja kuormituksella.",
+          "observed": "Vuoden 2023 raporttikortti tunnistaa koordinoinnin ja tuen merkityksen.",
+          "limits": "Järjestöjen raportit eivät mittaa vertailukelpoista tuotosta tai todista vuoden 2025 leikkausten vaikutusta.",
+          "discriminating_test": "Seurataan samoissa järjestöissä avun saajia, laatua, palkattua koordinointia ja vapaaehtoisten työtunteja.",
+          "input_keys": [
+            "Vcapacity"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        },
+        {
+          "id": "renewal",
+          "label": "Uusien osallistujien mukaan pääsy",
+          "hypothesis": "Perehdytys, pienet tehtävät ja tuki voivat mahdollistaa vastuun uusiutumista.",
+          "prediction": "Uusien tulijoiden aloittaminen, pysyminen ja siirtyminen vastuuseen liittyisivät tarjolla olevaan tukeen.",
+          "observed": "Vastuutehtävien väestöjakauma ja raporttien rekrytointikokemukset tekevät tästä perustellun seurantakohteen.",
+          "limits": "Poikkileikkaus tai raportti ei osoita samoille ihmisille kasautuvaa vastuuta, vaihtuvuutta tai uupumista.",
+          "discriminating_test": "Kerätään vuosittain tulijat, poistujat, perehdytysaika, tehtävien kesto ja vastuun siirtyminen samoista järjestöistä.",
+          "input_keys": [
+            "Vwork",
+            "Vcapacity"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        },
+        {
+          "id": "continuity",
+          "label": "Rahoituksen jatkuvuus",
+          "hypothesis": "Rahoituksen aikajänne voi vaikuttaa kykyyn sitoutua koordinointiin ja kehittämiseen.",
+          "prediction": "Myöntöpäätöksen lisäksi käyttövuodet ja henkilöstösitoumukset selittäisivät jatkuvuutta.",
+          "observed": "Aiempi STEA-kortti kuvaa vuosien 2024–2025 avustuksia. Määritelmätarkistus: uudet ja yleisavustukset menevät osin päällekkäin; yleisavustus myönnetään vuodeksi, hankkeen avustus kerralla koko hankkeelle.",
+          "limits": "Avustuslaji ei erottele ylläpitoa ja uudistumista. Myöntövuosi ei ole menovuosi. Vuoden 2024 yleisavustuksiin sisältyy myös uusia avustuksia.",
+          "discriminating_test": "Yhdistetään avustuskohteiden myönnöt, käyttövuosien menot, henkilöstö ja toiminnan sisältö. Luokitellaan ylläpito ja uudistuminen sisällön perusteella, sallien päällekkäisyys.",
+          "input_keys": [
+            "Vfund"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        },
+        {
+          "id": "burden",
+          "label": "Vastuun kasautuminen",
+          "hypothesis": "Kasvava tarve voi kuormittaa toimijoita, jos vastuu ei uusiudu.",
+          "prediction": "Samoilla toimijoilla kasvaisivat tunnit, keskeyttämisaikeet ja vaikeus vastaanottaa uusia osallistujia.",
+          "observed": "Vastuutehtävien ryhmäerot sekä raporttien koordinointikokemukset antavat lähtökohdan hypoteesille.",
+          "limits": "Nykyinen aineisto ei todista itseään vahvistavaa kuormituskierrettä tai sen yleisyyttä.",
+          "discriminating_test": "Seurataan samoja vapaaehtoisia ja järjestöjä, vastuun jakautumista ja tuen muutoksia; erotetaan avuntarve rahoituksen vaikutuksesta.",
+          "input_keys": [
+            "Vwork",
+            "Vcapacity"
+          ],
+          "evidence_state": "partial_descriptive_evidence_not_identified_effect"
+        }
+      ],
+      "conclusion": "Artikkelin kuormituskierre säilyy tutkittavana mekanismina. Nykyiset kortit eivät todista sitä. Avustustietojen määritelmät estävät yksinkertaisen ylläpito–uudistuminen-rahoitusjaon."
+    }
+  ],
+  "method": {
+    "independent_studies_counted": false,
+    "causal_winner_selected": false,
+    "weights_estimated": false,
+    "new_primary_data_collected": false,
+    "explanations_can_coexist": true,
+    "maintenance_and_renewal_can_overlap": true,
+    "depletion_demonstrated": false,
+    "definition_check": {
+      "url": "https://www.stea.fi/tutustu-avustuksiin/",
+      "checked_on": "2026-11-07",
+      "locator": "Avustukset vuodelle 2025; avustustietokannan käyttöohje / avustuslajit",
+      "finding": "Vuoden 2024 yleisavustuksiin sisältyy 12 miljoonaa euroa uusia yleisavustuksia. Ay/Ak myönnetään vuodeksi; C/B koko hankkeelle kerralla, vaikka käyttö tyypillisesti jakautuu kolmelle vuodelle.",
+      "kind": "official_source_definition_check_not_new_primary_observations"
+    }
+  }
+}

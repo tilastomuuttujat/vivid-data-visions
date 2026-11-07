@@ -6,8 +6,8 @@ from explanation_comparison import rules,group_record,check_bundle,verify_inputs
 class DB:
  def __init__(self):self.c=sqlite3.connect(':memory:',isolation_level=None);self.c.row_factory=sqlite3.Row;self.c.executescript(Path(__file__).with_name('schema.sql').read_text());self.c.execute(EVIDENCE)
  def execute(self,s,p=()):return [dict(x) for x in self.c.execute(s,p).fetchall()]
-def fixture():
- r=rules();b=dict(version=r['version'],inputs={},groups={},supplements=[]);db=DB();body='A complete synthetic article passage about access and institutional conditions.'
+def fixture(version='explanation-comparison-2026-11-07-v1'):
+ r=rules(version);b=dict(version=r['version'],inputs={},groups={},supplements=[]);db=DB();body='A complete synthetic article passage about access and institutional conditions.'
  db.execute("INSERT INTO editorial__sources(id,filename,sha256,page_count,library_file_id,collection_title) VALUES('s','f','h',1,'l','c')")
  ids=[aid for g in r['groups'] for aid in g['articles']]
  for i,aid in enumerate(ids):db.execute('INSERT INTO editorial__articles(id,source_id,source_position,source_number,page_start,page_end,title,body_text) VALUES(?,?,?,?,?,?,?,?)',[aid,'s',i+1,str(i+1),1,1,'Synthetic article',body])
@@ -16,12 +16,25 @@ def fixture():
   db.execute('INSERT INTO editorial__article_evidence_supplements VALUES(?,?,?,?,?,?)',[sel['version'],sel['article_id'],1,digest(body),sel['supplement_id'],canonical(p)])
   b['inputs'][key]=dict(sel,key=key,article_revision=1,body_sha256=digest(body),payload_sha256=digest(canonical(p)),period=[2020,2025],sources=[dict(id=key,title='Synthetic source',publisher='Statistics',url='https://stat.fi/',locator='Fixture',kind='fixture',checked_on='2026-11-07')],evidence=[dict(source_id=key,finding='Recorded synthetic observation',supports='Description',does_not_establish='Causal ranking')])
  for g in r['groups']:
-  record=group_record(g,b['inputs']);b['groups'][g['id']]=record
+  record=group_record(g,b['inputs'],version);b['groups'][g['id']]=record
   for aid in g['articles']:
    q=dict(id='competing-explanations-'+g['id'],article_id=aid,article_revision=1,body_sha256=digest(body),article_passage=body,period=g['period'],period_linkage='exact_passage_only',causal_effect_identified=False,status='source_checked_interpretation',explanation_comparison=record,pressure={'kind':'comparison'},choice_and_implementation={'kind':'comparison'},sources=[s for k in record['inputs'] for s in k['sources']],evidence=[e for k in record['inputs'] for e in k['evidence']],limits='No ranking',addition_text='Comparison',research_gap='Matched outcomes needed',alternative_explanation='Explanations can coexist',claim_classification=dict(article_revision=1,body_sha256=digest(body),source_version=r['version'],claim_type='assessment_rule',observation_periods=None))
    b['supplements'].append(q)
  return db,b
 class Tests(unittest.TestCase):
+ def test_renewal_profile_preserves_originals_and_pins_inputs(self):
+  db,b=fixture('renewal-comparison-2026-11-07-v1');check_bundle(b);validate(db,b);verify_inputs(db,b)
+  before=db.execute('SELECT * FROM editorial__articles ORDER BY id');apply(db,b);verify(db,b)
+  self.assertEqual(before,db.execute('SELECT * FROM editorial__articles ORDER BY id'))
+  self.assertEqual(len(b['inputs']),14)
+  self.assertEqual({g['id'] for g in b['groups'].values()},{'renewal-education','renewal-care','renewal-civic'})
+  for g in b['groups'].values():self.assertEqual([c['id'] for c in g['cells']],['maintenance','renewal','continuity','burden'])
+  m=rules(b['version'])['method'];self.assertTrue(m['maintenance_and_renewal_can_overlap']);self.assertFalse(m['depletion_demonstrated'])
+ def test_unknown_profile_rejected(self):
+  with self.assertRaises(ValueError):rules('unreviewed-profile')
+ def test_renewal_changed_definition_rejected(self):
+  db,b=fixture('renewal-comparison-2026-11-07-v1');b['groups']['renewal-civic']['method']['definition_check']['finding']='Changed'
+  with self.assertRaises(ValueError):check_bundle(b)
  def test_three_domains_twelve_alternatives_and_six_bound_articles(self):
   db,b=fixture();check_bundle(b);validate(db,b);verify_inputs(db,b);self.assertEqual(len(b['inputs']),18);self.assertEqual(sum(len(g['cells']) for g in b['groups'].values()),12)
   for g in b['groups'].values():self.assertEqual([c['id'] for c in g['cells']],['resources','distribution','procedures','needs']);self.assertTrue(g['counterevidence']);self.assertTrue(g['historical_check'])
