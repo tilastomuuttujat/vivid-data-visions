@@ -72,7 +72,7 @@
         const merges = names.includes('editorial__article_merges') ? await query("SELECT alias_article_id,canonical_article_id,payload_json FROM editorial__article_merges ORDER BY alias_article_id") : [];
         return {supplements,periods,reviews,discoveries,merges,missing: ['editorial__article_evidence_supplements','editorial__period_analyses'].filter(n=>!names.includes(n))};
       }
-      if (path === "/api/articles") return { articles: await query("SELECT id,source_position,title,summary,status,revision,updated_at FROM editorial__article_catalog ORDER BY source_id,source_position") };
+      if (path === "/api/articles") return { articles: await query("SELECT id,source_position,publication_number,title,summary,status,revision,updated_at FROM editorial__article_catalog ORDER BY publication_number IS NULL,publication_number,source_id,source_position") };
       const parts = path.split("/"); const id = decodeURIComponent(parts[3] || "");
       if (parts[1] !== "api" || parts[2] !== "articles" || !id) throw new Error("Tuntematon pyyntö.");
       if (data !== undefined && parts.length === 4) return save(id, data.expected_revision, data.changes);

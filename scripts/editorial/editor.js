@@ -22,7 +22,7 @@ function renderCatalog() {
     const button = document.createElement("button"); button.type = "button"; button.disabled = busy;
     button.setAttribute("aria-pressed", String(article?.id === a.id));
     const title = document.createElement("strong"); title.textContent = a.title;
-    const meta = document.createElement("small"); meta.textContent = `${a.source_position}. · ${labels[a.status]} · versio ${a.revision}`;
+    const meta = document.createElement("small"); meta.textContent = `${a.publication_number ?? a.source_position}. · ${labels[a.status]} · versio ${a.revision}`;
     button.append(title, meta); button.onclick = () => { if (canLeave()) openArticle(a.id); }; return button;
   }));
 }

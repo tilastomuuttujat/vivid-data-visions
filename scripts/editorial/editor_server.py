@@ -42,8 +42,8 @@ class Library:
         try:return callback(db)
         finally:db.close()
     def catalog(self):
-        fields='id source_position title summary status revision updated_at'.split()
-        return self.run(lambda db:[serialize(row,fields) for row in db.execute('SELECT '+','.join(fields)+' FROM editorial__article_catalog ORDER BY source_id,source_position')])
+        fields='id source_position publication_number title summary status revision updated_at'.split()
+        return self.run(lambda db:[serialize(row,fields) for row in db.execute('SELECT '+','.join(fields)+' FROM editorial__article_catalog ORDER BY publication_number IS NULL,publication_number,source_id,source_position')])
     def analysis(self):
         def read(db):
             names={r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}

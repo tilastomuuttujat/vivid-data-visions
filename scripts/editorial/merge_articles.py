@@ -29,6 +29,9 @@ def views(db):
  for t in relations(db,PAIRS[0][0]):
   suffix=t.removeprefix('editorial__');name='editorial__canonical_'+suffix
   db.execute('CREATE VIEW IF NOT EXISTS '+name+' AS SELECT m.canonical_article_id,t.* FROM '+t+' t JOIN editorial__article_membership m ON m.origin_article_id=t.article_id')
+ if db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='editorial__article_numbers'"):
+  from article_numbering import rebuild_views
+  rebuild_views(db)
 def merge(db,plan):
  if plan.get('version')!=VERSION or [(p['canonical'],p['alias']) for p in plan['pairs']]!=PAIRS:raise ValueError('Unapproved merge scope')
  db.execute('PRAGMA foreign_keys=ON');db.execute('BEGIN IMMEDIATE')

@@ -65,6 +65,6 @@ CREATE TRIGGER IF NOT EXISTS editorial__sources_no_delete BEFORE DELETE ON edito
 BEGIN SELECT RAISE(ABORT,'Original sources are immutable'); END;
 CREATE VIEW IF NOT EXISTS editorial__article_catalog AS
  SELECT a.id,a.source_id,a.source_position,a.source_number,a.title,a.summary,a.status,a.tags_json,a.review_flags_json,
- a.page_start,a.page_end,length(a.body_text) AS characters,a.updated_at,
+ a.page_start,a.page_end,length(a.body_text) AS characters,a.updated_at,NULL AS publication_number,
  (SELECT max(r.revision_no) FROM editorial__article_revisions r WHERE r.article_id=a.id) AS revision
  FROM editorial__articles a;
