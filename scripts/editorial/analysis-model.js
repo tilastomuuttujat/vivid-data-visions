@@ -15,14 +15,18 @@
  };
  const implementationCovers=(c,p,range)=>checkedImplementation(c)&&range[0]===range[1]&&c.implementation_evidence.events.some(e=>e.year===range[0])&&normalized(c.article_passage).length>=30&&normalized(p.evidence).includes(normalized(c.article_passage));
  function project(catalog,data){
+  const merges=new Map((data.merges||[]).map(m=>[m.alias_article_id,{...m,...JSON.parse(m.payload_json)}]));
+  const owner=id=>merges.get(id)?.canonical_article_id||id;
   return catalog.map(a=>{
-   const annotations=(data.periods||[]).filter(p=>p.article_id===a.id&&p.article_revision===a.revision).flatMap(p=>JSON.parse(p.periods_json));
-   const claims=(data.supplements||[]).filter(s=>s.article_id===a.id).map(row=>{
-    const s=JSON.parse(row.payload_json),candidate=(data.reviews||[]).find(r=>r.article_id===a.id&&r.supplement_id===s.id);
+   const annotations=(data.periods||[]).filter(p=>p.article_id===a.id?p.article_revision===a.revision:owner(p.article_id)===a.id&&merges.get(p.article_id)?.same_text&&merges.get(p.article_id)?.canonical_revision===a.revision&&p.article_revision===merges.get(p.article_id)?.original_revision).flatMap(p=>JSON.parse(p.periods_json)).filter((p,i,all)=>all.findIndex(n=>JSON.stringify(n)===JSON.stringify(p))===i);
+   let claims=(data.supplements||[]).filter(s=>owner(s.article_id)===a.id).map(row=>{
+    const s=JSON.parse(row.payload_json),candidate=(data.reviews||[]).find(r=>r.article_id===row.article_id&&r.supplement_id===s.id);
     const r=candidate?JSON.parse(candidate.payload_json):(s.claim_classification||null);
     const review=r&&r.article_revision===s.article_revision&&r.body_sha256===s.body_sha256&&r.source_version===row.version?r:null;
-    return {...s,key:a.id+'/'+s.id,version:row.version,current:s.article_revision===a.revision,type:review?.claim_type||'unclassified',classification:review,scope:review?.population_scope||s.choice_and_implementation?.scope||null,observationPeriods:review?.observation_periods||null,review:'source_checked_interpretation'};
+    const merge=merges.get(row.article_id),current=merge?merge.canonical_revision===a.revision&&s.article_revision===merge.original_revision&&merge.supplement_matches?.[row.version+'/'+s.id]===true:s.article_revision===a.revision;
+    return {...s,article_id:a.id,origin_article_id:row.article_id,key:a.id+'/'+(merge?row.article_id+'/':'')+s.id,version:row.version,current,type:review?.claim_type||'unclassified',classification:review,scope:review?.population_scope||s.choice_and_implementation?.scope||null,observationPeriods:review?.observation_periods||null,review:'source_checked_interpretation'};
    });
+   claims=claims.filter(c=>{const m=merges.get(c.origin_article_id),equivalent=m?.equivalent_supplements?.[c.version+'/'+c.id];if(!equivalent)return true;const native=claims.find(n=>n.origin_article_id===a.id&&n.version+'/'+n.id===equivalent);if(!native)return true;(native.merged_origins??=[]).push({article_id:c.origin_article_id,supplement_id:c.id,version:c.version});return false;});
    return {article:a,annotations,claims,cells:periods.map(p=>({period:p,mentions:annotations.filter(x=>overlaps([x.start,x.end],p)).length,supplements:claims.filter(x=>x.current&&overlaps(x.period,p)).length})),undated:annotations.filter(x=>!Number.isInteger(x.start)||!Number.isInteger(x.end)).length};
   });
  }

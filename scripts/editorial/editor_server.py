@@ -52,6 +52,7 @@ class Library:
             for key,(table,fields,where) in tables.items():
                 result[key]=[serialize(r,fields) for r in db.execute('SELECT '+','.join('s.'+f for f in fields)+' FROM '+table+' s WHERE '+where)] if table in names else []
                 if table not in names:result['missing'].append(table)
+            result['merges']=[serialize(r,['alias_article_id','canonical_article_id','payload_json']) for r in db.execute('SELECT alias_article_id,canonical_article_id,payload_json FROM editorial__article_merges ORDER BY alias_article_id')] if 'editorial__article_merges' in names else []
             return result
         return self.run(read)
     def article(self,identity):

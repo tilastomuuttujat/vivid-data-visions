@@ -89,3 +89,17 @@ test('population export preserves evidence references without duplicating source
  const result=synthModel.populationExport(synthModel.populationSynthesis(rows)),claim=result.groups[0].basis[0].claim;
  assert.equal(claim.evidence[0].finding,'Observation');assert.equal(claim.source_version,synthModel.populationScopes[0].version);assert.equal(claim.population_work,undefined);assert.equal(claim.body_text,undefined);assert.ok(!JSON.stringify(result).includes('not copied'));
 });
+
+test('consolidated articles retain colliding source claims without accepting unmatched passages',()=>{
+ const catalog=[{id:'canonical',title:'One article',revision:1}],merges=[{alias_article_id:'alias',canonical_article_id:'canonical',payload_json:JSON.stringify({canonical_revision:1,original_revision:1,same_text:false,supplement_matches:{'v/same':false}})}];
+ const supplements=['canonical','alias'].map(id=>({article_id:id,version:'v',payload_json:JSON.stringify({id:'same',article_id:id,article_revision:1,article_passage:'A passage',body_sha256:'hash'})}));
+ const rows=globalThis.articleAnalysisModel.project(catalog,{merges,supplements,periods:[]});assert.equal(rows.length,1);assert.equal(rows[0].claims.length,2);assert.notEqual(rows[0].claims[0].key,rows[0].claims[1].key);assert.equal(rows[0].claims[0].current,true);assert.equal(rows[0].claims[1].current,false);
+ merges[0].payload_json=JSON.stringify({canonical_revision:1,original_revision:1,same_text:true,supplement_matches:{'v/same':true}});assert.equal(globalThis.articleAnalysisModel.project(catalog,{merges,supplements,periods:[]})[0].claims[1].current,true);
+ catalog[0].revision=2;assert.equal(globalThis.articleAnalysisModel.project(catalog,{merges,supplements,periods:[]})[0].claims[1].current,false);
+});
+
+test('identical merged supplements render once with both origins retained',()=>{
+ const s={id:'same',article_revision:1,body_sha256:'h'},supplements=['canonical','alias'].map(article_id=>({article_id,version:'v',payload_json:JSON.stringify({...s,article_id})}));
+ const merges=[{alias_article_id:'alias',canonical_article_id:'canonical',payload_json:JSON.stringify({canonical_revision:1,original_revision:1,supplement_matches:{'v/same':true},equivalent_supplements:{'v/same':'v/same'}})}];
+ const r=globalThis.articleAnalysisModel.project([{id:'canonical',revision:1}],{supplements,merges});assert.equal(r[0].claims.length,1);assert.equal(r[0].claims[0].merged_origins[0].article_id,'alias');
+});
