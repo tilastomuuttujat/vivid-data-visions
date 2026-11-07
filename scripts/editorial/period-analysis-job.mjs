@@ -75,6 +75,10 @@ async function main(){if(process.env.GITHUB_REF!=='refs/heads/main'||process.env
  }else if(task.operation==='population-synthesis-audit'){
   const checks=spawnSync('node',['--test','scripts/editorial/analysis-model.test.mjs'],{encoding:'utf8',env:process.env});if(checks.status!==0)throw Error('Population synthesis model checks failed');
   const result=spawnSync('node',['scripts/editorial/check_population_synthesis.mjs'],{encoding:'utf8',env:process.env,maxBuffer:1000000});if(result.status!==0)throw Error('Population synthesis current-library check failed');console.log(result.stdout.trim());
+ }else if(task.operation==='population-receipt-rates-import'){
+  const session=unseal(task.session,process.env.TURSO_AUTH_TOKEN);if(session.expires<Date.now())throw Error('Expired analysis transfer');const bundle=await decrypt(task.payload,session.privateKey);
+  const checks=spawnSync('python',['-m','unittest','discover','-s','scripts/editorial','-p','test_population_receipt_rates.py'],{encoding:'utf8',env:process.env});if(checks.status!==0)throw Error('Population receipt rate checks failed');
+  const result=spawnSync('python',['scripts/editorial/population_receipt_rates.py'],{input:JSON.stringify(bundle),encoding:'utf8',env:process.env,maxBuffer:2000000});if(result.status!==0){console.error('Population receipt rate error class:',(result.stderr.match(/(?:^|\n)([A-Za-z]+Error):/)||[])[1]||'unknown');throw Error('Population receipt rate import failed');}console.log(result.stdout.trim());
  }else if(task.operation==='population-fiscal-import'){
   const session=unseal(task.session,process.env.TURSO_AUTH_TOKEN);if(session.expires<Date.now())throw Error('Expired analysis transfer');const bundle=await decrypt(task.payload,session.privateKey);
   const checks=spawnSync('python',['-m','unittest','discover','-s','scripts/editorial','-p','test_population_fiscal.py'],{encoding:'utf8',env:process.env});if(checks.status!==0)throw Error('Population-fiscal checks failed');

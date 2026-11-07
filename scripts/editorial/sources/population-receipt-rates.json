@@ -1,0 +1,1470 @@
+{
+  "year": 2025,
+  "url": "https://tilastojulkaisut.tietotarjotin.fi/perustoimeentulotuki/2025/",
+  "retrieved_at": "2026-11-07T08:09:31.449193+00:00",
+  "original_html_sha256": "b8a200653c08a30005d6df915654c8f77bc2d818893eb088ce7c861803f1de88",
+  "locator": "Katsaus 3.4, kuvio 3, Kunta / Saajat / Osuus, %; source caption: 31.12.2025",
+  "national_annual_persons": 365029,
+  "rows": [
+    {
+      "municipality": "Akaa",
+      "recipients": 837,
+      "published_percent": 5.1
+    },
+    {
+      "municipality": "Alajärvi",
+      "recipients": 315,
+      "published_percent": 3.5
+    },
+    {
+      "municipality": "Alavieska",
+      "recipients": 130,
+      "published_percent": 5.4
+    },
+    {
+      "municipality": "Alavus",
+      "recipients": 496,
+      "published_percent": 4.7
+    },
+    {
+      "municipality": "Asikkala",
+      "recipients": 286,
+      "published_percent": 3.6
+    },
+    {
+      "municipality": "Askola",
+      "recipients": 135,
+      "published_percent": 2.9
+    },
+    {
+      "municipality": "Aura",
+      "recipients": 123,
+      "published_percent": 3.1
+    },
+    {
+      "municipality": "Enonkoski",
+      "recipients": 61,
+      "published_percent": 4.8
+    },
+    {
+      "municipality": "Enontekiö",
+      "recipients": 46,
+      "published_percent": 2.6
+    },
+    {
+      "municipality": "Espoo",
+      "recipients": 27021,
+      "published_percent": 8.3
+    },
+    {
+      "municipality": "Eura",
+      "recipients": 322,
+      "published_percent": 2.9
+    },
+    {
+      "municipality": "Eurajoki",
+      "recipients": 183,
+      "published_percent": 2.0
+    },
+    {
+      "municipality": "Evijärvi",
+      "recipients": 53,
+      "published_percent": 2.3
+    },
+    {
+      "municipality": "Forssa",
+      "recipients": 1333,
+      "published_percent": 8.2
+    },
+    {
+      "municipality": "Haapajärvi",
+      "recipients": 270,
+      "published_percent": 4.2
+    },
+    {
+      "municipality": "Haapavesi",
+      "recipients": 216,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Hailuoto",
+      "recipients": 20,
+      "published_percent": 2.2
+    },
+    {
+      "municipality": "Halsua",
+      "recipients": 16,
+      "published_percent": 1.6
+    },
+    {
+      "municipality": "Hamina",
+      "recipients": 1031,
+      "published_percent": 5.4
+    },
+    {
+      "municipality": "Hankasalmi",
+      "recipients": 164,
+      "published_percent": 3.7
+    },
+    {
+      "municipality": "Hanko",
+      "recipients": 335,
+      "published_percent": 4.4
+    },
+    {
+      "municipality": "Harjavalta",
+      "recipients": 420,
+      "published_percent": 6.4
+    },
+    {
+      "municipality": "Hartola",
+      "recipients": 95,
+      "published_percent": 4.0
+    },
+    {
+      "municipality": "Hattula",
+      "recipients": 229,
+      "published_percent": 2.5
+    },
+    {
+      "municipality": "Hausjärvi",
+      "recipients": 287,
+      "published_percent": 3.6
+    },
+    {
+      "municipality": "Heinola",
+      "recipients": 1111,
+      "published_percent": 6.3
+    },
+    {
+      "municipality": "Heinävesi",
+      "recipients": 159,
+      "published_percent": 5.5
+    },
+    {
+      "municipality": "Helsinki",
+      "recipients": 67533,
+      "published_percent": 9.7
+    },
+    {
+      "municipality": "Hirvensalmi",
+      "recipients": 90,
+      "published_percent": 4.5
+    },
+    {
+      "municipality": "Hollola",
+      "recipients": 858,
+      "published_percent": 3.8
+    },
+    {
+      "municipality": "Huittinen",
+      "recipients": 318,
+      "published_percent": 3.3
+    },
+    {
+      "municipality": "Humppila",
+      "recipients": 85,
+      "published_percent": 4.1
+    },
+    {
+      "municipality": "Hyrynsalmi",
+      "recipients": 43,
+      "published_percent": 2.2
+    },
+    {
+      "municipality": "Hyvinkää",
+      "recipients": 3595,
+      "published_percent": 7.6
+    },
+    {
+      "municipality": "Hämeenkyrö",
+      "recipients": 393,
+      "published_percent": 3.8
+    },
+    {
+      "municipality": "Hämeenlinna",
+      "recipients": 5053,
+      "published_percent": 7.4
+    },
+    {
+      "municipality": "Ii",
+      "recipients": 362,
+      "published_percent": 3.7
+    },
+    {
+      "municipality": "Iisalmi",
+      "recipients": 1320,
+      "published_percent": 6.5
+    },
+    {
+      "municipality": "Iitti",
+      "recipients": 261,
+      "published_percent": 4.1
+    },
+    {
+      "municipality": "Ikaalinen",
+      "recipients": 395,
+      "published_percent": 5.9
+    },
+    {
+      "municipality": "Ilmajoki",
+      "recipients": 466,
+      "published_percent": 3.8
+    },
+    {
+      "municipality": "Ilomantsi",
+      "recipients": 202,
+      "published_percent": 4.7
+    },
+    {
+      "municipality": "Imatra",
+      "recipients": 1901,
+      "published_percent": 7.8
+    },
+    {
+      "municipality": "Inari",
+      "recipients": 149,
+      "published_percent": 2.1
+    },
+    {
+      "municipality": "Inkoo",
+      "recipients": 96,
+      "published_percent": 1.8
+    },
+    {
+      "municipality": "Isojoki",
+      "recipients": 32,
+      "published_percent": 1.8
+    },
+    {
+      "municipality": "Isokyrö",
+      "recipients": 140,
+      "published_percent": 3.3
+    },
+    {
+      "municipality": "Janakkala",
+      "recipients": 870,
+      "published_percent": 5.5
+    },
+    {
+      "municipality": "Joensuu",
+      "recipients": 6228,
+      "published_percent": 7.9
+    },
+    {
+      "municipality": "Jokioinen",
+      "recipients": 184,
+      "published_percent": 3.8
+    },
+    {
+      "municipality": "Joroinen",
+      "recipients": 205,
+      "published_percent": 4.6
+    },
+    {
+      "municipality": "Joutsa",
+      "recipients": 251,
+      "published_percent": 6.1
+    },
+    {
+      "municipality": "Juuka",
+      "recipients": 188,
+      "published_percent": 4.6
+    },
+    {
+      "municipality": "Juupajoki",
+      "recipients": 55,
+      "published_percent": 3.3
+    },
+    {
+      "municipality": "Juva",
+      "recipients": 163,
+      "published_percent": 2.9
+    },
+    {
+      "municipality": "Jyväskylä",
+      "recipients": 13500,
+      "published_percent": 9.0
+    },
+    {
+      "municipality": "Jämijärvi",
+      "recipients": 54,
+      "published_percent": 3.2
+    },
+    {
+      "municipality": "Jämsä",
+      "recipients": 1297,
+      "published_percent": 6.8
+    },
+    {
+      "municipality": "Järvenpää",
+      "recipients": 4256,
+      "published_percent": 9.0
+    },
+    {
+      "municipality": "Kaarina",
+      "recipients": 1306,
+      "published_percent": 3.6
+    },
+    {
+      "municipality": "Kaavi",
+      "recipients": 148,
+      "published_percent": 5.8
+    },
+    {
+      "municipality": "Kajaani",
+      "recipients": 2565,
+      "published_percent": 7.0
+    },
+    {
+      "municipality": "Kalajoki",
+      "recipients": 452,
+      "published_percent": 3.7
+    },
+    {
+      "municipality": "Kangasala",
+      "recipients": 1410,
+      "published_percent": 4.1
+    },
+    {
+      "municipality": "Kangasniemi",
+      "recipients": 231,
+      "published_percent": 4.7
+    },
+    {
+      "municipality": "Kankaanpää",
+      "recipients": 709,
+      "published_percent": 5.7
+    },
+    {
+      "municipality": "Kannonkoski",
+      "recipients": 42,
+      "published_percent": 3.7
+    },
+    {
+      "municipality": "Kannus",
+      "recipients": 165,
+      "published_percent": 3.1
+    },
+    {
+      "municipality": "Karijoki",
+      "recipients": 33,
+      "published_percent": 2.9
+    },
+    {
+      "municipality": "Karkkila",
+      "recipients": 541,
+      "published_percent": 6.5
+    },
+    {
+      "municipality": "Karstula",
+      "recipients": 129,
+      "published_percent": 3.7
+    },
+    {
+      "municipality": "Karvia",
+      "recipients": 45,
+      "published_percent": 2.1
+    },
+    {
+      "municipality": "Kaskinen",
+      "recipients": 75,
+      "published_percent": 6.0
+    },
+    {
+      "municipality": "Kauhajoki",
+      "recipients": 681,
+      "published_percent": 5.5
+    },
+    {
+      "municipality": "Kauhava",
+      "recipients": 765,
+      "published_percent": 5.1
+    },
+    {
+      "municipality": "Kauniainen",
+      "recipients": 462,
+      "published_percent": 4.5
+    },
+    {
+      "municipality": "Kaustinen",
+      "recipients": 110,
+      "published_percent": 2.7
+    },
+    {
+      "municipality": "Keitele",
+      "recipients": 96,
+      "published_percent": 5.0
+    },
+    {
+      "municipality": "Kemi",
+      "recipients": 1810,
+      "published_percent": 9.3
+    },
+    {
+      "municipality": "Kemijärvi",
+      "recipients": 355,
+      "published_percent": 5.1
+    },
+    {
+      "municipality": "Keminmaa",
+      "recipients": 211,
+      "published_percent": 2.8
+    },
+    {
+      "municipality": "Kemiönsaari",
+      "recipients": 179,
+      "published_percent": 2.8
+    },
+    {
+      "municipality": "Kempele",
+      "recipients": 553,
+      "published_percent": 2.8
+    },
+    {
+      "municipality": "Kerava",
+      "recipients": 4420,
+      "published_percent": 11.4
+    },
+    {
+      "municipality": "Keuruu",
+      "recipients": 499,
+      "published_percent": 5.5
+    },
+    {
+      "municipality": "Kihniö",
+      "recipients": 42,
+      "published_percent": 2.5
+    },
+    {
+      "municipality": "Kinnula",
+      "recipients": 49,
+      "published_percent": 3.3
+    },
+    {
+      "municipality": "Kirkkonummi",
+      "recipients": 2679,
+      "published_percent": 6.4
+    },
+    {
+      "municipality": "Kitee",
+      "recipients": 590,
+      "published_percent": 6.3
+    },
+    {
+      "municipality": "Kittilä",
+      "recipients": 108,
+      "published_percent": 1.6
+    },
+    {
+      "municipality": "Kiuruvesi",
+      "recipients": 317,
+      "published_percent": 4.4
+    },
+    {
+      "municipality": "Kivijärvi",
+      "recipients": 42,
+      "published_percent": 4.2
+    },
+    {
+      "municipality": "Kokemäki",
+      "recipients": 326,
+      "published_percent": 4.9
+    },
+    {
+      "municipality": "Kokkola",
+      "recipients": 2340,
+      "published_percent": 4.8
+    },
+    {
+      "municipality": "Kolari",
+      "recipients": 70,
+      "published_percent": 1.8
+    },
+    {
+      "municipality": "Konnevesi",
+      "recipients": 115,
+      "published_percent": 4.8
+    },
+    {
+      "municipality": "Kontiolahti",
+      "recipients": 546,
+      "published_percent": 3.6
+    },
+    {
+      "municipality": "Korsnäs",
+      "recipients": 54,
+      "published_percent": 2.7
+    },
+    {
+      "municipality": "Koski Tl",
+      "recipients": 59,
+      "published_percent": 2.7
+    },
+    {
+      "municipality": "Kotka",
+      "recipients": 4309,
+      "published_percent": 8.6
+    },
+    {
+      "municipality": "Kouvola",
+      "recipients": 4530,
+      "published_percent": 5.8
+    },
+    {
+      "municipality": "Kristiinankaupunki",
+      "recipients": 235,
+      "published_percent": 3.9
+    },
+    {
+      "municipality": "Kruunupyy",
+      "recipients": 170,
+      "published_percent": 2.7
+    },
+    {
+      "municipality": "Kuhmo",
+      "recipients": 220,
+      "published_percent": 3.0
+    },
+    {
+      "municipality": "Kuhmoinen",
+      "recipients": 66,
+      "published_percent": 3.3
+    },
+    {
+      "municipality": "Kuopio",
+      "recipients": 9647,
+      "published_percent": 7.6
+    },
+    {
+      "municipality": "Kuortane",
+      "recipients": 76,
+      "published_percent": 2.3
+    },
+    {
+      "municipality": "Kurikka",
+      "recipients": 845,
+      "published_percent": 4.3
+    },
+    {
+      "municipality": "Kustavi",
+      "recipients": 21,
+      "published_percent": 2.2
+    },
+    {
+      "municipality": "Kuusamo",
+      "recipients": 652,
+      "published_percent": 4.4
+    },
+    {
+      "municipality": "Kyyjärvi",
+      "recipients": 30,
+      "published_percent": 2.7
+    },
+    {
+      "municipality": "Kärkölä",
+      "recipients": 307,
+      "published_percent": 7.6
+    },
+    {
+      "municipality": "Kärsämäki",
+      "recipients": 95,
+      "published_percent": 4.1
+    },
+    {
+      "municipality": "Lahti",
+      "recipients": 11916,
+      "published_percent": 9.8
+    },
+    {
+      "municipality": "Laihia",
+      "recipients": 198,
+      "published_percent": 2.6
+    },
+    {
+      "municipality": "Laitila",
+      "recipients": 344,
+      "published_percent": 4.1
+    },
+    {
+      "municipality": "Lapinjärvi",
+      "recipients": 127,
+      "published_percent": 5.1
+    },
+    {
+      "municipality": "Lapinlahti",
+      "recipients": 449,
+      "published_percent": 5.1
+    },
+    {
+      "municipality": "Lappajärvi",
+      "recipients": 51,
+      "published_percent": 1.9
+    },
+    {
+      "municipality": "Lappeenranta",
+      "recipients": 4386,
+      "published_percent": 6.0
+    },
+    {
+      "municipality": "Lapua",
+      "recipients": 624,
+      "published_percent": 4.5
+    },
+    {
+      "municipality": "Laukaa",
+      "recipients": 865,
+      "published_percent": 4.6
+    },
+    {
+      "municipality": "Lemi",
+      "recipients": 84,
+      "published_percent": 2.9
+    },
+    {
+      "municipality": "Lempäälä",
+      "recipients": 1033,
+      "published_percent": 4.1
+    },
+    {
+      "municipality": "Leppävirta",
+      "recipients": 378,
+      "published_percent": 4.2
+    },
+    {
+      "municipality": "Lestijärvi",
+      "recipients": 22,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Lieksa",
+      "recipients": 623,
+      "published_percent": 6.3
+    },
+    {
+      "municipality": "Lieto",
+      "recipients": 511,
+      "published_percent": 2.5
+    },
+    {
+      "municipality": "Liminka",
+      "recipients": 220,
+      "published_percent": 2.2
+    },
+    {
+      "municipality": "Liperi",
+      "recipients": 650,
+      "published_percent": 5.4
+    },
+    {
+      "municipality": "Lohja",
+      "recipients": 2621,
+      "published_percent": 5.8
+    },
+    {
+      "municipality": "Loimaa",
+      "recipients": 894,
+      "published_percent": 5.9
+    },
+    {
+      "municipality": "Loppi",
+      "recipients": 229,
+      "published_percent": 3.0
+    },
+    {
+      "municipality": "Loviisa",
+      "recipients": 702,
+      "published_percent": 4.9
+    },
+    {
+      "municipality": "Luhanka",
+      "recipients": 24,
+      "published_percent": 3.5
+    },
+    {
+      "municipality": "Lumijoki",
+      "recipients": 62,
+      "published_percent": 3.1
+    },
+    {
+      "municipality": "Luoto",
+      "recipients": 60,
+      "published_percent": 1.0
+    },
+    {
+      "municipality": "Luumäki",
+      "recipients": 171,
+      "published_percent": 4.0
+    },
+    {
+      "municipality": "Maalahti",
+      "recipients": 75,
+      "published_percent": 1.4
+    },
+    {
+      "municipality": "Marttila",
+      "recipients": 67,
+      "published_percent": 3.5
+    },
+    {
+      "municipality": "Masku",
+      "recipients": 119,
+      "published_percent": 1.2
+    },
+    {
+      "municipality": "Merijärvi",
+      "recipients": 32,
+      "published_percent": 3.1
+    },
+    {
+      "municipality": "Merikarvia",
+      "recipients": 74,
+      "published_percent": 2.6
+    },
+    {
+      "municipality": "Miehikkälä",
+      "recipients": 64,
+      "published_percent": 3.8
+    },
+    {
+      "municipality": "Mikkeli",
+      "recipients": 3718,
+      "published_percent": 7.2
+    },
+    {
+      "municipality": "Muhos",
+      "recipients": 301,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Multia",
+      "recipients": 53,
+      "published_percent": 3.8
+    },
+    {
+      "municipality": "Muonio",
+      "recipients": 39,
+      "published_percent": 1.7
+    },
+    {
+      "municipality": "Mustasaari",
+      "recipients": 295,
+      "published_percent": 1.5
+    },
+    {
+      "municipality": "Muurame",
+      "recipients": 267,
+      "published_percent": 2.5
+    },
+    {
+      "municipality": "Mynämäki",
+      "recipients": 214,
+      "published_percent": 2.9
+    },
+    {
+      "municipality": "Myrskylä",
+      "recipients": 72,
+      "published_percent": 4.3
+    },
+    {
+      "municipality": "Mäntsälä",
+      "recipients": 907,
+      "published_percent": 4.3
+    },
+    {
+      "municipality": "Mänttä-Vilppula",
+      "recipients": 636,
+      "published_percent": 7.0
+    },
+    {
+      "municipality": "Mäntyharju",
+      "recipients": 252,
+      "published_percent": 3.6
+    },
+    {
+      "municipality": "Naantali",
+      "recipients": 681,
+      "published_percent": 3.3
+    },
+    {
+      "municipality": "Nakkila",
+      "recipients": 238,
+      "published_percent": 4.9
+    },
+    {
+      "municipality": "Nivala",
+      "recipients": 362,
+      "published_percent": 3.5
+    },
+    {
+      "municipality": "Nokia",
+      "recipients": 1999,
+      "published_percent": 5.5
+    },
+    {
+      "municipality": "Nousiainen",
+      "recipients": 123,
+      "published_percent": 2.6
+    },
+    {
+      "municipality": "Nurmes",
+      "recipients": 352,
+      "published_percent": 4.0
+    },
+    {
+      "municipality": "Nurmijärvi",
+      "recipients": 1935,
+      "published_percent": 4.3
+    },
+    {
+      "municipality": "Närpiö",
+      "recipients": 113,
+      "published_percent": 1.2
+    },
+    {
+      "municipality": "Orimattila",
+      "recipients": 813,
+      "published_percent": 5.2
+    },
+    {
+      "municipality": "Oripää",
+      "recipients": 33,
+      "published_percent": 2.6
+    },
+    {
+      "municipality": "Orivesi",
+      "recipients": 384,
+      "published_percent": 4.3
+    },
+    {
+      "municipality": "Oulainen",
+      "recipients": 328,
+      "published_percent": 4.8
+    },
+    {
+      "municipality": "Oulu",
+      "recipients": 13492,
+      "published_percent": 6.2
+    },
+    {
+      "municipality": "Outokumpu",
+      "recipients": 710,
+      "published_percent": 11.1
+    },
+    {
+      "municipality": "Padasjoki",
+      "recipients": 85,
+      "published_percent": 3.2
+    },
+    {
+      "municipality": "Paimio",
+      "recipients": 417,
+      "published_percent": 3.7
+    },
+    {
+      "municipality": "Paltamo",
+      "recipients": 146,
+      "published_percent": 5.0
+    },
+    {
+      "municipality": "Parainen",
+      "recipients": 403,
+      "published_percent": 2.7
+    },
+    {
+      "municipality": "Parikkala",
+      "recipients": 143,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Parkano",
+      "recipients": 255,
+      "published_percent": 4.2
+    },
+    {
+      "municipality": "Pedersören kunta",
+      "recipients": 133,
+      "published_percent": 1.2
+    },
+    {
+      "municipality": "Pelkosenniemi",
+      "recipients": 12,
+      "published_percent": 1.3
+    },
+    {
+      "municipality": "Pello",
+      "recipients": 88,
+      "published_percent": 2.8
+    },
+    {
+      "municipality": "Perho",
+      "recipients": 86,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Petäjävesi",
+      "recipients": 122,
+      "published_percent": 3.5
+    },
+    {
+      "municipality": "Pieksämäki",
+      "recipients": 1248,
+      "published_percent": 7.3
+    },
+    {
+      "municipality": "Pielavesi",
+      "recipients": 178,
+      "published_percent": 4.6
+    },
+    {
+      "municipality": "Pietarsaari",
+      "recipients": 1340,
+      "published_percent": 6.8
+    },
+    {
+      "municipality": "Pihtipudas",
+      "recipients": 164,
+      "published_percent": 4.5
+    },
+    {
+      "municipality": "Pirkkala",
+      "recipients": 814,
+      "published_percent": 3.8
+    },
+    {
+      "municipality": "Polvijärvi",
+      "recipients": 133,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Pomarkku",
+      "recipients": 65,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Pori",
+      "recipients": 5382,
+      "published_percent": 6.5
+    },
+    {
+      "municipality": "Pornainen",
+      "recipients": 117,
+      "published_percent": 2.4
+    },
+    {
+      "municipality": "Porvoo",
+      "recipients": 3018,
+      "published_percent": 5.8
+    },
+    {
+      "municipality": "Posio",
+      "recipients": 72,
+      "published_percent": 2.5
+    },
+    {
+      "municipality": "Pudasjärvi",
+      "recipients": 364,
+      "published_percent": 5.1
+    },
+    {
+      "municipality": "Pukkila",
+      "recipients": 68,
+      "published_percent": 3.9
+    },
+    {
+      "municipality": "Punkalaidun",
+      "recipients": 128,
+      "published_percent": 5.0
+    },
+    {
+      "municipality": "Puolanka",
+      "recipients": 113,
+      "published_percent": 4.9
+    },
+    {
+      "municipality": "Puumala",
+      "recipients": 47,
+      "published_percent": 2.3
+    },
+    {
+      "municipality": "Pyhtää",
+      "recipients": 132,
+      "published_percent": 2.6
+    },
+    {
+      "municipality": "Pyhäjoki",
+      "recipients": 94,
+      "published_percent": 3.2
+    },
+    {
+      "municipality": "Pyhäjärvi",
+      "recipients": 233,
+      "published_percent": 5.1
+    },
+    {
+      "municipality": "Pyhäntä",
+      "recipients": 36,
+      "published_percent": 2.1
+    },
+    {
+      "municipality": "Pyhäranta",
+      "recipients": 36,
+      "published_percent": 1.9
+    },
+    {
+      "municipality": "Pälkäne",
+      "recipients": 212,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Pöytyä",
+      "recipients": 264,
+      "published_percent": 3.3
+    },
+    {
+      "municipality": "Raahe",
+      "recipients": 1282,
+      "published_percent": 5.5
+    },
+    {
+      "municipality": "Raasepori",
+      "recipients": 1224,
+      "published_percent": 4.6
+    },
+    {
+      "municipality": "Raisio",
+      "recipients": 1493,
+      "published_percent": 5.7
+    },
+    {
+      "municipality": "Rantasalmi",
+      "recipients": 165,
+      "published_percent": 5.1
+    },
+    {
+      "municipality": "Ranua",
+      "recipients": 106,
+      "published_percent": 3.0
+    },
+    {
+      "municipality": "Rauma",
+      "recipients": 1612,
+      "published_percent": 4.1
+    },
+    {
+      "municipality": "Rautalampi",
+      "recipients": 162,
+      "published_percent": 5.5
+    },
+    {
+      "municipality": "Rautavaara",
+      "recipients": 55,
+      "published_percent": 3.9
+    },
+    {
+      "municipality": "Rautjärvi",
+      "recipients": 185,
+      "published_percent": 6.4
+    },
+    {
+      "municipality": "Reisjärvi",
+      "recipients": 78,
+      "published_percent": 3.1
+    },
+    {
+      "municipality": "Riihimäki",
+      "recipients": 2424,
+      "published_percent": 8.5
+    },
+    {
+      "municipality": "Ristijärvi",
+      "recipients": 34,
+      "published_percent": 2.9
+    },
+    {
+      "municipality": "Rovaniemi",
+      "recipients": 3502,
+      "published_percent": 5.3
+    },
+    {
+      "municipality": "Ruokolahti",
+      "recipients": 160,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Ruovesi",
+      "recipients": 130,
+      "published_percent": 3.2
+    },
+    {
+      "municipality": "Rusko",
+      "recipients": 71,
+      "published_percent": 1.1
+    },
+    {
+      "municipality": "Rääkkylä",
+      "recipients": 72,
+      "published_percent": 3.9
+    },
+    {
+      "municipality": "Saarijärvi",
+      "recipients": 471,
+      "published_percent": 5.4
+    },
+    {
+      "municipality": "Salla",
+      "recipients": 60,
+      "published_percent": 1.9
+    },
+    {
+      "municipality": "Salo",
+      "recipients": 2926,
+      "published_percent": 5.8
+    },
+    {
+      "municipality": "Sastamala",
+      "recipients": 1128,
+      "published_percent": 4.8
+    },
+    {
+      "municipality": "Sauvo",
+      "recipients": 84,
+      "published_percent": 2.8
+    },
+    {
+      "municipality": "Savitaipale",
+      "recipients": 124,
+      "published_percent": 4.0
+    },
+    {
+      "municipality": "Savonlinna",
+      "recipients": 1780,
+      "published_percent": 5.7
+    },
+    {
+      "municipality": "Savukoski",
+      "recipients": 45,
+      "published_percent": 4.6
+    },
+    {
+      "municipality": "Seinäjoki",
+      "recipients": 4008,
+      "published_percent": 6.0
+    },
+    {
+      "municipality": "Sievi",
+      "recipients": 180,
+      "published_percent": 3.9
+    },
+    {
+      "municipality": "Siikainen",
+      "recipients": 35,
+      "published_percent": 2.8
+    },
+    {
+      "municipality": "Siikajoki",
+      "recipients": 123,
+      "published_percent": 2.6
+    },
+    {
+      "municipality": "Siikalatva",
+      "recipients": 137,
+      "published_percent": 2.8
+    },
+    {
+      "municipality": "Siilinjärvi",
+      "recipients": 930,
+      "published_percent": 4.4
+    },
+    {
+      "municipality": "Simo",
+      "recipients": 68,
+      "published_percent": 2.5
+    },
+    {
+      "municipality": "Sipoo",
+      "recipients": 796,
+      "published_percent": 3.5
+    },
+    {
+      "municipality": "Siuntio",
+      "recipients": 146,
+      "published_percent": 2.4
+    },
+    {
+      "municipality": "Sodankylä",
+      "recipients": 197,
+      "published_percent": 2.4
+    },
+    {
+      "municipality": "Soini",
+      "recipients": 39,
+      "published_percent": 2.2
+    },
+    {
+      "municipality": "Somero",
+      "recipients": 481,
+      "published_percent": 5.8
+    },
+    {
+      "municipality": "Sonkajärvi",
+      "recipients": 172,
+      "published_percent": 4.9
+    },
+    {
+      "municipality": "Sotkamo",
+      "recipients": 277,
+      "published_percent": 2.7
+    },
+    {
+      "municipality": "Sulkava",
+      "recipients": 80,
+      "published_percent": 3.5
+    },
+    {
+      "municipality": "Suomussalmi",
+      "recipients": 291,
+      "published_percent": 4.2
+    },
+    {
+      "municipality": "Suonenjoki",
+      "recipients": 382,
+      "published_percent": 5.8
+    },
+    {
+      "municipality": "Sysmä",
+      "recipients": 113,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Säkylä",
+      "recipients": 262,
+      "published_percent": 4.2
+    },
+    {
+      "municipality": "Taipalsaari",
+      "recipients": 138,
+      "published_percent": 3.0
+    },
+    {
+      "municipality": "Taivalkoski",
+      "recipients": 122,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Taivassalo",
+      "recipients": 48,
+      "published_percent": 2.8
+    },
+    {
+      "municipality": "Tammela",
+      "recipients": 195,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Tampere",
+      "recipients": 24140,
+      "published_percent": 9.1
+    },
+    {
+      "municipality": "Tervo",
+      "recipients": 47,
+      "published_percent": 3.4
+    },
+    {
+      "municipality": "Tervola",
+      "recipients": 122,
+      "published_percent": 4.3
+    },
+    {
+      "municipality": "Teuva",
+      "recipients": 144,
+      "published_percent": 3.1
+    },
+    {
+      "municipality": "Tohmajärvi",
+      "recipients": 180,
+      "published_percent": 4.6
+    },
+    {
+      "municipality": "Toholampi",
+      "recipients": 96,
+      "published_percent": 3.5
+    },
+    {
+      "municipality": "Toivakka",
+      "recipients": 51,
+      "published_percent": 2.2
+    },
+    {
+      "municipality": "Tornio",
+      "recipients": 1078,
+      "published_percent": 5.2
+    },
+    {
+      "municipality": "Turku",
+      "recipients": 18416,
+      "published_percent": 8.8
+    },
+    {
+      "municipality": "Tuusniemi",
+      "recipients": 130,
+      "published_percent": 5.7
+    },
+    {
+      "municipality": "Tuusula",
+      "recipients": 1938,
+      "published_percent": 4.6
+    },
+    {
+      "municipality": "Tyrnävä",
+      "recipients": 200,
+      "published_percent": 3.1
+    },
+    {
+      "municipality": "Ulvila",
+      "recipients": 476,
+      "published_percent": 3.9
+    },
+    {
+      "municipality": "Urjala",
+      "recipients": 226,
+      "published_percent": 5.1
+    },
+    {
+      "municipality": "Utajärvi",
+      "recipients": 93,
+      "published_percent": 3.9
+    },
+    {
+      "municipality": "Utsjoki",
+      "recipients": 26,
+      "published_percent": 2.3
+    },
+    {
+      "municipality": "Uurainen",
+      "recipients": 131,
+      "published_percent": 3.6
+    },
+    {
+      "municipality": "Uusikaarlepyy",
+      "recipients": 274,
+      "published_percent": 3.7
+    },
+    {
+      "municipality": "Uusikaupunki",
+      "recipients": 754,
+      "published_percent": 5.1
+    },
+    {
+      "municipality": "Vaala",
+      "recipients": 117,
+      "published_percent": 4.6
+    },
+    {
+      "municipality": "Vaasa",
+      "recipients": 4654,
+      "published_percent": 6.5
+    },
+    {
+      "municipality": "Valkeakoski",
+      "recipients": 1013,
+      "published_percent": 4.9
+    },
+    {
+      "municipality": "Vantaa",
+      "recipients": 30203,
+      "published_percent": 11.9
+    },
+    {
+      "municipality": "Varkaus",
+      "recipients": 1631,
+      "published_percent": 8.4
+    },
+    {
+      "municipality": "Vehmaa",
+      "recipients": 93,
+      "published_percent": 4.1
+    },
+    {
+      "municipality": "Vesanto",
+      "recipients": 77,
+      "published_percent": 4.3
+    },
+    {
+      "municipality": "Vesilahti",
+      "recipients": 97,
+      "published_percent": 2.1
+    },
+    {
+      "municipality": "Veteli",
+      "recipients": 61,
+      "published_percent": 2.1
+    },
+    {
+      "municipality": "Vieremä",
+      "recipients": 97,
+      "published_percent": 2.9
+    },
+    {
+      "municipality": "Vihti",
+      "recipients": 1305,
+      "published_percent": 4.5
+    },
+    {
+      "municipality": "Viitasaari",
+      "recipients": 266,
+      "published_percent": 4.7
+    },
+    {
+      "municipality": "Vimpeli",
+      "recipients": 64,
+      "published_percent": 2.5
+    },
+    {
+      "municipality": "Virolahti",
+      "recipients": 130,
+      "published_percent": 4.7
+    },
+    {
+      "municipality": "Virrat",
+      "recipients": 225,
+      "published_percent": 3.7
+    },
+    {
+      "municipality": "Vöyri",
+      "recipients": 193,
+      "published_percent": 3.1
+    },
+    {
+      "municipality": "Ylitornio",
+      "recipients": 152,
+      "published_percent": 4.1
+    },
+    {
+      "municipality": "Ylivieska",
+      "recipients": 742,
+      "published_percent": 4.9
+    },
+    {
+      "municipality": "Ylöjärvi",
+      "recipients": 1171,
+      "published_percent": 3.5
+    },
+    {
+      "municipality": "Ypäjä",
+      "recipients": 79,
+      "published_percent": 3.6
+    },
+    {
+      "municipality": "Ähtäri",
+      "recipients": 257,
+      "published_percent": 5.0
+    },
+    {
+      "municipality": "Äänekoski",
+      "recipients": 1250,
+      "published_percent": 7.1
+    }
+  ]
+}
