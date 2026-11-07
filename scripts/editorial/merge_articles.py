@@ -11,13 +11,16 @@ def article(db,aid):
  if len(rows)!=1:raise ValueError('Missing article')
  return rows[0]
 def relations(db,aid):
- result={}
- for t in db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'editorial__%' ORDER BY name"):
-  name=t['name']
-  if not re.fullmatch(r'[a-z_]+',name):raise ValueError('Unexpected table identifier')
-  cols={r['name'] for r in db.execute('PRAGMA table_info('+name+')')}
-  if 'article_id' in cols:result[name]=db.execute('SELECT * FROM '+name+' WHERE article_id=? ORDER BY rowid',[aid])
- return result
+ names=getattr(db,'_merge_relation_tables',None)
+ if names is None:
+  names=[]
+  for t in db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'editorial__%' ORDER BY name"):
+   name=t['name']
+   if not re.fullmatch(r'[a-z_][a-z0-9_]*',name):raise ValueError('Unexpected table identifier')
+   cols={r['name'] for r in db.execute('PRAGMA table_info('+name+')')}
+   if 'article_id' in cols:names.append(name)
+  db._merge_relation_tables=names
+ return {name:db.execute('SELECT * FROM '+name+' WHERE article_id=? ORDER BY rowid',[aid]) for name in names}
 def views(db):
  db.execute('DROP VIEW IF EXISTS editorial__article_catalog')
  db.execute('''CREATE VIEW editorial__article_catalog AS SELECT a.id,a.source_id,a.source_position,a.source_number,a.title,a.summary,a.status,a.tags_json,a.review_flags_json,a.page_start,a.page_end,length(a.body_text) AS characters,a.updated_at,(SELECT max(r.revision_no) FROM editorial__article_revisions r WHERE r.article_id=a.id) AS revision FROM editorial__articles a WHERE NOT EXISTS(SELECT 1 FROM editorial__article_merges m WHERE m.alias_article_id=a.id)''')
@@ -71,8 +74,9 @@ def verify(db,plan):
   s=json.loads(row[0]['payload_json'])
   if s['plan']!=p or article(db,alias)['status']!='archived' or digest(article(db,alias)['body_text'])!=p['alias_sha256'] or digest(article(db,owner)['body_text'])!=p['canonical_sha256']:raise ValueError('Archive readback differs')
   if db.execute('SELECT id FROM editorial__article_catalog WHERE id=?',[alias]) or not db.execute('SELECT id FROM editorial__article_catalog WHERE id=?',[owner]):raise ValueError('Catalogue consolidation failed')
+  current_relations=relations(db,alias)
   for t,rows in s['relations'].items():
-   actual=relations(db,alias)[t]
+   actual=current_relations[t]
    if any(r not in actual for r in rows):raise ValueError('Original relation lost')
    view='editorial__canonical_'+t.removeprefix('editorial__')
    if db.execute('SELECT count(*) AS n FROM '+view+' WHERE canonical_article_id=? AND article_id=?',[owner,alias])[0]['n']!=len(actual):raise ValueError('Consolidated relations incomplete')
