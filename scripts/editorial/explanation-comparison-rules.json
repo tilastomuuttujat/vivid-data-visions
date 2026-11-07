@@ -1,0 +1,345 @@
+{
+  "version": "explanation-comparison-2026-11-07-v1",
+  "references": {
+    "Eage": {
+      "article_id": "804b66e5-1816-5761-ad2a-ab5662a21f61",
+      "supplement_id": "school-age-and-actual-pupils",
+      "version": "population-education-2026-11-06-v1"
+    },
+    "Eduration": {
+      "article_id": "db7169c2-6da5-5a11-94b6-116601424a7b",
+      "supplement_id": "adult-learning-participation-versus-duration-2017-2022",
+      "version": "article-explanation-education-purpose-adult-learning-2026-11-06-v1"
+    },
+    "Eaccess": {
+      "article_id": "db7169c2-6da5-5a11-94b6-116601424a7b",
+      "supplement_id": "adult-learning-access-groups-2022",
+      "version": "article-explanation-education-purpose-adult-learning-2026-11-06-v1"
+    },
+    "Efund": {
+      "article_id": "804b66e5-1816-5761-ad2a-ab5662a21f61",
+      "supplement_id": "education-adult-support-2024-implementation",
+      "version": "article-explanation-education-2026-11-05-v1"
+    },
+    "Ehistory": {
+      "article_id": "804b66e5-1816-5761-ad2a-ab5662a21f61",
+      "supplement_id": "matrix-school-region-sex-1920-1930",
+      "version": "article-explanation-historical-matrix-targets-2026-11-06-v1"
+    },
+    "Ereturns": {
+      "article_id": "804b66e5-1816-5761-ad2a-ab5662a21f61",
+      "supplement_id": "education-amk-expansion-and-returns",
+      "version": "article-explanation-education-2026-11-05-v1"
+    },
+    "Sage": {
+      "article_id": "33e4e43f-901c-573b-bbbc-b7e0ea177b60",
+      "supplement_id": "basic-assistance-age-and-household",
+      "version": "population-security-2026-11-06-v1"
+    },
+    "Sregional": {
+      "article_id": "36c65edb-0893-5c7a-8ba6-6cffda47a40f",
+      "supplement_id": "published-municipal-receipt-shares",
+      "version": "population-receipt-rates-2026-11-07-v1"
+    },
+    "Sexit": {
+      "article_id": "36c65edb-0893-5c7a-8ba6-6cffda47a40f",
+      "supplement_id": "benefit-exit-is-not-recovery-2024-2025",
+      "version": "article-explanation-help-need-outcomes-2026-11-06-v1"
+    },
+    "Sneed": {
+      "article_id": "36c65edb-0893-5c7a-8ba6-6cffda47a40f",
+      "supplement_id": "material-deprivation-outcome-series-2015-2024",
+      "version": "article-explanation-help-need-outcomes-2026-11-06-v1"
+    },
+    "Sprocedure": {
+      "article_id": "33e4e43f-901c-573b-bbbc-b7e0ea177b60",
+      "supplement_id": "security-kela-transfer-2017",
+      "version": "article-explanation-security-2026-11-05-v1"
+    },
+    "Shistory": {
+      "article_id": "33e4e43f-901c-573b-bbbc-b7e0ea177b60",
+      "supplement_id": "poor-relief-reporting-urban-rural-1881-1887",
+      "version": "article-explanation-poor-relief1880s-2026-11-06-v1"
+    },
+    "Cage": {
+      "article_id": "be9ee685-6d5f-52c3-9d3a-d36c9b13918c",
+      "supplement_id": "oldest-population-and-realised-homecare",
+      "version": "population-care-2026-11-06-v1"
+    },
+    "Caccess": {
+      "article_id": "3134a926-f6af-5b71-afae-94f0ab4f18b0",
+      "supplement_id": "practical-access-and-digital-support-2022-2023",
+      "version": "article-explanation-care-responsibility-access-2026-11-06-v1"
+    },
+    "Callocation": {
+      "article_id": "3134a926-f6af-5b71-afae-94f0ab4f18b0",
+      "supplement_id": "public-support-and-family-care-regions-2024-2026",
+      "version": "article-explanation-care-responsibility-access-2026-11-06-v1"
+    },
+    "Cdelivery": {
+      "article_id": "be9ee685-6d5f-52c3-9d3a-d36c9b13918c",
+      "supplement_id": "care-home-services-policy-and-realisation",
+      "version": "article-explanation-care-2026-11-05-v1"
+    },
+    "Chistory": {
+      "article_id": "be9ee685-6d5f-52c3-9d3a-d36c9b13918c",
+      "supplement_id": "sickness-insurance-implementation-1964-1975",
+      "version": "article-explanation-sickness-insurance-rollout-2026-11-06-v1"
+    },
+    "Ctrial": {
+      "article_id": "be9ee685-6d5f-52c3-9d3a-d36c9b13918c",
+      "supplement_id": "care-finger-efficacy-and-delivery",
+      "version": "article-explanation-care-2026-11-05-v1"
+    }
+  },
+  "groups": [
+    {
+      "id": "education",
+      "label": "Koulutus",
+      "articles": [
+        "804b66e5-1816-5761-ad2a-ab5662a21f61",
+        "db7169c2-6da5-5a11-94b6-116601424a7b"
+      ],
+      "passages": [
+        4,
+        2
+      ],
+      "period": [
+        1920,
+        2025
+      ],
+      "outcome": "Koulutukseen osallistuminen, koulutuksen kesto ja myöhempi toimeentulo tarkastellaan erillisinä tuloksina. Perusopetuksen ikäryhmät ja aikuiskoulutuksen osallistujat eivät ole sama kohortti.",
+      "historical_check": "Vuosien 1920 ja 1930 kaupunki–maaseutu- ja sukupuolijakaumat osoittavat eroja lähteen koulutusluokassa. Niitä ei ketjuteta nykyisiin tutkintoihin eikä tulkita samoiksi ihmisiksi.",
+      "historical_inputs": [
+        "Ehistory"
+      ],
+      "conclusion": "Väestön alueellinen kehitys ja koulutuksen ryhmittäinen käyttö rajaavat pelkkään järjestelmän laajentumiseen perustuvaa selitystä. Nykyinen aineisto ei ratkaise, mikä selitys on suurin, eikä osoita koulutuksen hyödyn kadonneen.",
+      "counterevidence": "AMK-osallistumista koskeva kaltaistettu tutkimus antaa myönteisen arvion tutkitulle kohortille oletustensa varassa. Se rajoittaa yleistä tulkintaa koulutuksen hyödyn katoamisesta; suhdanneherkkyys ja positiivinen hyöty voivat esiintyä yhdessä.",
+      "counter_inputs": [
+        "Ereturns"
+      ],
+      "cells": [
+        {
+          "id": "resources",
+          "hypothesis": "Koulutusmahdollisuuksia rajoittaa opetuksen tai opiskeluaikaisen rahoituksen riittämätön määrä.",
+          "prediction": "Samalla koulutustasolla ja vastaavassa elämäntilanteessa voimavarojen ero liittyisi osallistumisen, keston tai tulosten eroon.",
+          "observed": "Aikuiskoulutuspäivien ja tukimuodon käytön tiedot tarkentavat määrän käsitettä. Oppilasmäärä tai osallistujien osuus ei mittaa opetuksen kapasiteettia.",
+          "limits": "Käytössä ei ole yhtenäistä tarvevakioitua henkilöstö-, kustannus- ja tulosaineistoa. Tukimuodon käyttö ei kata kaikkea opiskelun rahoitusta.",
+          "discriminating_test": "Vertaa samalla alueella ja koulutustasolla rahoitusta, opetuspanosta, osallistumista ja kestoa samoina vuosina; erottele työnantajan, julkinen ja oma rahoitus.",
+          "input_keys": [
+            "Eduration",
+            "Efund",
+            "Eage"
+          ],
+          "evidence_state": "unidentified"
+        },
+        {
+          "id": "distribution",
+          "hypothesis": "Mahdollisuudet jakautuvat eri tavoin alueen, työmarkkina-aseman ja pohjakoulutuksen mukaan.",
+          "prediction": "Samankaltainen kokonaistarjonta voisi tuottaa erilaisia osallistumisosuuksia ja tuloksia eri ryhmille.",
+          "observed": "Aikuiskoulutuksen osallistumisessa on ryhmäeroja ja kouluikäisten alueellinen kehitys eriytyy.",
+          "limits": "Aikuisten osallistumiseroja ei selitetä lasten aluejakaumalla; kumpikaan kuvaus ei eristä asuinpaikan tai taustan vaikutusta.",
+          "discriminating_test": "Vertaa aikuisten osallistumista ja kestoa pohjakoulutuksen ja työmarkkina-aseman sisällä; tarkastele perusopetuksen saavutettavuutta erikseen paikalliselle lapsiväestölle.",
+          "input_keys": [
+            "Eaccess",
+            "Eage"
+          ],
+          "evidence_state": "association_observed"
+        },
+        {
+          "id": "procedures",
+          "hypothesis": "Rahoitusehdot ja osallistumisen järjestelyt muuttavat mahdollisuuden käytettävyyttä.",
+          "prediction": "Ehdon muutos näkyisi ensin kohderyhmän rahoitusmahdollisuudessa; kouluttautumisen ja työllisyyden vaikutus edellyttäisi erillistä vertailua.",
+          "observed": "Aikuiskoulutustuen toimeenpanon rajat ja siirtymä ovat dokumentoituja.",
+          "limits": "Tuen käytön supistuminen ei osoita opiskelun tai työllisyyden nettovaikutusta eikä korvaavien järjestelyjen saavutettavuutta.",
+          "discriminating_test": "Seuraa ehtomuutoksen kohderyhmän opiskelua, korvaavaa rahoitusta ja myöhempiä tuloksia uskottavaan vertailuun nähden.",
+          "input_keys": [
+            "Efund"
+          ],
+          "evidence_state": "implementation_documented"
+        },
+        {
+          "id": "needs",
+          "hypothesis": "Oppilasjoukon ja osaamisen uudistamistarpeen muutos muuttaa koulutuksen tehtävää.",
+          "prediction": "Voimavaran ja tuloksen suhde muuttuisi, vaikka valtakunnallinen oppilasmäärä laskisi, jos alueellinen rakenne tai tuen tarve muuttuu.",
+          "observed": "Ikäryhmien ja vuosiluokkien muutokset ovat eritahtisia.",
+          "limits": "Ikä- ja oppilasmäärä ei mittaa oppimisen tuen tarvetta; väestö ja vuosiluokat ovat eri viiteajankohtia.",
+          "discriminating_test": "Yhdistä paikallinen ikä- ja oppilasrakenne tuen tarpeeseen, kuljetusmatkoihin ja opetuspanokseen; osaamisen uudistamista tutkitaan erillisellä aikuisväestön aineistolla.",
+          "input_keys": [
+            "Eage",
+            "Eaccess"
+          ],
+          "evidence_state": "context_supported"
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Sosiaaliturva",
+      "articles": [
+        "33e4e43f-901c-573b-bbbc-b7e0ea177b60",
+        "36c65edb-0893-5c7a-8ba6-6cffda47a40f"
+      ],
+      "passages": [
+        3,
+        0
+      ],
+      "period": [
+        1881,
+        2025
+      ],
+      "outcome": "Tuen saaminen, oikeus tukeen ja toteutunut toimeentulo ovat eri tuloksia. Henkilöt, kotitaloudet ja ruokakunnat erotetaan.",
+      "historical_check": "1880-luvun raportoitu kunnallinen avunsaanti auttaa erottamaan avun saajat kaikista apua tarvitsevista. Sitä ei yhdistetä nykyiseen Kelan etuuteen yhtenäiseksi sarjaksi.",
+      "historical_inputs": [
+        "Shistory"
+      ],
+      "conclusion": "Nykyinen näyttö tekee etuuden käytön ja avuntarpeen samastamisesta kestämättömän mittaustavan. Se ei vielä ratkaise resurssien, ehtojen, elämäntilanteiden ja hakemisen suhteellista osuutta.",
+      "counterevidence": "Kela-siirron arvioissa on myös yhdenvertaisuuden vahvistumista, ei vain menettelyjen heikkenemistä. Helsingistä kirjattu ryhmittäinen kehitys ei ole koko maan vaikutusarvio.",
+      "counter_inputs": [
+        "Sprocedure"
+      ],
+      "cells": [
+        {
+          "id": "resources",
+          "hypothesis": "Etuuden tai muiden toimeentulon voimavarojen määrä jää välttämättömiin menoihin nähden riittämättömäksi.",
+          "prediction": "Vertailukelpoisten kotitalouksien käytettävissä olevien voimavarojen väheneminen näkyisi menojen kattamisessa tai puutteessa.",
+          "observed": "Aineistossa on erillisiä etuuden käyttöä ja aineellista puutetta kuvaavia tietoja.",
+          "limits": "Eri aineistoja ei ole yhdistetty samoihin kotitalouksiin; saajamäärä ei osoita etuuden riittävyyttä.",
+          "discriminating_test": "Yhdistä kotitalouksien käytettävissä olevat tulot, tosiasialliset menot ja etuudet perustarpeiden toteutumiseen vertailukelpoisella ajalla.",
+          "input_keys": [
+            "Sage",
+            "Sneed"
+          ],
+          "evidence_state": "unidentified"
+        },
+        {
+          "id": "distribution",
+          "hypothesis": "Toimeentulon vaikeudet ja tuen käyttö jakautuvat eri tavoin ryhmien ja alueiden välillä.",
+          "prediction": "Ikä-, kotitalous- tai aluerakenteen huomiointi muuttaisi raakasaajamääristä saatavaa kuvaa.",
+          "observed": "Saajien ikä- ja kotitalousjakaumat sekä julkaistut kuntakohtaiset väestöosuudet erittelevät käyttöä.",
+          "limits": "Saajien osuus ei ole oikeutettujen osuus; ikäryhmien väestöosuuksia ja paikallisia eroja ei ole vakioitu.",
+          "discriminating_test": "Vertaa samoin määriteltyjä ikä- ja kotitalousryhmiä samoilla alueilla, ja arvioi etuusoikeus erikseen.",
+          "input_keys": [
+            "Sage",
+            "Sregional"
+          ],
+          "evidence_state": "association_observed"
+        },
+        {
+          "id": "procedures",
+          "hypothesis": "Ehdot, hakeminen ja viranomaisten työnjako vaikuttavat siihen, miten oikeutta käytetään.",
+          "prediction": "Käyttö voisi muuttua ennen kuin toimeentulon tarve muuttuu; eri ryhmien asiointi voisi kehittyä eri suuntiin.",
+          "observed": "Asumistuen ehtomuutoksen seuranta ja Kela-siirron arvioinnit erottavat käytön, toimeenpanon ja tavoitteen.",
+          "limits": "Kuukausikantojen erotus ei ole poistuneiden henkilöiden seuranta; ennen–jälkeen-kuvaus ei eristä uudistuksen nettovaikutusta.",
+          "discriminating_test": "Seuraa hakemuksia, ratkaisuja, käsittelyä ja toimeentuloa samoilla ihmisillä; vertaa muutoksen kohteita asianmukaiseen vertailuryhmään.",
+          "input_keys": [
+            "Sexit",
+            "Sprocedure"
+          ],
+          "evidence_state": "implementation_documented"
+        },
+        {
+          "id": "needs",
+          "hypothesis": "Elämäntilanteet ja välttämättömät menot muuttavat tuen tarvetta.",
+          "prediction": "Tarpeen muutos näkyisi tuloissa, menoissa ja perustarpeiden toteutumisessa myös etuuden saajatilaston ulkopuolella.",
+          "observed": "Aineellisen puutteen sarja tarjoaa etuuden käytöstä erillisen tulosmittarin.",
+          "limits": "Puutemittari ei kata kaikkea tarvetta; rinnakkaiset vuosimuutokset eivät erota syitä eikä alikäyttöä ole estimoitu.",
+          "discriminating_test": "Arvioi tuen saajat ja saamatta jäävät oikeutettujen ja tarveryhmien sisällä; säilytä puutemääritelmän ja viitevuoden yhteensopivuus.",
+          "input_keys": [
+            "Sneed",
+            "Sage"
+          ],
+          "evidence_state": "context_supported"
+        }
+      ]
+    },
+    {
+      "id": "care",
+      "label": "Hoiva ja toimintakyky",
+      "articles": [
+        "be9ee685-6d5f-52c3-9d3a-d36c9b13918c",
+        "3134a926-f6af-5b71-afae-94f0ab4f18b0"
+      ],
+      "passages": [
+        4,
+        2
+      ],
+      "period": [
+        1964,
+        2026
+      ],
+      "outcome": "Arvioitu palvelutarve, palvelun saaminen, toteutunut apu ja toimintakyky ovat eri tuloksia. Yksikkö-, henkilö- ja perhetasoja ei sekoiteta.",
+      "historical_check": "Sairausvakuutuksen 1964–1975 toimeenpano kuvaa järjestelmän ja turvan vaiheittaista rakentumista. Hallinnollinen kattavuus ei ole samojen henkilöiden toimintakykytulos eikä nykyisen kotihoidon historiallinen vertailusarja.",
+      "historical_inputs": [
+        "Chistory"
+      ],
+      "conclusion": "Väestön mittakaava, alueellinen työnjako ja käytännön palvelupääsy täydentävät institutionaalista selitystä. Nykyinen aineisto ei mittaa koko tarvetta, läheisten koko kuormaa tai näiden tekijöiden suhteellisia vaikutuksia.",
+      "counterevidence": "FINGER-kokeen rajattu kognitiivisen testituloksen havainto erotetaan palvelujärjestelmän saavutettavuudesta. Kokeellinen vaikutus tutkitussa joukossa ei ole näyttö toimintamallin yleisestä kattavuudesta tai hoivamenojen vähenemisestä.",
+      "counter_inputs": [
+        "Ctrial"
+      ],
+      "cells": [
+        {
+          "id": "resources",
+          "hypothesis": "Henkilöstöä, aikaa tai muuta hoivan voimavaraa on tarpeeseen nähden riittämättömästi.",
+          "prediction": "Tarpeeltaan vastaavilla asiakkailla pienempi käytettävissä oleva panos liittyisi toteutumatta jäävään apuun tai heikompaan tulokseen.",
+          "observed": "Suunniteltujen palvelutuntien toteumaa kuvaava tieto tuo esiin toimeenpanon mittaamisen tarpeen.",
+          "limits": "Yksikkötason toteuma ei kerro asiakaskohtaista riittävyyttä tai alituksen syytä; suunnitelmakaan ei mittaa koko tarvetta.",
+          "discriminating_test": "Yhdistä palvelutarpeen arvio, suunnitellut ja saadut tunnit, henkilöstön työaika ja asiakkaan toimintakyky samalla ajalla.",
+          "input_keys": [
+            "Cdelivery"
+          ],
+          "evidence_state": "unidentified"
+        },
+        {
+          "id": "distribution",
+          "hypothesis": "Julkinen tuki ja läheisten hoivavastuu jakautuvat eri tavoin alueiden ja perheiden välillä.",
+          "prediction": "Vastaava tarve voisi johtaa erilaiseen julkiseen apuun ja läheisten kuormaan eri alueilla.",
+          "observed": "Omaishoidon tarkastus kirjaa alueellisia eroja tuen ehdoissa ja tukipalveluissa.",
+          "limits": "Kustannustiedot eivät mahdollista kattavaa nettosäästöä tai kaikkien alueiden kuorman kasvun osoittamista.",
+          "discriminating_test": "Vertaa saman tarvetason perheiden julkista tukea, vapaita, palveluja ja läheisen hoivatyötä alueittain.",
+          "input_keys": [
+            "Callocation"
+          ],
+          "evidence_state": "association_observed"
+        },
+        {
+          "id": "procedures",
+          "hypothesis": "Palvelun löytäminen, asiointi ja toteutus voivat rajoittaa avun saamista.",
+          "prediction": "Vastaavasta tarpeesta huolimatta asiointitapa ja tuki vaikuttaisivat pääsyyn; tutkimuksessa toimiva malli voisi jäädä saavuttamatta.",
+          "observed": "Palvelujen käyttäjien kysely ja toimintamallin toimeenpanon tarkastelu erottavat pääsyn, toteutuksen ja tuloksen.",
+          "limits": "Käyttäjäkysely ei kata kaikkia palvelun ulkopuolelle jääviä; kokeen tulos ei mittaa jakelun tai digitaalisen asioinnin vaikutusta.",
+          "discriminating_test": "Seuraa koko hakupolkua myös palveluun pääsemättömillä; vertaa opastettua ja muuta asiointia soveltuvalla tutkimusasetelmalla.",
+          "input_keys": [
+            "Caccess",
+            "Cdelivery",
+            "Ctrial"
+          ],
+          "evidence_state": "association_observed"
+        },
+        {
+          "id": "needs",
+          "hypothesis": "Ikärakenne, toimintakyky ja läheisverkosto muuttavat hoivan tarvetta.",
+          "prediction": "Samankokoinen ikäryhmä voisi tarvita erilaista apua toimintakyvyn ja arjen tukiverkoston mukaan.",
+          "observed": "Vanhimpien ikäryhmien määrät ja toteutunut kotihoito kuvaavat eri puolia toimintaympäristöstä.",
+          "limits": "Ikä ei ole palvelutarve. Vuoden 2050 ehdollista väestölaskelmaa ei käytetä tämän vertailun toteutuneena näyttönä eikä hoivatarve-ennusteena.",
+          "discriminating_test": "Yhdistä erilliset ikäryhmät toimintakykyyn, arvioituun palvelutarpeeseen ja läheisapuun samoilla alueilla ja vuosilla.",
+          "input_keys": [
+            "Cage",
+            "Callocation"
+          ],
+          "evidence_state": "context_supported"
+        }
+      ]
+    }
+  ],
+  "method": {
+    "independent_studies_counted": false,
+    "causal_winner_selected": false,
+    "weights_estimated": false,
+    "new_primary_data_collected": false,
+    "explanations_can_coexist": true,
+    "unit_compatibility_required": true,
+    "missing_evidence_is_not_no_effect": true
+  }
+}

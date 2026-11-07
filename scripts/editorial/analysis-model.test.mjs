@@ -103,3 +103,9 @@ test('identical merged supplements render once with both origins retained',()=>{
  const merges=[{alias_article_id:'alias',canonical_article_id:'canonical',payload_json:JSON.stringify({canonical_revision:1,original_revision:1,supplement_matches:{'v/same':true},equivalent_supplements:{'v/same':'v/same'}})}];
  const r=globalThis.articleAnalysisModel.project([{id:'canonical',revision:1}],{supplements,merges});assert.equal(r[0].claims.length,1);assert.equal(r[0].claims[0].merged_origins[0].article_id,'alias');
 });
+
+test('explanation comparison requires both article cards and current version-bound inputs',()=>{
+ const v='explanation-comparison-2026-11-07-v1',input={id:'source',origin_article_id:'a',article_id:'a',version:'prior',article_revision:1,body_sha256:'h',current:true,key:'a/source'},g={id:'education',version:v,articles:['a','b'],inputs:[{article_id:'a',supplement_id:'source',version:'prior',article_revision:1,body_sha256:'h'}],cells:[]};
+ const make=id=>({article_id:id,key:id+'/comparison',version:v,current:true,causal_effect_identified:false,classification:{claim_type:'assessment_rule'},explanation_comparison:g});
+ const rows=[{claims:[input,make('a'),make('b')]}];assert.equal(globalThis.articleAnalysisModel.explanationComparison(rows)[0].status,'current');input.version='new';assert.equal(globalThis.articleAnalysisModel.explanationComparison(rows)[0].status,'requires_review');input.version='prior';rows[0].claims.pop();assert.equal(globalThis.articleAnalysisModel.explanationComparison(rows)[0].status,'requires_review');
+});
