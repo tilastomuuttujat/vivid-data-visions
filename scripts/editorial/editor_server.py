@@ -43,7 +43,12 @@ class Library:
         finally:db.close()
     def catalog(self):
         fields='id source_position publication_number title summary status revision updated_at'.split()
-        return self.run(lambda db:[serialize(row,fields) for row in db.execute('SELECT '+','.join(fields)+' FROM editorial__article_catalog ORDER BY publication_number IS NULL,publication_number,source_id,source_position')])
+        def read(db):
+            numbered=any(r[1]=='publication_number' for r in db.execute('PRAGMA table_info(editorial__article_catalog)'))
+            columns=','.join(k if k!='publication_number' or numbered else 'NULL AS publication_number' for k in fields)
+            order='publication_number IS NULL,publication_number,source_id,source_position' if numbered else 'source_id,source_position'
+            return [serialize(row,fields) for row in db.execute('SELECT '+columns+' FROM editorial__article_catalog ORDER BY '+order)]
+        return self.run(read)
     def analysis(self):
         def read(db):
             names={r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}

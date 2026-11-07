@@ -67,4 +67,13 @@ class EditorTests(unittest.TestCase):
         self.assertEqual(self.request('/api/logout',{},cookie=cookie,csrf=csrf)[0],200)
         self.assertEqual(self.request('/api/articles',cookie=cookie)[0],401)
 
+class LegacyCatalogTests(unittest.TestCase):
+    def test_catalog_before_numbering_migration_remains_readable(self):
+        db=Database()
+        try:
+            import_bundle(db,fixture());db.execute('DROP VIEW editorial__article_catalog')
+            db.execute('CREATE VIEW editorial__article_catalog AS SELECT id,source_id,source_position,title,summary,status,1 AS revision,updated_at FROM editorial__articles')
+            rows=Library(lambda:db).catalog();self.assertEqual(len(rows),2);self.assertTrue(all(r['publication_number'] is None for r in rows))
+        finally:db.db.close()
+
 if __name__=='__main__':unittest.main()
